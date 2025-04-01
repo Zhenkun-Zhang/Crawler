@@ -289,5 +289,9 @@ def main():
     root = "https://paddlenlp.readthedocs.io/en/" + version + "/source/"
     save_path = "dao/node/PaddleNLP/" + version + "/"
     solve(root, save_path, version)
-# '''
+    
+
+if __name__ == '__main__':
+    main()
+
 # python PaddleNLPCrawler.py

@@ -1,0 +1,24 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "*args": null,
+        "**kwargs": null
+    },
+    "Bases": "",
+    "description": "The base class for all pretrained models. It mainly provides common methodsfor loading (construction and loading) and saving pretrained models. Loadingand saving also rely on the following class attributes which should be overriddenby derived classes accordingly:",
+    "params": [
+        {
+            "name": "dtype",
+            "type": "paddle.dtype",
+            "description": "Override the default paddle.dtype and load the model under this dtype.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

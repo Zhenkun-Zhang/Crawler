@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.BatchEncoding.items",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

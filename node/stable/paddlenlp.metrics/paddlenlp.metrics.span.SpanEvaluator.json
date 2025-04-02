@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.metrics.span.SpanEvaluator",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "limit": "0.5"
+    },
+    "Bases": "Metric",
+    "description": "SpanEvaluator computes the precision, recall and F1-score for span detection.",
+    "params": [],
+    "return": {
+        "description": "Returns tuple (precision, recall, f1 score).",
+        "type": "tuple"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.taskflow.utils.ProcessReader.worker",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "drop_empty": "True",
+        "batch_samples": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

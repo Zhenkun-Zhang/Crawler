@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.BatchEncoding.words",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "batch_index": "int = 0"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "batch_index",
+            "type": "int",
+            "description": "The index to access in the batch.",
+            "default": "int = 0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A list indicating the word corresponding to each token. Special tokens added by thetokenizer are mapped to None and other tokens are mapped to the index of their corresponding word(several tokens will be mapped to the same word index if they are parts of that word).",
+        "type": "List[Optional[int]]"
+    }
+}

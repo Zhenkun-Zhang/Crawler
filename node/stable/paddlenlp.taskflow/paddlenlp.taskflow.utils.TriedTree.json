@@ -1,0 +1,21 @@
+{
+    "api": "paddlenlp.taskflow.utils.TriedTree",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "object",
+    "description": "Implementataion of TriedTree",
+    "params": [
+        {
+            "name": "content",
+            "type": "str",
+            "description": "string to be searched",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "list of maximum matching words, each element representsthe starting and ending position of the matching string.the starting and ending position of the matching string.",
+        "type": "List[Tuple]"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer.decode_token",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "all_input_ids": "List[int]",
+        "prefix_offset": "int = 0",
+        "read_offset": "int = 0"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

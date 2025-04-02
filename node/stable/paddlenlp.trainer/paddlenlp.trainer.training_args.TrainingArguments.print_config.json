@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.trainer.training_args.TrainingArguments.print_config",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "args": "None",
+        "key": "''"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

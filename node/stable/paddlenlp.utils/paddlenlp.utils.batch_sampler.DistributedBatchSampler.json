@@ -1,0 +1,64 @@
+{
+    "api": "paddlenlp.utils.batch_sampler.DistributedBatchSampler",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "dataset": null,
+        "batch_size": null,
+        "num_replicas": "None",
+        "rank": "None",
+        "shuffle": "False",
+        "drop_last": "False",
+        "consumed_samples": "0"
+    },
+    "Bases": "",
+    "description": "Sampler that restricts data loading to a subset of the dataset.",
+    "params": [
+        {
+            "name": "dataset",
+            "type": "paddle.io.Dataset",
+            "description": "this could be a paddle.io.Dataset implementor other python object which implemented__len__ for BatchSampler to get samplenumber of data source.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "description": "sample indice number in a mini-batch indices.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_replicas",
+            "type": "int",
+            "description": "porcess number in distributed training.If num_replicas is None, num_replicas will beretrieved from paddle.distributed.ParallenEnv.Default None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "rank",
+            "type": "int",
+            "description": "the rank of the current process among num_replicasprocesses. If rank is None, rank is retrieved frompaddle.distributed.ParallenEnv. Default None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "shuffle",
+            "type": "bool",
+            "description": "whther to shuffle indices order before genratingbatch indices. Default False.",
+            "default": "False",
+            "optional": false
+        },
+        {
+            "name": "drop_last",
+            "type": "bool",
+            "description": "whether drop the last incomplete batch dataset sizeis not divisible by the batch size. Default False",
+            "default": "False",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

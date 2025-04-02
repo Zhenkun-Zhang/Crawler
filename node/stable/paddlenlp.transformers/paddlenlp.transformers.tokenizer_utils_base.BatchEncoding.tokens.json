@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.BatchEncoding.tokens",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "batch_index": "int = 0"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "batch_index",
+            "type": "int",
+            "description": "The index to access in the batch.",
+            "default": "int = 0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "The list of tokens at that index.",
+        "type": "List[str]"
+    }
+}

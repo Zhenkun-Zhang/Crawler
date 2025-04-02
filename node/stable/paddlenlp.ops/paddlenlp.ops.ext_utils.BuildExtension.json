@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.ops.ext_utils.BuildExtension",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "*args": null,
+        "**kwargs": null
+    },
+    "Bases": "BuildExtension",
+    "description": "Support both CppExtention of Paddle and custom extensions of PaddleNLP.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

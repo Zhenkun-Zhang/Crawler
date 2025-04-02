@@ -1,0 +1,32 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.prepare_for_model",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "ids": null,
+        "pair_ids": "None",
+        "padding": "bool or str or PaddingStrategy = False",
+        "truncation": "bool or str or TruncationStrategy = False",
+        "max_length": "int or None = None",
+        "stride": "int = 0",
+        "pad_to_multiple_of": "int or None = None",
+        "return_tensors": "str or TensorType or None = None",
+        "return_position_ids": "None",
+        "return_token_type_ids": "bool or None = None",
+        "return_attention_mask": "bool or None = None",
+        "return_length": "False",
+        "return_overflowing_tokens": "False",
+        "return_special_tokens_mask": "False",
+        "return_offsets_mapping": "False",
+        "add_special_tokens": "True",
+        "verbose": "bool = True",
+        "prepend_batch_axis": "bool = False",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

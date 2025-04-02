@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.ModelOutput.setdefault",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "*args": null,
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

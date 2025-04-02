@@ -1,0 +1,25 @@
+{
+    "api": "paddlenlp.taskflow.utils.pad_batch_data",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "insts": null,
+        "pad_idx": "0",
+        "max_seq_len": "None",
+        "return_pos": "False",
+        "return_input_mask": "False",
+        "return_max_len": "False",
+        "return_num_token": "False",
+        "return_seq_lens": "False",
+        "pad_2d_pos_ids": "False",
+        "pad_segment_id": "False",
+        "select": "False",
+        "extract": "False"
+    },
+    "description": "Pad the instances to the max sequence length in batch, and generate thecorresponding position data and attention bias.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab.to_indices",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "tokens": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "tokens",
+            "type": "str or list[str] or tuple[str]",
+            "description": "The input token(s) formapping.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Obationed indice(s). If tokens is a str, it willreturn an integer. If tokens is a list/tuple of str, it willreturn a list of integers.",
+        "type": "int or list[int]"
+    }
+}

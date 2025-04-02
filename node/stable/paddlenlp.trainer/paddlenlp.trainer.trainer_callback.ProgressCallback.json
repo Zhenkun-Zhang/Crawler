@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.trainer.trainer_callback.ProgressCallback",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "TrainerCallback",
+    "description": "A [TrainerCallback] that displays the progress of training or evaluation.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

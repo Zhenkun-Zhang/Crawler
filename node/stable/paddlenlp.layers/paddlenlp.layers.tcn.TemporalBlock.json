@@ -1,0 +1,71 @@
+{
+    "api": "paddlenlp.layers.tcn.TemporalBlock",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "n_inputs": null,
+        "n_outputs": null,
+        "kernel_size": null,
+        "stride": null,
+        "dilation": null,
+        "padding": null,
+        "dropout": "0.2"
+    },
+    "Bases": "",
+    "description": "The TCN block, consists of dilated causal conv, relu and residual block.See the Figure 1(b) in https://arxiv.org/pdf/1803.01271.pdf for more details.",
+    "params": [
+        {
+            "name": "n_inputs",
+            "type": "int",
+            "description": "The number of channels in the input tensor.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "n_outputs",
+            "type": "int",
+            "description": "The number of filters.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "kernel_size",
+            "type": "int",
+            "description": "The filter size.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "description": "The stride size.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "dilation",
+            "type": "int",
+            "description": "The dilation size.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "padding",
+            "type": "int",
+            "description": "The size of zeros to be padded.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "description": "Probability of dropout the units. Defaults to 0.2.",
+            "default": "0.2",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

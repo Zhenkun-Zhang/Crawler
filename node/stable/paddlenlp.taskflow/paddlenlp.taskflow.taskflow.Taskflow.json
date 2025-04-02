@@ -1,0 +1,56 @@
+{
+    "api": "paddlenlp.taskflow.taskflow.Taskflow",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": "None",
+        "mode": "None",
+        "device_id": "0",
+        "from_hf_hub": "False",
+        "**kwargs": null
+    },
+    "Bases": "object",
+    "description": "Convert the raw text to task result.",
+    "params": [
+        {
+            "name": "task",
+            "type": "str",
+            "description": "The task name for the Taskflow, and get the task class from the name.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "model",
+            "type": "str",
+            "description": "The model name in the task, if set None, will use the default model.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "mode",
+            "type": "str",
+            "description": "Select the mode of the task, only used in the tasks of word_segmentation and ner.If set None, will use the default mode.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "device_id",
+            "type": "int",
+            "description": "The device id for the gpu, xpu and other devices, the defalut value is 0.",
+            "default": "0",
+            "optional": true
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "description": "Additional keyword arguments passed along to the specific task.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

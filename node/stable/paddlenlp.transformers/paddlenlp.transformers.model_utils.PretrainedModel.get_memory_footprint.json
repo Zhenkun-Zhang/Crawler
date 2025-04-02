@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.get_memory_footprint",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "return_buffers": "True"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "return_buffers",
+            "type": "bool",
+            "description": "Whether to return the size of the buffer tensors in the computation of the memory footprint. Buffersare tensors that do not require gradients and not registered as parameters",
+            "default": "True",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

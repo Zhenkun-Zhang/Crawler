@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.DDParserTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "tree": "True",
+        "prob": "False",
+        "use_pos": "False",
+        "use_cuda": "False",
+        "batch_size": "1",
+        "return_visual": "False",
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "DDParser task to analyze the dependency relationship between words in a sentence:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param tree: Ensure the output conforms to the tree structure.:type tree: bool:param prob: Whether to return the probability of predicted heads.:type prob: bool:param use_pos: Whether to return the postag.:type use_pos: bool:param batch_size: Numbers of examples a batch.:type batch_size: int:param return_visual: If True, the result will contain the dependency visualization.:type return_visual: bool:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

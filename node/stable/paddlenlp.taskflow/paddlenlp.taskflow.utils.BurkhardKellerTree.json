@@ -1,0 +1,21 @@
+{
+    "api": "paddlenlp.taskflow.utils.BurkhardKellerTree",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "object",
+    "description": "Implementataion of BK-Tree",
+    "params": [
+        {
+            "name": "word",
+            "type": "str",
+            "description": "word to be inserted.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.taskflow.named_entity_recognition.NERLACTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "model": null,
+        "task": null,
+        "entity_only": "False",
+        "**kwargs": null
+    },
+    "Bases": "LacTask",
+    "description": "Part-of-speech tagging task for the raw text.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

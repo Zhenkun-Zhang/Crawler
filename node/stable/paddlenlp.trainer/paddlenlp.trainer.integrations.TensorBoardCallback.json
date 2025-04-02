@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.trainer.integrations.TensorBoardCallback",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "tb_writer": "None"
+    },
+    "Bases": "TrainerCallback",
+    "description": "A [TrainerCallback] that sends the logs to [TensorBoard](https://www.tensorflow.org/tensorboard).",
+    "params": [
+        {
+            "name": "tb_writer",
+            "type": "SummaryWriter",
+            "description": "The writer to use. Will instantiate one if not set.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.taskflow.sentiment_analysis.UIESentaTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "schema": null,
+        "aspects": "None",
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "Universal Information Extraction Task.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param aspects: a list of pre-given aspects:type aspects: list[string]:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

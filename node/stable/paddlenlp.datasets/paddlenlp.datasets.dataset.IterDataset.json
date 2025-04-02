@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.datasets.dataset.IterDataset",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "data": null,
+        "**kwargs": null
+    },
+    "Bases": "",
+    "description": "Wraps a dataset-like object as an instance of IterDataset, and equips it withmap and other utility methods. All non-magic methods of the raw objectalso accessible.",
+    "params": [
+        {
+            "name": "data",
+            "type": "Iterable",
+            "description": "An object with __iter__ function. It can be a Iterable or asubclass of paddle.io.IterableDataset.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "description": "Other information to be passed to the dataset.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

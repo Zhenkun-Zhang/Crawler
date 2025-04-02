@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.data.data_collator.DataCollatorForWholeWordMask.numpy_mask_tokens",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "inputs": "Any",
+        "mask_labels": "Any"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

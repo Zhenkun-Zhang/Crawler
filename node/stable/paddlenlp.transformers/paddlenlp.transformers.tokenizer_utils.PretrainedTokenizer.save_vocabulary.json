@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer.save_vocabulary",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "filepath": null,
+        "vocab": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "filepath",
+            "type": "str",
+            "description": "File path to be saved to.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "vocab",
+            "type": "Vocab or dict",
+            "description": "The Vocab or dict instance to be saved.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

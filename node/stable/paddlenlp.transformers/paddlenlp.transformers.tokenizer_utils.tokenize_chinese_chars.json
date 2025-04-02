@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.tokenize_chinese_chars",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "text": null
+    },
+    "description": "Adds whitespace around any CJK character.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

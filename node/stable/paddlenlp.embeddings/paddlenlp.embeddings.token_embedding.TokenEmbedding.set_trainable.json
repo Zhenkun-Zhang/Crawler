@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.embeddings.token_embedding.TokenEmbedding.set_trainable",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "trainable": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "trainable",
+            "type": "bool",
+            "description": "The weights can be trained if trainable is set to True, or the weights are fixed if trainable is False.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

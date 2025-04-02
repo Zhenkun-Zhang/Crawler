@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.TruncationStrategy",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "value": null
+    },
+    "Bases": "ExplicitEnum",
+    "description": "Possible values for the truncation argument in [PretrainedTokenizerBase.__call__]. Useful for tab-completion inan IDE.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

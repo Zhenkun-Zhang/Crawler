@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab.__call__",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "tokens": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.ModelOutput.pop",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "k": null,
+        "d": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

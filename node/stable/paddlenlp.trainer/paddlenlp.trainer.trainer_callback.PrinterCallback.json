@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.trainer.trainer_callback.PrinterCallback",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "TrainerCallback",
+    "description": "A bare [TrainerCallback] that just prints the logs.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

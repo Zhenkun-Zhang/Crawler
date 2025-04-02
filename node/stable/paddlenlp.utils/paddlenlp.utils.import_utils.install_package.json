@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.utils.import_utils.install_package",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "package_name": "str",
+        "version": "str|None=None",
+        "module_name": "str|None=None",
+        "cache_dir": "str|None=None"
+    },
+    "description": "install the specific version of packagepackage_name (str) – the name of packageversion (str) – the version of packagemodule_name (str) – the imported name of packagecache_dir (str) – cache dir",
+    "params": [
+        {
+            "name": "package_name",
+            "type": "str",
+            "description": "the name of package",
+            "default": "str",
+            "optional": false
+        },
+        {
+            "name": "version",
+            "type": "str",
+            "description": "the version of package",
+            "default": "str|None=None",
+            "optional": false
+        },
+        {
+            "name": "module_name",
+            "type": "str",
+            "description": "the imported name of package",
+            "default": "str|None=None",
+            "optional": false
+        },
+        {
+            "name": "cache_dir",
+            "type": "str",
+            "description": "cache dir",
+            "default": "str|None=None",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

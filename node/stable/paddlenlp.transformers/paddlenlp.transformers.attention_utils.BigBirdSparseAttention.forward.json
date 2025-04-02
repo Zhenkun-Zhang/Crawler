@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.attention_utils.BigBirdSparseAttention.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "query_matrix": null,
+        "key_matrix": null,
+        "value_matrix": null,
+        "d_head": null,
+        "attn_mask": "None",
+        "rand_mask_idx": "None",
+        "query_mask": "None",
+        "key_mask": "None",
+        "dropout": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

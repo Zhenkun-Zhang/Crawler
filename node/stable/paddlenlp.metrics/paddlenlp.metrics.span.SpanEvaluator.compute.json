@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.metrics.span.SpanEvaluator.compute",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "start_probs": null,
+        "end_probs": null,
+        "gold_start_ids": null,
+        "gold_end_ids": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

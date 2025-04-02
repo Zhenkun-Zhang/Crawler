@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.transformers.distill_utils.calc_minilm_loss",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "loss_fct": null,
+        "s": null,
+        "t": null,
+        "attn_mask": null,
+        "num_relation_heads": "0"
+    },
+    "description": "Calculates loss for Q-Q, K-K, V-V relation from MiniLMv2.:param loss_fct: Loss function for distillation. It only supports kl_div loss now.:type loss_fct: callable:param s: Q, K, V of Student.:type s: Tensor:param t: Q, K, V of teacher.:type t: Tensor:param attn_mask: Attention mask for relation.:type attn_mask: Tensor:param num_relation_heads: The number of relation heads. 0 means num_relation_heads equalsto origin head num.Defaults to 0.MiniLM loss value.Tensor",
+    "params": [],
+    "return": {
+        "description": "MiniLM loss value.",
+        "type": "Tensor"
+    }
+}

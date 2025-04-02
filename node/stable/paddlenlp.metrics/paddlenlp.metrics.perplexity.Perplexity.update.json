@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.metrics.perplexity.Perplexity.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "ce": null,
+        "word_num": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "ce",
+            "type": "numpy.ndarray",
+            "description": "Cross entropy loss, its calculated by compute and convertedto numpy.ndarray.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "word_num",
+            "type": "numpy.ndarray",
+            "description": "The number of words of sequence, its calculated by computeand converted to numpy.ndarray. Defaults to None.",
+            "default": "None",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

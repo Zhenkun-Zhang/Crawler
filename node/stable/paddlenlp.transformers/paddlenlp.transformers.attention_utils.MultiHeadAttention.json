@@ -1,0 +1,42 @@
+{
+    "api": "paddlenlp.transformers.attention_utils.MultiHeadAttention",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "embed_dim": null,
+        "num_heads": null,
+        "dropout": "0.0",
+        "kdim": "None",
+        "vdim": "None",
+        "weight_attr": "None",
+        "bias_attr": "None",
+        "block_size": "1",
+        "window_size": "3",
+        "num_global_blocks": "1",
+        "num_rand_blocks": "1",
+        "seed": "None",
+        "attention_type": "'bigbird'"
+    },
+    "Bases": "",
+    "description": "Alias for field number 0",
+    "params": [
+        {
+            "name": "*inputs",
+            "type": "tuple",
+            "description": "unpacked tuple arguments",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "**kwargs",
+            "type": "dict",
+            "description": "unpacked dict arguments",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

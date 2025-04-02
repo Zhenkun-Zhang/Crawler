@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.utils.convert_ndarray_dtype",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "np_array": "ndarray",
+        "target_dtype": "str"
+    },
+    "description": "convert ndarraynp_array (np.ndarray) – numpy ndarray instancetarget_dtype (str) – the target dtypeconverted numpy ndarray instancenp.ndarray",
+    "params": [
+        {
+            "name": "np_array",
+            "type": "np.ndarray",
+            "description": "numpy ndarray instance",
+            "default": "ndarray",
+            "optional": false
+        },
+        {
+            "name": "target_dtype",
+            "type": "str",
+            "description": "the target dtype",
+            "default": "str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "converted numpy ndarray instance",
+        "type": "np.ndarray"
+    }
+}

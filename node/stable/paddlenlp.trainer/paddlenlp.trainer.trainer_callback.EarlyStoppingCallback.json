@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.trainer.trainer_callback.EarlyStoppingCallback",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "early_stopping_patience": "int = 1",
+        "early_stopping_threshold": "float or None = 0.0"
+    },
+    "Bases": "TrainerCallback",
+    "description": "A [TrainerCallback] that handles early stopping.",
+    "params": [
+        {
+            "name": "early_stopping_patience",
+            "type": "int",
+            "description": "Use with metric_for_best_model to stop training when the specified metric worsens forearly_stopping_patience evaluation calls.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "early_stopping_threshold",
+            "type": "float",
+            "description": "Use with TrainingArguments metric_for_best_model and early_stopping_patience to denote how much thespecified metric must improve to satisfy early stopping conditions. `",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

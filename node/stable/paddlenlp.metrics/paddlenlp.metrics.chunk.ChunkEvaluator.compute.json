@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.metrics.chunk.ChunkEvaluator.compute",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "lengths": null,
+        "predictions": null,
+        "labels": null,
+        "dummy": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "lengths",
+            "type": "Tensor",
+            "description": "The valid length of every sequence, a tensor with shape [batch_size]",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "predictions",
+            "type": "Tensor",
+            "description": "The predictions index, a tensor with shape [batch_size, sequence_length].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "labels",
+            "type": "Tensor",
+            "description": "The labels index, a tensor with shape [batch_size, sequence_length].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "dummy",
+            "type": "Tensor",
+            "description": "Unnecessary parameter for compatibility with older versions with parameters list inputs, lengths, predictions, labels. Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Returns tuple (num_infer_chunks, num_label_chunks, num_correct_chunks).With the fields:num_infer_chunks (Tensor):The number of the inference chunks.num_label_chunks (Tensor):The number of the label chunks.num_correct_chunks (Tensor):The number of the correct chunks.Returns tuple (num_infer_chunks, num_label_chunks, num_correct_chunks).With the fields:The number of the inference chunks.The number of the label chunks.The number of the correct chunks.",
+        "type": "tuple"
+    }
+}

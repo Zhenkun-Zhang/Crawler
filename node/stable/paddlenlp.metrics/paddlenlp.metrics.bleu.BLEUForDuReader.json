@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.metrics.bleu.BLEUForDuReader",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "n_size": "4",
+        "alpha": "1.0",
+        "beta": "1.0"
+    },
+    "Bases": "BLEU",
+    "description": "BLEU metric with bonus for DuReader contest.",
+    "params": [
+        {
+            "name": "n_size",
+            "type": "int",
+            "description": "Number of gram for BLEU metric. Defaults to 4.",
+            "default": "4",
+            "optional": true
+        },
+        {
+            "name": "alpha",
+            "type": "float",
+            "description": "Weight of YesNo dataset when adding bonus for DuReader contest. Defaults to 1.0.",
+            "default": "1.0",
+            "optional": true
+        },
+        {
+            "name": "beta",
+            "type": "float",
+            "description": "Weight of Entity dataset when adding bonus for DuReader contest. Defaults to 1.0.",
+            "default": "1.0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.utils.batch_sampler.DistributedBatchSampler.set_epoch",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "epoch": "0",
+        "consumed_samples": "0"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "epoch",
+            "type": "int",
+            "description": "Epoch number.",
+            "default": "0",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

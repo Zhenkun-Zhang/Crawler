@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.tokenize",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "text": "str",
+        "pair": "str or None = None",
+        "add_special_tokens": "bool = False",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "text",
+            "type": "str",
+            "description": "The sequence to be encoded.",
+            "default": "str",
+            "optional": false
+        },
+        {
+            "name": "pair",
+            "type": "str",
+            "description": "A second sequence to be encoded with the first.",
+            "default": "str or None = None",
+            "optional": true
+        },
+        {
+            "name": "add_special_tokens",
+            "type": "bool",
+            "description": "Whether or not to add the special tokens associated with the corresponding model.",
+            "default": "bool = False",
+            "optional": true
+        },
+        {
+            "name": "kwargs",
+            "type": "additional keyword arguments",
+            "description": "Will be passed to the underlying model specific encode method. See details in[__call__]",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "The list of tokens.",
+        "type": "List[str]"
+    }
+}

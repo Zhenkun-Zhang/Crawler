@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.taskflow.utils.WordTagRelationExtractor.extract_spo",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "all_items": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "all_items",
+            "type": "[type]",
+            "description": "[description]",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

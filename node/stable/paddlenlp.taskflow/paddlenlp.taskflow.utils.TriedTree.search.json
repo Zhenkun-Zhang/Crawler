@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.utils.TriedTree.search",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "content": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

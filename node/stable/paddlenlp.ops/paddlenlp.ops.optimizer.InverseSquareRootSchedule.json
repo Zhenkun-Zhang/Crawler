@@ -1,0 +1,47 @@
+{
+    "api": "paddlenlp.ops.optimizer.InverseSquareRootSchedule",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "warmup_steps": null,
+        "learning_rate": "1.0",
+        "last_epoch": "-1",
+        "verbose": "False"
+    },
+    "Bases": "LRScheduler",
+    "description": "Decay the LR based on the inverse square root of the update number.",
+    "params": [
+        {
+            "name": "warmup_steps",
+            "type": "int",
+            "description": "The number of warmup steps. A super parameter.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "learning_rate",
+            "type": "float",
+            "description": "The learning rate. It is a python float number. Defaults to 1.0.",
+            "default": "1.0",
+            "optional": true
+        },
+        {
+            "name": "last_epoch",
+            "type": "int",
+            "description": "The index of last epoch. Can be set to restart training. Default: -1,means initial learning rate.",
+            "default": "-1",
+            "optional": true
+        },
+        {
+            "name": "verbose",
+            "type": "bool",
+            "description": "If True, prints a message to stdout for eachupdate. Defaults to False.",
+            "default": "False",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab.build_vocab",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "iterator": null,
+        "max_size": "None",
+        "min_freq": "1",
+        "token_to_idx": "None",
+        "unk_token": "None",
+        "pad_token": "None",
+        "bos_token": "None",
+        "eos_token": "None",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "iterator",
+            "type": "collections.Iterable",
+            "description": "Iterator of tokens. Each elementshould be a list of tokens if wordlevel vocab is needed.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "max_size",
+            "type": "int",
+            "description": "The max size of vocab, not includingspecial tokens. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "min_freq",
+            "type": "int",
+            "description": "Ignore tokens whose frequencies are lessthan min_freq. Default: 1.",
+            "default": "1",
+            "optional": true
+        },
+        {
+            "name": "token_to_idx",
+            "type": "dict",
+            "description": "A dict specifies the mappingrelationship between tokens and indices to be used. If provided,adjust the tokens and indices mapping according to it. If None,counter must be provided. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "description": "The special token for unknow token<unk>. If no need, it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "description": "The special token for padding token<pad>. If no need, it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "description": "The special token for bos token <bos>.If no need, it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "description": "The special token for eos token <eos>.If no need, it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "description": "Keyword arguments ending with _token. It can beused to specify further special tokens that will be exposed asattribute of the vocabulary and associated with an index.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "An instance of Vocab generated from given iteratorand other informations.",
+        "type": "Vocab"
+    }
+}

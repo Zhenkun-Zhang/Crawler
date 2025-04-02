@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.metrics.bleu.BLEU.accumulate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "Returns the accumulated metric bleu and its data type is float64.",
+        "type": "Tensor"
+    }
+}

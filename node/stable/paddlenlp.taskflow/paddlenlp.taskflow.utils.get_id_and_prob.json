@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.taskflow.utils.get_id_and_prob",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "span_set": null,
+        "offset_mapping": null
+    },
+    "description": "Return text id and probability of predicted spansspan_set (set) – set of predicted spans.offset_mapping (list[int]) – list of pair preserving theindex of start and end char in original text pair (prompt + text) for each token.index of start and end char in original text.prob (list[float]): probabilities of predicted spans.sentence_id (list[tuple])",
+    "params": [
+        {
+            "name": "span_set",
+            "type": "set",
+            "description": "set of predicted spans.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "offset_mapping",
+            "type": "list[int]",
+            "description": "list of pair preserving theindex of start and end char in original text pair (prompt + text) for each token.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "index of start and end char in original text.prob (list[float]): probabilities of predicted spans.",
+        "type": "sentence_id (list[tuple])"
+    }
+}

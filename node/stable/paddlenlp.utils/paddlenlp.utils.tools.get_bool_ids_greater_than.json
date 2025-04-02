@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.utils.tools.get_bool_ids_greater_than",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "probs": null,
+        "limit": "0.5",
+        "return_prob": "False"
+    },
+    "description": "Get idx of the last dimension in probability arrays, which is greater than a limitation.probs (List[List[float]]) – The input probability arrays.limit (float) – The limitation for probability.return_prob (bool) – Whether to return the probabilityThe index of the last dimension meet the conditions.List[List[int]]",
+    "params": [
+        {
+            "name": "probs",
+            "type": "List[List[float]]",
+            "description": "The input probability arrays.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "limit",
+            "type": "float",
+            "description": "The limitation for probability.",
+            "default": "0.5",
+            "optional": false
+        },
+        {
+            "name": "return_prob",
+            "type": "bool",
+            "description": "Whether to return the probability",
+            "default": "False",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The index of the last dimension meet the conditions.",
+        "type": "List[List[int]]"
+    }
+}

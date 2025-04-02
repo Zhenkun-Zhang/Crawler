@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.metrics.glue.Mcc.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "preds_and_labels": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "preds_and_labels",
+            "type": "tuple[Tensor]",
+            "description": "Tuple of predicted value and the ground truth label, with dtypefloat32 or float64. Each shape is [batch_size, 1].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

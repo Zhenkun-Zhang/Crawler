@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.metrics.glue.AccuracyAndF1.accumulate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "The accumulated metric. A tuple of shape (acc, precision,recall, f1, average_of_acc_and_f1)With the fields:acc (numpy.float64):The accumulated accuracy.precision (numpy.float64):The accumulated precision.recall (numpy.float64):The accumulated recall.f1 (numpy.float64):The accumulated f1.average_of_acc_and_f1 (numpy.float64):The average of accumulated accuracy and f1.The accumulated metric. A tuple of shape (acc, precision,recall, f1, average_of_acc_and_f1)With the fields:The accumulated accuracy.The accumulated precision.The accumulated recall.The accumulated f1.The average of accumulated accuracy and f1.",
+        "type": "tuple"
+    }
+}

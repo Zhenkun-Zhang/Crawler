@@ -1,0 +1,33 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.SemanticSegmenterOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "loss": "Tensor or None = None",
+        "logits": "Tensor or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None",
+        "attentions": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for outputs of semantic segmentation models.:param loss: Classification (or regression if config.num_labels==1) loss.:type loss: paddle.Tensor of shape (1,), optional, returned when labels is provided:param logits: Classification scores for each pixel.",
+    "params": [
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, patch_size, hidden_size).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, patch_size,sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

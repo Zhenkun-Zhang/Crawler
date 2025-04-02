@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.taskflow.utils.TermTree.add_term",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "term": "str or None = None",
+        "base": "str or None = None",
+        "term_type": "str or None = None",
+        "sub_type": "List[str] or None = None",
+        "sub_term": "List[str] or None = None",
+        "alias": "List[str] or None = None",
+        "alias_ext": "List[str] or None = None",
+        "data": "Dict[str",
+        "Any]|None": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

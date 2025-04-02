@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.metrics.sighan.DetectionF1",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "pos_label": "1",
+        "name": "'DetectionF1'",
+        "*args": null,
+        "**kwargs": null
+    },
+    "Bases": "Metric",
+    "description": "Update states for metric",
+    "params": [],
+    "return": {
+        "description": "The name of the metric instance.",
+        "type": "str"
+    }
+}

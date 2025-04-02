@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.trainer.integrations.TensorBoardCallback.on_log",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "args": null,
+        "state": null,
+        "control": null,
+        "logs": "None",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

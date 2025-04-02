@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.istree",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "sequence": null
+    },
+    "description": "Is the sequence a project tree",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

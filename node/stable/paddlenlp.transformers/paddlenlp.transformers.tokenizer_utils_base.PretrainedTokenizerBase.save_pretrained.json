@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.save_pretrained",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "save_directory": null,
+        "filename_prefix": "str or None = None",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str",
+            "description": "Directory to save files into.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "filename_prefix",
+            "type": "",
+            "description": "(str, optional):A prefix to add to the names of the files saved by the tokenizer.",
+            "default": "str or None = None",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

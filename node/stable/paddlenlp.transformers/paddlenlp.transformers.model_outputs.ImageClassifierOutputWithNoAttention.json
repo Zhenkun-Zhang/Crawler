@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.ImageClassifierOutputWithNoAttention",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "loss": "Tensor or None = None",
+        "logits": "Tensor or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for outputs of image classification models.",
+    "params": [
+        {
+            "name": "loss",
+            "type": "paddle.Tensor of shape 1,",
+            "description": "Classification (or regression if config.num_labels==1) loss.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "logits",
+            "type": "paddle.Tensor of shape batch_size, config.num_labels",
+            "description": "Classification (or regression if config.num_labels==1) scores (before SoftMax).",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each stage) of shape (batch_size, num_channels, height, width). Hidden-states (alsocalled feature maps) of the model at the output of each stage.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

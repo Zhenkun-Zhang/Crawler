@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.datasets.dataset.IterDataset.filter",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "fn": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "fn",
+            "type": "callable",
+            "description": "A filter function that takes a sample as input andreturns a boolean. Samples that return False are discarded.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

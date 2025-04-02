@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.attention_utils.Linear3D.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "input": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

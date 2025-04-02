@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.ops.optimizer.layerwise_lr_decay",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "decay_rate": null,
+        "name_dict": null,
+        "n_layers": null,
+        "param": null
+    },
+    "description": "decay_rate (float) – The layer-wise decay ratio.name_dict (dict) – The keys of name_dict is dynamic name of model while the valueof name_dict is static name.Use model.named_parameters() to get name_dict.n_layers (int) – Total number of layers in the transformer encoder.",
+    "params": [
+        {
+            "name": "decay_rate",
+            "type": "float",
+            "description": "The layer-wise decay ratio.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "name_dict",
+            "type": "dict",
+            "description": "The keys of name_dict is dynamic name of model while the valueof name_dict is static name.Use model.named_parameters() to get name_dict.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "n_layers",
+            "type": "int",
+            "description": "Total number of layers in the transformer encoder.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

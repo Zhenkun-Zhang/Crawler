@@ -1,0 +1,62 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab.from_dict",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "token_to_idx": null,
+        "unk_token": "None",
+        "pad_token": "None",
+        "bos_token": "None",
+        "eos_token": "None",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "token_to_idx",
+            "type": "dict",
+            "description": "A dict describes the mapping relationship betweentokens and indices.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "description": "The special token for unknow token. Ifno need, it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "description": "The special token for padding token. Ifno need, it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "description": "The special token for bos token. If noneed, it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "description": "The special token for eos token. If noneed, it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "description": "Keyword arguments ending with _token. It can beused to specify further special tokens that will be exposed asattribute of the vocabulary and associated with an index.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "An instance of Vocab generated from the given dictand special tokens.",
+        "type": "Vocab"
+    }
+}

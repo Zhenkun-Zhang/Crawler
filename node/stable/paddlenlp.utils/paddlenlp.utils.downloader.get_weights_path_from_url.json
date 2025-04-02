@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.utils.downloader.get_weights_path_from_url",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "url": null,
+        "md5sum": "None"
+    },
+    "description": "Get weights path from WEIGHT_HOME, if not exists,download it from url.:param url: download url:type url: str:param md5sum: md5 sum of download package:type md5sum: stra local path to save downloaded weights.strExamples",
+    "params": [],
+    "return": {
+        "description": "a local path to save downloaded weights.",
+        "type": "str"
+    }
+}

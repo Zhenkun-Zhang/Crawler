@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.taskflow.utils.calEuclidean",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "x_list": null,
+        "y_list": null
+    },
+    "description": "Calculate euclidean distance",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

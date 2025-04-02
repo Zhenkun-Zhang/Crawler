@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "**kwargs": null
+    },
+    "Bases": "ChatTemplateMixin, PretrainedTokenizerBase",
+    "description": "Base class for all tokenizers.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

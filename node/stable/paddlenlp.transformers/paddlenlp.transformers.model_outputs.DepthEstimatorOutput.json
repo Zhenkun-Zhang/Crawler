@@ -1,0 +1,47 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.DepthEstimatorOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "loss": "Tensor or None = None",
+        "predicted_depth": "Tensor or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None",
+        "attentions": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for outputs of depth estimation models.",
+    "params": [
+        {
+            "name": "loss",
+            "type": "paddle.Tensor of shape 1,",
+            "description": "Classification (or regression if config.num_labels==1) loss.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "predicted_depth",
+            "type": "paddle.Tensor of shape batch_size, height, width",
+            "description": "Predicted depth for each pixel.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, num_channels, height, width).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, num_channels, height, width).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, patch_size,sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads.Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, patch_size,sequence_length).",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

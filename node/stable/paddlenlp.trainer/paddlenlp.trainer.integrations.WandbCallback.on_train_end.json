@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.trainer.integrations.WandbCallback.on_train_end",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "args": null,
+        "state": null,
+        "control": null,
+        "model": "None",
+        "tokenizer": "None",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

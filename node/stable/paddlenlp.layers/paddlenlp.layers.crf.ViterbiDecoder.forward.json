@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.layers.crf.ViterbiDecoder.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "inputs": null,
+        "lengths": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "inputs",
+            "type": "Tensor",
+            "description": "The unary emission tensor. Its dtype is float32 and has a shape of [batch_size, sequence_length, num_tags].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "length",
+            "type": "Tensor",
+            "description": "The input length tensor storing real length of each sequence for correctness. Its dtype is int64 and has a shape of [batch_size].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Returns tuple (scores, paths). The scores tensor containing the score for the Viterbi sequence.Its dtype is float32 and has a shape of [batch_size].The paths tensor containing the highest scoring tag indices.Its dtype is int64 and has a shape of [batch_size, sequence_length].",
+        "type": "tuple"
+    }
+}

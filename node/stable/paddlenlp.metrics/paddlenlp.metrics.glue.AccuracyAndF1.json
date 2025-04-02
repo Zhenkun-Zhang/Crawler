@@ -1,0 +1,42 @@
+{
+    "api": "paddlenlp.metrics.glue.AccuracyAndF1",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "topk": "(1",
+        ")": null,
+        "pos_label": "1",
+        "name": "'acc_and_f1'",
+        "*args": null,
+        "**kwargs": null
+    },
+    "Bases": "Metric",
+    "description": "This class encapsulates Accuracy, Precision, Recall and F1 metric logic,and accumulate function returns accuracy, precision, recall and f1.The overview of all metrics could be seen at the document of paddle.metricfor details.",
+    "params": [
+        {
+            "name": "topk",
+            "type": "int or tupleint",
+            "description": "Number of top elements to look at for computing accuracy.Defaults to (1,).",
+            "default": "(1",
+            "optional": true
+        },
+        {
+            "name": "pos_label",
+            "type": "int",
+            "description": "The positive label for calculating precisionand recall.Defaults to 1.",
+            "default": "1",
+            "optional": true
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "String name of the metric instance. Defaults to acc_and_f1.",
+            "default": "acc_and_f1",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

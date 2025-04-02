@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.transformers.utils.CaptureStd",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "out": "True",
+        "err": "True",
+        "replay": "True"
+    },
+    "Bases": "object",
+    "description": "Context manager to capture:",
+    "params": [
+        {
+            "name": "out",
+            "type": "bool",
+            "description": "Whether to capture stdout or not.",
+            "default": "True",
+            "optional": true
+        },
+        {
+            "name": "err",
+            "type": "bool",
+            "description": "Whether to capture stderr or not.",
+            "default": "True",
+            "optional": true
+        },
+        {
+            "name": "replay",
+            "type": "bool",
+            "description": "Whether to replay or not.By default each captured stream gets replayed back on contexts exit, so that one can see what the test wasdoing. If this is a not wanted behavior and the captured data shouldnt be replayed, pass replay=False todisable this feature.",
+            "default": "True",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

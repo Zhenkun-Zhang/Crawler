@@ -1,0 +1,73 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.SpecialTokensMixin",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "verbose": "True",
+        "**kwargs": null
+    },
+    "Bases": "object",
+    "description": "A mixin derived by [PretrainedTokenizer] to handle specific behaviors related tospecial tokens. In particular, this class hold the attributes which can be used to directly access these specialtokens in a model-independent manner and allow to set and update the special tokens.",
+    "params": [
+        {
+            "name": "bos_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing the beginning of a sentence.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "eos_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing the end of a sentence.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "unk_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing an out-of-vocabulary token.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sep_token",
+            "type": "str or AddedToken",
+            "description": "A special token separating two different sentences in the same input (used by BERT for instance).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "pad_token",
+            "type": "str or AddedToken",
+            "description": "A special token used to make arrays of tokens the same size for batching purpose. Will then be ignored byattention mechanisms or loss computation.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "cls_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing the class of the input (used by BERT for instance).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "mask_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing a masked token (used by masked-language modeling pretraining objectives, likeBERT).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "tuple or list of str or AddedToken",
+            "description": "A tuple or a list of additional special tokens.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

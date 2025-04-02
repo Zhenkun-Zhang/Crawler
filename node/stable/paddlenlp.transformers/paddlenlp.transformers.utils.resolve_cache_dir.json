@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.transformers.utils.resolve_cache_dir",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "from_hf_hub": "bool",
+        "from_aistudio": "bool",
+        "cache_dir": "str|None=None"
+    },
+    "description": "resolve cache dir for PretrainedModel and PretrainedConfigfrom_hf_hub (bool) – if load from huggingface hubcache_dir (str) – cache_dir for models",
+    "params": [
+        {
+            "name": "from_hf_hub",
+            "type": "bool",
+            "description": "if load from huggingface hub",
+            "default": "bool",
+            "optional": false
+        },
+        {
+            "name": "cache_dir",
+            "type": "str",
+            "description": "cache_dir for models",
+            "default": "str|None=None",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

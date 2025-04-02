@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.taskflow.utils.TermTreeNode.from_dict",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "data": "Dict[str",
+        "Any]": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "data",
+            "type": "Dict[str, Any]",
+            "description": "Dictionary data contain all k-v data.",
+            "default": "Dict[str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "TermTree node object.",
+        "type": "[type]"
+    }
+}

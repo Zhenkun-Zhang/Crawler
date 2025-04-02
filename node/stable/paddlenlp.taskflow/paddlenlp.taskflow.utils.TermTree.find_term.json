@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.taskflow.utils.TermTree.find_term",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "term": "str",
+        "term_type": "str or None = None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "term",
+            "type": "str",
+            "description": "term to look up.",
+            "default": "str",
+            "optional": false
+        },
+        {
+            "name": "term_type",
+            "type": "Optional[str]",
+            "description": "find term in this term_type. Defaults to None.",
+            "default": "str or None = None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "[description]",
+        "type": "Union[None, List[str]]"
+    }
+}

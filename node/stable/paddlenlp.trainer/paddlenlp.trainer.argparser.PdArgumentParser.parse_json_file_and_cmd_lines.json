@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.trainer.argparser.PdArgumentParser.parse_json_file_and_cmd_lines",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "return_remaining_strings": "False"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "the dataclass instances in the same order as they were passed to the initializer.abspaththe dataclass instances in the same order as they were passed to the initializer.abspath",
+        "type": "Tuple consisting of"
+    }
+}

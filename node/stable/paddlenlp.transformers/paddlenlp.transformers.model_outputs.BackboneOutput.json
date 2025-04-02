@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.BackboneOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "feature_maps": "Tuple[Tensor] or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None",
+        "attentions": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for outputs of backbones.",
+    "params": [
+        {
+            "name": "feature_maps",
+            "type": "tuplepaddle.Tensor of shape batch_size, num_channels, height, width",
+            "description": "Feature maps of the stages.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size) or (batch_size, num_channels, height, width),depending on the backbone.Hidden-states of the model at the output of each stage plus the initial embedding outputs.Tuple of paddle.Tensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size) or (batch_size, num_channels, height, width),depending on the backbone.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length). Only applicable if the backbone uses attention.Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads.Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length). Only applicable if the backbone uses attention.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

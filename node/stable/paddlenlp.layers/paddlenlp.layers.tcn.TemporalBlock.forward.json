@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.layers.tcn.TemporalBlock.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "x": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "x",
+            "type": "Tensor",
+            "description": "The input tensor with a shape  of [batch_size, input_channel, sequence_length].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

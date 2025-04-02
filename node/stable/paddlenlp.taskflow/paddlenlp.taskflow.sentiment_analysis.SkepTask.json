@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.taskflow.sentiment_analysis.SkepTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "Sentiment analysis task using ERNIE-Gram model to predict sentiment opinion on Chinese text.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

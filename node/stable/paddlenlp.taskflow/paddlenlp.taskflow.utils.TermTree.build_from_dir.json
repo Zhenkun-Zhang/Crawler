@@ -1,0 +1,24 @@
+{
+    "api": "paddlenlp.taskflow.utils.TermTree.build_from_dir",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "term_schema_path": null,
+        "term_data_path": null,
+        "linking": "True"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "dir",
+            "type": "[type]",
+            "description": "[description]",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

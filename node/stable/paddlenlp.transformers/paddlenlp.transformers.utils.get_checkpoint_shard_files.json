@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.transformers.utils.get_checkpoint_shard_files",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "pretrained_model_name_or_path": null,
+        "index_filename": null,
+        "cache_dir": "None",
+        "subfolder": "''",
+        "from_aistudio": "False",
+        "from_hf_hub": "False"
+    },
+    "description": "For a given model:- download and cache all the shards of a sharded checkpoint if pretrained_model_name_or_path is a model ID on theHubreturns the list of paths to all the shards, as well as some metadata.For the description of each arg, see [PretrainedModel.from_pretrained]. index_filename is the full path to theindex (downloaded and cached if pretrained_model_name_or_path is a model ID on the Hub).",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

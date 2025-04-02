@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.utils.find_transformer_model_class_by_name",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "model_name": "str"
+    },
+    "description": "find transformer model_class by namemodel_name (str) – the string of class nameoptional pretrained-model classOptional[Type[PretrainedModel]]",
+    "params": [
+        {
+            "name": "model_name",
+            "type": "str",
+            "description": "the string of class name",
+            "default": "str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "optional pretrained-model class",
+        "type": "Optional[Type[PretrainedModel]]"
+    }
+}

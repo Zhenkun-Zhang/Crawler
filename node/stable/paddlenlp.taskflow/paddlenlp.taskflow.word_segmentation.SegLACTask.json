@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.taskflow.word_segmentation.SegLACTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "**kwargs": null
+    },
+    "Bases": "LacTask",
+    "description": "Segement the sentences to the words using LAC mode.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

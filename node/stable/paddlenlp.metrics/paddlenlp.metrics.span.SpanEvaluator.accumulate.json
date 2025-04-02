@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.metrics.span.SpanEvaluator.accumulate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "tuple",
+        "type": ""
+    }
+}

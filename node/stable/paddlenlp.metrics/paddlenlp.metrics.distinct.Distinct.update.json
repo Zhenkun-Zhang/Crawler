@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.metrics.distinct.Distinct.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "output": null,
+        "*args": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "output",
+            "type": "numpy.ndarray or Tensor",
+            "description": "The outputs of model.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "args",
+            "type": "tuple",
+            "description": "The additional inputs.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

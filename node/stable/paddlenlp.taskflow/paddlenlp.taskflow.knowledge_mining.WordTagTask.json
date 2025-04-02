@@ -1,0 +1,24 @@
+{
+    "api": "paddlenlp.taskflow.knowledge_mining.WordTagTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "model": null,
+        "task": null,
+        "tag_path": "None",
+        "term_schema_path": "None",
+        "term_data_path": "None",
+        "user_dict": "None",
+        "linking": "True",
+        "spo_config_path": "None",
+        "with_ie": "False",
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "This the NER(Named Entity Recognition) task that convert the raw text to entities. And the task with the wordtagmodel will link the more meesage with the entity.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

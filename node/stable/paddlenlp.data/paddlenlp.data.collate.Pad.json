@@ -1,0 +1,55 @@
+{
+    "api": "paddlenlp.data.collate.Pad",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "pad_val": "0",
+        "axis": "0",
+        "ret_length": "None",
+        "dtype": "None",
+        "pad_right": "True"
+    },
+    "Bases": "object",
+    "description": "Pads the input data samples to the largest length at axis.",
+    "params": [
+        {
+            "name": "pad_val",
+            "type": "float or int",
+            "description": "The padding value. Default: 0.",
+            "default": "0",
+            "optional": true
+        },
+        {
+            "name": "axis",
+            "type": "int",
+            "description": "The axis to pad the arrays. The arrays will bepadded to the largest length at axis. For example, assume theinput arrays have shape (10, 8, 5), (6, 8, 5), (3, 8, 5) and theaxis is 0. Each input will be padded into (10, 8, 5) and thenstacked to form the final output, which has shape (3, 10, 8, 5).Default: 0.",
+            "default": "0",
+            "optional": true
+        },
+        {
+            "name": "ret_length",
+            "type": "bool or numpy.dtype",
+            "description": "If it is bool, indicate whetherto return the valid length in the output, and the data type ofreturned length is int32 if True. If it is numpy.dtype, indicate thedata type of returned length. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "dtype",
+            "type": "numpy.dtype",
+            "description": "The value type of the output. If it isset to None, the input data type is used. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "pad_right",
+            "type": "bool",
+            "description": "Whether the padding direction is right-side.If True, it indicates we pad to the right side, while False indicateswe pad to the left side. Default: True.",
+            "default": "True",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

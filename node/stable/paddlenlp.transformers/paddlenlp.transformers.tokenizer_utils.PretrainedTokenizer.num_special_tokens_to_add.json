@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer.num_special_tokens_to_add",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "pair": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "pair",
+            "type": "bool",
+            "description": "Whether the number of added tokens should be computed in the case of a sequence pair or a singlesequence. Defaults to False.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Number of special tokens added to sequences.",
+        "type": "int"
+    }
+}

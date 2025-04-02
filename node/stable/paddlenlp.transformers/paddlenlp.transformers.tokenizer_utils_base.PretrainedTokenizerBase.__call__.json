@@ -1,0 +1,167 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.__call__",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "text": "str or List[str] or List[List[str]]",
+        "text_pair": "str or List[str] or List[List[str]] or None = None",
+        "max_length": "int or None = None",
+        "stride": "int = 0",
+        "is_split_into_words": "bool or str = False",
+        "padding": "bool or str or PaddingStrategy = False",
+        "truncation": "bool or str or TruncationStrategy = False",
+        "return_position_ids": "bool or None = None",
+        "return_token_type_ids": "bool or None = None",
+        "return_attention_mask": "bool or None = None",
+        "return_length": "bool = False",
+        "return_overflowing_tokens": "bool = False",
+        "return_special_tokens_mask": "bool = False",
+        "return_dict": "bool = True",
+        "return_offsets_mapping": "bool = False",
+        "add_special_tokens": "bool = True",
+        "pad_to_multiple_of": "int or None = None",
+        "return_tensors": "str or TensorType or None = None",
+        "verbose": "bool = True",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "text",
+            "type": "str, List[str] or List[List[str]]",
+            "description": "The sequence or batch of sequences to be processed. One sequenceis a string or a list of strings depending on whether it has beenpretokenized. If each sequence is provided as a list of strings(pretokenized), you must set is_split_into_words as True todisambiguate with a batch of sequences.",
+            "default": "str or List[str] or List[List[str]]",
+            "optional": false
+        },
+        {
+            "name": "text_pair",
+            "type": "str, List[str] or List[List[str]]",
+            "description": "Same as text argument, while it represents for the lattersequence of the sequence pair.",
+            "default": "str or List[str] or List[List[str]] or None = None",
+            "optional": true
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "description": "If set to a number, will limit the total sequence returned sothat it has a maximum length. If there are overflowing tokens,those overflowing tokens will be added to the returned dictionarywhen return_overflowing_tokens is True. Defaults to None.",
+            "default": "int or None = None",
+            "optional": true
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "description": "Only available for batch input of sequence pair and mainly forquestion answering usage. When for QA, text represents questionsand text_pair represents contexts. If stride is set to apositive number, the context will be split into multiple spanswhere stride defines the number of (tokenized) tokens to skipfrom the start of one span to get the next span, thus will producea bigger batch than inputs to include all spans. Moreover, overflow_to_sampleand offset_mapping preserving the original example and positioninformation will be added to the returned dictionary. Defaults to 0.",
+            "default": "int = 0",
+            "optional": true
+        },
+        {
+            "name": "is_split_into_words",
+            "type": "Union[bool, str]",
+            "description": "when the text is words or tokens, is_split_into_words should be True or token.True: means that the text should be words which should be tokenized.token: means that the text should be tokens which already be tokenized, so it should not be tokenized again.",
+            "default": "bool or str = False",
+            "optional": true
+        },
+        {
+            "name": "padding",
+            "type": "bool, str or [PaddingStrategy]",
+            "description": "Activates and controls padding. Accepts the following values:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths).Defaults to False.Activates and controls padding. Accepts the following values:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths).",
+            "default": "bool or str or PaddingStrategy = False",
+            "optional": true
+        },
+        {
+            "name": "truncation",
+            "type": "bool, str or [TruncationStrategy]",
+            "description": "Activates and controls truncation. Accepts the following values:True or longest_first: Truncate to a maximum length specified with the argument max_length orto the maximum acceptable input length for the model if that argument is not provided. This willtruncate token by token, removing a token from the longest sequence in the pair if a pair ofsequences (or a batch of pairs) is provided.only_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the first sequence of a pair if a pair of sequences (or a batch of pairs) is provided.only_second: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the second sequence of a pair if a pair of sequences (or a batch of pairs) is provided.False or do_not_truncate (default): No truncation (i.e., can output batch with sequence lengthsgreater than the model maximum admissible input size).Defaults to False.Activates and controls truncation. Accepts the following values:True or longest_first: Truncate to a maximum length specified with the argument max_length orto the maximum acceptable input length for the model if that argument is not provided. This willtruncate token by token, removing a token from the longest sequence in the pair if a pair ofsequences (or a batch of pairs) is provided.only_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the first sequence of a pair if a pair of sequences (or a batch of pairs) is provided.only_second: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the second sequence of a pair if a pair of sequences (or a batch of pairs) is provided.False or do_not_truncate (default): No truncation (i.e., can output batch with sequence lengthsgreater than the model maximum admissible input size).",
+            "default": "bool or str or TruncationStrategy = False",
+            "optional": true
+        },
+        {
+            "name": "return_position_ids",
+            "type": "bool",
+            "description": "Whether to include tokens position ids in the returned dictionary.Defaults to False.",
+            "default": "bool or None = None",
+            "optional": true
+        },
+        {
+            "name": "return_token_type_ids",
+            "type": "bool",
+            "description": "Whether to include token type ids in the returned dictionary.Defaults to True.",
+            "default": "bool or None = None",
+            "optional": true
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "description": "Whether to include the attention mask in the returned dictionary.Defaults to False.",
+            "default": "bool or None = None",
+            "optional": true
+        },
+        {
+            "name": "return_length",
+            "type": "bool",
+            "description": "Whether to include the length of each encoded inputs in thereturned dictionary. Defaults to False.",
+            "default": "bool = False",
+            "optional": true
+        },
+        {
+            "name": "return_overflowing_tokens",
+            "type": "bool",
+            "description": "Whether to include overflowing token information in the returneddictionary. Defaults to False.",
+            "default": "bool = False",
+            "optional": true
+        },
+        {
+            "name": "return_special_tokens_mask",
+            "type": "bool",
+            "description": "Whether to include special tokens mask information in the returneddictionary. Defaults to False.",
+            "default": "bool = False",
+            "optional": true
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "description": "Decide the format for returned encoded batch inputs. Only works wheninput is a batch of data.- If True, encoded inputs would be a dictionary like:    {input_ids: [[1, 4444, 4385, 1545, 6712],[1, 4444, 4385]],    token_type_ids: [[0, 0, 0, 0, 0], [0, 0, 0]]}- If False, encoded inputs would be a list like:    [{input_ids: [1, 4444, 4385, 1545, 6712],      token_type_ids: [0, 0, 0, 0, 0]},     {input_ids: [1, 4444, 4385], token_type_ids: [0, 0, 0]}]Defaults to True.Decide the format for returned encoded batch inputs. Only works wheninput is a batch of data.",
+            "default": "bool = True",
+            "optional": true
+        },
+        {
+            "name": "return_offsets_mapping",
+            "type": "bool",
+            "description": "Whether to include the list of pair preserving the index of startand end char in original input for each token in the returneddictionary. Would be automatically set to True when stride > 0.Defaults to False.",
+            "default": "bool = False",
+            "optional": true
+        },
+        {
+            "name": "add_special_tokens",
+            "type": "bool",
+            "description": "Whether to add the special tokens associated with the corresponding modelto the encoded inputs. Defaults to True",
+            "default": "bool = True",
+            "optional": true
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "description": "If set will pad the sequence to a multiple of the provided value. This is especially useful to enablethe use of Tensor Cores on NVIDIA hardware with compute capability >= 7.5 (Volta).Defaults to None.",
+            "default": "int or None = None",
+            "optional": true
+        },
+        {
+            "name": "return_tensors",
+            "type": "str or [TensorType]",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:pd: Return Paddle paddle.Tensor objects.np: Return Numpy np.ndarray objects.Defaults to None.If set, will return tensors instead of list of python integers. Acceptable values are:pd: Return Paddle paddle.Tensor objects.np: Return Numpy np.ndarray objects.",
+            "default": "str or TensorType or None = None",
+            "optional": true
+        },
+        {
+            "name": "verbose",
+            "type": "bool",
+            "description": "Whether or not to print more information and warnings. Defaults to True.",
+            "default": "bool = True",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "The dict has the following optional items:input_ids (list[int] or list[list[int]]): List of token ids to be fed to a model.position_ids (list[int] or list[list[int]], optional): List of token position ids to befed to a model. Included when return_position_ids is Truetoken_type_ids (list[int] or list[list[int]], optional): List of token type ids to befed to a model. Included when return_token_type_ids is True.attention_mask (list[int] or list[list[int]], optional): List of integers valued 0 or 1,where 0 specifies paddings and should not be attended to by themodel. Included when return_attention_mask is True.seq_len (int or list[int], optional): The input_ids length. Included when return_lengthis True.overflowing_tokens (list[int] or list[list[int]], optional): List of overflowing tokens.Included when if max_length is specified and return_overflowing_tokensis True.num_truncated_tokens (int or list[int], optional): The number of overflowing tokens.Included when if max_length is specified and return_overflowing_tokensis True.special_tokens_mask (list[int] or list[list[int]], optional): List of integers valued 0 or 1,with 0 specifying special added tokens and 1 specifying sequence tokens.Included when return_special_tokens_mask is True.offset_mapping (list[int], optional): list of pair preserving theindex of start and end char in original input for each token.For a sqecial token, the index pair is (0, 0). Included whenreturn_overflowing_tokens is True or stride > 0.overflow_to_sample (int or list[int], optional): Index of example from which thisfeature is generated. Included when stride works.The dict has the following optional items:input_ids (list[int] or list[list[int]]): List of token ids to be fed to a model.position_ids (list[int] or list[list[int]], optional): List of token position ids to befed to a model. Included when return_position_ids is Truetoken_type_ids (list[int] or list[list[int]], optional): List of token type ids to befed to a model. Included when return_token_type_ids is True.attention_mask (list[int] or list[list[int]], optional): List of integers valued 0 or 1,where 0 specifies paddings and should not be attended to by themodel. Included when return_attention_mask is True.seq_len (int or list[int], optional): The input_ids length. Included when return_lengthis True.overflowing_tokens (list[int] or list[list[int]], optional): List of overflowing tokens.Included when if max_length is specified and return_overflowing_tokensis True.num_truncated_tokens (int or list[int], optional): The number of overflowing tokens.Included when if max_length is specified and return_overflowing_tokensis True.special_tokens_mask (list[int] or list[list[int]], optional): List of integers valued 0 or 1,with 0 specifying special added tokens and 1 specifying sequence tokens.Included when return_special_tokens_mask is True.offset_mapping (list[int], optional): list of pair preserving theindex of start and end char in original input for each token.For a sqecial token, the index pair is (0, 0). Included whenreturn_overflowing_tokens is True or stride > 0.overflow_to_sample (int or list[int], optional): Index of example from which thisfeature is generated. Included when stride works.",
+        "type": "dict or list[dict] (for batch input)"
+    }
+}

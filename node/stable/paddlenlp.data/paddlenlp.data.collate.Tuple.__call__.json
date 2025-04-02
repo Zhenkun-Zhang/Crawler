@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.collate.Tuple.__call__",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "data": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "data",
+            "type": "list or tuple",
+            "description": "The samples to batchfy. Each sample in list/tupleshould contain N fields.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "A tuple composed of results from all including batchifyingfunctions.",
+        "type": "tuple"
+    }
+}

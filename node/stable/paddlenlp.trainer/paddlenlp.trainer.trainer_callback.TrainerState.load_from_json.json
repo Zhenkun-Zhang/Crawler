@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.trainer.trainer_callback.TrainerState.load_from_json",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "json_path": "str"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

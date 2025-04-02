@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.DepTree",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "sentence": null
+    },
+    "Bases": "object",
+    "description": "DepTree class, used to check whether the prediction result is a project Tree.A projective tree means that you can project the tree without crossing arcs.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

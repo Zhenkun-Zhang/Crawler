@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.utils.log.Logger",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "name": "str or None = None"
+    },
+    "Bases": "object",
+    "description": "Deafult logger in PaddleNLP",
+    "params": [
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Logger name, default is PaddleNLP",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

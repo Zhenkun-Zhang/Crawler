@@ -1,0 +1,48 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.SequenceClassifierOutputWithPast",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "loss": "Tensor or None = None",
+        "logits": "Tensor or None = None",
+        "past_key_values": "Tuple[Tuple[Tensor]] or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None",
+        "attentions": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for outputs of sentence classification models.:param loss: Classification (or regression if config.num_labels==1) loss whose shape is (1,).",
+    "params": [
+        {
+            "name": "logits",
+            "type": "paddle.Tensor",
+            "description": "Classification (or regression if config.num_labels==1) scores (before SoftMax)whose shape is (batch_size, num_labels)",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "past_key_values",
+            "type": "tupletuplepaddle.Tensor",
+            "description": "Tuple of tuple(paddle.Tensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head))Returned when use_cache=True is passed or when config.use_cache=True).Contains pre-computed hidden-states (key and values in the self-attention blocks) that can be used (seepast_key_values input) to speed up sequential decoding.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Returned when output_hidden_states=True is passed or when config.output_hidden_states=True).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length). Returned when output_attentions=True is passed or when config.output_attentions=True).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.utils.WordTagRelationExtractor.from_pkl",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "pkl_path": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

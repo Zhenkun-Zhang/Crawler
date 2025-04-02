@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.ExplicitEnum",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "value": null
+    },
+    "Bases": "Enum",
+    "description": "Enum with more explicit error message for missing values.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.utils.tools.TimeCostAverage.record",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "usetime": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.save_to_hf_hub",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "repo_id": "str",
+        "private": "bool or None = None",
+        "subfolder": "str or None = None",
+        "commit_message": "str or None = None",
+        "revision": "str or None = None",
+        "create_pr": "bool = False"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

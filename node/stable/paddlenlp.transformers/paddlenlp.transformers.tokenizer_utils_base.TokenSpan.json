@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.TokenSpan",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "start": "int",
+        "end": "int"
+    },
+    "Bases": "tuple",
+    "description": "Token span in an encoded string (list of tokens).",
+    "params": [
+        {
+            "name": "start",
+            "type": "int",
+            "description": "Index of the first token in the span.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "end",
+            "type": "int",
+            "description": "Index of the token following the last token in the span.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

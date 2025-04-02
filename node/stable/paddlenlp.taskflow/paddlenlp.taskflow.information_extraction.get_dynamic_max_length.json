@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.taskflow.information_extraction.get_dynamic_max_length",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "examples": null,
+        "default_max_length": "int",
+        "dynamic_max_length": "List[int]"
+    },
+    "description": "get max_length by examples which you can change it by examples in batch",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

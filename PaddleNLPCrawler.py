@@ -287,7 +287,7 @@ def dealDefault(default):
 def main():
     version = 'stable'
     root = "https://paddlenlp.readthedocs.io/en/" + version + "/source/"
-    save_path = "dao/node/PaddleNLP/" + version + "/"
+    save_path = "node/" + version + "/"
     solve(root, save_path, version)
     
 

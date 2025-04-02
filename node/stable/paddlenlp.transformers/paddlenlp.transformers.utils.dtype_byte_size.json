@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.utils.dtype_byte_size",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "dtype": null
+    },
+    "description": "Returns the size (in bytes) occupied by one parameter of type dtype.Example:`py>>> dtype_byte_size(paddle.float32)4`",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

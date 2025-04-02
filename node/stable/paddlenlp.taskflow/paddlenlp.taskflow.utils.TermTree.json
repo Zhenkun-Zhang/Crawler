@@ -1,0 +1,70 @@
+{
+    "api": "paddlenlp.taskflow.utils.TermTree",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "object",
+    "description": "TermTree class.",
+    "params": [
+        {
+            "name": "term",
+            "type": "str",
+            "description": "common name of name.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "base",
+            "type": "str",
+            "description": "term is concept or entity.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "term_type",
+            "type": "str",
+            "description": "term type of this term",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "sub_type",
+            "type": "Optional[List[str]]",
+            "description": "sub type of this term, must exists in TermTree. Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sub_terms",
+            "type": "Optional[List[str]]",
+            "description": "sub terms of this term. Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "alias",
+            "type": "Optional[List[str]]",
+            "description": "alias of this term. Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "alias_ext",
+            "type": "Optional[List[str]]",
+            "description": ". Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "data",
+            "type": "Optional[Dict[str, Any]]",
+            "description": "[description]. Defaults to None.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

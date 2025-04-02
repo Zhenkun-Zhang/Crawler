@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.data.sampler.SamplerHelper.sort",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "cmp": "None",
+        "key": "None",
+        "reverse": "False",
+        "buffer_size": "-1"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "cmp",
+            "type": "callable",
+            "description": "The function of comparison. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "key",
+            "type": "callable",
+            "description": "The function of key. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "reverse",
+            "type": "bool",
+            "description": "Whether to reverse when sorting the datasamples. If True, it means in descending order, and False meansin ascending order. Default: False.",
+            "default": "False",
+            "optional": true
+        },
+        {
+            "name": "buffer_size",
+            "type": "int",
+            "description": "Buffer size for sort. Ifbuffer_size < 0 or buffer_size is more than the lengthof the data, buffer_size will be set to the length of the data.Default: -1.",
+            "default": "-1",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A new sorted SamplerHelper object.",
+        "type": "SamplerHelper"
+    }
+}

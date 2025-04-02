@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.CNNEncoder.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "inputs": null,
+        "mask": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "inputs",
+            "type": "Tensor",
+            "description": "Shape as (batch_size, num_tokens, emb_dim) and dtype as float32 or float64.Tensor containing the features of the input sequence.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "mask",
+            "type": "Tensor",
+            "description": "Shape should be same as inputs and dtype as int32, int64, float32 or float64.Its each elements identify whether the corresponding input token is padding or not.If True, not padding token. If False, padding token.Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Returns tensor result.If output_dim is None, the result shape is of (batch_size, output_dim) anddtype is float; If not, the result shape is of (batch_size, len(ngram_filter_sizes) * num_filter).",
+        "type": "Tensor"
+    }
+}

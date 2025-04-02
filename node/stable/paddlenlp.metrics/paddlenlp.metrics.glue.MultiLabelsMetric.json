@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.metrics.glue.MultiLabelsMetric",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "num_labels": null,
+        "name": "'multi_labels_metric'"
+    },
+    "Bases": "Metric",
+    "description": "This class encapsulates Accuracy, Precision, Recall and F1 metric logic inmulti-labels setting (also the binary setting).Some codes are taken and modified from sklearn.metrics .",
+    "params": [
+        {
+            "name": "num_labels",
+            "type": "int",
+            "description": "The total number of labels which is usually the number of classes",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "String name of the metric instance. Defaults to multi_labels_metric.",
+            "default": "multi_labels_metric",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

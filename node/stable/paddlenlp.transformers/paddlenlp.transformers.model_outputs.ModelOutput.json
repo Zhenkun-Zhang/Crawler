@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.ModelOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "",
+    "description": "Base class for all model outputs as dataclass. Has a __getitem__ that allows indexing by integer or slice (like atuple) or strings (like a dictionary) that will ignore the None attributes. Otherwise behaves like a regularpython dictionary.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

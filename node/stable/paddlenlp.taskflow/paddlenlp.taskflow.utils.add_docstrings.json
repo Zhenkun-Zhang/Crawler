@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.utils.add_docstrings",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "*docstr": null
+    },
+    "description": "The function that add the doc string to doc of class.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

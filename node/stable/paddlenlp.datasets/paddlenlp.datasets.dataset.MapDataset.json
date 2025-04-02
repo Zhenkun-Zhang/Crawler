@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.datasets.dataset.MapDataset",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "data": null,
+        "**kwargs": null
+    },
+    "Bases": "",
+    "description": "Wraps a map-style dataset-like object as an instance of MapDataset, and equips itwith map and other utility methods. All non-magic methods of the raw objectare also accessible.",
+    "params": [
+        {
+            "name": "data",
+            "type": "list or Dataset",
+            "description": "An object with __getitem__ and __len__ methods. It couldbe a list or a subclass of paddle.io.Dataset.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "description": "Other information to be passed to the dataset.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

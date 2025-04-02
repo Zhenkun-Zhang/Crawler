@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer.get_added_vocab",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "The added tokens.",
+        "type": "Dict[str, int]"
+    }
+}

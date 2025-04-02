@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.utils.tools.get_span",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "start_ids": null,
+        "end_ids": null,
+        "with_prob": "False"
+    },
+    "description": "Get span set from position start and end list.start_ids (List[int]/List[tuple]) – The start index list.end_ids (List[int]/List[tuple]) – The end index list.with_prob (bool) – If True, each element for start_ids and end_ids is a tuple aslike: (index, probability).The span set without overlapping, every id can only be used once .set",
+    "params": [
+        {
+            "name": "start_ids",
+            "type": "List[int]/List[tuple]",
+            "description": "The start index list.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "end_ids",
+            "type": "List[int]/List[tuple]",
+            "description": "The end index list.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "with_prob",
+            "type": "bool",
+            "description": "If True, each element for start_ids and end_ids is a tuple aslike: (index, probability).",
+            "default": "False",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The span set without overlapping, every id can only be used once .",
+        "type": "set"
+    }
+}

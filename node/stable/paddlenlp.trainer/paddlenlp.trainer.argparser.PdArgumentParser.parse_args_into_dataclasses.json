@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.trainer.argparser.PdArgumentParser.parse_args_into_dataclasses",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "args": "None",
+        "return_remaining_strings": "False",
+        "look_for_args_file": "True",
+        "args_filename": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

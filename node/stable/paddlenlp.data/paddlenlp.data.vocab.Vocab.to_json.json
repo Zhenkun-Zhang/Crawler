@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab.to_json",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "path": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "path",
+            "type": "str",
+            "description": "The path to save JSON string. If None, theJSON will not be saved. Default: None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "The JSON string including information of vocab.",
+        "type": "str"
+    }
+}

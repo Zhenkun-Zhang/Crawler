@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.utils.profiler.add_profiler_step",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "options_str": "None"
+    },
+    "description": "Enable the operator-level timing using PaddlePaddle’s profiler.The profiler uses a independent variable to count the profiler steps.One call of this function is treated as a profiler step.:param profiler_options - a string to initialize the ProfilerOptions.: Default is None, and the profiler is disabled.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.SequenceClassifierOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "loss": "Tensor or None = None",
+        "logits": "Tensor or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None",
+        "attentions": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for outputs of sentence classification models.",
+    "params": [
+        {
+            "name": "loss",
+            "type": "paddle.Tensor of shape 1,",
+            "description": "Classification (or regression if config.num_labels==1) loss.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "logits",
+            "type": "paddle.Tensor of shape batch_size, config.num_labels",
+            "description": "Classification (or regression if config.num_labels==1) scores (before SoftMax).",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads.Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

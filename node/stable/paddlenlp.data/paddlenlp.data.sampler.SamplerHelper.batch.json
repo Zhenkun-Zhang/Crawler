@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.data.sampler.SamplerHelper.batch",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "batch_size": null,
+        "drop_last": "False",
+        "batch_size_fn": "None",
+        "key": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "batch_size",
+            "type": "int",
+            "description": "The batch size.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "drop_last",
+            "type": "bool",
+            "description": "Whether to drop the last mini batch.Default: False.",
+            "default": "False",
+            "optional": true
+        },
+        {
+            "name": "batch_size_fn",
+            "type": "callable",
+            "description": "It accepts four arguments:index of data source, the length of minibatch, the size ofminibatch so far and data source, and it returns the size ofmini batch so far. Actually, the returned value can be anythingand would used as argument size_so_far in key. If None, itwould return the length of mini match. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "key",
+            "type": "callable",
+            "description": "The function of key. It accepts the size of minibatch so farand the length of minibatch, and returns what to be comparedwith batch_size. If None, only the size of mini batch so farwould be compared with batch_size. Default: None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A new batched SamplerHelper object.",
+        "type": "SamplerHelper"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.BatchEncoding.sequence_ids",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "batch_index": "int = 0"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "batch_index",
+            "type": "int",
+            "description": "The index to access in the batch.",
+            "default": "int = 0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A list indicating the sequence id corresponding to each token. Special tokens addedby the tokenizer are mapped to None and other tokens are mapped to the index of their correspondingsequence.",
+        "type": "List[Optional[int]]"
+    }
+}

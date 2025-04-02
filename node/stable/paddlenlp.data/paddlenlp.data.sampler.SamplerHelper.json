@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.data.sampler.SamplerHelper",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "dataset": null,
+        "iterable": "None"
+    },
+    "Bases": "object",
+    "description": "The class is to help construct iterable sampler used forpaddle.io.DataLoader. It wraps a dataset and uses its__getitem__() method. Every subclass of SamplerHelper hasto provide an __iter__() method, providing a way to iterate overindices of dataset elements, and a __len__() method that returns thelength of the returned iterators.",
+    "params": [
+        {
+            "name": "dataset",
+            "type": "Dataset",
+            "description": "Input dataset for SamplerHelper.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "iterable",
+            "type": "Iterable",
+            "description": "Iterator of dataset. Default: None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

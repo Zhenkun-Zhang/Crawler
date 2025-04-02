@@ -1,0 +1,62 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer.load_vocabulary",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "filepath": null,
+        "unk_token": "None",
+        "pad_token": "None",
+        "bos_token": "None",
+        "eos_token": "None",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "filepath",
+            "type": "str",
+            "description": "path of file to construct vocabulary.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "description": "special token for unknown token. If no need, it alsocould be None. Defaults to None.",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "description": "special token for padding token. If no need, it alsocould be None. Defaults to None.",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "description": "special token for bos token. If no need, it alsocould be None. Defaults to None.",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "description": "special token for eos token. If no need, it alsocould be None. Defaults to None.",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "**kwargs",
+            "type": "dict",
+            "description": "keyword arguments for Vocab.from_dict.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "An instance of Vocab.",
+        "type": "Vocab"
+    }
+}

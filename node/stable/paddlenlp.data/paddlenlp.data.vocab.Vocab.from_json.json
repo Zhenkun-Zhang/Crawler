@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab.from_json",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "json_str": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "json_str",
+            "type": "str",
+            "description": "JSON string or file path of JSON string.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "An instance of Vocab generated from informationcontained in JSON string.",
+        "type": "Vocab"
+    }
+}

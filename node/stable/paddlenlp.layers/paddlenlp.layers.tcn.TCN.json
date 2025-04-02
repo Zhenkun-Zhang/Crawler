@@ -1,0 +1,26 @@
+{
+    "api": "paddlenlp.layers.tcn.TCN",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "input_channel": null,
+        "num_channels": null,
+        "kernel_size": "2",
+        "dropout": "0.2"
+    },
+    "Bases": "",
+    "description": "Apply temporal convolutional networks to the input tensor.",
+    "params": [
+        {
+            "name": "x",
+            "type": "Tensor",
+            "description": "The input tensor with a shape of [batch_size, input_channel, sequence_length].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The output tensor with a shape of [batch_size, num_channels[-1], sequence_length].",
+        "type": "Tensor"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.data.collate.Dict",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "fn": null
+    },
+    "Bases": "object",
+    "description": "Wraps multiple batchify functions together. The input functions will beapplied to the corresponding input fields.",
+    "params": [
+        {
+            "name": "fn",
+            "type": "dict",
+            "description": "The batchify functions to wrap. It is a dict, which values iscallable functions.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

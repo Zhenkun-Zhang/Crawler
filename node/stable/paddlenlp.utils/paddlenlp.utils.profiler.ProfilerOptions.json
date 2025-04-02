@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.utils.profiler.ProfilerOptions",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "options_str": null
+    },
+    "Bases": "object",
+    "description": "Use a string to initialize a ProfilerOptions.The string should be in the format: “key1=value1;key2=value;key3=value3”.For example:",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

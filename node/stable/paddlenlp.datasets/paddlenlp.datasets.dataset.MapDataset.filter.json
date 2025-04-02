@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.datasets.dataset.MapDataset.filter",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "fn": null,
+        "num_workers": "0"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "fn",
+            "type": "callable",
+            "description": "A filter function that takes a sample as input andreturns a boolean. Samples that return False would be discarded.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_workers",
+            "type": "int",
+            "description": "Number of processes for multiprocessing. Ifset to 0, it doesnt use multiprocessing. Defaults to 0.",
+            "default": "0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

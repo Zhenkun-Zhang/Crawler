@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.ops.ext_utils.CMakeExtension",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "name": null,
+        "source_dir": "None"
+    },
+    "Bases": "Extension",
+    "description": "Custom build_ext.build_extension in Extension instead of Command.ext_builder is the instance of build_ext command.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.layers.crf.LinearChainCrfLoss",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "crf": null
+    },
+    "Bases": "",
+    "description": "The negative log-likelihood for linear chain Conditional Random Field (CRF).",
+    "params": [
+        {
+            "name": "crf",
+            "type": "LinearChainCrf",
+            "description": "The LinearChainCrf network object. Its parameter will be used to calculate the loss.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

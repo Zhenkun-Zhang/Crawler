@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.model_utils.register_base_model",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "cls": null
+    },
+    "description": "A decorator for PretrainedModel class. It first retrieves the parent classof the class being decorated, then sets the base_model_class attributeof that parent class to be the class being decorated. In summary, the decorator registersthe decorated class as the base model class in all derived classes under the same architecture.cls (PretrainedModel) – The class (inherited from PretrainedModel) to be decorated .The input class cls after decorating.PretrainedModelExample",
+    "params": [
+        {
+            "name": "cls",
+            "type": "PretrainedModel",
+            "description": "The class (inherited from PretrainedModel) to be decorated .",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The input class cls after decorating.",
+        "type": "PretrainedModel"
+    }
+}

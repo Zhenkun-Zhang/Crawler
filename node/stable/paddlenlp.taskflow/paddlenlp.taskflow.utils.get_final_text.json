@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.taskflow.utils.get_final_text",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "pred_text": null,
+        "orig_text": null,
+        "tokenizer": null,
+        "do_lower_case": null
+    },
+    "description": "Project the tokenized prediction back to the original text.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "counter": "None",
+        "max_size": "None",
+        "min_freq": "1",
+        "token_to_idx": "None",
+        "unk_token": "None",
+        "pad_token": "None",
+        "bos_token": "None",
+        "eos_token": "None",
+        "**kwargs": null
+    },
+    "Bases": "object",
+    "description": "The class used to convert between tokens and ids. It also includes somestore/load functions.",
+    "params": [
+        {
+            "name": "counter",
+            "type": "collections.Counter",
+            "description": "A Counter intance describesthe tokens and their frequencies. Its keys will be indexed accrodingto the order of frequency sorting to construct mapping relationship.If None, token_to_idx must be provided as the mapping relationship.Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "max_size",
+            "type": "int",
+            "description": "Max size of vocab, not including special tokens.Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "min_freq",
+            "type": "int",
+            "description": "Ignore tokens whose frequencies are less thanmin_freq. Default: 1.",
+            "default": "1",
+            "optional": true
+        },
+        {
+            "name": "token_to_idx",
+            "type": "dict",
+            "description": "A dict specifies the mapping relationshipbetween tokens and indices to be used. If provided, adjust the tokensand indices mapping according to it. If None, counter must be provided.Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "description": "Special token for unknow token. If no need,it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "description": "Special token for padding token. If no need,it also could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "description": "Special token for bos token. If no need, italso could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "description": "Special token for eos token. If no need, itlso could be None. Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "description": "Keyword arguments ending with _token. It can be usedto specify further special tokens that will be exposed as attributeof the vocabulary and associated with an index.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

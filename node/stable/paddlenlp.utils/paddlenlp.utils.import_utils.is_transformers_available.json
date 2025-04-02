@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.utils.import_utils.is_transformers_available",
+    "type": "function",
+    "version": "stable",
+    "args_list": {},
+    "description": "check if transformers package is installed:returns: if transformers is available:rtype: bool",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

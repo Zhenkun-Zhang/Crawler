@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.utils.find_transformer_model_type",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "model_class": "Type"
+    },
+    "description": "BertModel -> bert,RobertaForTokenClassification -> robertamodel_class (Type) – the class of modelthe type stringstr",
+    "params": [
+        {
+            "name": "model_class",
+            "type": "Type",
+            "description": "the class of model",
+            "default": "Type",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "the type string",
+        "type": "str"
+    }
+}

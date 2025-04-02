@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.trainer.training_args.TrainingArguments.main_process_first",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "local": "True",
+        "desc": "'work'"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "local",
+            "type": "bool",
+            "description": "if True first means process of rank 0 of each node if False first means process of rank 0 of noderank 0 In multi-node environment with a shared filesystem you most likely will want to uselocal=False so that only the main process of the first node will do the processing. If however, thefilesystem is not shared, then the main process of each node will need to do the processing, which isthe default behavior.",
+            "default": "True",
+            "optional": true
+        },
+        {
+            "name": "desc",
+            "type": "str",
+            "description": "a work description to be used in debug logs",
+            "default": "work",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

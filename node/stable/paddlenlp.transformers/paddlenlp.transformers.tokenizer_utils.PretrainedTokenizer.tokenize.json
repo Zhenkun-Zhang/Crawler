@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer.tokenize",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "text": "str",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "text",
+            "type": "str",
+            "description": "The sequence to be encoded.",
+            "default": "str",
+            "optional": false
+        },
+        {
+            "name": "**kwargs",
+            "type": "additional keyword arguments",
+            "description": "Passed along to the model-specific prepare_for_tokenization preprocessing method.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The list of tokens.",
+        "type": "List[str]"
+    }
+}

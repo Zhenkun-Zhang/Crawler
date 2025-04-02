@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.metrics.chunk.ChunkEvaluator.accumulate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "Returns tuple (precision, recall, f1 score).",
+        "type": "tuple"
+    }
+}

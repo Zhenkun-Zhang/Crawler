@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.trainer.integrations.AutoNLPCallback",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "TrainerCallback",
+    "description": "A [TrainerCallback] that sends the logs to [Ray Tune] for [AutoNLP]",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

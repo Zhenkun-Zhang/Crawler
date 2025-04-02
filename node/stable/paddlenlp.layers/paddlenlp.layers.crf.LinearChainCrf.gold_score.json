@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.layers.crf.LinearChainCrf.gold_score",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "inputs": null,
+        "labels": null,
+        "lengths": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "inputs",
+            "type": "Tensor",
+            "description": "The input predicted tensor. Its dtype is float32 and has a shape of [batch_size, sequence_length, num_tags].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "labels",
+            "type": "Tensor",
+            "description": "The input label tensor. Its dtype is int64 and has a shape of [batch_size, sequence_length]",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "lengths",
+            "type": "Tensor",
+            "description": "The input length. Its dtype is int64 and has a shape of [batch_size].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Returns the unnormalized sequence scores tensor unnorm_score. Its dtype is float32 and has a shape of [batch_size].",
+        "type": "Tensor"
+    }
+}

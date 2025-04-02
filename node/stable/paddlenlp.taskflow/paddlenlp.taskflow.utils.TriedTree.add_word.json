@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.utils.TriedTree.add_word",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "word": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

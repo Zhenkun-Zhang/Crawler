@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.taskflow.dialogue.DialogueTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "batch_size": "1",
+        "max_seq_len": "512",
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "Task of Chinese open domain dialogue.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.metrics.distinct.Distinct",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "n_size": "2",
+        "trans_func": "None",
+        "name": "'distinct'"
+    },
+    "Bases": "Metric",
+    "description": "Distinct is an algorithm for evaluating the textual diversity of thegenerated text by calculating the number of distinct n-grams. The largerthe number of distinct n-grams, the higher the diversity of the text. Seedetails at https://arxiv.org/abs/1510.03055.",
+    "params": [
+        {
+            "name": "n_size",
+            "type": "int",
+            "description": "Number of gram for Distinct metric. Defaults to 2.",
+            "default": "2",
+            "optional": true
+        },
+        {
+            "name": "trans_func",
+            "type": "callable",
+            "description": "trans_func transforms the network output to a string list. Defaults to None.NoteWhen Distinct is used as a paddle.metric.Metricclass, trans_func must be provided. Please note that theinput of trans_func is numpy array.trans_func transforms the network output to a string list. Defaults to None.Note",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Name of paddle.metric.Metric instance.Defaults to distinct.",
+            "default": "distinct",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

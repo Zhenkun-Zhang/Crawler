@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.taskflow.utils.Customization.load_customization",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "filename": null,
+        "sep": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

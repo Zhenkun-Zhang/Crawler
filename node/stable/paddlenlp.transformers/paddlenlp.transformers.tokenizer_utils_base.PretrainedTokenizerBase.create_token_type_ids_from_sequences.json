@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.create_token_type_ids_from_sequences",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "token_ids_0": "List[int]",
+        "token_ids_1": "List[int] or None = None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "token_ids_0",
+            "type": "List[int]",
+            "description": "The first tokenized sequence.",
+            "default": "List[int]",
+            "optional": false
+        },
+        {
+            "name": "token_ids_1",
+            "type": "List[int]",
+            "description": "The second tokenized sequence.",
+            "default": "List[int] or None = None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "The token type ids.",
+        "type": "List[int]"
+    }
+}

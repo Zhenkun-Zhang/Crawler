@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.CharSpan",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "start": "int",
+        "end": "int"
+    },
+    "Bases": "tuple",
+    "description": "Character span in the original string.",
+    "params": [
+        {
+            "name": "start",
+            "type": "int",
+            "description": "Index of the first character in the original string.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "end",
+            "type": "int",
+            "description": "Index of the character following the last character in the original string.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

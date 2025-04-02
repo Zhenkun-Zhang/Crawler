@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.AddedToken",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "content": "str = <factory>",
+        "single_word": "bool = False",
+        "lstrip": "bool = False",
+        "rstrip": "bool = False",
+        "normalized": "bool = True"
+    },
+    "Bases": "object",
+    "description": "AddedToken represents a token to be added to a Tokenizer An AddedToken can have special options defining theway it should behave.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

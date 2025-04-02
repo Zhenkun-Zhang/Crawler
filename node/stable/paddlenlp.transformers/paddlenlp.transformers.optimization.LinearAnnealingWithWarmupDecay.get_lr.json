@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.transformers.optimization.LinearAnnealingWithWarmupDecay.get_lr",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

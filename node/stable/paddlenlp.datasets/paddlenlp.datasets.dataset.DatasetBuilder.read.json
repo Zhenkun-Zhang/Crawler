@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.datasets.dataset.DatasetBuilder.read",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "filename": null,
+        "split": "'train'"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

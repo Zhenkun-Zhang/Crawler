@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.tokenize_special_chars",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "text": null
+    },
+    "description": "Adds whitespace around any special character.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

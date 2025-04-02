@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.trainer.trainer_callback.DefaultFlowCallback",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "TrainerCallback",
+    "description": "A [TrainerCallback] that handles the default flow of the training loop for logs, evaluation and checkpoints.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

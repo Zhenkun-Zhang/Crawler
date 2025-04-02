@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.BatchEncoding.convert_to_tensors",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "tensor_type": "str or TensorType or None = None",
+        "prepend_batch_axis": "bool = False"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "tensor_type",
+            "type": "str or [TensorType]",
+            "description": "The type of tensors to use. If str, should be one of the values of the enum [TensorType]. IfNone, no modification is done.",
+            "default": "str or TensorType or None = None",
+            "optional": true
+        },
+        {
+            "name": "prepend_batch_axis",
+            "type": "int",
+            "description": "Whether or not to add the batch dimension during the conversion.",
+            "default": "bool = False",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

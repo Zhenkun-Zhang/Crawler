@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.embeddings.token_embedding.list_embedding_name",
+    "type": "function",
+    "version": "stable",
+    "args_list": {},
+    "description": "Lists all names of pretrained embedding models paddlenlp provides.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.taskflow.utils.SchemaTree",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "name": "'root'",
+        "children": "None"
+    },
+    "Bases": "object",
+    "description": "Implementataion of SchemaTree",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

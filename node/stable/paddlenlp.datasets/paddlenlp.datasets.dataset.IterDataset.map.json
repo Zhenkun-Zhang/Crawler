@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.datasets.dataset.IterDataset.map",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "fn": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "fn",
+            "type": "callable",
+            "description": "Transformations to be performed. It receives singlesample as argument.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

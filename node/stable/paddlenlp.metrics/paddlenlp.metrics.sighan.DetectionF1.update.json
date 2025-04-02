@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.metrics.sighan.DetectionF1.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "preds": null,
+        "labels": null,
+        "length": null,
+        "*args": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

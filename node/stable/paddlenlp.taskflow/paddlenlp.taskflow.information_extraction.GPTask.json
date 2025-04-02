@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.taskflow.information_extraction.GPTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "Global Pointer for closed-domain information extraction Task.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

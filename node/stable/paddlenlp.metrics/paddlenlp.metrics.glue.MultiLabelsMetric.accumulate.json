@@ -1,0 +1,86 @@
+{
+    "api": "paddlenlp.metrics.glue.MultiLabelsMetric.accumulate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "average": "None",
+        "pos_label": "1"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "average",
+            "type": "str in {‘binary’, ‘micro’, ‘macro’, ’weighted’} or None",
+            "description": "",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "None",
+            "type": "Defaults to None. If",
+            "description": "",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "returned.",
+            "type": "the scores for each class are",
+            "description": "",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "Otherwise",
+            "type": "",
+            "description": "",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "data",
+            "type": "this determines the type of averaging performed on the",
+            "description": "",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "binary",
+            "type": "-",
+            "description": "Only report results for the class specified by pos_label.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "micro",
+            "type": "-",
+            "description": "Calculate metrics globally by counting the total true positives,false negatives and false positives.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "macro",
+            "type": "-",
+            "description": "Calculate metrics for each label, and find their unweighted mean.This does not take label imbalance into account.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "weighted",
+            "type": "-",
+            "description": "Calculate metrics for each label, and find their average weightedby support (the number of true instances for each label). Thisalters macro to account for label imbalance, it can result inan F-score that is not between precision and recall.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "pos_label",
+            "type": "int",
+            "description": "The positive label for calculating precision and recall in binary settings.Noted: Only when average=binary, this arguments will be used. Otherwise,it will be ignored.Defaults to 1.",
+            "default": "1",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "The accumulated metric. A tuple of shape (precision, recall, f1)With the fields:precision (numpy.float64 or numpy.ndarray if average=None):The accumulated precision.recall (numpy.float64 or numpy.ndarray if average=None):The accumulated recall.f1 (numpy.float64 or numpy.ndarray if average=None):The accumulated f1.With the fields:The accumulated precision.The accumulated recall.The accumulated f1.",
+        "type": "tuple"
+    }
+}

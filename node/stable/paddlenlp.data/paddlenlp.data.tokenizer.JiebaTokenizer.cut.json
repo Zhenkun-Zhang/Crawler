@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.data.tokenizer.JiebaTokenizer.cut",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "sentence": null,
+        "cut_all": "False",
+        "use_hmm": "True"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "sentence",
+            "type": "str",
+            "description": "The text that needs to be cuted.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "cut_all",
+            "type": "bool",
+            "description": "Whether to use the full mode. If True,using full mode that gets all the possible words from thesentence, which is fast but not accurate. If False, usingaccurate mode that attempts to cut the sentence into the mostaccurate segmentations, which is suitable for text analysis.Default: False.",
+            "default": "False",
+            "optional": true
+        },
+        {
+            "name": "use_hmm",
+            "type": "bool",
+            "description": "Whether to use the HMM model. Default: True.",
+            "default": "True",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A list of tokens.",
+        "type": "list[str]"
+    }
+}

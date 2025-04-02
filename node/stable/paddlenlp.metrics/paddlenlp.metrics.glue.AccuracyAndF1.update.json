@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.metrics.glue.AccuracyAndF1.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "correct": null,
+        "*args": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "correct",
+            "type": "Tensor",
+            "description": "Correct mask for calculating accuracy, and its a tensor withshape [batch_size, topk] and has a dtype offloat32.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

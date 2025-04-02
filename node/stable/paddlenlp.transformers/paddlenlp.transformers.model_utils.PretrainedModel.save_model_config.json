@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.save_model_config",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "save_dir": "str"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "save_dir",
+            "type": "str",
+            "description": "Directory to save model_config file into.",
+            "default": "str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

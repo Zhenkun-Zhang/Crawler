@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.utils.tools.TimeCostAverage",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "object",
+    "description": "Simple tool for calcluating time average cost in the process of training and inferencing.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

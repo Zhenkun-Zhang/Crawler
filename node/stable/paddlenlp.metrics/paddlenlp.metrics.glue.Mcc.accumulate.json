@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.metrics.glue.Mcc.accumulate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "Returns the accumulated metric, a tuple of shape (mcc,), mcc is the accumulated mcc and its datatype is float64.",
+        "type": "tuple"
+    }
+}

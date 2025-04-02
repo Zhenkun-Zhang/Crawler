@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.losses.rdrop.RDropLoss",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "reduction": "'none'"
+    },
+    "Bases": "",
+    "description": "R-Drop Loss implementationFor more information about R-drop please refer to this paper: https://arxiv.org/abs/2106.14448Original implementation please refer to this code: dropreg/R-Drop",
+    "params": [
+        {
+            "name": "reduction",
+            "type": "str",
+            "description": "Indicate how to average the loss, the candicates are none,``batchmean,mean,sum.If `reduction` is ``mean, the reduced mean loss is returned,If reduction is batchmean, the sum loss divided by batch size is returned,If reduction is sum, the reduced sum loss is returned,If reduction is none, no reduction will be applied.Defaults to none.",
+            "default": "none",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

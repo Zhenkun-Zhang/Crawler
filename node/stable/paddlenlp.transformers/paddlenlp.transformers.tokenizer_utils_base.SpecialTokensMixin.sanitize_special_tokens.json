@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.SpecialTokensMixin.sanitize_special_tokens",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "The number of tokens added in the vocabulary during the operation.",
+        "type": "int"
+    }
+}

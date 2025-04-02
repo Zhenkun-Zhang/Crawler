@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.batch_decode",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "sequences": "List[int] or List[List[int]] or ndarray or Tensor",
+        "skip_special_tokens": "bool = False",
+        "clean_up_tokenization_spaces": "bool = True",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "sequences",
+            "type": "Union[List[int], List[List[int]], np.ndarray, paddle.Tensor]",
+            "description": "List of tokenized input ids. Can be obtained using the __call__ method.",
+            "default": "List[int] or List[List[int]] or ndarray or Tensor",
+            "optional": false
+        },
+        {
+            "name": "skip_special_tokens",
+            "type": "bool",
+            "description": "Whether or not to remove special tokens in the decoding.",
+            "default": "bool = False",
+            "optional": true
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "description": "Whether or not to clean up the tokenization spaces.",
+            "default": "bool = True",
+            "optional": true
+        },
+        {
+            "name": "kwargs",
+            "type": "additional keyword arguments",
+            "description": "Will be passed to the underlying model specific decode method.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "The list of decoded sentences.",
+        "type": "List[str]"
+    }
+}

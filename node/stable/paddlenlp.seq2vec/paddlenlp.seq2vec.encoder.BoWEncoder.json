@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.BoWEncoder",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "emb_dim": null
+    },
+    "Bases": "Layer",
+    "description": "A BoWEncoder takes as input a sequence of vectors and returns asingle vector, which simply sums the embeddings of a sequence across the time dimension.The input to this encoder is of shape (batch_size, num_tokens, emb_dim),and the output is of shape (batch_size, emb_dim).",
+    "params": [
+        {
+            "name": "emb_dim",
+            "type": "int",
+            "description": "The dimension of each vector in the input sequence.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

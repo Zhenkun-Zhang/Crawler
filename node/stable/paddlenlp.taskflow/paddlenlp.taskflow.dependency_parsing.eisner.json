@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.eisner",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "scores": null,
+        "mask": null
+    },
+    "description": "Eisner algorithm is a general dynamic programming decoding algorithm for bilexical grammar.scores: Adjacency matrix，shape=(batch, seq_len, seq_len)mask: mask matrix，shape=(batch, sql_len)output，shape=(batch, seq_len)，the index of the parent node corresponding to the token in the query",
+    "params": [],
+    "return": {
+        "description": "output，shape=(batch, seq_len)，the index of the parent node corresponding to the token in the query",
+        "type": ""
+    }
+}

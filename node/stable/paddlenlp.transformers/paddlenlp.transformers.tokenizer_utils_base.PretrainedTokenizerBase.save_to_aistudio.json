@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.save_to_aistudio",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "repo_id": null,
+        "private": "True",
+        "license": "'ApacheLicense2.0'",
+        "exist_ok": "True",
+        "subfolder": "None",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "api": "paddlenlp.trainer.trainer_utils.get_scheduler",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "name": "str|SchedulerType",
+        "learning_rate": "float",
+        "num_warmup_steps": "int|None=None",
+        "num_training_steps": "int|None=None",
+        "num_cycles": "float|None=0.5",
+        "lr_end": "float|None=1e-07",
+        "power": "float|None=1.0"
+    },
+    "description": "Unified API to get any scheduler from its name.:param name: The name of the scheduler to use.:type name: str or SchedulerType:param learning_rate: The initial learning rate. It is a python float number.:type learning_rate: float:param num_warmup_steps: The number of warmup steps to do. This is not required by all schedulers (hence the argument beingoptional), the function will raise an error if it’s unset and the scheduler type requires it.num_training_steps (int`, optional) – The number of training steps to do. This is not required by all schedulers (hence the argument beingoptional), the function will raise an error if it’s unset and the scheduler type requires it.num_cycles (float, optional) – The number of waves in the cosine scheduler (the defaults is to just decrease from the max value to 0following a half-cosine). This is not required by all schedulers (hence the argument being optional)lr_end (float, optional) – The end LR in the polynomial scheduler. This is not required by all schedulers (hence the argumentbeing optional).power (float, optional) – The power factor in the polynomial scheduler. This is not required by all schedulers (hence the argumentbeing optional).",
+    "params": [
+        {
+            "name": "num_training_steps",
+            "type": "int`",
+            "description": "The number of training steps to do. This is not required by all schedulers (hence the argument beingoptional), the function will raise an error if its unset and the scheduler type requires it.",
+            "default": "int|None=None",
+            "optional": true
+        },
+        {
+            "name": "num_cycles",
+            "type": "float",
+            "description": "The number of waves in the cosine scheduler (the defaults is to just decrease from the max value to 0following a half-cosine). This is not required by all schedulers (hence the argument being optional)",
+            "default": "float|None=0.5",
+            "optional": true
+        },
+        {
+            "name": "lr_end",
+            "type": "float",
+            "description": "The end LR in the polynomial scheduler. This is not required by all schedulers (hence the argumentbeing optional).",
+            "default": "float|None=1e-07",
+            "optional": true
+        },
+        {
+            "name": "power",
+            "type": "float",
+            "description": "The power factor in the polynomial scheduler. This is not required by all schedulers (hence the argumentbeing optional).",
+            "default": "float|None=1.0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,152 @@
+{
+    "api": "paddlenlp.taskflow.utils.ProcessReader",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "dataset": "None",
+        "sample_transforms": "None",
+        "batch_transforms": "None",
+        "batch_size": "None",
+        "shuffle": "False",
+        "drop_last": "False",
+        "drop_empty": "True",
+        "mixup_epoch": "-1",
+        "cutmix_epoch": "-1",
+        "class_aware_sampling": "False",
+        "use_process": "False",
+        "use_fine_grained_loss": "False",
+        "num_classes": "80",
+        "bufsize": "-1",
+        "memsize": "'3G'",
+        "inputs_def": "None",
+        "devices_num": "1",
+        "num_trainers": "1"
+    },
+    "Bases": "object",
+    "description": "dataset (DataSet) – DataSet object",
+    "params": [
+        {
+            "name": "dataset",
+            "type": "DataSet",
+            "description": "DataSet object",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "sample_transforms",
+            "type": "list of BaseOperator",
+            "description": "a list of sample transformsoperators.",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "batch_transforms",
+            "type": "list of BaseOperator",
+            "description": "a list of batch transformsoperators.",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "description": "batch size.",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "shuffle",
+            "type": "bool",
+            "description": "whether shuffle dataset or not. Default False.",
+            "default": "False",
+            "optional": false
+        },
+        {
+            "name": "drop_last",
+            "type": "bool",
+            "description": "whether drop last batch or not. Default False.",
+            "default": "False",
+            "optional": false
+        },
+        {
+            "name": "drop_empty",
+            "type": "bool",
+            "description": "whether drop sample when its gt is empty or not.Default True.",
+            "default": "True",
+            "optional": false
+        },
+        {
+            "name": "mixup_epoch",
+            "type": "int",
+            "description": "mixup epoc number. Default is -1, meaningnot use mixup.",
+            "default": "-1",
+            "optional": false
+        },
+        {
+            "name": "cutmix_epoch",
+            "type": "int",
+            "description": "cutmix epoc number. Default is -1, meaningnot use cutmix.",
+            "default": "-1",
+            "optional": false
+        },
+        {
+            "name": "class_aware_sampling",
+            "type": "bool",
+            "description": "whether use class-aware sampling or not.Default False.",
+            "default": "False",
+            "optional": false
+        },
+        {
+            "name": "worker_num",
+            "type": "int",
+            "description": "number of working threads/processes.Default -1, meaning not use multi-threads/multi-processes.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "use_process",
+            "type": "bool",
+            "description": "whether use multi-processes or not.It only works when worker_num > 1. Default False.",
+            "default": "False",
+            "optional": false
+        },
+        {
+            "name": "bufsize",
+            "type": "int",
+            "description": "buffer size for multi-threads/multi-processes,please note, one instance in buffer is one batch data.",
+            "default": "-1",
+            "optional": false
+        },
+        {
+            "name": "memsize",
+            "type": "str",
+            "description": "size of shared memory used in result queue whenuse_process is true. Default 3G.",
+            "default": "3G",
+            "optional": false
+        },
+        {
+            "name": "inputs_def",
+            "type": "dict",
+            "description": "network input definition use to get input fields,which is used to determine the order of returned data.",
+            "default": "None",
+            "optional": false
+        },
+        {
+            "name": "devices_num",
+            "type": "int",
+            "description": "number of devices.",
+            "default": "1",
+            "optional": false
+        },
+        {
+            "name": "num_trainers",
+            "type": "int",
+            "description": "number of trainers. Default 1.",
+            "default": "1",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

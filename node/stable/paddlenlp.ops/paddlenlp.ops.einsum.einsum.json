@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.ops.einsum.einsum",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "equation": null,
+        "*operands": null
+    },
+    "description": "Executes the sum of product of provided operands based on the Einstein summation convention.Einsum can be used to complete a variety of operations, such as sum, transpose,batch matrix multiplication.equation (str) – Uses uncased letters to specify the dimension of the operands and result. The inputequation is on the left hand before -> while the output equation is on the right side.Einsum can infer the result shape so that the -> and the result label letters can be omitted.Operands in the input equation are splitted by commas (‘,’), e.g. ‘abc,cde’ describes two 3Doperands. The dimensions labeled with same letter should be same or be 1. Ellipsis (’…’) canbe used to specify the broadcast dimensions.operands (Tensor) – The operands to compute the Einstein sum of. The number of operands should be the same as thethe operands described in input equation.The result of Einstein sum product.TensorExample",
+    "params": [
+        {
+            "name": "equation",
+            "type": "str",
+            "description": "Uses uncased letters to specify the dimension of the operands and result. The inputequation is on the left hand before -> while the output equation is on the right side.Einsum can infer the result shape so that the -> and the result label letters can be omitted.Operands in the input equation are splitted by commas (,), e.g. abc,cde describes two 3Doperands. The dimensions labeled with same letter should be same or be 1. Ellipsis (…) canbe used to specify the broadcast dimensions.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "operands",
+            "type": "Tensor",
+            "description": "The operands to compute the Einstein sum of. The number of operands should be the same as thethe operands described in input equation.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The result of Einstein sum product.",
+        "type": "Tensor"
+    }
+}

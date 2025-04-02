@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.taskflow.utils.DataCollatorGP",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "tokenizer": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase",
+        "padding": "bool or str or paddlenlp.transformers.tokenizer_utils_base.PaddingStrategy = True",
+        "max_length": "int or NoneType = None",
+        "label_maps": "dict or NoneType = None",
+        "task_type": "str or NoneType = None"
+    },
+    "Bases": "object",
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

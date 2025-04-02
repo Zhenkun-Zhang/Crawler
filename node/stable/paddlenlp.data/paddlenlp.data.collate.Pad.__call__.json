@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.collate.Pad.__call__",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "data": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "data",
+            "type": "list[numpy.ndarray or list]",
+            "description": "The input data samples. It is alist. Each element is a numpy.ndarray or list.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "If ret_length is False, itis a numpy.ndarray representing the padded batch data and theshape is (N, …). Otherwise, it is a tuple, besides the padded batchdata, the tuple also includes a numpy.ndarray representing originallength at axis of all input samples, which shaped (N,).",
+        "type": "numpy.ndarray or tuple[numpy.ndarray]"
+    }
+}

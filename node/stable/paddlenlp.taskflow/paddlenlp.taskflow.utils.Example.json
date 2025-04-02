@@ -1,0 +1,27 @@
+{
+    "api": "paddlenlp.taskflow.utils.Example",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "keys": null,
+        "key_labels": null,
+        "doc_tokens": null,
+        "text": null,
+        "qas_id": null,
+        "model_type": null,
+        "seq_labels": null,
+        "ori_boxes": null,
+        "boxes": null,
+        "segment_ids": null,
+        "symbol_ids": null,
+        "im_base64": null,
+        "image_rois": null
+    },
+    "Bases": "tuple",
+    "description": "Alias for field number 8",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

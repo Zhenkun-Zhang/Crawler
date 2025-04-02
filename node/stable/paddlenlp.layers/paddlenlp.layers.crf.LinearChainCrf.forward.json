@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.layers.crf.LinearChainCrf.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "inputs": null,
+        "lengths": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "inputs",
+            "type": "Tensor",
+            "description": "The input predicted tensor. Its dtype is float32 and has a shape of [batch_size, sequence_length, num_tags].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "lengths",
+            "type": "Tensor",
+            "description": "The input length. Its dtype is int64 and has a shape of [batch_size].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Returns the normalizers tensor norm_score. Its dtype is float32 and has a shape of [batch_size].",
+        "type": "Tensor"
+    }
+}

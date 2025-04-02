@@ -1,0 +1,25 @@
+{
+    "api": "paddlenlp.metrics.glue.PearsonAndSpearman",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "name": "'pearson_and_spearman'",
+        "*args": null,
+        "**kwargs": null
+    },
+    "Bases": "Metric",
+    "description": "The class calculates Pearson correlation coefficientand Spearman’s rank correlation coefficient .",
+    "params": [
+        {
+            "name": "name",
+            "type": "str",
+            "description": "String name of the metric instance. Defaults to pearson_and_spearman.",
+            "default": "pearson_and_spearman",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.lexical_analysis.load_vocab",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "dict_path": null
+    },
+    "description": "Load vocab from file",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

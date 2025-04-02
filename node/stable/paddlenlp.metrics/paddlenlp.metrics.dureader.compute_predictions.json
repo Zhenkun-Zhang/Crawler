@@ -1,0 +1,21 @@
+{
+    "api": "paddlenlp.metrics.dureader.compute_predictions",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "all_examples": null,
+        "all_features": null,
+        "all_results": null,
+        "n_best_size": null,
+        "max_answer_length": null,
+        "do_lower_case": null,
+        "verbose": null,
+        "tokenizer": null
+    },
+    "description": "Write final predictions to the json file and log-odds of null if needed.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

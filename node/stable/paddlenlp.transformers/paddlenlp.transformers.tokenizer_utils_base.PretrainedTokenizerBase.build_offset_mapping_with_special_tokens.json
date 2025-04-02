@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.build_offset_mapping_with_special_tokens",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "offset_mapping_0": null,
+        "offset_mapping_1": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "offset_mapping_0",
+            "type": "List[tuple]",
+            "description": "List of char offsets to which the special tokens will be added.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "offset_mapping_1",
+            "type": "List[tuple]",
+            "description": "Optional second list of char offsets for offset mapping pairs.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "List of char offsets with the appropriate offsets of special tokens.",
+        "type": "List[tuple]"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.taskflow.utils.WordTagRelationExtractor",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "schema": null
+    },
+    "Bases": "object",
+    "description": "Implement of information extractor.",
+    "params": [
+        {
+            "name": "config_dict",
+            "type": "Dict[str, Any]",
+            "description": "configuration dict.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

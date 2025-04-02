@@ -1,0 +1,43 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.batch_encode",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "batch_text_or_text_pairs": "List[str] or List[Tuple[str",
+        "str]]|List[List[str]]|List[Tuple[List[str]": null,
+        "List[str]]]|List[List[int]]|List[Tuple[List[int]": null,
+        "List[int]]]": null,
+        "max_length": "None",
+        "stride": "int = 0",
+        "is_split_into_words": "bool = False",
+        "padding": "bool or str or PaddingStrategy = False",
+        "truncation": "bool or str or TruncationStrategy = False",
+        "return_position_ids": "None",
+        "return_token_type_ids": "None",
+        "return_attention_mask": "None",
+        "return_length": "False",
+        "return_overflowing_tokens": "False",
+        "return_special_tokens_mask": "False",
+        "return_dict": "True",
+        "return_offsets_mapping": "False",
+        "add_special_tokens": "True",
+        "pad_to_multiple_of": "int or None = None",
+        "return_tensors": "str or TensorType or None = None",
+        "verbose": "bool = True",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "batch_text_or_text_pairs",
+            "type": "list",
+            "description": "The element of list can be sequence or sequence pair, and thesequence is a string or a list of strings depending on whetherit has been pretokenized. If each sequence is provided as a listof strings (pretokenized), you must set is_split_into_words asTrue to disambiguate with a sequence pair.",
+            "default": "List[str] or List[Tuple[str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The dict has the following optional items:",
+        "type": "dict or list[dict]"
+    }
+}

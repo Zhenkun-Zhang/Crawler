@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.data.sampler.SamplerHelper.shard",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "num_replicas": "None",
+        "rank": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "num_replicas",
+            "type": "int",
+            "description": "The number of training process, andis also the number of GPU cards used in training. If None, itwill be set by paddle.distributed.get_world_size() method.Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "rank",
+            "type": "int",
+            "description": "The id of current training process. Equalto the value of the environment variable PADDLE_TRAINER_ID. IfNone, it will be initialized by paddle.distributed.get_rank()method. Default: None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A new sliced SamplerHelper object.",
+        "type": "SamplerHelper"
+    }
+}

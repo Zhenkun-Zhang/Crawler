@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.data.data_collator.default_data_collator",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "features": "List[InputDataClass]",
+        "return_tensors": "'pd'"
+    },
+    "description": "Very simple data collator that simply collates batches of dict-like objects and performs special handling forpotential keys named:label: handles a single value (int or float) per objectlabel_ids: handles a list of values per objectDoes not do any additional preprocessing: property names of the input object will be used as corresponding inputsto the model. See glue and ner for example of how it’s useful.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

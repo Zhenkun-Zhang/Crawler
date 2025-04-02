@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.get_special_tokens_mask",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "token_ids_0": "List[int]",
+        "token_ids_1": "List[int] or None = None",
+        "already_has_special_tokens": "bool = False"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "token_ids_0",
+            "type": "List[int]",
+            "description": "List of ids of the first sequence.",
+            "default": "List[int]",
+            "optional": false
+        },
+        {
+            "name": "token_ids_1",
+            "type": "List[int]",
+            "description": "List of ids of the second sequence.",
+            "default": "List[int] or None = None",
+            "optional": true
+        },
+        {
+            "name": "already_has_special_tokens",
+            "type": "bool",
+            "description": "Whether or not the token list is already formatted with special tokens for the model.",
+            "default": "bool = False",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "1 for a special token, 0 for a sequence token.",
+        "type": "A list of integers in the range [0, 1]"
+    }
+}

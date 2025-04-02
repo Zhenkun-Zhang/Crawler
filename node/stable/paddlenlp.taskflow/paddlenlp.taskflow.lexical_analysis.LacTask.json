@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.taskflow.lexical_analysis.LacTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "user_dict": "None",
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "Lexical analysis of Chinese task to segement the chinese sentence.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param user_dict: The user-defined dictionary, default to None.:type user_dict: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

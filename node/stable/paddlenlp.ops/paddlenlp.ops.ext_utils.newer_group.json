@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.ops.ext_utils.newer_group",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "sources": null,
+        "target": null,
+        "missing": "'error'"
+    },
+    "description": "Return true if ‘target’ is out-of-date with respect to any filelisted in ‘sources’.  In other words, if ‘target’ exists and is newerthan every file in ‘sources’, return false; otherwise return true.‘missing’ controls what we do when a source file is missing; thedefault (“error”) is to blow up with an OSError from inside ‘stat()’;if it is “ignore”, we silently drop any missing source files; if it is“newer”, any missing source files make us assume that ‘target’ isout-of-date (this is handy in “dry-run” mode: it’ll make you pretend tocarry out commands that wouldn’t work because inputs are missing, butthat doesn’t matter because you’re not actually going to run thecommands).",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

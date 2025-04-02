@@ -1,0 +1,54 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.truncate_sequences",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "ids": "List[int]",
+        "pair_ids": "List[int] or None = None",
+        "num_tokens_to_remove": "int = 0",
+        "truncation_strategy": "str or TruncationStrategy = 'longest_first'",
+        "stride": "int = 0"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "ids",
+            "type": "List[int]",
+            "description": "Tokenized input ids of the first sequence. Can be obtained from a string by chaining the tokenize andconvert_tokens_to_ids methods.",
+            "default": "List[int]",
+            "optional": false
+        },
+        {
+            "name": "pair_ids",
+            "type": "List[int]",
+            "description": "Tokenized input ids of the second sequence. Can be obtained from a string by chaining the tokenizeand convert_tokens_to_ids methods.",
+            "default": "List[int] or None = None",
+            "optional": true
+        },
+        {
+            "name": "num_tokens_to_remove",
+            "type": "int",
+            "description": "Number of tokens to remove using the truncation strategy.",
+            "default": "int = 0",
+            "optional": true
+        },
+        {
+            "name": "truncation_strategy",
+            "type": "str or [TruncationStrategy]",
+            "description": "The strategy to follow for truncation. Can be:longest_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will truncatetoken by token, removing a token from the longest sequence in the pair if a pair of sequences (or abatch of pairs) is provided.only_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the first sequence of a pair if a pair of sequences (or a batch of pairs) is provided.only_second: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the second sequence of a pair if a pair of sequences (or a batch of pairs) is provided.do_not_truncate (default): No truncation (i.e., can output batch with sequence lengths greaterthan the model maximum admissible input size).The strategy to follow for truncation. Can be:longest_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will truncatetoken by token, removing a token from the longest sequence in the pair if a pair of sequences (or abatch of pairs) is provided.only_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the first sequence of a pair if a pair of sequences (or a batch of pairs) is provided.only_second: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the second sequence of a pair if a pair of sequences (or a batch of pairs) is provided.",
+            "default": "str or TruncationStrategy = longest_first",
+            "optional": true
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "description": "If set to a positive number, the overflowing tokens returned will contain some tokens from the mainsequence returned. The value of this argument defines the number of additional tokens.",
+            "default": "int = 0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "The truncated ids, the truncated pair_ids and the list ofoverflowing tokens. Note: The longest_first strategy returns empty list of overflowing tokens if a pairof sequences (or a batch of pairs) is provided.",
+        "type": "Tuple[List[int], List[int], List[int]]"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.trainer.trainer_utils.PredictionOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "predictions": null,
+        "label_ids": null,
+        "metrics": null
+    },
+    "Bases": "tuple",
+    "description": "Alias for field number 0",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

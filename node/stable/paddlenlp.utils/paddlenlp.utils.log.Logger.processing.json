@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.utils.log.Logger.processing",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "msg": "str",
+        "interval": "float = 0.1"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "msg",
+            "type": "str",
+            "description": "Message to be printed.",
+            "default": "str",
+            "optional": false
+        },
+        {
+            "name": "interval",
+            "type": "float",
+            "description": "Rotation interval. Default to 0.1.",
+            "default": "float = 0.1",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

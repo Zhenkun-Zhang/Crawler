@@ -1,0 +1,63 @@
+{
+    "api": "paddlenlp.ops.distributed.RowParallelLiner",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "size": null,
+        "num_partitions": "1",
+        "input_is_parallel": "False",
+        "param_attr": "None",
+        "bias_attr": "None",
+        "name": "None"
+    },
+    "Bases": "",
+    "description": "Parallel Linear, axis=0.",
+    "params": [
+        {
+            "name": "size",
+            "type": "int",
+            "description": "The size of embedding vector.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_partitions",
+            "type": "int",
+            "description": "The number of parts within a model parallel group. Defaults to 1.",
+            "default": "1",
+            "optional": true
+        },
+        {
+            "name": "input_is_parallel",
+            "type": "bool",
+            "description": "Whether the input is parallel. Defaults to False.",
+            "default": "False",
+            "optional": true
+        },
+        {
+            "name": "param_attr",
+            "type": "Tensor",
+            "description": "Specify the parameter property, including the initialization method.Defaults to None which means the default parameter property will be used.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "bias_attr",
+            "type": "Tensor",
+            "description": "Specify the bias property.Defaults to None which means the default parameter property will be used.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Normally there is no need for user to set this property.Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.pad",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "encoded_inputs": "BatchEncoding or List[BatchEncoding] or Dict[str",
+        "List[int]]|Dict[str": null,
+        "List[List[int]]]|List[Dict[str": null,
+        "List[int]]]": null,
+        "padding": "bool or str or PaddingStrategy = True",
+        "max_length": "int or None = None",
+        "pad_to_multiple_of": "int or None = None",
+        "return_attention_mask": "bool or None = None",
+        "return_tensors": "str or TensorType or None = None",
+        "verbose": "bool = True"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "encoded_inputs",
+            "type": "[BatchEncoding], list of [BatchEncoding], Dict[str, List[int]], Dict[str, List[List[int]] or List[Dict[str, List[int]]]",
+            "description": "Tokenized inputs. Can represent one input ([BatchEncoding] or Dict[str, List[int]]) or a batch oftokenized inputs (list of [BatchEncoding], Dict[str, List[List[int]]] or List[Dict[str,List[int]]]) so you can use this method during preprocessing as well as in a Paddle Dataloadercollate function.Instead of List[int] you can have tensors (numpy arrays, Paddle tensors), seethe note above for the return type.Tokenized inputs. Can represent one input ([BatchEncoding] or Dict[str, List[int]]) or a batch oftokenized inputs (list of [BatchEncoding], Dict[str, List[List[int]]] or List[Dict[str,List[int]]]) so you can use this method during preprocessing as well as in a Paddle Dataloadercollate function.",
+            "default": "BatchEncoding or List[BatchEncoding] or Dict[str",
+            "optional": false
+        },
+        {
+            "name": "padding",
+            "type": "bool, str or [PaddingStrategy]",
+            "description": "Select a strategy to pad the returned sequences (according to the models padding side and paddingindex) among:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths).index) among:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.",
+            "default": "bool or str or PaddingStrategy = True",
+            "optional": true
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "description": "Maximum length of the returned list and optionally padding length (see above).",
+            "default": "int or None = None",
+            "optional": true
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "description": "If set will pad the sequence to a multiple of the provided value.This is especially useful to enable the use of Tensor Cores on NVIDIA hardware with compute capability>= 7.5 (Volta).If set will pad the sequence to a multiple of the provided value.",
+            "default": "int or None = None",
+            "optional": true
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "description": "Whether to return the attention mask. If left to the default, will return the attention mask accordingto the specific tokenizers default, defined by the return_outputs attribute.[What are attention masks?](../glossary#attention-mask)Whether to return the attention mask. If left to the default, will return the attention mask accordingto the specific tokenizers default, defined by the return_outputs attribute.",
+            "default": "bool or None = None",
+            "optional": true
+        },
+        {
+            "name": "return_tensors",
+            "type": "str or [TensorType]",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:pd: Return Paddle paddle.Tensor objects.np: Return Numpy np.ndarray objects.If set, will return tensors instead of list of python integers. Acceptable values are:pd: Return Paddle paddle.Tensor objects.",
+            "default": "str or TensorType or None = None",
+            "optional": true
+        },
+        {
+            "name": "verbose",
+            "type": "bool",
+            "description": "Whether or not to print more information and warnings.",
+            "default": "bool = True",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

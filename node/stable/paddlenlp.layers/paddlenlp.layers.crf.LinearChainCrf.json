@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.layers.crf.LinearChainCrf",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "num_labels": null,
+        "crf_lr": "0.1",
+        "with_start_stop_tag": "True"
+    },
+    "Bases": "",
+    "description": "LinearChainCrf is a linear chain Conditional Random Field layer, it can implement sequential dependencies in the predictions.Therefore, it can take context into account whereas a classifier predicts a label for a single sample without considering “neighboring” samples.See https://repository.upenn.edu/cgi/viewcontent.cgi?article=1162&context=cis_papers for reference.",
+    "params": [
+        {
+            "name": "num_labels",
+            "type": "int",
+            "description": "The label number.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "crf_lr",
+            "type": "float",
+            "description": "The crf layer learning rate. Defaults to 0.1.",
+            "default": "0.1",
+            "optional": true
+        },
+        {
+            "name": "with_start_stop_tag",
+            "type": "bool",
+            "description": "If set to True, the start tag and stop tag will be considered, the transitions params will be a tensor with a shape of [num_labels+2, num_labels+2].Else, the transitions params will be a tensor with a shape of [num_labels, num_labels].",
+            "default": "True",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

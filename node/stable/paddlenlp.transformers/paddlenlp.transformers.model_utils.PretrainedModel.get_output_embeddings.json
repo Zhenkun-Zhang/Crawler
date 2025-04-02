@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.get_output_embeddings",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "the otuput embedding of model",
+        "type": "Optional[Embedding]"
+    }
+}

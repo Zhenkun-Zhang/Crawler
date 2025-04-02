@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.data.tokenizer.JiebaTokenizer",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "vocab": null
+    },
+    "Bases": "BaseTokenizer",
+    "description": "Constructs a tokenizer based on jieba.It supports cut() method to split the text to tokens, and encode()method to covert text to token ids.",
+    "params": [
+        {
+            "name": "vocab",
+            "type": "paddlenlp.data.Vocab",
+            "description": "An instance of paddlenlp.data.Vocab.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

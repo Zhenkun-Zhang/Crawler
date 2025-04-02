@@ -1,0 +1,639 @@
+{
+    "api": "paddlenlp.trainer.training_args.TrainingArguments",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "output_dir": "str",
+        "overwrite_output_dir": "bool = False",
+        "do_train": "bool = False",
+        "do_eval": "bool = False",
+        "do_predict": "bool = False",
+        "do_export": "bool = False",
+        "evaluation_strategy": "IntervalStrategy = 'no'",
+        "prediction_loss_only": "bool = False",
+        "per_device_train_batch_size": "int = 8",
+        "per_device_eval_batch_size": "int = 8",
+        "gradient_accumulation_steps": "int = 1",
+        "eval_accumulation_steps": "int or None = None",
+        "learning_rate": "float = 5e-05",
+        "weight_decay": "float = 0.0",
+        "adam_beta1": "float = 0.9",
+        "adam_beta2": "float = 0.999",
+        "adam_epsilon": "float = 1e-08",
+        "max_grad_norm": "float = 1.0",
+        "num_train_epochs": "float = 1.0",
+        "max_steps": "int = -1",
+        "lr_scheduler_type": "str = 'linear'",
+        "warmup_ratio": "float = 0.0",
+        "warmup_steps": "int = 0",
+        "num_cycles": "float = 0.5",
+        "lr_end": "float = 1e-07",
+        "power": "float = 1.0",
+        "log_on_each_node": "bool = True",
+        "logging_dir": "str or None = None",
+        "logging_strategy": "IntervalStrategy = 'steps'",
+        "logging_first_step": "bool = False",
+        "logging_steps": "int = 500",
+        "save_strategy": "IntervalStrategy = 'steps'",
+        "save_steps": "int = 500",
+        "save_total_limit": "int or None = None",
+        "save_on_each_node": "bool = False",
+        "no_cuda": "bool = False",
+        "seed": "int = 42",
+        "bf16": "bool = False",
+        "fp16": "bool = False",
+        "fp16_opt_level": "str = 'O1'",
+        "amp_master_grad": "bool = False",
+        "bf16_full_eval": "bool = False",
+        "fp16_full_eval": "bool = False",
+        "amp_custom_black_list": "List[str] or None = None",
+        "amp_custom_white_list": "List[str] or None = None",
+        "sharding": "str = ''",
+        "sharding_degree": "int = -1",
+        "sharding_parallel_degree": "int = -1",
+        "save_sharded_model": "bool = False",
+        "load_sharded_model": "bool = False",
+        "tensor_parallel_degree": "int = -1",
+        "pipeline_parallel_degree": "int = -1",
+        "sep_parallel_degree": "int = -1",
+        "data_parallel_config": "str = ''",
+        "tensor_parallel_config": "str = ''",
+        "pipeline_parallel_config": "str = ''",
+        "sharding_parallel_config": "str = ''",
+        "hybrid_parallel_topo_order": "str or None = None",
+        "recompute": "bool = False",
+        "scale_loss": "float = 32768",
+        "minimum_eval_times": "int or None = None",
+        "local_rank": "int = -1",
+        "dataloader_drop_last": "bool = False",
+        "eval_steps": "int or None = None",
+        "max_evaluate_steps": "int = -1",
+        "dataloader_num_workers": "int = 0",
+        "past_index": "int = -1",
+        "run_name": "str or None = None",
+        "device": "str or None = 'gpu'",
+        "disable_tqdm": "bool or None = None",
+        "remove_unused_columns": "bool or None = True",
+        "label_names": "List[str] or None = None",
+        "load_best_model_at_end": "bool or None = False",
+        "metric_for_best_model": "str or None = None",
+        "greater_is_better": "bool or None = None",
+        "ignore_data_skip": "bool = False",
+        "optim": "str = 'adamw'",
+        "report_to": "List[str] or None = None",
+        "wandb_api_key": "str or None = None",
+        "resume_from_checkpoint": "str or None = None",
+        "skip_memory_metrics": "bool = True",
+        "flatten_param_grads": "bool or None = False",
+        "lazy_data_processing": "bool or None = True",
+        "skip_profile_timer": "bool or None = True",
+        "distributed_dataloader": "bool or None = False",
+        "unified_checkpoint": "bool or None = False",
+        "to_static": "bool or None = False",
+        "unified_checkpoint_config": "str or None = ''",
+        "ignore_load_lr_and_optim": "bool or None = False",
+        "ignore_save_lr_and_optim": "bool or None = False",
+        "force_reshard_pp": "bool or None = False",
+        "enable_auto_parallel": "bool or None = False"
+    },
+    "Bases": "object",
+    "description": "TrainingArguments is the subset of the arguments we use in our example scripts which relate to the training loopitself.",
+    "params": [
+        {
+            "name": "output_dir",
+            "type": "str",
+            "description": "The output directory where the model predictions and checkpoints will be written.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "overwrite_output_dir",
+            "type": "bool",
+            "description": "If True, overwrite the content of the output directory. Use this to continue training if output_dirpoints to a checkpoint directory.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "do_train",
+            "type": "bool",
+            "description": "Whether to run training or not. This argument is not directly used by [Trainer], its intended to be usedby your training/evaluation scripts instead. See the [examplescripts](PaddlePaddle/PaddleNLP) for more details.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "do_eval",
+            "type": "bool",
+            "description": "Whether to run evaluation on the validation set or not. Will be set to True if evaluation_strategy isdifferent from no. This argument is not directly used by [Trainer], its intended to be used by yourtraining/evaluation scripts instead. See the [examplescripts](PaddlePaddle/PaddleNLP) for more details.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "do_predict",
+            "type": "bool",
+            "description": "Whether to run predictions on the test set or not. This argument is not directly used by [Trainer], itsintended to be used by your training/evaluation scripts instead. See the [examplescripts](PaddlePaddle/PaddleNLP) for more details.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "do_export",
+            "type": "bool",
+            "description": "Whether to export inference model or not. This argument is not directly used by [Trainer], itsintended to be used by your training/evaluation scripts instead.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "evaluation_strategy",
+            "type": "str or [IntervalStrategy]",
+            "description": "The evaluation strategy to adopt during training. Possible values are:no: No evaluation is done during training.steps: Evaluation is done (and logged) every eval_steps.epoch: Evaluation is done at the end of each epoch.The evaluation strategy to adopt during training. Possible values are:no: No evaluation is done during training.steps: Evaluation is done (and logged) every eval_steps.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "prediction_loss_only",
+            "type": "bool",
+            "description": "When performing evaluation and generating predictions, only returns the loss.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "per_device_train_batch_size",
+            "type": "int",
+            "description": "The batch size per GPU core/CPU for training.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "per_device_eval_batch_size",
+            "type": "int",
+            "description": "The batch size per GPU core/CPU for evaluation.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "gradient_accumulation_steps",
+            "type": "int",
+            "description": "Number of updates steps to accumulate the gradients for, before performing a backward/update pass.<Tip warning={true}>When using gradient accumulation, one step is counted as one step with backward pass. Therefore, logging,evaluation, save will be conducted every gradient_accumulation_steps * xxx_step training examples.</Tip>Number of updates steps to accumulate the gradients for, before performing a backward/update pass.<Tip warning={true}>When using gradient accumulation, one step is counted as one step with backward pass. Therefore, logging,evaluation, save will be conducted every gradient_accumulation_steps * xxx_step training examples.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "eval_accumulation_steps",
+            "type": "int",
+            "description": "Number of predictions steps to accumulate the output tensors for, before moving the results to the CPU. Ifleft unset, the whole predictions are accumulated on GPU/TPU before being moved to the CPU (faster butrequires more memory).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "learning_rate",
+            "type": "float",
+            "description": "The initial learning rate for [AdamW] optimizer.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "weight_decay",
+            "type": "float",
+            "description": "The weight decay to apply (if not zero) to all layers except all bias and LayerNorm weights in [AdamW]optimizer.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "adam_beta1",
+            "type": "float",
+            "description": "The beta1 hyperparameter for the [AdamW] optimizer.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "adam_beta2",
+            "type": "float",
+            "description": "The beta2 hyperparameter for the [AdamW] optimizer.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "adam_epsilon",
+            "type": "float",
+            "description": "The epsilon hyperparameter for the [AdamW] optimizer.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "max_grad_norm",
+            "type": "float",
+            "description": "Maximum gradient norm (for gradient clipping).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "num_train_epochs",
+            "type": "float",
+            "description": "Total number of training epochs to perform (if not an integer, will perform the decimal part percents ofthe last epoch before stopping training).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "max_steps",
+            "type": "int",
+            "description": "If set to a positive number, the total number of training steps to perform. Overrides num_train_epochs.In case of using a finite iterable dataset the training may stop before reaching the set number of stepswhen all data is exhausted",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "lr_scheduler_type",
+            "type": "str or [SchedulerType]",
+            "description": "The scheduler type to use. See the documentation of [SchedulerType] for all possible values.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "warmup_ratio",
+            "type": "float",
+            "description": "Ratio of total training steps used for a linear warmup from 0 to learning_rate.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "warmup_steps",
+            "type": "int",
+            "description": "Number of steps used for a linear warmup from 0 to learning_rate. Overrides any effect of warmup_ratio.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "num_cycles",
+            "type": "float",
+            "description": "The number of waves in the cosine scheduler.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "lr_end",
+            "type": "float",
+            "description": "The end LR used in the polynomial scheduler.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "power",
+            "type": "float",
+            "description": "The power factor used in the polynomial scheduler.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "log_on_each_node",
+            "type": "bool",
+            "description": "In multinode distributed training, whether to log using log_level once per node, or only on the mainnode.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "logging_dir",
+            "type": "str",
+            "description": "log directory. Will default to output_dir/runs/**CURRENT_DATETIME_HOSTNAME**.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "logging_strategy",
+            "type": "str or [IntervalStrategy]",
+            "description": "The logging strategy to adopt during training. Possible values are:no: No logging is done during training.epoch: Logging is done at the end of each epoch.steps: Logging is done every logging_steps.The logging strategy to adopt during training. Possible values are:no: No logging is done during training.epoch: Logging is done at the end of each epoch.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "logging_first_step",
+            "type": "bool",
+            "description": "Whether to log and evaluate the first global_step or not.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "logging_steps",
+            "type": "int",
+            "description": "Number of update steps between two logs if logging_strategy=steps.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "save_strategy",
+            "type": "str or [IntervalStrategy]",
+            "description": "The checkpoint save strategy to adopt during training. Possible values are:no: No save is done during training.epoch: Save is done at the end of each epoch.steps: Save is done every save_steps.The checkpoint save strategy to adopt during training. Possible values are:no: No save is done during training.epoch: Save is done at the end of each epoch.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "save_steps",
+            "type": "int",
+            "description": "Number of updates steps before two checkpoint saves if save_strategy=steps.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "save_total_limit",
+            "type": "int",
+            "description": "If a value is passed, will limit the total amount of checkpoints. Deletes the older checkpoints inoutput_dir.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "save_on_each_node",
+            "type": "bool",
+            "description": "When doing multi-node distributed training, whether to save models and checkpoints on each node, or only onthe main one.This should not be activated when the different nodes use the same storage as the files will be saved withthe same names for each node.When doing multi-node distributed training, whether to save models and checkpoints on each node, or only onthe main one.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "no_cuda",
+            "type": "bool",
+            "description": "Whether to not use CUDA even when it is available or not.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "seed",
+            "type": "int",
+            "description": "Random seed that will be set at the beginning of training. To ensure reproducibility across runs, use the[model_init] function to instantiate the model if it has some randomly initialized parameters.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "fp16",
+            "type": "bool",
+            "description": "Whether to use fp16 16-bit (mixed) precision training instead of 32-bit training.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "fp16_opt_level",
+            "type": "str",
+            "description": "For fp16 training,  AMP optimization level selected in [O0, O1, O2]. See details athttps://www.paddlepaddle.org.cn/documentation/docs/zh/develop/api/paddle/amp/auto_cast_cn.html",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "amp_custom_black_list",
+            "type": "List[str]",
+            "description": "The custom black_list. The set of ops that support fp16/bf16 calculation and are considered numerically-dangerousand whose effects may also be observed in downstream ops. These ops will not be converted to fp16/bf16.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "amp_custom_white_list",
+            "type": "List[str]",
+            "description": "The custom white_list. Its the set of ops that support fp16/bf16 calculation and are considered numerically-safe andperformance-critical. These ops will be converted to fp16/bf16.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "amp_master_grad",
+            "type": "bool",
+            "description": "For amp opt level=O2, whether to use float32 weight gradientsfor calculations such as gradient clipping, weight decay, and weight updates. If master_grad is enabled,the weight gradients will be float32 dtype after the backpropagation. Default is False, there is only float16 weight gradients.Note: only support model parallel and pipeline parallel for now !!!",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sharding",
+            "type": "str",
+            "description": "Whether or not to use Paddle Sharding Data Parallel training (in distributed trainingonly). The base option should be stage1, stage2 or stage3 and you can addCPU-offload to stage2 or stage3 like this: stage2 offload or stage3 offload.Each stage means:stage1 : optimizer state segmentationstage2 : optimizer state + gradient segmentationstage3 : parameter + gradient + optimizer state segmentationoffload : offload parameters to cpuWhether or not to use Paddle Sharding Data Parallel training (in distributed trainingonly). The base option should be stage1, stage2 or stage3 and you can addCPU-offload to stage2 or stage3 like this: stage2 offload or stage3 offload.Each stage means:",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sharding_parallel_degree",
+            "type": "int",
+            "description": "Sharding parameter in certain cards group. For example, aussume we use 2 machines each with 8 cards,then set sharding_parallel_degree=8, sharding will only communication inside machine.default -1 means sharding parameters between all workers.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "tensor_parallel_degree",
+            "type": "int",
+            "description": "Tensor parallelism is parallel technique proposed in (https://arxiv.org/pdf/2104.04473.pdf see 2.3 Tensor Model Parallelism).This technique splits one transformer layer into multi-cards (For examples, tensor_parallel_degree=4, will split a layer to 4-parts)tensor_parallel_degree means split the transformer layer to how many parts.default -1 for not use tensor parallel,  Suggest tensor_parallel_degree<=8 for better proformance.Note, this need model support in source code, currently GPT/BLOOM/LLAMA/BLOOM/CLM/CHATGLM is supported.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "pipeline_parallel_degree",
+            "type": "int",
+            "description": "Pipeline parallelism is parallel technique proposed in (https://arxiv.org/pdf/2104.04473.pdf see 2.2 Pipeline Model Parallelism).Pipeline parallelism assigns multi-transformer layers to different cards, the micro batch data stream passed between cards like pipelines.pipeline_parallel_degree means split all transformer layers to how many stages.default -1 for not use pipeline parallel.Note. this need model support in source code, see llama modeling_pp.py file",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sep_parallel_degree",
+            "type": "int",
+            "description": "The paddle sequence parallel strategy. It can reduce the GPU memory of activation to 1/sep, and it is orthogonal todata parallel, sharding stage1, tensor parallel and pipeline parallel strategy.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": ")",
+            "type": "",
+            "description": "",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "data_parallel_config",
+            "type": "str",
+            "description": "Some additional configs which affect data parallel performance, we provide some option to config it.following config is support:enable_allreduce_avg_in_gradinent_scale, it replace allreduce_sum + scale pattern with allreduce_avg when scale gradient in data_parallel, which improve the performance. ONLY supported for auto mode now.gradient_sync_after_accumulate, move gradient sync operations from backward into optimizer step when gradient accumulate enabling, which reduce the sync times to improve performance, but will increase the memory usage. ONLY supported for auto mode now.Some additional configs which affect data parallel performance, we provide some option to config it.following config is support:",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "tensor_parallel_config",
+            "type": "str",
+            "description": "Some additional configs which affect model parallel performance, we provide some option to config it.following config is support:enable_mp_async_allreduce, it supports all_reduce(dx) overlap with matmul(dw) in ColumnParallelLinear backward when it set True, which can accelerate model parallel performance.enable_mp_skip_c_identity, it supports skip c_identity in ColumnParallelLinear and RowParallelLinear. It only works when set mp_async_allreduce is True. It can accelerate model parallel further.enable_mp_fused_linear_param_grad_add, it supports fused_linear_param_grad_add in ColumnParallelLinear (cuda >= 11.6). It only works when mp_async_allreduce is true. It can accelerate model parallel further.enable_delay_scale_loss, accumulate gradients util optimizer step, all gradients div by accumute step. instead of div accumute step on loss directly.Some additional configs which affect model parallel performance, we provide some option to config it.following config is support:",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "pipeline_parallel_config",
+            "type": "str",
+            "description": "Some additional config it highly affect the useage of pipeline parallel, we provide some option to config it.following config is support:disable_p2p_cache_shape, if you max sequence length is varying, please set disable_p2p_cache_shape.disable_partial_send_recv, optmize send speed for tensor parallel.enable_delay_scale_loss, accumulate gradients util optimizer step, all gradients div by inner pipeline accumute step. instead of div accumute step on loss directly.enable_dp_comm_overlap, fuse data parallel gradient communication.enable_sharding_comm_overlap, fuse sharding stage 1 parallel gradient communication.enable_release_grads, reduce peak memory usage by releasing gradients after each iteration. The creation of gradients will be postponed until backward propagation of the next iteration.enable_overlap_p2p_comm, overlap p2p communication with computation.enable_clear_every_step_cache, clear every step cache for pipeline parallel.disable_non_batch_p2p_comm, disable batched send/recv in pipeline parallel mode.Some additional config it highly affect the useage of pipeline parallel, we provide some option to config it.following config is support:",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sharding_parallel_config",
+            "type": "str",
+            "description": "Some additional config it highly affect the useage of sharding parallel, we provide some option to config it.following config is support:enable_stage1_tensor_fusion, fuse small tensors into big tensor chunks to accelerate communications, may increase memory occupationenable_stage1_overlap, fuse small tensors into big tensor chunks to accelerate communications and do communication overlap with backward computation, may harm the backward speedenable_stage2_overlap, overlap stage2 NCCL communication with computation. There are some constraints for the overlap, such as the logging_step should be bigger than 1 for broadcast overlap and no other sync could be called during the training for broadcast overlap.disable_stage1_reduce_avg, replace reduce_avg with original reduce_sum+scale in stage1, which can be used for accuracy verification.Some additional config it highly affect the useage of sharding parallel, we provide some option to config it.following config is support:",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "recompute",
+            "type": "bool",
+            "description": "Recompute the forward pass to calculate gradients. Used for saving memory.Only support for networks with transformer blocks.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "scale_loss",
+            "type": "float,  optional, defaults to 32768",
+            "description": "The value of initial scale_loss for fp16. (default: 32768)",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "local_rank",
+            "type": "int",
+            "description": "Rank of the process during distributed training.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "dataloader_drop_last",
+            "type": "bool",
+            "description": "Whether to drop the last incomplete batch (if the length of the dataset is not divisible by the batch size)or not.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "eval_steps",
+            "type": "int",
+            "description": "Number of update steps between two evaluations if evaluation_strategy=steps. Will default to the samevalue as logging_steps if not set.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "max_evaluate_steps",
+            "type": "int",
+            "description": "If set to a positive number, the total number of evaluation steps to perform.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "dataloader_num_workers",
+            "type": "int",
+            "description": "Number of subprocesses to use for data loading. 0 means that the data will be loaded in themain process.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "past_index",
+            "type": "int",
+            "description": "Some models like TransformerXL or XLNet can make use of the past hidden states for their predictions.If this argument is set to a positive int, the Trainer will use the corresponding output (usually index 2) asthe past state and feed it to the model at the next training step under the keyword argument mems.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "run_name",
+            "type": "str",
+            "description": "A descriptor for the run. Typically used for logging.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "disable_tqdm",
+            "type": "bool",
+            "description": "Whether or not to disable the tqdm progress bars and table of metrics. Will default to True if the logginglevel is set to warn or lower (default), False otherwise.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "remove_unused_columns",
+            "type": "bool",
+            "description": "If using datasets.Dataset datasets, whether or not to automatically remove the columns unused by themodel forward method.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "label_names",
+            "type": "List[str]",
+            "description": "The list of keys in your dictionary of inputs that correspond to the labels.Will eventually default to [labels] except if the model used is one of the XxxForQuestionAnswering inwhich case it will default to [start_positions, end_positions].",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "load_best_model_at_end",
+            "type": "bool",
+            "description": "Whether or not to load the best model found during training at the end of training.<Tip>When set to True, the parameters save_strategy needs to be the same as eval_strategy, and in the caseit is steps, save_steps must be a round multiple of eval_steps.</Tip>Whether or not to load the best model found during training at the end of training.<Tip>When set to True, the parameters save_strategy needs to be the same as eval_strategy, and in the caseit is steps, save_steps must be a round multiple of eval_steps.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "metric_for_best_model",
+            "type": "str",
+            "description": "Use in conjunction with load_best_model_at_end to specify the metric to use to compare two differentmodels. Must be the name of a metric returned by the evaluation with or without the prefix eval_. Willdefault to loss if unspecified and load_best_model_at_end=True (to use the evaluation loss).If you set this value, greater_is_better will default to True. Dont forget to set it to False ifyour metric is better when lower.Use in conjunction with load_best_model_at_end to specify the metric to use to compare two differentmodels. Must be the name of a metric returned by the evaluation with or without the prefix eval_. Willdefault to loss if unspecified and load_best_model_at_end=True (to use the evaluation loss).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "greater_is_better",
+            "type": "bool",
+            "description": "Use in conjunction with load_best_model_at_end and metric_for_best_model to specify if better modelsshould have a greater metric or not. Will default to:True if metric_for_best_model is set to a value that isnt loss or eval_loss.False if metric_for_best_model is not set, or set to loss or eval_loss.Use in conjunction with load_best_model_at_end and metric_for_best_model to specify if better modelsshould have a greater metric or not. Will default to:True if metric_for_best_model is set to a value that isnt loss or eval_loss.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "ignore_data_skip",
+            "type": "bool",
+            "description": "When resuming training, whether or not to skip the epochs and batches to get the data loading at the samestage as in the previous training. If set to True, the training will begin faster (as that skipping stepcan take a long time) but will not yield the same results as the interrupted training would have.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "optim",
+            "type": "str or [training_args.OptimizerNames]",
+            "description": "The optimizer to use: adamw, or adafactor.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "length_column_name",
+            "type": "str",
+            "description": "Column name for precomputed lengths. If the column exists, grouping by length will use these values ratherthan computing them on train startup. Ignored unless group_by_length is True and the dataset is aninstance of Dataset.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "report_to",
+            "type": "str or List[str]",
+            "description": "The list of integrations to report the results and logs to.Supported platforms are visualdl/wandb/tensorboard.none for no integrations.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "wandb_api_key",
+            "type": "str",
+            "description": "Weights & Biases (WandB) API key(s) for authentication with the WandB service.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "resume_from_checkpoint",
+            "type": "str",
+            "description": "The path to a folder with a valid checkpoint for your model. This argument is not directly used by[Trainer], its intended to be used by your training/evaluation scripts instead. See the [examplescripts](PaddlePaddle/PaddleNLP) for more details.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "flatten_param_grads",
+            "type": "bool",
+            "description": "Whether use flatten_param_grads method in optimizer, only used on NPU devices. Default is False.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "skip_profile_timer",
+            "type": "bool",
+            "description": "Whether skip profile timer, timer will record time usage of forward/ backward/ step, etc.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "distributed_dataloader",
+            "type": "bool",
+            "description": "Whether to use distributed dataloader. Default is False.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

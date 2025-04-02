@@ -1,0 +1,64 @@
+{
+    "api": "paddlenlp.transformers.optimization.PolyDecayWithWarmup",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "learning_rate": null,
+        "total_steps": null,
+        "warmup": null,
+        "lr_end": "1e-07",
+        "power": "1.0",
+        "last_epoch": "-1",
+        "verbose": "False"
+    },
+    "Bases": "LambdaDecay",
+    "description": "Creates a learning rate scheduler, which increases learning rate linearlyfrom 0 to given lr_init, after this warmup period learning rate wouldbe decreased as a polynomial decay from the base learning rate to the endlearning rate lr_end.",
+    "params": [
+        {
+            "name": "learning_rate",
+            "type": "float",
+            "description": "The base learning rate. It is a python float number.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "total_steps",
+            "type": "int",
+            "description": "The number of training steps.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "warmup",
+            "type": "int or float",
+            "description": "If int, it means the number of steps for warmup. If float, it meansthe proportion of warmup in total training steps.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "lr_end",
+            "type": "float",
+            "description": "The end learning rate.Defaults to 1e-7.",
+            "default": "1e-07",
+            "optional": true
+        },
+        {
+            "name": "power",
+            "type": "float",
+            "description": "Power factor.Defaults to 1.0.",
+            "default": "1.0",
+            "optional": true
+        },
+        {
+            "name": "last_epoch",
+            "type": "int",
+            "description": "The index of last epoch. It can be set to restart training. IfNone, it means initial learning rate.Defaults to -1.",
+            "default": "-1",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

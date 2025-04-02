@@ -1,0 +1,59 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.from_pretrained",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "pretrained_model_name_or_path": null,
+        "*args": null,
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "pretrained_model_name_or_path",
+            "type": "str",
+            "description": "Name of pretrained model or dir pathto load from. The string can be:Name of a built-in pretrained modelName of a pretrained model from HF HubName of a community-contributed pretrained model.Local directory path which contains model weights file(model_state.pdparams)and model config file (model_config.json).Name of pretrained model or dir pathto load from. The string can be:Name of a built-in pretrained modelName of a pretrained model from HF HubName of a community-contributed pretrained model.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "from_hf_hub",
+            "type": "bool",
+            "description": "load model from huggingface hub. Default to False.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "subfolder",
+            "type": "str",
+            "description": "Only works when loading from Huggingface Hub.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "*args",
+            "type": "tuple",
+            "description": "Position arguments for model __init__. If provided,use these as position argument values for model initialization.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "**kwargs",
+            "type": "dict",
+            "description": "Keyword arguments for model __init__. If provided,use these to update pre-defined keyword argument values for modelinitialization. If the keyword is in __init__ argument names ofbase model, update argument values of the base model, else updateargument values of derived model.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "load_state_as_np",
+            "type": "bool",
+            "description": "The weights read in can be choosedto place on CPU or GPU though the model is on the default device.If True, load the model weights as numpy.ndarray on CPU.Otherwise, weights would be loaded as tensors on the defaultdevice. Note that if on GPU, the latter would creates extratemporary tensors in addition to the model weights, whichdoubles the memory usage . Thus it is suggested to use Truefor big models on GPU. Default to False.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "An instance of PretrainedModel.",
+        "type": "PretrainedModel"
+    }
+}

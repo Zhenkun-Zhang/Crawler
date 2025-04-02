@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.TCNEncoder.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "inputs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "inputs",
+            "type": "Tensor",
+            "description": "The input tensor with shape [batch_size, num_tokens, input_size].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Returns tensor output with shape [batch_size, num_channels[-1]].",
+        "type": "Tensor"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.taskflow.text_similarity.TextSimilarityTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "batch_size": "1",
+        "max_length": "384",
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "Text similarity task using SimBERT to predict the similarity of sentence pair.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.utils.WordTagRelationExtractor.from_json",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "json_str": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

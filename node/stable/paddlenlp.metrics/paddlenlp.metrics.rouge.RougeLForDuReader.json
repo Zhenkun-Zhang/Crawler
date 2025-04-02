@@ -1,0 +1,32 @@
+{
+    "api": "paddlenlp.metrics.rouge.RougeLForDuReader",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "alpha": "1.0",
+        "beta": "1.0",
+        "gamma": "1.2"
+    },
+    "Bases": "RougeL",
+    "description": "Rouge-L metric with bonus for DuReader contest.",
+    "params": [
+        {
+            "name": "alpha",
+            "type": "float",
+            "description": "Weight of YesNo dataset when adding bonus for DuReader contest. Defaults to 1.0.",
+            "default": "1.0",
+            "optional": true
+        },
+        {
+            "name": "beta",
+            "type": "float",
+            "description": "Weight of Entity dataset when adding bonus for DuReader contest. Defaults to 1.0.",
+            "default": "1.0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

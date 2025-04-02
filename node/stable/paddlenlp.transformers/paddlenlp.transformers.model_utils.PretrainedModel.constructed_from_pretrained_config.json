@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.constructed_from_pretrained_config",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "init_func": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

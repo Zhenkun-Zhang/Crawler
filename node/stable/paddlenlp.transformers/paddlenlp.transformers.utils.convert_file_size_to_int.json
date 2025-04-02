@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.utils.convert_file_size_to_int",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "size": "int|str"
+    },
+    "description": "Converts a size expressed as a string with digits an unit (like \"5MB\") to an integer (in bytes).:param size: The size to convert. Will be directly returned if an int.:type size: int or strExample:`py>>> convert_file_size_to_int(\"1MiB\")1048576`",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

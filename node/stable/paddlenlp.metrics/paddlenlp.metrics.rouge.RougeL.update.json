@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.metrics.rouge.RougeL.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "output": null,
+        "label": null,
+        "seq_mask": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.fill_diagonal",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "x": null,
+        "value": null,
+        "offset": "0",
+        "dim1": "0",
+        "dim2": "1"
+    },
+    "description": "Fill value into the diagoanl of x that offset is ${offset}and the coordinate system is (dim1, dim2).",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.BaseModelOutputWithPoolingAndCrossAttentions",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "last_hidden_state": "Tensor or None = None",
+        "pooler_output": "Tensor or None = None",
+        "past_key_values": "Tuple[Tuple[Tensor]] or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None",
+        "attentions": "Tuple[Tensor] or None = None",
+        "cross_attentions": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for model’s outputs that also contains a pooling of the last hidden states.",
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "paddle.Tensor of shape batch_size, sequence_length, hidden_size",
+            "description": "Sequence of hidden-states at the output of the last layer of the model.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "pooler_output",
+            "type": "paddle.Tensor of shape batch_size, hidden_size",
+            "description": "Last layer hidden-state of the first token of the sequence (classification token) after further processingthrough the layers used for the auxiliary pretraining task. E.g. for BERT-family of models, this returnsthe classification token after processing through a linear layer and a tanh activation function. The linearlayer weights are trained from the next sentence prediction (classification) objective during pretraining.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads.Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).Attentions weights of the decoders cross-attention layer, after the attention softmax, used to compute theweighted average in the cross-attention heads.Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "past_key_values",
+            "type": "tupletuplepaddle.Tensor",
+            "description": "Tuple of tuple(paddle.Tensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and optionally ifconfig.is_encoder_decoder=True 2 additional tensors of shape (batch_size, num_heads,encoder_sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks and optionally ifconfig.is_encoder_decoder=True in the cross-attention blocks) that can be used (see past_key_valuesinput) to speed up sequential decoding.Tuple of tuple(paddle.Tensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and optionally ifconfig.is_encoder_decoder=True 2 additional tensors of shape (batch_size, num_heads,encoder_sequence_length, embed_size_per_head).",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

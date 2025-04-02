@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.layers.sequence.sequence_mask",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "seq_ids": null,
+        "valid_lengths": null
+    },
+    "description": "To boost the performance, this sequence_mask is different with paddle.nn.functional.sequence_maskseq_ids (Tensor) – The whole sequence index, a tensor with a shape of [batch_size, sequence_length].valid_lengths (Tensor) – The valid length of every sequence, a tensor with a shape of [batch_size].Returns the output sequence mask mask.Its dtype is bool and has a shape of [batch_size, sequence_length].Tensor",
+    "params": [
+        {
+            "name": "seq_ids",
+            "type": "Tensor",
+            "description": "The whole sequence index, a tensor with a shape of [batch_size, sequence_length].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "valid_lengths",
+            "type": "Tensor",
+            "description": "The valid length of every sequence, a tensor with a shape of [batch_size].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Returns the output sequence mask mask.Its dtype is bool and has a shape of [batch_size, sequence_length].",
+        "type": "Tensor"
+    }
+}

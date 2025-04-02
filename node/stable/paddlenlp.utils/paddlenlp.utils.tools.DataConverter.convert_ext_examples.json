@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.utils.tools.DataConverter.convert_ext_examples",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "raw_examples": null,
+        "is_train": "True"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

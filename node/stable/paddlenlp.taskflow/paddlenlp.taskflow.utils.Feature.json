@@ -1,0 +1,40 @@
+{
+    "api": "paddlenlp.taskflow.utils.Feature",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "unique_id": null,
+        "example_index": null,
+        "qas_id": null,
+        "doc_span_index": null,
+        "tokens": null,
+        "token_to_orig_map": null,
+        "token_is_max_context": null,
+        "token_ids": null,
+        "position_ids": null,
+        "text_type_ids": null,
+        "text_symbol_ids": null,
+        "overlaps": null,
+        "key_labels": null,
+        "seq_labels": null,
+        "se_seq_labels": null,
+        "bio_seq_labels": null,
+        "bioes_seq_labels": null,
+        "keys": null,
+        "model_type": null,
+        "doc_tokens": null,
+        "doc_labels": null,
+        "text": null,
+        "boxes": null,
+        "segment_ids": null,
+        "im_base64": null,
+        "image_rois": null
+    },
+    "Bases": "tuple",
+    "description": "Alias for field number 15",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

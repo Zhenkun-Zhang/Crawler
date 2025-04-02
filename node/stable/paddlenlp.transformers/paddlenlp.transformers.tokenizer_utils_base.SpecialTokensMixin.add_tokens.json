@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.SpecialTokensMixin.add_tokens",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "new_tokens": "str or AddedToken or List[str or AddedToken]",
+        "special_tokens": "bool = False"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "new_tokens",
+            "type": "str, AddedToken or a list of str or AddedToken",
+            "description": "Tokens are only added if they are not already in the vocabulary. AddedToken wraps a stringtoken to let you personalize its behavior: whether this token should only match against a single word,whether this token should strip all potential whitespaces on the left side, whether this token shouldstrip all potential whitespaces on the right side, etc.",
+            "default": "str or AddedToken or List[str or AddedToken]",
+            "optional": false
+        },
+        {
+            "name": "special_tokens",
+            "type": "bool",
+            "description": "Can be used to specify if the token is a special token. This mostly change the normalization behavior(special tokens like CLS or [MASK] are usually not lower-cased for instance).",
+            "default": "bool = False",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Number of tokens added to the vocabulary.",
+        "type": "int"
+    }
+}

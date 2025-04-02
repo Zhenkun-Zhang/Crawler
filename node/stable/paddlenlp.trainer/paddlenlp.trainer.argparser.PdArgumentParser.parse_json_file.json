@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.trainer.argparser.PdArgumentParser.parse_json_file",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "json_file": "str",
+        "return_remaining_strings": "False"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

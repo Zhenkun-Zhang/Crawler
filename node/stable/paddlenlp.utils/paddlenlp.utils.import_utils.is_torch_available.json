@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.utils.import_utils.is_torch_available",
+    "type": "function",
+    "version": "stable",
+    "args_list": {},
+    "description": "check if torch package is installed:returns: if torch is available:rtype: bool",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

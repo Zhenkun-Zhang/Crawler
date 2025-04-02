@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.utils.import_utils.is_package_available",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "package_name": "str"
+    },
+    "description": "check if the package is avaliable:param package_name: the installed package name:type package_name: strthe existence of installed packagebool",
+    "params": [],
+    "return": {
+        "description": "the existence of installed package",
+        "type": "bool"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.metrics.glue.MultiLabelsMetric.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "args": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "args",
+            "type": "tuple of Tensor",
+            "description": "the tuple returned from compute function",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

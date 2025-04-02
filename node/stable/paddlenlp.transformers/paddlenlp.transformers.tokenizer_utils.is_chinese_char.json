@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.is_chinese_char",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "cp": null
+    },
+    "description": "Checks whether CP is the codepoint of a CJK character.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

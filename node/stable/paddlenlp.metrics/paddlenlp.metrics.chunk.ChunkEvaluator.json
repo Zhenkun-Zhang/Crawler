@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.metrics.chunk.ChunkEvaluator",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "label_list": null,
+        "suffix": "False"
+    },
+    "Bases": "Metric",
+    "description": "ChunkEvaluator computes the precision, recall and F1-score for chunk detection.It is often used in sequence tagging tasks, such as Named Entity Recognition(NER).",
+    "params": [
+        {
+            "name": "label_list",
+            "type": "list",
+            "description": "The label list.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "suffix",
+            "type": "bool",
+            "description": "If set True, the label ends with -B, -I, -E or -S, else the label starts with them.Defaults to False.",
+            "default": "False",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

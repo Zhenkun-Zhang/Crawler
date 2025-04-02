@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.save_resources",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "save_directory": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str",
+            "description": "Directory to save files into.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.SpecialTokensMixin.add_special_tokens",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "special_tokens_dict": "Dict[str",
+        "str|AddedToken]": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "special_tokens_dict",
+            "type": "dictionary str to str or AddedToken",
+            "description": "Keys should be in the list of predefined special attributes: [bos_token, eos_token, unk_token,sep_token, pad_token, cls_token, mask_token, additional_special_tokens].Tokens are only added if they are not already in the vocabulary (tested by checking if the tokenizerassign the index of the unk_token to them).Keys should be in the list of predefined special attributes: [bos_token, eos_token, unk_token,sep_token, pad_token, cls_token, mask_token, additional_special_tokens].",
+            "default": "Dict[str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Number of tokens added to the vocabulary.",
+        "type": "int"
+    }
+}

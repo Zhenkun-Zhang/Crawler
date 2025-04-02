@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.TensorType",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "value": null
+    },
+    "Bases": "ExplicitEnum",
+    "description": "Possible values for the return_tensors argument in [PretrainedTokenizerBase.__call__]. Useful fortab-completion in an IDE.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

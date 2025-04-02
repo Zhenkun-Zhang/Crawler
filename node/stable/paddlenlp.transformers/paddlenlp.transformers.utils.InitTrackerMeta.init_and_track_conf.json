@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.transformers.utils.InitTrackerMeta.init_and_track_conf",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "init_func": null,
+        "pre_init_func": "None",
+        "post_init_func": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

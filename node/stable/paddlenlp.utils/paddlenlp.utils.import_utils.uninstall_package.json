@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.utils.import_utils.uninstall_package",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "package_name": "str",
+        "module_name": "str|None=None"
+    },
+    "description": "uninstall the pacakge from site-packages.remove the source files of packages under the site-packages dir.remove the cache under the locals()remove the cache under the sys.modulespackage_name (str) – the name of package",
+    "params": [
+        {
+            "name": "package_name",
+            "type": "str",
+            "description": "the name of package",
+            "default": "str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

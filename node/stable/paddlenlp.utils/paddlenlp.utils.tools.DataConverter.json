@@ -1,0 +1,25 @@
+{
+    "api": "paddlenlp.utils.tools.DataConverter",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "label_studio_file": null,
+        "negative_ratio": "5",
+        "prompt_prefix": "'情感倾向'",
+        "options": "['正向'",
+        "'负向']": null,
+        "separator": "'##'",
+        "layout_analysis": "False",
+        "expand_to_a4_size": "True",
+        "schema_lang": "'ch'",
+        "ocr_lang": "'en'",
+        "anno_type": "'text'"
+    },
+    "Bases": "object",
+    "description": "DataConverter to convert data export from annotation platform",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

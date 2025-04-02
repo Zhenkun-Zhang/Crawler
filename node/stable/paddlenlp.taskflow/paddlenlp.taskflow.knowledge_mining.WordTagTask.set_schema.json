@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.knowledge_mining.WordTagTask.set_schema",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "schema": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

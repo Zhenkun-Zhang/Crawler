@@ -1,0 +1,59 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.CNNEncoder",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "emb_dim": null,
+        "num_filter": null,
+        "ngram_filter_sizes": "(2",
+        "3": null,
+        "4": null,
+        "5)": null,
+        "conv_layer_activation": "Tanh()",
+        "output_dim": "None",
+        "**kwargs": null
+    },
+    "Bases": "Layer",
+    "description": "A CNNEncoder takes as input a sequence of vectors and returns asingle vector, a combination of multiple convolution layers and max pooling layers.The input to this encoder is of shape (batch_size, num_tokens, emb_dim),and the output is of shape (batch_size, output_dim) or (batch_size, len(ngram_filter_sizes) * num_filter).",
+    "params": [
+        {
+            "name": "emb_dim",
+            "type": "int",
+            "description": "The dimension of each vector in the input sequence.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_filter",
+            "type": "int",
+            "description": "This is the output dim for each convolutional layer, which is the number of filterslearned by that layer.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "ngram_filter_sizes",
+            "type": "Tuple[int]",
+            "description": "This specifies both the number of convolutional layers we will create and their sizes.  Thedefault of (2, 3, 4, 5) will have four convolutional layers, corresponding to encodingngrams of size 2 to 5 with some number of filters.",
+            "default": "(2",
+            "optional": true
+        },
+        {
+            "name": "conv_layer_activation",
+            "type": "Layer",
+            "description": "Activation to use after the convolution layers.Defaults to paddle.nn.Tanh().",
+            "default": "Tanh()",
+            "optional": true
+        },
+        {
+            "name": "output_dim",
+            "type": "int",
+            "description": "After doing convolutions and pooling, well project the collected features into a vector ofthis size.  If this value is None, we will just return the result of the max pooling,giving an output of shape len(ngram_filter_sizes) * num_filter.Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

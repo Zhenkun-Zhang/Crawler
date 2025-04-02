@@ -1,0 +1,63 @@
+{
+    "api": "paddlenlp.embeddings.token_embedding.TokenEmbedding",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "embedding_name": "'w2v.baidu_encyclopedia.target.word-word.dim300'",
+        "unknown_token": "'[UNK]'",
+        "unknown_token_vector": "None",
+        "extended_vocab_path": "None",
+        "trainable": "True",
+        "keep_extended_vocab_only": "False"
+    },
+    "Bases": "Embedding",
+    "description": "A TokenEmbedding can load pre-trained embedding model which paddlenlp provides byspecifying embedding name. Furthermore, a TokenEmbedding can load extended vocabularyby specifying extended_vocab_path.",
+    "params": [
+        {
+            "name": "embedding_name",
+            "type": "str",
+            "description": "The pre-trained embedding model name. Use paddlenlp.embeddings.list_embedding_name() tolist the names of all embedding models that we provide.Defaults to w2v.baidu_encyclopedia.target.word-word.dim300.",
+            "default": "w2v.baidu_encyclopedia.target.word-word.dim300",
+            "optional": true
+        },
+        {
+            "name": "unknown_token",
+            "type": "str",
+            "description": "Specifies unknown token.Defaults to [UNK].",
+            "default": "[UNK]",
+            "optional": true
+        },
+        {
+            "name": "unknown_token_vector",
+            "type": "list",
+            "description": "To initialize the vector of unknown token. If its none, use normal distribution toinitialize the vector of unknown token.Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "extended_vocab_path",
+            "type": "str",
+            "description": "The file path of extended vocabulary.Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "trainable",
+            "type": "bool",
+            "description": "Whether the weight of embedding can be trained.Defaults to True.",
+            "default": "True",
+            "optional": true
+        },
+        {
+            "name": "keep_extended_vocab_only",
+            "type": "bool",
+            "description": "Whether to keep the extended vocabulary only, will be effective only if provides extended_vocab_path.Defaults to False.",
+            "default": "False",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

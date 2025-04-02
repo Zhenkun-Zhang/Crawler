@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.transformers.utils.get_scale_by_dtype",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "dtype": "str|None=None",
+        "return_positive": "bool=True"
+    },
+    "description": "get scale value by dtypedtype (str) – the string dtype valuethe scale valuefloat",
+    "params": [
+        {
+            "name": "dtype",
+            "type": "str",
+            "description": "the string dtype value",
+            "default": "str|None=None",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "the scale value",
+        "type": "float"
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "api": "paddlenlp.metrics.bleu.BLEU",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "trans_func": "None",
+        "vocab": "None",
+        "n_size": "4",
+        "weights": "None",
+        "name": "'bleu'"
+    },
+    "Bases": "Metric",
+    "description": "BLEU (bilingual evaluation understudy) is an algorithm for evaluating thequality of text which has been machine-translated from one natural languageto another. This metric uses a modified form of precision to compare acandidate translation against multiple reference translations.",
+    "params": [
+        {
+            "name": "trans_func",
+            "type": "callable",
+            "description": "trans_func transforms the networkoutput to string to calculate.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "vocab",
+            "type": "dict or paddlenlp.data.vocab",
+            "description": "Vocab for target language.If trans_func is None and BLEU is used as paddle.metric.Metricinstance, default_trans_func will be performed and vocab mustbe provided.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "n_size",
+            "type": "int",
+            "description": "Number of gram for BLEU metric. Defaults to 4.",
+            "default": "4",
+            "optional": true
+        },
+        {
+            "name": "weights",
+            "type": "list",
+            "description": "The weights of precision of each gram.Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Name of paddle.metric.Metric instance.Defaults to bleu.",
+            "default": "bleu",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

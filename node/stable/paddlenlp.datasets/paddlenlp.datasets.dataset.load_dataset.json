@@ -1,0 +1,62 @@
+{
+    "api": "paddlenlp.datasets.dataset.load_dataset",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "path_or_read_func": null,
+        "name": "None",
+        "data_files": "None",
+        "splits": "None",
+        "lazy": "None",
+        "**kwargs": null
+    },
+    "description": "This method will load a dataset, either form PaddleNLP library or from aself-defined data loading script, by calling functions in DatasetBuilder.For all the names of datasets in PaddleNLP library, see here:  dataset_list.Either splits or data_files must be specified.path_or_read_func (str|callable) – Name of the dataset processing scriptin PaddleNLP library or a custom data reading function.name (str, optional) – Additional name to select a more specific dataset.Defaults to None.data_files (str|list|tuple|dict, optional) – Defining the path of datasetfiles. If None. splits must be specified. Defaults to None.splits (str|list|tuple, optional) – Which split of the data to load. If None.data_files must be specified. Defaults to None.lazy (bool, optional) – Weather to return MapDataset or an IterDataset.True for IterDataset. False for MapDataset. If None, return thedefault type of this dataset. Defaults to None.kwargs (dict) – Other keyword arguments to be passed to the DatasetBuilder.A MapDataset or IterDataset or a tuple of those.For how to use this function, please see dataset_loadand dataset_self_defined",
+    "params": [
+        {
+            "name": "path_or_read_func",
+            "type": "str or callable",
+            "description": "Name of the dataset processing scriptin PaddleNLP library or a custom data reading function.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Additional name to select a more specific dataset.Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "data_files",
+            "type": "str or list or tuple or dict",
+            "description": "Defining the path of datasetfiles. If None. splits must be specified. Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "splits",
+            "type": "str or list or tuple",
+            "description": "Which split of the data to load. If None.data_files must be specified. Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "lazy",
+            "type": "bool",
+            "description": "Weather to return MapDataset or an IterDataset.True for IterDataset. False for MapDataset. If None, return thedefault type of this dataset. Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "description": "Other keyword arguments to be passed to the DatasetBuilder.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "A MapDataset or IterDataset or a tuple of those.",
+        "type": ""
+    }
+}

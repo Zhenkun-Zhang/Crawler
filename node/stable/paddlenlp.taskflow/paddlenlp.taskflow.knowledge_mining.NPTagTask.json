@@ -1,0 +1,20 @@
+{
+    "api": "paddlenlp.taskflow.knowledge_mining.NPTagTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "task": null,
+        "model": null,
+        "batch_size": "1",
+        "max_seq_len": "64",
+        "linking": "False",
+        "**kwargs": null
+    },
+    "Bases": "Task",
+    "description": "Noun phrase tagging task that convert the noun phrase to POS tag.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param batch_size: Numbers of examples a batch.:type batch_size: int:param linking: Returns the categories. If linking is True, the fine-grained label (label) will link with the coarse-grained label (category).:type linking: bool",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

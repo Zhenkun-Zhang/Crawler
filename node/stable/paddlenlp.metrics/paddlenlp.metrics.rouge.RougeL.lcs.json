@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.metrics.rouge.RougeL.lcs",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "string": null,
+        "sub": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "string",
+            "type": "str",
+            "description": "The string to be calculated, usually longer the sub string.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "sub",
+            "type": "str",
+            "description": "The sub string to be calculated.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Returns the length of the longest common subsequence of string and sub.",
+        "type": "float"
+    }
+}

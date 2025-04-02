@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.utils.tools.get_env_device",
+    "type": "function",
+    "version": "stable",
+    "args_list": {},
+    "description": "Return the device name of running environment.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

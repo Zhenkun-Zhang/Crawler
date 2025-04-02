@@ -1,0 +1,48 @@
+{
+    "api": "paddlenlp.transformers.optimization.ConstScheduleWithWarmup",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "learning_rate": null,
+        "warmup": null,
+        "total_steps": "None",
+        "last_epoch": "-1",
+        "verbose": "False"
+    },
+    "Bases": "LambdaDecay",
+    "description": "Creates a learning rate scheduler, which increases learning rate linearlyfrom 0 to given learning_rate during warmup periods and keeps learningrate a constant after that.",
+    "params": [
+        {
+            "name": "learning_rate",
+            "type": "float",
+            "description": "The base learning rate. It is a python float number.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "warmup",
+            "type": "int or float",
+            "description": "If int, it means the number of steps for warmup. If float, it meansthe proportion of warmup in total training steps.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "total_steps",
+            "type": "int",
+            "description": "The number of training steps. If warmup is a float number,total_steps must be provided.Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "last_epoch",
+            "type": "int",
+            "description": "The index of last epoch. It can be set to restart training. IfNone, it means initial learning rate.Defaults to -1.",
+            "default": "-1",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

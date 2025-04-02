@@ -1,0 +1,33 @@
+{
+    "api": "paddlenlp.metrics.bleu.BLEUForDuReader.add_inst",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "cand": null,
+        "ref_list": null,
+        "yn_label": "None",
+        "yn_ref": "None",
+        "entity_ref": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "cand",
+            "type": "list",
+            "description": "Tokenized candidate sentence.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "ref_list",
+            "type": "list of list",
+            "description": "List of tokenized ground truth sentences.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

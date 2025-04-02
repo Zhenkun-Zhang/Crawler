@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.GRUEncoder.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "inputs": null,
+        "sequence_length": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "inputs",
+            "type": "Tensor",
+            "description": "Shape as (batch_size, num_tokens, input_size).Tensor containing the features of the input sequence.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "sequence_length",
+            "type": "Tensor",
+            "description": "Shape as (batch_size).The sequence length of the input sequence.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Returns tensor output, the hidden state at the last time step for every layer.Its data type is float and its shape is [batch_size, hidden_size].",
+        "type": "Tensor"
+    }
+}

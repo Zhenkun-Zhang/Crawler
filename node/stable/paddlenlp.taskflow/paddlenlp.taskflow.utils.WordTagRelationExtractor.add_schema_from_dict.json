@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.utils.WordTagRelationExtractor.add_schema_from_dict",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "config_dict": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

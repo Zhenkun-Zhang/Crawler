@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.metrics.glue.PearsonAndSpearman.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "preds_and_labels": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "preds_and_labels",
+            "type": "tuple[Tensor] or list[Tensor]",
+            "description": "Tuple or list of predicted value and the ground truth label.Its data type should be float32 or float64 and its shape is [batch_size, d0, …, dN].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

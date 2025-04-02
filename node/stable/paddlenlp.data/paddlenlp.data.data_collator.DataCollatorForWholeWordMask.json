@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.data.data_collator.DataCollatorForWholeWordMask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "tokenizer": "PretrainedTokenizerBase",
+        "mlm": "bool = True",
+        "mlm_probability": "float = 0.15",
+        "pad_to_multiple_of": "int or None = None",
+        "return_tensors": "str = 'pd'"
+    },
+    "Bases": "DataCollatorForLanguageModeling",
+    "description": "Data collator used for language modeling that masks entire words.- collates batches of tensors, honoring their tokenizer’s pad_token- preprocesses batches for masked language modeling<Tip>This collator relies on details of the implementation of subword tokenization by [BertTokenizer], specificallythat subword tokens are prefixed with ##. For tokenizers that do not adhere to this scheme, this collator willproduce an output that is roughly equivalent to [DataCollatorForLanguageModeling].</Tip>",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.convert_tokens_to_string",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "tokens": "List[str]"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "tokens",
+            "type": "List[str]",
+            "description": "The token to join in a string.",
+            "default": "List[str]",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The joined tokens.",
+        "type": "str"
+    }
+}

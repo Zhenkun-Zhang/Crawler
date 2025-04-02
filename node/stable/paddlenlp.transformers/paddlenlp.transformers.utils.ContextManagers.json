@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.utils.ContextManagers",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "context_managers": "List[AbstractContextManager]"
+    },
+    "Bases": "object",
+    "description": "Wrapper for contextlib.ExitStack which enters a collection of context managers. Adaptation of ContextManagersin the fastcore library.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

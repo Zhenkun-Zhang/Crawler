@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.metrics.dureader.normalize",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "s": null
+    },
+    "description": "Normalize strings to space joined chars.:param s: a list of strings.A list of normalized strings.",
+    "params": [],
+    "return": {
+        "description": "A list of normalized strings.",
+        "type": ""
+    }
+}

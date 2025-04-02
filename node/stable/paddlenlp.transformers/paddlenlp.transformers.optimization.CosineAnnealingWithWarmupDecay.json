@@ -1,0 +1,20 @@
+{
+    "api": "paddlenlp.transformers.optimization.CosineAnnealingWithWarmupDecay",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "max_lr": null,
+        "min_lr": null,
+        "warmup_step": null,
+        "decay_step": null,
+        "last_epoch": "-1",
+        "verbose": "False"
+    },
+    "Bases": "LRScheduler",
+    "description": "For those subclass who overload LRScheduler (Base Class), User should have a custom implementation of get_lr() .",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

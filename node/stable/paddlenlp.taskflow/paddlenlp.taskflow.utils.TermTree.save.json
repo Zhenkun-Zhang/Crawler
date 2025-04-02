@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.taskflow.utils.TermTree.save",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "save_dir": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "save_dir",
+            "type": "[type]",
+            "description": "Directory.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

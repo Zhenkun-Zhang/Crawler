@@ -1,0 +1,100 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "**kwargs": null
+    },
+    "Bases": "SpecialTokensMixin",
+    "description": "Base class for [PretrainedTokenizer].",
+    "params": [
+        {
+            "name": "model_max_length",
+            "type": "int",
+            "description": "The maximum length (in number of tokens) for the inputs to the transformer model. When the tokenizer isloaded with [from_pretrained], this will be set to thevalue stored for the associated model in max_model_input_sizes (see above). If no value is provided, willdefault to VERY_LARGE_INTEGER (int(1e30)).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "padding_side",
+            "type": "str",
+            "description": "The side on which the model should have padding applied. Should be selected between [right, left].Default value is picked from the class attribute of the same name.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "truncation_side",
+            "type": "str",
+            "description": "The side on which the model should have truncation applied. Should be selected between [right, left].Default value is picked from the class attribute of the same name.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "model_input_names",
+            "type": "List[string]",
+            "description": "The list of inputs accepted by the forward pass of the model (like token_type_ids orattention_mask). Default value is picked from the class attribute of the same name.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "bos_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing the beginning of a sentence. Will be associated to self.bos_token andself.bos_token_id.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "eos_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing the end of a sentence. Will be associated to self.eos_token andself.eos_token_id.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "unk_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing an out-of-vocabulary token. Will be associated to self.unk_token andself.unk_token_id.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sep_token",
+            "type": "str or AddedToken",
+            "description": "A special token separating two different sentences in the same input (used by BERT for instance). Will beassociated to self.sep_token and self.sep_token_id.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "pad_token",
+            "type": "str or AddedToken",
+            "description": "A special token used to make arrays of tokens the same size for batching purpose. Will then be ignored byattention mechanisms or loss computation. Will be associated to self.pad_token and self.pad_token_id.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "cls_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing the class of the input (used by BERT for instance). Will be associated toself.cls_token and self.cls_token_id.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "mask_token",
+            "type": "str or AddedToken",
+            "description": "A special token representing a masked token (used by masked-language modeling pretraining objectives, likeBERT). Will be associated to self.mask_token and self.mask_token_id.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "tuple or list of str or AddedToken",
+            "description": "A tuple or a list of additional special tokens. Add them here to ensure they wont be split by thetokenization process. Will be associated to self.additional_special_tokens andself.additional_special_tokens_ids.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "api": "paddlenlp.metrics.squad.compute_prediction",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "examples": null,
+        "features": null,
+        "predictions": null,
+        "version_2_with_negative": "False",
+        "n_best_size": "20",
+        "max_answer_length": "30",
+        "null_score_diff_threshold": "0.0"
+    },
+    "description": "Post-processes the predictions of a question-answering model to convertthem to answers that are substrings of the original contexts. This isthe base postprocessing functions for models that only return start andend logits.examples (list) – List of raw squad-style data (see run_squad.py for moreinformation).features (list) – List of processed squad-style features (seerun_squad.pyfor more information).predictions (tuple) – The predictions of the model. Should be a tupleof two list containing the start logits and the end logits.version_2_with_negative (bool, optional) – Whether the dataset containsexamples with no answers. Defaults to False.n_best_size (int, optional) – The total number of candidate predictionsto generate. Defaults to 20.max_answer_length (int, optional) – The maximum length of predicted answer.Defaults to 20.null_score_diff_threshold (float, optional) – The threshold used to selectthe null answer. Only useful when version_2_with_negative is True.Defaults to 0.0.A tuple of three dictionaries containing final selected answer, all n_bestanswers along with their probability and scores, and the score_diff of eachexample.",
+    "params": [
+        {
+            "name": "examples",
+            "type": "list",
+            "description": "List of raw squad-style data (see run_squad.py for moreinformation).",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "features",
+            "type": "list",
+            "description": "List of processed squad-style features (seerun_squad.pyfor more information).",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "predictions",
+            "type": "tuple",
+            "description": "The predictions of the model. Should be a tupleof two list containing the start logits and the end logits.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "version_2_with_negative",
+            "type": "bool",
+            "description": "Whether the dataset containsexamples with no answers. Defaults to False.",
+            "default": "False",
+            "optional": true
+        },
+        {
+            "name": "n_best_size",
+            "type": "int",
+            "description": "The total number of candidate predictionsto generate. Defaults to 20.",
+            "default": "20",
+            "optional": true
+        },
+        {
+            "name": "max_answer_length",
+            "type": "int",
+            "description": "The maximum length of predicted answer.Defaults to 20.",
+            "default": "30",
+            "optional": true
+        },
+        {
+            "name": "null_score_diff_threshold",
+            "type": "float",
+            "description": "The threshold used to selectthe null answer. Only useful when version_2_with_negative is True.Defaults to 0.0.",
+            "default": "0.0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A tuple of three dictionaries containing final selected answer, all n_bestanswers along with their probability and scores, and the score_diff of eachexample.",
+        "type": ""
+    }
+}

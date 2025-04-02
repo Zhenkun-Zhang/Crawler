@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.collate.Dict.__call__",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "data": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "data",
+            "type": "list[dict] or tuple[dict]",
+            "description": "The samples to batchfy. Each samplein list/tuple is a dict with N key-values.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "A tuple composed of results from all including batchifyingfunctions.",
+        "type": "tuple"
+    }
+}

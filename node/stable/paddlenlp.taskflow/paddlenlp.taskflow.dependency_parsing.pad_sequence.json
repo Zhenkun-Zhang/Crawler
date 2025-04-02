@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.pad_sequence",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "sequences": null,
+        "padding_value": "0",
+        "fix_len": "None"
+    },
+    "description": "Fill sequences(np.ndarray) into a fixed-length matrix.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

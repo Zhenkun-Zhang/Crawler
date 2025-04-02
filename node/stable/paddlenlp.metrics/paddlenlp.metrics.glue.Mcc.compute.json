@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.metrics.glue.Mcc.compute",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "pred": null,
+        "label": null,
+        "*args": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "pred",
+            "type": "Tensor",
+            "description": "The predicted value is a Tensor with dtype float32 or float64.Shape is [batch_size, 1].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "label",
+            "type": "Tensor",
+            "description": "The ground truth value is Tensor with dtype int64, and itsshape is [batch_size, 1].",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "A tuple of preds and label. Each shape is[batch_size, 1], with dtype float32 or float64.",
+        "type": "tuple"
+    }
+}

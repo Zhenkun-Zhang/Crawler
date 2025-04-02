@@ -1,0 +1,135 @@
+{
+    "api": "paddlenlp.ops.optimizer.AdamWDL",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "learning_rate": "0.001",
+        "beta1": "0.9",
+        "beta2": "0.999",
+        "epsilon": "1e-08",
+        "parameters": "None",
+        "weight_decay": "0.01",
+        "apply_decay_param_fun": "None",
+        "grad_clip": "None",
+        "lazy_mode": "False",
+        "multi_precision": "False",
+        "layerwise_decay": "1.0",
+        "n_layers": "12",
+        "set_param_lr_fun": "<functionlayerwise_lr_decay>",
+        "name_dict": "None",
+        "name": "None"
+    },
+    "Bases": "AdamW",
+    "description": "The AdamWDL optimizer is implemented based on the AdamW Optimization with dynamic lr setting.Generally it’s used for transformer model.We use “layerwise_lr_decay” as default dynamic lr setting method of AdamWDL.“Layer-wise decay” means exponentially decaying the learning rates of individuallayers in a top-down manner. For example, suppose the 24-th layer uses a learningrate l, and the Layer-wise decay rate is α, then the learning rate of layer mis lα^(24-m). See more details on: https://arxiv.org/abs/1906.08237... math:",
+    "params": [
+        {
+            "name": "learning_rate",
+            "type": "float or LRScheduler",
+            "description": "The learning rate used to update Parameter.It can be a float value or a LRScheduler. The default value is 0.001.",
+            "default": "0.001",
+            "optional": true
+        },
+        {
+            "name": "beta1",
+            "type": "float",
+            "description": "The exponential decay rate for the 1st moment estimates.It should be a float number or a Tensor with shape [1] and data type as float32.The default value is 0.9.",
+            "default": "0.9",
+            "optional": true
+        },
+        {
+            "name": "beta2",
+            "type": "float",
+            "description": "The exponential decay rate for the 2nd moment estimates.It should be a float number or a Tensor with shape [1] and data type as float32.The default value is 0.999.",
+            "default": "0.999",
+            "optional": true
+        },
+        {
+            "name": "epsilon",
+            "type": "float",
+            "description": "A small float value for numerical stability.It should be a float number or a Tensor with shape [1] and data type as float32.The default value is 1e-08.",
+            "default": "1e-08",
+            "optional": true
+        },
+        {
+            "name": "parameters",
+            "type": "list or tuple",
+            "description": "List/Tuple of Tensor to update to minimize loss. This parameter is required in dygraph mode. The default value is None in static mode, at this time all parameters will be updated.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "weight_decay",
+            "type": "float",
+            "description": "The weight decay coefficient, it can be float or Tensor. The default value is 0.01.",
+            "default": "0.01",
+            "optional": true
+        },
+        {
+            "name": "apply_decay_param_fun",
+            "type": "function or None",
+            "description": "If it is not None,only tensors that makes apply_decay_param_fun(Tensor.name)==Truewill be updated. It only works when we want to specify tensors.Default: None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "grad_clip",
+            "type": "GradientClipBase",
+            "description": "Gradient cliping strategy, its an instance ofsome derived class of GradientClipBase . There are three cliping strategies( api_paddle_nn_GradientClipByGlobalNorm , api_paddle_nn_GradientClipByNorm ,api_paddle_nn_GradientClipByValue ). Default None, meaning there is no gradient clipping.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "lazy_mode",
+            "type": "bool",
+            "description": "The official Adam algorithm has two moving-average accumulators.The accumulators are updated at every step. Every element of the two moving-averageis updated in both dense mode and sparse mode. If the size of parameter is very large,then the update may be very slow. The lazy mode only update the element that hasgradient in current mini-batch, so it will be much more faster. But this mode hasdifferent semantics with the original Adam algorithm and may lead to different result.The default value is False.",
+            "default": "False",
+            "optional": true
+        },
+        {
+            "name": "multi_precision",
+            "type": "bool",
+            "description": "Whether to use multi-precision during weight updating. Default is false.",
+            "default": "False",
+            "optional": true
+        },
+        {
+            "name": "layerwise_decay",
+            "type": "float",
+            "description": "The layer-wise decay ratio. Defaults to 1.0.",
+            "default": "1.0",
+            "optional": true
+        },
+        {
+            "name": "n_layers",
+            "type": "int",
+            "description": "The total number of encoder layers. Defaults to 12.",
+            "default": "12",
+            "optional": true
+        },
+        {
+            "name": "set_param_lr_fun",
+            "type": "function or None",
+            "description": "If its not None, set_param_lr_fun() will set the parameterlearning rate before it executes Adam Operator. Defaults to layerwise_lr_decay.",
+            "default": "<functionlayerwise_lr_decay>",
+            "optional": true
+        },
+        {
+            "name": "name_dict",
+            "type": "dict",
+            "description": "The keys of name_dict is dynamic name of model while the valueof name_dict is static name. Use model.named_parameters() to get name_dict.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Normally there is no need for user to set this property.For more information, please refer to api_guide_Name.The default value is None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

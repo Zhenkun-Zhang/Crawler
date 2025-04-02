@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.utils.tools.static_params_to_dygraph",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "model": null,
+        "static_tensor_dict": null
+    },
+    "description": "Simple tool for convert static paramters to dygraph paramters dict.NOTE The model must both support static graph and dygraph mode.model (nn.Layer) – the model of a neural network.static_tensor_dict (string) – path of which locate the saved paramters in static mode.Usualy load by paddle.static.load_program_state.a state dict the same as the dygraph mode.[tensor dict]",
+    "params": [
+        {
+            "name": "model",
+            "type": "nn.Layer",
+            "description": "the model of a neural network.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "static_tensor_dict",
+            "type": "string",
+            "description": "path of which locate the saved paramters in static mode.Usualy load by paddle.static.load_program_state.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "a state dict the same as the dygraph mode.",
+        "type": "[tensor dict]"
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.metrics.perplexity.Perplexity.compute",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "pred": null,
+        "label": null,
+        "seq_mask": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "pred",
+            "type": "Tensor",
+            "description": "Predictor tensor, and its dtype is float32 or float64, and hasa shape of [batch_size, sequence_length, vocab_size].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "label",
+            "type": "Tensor",
+            "description": "Label tensor, and its dtype is int64, and has a shape of[batch_size, sequence_length, 1] or [batch_size, sequence_length].",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "seq_mask",
+            "type": "Tensor",
+            "description": "Sequence mask tensor, and its type could be float32, float64,int32 or int64, and has a shape of [batch_size, sequence_length].Its used to calculate loss. Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Returns tuple (ce, word_num) if seq_mask is not None. Otherwise, returns tensor ce.ce it the cross entropy loss, its shape is [batch_size, sequence_length] and its data type should be float32.",
+        "type": "tuple or Tensor"
+    }
+}

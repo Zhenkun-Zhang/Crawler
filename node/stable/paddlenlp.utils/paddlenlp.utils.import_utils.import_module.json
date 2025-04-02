@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.utils.import_utils.import_module",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "module_name": "str"
+    },
+    "description": "import moudle base on the model:param module_name: the name of target module:type module_name: str",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

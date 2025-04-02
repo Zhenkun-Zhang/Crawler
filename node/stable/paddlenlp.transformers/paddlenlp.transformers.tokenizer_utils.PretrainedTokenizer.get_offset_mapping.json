@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer.get_offset_mapping",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "text": "str",
+        "split_tokens": "List[str] or None = None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "The offset map of input text.",
+        "type": "list"
+    }
+}

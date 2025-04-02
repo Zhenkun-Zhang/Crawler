@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.resize_position_embeddings",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "new_num_position_embeddings": "int"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "new_num_position_embeddings",
+            "type": "int",
+            "description": "the new position size",
+            "default": "int",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

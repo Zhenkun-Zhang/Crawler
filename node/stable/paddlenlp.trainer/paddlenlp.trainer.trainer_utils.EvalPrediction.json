@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.trainer.trainer_utils.EvalPrediction",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "predictions": "ndarray or Tuple[ndarray]",
+        "label_ids": "ndarray or Tuple[ndarray]"
+    },
+    "Bases": "tuple",
+    "description": "Evaluation output (always contains labels), to be used to compute metrics.",
+    "params": [
+        {
+            "name": "predictions",
+            "type": "np.ndarray",
+            "description": "Predictions of the model.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "label_ids",
+            "type": "np.ndarray",
+            "description": "Targets to be matched.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

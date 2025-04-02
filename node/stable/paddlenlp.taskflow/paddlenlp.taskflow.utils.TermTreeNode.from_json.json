@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.taskflow.utils.TermTreeNode.from_json",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "json_str": "str"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "json_str",
+            "type": "str",
+            "description": "JSON string formatted by TermTree data.",
+            "default": "str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "TermTree node object.",
+        "type": "[type]"
+    }
+}

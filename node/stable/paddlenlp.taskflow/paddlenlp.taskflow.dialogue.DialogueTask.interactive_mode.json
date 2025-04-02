@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.dialogue.DialogueTask.interactive_mode",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "max_turn": "3"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

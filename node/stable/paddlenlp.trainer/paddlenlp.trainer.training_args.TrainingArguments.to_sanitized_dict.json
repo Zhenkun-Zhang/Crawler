@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.trainer.training_args.TrainingArguments.to_sanitized_dict",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "api": "paddlenlp.transformers.attention_utils.MultiHeadAttention.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "query": null,
+        "key": null,
+        "value": null,
+        "attn_mask": "None",
+        "rand_mask_idx": "None",
+        "query_mask": "None",
+        "key_mask": "None",
+        "cache": "None"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

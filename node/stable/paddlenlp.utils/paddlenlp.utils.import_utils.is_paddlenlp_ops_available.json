@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.utils.import_utils.is_paddlenlp_ops_available",
+    "type": "function",
+    "version": "stable",
+    "args_list": {},
+    "description": "check if paddlenlp_ops ia avaliable:returns: if paddlenlp_ops is avaliable:rtype: bool",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

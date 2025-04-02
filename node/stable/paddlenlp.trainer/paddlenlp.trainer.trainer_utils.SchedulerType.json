@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.trainer.trainer_utils.SchedulerType",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "value": null
+    },
+    "Bases": "ExplicitEnum",
+    "description": "An enumeration.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

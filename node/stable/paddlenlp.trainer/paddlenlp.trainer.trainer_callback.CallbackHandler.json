@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.trainer.trainer_callback.CallbackHandler",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "callbacks": null,
+        "model": null,
+        "tokenizer": null,
+        "optimizer": null,
+        "lr_scheduler": null
+    },
+    "Bases": "TrainerCallback",
+    "description": "Internal class that just calls the list of callbacks in order.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "api": "paddlenlp.trainer.trainer_callback.TrainerState",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "epoch": "float or None = None",
+        "global_step": "int = 0",
+        "max_steps": "int = 0",
+        "num_train_epochs": "int = 0",
+        "total_flos": "float = 0",
+        "log_history": "List[Dict[str",
+        "float]]|None": "None",
+        "best_metric": "float or None = None",
+        "best_model_checkpoint": "str or None = None",
+        "is_local_process_zero": "bool = True",
+        "is_world_process_zero": "bool = True",
+        "trial_name": "str or None = None",
+        "trial_params": "Dict[str",
+        "str|float|int|bool]|None": "None"
+    },
+    "Bases": "object",
+    "description": "A class containing the [Trainer] inner state that will be saved along the model and optimizer when checkpointingand passed to the [TrainerCallback].",
+    "params": [
+        {
+            "name": "epoch",
+            "type": "float",
+            "description": "Only set during training, will represent the epoch the training is at (the decimal part being thepercentage of the current epoch completed).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "global_step",
+            "type": "int",
+            "description": "During training, represents the number of update steps completed.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "max_steps",
+            "type": "int",
+            "description": "The number of update steps to do during the current training.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "total_flos",
+            "type": "float",
+            "description": "The total number of floating operations done by the model since the beginning of training (stored as floatsto avoid overflow).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "log_history",
+            "type": "List[Dict[str, float]]",
+            "description": "The list of logs done since the beginning of training.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "best_metric",
+            "type": "float",
+            "description": "When tracking the best model, the value of the best metric encountered so far.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "best_model_checkpoint",
+            "type": "str",
+            "description": "When tracking the best model, the value of the name of the checkpoint for the best model encountered sofar.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "is_local_process_zero",
+            "type": "bool",
+            "description": "Whether or not this process is the local (e.g., on one machine if training in a distributed fashion onseveral machines) main process.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "is_world_process_zero",
+            "type": "bool",
+            "description": "Whether or not this process is the global main process (when training in a distributed fashion on severalmachines, this is only going to be True for one process).",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

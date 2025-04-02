@@ -1,0 +1,20 @@
+{
+    "api": "paddlenlp.transformers.attention_utils.BigBirdSparseAttention",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "num_heads": "1",
+        "block_size": "1",
+        "window_size": "3",
+        "num_global_blocks": "1",
+        "num_rand_blocks": "1",
+        "seed": "None"
+    },
+    "Bases": "",
+    "description": "query_matrix: [B, H, T, D]key_matrix: [B, H, T, D]value_matrix: [B, H, T, D]query_mask: [B, 1, T, 1]  bool maskkey_mask: [B, 1, 1, T]    bool maskrand_mask_idx: [H, T//bs, bs]Global AttentionRandom AttentionWindow Attention",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

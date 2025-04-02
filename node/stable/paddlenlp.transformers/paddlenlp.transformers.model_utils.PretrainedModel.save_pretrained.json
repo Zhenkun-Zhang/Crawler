@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.save_pretrained",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "save_dir": "str or ~os.PathLike",
+        "is_main_process": "bool = True",
+        "state_dict": "dict or None = None",
+        "save_function": "~typing.Callable = <functionsave>",
+        "max_shard_size": "int or str = '10GB'",
+        "safe_serialization": "bool = False",
+        "variant": "str or None = None",
+        "*args": null,
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "save_dir",
+            "type": "str",
+            "description": "Directory to save files into.",
+            "default": "str or ~os.PathLike",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

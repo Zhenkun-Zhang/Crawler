@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.utils.cut_chinese_sent",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "para": null
+    },
+    "description": "Cut the Chinese sentences more precisely, reference to “https://blog.csdn.net/blmoistawinde/article/details/82379256”.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

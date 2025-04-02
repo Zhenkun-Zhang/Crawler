@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.normalize_chars",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "text": null
+    },
+    "description": "Normalize the text for multiligual and chinese models. Unicode range:https://www.ling.upenn.edu/courses/Spring_2003/ling538/UnicodeRanges.html",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

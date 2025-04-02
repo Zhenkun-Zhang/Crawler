@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.data.collate.Stack",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "axis": "0",
+        "dtype": "None"
+    },
+    "Bases": "object",
+    "description": "Stacks the input data samples to construct the batch. The N input samplesmust have the same shape/length and will be stacked to construct a batch.",
+    "params": [
+        {
+            "name": "axis",
+            "type": "int",
+            "description": "The axis in the result data along which the inputdata are stacked. Default: 0.",
+            "default": "0",
+            "optional": true
+        },
+        {
+            "name": "dtype",
+            "type": "str or numpy.dtype",
+            "description": "The value type of the output. If itis set to None, the type of input data is used. Default: None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

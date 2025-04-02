@@ -1,0 +1,49 @@
+{
+    "api": "paddlenlp.metrics.rouge.RougeL",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "trans_func": "None",
+        "vocab": "None",
+        "gamma": "1.2",
+        "name": "'rouge-l'",
+        "*args": null,
+        "**kwargs": null
+    },
+    "Bases": "Metric",
+    "description": "Rouge-L is Recall-Oriented Understudy for Gisting Evaluation based on Longest Common Subsequence (LCS).Longest common subsequence problem takes into account sentence level structuresimilarity naturally and identifies longest co-occurringin sequence n-grams automatically.",
+    "params": [
+        {
+            "name": "trans_func",
+            "type": "callable",
+            "description": "trans_func transforms the networkoutput to string to calculate.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "vocab",
+            "type": "dict or paddlenlp.data.vocab",
+            "description": "Vocab for target language.If trans_func is None and RougeL is used as paddle.metric.Metricinstance, default_trans_func will be performed and vocab mustbe provided.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "gamma",
+            "type": "float",
+            "description": "A hyperparameter to decide the weight of recall. Defaults to 1.2.",
+            "default": "1.2",
+            "optional": false
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Name of paddle.metric.Metric instance. Defaults to rouge-l.",
+            "default": "rouge-l",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

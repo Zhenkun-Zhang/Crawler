@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.trainer.integrations.VisualDLCallback",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "vdl_writer": "None"
+    },
+    "Bases": "TrainerCallback",
+    "description": "A [TrainerCallback] that sends the logs to [VisualDL](https://www.paddlepaddle.org.cn/paddle/visualdl).:param vdl_writer: The writer to use. Will instantiate one if not set.:type vdl_writer: LogWriter, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

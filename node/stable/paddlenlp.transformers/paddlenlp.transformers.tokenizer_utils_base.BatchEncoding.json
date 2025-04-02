@@ -1,0 +1,42 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.BatchEncoding",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "data": "Dict[str",
+        "Any]|None": "None",
+        "encoding": "FastEncoding or Sequence[FastEncoding] or None = None",
+        "tensor_type": "str or None = None",
+        "prepend_batch_axis": "bool = False",
+        "n_sequences": "int or None = None"
+    },
+    "Bases": "UserDict",
+    "description": "Holds the output of the [PretrainedTokenizerBase.__call__],[PretrainedTokenizerBase.encode_plus] and[PretrainedTokenizerBase.batch_encode_plus] methods (tokens, attention_masks, etc).",
+    "params": [
+        {
+            "name": "data",
+            "type": "dict",
+            "description": "Dictionary of lists/arrays/tensors returned by the __call__/encode/batch_encode methods(input_ids, attention_mask, etc.).",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "tensor_type",
+            "type": "Union[None, str, TensorType]",
+            "description": "You can give a tensor_type here to convert the lists of integers in Paddle/Numpy Tensors atinitialization.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "prepend_batch_axis",
+            "type": "bool",
+            "description": "Whether or not to add a batch axis when converting to tensors (see tensor_type above).",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

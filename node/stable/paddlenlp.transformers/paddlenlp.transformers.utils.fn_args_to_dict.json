@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.transformers.utils.fn_args_to_dict",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "func": null,
+        "*args": null,
+        "**kwargs": null
+    },
+    "description": "Inspect function func and its arguments for running, and extract adict mapping between argument names and keys.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

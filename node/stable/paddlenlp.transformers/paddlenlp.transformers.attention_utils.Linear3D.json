@@ -1,0 +1,34 @@
+{
+    "api": "paddlenlp.transformers.attention_utils.Linear3D",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "hidden_size": null,
+        "num_attention_heads": null,
+        "size_per_head": null,
+        "weight_attr": "None",
+        "bias_attr": "None"
+    },
+    "Bases": "",
+    "description": "Defines the computation performed at every call.Should be overridden by all subclasses.",
+    "params": [
+        {
+            "name": "*inputs",
+            "type": "tuple",
+            "description": "unpacked tuple arguments",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "**kwargs",
+            "type": "dict",
+            "description": "unpacked dict arguments",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

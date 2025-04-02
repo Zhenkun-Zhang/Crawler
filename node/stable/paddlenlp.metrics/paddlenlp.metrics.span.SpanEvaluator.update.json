@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.metrics.span.SpanEvaluator.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "num_correct_spans": null,
+        "num_infer_spans": null,
+        "num_label_spans": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

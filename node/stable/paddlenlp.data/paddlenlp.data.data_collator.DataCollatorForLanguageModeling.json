@@ -1,0 +1,41 @@
+{
+    "api": "paddlenlp.data.data_collator.DataCollatorForLanguageModeling",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "tokenizer": "PretrainedTokenizerBase",
+        "mlm": "bool = True",
+        "mlm_probability": "float = 0.15",
+        "pad_to_multiple_of": "int or None = None",
+        "return_tensors": "str = 'pd'"
+    },
+    "Bases": "DataCollatorMixin",
+    "description": "Data collator used for language modeling. Inputs are dynamically padded to the maximum length of a batch if theyare not all of the same length.:param tokenizer: The tokenizer used for encoding the data.:type tokenizer: [PreTrainedTokenizer] or [PreTrainedTokenizerFast]:param mlm: Whether or not to use masked language modeling. If set to False, the labels are the same as the inputs",
+    "params": [
+        {
+            "name": "mlm_probability",
+            "type": "float",
+            "description": "The probability with which to (randomly) mask tokens in the input, when mlm is set to True.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "description": "If set will pad the sequence to a multiple of the provided value.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "return_tensors",
+            "type": "str",
+            "description": "The type of Tensor to return. Allowable values are np, pt and tf.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

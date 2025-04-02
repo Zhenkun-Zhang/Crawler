@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.trainer.trainer_utils.speed_metrics",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "split": null,
+        "start_time": null,
+        "num_samples": "None",
+        "num_steps": "None",
+        "seq_length": "None"
+    },
+    "description": "Measure and return speed performance metrics.This function requires a time snapshot start_time before the operation to be measured starts and this functionshould be run immediately after the operation to be measured has completed.Args:split: name to prefix metric (like train, eval, test…)start_time: operation start timenum_samples: number of samples processed",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

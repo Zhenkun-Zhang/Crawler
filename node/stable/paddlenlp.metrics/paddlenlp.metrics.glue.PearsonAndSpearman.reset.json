@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.metrics.glue.PearsonAndSpearman.reset",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

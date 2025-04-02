@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.taskflow.utils.Compose",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "transforms": null,
+        "ctx": "None"
+    },
+    "Bases": "object",
+    "description": "compose",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

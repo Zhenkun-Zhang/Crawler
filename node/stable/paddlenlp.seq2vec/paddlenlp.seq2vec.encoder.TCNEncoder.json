@@ -1,0 +1,47 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.TCNEncoder",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "input_size": null,
+        "num_channels": null,
+        "kernel_size": "2",
+        "dropout": "0.2"
+    },
+    "Bases": "Layer",
+    "description": "A TCNEncoder takes as input a sequence of vectors and returns asingle vector, which is the last one time step in the feature map.The input to this encoder is of shape (batch_size, num_tokens, input_size),and the output is of shape (batch_size, num_channels[-1]) with a receptivefiled:",
+    "params": [
+        {
+            "name": "input_size",
+            "type": "int",
+            "description": "The number of expected features in the input (the last dimension).",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_channels",
+            "type": "list",
+            "description": "The number of channels in different layer.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "kernel_size",
+            "type": "int",
+            "description": "The kernel size. Defaults to 2.",
+            "default": "2",
+            "optional": false
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "description": "The dropout probability. Defaults to 0.2.",
+            "default": "0.2",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

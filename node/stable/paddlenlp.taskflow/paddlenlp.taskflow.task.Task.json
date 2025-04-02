@@ -1,0 +1,40 @@
+{
+    "api": "paddlenlp.taskflow.task.Task",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "model": null,
+        "task": null,
+        "priority_path": "None",
+        "**kwargs": null
+    },
+    "Bases": "object",
+    "description": "the subclass need to inherit from the meta class.",
+    "params": [
+        {
+            "name": "task",
+            "type": "string",
+            "description": "The name of task.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "model",
+            "type": "string",
+            "description": "The model name in the task.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "description": "Additional keyword arguments passed along to the specific task.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

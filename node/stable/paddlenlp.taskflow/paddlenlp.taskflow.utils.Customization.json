@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.taskflow.utils.Customization",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "object",
+    "description": "User intervention based on Aho-Corasick automaton",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

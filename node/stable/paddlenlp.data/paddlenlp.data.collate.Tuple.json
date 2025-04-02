@@ -1,0 +1,31 @@
+{
+    "api": "paddlenlp.data.collate.Tuple",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "fn": null,
+        "*args": null
+    },
+    "Bases": "object",
+    "description": "Wraps multiple batchify functions together. The input functions will be appliedto the corresponding input fields.",
+    "params": [
+        {
+            "name": "fn",
+            "type": "callable or list[callable] or tuple[callable]",
+            "description": "The batchify functions towrap. It is a callable function or a list/tuple of callable functions.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "args",
+            "type": "tuple[callable]",
+            "description": "The additional batchify functions to wrap.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

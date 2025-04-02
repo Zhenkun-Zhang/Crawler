@@ -1,0 +1,19 @@
+{
+    "api": "paddlenlp.metrics.sighan.CorrectionF1.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "det_preds": null,
+        "det_labels": null,
+        "corr_preds": null,
+        "corr_labels": null,
+        "length": null,
+        "*args": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

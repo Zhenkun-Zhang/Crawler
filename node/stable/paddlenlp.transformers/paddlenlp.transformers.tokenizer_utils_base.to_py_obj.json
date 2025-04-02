@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.to_py_obj",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "obj": null
+    },
+    "description": "Convert a Paddle tensor, Numpy array or python list to a python list.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

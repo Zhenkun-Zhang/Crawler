@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.decode",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "arc_preds": null,
+        "rel_preds": null,
+        "s_arc": null,
+        "mask": null,
+        "tree": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

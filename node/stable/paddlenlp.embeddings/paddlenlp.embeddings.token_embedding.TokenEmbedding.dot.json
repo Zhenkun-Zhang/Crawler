@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.embeddings.token_embedding.TokenEmbedding.dot",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "word_a": null,
+        "word_b": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "word_a",
+            "type": "str",
+            "description": "The first word string.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "word_b",
+            "type": "str",
+            "description": "The second word string.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The dot product of 2 words.",
+        "type": "float"
+    }
+}

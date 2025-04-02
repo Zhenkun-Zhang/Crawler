@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.data.data_collator.DefaultDataCollator",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "return_tensors": "str = 'pd'"
+    },
+    "Bases": "DataCollatorMixin",
+    "description": "Very simple data collator that simply collates batches of dict-like objects and performs special handling forpotential keys named:",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

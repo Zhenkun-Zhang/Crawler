@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.data.sampler.SamplerHelper.shuffle",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "buffer_size": "-1",
+        "seed": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "buffer_size",
+            "type": "int",
+            "description": "Buffer size for shuffle. Ifbuffer_size < 0 or more than the length of the dataset,buffer_size is the length of the dataset. Default: -1.",
+            "default": "-1",
+            "optional": true
+        },
+        {
+            "name": "seed",
+            "type": "int",
+            "description": "Seed for the random. Default: None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A new shuffled SamplerHelper object.",
+        "type": "SamplerHelper"
+    }
+}

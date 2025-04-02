@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PaddingStrategy",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "value": null
+    },
+    "Bases": "ExplicitEnum",
+    "description": "Possible values for the padding argument in [PretrainedTokenizerBase.__call__]. Useful for tab-completion in anIDE.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

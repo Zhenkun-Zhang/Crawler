@@ -1,0 +1,63 @@
+{
+    "api": "paddlenlp.ops.distributed.ParallelEmbedding",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "num_embeddings": null,
+        "embedding_dim": null,
+        "rank": null,
+        "world_size": null,
+        "weight_attr": "None",
+        "name": "None"
+    },
+    "Bases": "",
+    "description": "Parallel Embedding.",
+    "params": [
+        {
+            "name": "num_embeddings",
+            "type": "int",
+            "description": "The size of embedding dictionary which dictates the maximum value of the input id.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "embedding_dim",
+            "type": "int",
+            "description": "The dimensions of each embedding vector.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "rank",
+            "type": "int",
+            "description": "The rank of the current part, which determines the start index of the vocab.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "world_size",
+            "type": "int",
+            "description": "The number of trainers.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "weight_attr",
+            "type": "Tensor",
+            "description": "Specify the weight parameter property, including the initialization method.Defaults to None which means the default weight parameter property will be used.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Normally there is no need for user to set this property.Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

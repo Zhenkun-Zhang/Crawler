@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.taskflow.utils.longestCommonSequence",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "question_tokens": null,
+        "context_tokens": null
+    },
+    "description": "Longest common sequence",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

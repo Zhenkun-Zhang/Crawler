@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.taskflow.word_segmentation.SegWordTagTask",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "model": null,
+        "task": null,
+        "**kwargs": null
+    },
+    "Bases": "NERWordTagTask",
+    "description": "Segement the sentences to the words using WordTag model.:param task: The name of task.:type task: string:param model: The model name in the task.:type model: string:param kwargs: Additional keyword arguments passed along to the specific task.:type kwargs: dict, optional",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

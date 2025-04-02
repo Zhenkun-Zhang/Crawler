@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.metrics.chunk.ChunkEvaluator.update",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "num_infer_chunks": null,
+        "num_label_chunks": null,
+        "num_correct_chunks": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "num_infer_chunks",
+            "type": "int or numpy.array",
+            "description": "The number of chunks in Inference on the given minibatch.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_label_chunks",
+            "type": "int or numpy.array",
+            "description": "The number of chunks in Label on the given mini-batch.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_correct_chunks",
+            "type": "int or float or numpy.array",
+            "description": "The number of chunks both in Inference and Label on the given mini-batch.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.trainer.trainer_utils.TrainOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "global_step": null,
+        "training_loss": null,
+        "metrics": null
+    },
+    "Bases": "tuple",
+    "description": "Alias for field number 0",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

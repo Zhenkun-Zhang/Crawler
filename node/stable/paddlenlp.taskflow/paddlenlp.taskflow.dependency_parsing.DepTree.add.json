@@ -1,0 +1,15 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.DepTree.add",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "parent": null,
+        "child": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

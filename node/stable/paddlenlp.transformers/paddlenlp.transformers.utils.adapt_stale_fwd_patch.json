@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.transformers.utils.adapt_stale_fwd_patch",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "self": null,
+        "name": null,
+        "value": null
+    },
+    "description": "Since there are some monkey patches for forward of PretrainedModel, such asmodel compression, we make these patches compatible with the latest forwardmethod.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

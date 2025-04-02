@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.BoWEncoder.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "inputs": null,
+        "mask": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "inputs",
+            "type": "Tensor",
+            "description": "Shape as (batch_size, num_tokens, emb_dim) and dtype as float32 or float64.The sequence length of the input sequence.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "mask",
+            "type": "Tensor",
+            "description": "Shape same as inputs.Its each elements identify whether the corresponding input token is padding or not.If True, not padding token. If False, padding token.Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Returns tensor summed, the result vector of BagOfEmbedding.Its data type is same as inputs and its shape is [batch_size, emb_dim].",
+        "type": "Tensor"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.transformers.attention_utils.MultiHeadAttention.StaticCache",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "k": null,
+        "v": null
+    },
+    "Bases": "",
+    "description": "Alias for field number 0",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

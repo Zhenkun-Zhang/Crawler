@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab.to_tokens",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "indices": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "indices",
+            "type": "int or list[int] or tuple[int] or numpy.ndarray",
+            "description": "The input indice(s) for mapping.Must be an int or 1D list[int]`|`tuple[int]`|`numpy.ndarray.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Obtained token(s). If indices is an integer, itwill return a str. If indices is a list/tuple of integers, it willreturn a list of str.",
+        "type": "str or list[str]"
+    }
+}

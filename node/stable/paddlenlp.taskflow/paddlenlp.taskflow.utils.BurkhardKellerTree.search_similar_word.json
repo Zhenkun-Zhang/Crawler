@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.taskflow.utils.BurkhardKellerTree.search_similar_word",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "word": "str"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "s",
+            "type": "str",
+            "description": "target word",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "similar words.",
+        "type": "List[str]"
+    }
+}

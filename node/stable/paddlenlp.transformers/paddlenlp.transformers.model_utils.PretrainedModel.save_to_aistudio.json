@@ -1,0 +1,21 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.save_to_aistudio",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "repo_id": null,
+        "private": "True",
+        "license": "'ApacheLicense2.0'",
+        "exist_ok": "True",
+        "safe_serialization": "True",
+        "subfolder": "None",
+        "merge_tensor_parallel": "False",
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

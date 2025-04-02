@@ -1,0 +1,28 @@
+{
+    "api": "paddlenlp.data.data_collator.DataCollatorWithPadding",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "tokenizer": "PretrainedTokenizerBase",
+        "padding": "bool or str or PaddingStrategy = True",
+        "max_length": "int or None = None",
+        "pad_to_multiple_of": "int or None = None",
+        "return_tensors": "str = 'pd'",
+        "return_attention_mask": "bool or None = None"
+    },
+    "Bases": "object",
+    "description": "Data collator that will dynamically pad the inputs to the longest sequence in the batch.",
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "paddlenlp.transformers.PretrainedTokenizer",
+            "description": "The tokenizer used for encoding the data.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

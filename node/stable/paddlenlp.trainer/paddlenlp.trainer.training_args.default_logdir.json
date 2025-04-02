@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.trainer.training_args.default_logdir",
+    "type": "function",
+    "version": "stable",
+    "args_list": {},
+    "description": "Same default",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

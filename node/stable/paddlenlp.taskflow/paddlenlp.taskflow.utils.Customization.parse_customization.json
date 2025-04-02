@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.taskflow.utils.Customization.parse_customization",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "query": null,
+        "lac_tags": null,
+        "prefix": "False"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

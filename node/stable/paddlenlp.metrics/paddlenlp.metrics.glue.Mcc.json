@@ -1,0 +1,25 @@
+{
+    "api": "paddlenlp.metrics.glue.Mcc",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "name": "'mcc'",
+        "*args": null,
+        "**kwargs": null
+    },
+    "Bases": "Metric",
+    "description": "This class calculates Matthews correlation coefficient .",
+    "params": [
+        {
+            "name": "name",
+            "type": "str",
+            "description": "String name of the metric instance. Defaults to mcc.",
+            "default": "mcc",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

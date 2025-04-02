@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.utils.import_utils.is_fast_tokenizer_available",
+    "type": "function",
+    "version": "stable",
+    "args_list": {},
+    "description": "check if fast_tokenizer ia avaliable:returns: if fast_tokenizer is avaliable:rtype: bool",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

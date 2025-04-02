@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.FastEncoding",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "object",
+    "description": "This is dummy class reserved for fast tokenizer",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

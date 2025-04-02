@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.DepTree.judge_legal",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

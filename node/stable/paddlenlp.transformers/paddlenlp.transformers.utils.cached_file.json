@@ -1,0 +1,43 @@
+{
+    "api": "paddlenlp.transformers.utils.cached_file",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "path_or_repo_id": "str|PathLike",
+        "filename": "str",
+        "cache_dir": "str|PathLike|None=None",
+        "subfolder": "str=''",
+        "from_aistudio": "bool=False",
+        "_raise_exceptions_for_missing_entries": "bool=True",
+        "_raise_exceptions_for_connection_errors": "bool=True",
+        "pretrained_model_name_or_path": "None"
+    },
+    "description": "Tries to locate a file in a local folder and repo, downloads and cache it if necessary.:param path_or_repo_id: This can be either:a string, the model id of a model repo on huggingface.co.a path to a directory potentially containing the file.filename (str) – The name of the file to locate in path_or_repo.cache_dir (str or os.PathLike, optional) – Path to a directory in which a downloaded pretrained model configuration should be cached if the standardcache should not be used.subfolder (str, optional, defaults to \"\") – In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you canspecify the folder name here.Returns the resolved file (to the cache folder if downloaded from a repo).Optional[str]Examples:`python# Download a model weight from the Hub and cache it.model_weights_file = cached_file(\"bert-base-uncased\", \"pytorch_model.bin\")`",
+    "params": [
+        {
+            "name": "filename",
+            "type": "str",
+            "description": "The name of the file to locate in path_or_repo.",
+            "default": "str",
+            "optional": false
+        },
+        {
+            "name": "cache_dir",
+            "type": "str or os.PathLike",
+            "description": "Path to a directory in which a downloaded pretrained model configuration should be cached if the standardcache should not be used.",
+            "default": "str|PathLike|None=None",
+            "optional": true
+        },
+        {
+            "name": "subfolder",
+            "type": "str",
+            "description": "In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you canspecify the folder name here.",
+            "default": "str=",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Returns the resolved file (to the cache folder if downloaded from a repo).",
+        "type": "Optional[str]"
+    }
+}

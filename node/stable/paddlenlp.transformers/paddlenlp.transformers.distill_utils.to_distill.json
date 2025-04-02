@@ -1,0 +1,18 @@
+{
+    "api": "paddlenlp.transformers.distill_utils.to_distill",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "self": null,
+        "return_qkv": "False",
+        "return_attentions": "False",
+        "return_layer_outputs": "False",
+        "layer_index": "-1"
+    },
+    "description": "Can be bound to object with transformer encoder layers, and make modelexpose attributes outputs.q, outputs.k, outputs.v,outputs.scaled_qks, outputs.hidden_states`and `outputs.attentions ofthe object for distillation.It could be returned intermediate tensor using in MiniLM and TinyBERTstrategy.",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

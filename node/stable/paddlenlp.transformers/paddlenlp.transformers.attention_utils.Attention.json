@@ -1,0 +1,35 @@
+{
+    "api": "paddlenlp.transformers.attention_utils.Attention",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "num_heads": "1",
+        "block_size": "1",
+        "window_size": "3",
+        "num_global_blocks": "1",
+        "num_rand_blocks": "1",
+        "seed": "None"
+    },
+    "Bases": "",
+    "description": "Defines the computation performed at every call.Should be overridden by all subclasses.",
+    "params": [
+        {
+            "name": "*inputs",
+            "type": "tuple",
+            "description": "unpacked tuple arguments",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "**kwargs",
+            "type": "dict",
+            "description": "unpacked dict arguments",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

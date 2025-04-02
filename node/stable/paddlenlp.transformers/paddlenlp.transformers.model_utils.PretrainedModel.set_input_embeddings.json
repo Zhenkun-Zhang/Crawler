@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.model_utils.PretrainedModel.set_input_embeddings",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "value": "Embedding"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "value",
+            "type": "Embedding",
+            "description": "the new embedding of model",
+            "default": "Embedding",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

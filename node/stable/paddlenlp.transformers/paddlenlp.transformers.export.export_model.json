@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.transformers.export.export_model",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "model": "PretrainedModel",
+        "input_spec": "None",
+        "path": "str|None=None",
+        "model_format": "str|None='paddle'"
+    },
+    "description": "Export paddle inference model or onnx model.([PretrainedModel] (model) – The model to export.input_spec (paddle.static.InputSpec, optional) – Describes the input of the saved model’s forward method, which can be describedby InputSpec or example Tensor.  Default None.path (Optional[str], optional) – Output dir to save the exported model. Defaults to None.model_format (Optional[str], optional) – Export model format. There are two options: paddle or onnx, defaults to paddle.",
+    "params": [
+        {
+            "name": "(",
+            "type": "[PretrainedModel] model",
+            "description": "The model to export.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "input_spec",
+            "type": "paddle.static.InputSpec",
+            "description": "Describes the input of the saved models forward method, which can be describedby InputSpec or example Tensor.  Default None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "path",
+            "type": "Optional[str]",
+            "description": "Output dir to save the exported model. Defaults to None.",
+            "default": "str|None=None",
+            "optional": true
+        },
+        {
+            "name": "model_format",
+            "type": "Optional[str]",
+            "description": "Export model format. There are two options: paddle or onnx, defaults to paddle.",
+            "default": "str|None=paddle",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

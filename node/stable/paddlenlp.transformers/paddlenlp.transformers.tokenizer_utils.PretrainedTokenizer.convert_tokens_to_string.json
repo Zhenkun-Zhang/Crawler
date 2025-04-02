@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.PretrainedTokenizer.convert_tokens_to_string",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "tokens": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "tokens",
+            "type": "list[str]",
+            "description": "A sequence of tokens.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Converted string.",
+        "type": "str"
+    }
+}

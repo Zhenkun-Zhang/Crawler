@@ -1,0 +1,66 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.Seq2SeqSequenceClassifierOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "loss": "Tensor or None = None",
+        "logits": "Tensor or None = None",
+        "past_key_values": "Tuple[Tuple[Tensor]] or None = None",
+        "decoder_hidden_states": "Tuple[Tensor] or None = None",
+        "decoder_attentions": "Tuple[Tensor] or None = None",
+        "cross_attentions": "Tuple[Tensor] or None = None",
+        "encoder_last_hidden_state": "Tensor or None = None",
+        "encoder_hidden_states": "Tuple[Tensor] or None = None",
+        "encoder_attentions": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for outputs of sequence-to-sequence sentence classification models.:param loss: Classification (or regression if config.num_labels==1) loss of shape (1,). Returned when label is provided).:type loss: paddle.Tensor optional:param logits: Classification (or regression if config.num_labels==1) scores (before SoftMax) of shape (batch_size, config.num_labels):type logits: paddle.Tensor:param past_key_values: Tuple of tuple(paddle.Tensor) of length config.n_layers, with each tuple having 2 tensors of shape",
+    "params": [
+        {
+            "name": "decoder_hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Returned when output_hidden_states=True is passed.Hidden-states of the decoder at the output of each layer plus the initial embedding outputs.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "decoder_attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length). Returned when output_attentions=True is passed.Attentions weights of the decoder, after the attention softmax, used to compute the weighted average in theself-attention heads.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length). Returned when output_attentions=True is passed.Attentions weights of the decoders cross-attention layer, after the attention softmax, used to compute theweighted average in the cross-attention heads.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "encoder_last_hidden_state",
+            "type": "paddle.Tensor",
+            "description": "Sequence of hidden-states at the output of the last layer of the encoder of the model.Tensor of shape (batch_size, sequence_length, hidden_size).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "encoder_hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Returned when output_hidden_states=True is passed.Hidden-states of the encoder at the output of each layer plus the initial embedding outputs.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "encoder_attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).Returned when output_attentions=True is passed.Attentions weights of the encoder, after the attention softmax, used to compute the weighted average in theself-attention heads.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

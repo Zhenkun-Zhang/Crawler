@@ -1,0 +1,13 @@
+{
+    "api": "paddlenlp.trainer.integrations.WandbCallback",
+    "type": "class",
+    "version": "stable",
+    "args_list": {},
+    "Bases": "TrainerCallback",
+    "description": "A [TrainerCallback] that logs metrics, media, model checkpoints to [Weight and Biases](https://www.wandb.com/).",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

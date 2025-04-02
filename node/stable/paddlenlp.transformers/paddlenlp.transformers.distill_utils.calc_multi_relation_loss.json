@@ -1,0 +1,70 @@
+{
+    "api": "paddlenlp.transformers.distill_utils.calc_multi_relation_loss",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "loss_fct": null,
+        "s": null,
+        "t": null,
+        "attn_mask": null,
+        "num_relation_heads": "0",
+        "alpha": "0.0",
+        "beta": "0.0"
+    },
+    "description": "Calculates loss for multiple Q-Q, K-K and V-V relation. It supportshead-head relation, sample-sample relation and origin token-token relation.The final loss value could be balanced by weight alpha and beta.loss_fct (callable) – Loss function for distillation. It only supports kl_div loss now.s (Tensor) – Q, K, V of Student.t (Tensor) – Q, K, V of teacher.attn_mask (Tensor) – Attention mask for relation.num_relation_heads (int) – The number of relation heads. 0 means num_relation_heads equalsto origin head num.Defaults to 0.alpha (float) – The weight for head-head relation.Defaults to 0.0.beta (float) – The weight for sample-sample relation.Defaults to 0.0.Weighted loss of token-token loss, head-head loss andsample-sample loss.sample-sample loss.Tensor",
+    "params": [
+        {
+            "name": "loss_fct",
+            "type": "callable",
+            "description": "Loss function for distillation. It only supports kl_div loss now.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "s",
+            "type": "Tensor",
+            "description": "Q, K, V of Student.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "t",
+            "type": "Tensor",
+            "description": "Q, K, V of teacher.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "attn_mask",
+            "type": "Tensor",
+            "description": "Attention mask for relation.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_relation_heads",
+            "type": "int",
+            "description": "The number of relation heads. 0 means num_relation_heads equalsto origin head num.Defaults to 0.",
+            "default": "0",
+            "optional": false
+        },
+        {
+            "name": "alpha",
+            "type": "float",
+            "description": "The weight for head-head relation.Defaults to 0.0.",
+            "default": "0.0",
+            "optional": false
+        },
+        {
+            "name": "beta",
+            "type": "float",
+            "description": "The weight for sample-sample relation.Defaults to 0.0.",
+            "default": "0.0",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Weighted loss of token-token loss, head-head loss andsample-sample loss.sample-sample loss.",
+        "type": "Tensor"
+    }
+}

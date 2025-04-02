@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.trainer.argparser.PdArgumentParser.parse_dict",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "args": "dict"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

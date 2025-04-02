@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.utils.param_in_func",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "func": null,
+        "param_field": "str"
+    },
+    "description": "check if the param_field is in func method, eg: if the bert param is in __init__ methodcls (type) – the class of PretrainedModelparam_field (str) – the name of fieldthe result of existencebool",
+    "params": [
+        {
+            "name": "cls",
+            "type": "type",
+            "description": "the class of PretrainedModel",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "param_field",
+            "type": "str",
+            "description": "the name of field",
+            "default": "str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "the result of existence",
+        "type": "bool"
+    }
+}

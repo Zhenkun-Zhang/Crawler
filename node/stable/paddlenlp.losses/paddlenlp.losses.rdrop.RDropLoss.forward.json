@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.losses.rdrop.RDropLoss.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "p": null,
+        "q": null,
+        "pad_mask": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "p",
+            "type": "Tensor",
+            "description": "the first forward logits of training examples.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "q",
+            "type": "Tensor",
+            "description": "the second forward logits of training examples.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "pad_mask",
+            "type": "Tensor",
+            "description": "The Tensor containing the binary mask to index with, its data type is bool.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Returns tensor loss, the rdrop loss of p and q.",
+        "type": "Tensor"
+    }
+}

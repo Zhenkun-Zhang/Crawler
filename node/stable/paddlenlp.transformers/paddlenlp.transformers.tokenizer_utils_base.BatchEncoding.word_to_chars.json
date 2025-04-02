@@ -1,0 +1,38 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.BatchEncoding.word_to_chars",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "batch_or_word_index": "int",
+        "word_index": "int or None = None",
+        "sequence_index": "int = 0"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "batch_or_word_index",
+            "type": "int",
+            "description": "Index of the sequence in the batch. If the batch only comprise one sequence, this can be the index ofthe word in the sequence",
+            "default": "int",
+            "optional": false
+        },
+        {
+            "name": "word_index",
+            "type": "int",
+            "description": "If a batch index is provided in batch_or_token_index, this can be the index of the word in thesequence.",
+            "default": "int or None = None",
+            "optional": true
+        },
+        {
+            "name": "sequence_index",
+            "type": "int",
+            "description": "If pair of sequences are encoded in the batch this can be used to specify which sequence in the pair (0or 1) the provided word index belongs to.",
+            "default": "int = 0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Span(s) of the associated character or characters in the string. CharSpanare NamedTuple with:start: index of the first character associated to the token in the original stringend: index of the character following the last character associated to the token in the originalstringSpan(s) of the associated character or characters in the string. CharSpanare NamedTuple with:start: index of the first character associated to the token in the original stringend: index of the character following the last character associated to the token in the originalstring",
+        "type": "CharSpan or List[CharSpan]"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.layers.tcn.TCN.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "x": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

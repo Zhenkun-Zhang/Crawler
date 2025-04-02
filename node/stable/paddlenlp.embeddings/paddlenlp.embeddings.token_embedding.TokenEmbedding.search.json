@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.embeddings.token_embedding.TokenEmbedding.search",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "words": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "words",
+            "type": "list or str or int",
+            "description": "The words which need to be searched.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The vectors of specifying words.",
+        "type": "numpy.array"
+    }
+}

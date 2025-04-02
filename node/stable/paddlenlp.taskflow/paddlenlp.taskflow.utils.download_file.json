@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.taskflow.utils.download_file",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "save_dir": null,
+        "filename": null,
+        "url": null,
+        "md5": "None"
+    },
+    "description": "Download the file from the url to specified directory.Check md5 value when the file is exists, if the md5 value is the same as the existed file, just usethe older file, if not, will download the file from the url.save_dir (string) – The specified directory saving the file.filename (string) – The specified filename saving the file.url (string) – The url downling the file.md5 (string, optional) – The md5 value that checking the version downloaded.",
+    "params": [
+        {
+            "name": "save_dir",
+            "type": "string",
+            "description": "The specified directory saving the file.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "filename",
+            "type": "string",
+            "description": "The specified filename saving the file.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "url",
+            "type": "string",
+            "description": "The url downling the file.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "md5",
+            "type": "string",
+            "description": "The md5 value that checking the version downloaded.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.metrics.glue.PearsonAndSpearman.accumulate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "Returns the accumulated metric, a tuple of (pearson, spearman,the_average_of_pearson_and_spearman).With the fields:pearson (numpy.float64):The accumulated pearson.spearman (numpy.float64):The accumulated spearman.the_average_of_pearson_and_spearman (numpy.float64):The average of accumulated pearson and spearman correlationcoefficient.Returns the accumulated metric, a tuple of (pearson, spearman,the_average_of_pearson_and_spearman).With the fields:The accumulated pearson.The accumulated spearman.The average of accumulated pearson and spearman correlationcoefficient.",
+        "type": "tuple"
+    }
+}

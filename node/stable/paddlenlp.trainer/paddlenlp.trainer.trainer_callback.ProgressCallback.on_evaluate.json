@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.trainer.trainer_callback.ProgressCallback.on_evaluate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "args": null,
+        "state": null,
+        "control": null,
+        "**kwargs": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

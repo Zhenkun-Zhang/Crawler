@@ -1,0 +1,64 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.RNNEncoder",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "input_size": null,
+        "hidden_size": null,
+        "num_layers": "1",
+        "direction": "'forward'",
+        "dropout": "0.0",
+        "pooling_type": "None",
+        "**kwargs": null
+    },
+    "Bases": "Layer",
+    "description": "A RNNEncoder takes as input a sequence of vectors and returns asingle vector, which is a combination of multiple paddle.nn.RNN subclass.The input to this encoder is of shape (batch_size, num_tokens, input_size),The output is of shape (batch_size, hidden_size * 2) if RNN is bidirection;If not, output is of shape (batch_size, hidden_size).",
+    "params": [
+        {
+            "name": "input_size",
+            "type": "int",
+            "description": "The number of expected features in the input (the last dimension).",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "description": "The number of features in the hidden state.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "num_layers",
+            "type": "int",
+            "description": "Number of recurrent layers.E.g., setting num_layers=2 would mean stacking two RNNs together to form a stacked RNN,with the second RNN taking in outputs of the first RNN and computing the final results.Defaults to 1.",
+            "default": "1",
+            "optional": true
+        },
+        {
+            "name": "direction",
+            "type": "str",
+            "description": "The direction of the network. It can be forward and bidirect(it means bidirection network). If bidirect, it is a bidirectional RNN,and returns the concat output from both directions. Defaults to forward",
+            "default": "forward",
+            "optional": true
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "description": "If non-zero, introduces a Dropout layer on the outputs of each RNN layerexcept the last layer, with dropout probability equal to dropout.Defaults to 0.0.",
+            "default": "0.0",
+            "optional": true
+        },
+        {
+            "name": "pooling_type",
+            "type": "str",
+            "description": "If pooling_type is None, then the RNNEncoder will return the hidden stateof the last time step at last layer as a single vector.If pooling_type is not None, it must be one of sum, max and mean.Then it will be pooled on the RNN output (the hidden state of every timestep at last layer) to create a single vector.Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

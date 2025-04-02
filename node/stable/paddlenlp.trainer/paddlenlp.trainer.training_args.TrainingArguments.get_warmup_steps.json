@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.trainer.training_args.TrainingArguments.get_warmup_steps",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "num_training_steps": "int"
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

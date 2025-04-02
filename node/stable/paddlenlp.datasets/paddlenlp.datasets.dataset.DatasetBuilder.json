@@ -1,0 +1,32 @@
+{
+    "api": "paddlenlp.datasets.dataset.DatasetBuilder",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "lazy": "None",
+        "name": "None",
+        "**config": null
+    },
+    "Bases": "",
+    "description": "A base class for all DatasetBuilder. It provides a read() function to turna data file into a MapDataset or IterDataset.",
+    "params": [
+        {
+            "name": "filename",
+            "type": "str",
+            "description": "Path of data file to read, usually provided by _get_datafunction.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "split",
+            "type": "str",
+            "description": "The split name of selected dataset. This only makesa different when data files of different splits have different structures.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "A MapDataset|IterDataset.",
+        "type": ""
+    }
+}

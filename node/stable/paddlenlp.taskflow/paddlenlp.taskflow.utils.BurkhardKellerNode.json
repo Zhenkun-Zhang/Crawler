@@ -1,0 +1,23 @@
+{
+    "api": "paddlenlp.taskflow.utils.BurkhardKellerNode",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "word": "str"
+    },
+    "Bases": "object",
+    "description": "Node implementatation for BK-Tree. A BK-Tree node stores the information of current word, and its approximate words calculated by levenstein distance.",
+    "params": [
+        {
+            "name": "word",
+            "type": "str",
+            "description": "word of current node.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

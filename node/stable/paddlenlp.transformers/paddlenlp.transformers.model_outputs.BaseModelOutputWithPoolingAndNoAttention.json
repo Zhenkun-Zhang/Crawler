@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.BaseModelOutputWithPoolingAndNoAttention",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "last_hidden_state": "Tensor or None = None",
+        "pooler_output": "Tensor or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for model’s outputs that also contains a pooling of the last hidden states.",
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "paddle.Tensor of shape batch_size, num_channels, height, width",
+            "description": "Sequence of hidden-states at the output of the last layer of the model.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "pooler_output",
+            "type": "paddle.Tensor of shape batch_size, hidden_size",
+            "description": "Last layer hidden-state after a pooling operation on the spatial dimensions.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, num_channels, height, width).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, num_channels, height, width).",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

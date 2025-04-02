@@ -1,0 +1,39 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.BaseModelOutput",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "last_hidden_state": "Tensor or None = None",
+        "hidden_states": "Tuple[Tensor] or None = None",
+        "attentions": "Tuple[Tensor] or None = None"
+    },
+    "Bases": "",
+    "description": "Base class for model’s outputs, with potential hidden states and attentions.",
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "paddle.Tensor of shape batch_size, sequence_length, hidden_size",
+            "description": "Sequence of hidden-states at the output of the last layer of the model.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.Tuple of paddle.Tensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "attentions",
+            "type": "tuplepaddle.Tensor",
+            "description": "Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads.Tuple of paddle.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length,sequence_length).",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

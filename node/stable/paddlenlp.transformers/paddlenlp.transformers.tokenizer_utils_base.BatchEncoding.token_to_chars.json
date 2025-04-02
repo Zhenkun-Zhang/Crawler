@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.BatchEncoding.token_to_chars",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "batch_or_token_index": "int",
+        "token_index": "int or None = None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "batch_or_token_index",
+            "type": "int",
+            "description": "Index of the sequence in the batch. If the batch only comprise one sequence, this can be the index ofthe token in the sequence.",
+            "default": "int",
+            "optional": false
+        },
+        {
+            "name": "token_index",
+            "type": "int",
+            "description": "If a batch index is provided in batch_or_token_index, this can be the index of the token or tokens inthe sequence.",
+            "default": "int or None = None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "Span of characters in the original string.",
+        "type": "[CharSpan]"
+    }
+}

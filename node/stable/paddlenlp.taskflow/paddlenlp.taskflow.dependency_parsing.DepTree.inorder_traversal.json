@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.DepTree.inorder_traversal",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "node": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

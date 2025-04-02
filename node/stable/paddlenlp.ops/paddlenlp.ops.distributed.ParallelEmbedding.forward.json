@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.ops.distributed.ParallelEmbedding.forward",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "x": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "x",
+            "type": "Tensor",
+            "description": "A Tensor contains the id information.Its data type should be int32 or int64, and the value of the input id should be in [0, weight.shape[0]] .",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Returns the embedding Tensor mapped by x.",
+        "type": "Tensor"
+    }
+}

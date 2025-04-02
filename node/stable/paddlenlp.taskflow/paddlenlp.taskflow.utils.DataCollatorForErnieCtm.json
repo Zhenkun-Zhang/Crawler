@@ -1,0 +1,17 @@
+{
+    "api": "paddlenlp.taskflow.utils.DataCollatorForErnieCtm",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "tokenizer": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase",
+        "padding": "bool or str or paddlenlp.transformers.tokenizer_utils_base.PaddingStrategy = True",
+        "model": "str or NoneType = 'wordtag'"
+    },
+    "Bases": "object",
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

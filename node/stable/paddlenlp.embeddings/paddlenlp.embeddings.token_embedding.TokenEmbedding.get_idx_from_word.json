@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.embeddings.token_embedding.TokenEmbedding.get_idx_from_word",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "word": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "word",
+            "type": "list or str or int",
+            "description": "The input token word which we want to get the token index converted from.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The index of specifying word.",
+        "type": "int"
+    }
+}

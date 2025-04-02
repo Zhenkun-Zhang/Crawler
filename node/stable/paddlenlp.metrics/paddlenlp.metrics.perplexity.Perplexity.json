@@ -1,0 +1,32 @@
+{
+    "api": "paddlenlp.metrics.perplexity.Perplexity",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "name": "'Perplexity'",
+        "*args": null,
+        "**kwargs": null
+    },
+    "Bases": "Metric",
+    "description": "Perplexity is a metric used to judge how good a language model is.We can define perplexity as the inverse probability of the test set,normalised by the number of the words in the test set.Perplexity is calculated using cross entropy. It supports both padding dataand no padding data.",
+    "params": [
+        {
+            "name": "seq_len",
+            "type": "int",
+            "description": "Sequence length of each sample, it must be provided whiledata is not padded. Defaults to 20.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "description": "Name of Metric instance. Defaults to Perplexity.",
+            "default": "Perplexity",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

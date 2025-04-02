@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils_base.PretrainedTokenizerBase.clean_up_tokenization",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "out_string": "str"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "out_string",
+            "type": "str",
+            "description": "The text to clean up.",
+            "default": "str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "The cleaned-up string.",
+        "type": "str"
+    }
+}

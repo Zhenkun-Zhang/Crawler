@@ -1,0 +1,46 @@
+{
+    "api": "paddlenlp.datasets.dataset.MapDataset.map",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "fn": null,
+        "lazy": "True",
+        "batched": "False",
+        "num_workers": "0"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "fn",
+            "type": "callable",
+            "description": "Transformations to be performed. It receives singlesample as argument if batched is False. Else it receives all examples.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "lazy",
+            "type": "bool",
+            "description": "If True, transformations would be delayed andperformed on demand. Otherwise, transforms all samples at once. Note thatif fn is stochastic, lazy should be True or you will get the sameresult on all epochs. Defaults to False.",
+            "default": "True",
+            "optional": true
+        },
+        {
+            "name": "batched",
+            "type": "bool",
+            "description": "If True, transformations would take all examples asinput and return a collection of transformed examples. Note that if setTrue, lazy option would be ignored. Defaults to False.",
+            "default": "False",
+            "optional": true
+        },
+        {
+            "name": "num_workers",
+            "type": "int",
+            "description": "Number of processes for multiprocessing. Ifset to 0, it doesnt use multiprocessing. Note that if set to positivevalue, lazy option would be ignored. Defaults to 0.",
+            "default": "0",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

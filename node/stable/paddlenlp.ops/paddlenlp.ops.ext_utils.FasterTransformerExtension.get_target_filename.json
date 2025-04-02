@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.ops.ext_utils.FasterTransformerExtension.get_target_filename",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

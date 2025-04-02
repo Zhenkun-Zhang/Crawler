@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.convert_to_unicode",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "text": null
+    },
+    "description": "Converts text to Unicode (if it’s not already), assuming utf-8 input.:param text: Text to be converted to unicode.:type text: str|bytesconverted text.str",
+    "params": [],
+    "return": {
+        "description": "converted text.",
+        "type": "str"
+    }
+}

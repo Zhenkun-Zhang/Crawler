@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.vocab.Vocab.save_vocabulary",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "filepath": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "filepath",
+            "type": "str",
+            "description": "the path of file to save vocabulary.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

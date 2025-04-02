@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.transformers.model_outputs.tuple_output",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "outputs": "Tuple[Tensor]",
+        "loss": "Tensor|None=None"
+    },
+    "description": "re-construct the outputs with one method which contains the simple logicoutputs (Tuple[Tensor]) – the source of the outputsloss (Optional[Tensor], optional) – the loss of the model. Defaults to None.",
+    "params": [
+        {
+            "name": "outputs",
+            "type": "Tuple[Tensor]",
+            "description": "the source of the outputs",
+            "default": "Tuple[Tensor]",
+            "optional": false
+        },
+        {
+            "name": "loss",
+            "type": "Optional[Tensor]",
+            "description": "the loss of the model. Defaults to None.",
+            "default": "Tensor|None=None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "api": "paddlenlp.ops.ext_utils.FasterTransformerExtension.build_with_command",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "ext_builder": null
+    },
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

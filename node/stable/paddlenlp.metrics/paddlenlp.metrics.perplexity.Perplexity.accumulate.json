@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.metrics.perplexity.Perplexity.accumulate",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "Returns perplexity, the calculation results.",
+        "type": "float"
+    }
+}

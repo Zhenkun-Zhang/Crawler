@@ -1,0 +1,105 @@
+{
+    "api": "paddlenlp.taskflow.utils.TermTreeNode",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "sid": "str",
+        "term": "str",
+        "base": "str",
+        "node_type": "str = 'term'",
+        "term_type": "str or None = None",
+        "hyper": "str or None = None",
+        "level": "int or None = None",
+        "alias": "List[str] or None = None",
+        "alias_ext": "List[str] or None = None",
+        "sub_type": "List[str] or None = None",
+        "sub_term": "List[str] or None = None",
+        "data": "Dict[str",
+        "Any]|None": "None"
+    },
+    "Bases": "object",
+    "description": "Defination of term node. All members are protected, to keep rigorism of data struct.",
+    "params": [
+        {
+            "name": "sid",
+            "type": "str",
+            "description": "term id of node.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "term",
+            "type": "str",
+            "description": "term, common name of this term.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "base",
+            "type": "str",
+            "description": "cb indicates concept base, eb indicates entity base.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "term_type",
+            "type": "Optional[str]",
+            "description": "type of this term, constructs hirechical of term node. Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "hyper",
+            "type": "Optional[str]",
+            "description": "parent type of a type node. Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "node_type",
+            "type": "str",
+            "description": "type statement of node, type or term. Defaults to term.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "alias",
+            "type": "Optional[List[str]]",
+            "description": "alias of this term. Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "alias_ext",
+            "type": "Optional[List[str]]",
+            "description": "extended alias of this term, CANNOT be used in matching.Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sub_type",
+            "type": "Optional[List[str]]",
+            "description": "grouped by some term. Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "sub_term",
+            "type": "Optional[List[str]]",
+            "description": "some lower term. Defaults to None.",
+            "default": "",
+            "optional": true
+        },
+        {
+            "name": "data",
+            "type": "Optional[Dict[str, Any]]",
+            "description": "to sore full imformation of a term. Defaults to None.",
+            "default": "",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.taskflow.utils.download_check",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "task": null
+    },
+    "description": "Check the resource status in the specified task.task (string) – The name of specified task.",
+    "params": [
+        {
+            "name": "task",
+            "type": "string",
+            "description": "The name of specified task.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

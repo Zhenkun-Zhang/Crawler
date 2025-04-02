@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.taskflow.utils.levenstein_distance",
+    "type": "function",
+    "version": "stable",
+    "args_list": {
+        "s1": "str",
+        "s2": "str"
+    },
+    "description": "Calculate minimal Levenstein distance between s1 and s2.s1 (str) – strings2 (str) – stringthe minimal distance.int",
+    "params": [
+        {
+            "name": "s1",
+            "type": "str",
+            "description": "string",
+            "default": "str",
+            "optional": false
+        },
+        {
+            "name": "s2",
+            "type": "str",
+            "description": "string",
+            "default": "str",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "the minimal distance.",
+        "type": "int"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.seq2vec.encoder.TCNEncoder.get_input_dim",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.taskflow.utils.DocSpan",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "start": null,
+        "length": null
+    },
+    "Bases": "tuple",
+    "description": "Alias for field number 1",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

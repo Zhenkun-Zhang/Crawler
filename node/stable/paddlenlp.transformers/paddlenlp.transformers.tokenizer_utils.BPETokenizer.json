@@ -1,0 +1,79 @@
+{
+    "api": "paddlenlp.transformers.tokenizer_utils.BPETokenizer",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "vocab_file": null,
+        "encoder_json_path": "'./configs/encoder.json'",
+        "vocab_bpe_path": "'./configs/vocab.bpe'",
+        "unk_token": "'[UNK]'",
+        "sep_token": "'[SEP]'",
+        "pad_token": "'[PAD]'",
+        "cls_token": "'[CLS]'",
+        "mask_token": "'[MASK]'"
+    },
+    "Bases": "PretrainedTokenizer",
+    "description": "The base class for all bpe tokenizers. It mainly provides common tokenizemethods for bpe type tokenizer.",
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "description": "file path of the vocabulary.",
+            "default": "",
+            "optional": false
+        },
+        {
+            "name": "encoder_json_path",
+            "type": "str",
+            "description": "file path of the id to vocab.",
+            "default": "./configs/encoder.json",
+            "optional": true
+        },
+        {
+            "name": "vocab_bpe_path",
+            "type": "str",
+            "description": "file path of word merge text.",
+            "default": "./configs/vocab.bpe",
+            "optional": true
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "description": "The special token for unknown words.Defaults to [UNK].",
+            "default": "[UNK]",
+            "optional": true
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "description": "The special token for separator token.Defaults to [SEP].",
+            "default": "[SEP]",
+            "optional": true
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "description": "The special token for padding.Defaults to [PAD].",
+            "default": "[PAD]",
+            "optional": true
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "description": "The special token for cls.Defaults to [CLS].",
+            "default": "[CLS]",
+            "optional": true
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "description": "The special token for mask.Defaults to [MASK].",
+            "default": "[MASK]",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

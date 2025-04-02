@@ -1,0 +1,12 @@
+{
+    "api": "paddlenlp.taskflow.task.Task.help",
+    "type": "method",
+    "version": "stable",
+    "args_list": {},
+    "description": "",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

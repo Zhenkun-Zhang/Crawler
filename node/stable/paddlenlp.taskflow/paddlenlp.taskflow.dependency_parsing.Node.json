@@ -1,0 +1,16 @@
+{
+    "api": "paddlenlp.taskflow.dependency_parsing.Node",
+    "type": "class",
+    "version": "stable",
+    "args_list": {
+        "id": "None",
+        "parent": "None"
+    },
+    "Bases": "object",
+    "description": "Node class",
+    "params": [],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "api": "paddlenlp.data.collate.Stack.__call__",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "data": null
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "data",
+            "type": "list[numpy.ndarray]",
+            "description": "The input data samples. It is a list.Each element is a numpy.ndarray or list.",
+            "default": "",
+            "optional": false
+        }
+    ],
+    "return": {
+        "description": "Stacked batch data.",
+        "type": "numpy.ndarray"
+    }
+}

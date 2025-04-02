@@ -1,0 +1,30 @@
+{
+    "api": "paddlenlp.datasets.dataset.IterDataset.shard",
+    "type": "method",
+    "version": "stable",
+    "args_list": {
+        "num_shards": "None",
+        "index": "None"
+    },
+    "description": "",
+    "params": [
+        {
+            "name": "num_shards",
+            "type": "int",
+            "description": "An integer representing the number ofdata shards. If None, num_shards would be number of trainers.Defaults to None.",
+            "default": "None",
+            "optional": true
+        },
+        {
+            "name": "index",
+            "type": "int",
+            "description": "An integer representing the index of thecurrent shard. If None, index would be the current trainer rankid. Defaults to None.",
+            "default": "None",
+            "optional": true
+        }
+    ],
+    "return": {
+        "description": "",
+        "type": ""
+    }
+}

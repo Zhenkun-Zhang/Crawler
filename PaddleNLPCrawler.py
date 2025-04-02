@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import os, json, requests
-
+from Tools import *
 
 apis = ['paddlenlp.data', 'paddlenlp.datasets', 'paddlenlp.embeddings', 
         'paddlenlp.layers', 'paddlenlp.losses', 'paddlenlp.metrics', 
@@ -267,21 +267,6 @@ def jsonDumps(api, apiType, args_list, bases, desc, params, Returns, path, versi
         json.dump(jsDict, f, ensure_ascii=False, indent=4, default=str)
         # print(f)
         f.close()
-
-
-def dealDefault(default):
-    default = default.replace("mstype", "mindspore")
-    i = default.strip()
-    if len(i) == 0:
-        i = ""
-    else:
-        i = i.replace("\"", "")
-        i = i.replace("\'", "")
-        i = i.replace("‘", "")
-        i = i.replace("’", "")
-        i = i.replace("“", "")
-        i = i.replace("”", "")
-    return i
 
 
 def main():

@@ -1,0 +1,63 @@
+{
+    "api": "transformers.FlaxPreTrainedModel.save_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory:",
+        "typing.Union[str,",
+        "os.PathLike]",
+        "params",
+        "push_to_hub",
+        "max_shard_size",
+        "token",
+        "str,",
+        "NoneType]",
+        "safe_serialization",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "Directory to which to save. Will be created if it doesnt exist."
+        },
+        {
+            "name": "push_to_hub",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to push your model to the Hugging Face model hub after saving it. You can specify therepository you want to push to with repo_id (will default to the name of save_directory in yournamespace)."
+        },
+        {
+            "name": "max_shard_size",
+            "type": "int,str",
+            "optional": true,
+            "default": "10GB",
+            "description": "The maximum size for a checkpoint before being sharded. Checkpoints shard will then be each of sizelower than this size. If expressed as a string, needs to be digits followed by a unit (like 5MB).If a single weight of the model is bigger than max_shard_size, it will be in its own checkpoint shardwhich will be bigger than max_shard_size."
+        },
+        {
+            "name": "token",
+            "type": "str,bool",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If True, or not specified, will usethe token generated when running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional key word arguments passed along to the push_to_hub() method."
+        },
+        {
+            "name": "safe_serialization",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to save the model using safetensors or through msgpack."
+        }
+    ],
+    "return": ""
+}

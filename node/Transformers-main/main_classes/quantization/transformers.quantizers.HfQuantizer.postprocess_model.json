@@ -1,0 +1,27 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.postprocess_model",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "PreTrainedModel",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "~transformers.PreTrainedModel",
+            "optional": false,
+            "default": "",
+            "description": "The model to quantize"
+        },
+        {
+            "name": "kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "The keyword arguments that are passed along _process_model_after_weight_loading."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,295 @@
+{
+    "api": "transformers.PatchTSMixerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "context_length:",
+        "patch_length",
+        "num_input_channels",
+        "patch_stride",
+        "num_parallel_samples",
+        "d_model",
+        "expansion_factor",
+        "num_layers",
+        "dropout",
+        "mode",
+        "gated_attn",
+        "norm_mlp",
+        "self_attn",
+        "self_attn_heads",
+        "use_positional_encoding",
+        "positional_encoding_type",
+        "scaling",
+        "bool,",
+        "NoneType]",
+        "loss",
+        "init_std",
+        "post_init",
+        "norm_eps",
+        "mask_type",
+        "random_mask_ratio",
+        "num_forecast_mask_patches",
+        "int,",
+        "NoneType]",
+        "mask_value",
+        "masked_loss",
+        "channel_consistent_masking",
+        "unmasked_channel_indices",
+        "head_dropout",
+        "distribution_output",
+        "prediction_length",
+        "prediction_channel_indices",
+        "num_targets",
+        "output_range",
+        "head_aggregation",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "context_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The context/history length for the input sequence."
+        },
+        {
+            "name": "patch_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The patch length for the input sequence."
+        },
+        {
+            "name": "num_input_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of input variates. For Univariate, set it to 1."
+        },
+        {
+            "name": "patch_stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Determines the overlap between two consecutive patches. Set it to patch_length (or greater), if we wantnon-overlapping patches."
+        },
+        {
+            "name": "num_parallel_samples",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of samples to generate in parallel for probabilistic forecast."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Hidden dimension of the model. Recommended to set it as a multiple of patch_length (i.e. 2-5X ofpatch_length). Larger value indicates more complex model."
+        },
+        {
+            "name": "expansion_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Expansion factor to use inside MLP. Recommended range is 2-5. Larger value indicates more complex model."
+        },
+        {
+            "name": "num_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of layers to use. Recommended range is 3-15. Larger value indicates more complex model."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability the PatchTSMixer backbone. Recommended range is 0.2-0.7"
+        },
+        {
+            "name": "mode",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Mixer Mode. Determines how to process the channels. Allowed values: common_channel, mix_channel. Incommon_channel mode, we follow Channel-independent modelling with no explicit channel-mixing. Channelmixing happens in an implicit manner via shared weights across channels. (preferred first approach) Inmix_channel mode, we follow explicit channel-mixing in addition to patch and feature mixer. (preferredapproach when channel correlations are very important to model)"
+        },
+        {
+            "name": "gated_attn",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Enable Gated Attention."
+        },
+        {
+            "name": "norm_mlp",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Normalization layer (BatchNorm or LayerNorm)."
+        },
+        {
+            "name": "self_attn",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Enable Tiny self attention across patches. This can be enabled when the output of Vanilla PatchTSMixer withgated attention is not satisfactory. Enabling this leads to explicit pair-wise attention and modellingacross patches."
+        },
+        {
+            "name": "self_attn_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of self-attention heads. Works only when self_attn is set to True."
+        },
+        {
+            "name": "use_positional_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Enable the use of positional embedding for the tiny self-attention layers. Works only when self_attn isset to True."
+        },
+        {
+            "name": "positional_encoding_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Positional encodings. Options random and sincos are supported. Works only whenuse_positional_encoding is set to True"
+        },
+        {
+            "name": "scaling",
+            "type": "string,bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to scale the input targets via mean scaler, std scaler or no scaler if None. If True, thescaler is set to mean."
+        },
+        {
+            "name": "loss",
+            "type": "string",
+            "optional": true,
+            "default": "",
+            "description": "The loss function for the model corresponding to the distribution_output head. For parametricdistributions it is the negative log likelihood (nll) and for point estimates it is the mean squarederror mse."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated normal weight initialization distribution."
+        },
+        {
+            "name": "post_init",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use custom weight initialization from transformers library, or the default initialization inPyTorch. Setting it to False performs PyTorch weight initialization."
+        },
+        {
+            "name": "norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "A value added to the denominator for numerical stability of normalization."
+        },
+        {
+            "name": "mask_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Type of masking to use for Masked Pretraining mode. Allowed values are random, forecast. In Randommasking, points are masked randomly. In Forecast masking, points are masked towards the end."
+        },
+        {
+            "name": "random_mask_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Masking ratio to use when mask_type is random. Higher value indicates more masking."
+        },
+        {
+            "name": "num_forecast_mask_patches",
+            "type": "int,list",
+            "optional": true,
+            "default": "",
+            "description": "Number of patches to be masked at the end of each batch sample. If it is an integer, all the samples in thebatch will have the same number of masked patches. If it is a list, samples in the batch will be randomlymasked by numbers defined in the list. This argument is only used for forecast pretraining."
+        },
+        {
+            "name": "mask_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Mask value to use."
+        },
+        {
+            "name": "masked_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to compute pretraining loss only at the masked portions, or on the entire output."
+        },
+        {
+            "name": "channel_consistent_masking",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "When true, masking will be same across all channels of a timeseries. Otherwise, masking positions will varyacross channels."
+        },
+        {
+            "name": "unmasked_channel_indices",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "Channels that are not masked during pretraining."
+        },
+        {
+            "name": "head_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability the PatchTSMixer head."
+        },
+        {
+            "name": "distribution_output",
+            "type": "string",
+            "optional": true,
+            "default": "",
+            "description": "The distribution emission head for the model when loss is nll. Could be either student_t, normal ornegative_binomial."
+        },
+        {
+            "name": "prediction_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of time steps to forecast for a forecasting task. Also known as the Forecast Horizon."
+        },
+        {
+            "name": "prediction_channel_indices",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "List of channel indices to forecast. If None, forecast all channels. Target data is expected to have allchannels and we explicitly filter the channels in prediction and target before loss computation."
+        },
+        {
+            "name": "num_targets",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of targets (dimensionality of the regressed variable) for a regression task."
+        },
+        {
+            "name": "output_range",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "Output range to restrict for the regression task. Defaults to None."
+        },
+        {
+            "name": "head_aggregation",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Aggregation mode to enable for classification or regression task. Allowed values are None, use_last,max_pool, avg_pool."
+        }
+    ],
+    "return": ""
+}

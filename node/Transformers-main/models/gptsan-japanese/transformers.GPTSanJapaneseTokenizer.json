@@ -1,0 +1,75 @@
+{
+    "api": "transformers.GPTSanJapaneseTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "emoji_file",
+        "unk_token",
+        "pad_token",
+        "bos_token",
+        "eos_token",
+        "sep_token",
+        "do_clean_text",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the vocabulary."
+        },
+        {
+            "name": "emoji_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the emoji."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|nottoken|>",
+            "description": "The token used for unknown charactor"
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|separator|>",
+            "description": "The token used for padding"
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|startoftext|>",
+            "description": "The beginning of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|segmenter|>",
+            "description": "A special token to separate token to prefix part and general input part."
+        },
+        {
+            "name": "do_clean_text",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to clean text for URL, EMAIL, TEL, Japanese DATE and Japanese PRICE."
+        }
+    ],
+    "return": ""
+}

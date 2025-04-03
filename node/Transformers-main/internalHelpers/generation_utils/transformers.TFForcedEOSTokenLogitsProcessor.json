@@ -1,0 +1,26 @@
+{
+    "api": "transformers.TFForcedEOSTokenLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "max_length:",
+        "eos_token_id"
+    ],
+    "params": [
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The maximum length of the sequence to be generated."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The id of the token to force as the last generated token when max_length is reached."
+        }
+    ],
+    "return": ""
+}

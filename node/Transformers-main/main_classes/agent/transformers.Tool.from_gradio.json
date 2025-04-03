@@ -1,0 +1,10 @@
+{
+    "api": "transformers.Tool.from_gradio",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "gradio_tool"
+    ],
+    "params": [],
+    "return": ""
+}

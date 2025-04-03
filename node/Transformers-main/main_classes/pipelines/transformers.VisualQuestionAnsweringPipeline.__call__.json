@@ -1,0 +1,27 @@
+{
+    "api": "transformers.VisualQuestionAnsweringPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "typing.Union[ForwardRef('Image.Image'),",
+        "str,",
+        "typing.List[ForwardRef('Image.Image')],",
+        "typing.List[str],",
+        "ForwardRef('KeyDataset')]",
+        "question",
+        "typing.List[str]]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "str, List[str], PIL.Image, List[PIL.Image],KeyDataset",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing a http link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyThe pipeline accepts either a single image or a batch of images. If given a single image, it can bebroadcasted to multiple questions.For dataset: the passed in dataset must be of type transformers.pipelines.pt_utils.KeyDatasetExample:"
+        }
+    ],
+    "return": "A dictionary or a list of dictionaries containing the result. The dictionaries contain the following keys"
+}

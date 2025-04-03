@@ -1,0 +1,244 @@
+{
+    "api": "transformers.Speech2TextConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "encoder_layers",
+        "encoder_ffn_dim",
+        "encoder_attention_heads",
+        "decoder_layers",
+        "decoder_ffn_dim",
+        "decoder_attention_heads",
+        "encoder_layerdrop",
+        "decoder_layerdrop",
+        "use_cache",
+        "is_encoder_decoder",
+        "activation_function",
+        "d_model",
+        "dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "init_std",
+        "decoder_start_token_id",
+        "scale_embedding",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "max_source_positions",
+        "max_target_positions",
+        "num_conv_layers",
+        "conv_kernel_sizes",
+        "5)",
+        "conv_channels",
+        "input_feat_per_channel",
+        "input_channels",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "10000",
+            "description": "Vocabulary size of the Speech2Text model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling Speech2TextModel"
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of encoder layers."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in encoder."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "encoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability for the encoder. See the LayerDrop paper formore details."
+        },
+        {
+            "name": "decoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability for the decoder. See the LayerDrop paper formore details."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "is_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the model is set up as an encoder-decoder architecture for sequence-to-sequence tasks."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the layers and the pooler layer."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "decoder_start_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The initial token ID of the decoder when decoding sequences."
+        },
+        {
+            "name": "scale_embedding",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the embeddings are scaled by the square root of d_model."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Padding token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the beginning-of-sequence token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the end-of-sequence token."
+        },
+        {
+            "name": "max_source_positions",
+            "type": "int",
+            "optional": true,
+            "default": "6000",
+            "description": "The maximum sequence length of log-mel filter-bank features that this model might ever be used with."
+        },
+        {
+            "name": "max_target_positions",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The maximum sequence length that this model might ever be used with. Typically, set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "num_conv_layers",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of 1D convolutional layers in the conv module."
+        },
+        {
+            "name": "conv_kernel_sizes",
+            "type": "Tuple[int]",
+            "optional": true,
+            "default": "(5,",
+            "description": "A tuple of integers defining the kernel size of each 1D convolutional layer in the conv module. The lengthof conv_kernel_sizes has to match num_conv_layers."
+        },
+        {
+            "name": "conv_channels",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "An integer defining the number of output channels of each convolution layers except the final one in theconv module."
+        },
+        {
+            "name": "input_feat_per_channel",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "An integer specifying the size of feature vector. This is also the dimensions of log-mel filter-bankfeatures."
+        },
+        {
+            "name": "input_channels",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "An integer specifying number of input channels of the input feature vector."
+        }
+    ],
+    "return": ""
+}

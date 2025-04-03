@@ -1,0 +1,44 @@
+{
+    "api": "transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "last_hidden_state:",
+        "Array",
+        "past_key_values",
+        "jax.Array]]",
+        "hidden_states",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the model."
+        },
+        {
+            "name": "past_key_values",
+            "type": "Dict[str, jnp.ndarray]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary of pre-computed hidden-states (key and values in the attention blocks) that can be used for fastauto-regressive decoding. Pre-computed key and value hidden-states are of shape [batch_size, max_length]."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

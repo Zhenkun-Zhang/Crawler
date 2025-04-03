@@ -1,0 +1,91 @@
+{
+    "api": "transformers.BarkFineModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "codebook_idx:",
+        "int",
+        "input_ids",
+        "attention_mask",
+        "position_ids",
+        "head_mask",
+        "labels",
+        "input_embeds",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict"
+    ],
+    "params": [
+        {
+            "name": "codebook_idx",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index of the codebook that will be predicted."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length, number_of_codebooks)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit. Initially, indices of the first two codebooks are obtained from the coarse sub-model. The rest ispredicted recursively by attending the previously predicted channels. The model predicts on windows oflength 1024."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.Tensor of shape (encoder_layers, encoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "NOT IMPLEMENTED YET."
+        },
+        {
+            "name": "input_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, input_sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Ifpast_key_values is used, optionally only the last input_embeds have to be input (seepast_key_values). This is useful if you want more control over how to convert input_ids indices intoassociated vectors than the models internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": ""
+}

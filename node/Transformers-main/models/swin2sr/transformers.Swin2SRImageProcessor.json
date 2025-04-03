@@ -1,0 +1,30 @@
+{
+    "api": "transformers.Swin2SRImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_rescale:",
+        "rescale_factor",
+        "float]",
+        "do_pad",
+        "pad_size",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by the do_rescaleparameter in the preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by the rescale_factor parameter in thepreprocess method."
+        }
+    ],
+    "return": ""
+}

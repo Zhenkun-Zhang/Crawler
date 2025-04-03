@@ -1,0 +1,28 @@
+{
+    "api": "transformers.FlaxPreTrainedModel.to_bf16",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "params:",
+        "typing.Union[typing.Dict,",
+        "flax.core.frozen_dict.FrozenDict]",
+        "mask"
+    ],
+    "params": [
+        {
+            "name": "params",
+            "type": "Union[Dict, FrozenDict]",
+            "optional": false,
+            "default": "",
+            "description": "A PyTree of model parameters."
+        },
+        {
+            "name": "mask",
+            "type": "Union[Dict, FrozenDict]",
+            "optional": false,
+            "default": "",
+            "description": "A PyTree with same structure as the params tree. The leaves should be booleans, True for paramsyou want to cast, and should be False for those you want to skip."
+        }
+    ],
+    "return": ""
+}

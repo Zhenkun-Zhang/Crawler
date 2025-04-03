@@ -1,0 +1,19 @@
+{
+    "api": "transformers.PatchTSMixerForRegression",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PatchTSMixerConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "PatchTSMixerConfig",
+            "optional": false,
+            "default": "",
+            "description": "Configuration."
+        }
+    ],
+    "return": ""
+}

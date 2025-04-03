@@ -1,0 +1,13 @@
+{
+    "api": "transformers.Trainer.compute_loss",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model",
+        "inputs",
+        "return_outputs",
+        "num_items_in_batch"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,20 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase.clean_up_tokenization",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "out_string:",
+        "str",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "out_string",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The text to clean up."
+        }
+    ],
+    "return": "str"
+}

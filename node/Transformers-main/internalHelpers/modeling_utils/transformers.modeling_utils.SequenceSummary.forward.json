@@ -1,0 +1,28 @@
+{
+    "api": "transformers.modeling_utils.SequenceSummary.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "hidden_states:",
+        "FloatTensor",
+        "cls_index",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "hidden_states",
+            "type": "torch.FloatTensor of shape [batch_size, seq_len, hidden_size]",
+            "optional": false,
+            "default": "",
+            "description": "The hidden states of the last layer."
+        },
+        {
+            "name": "cls_index",
+            "type": "torch.LongTensor of shape [batch_size],[batch_size, ...] where … are optional leading dimensions of hidden_states",
+            "optional": true,
+            "default": "",
+            "description": "Used if summary_type == cls_index and takes the last token of the sequence as classification token."
+        }
+    ],
+    "return": "torch.FloatTensor"
+}

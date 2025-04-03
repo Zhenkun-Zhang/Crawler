@@ -1,0 +1,75 @@
+{
+    "api": "transformers.QuantizedCacheConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "backend:",
+        "str",
+        "nbits",
+        "axis_key",
+        "axis_value",
+        "q_group_size",
+        "residual_length",
+        "compute_dtype",
+        "device"
+    ],
+    "params": [
+        {
+            "name": "backend",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Backend to use when performing quantization, Can be one of [quanto, HQQ]"
+        },
+        {
+            "name": "nbits",
+            "type": "Optional[int]",
+            "optional": true,
+            "default": "",
+            "description": "Number of bits, can be 2 or 4 for the quanto backend and one of [1, 2, 3, 4, 8] for the HQQ backend. Defaults to 2."
+        },
+        {
+            "name": "axis_key",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Axis over which to perform grouping for the key tensors. Can be [0, -1] for quanto backend and [0, 1] for HQQ backend."
+        },
+        {
+            "name": "axis_value",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Axis over which to perform grouping for the value tensors. Can be [0, -1] for quanto backend and [0, 1] for HQQ backend."
+        },
+        {
+            "name": "q_group_size",
+            "type": "Optional[int]",
+            "optional": true,
+            "default": "",
+            "description": "Size of the quantization group, should be a divisor of the models hidden dimension.Defaults to 64."
+        },
+        {
+            "name": "residual_length",
+            "type": "Optional[int]",
+            "optional": true,
+            "default": "",
+            "description": "Length of the residual cache which will always be stored in original precision.Defaults to 128."
+        },
+        {
+            "name": "compute_dtype",
+            "type": "torch.dtype",
+            "optional": true,
+            "default": "",
+            "description": "The default dtype used for computations in the model. Keys and Values will be cast to this dtype after dequantization."
+        },
+        {
+            "name": "device",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Device on which to perform computations, should be same as the models device."
+        }
+    ],
+    "return": ""
+}

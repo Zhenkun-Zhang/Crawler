@@ -1,0 +1,13 @@
+{
+    "api": "transformers.Trainer.set_initial_training_values",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args:",
+        "TrainingArguments",
+        "dataloader",
+        "total_train_batch_size"
+    ],
+    "params": [],
+    "return": ""
+}

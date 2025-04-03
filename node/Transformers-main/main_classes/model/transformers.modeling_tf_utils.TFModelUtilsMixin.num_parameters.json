@@ -1,0 +1,20 @@
+{
+    "api": "transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "only_trainable:",
+        "bool",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "only_trainable",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return only the number of trainable parameters"
+        }
+    ],
+    "return": "int"
+}

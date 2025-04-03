@@ -1,0 +1,57 @@
+{
+    "api": "transformers.models.wav2vec2_with_lm.processing_wav2vec2_with_lm.Wav2Vec2DecoderWithLMOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "typing.Union[typing.List[typing.List[str]],",
+        "typing.List[str],",
+        "str]",
+        "logit_score",
+        "typing.List[float],",
+        "float]",
+        "lm_score",
+        "typing.List[float],",
+        "float]",
+        "word_offsets",
+        "typing.Union[int,",
+        "str]]]]],",
+        "typing.List[typing.List[typing.Dict[str,",
+        "typing.Union[int,",
+        "str]]]],",
+        "typing.List[typing.Dict[str,",
+        "typing.Union[int,",
+        "str]]]]"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "list of str,str",
+            "optional": false,
+            "default": "",
+            "description": "Decoded logits in text from. Usually the speech transcription."
+        },
+        {
+            "name": "logit_score",
+            "type": "list of float,float",
+            "optional": false,
+            "default": "",
+            "description": "Total logit score of the beams associated with produced text."
+        },
+        {
+            "name": "lm_score",
+            "type": "list of float",
+            "optional": false,
+            "default": "",
+            "description": "Fused lm_score of the beams associated with produced text."
+        },
+        {
+            "name": "word_offsets",
+            "type": "list of List[Dict[str, Union[int, str]]],List[Dict[str, Union[int, str]]]",
+            "optional": false,
+            "default": "",
+            "description": "Offsets of the decoded words. In combination with sampling rate and model downsampling rate word offsetscan be used to compute time stamps for each word."
+        }
+    ],
+    "return": ""
+}

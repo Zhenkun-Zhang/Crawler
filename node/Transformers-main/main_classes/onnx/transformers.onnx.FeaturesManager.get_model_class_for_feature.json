@@ -1,0 +1,26 @@
+{
+    "api": "transformers.onnx.FeaturesManager.get_model_class_for_feature",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature:",
+        "framework"
+    ],
+    "params": [
+        {
+            "name": "feature",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The feature required."
+        },
+        {
+            "name": "framework",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The framework to use for the export."
+        }
+    ],
+    "return": ""
+}

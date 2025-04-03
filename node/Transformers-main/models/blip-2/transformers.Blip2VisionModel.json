@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Blip2VisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Blip2VisionConfig"
+    ],
+    "params": [],
+    "return": ""
+}

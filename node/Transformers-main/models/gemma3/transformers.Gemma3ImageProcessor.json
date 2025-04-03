@@ -1,0 +1,122 @@
+{
+    "api": "transformers.Gemma3ImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "do_convert_rgb",
+        "do_pan_and_scan",
+        "pan_and_scan_min_crop_size",
+        "pan_and_scan_max_num_crops",
+        "pan_and_scan_min_ratio_to_activate",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to the specified size. Can be overridden bydo_resize in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 224, \"width\": 224}):Size of the image after resizing. Can be overridden by size in the preprocess method.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by resample in the preprocess method."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by do_rescale inthe preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by rescale_factor in the preprocessmethod."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image by the specified mean and standard deviation. Can be overridden bydo_normalize in the preprocess method."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method.Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB."
+        },
+        {
+            "name": "do_pan_and_scan",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to apply pan_and_scan to images."
+        },
+        {
+            "name": "pan_and_scan_min_crop_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Minimum size of each crop in pan and scan."
+        },
+        {
+            "name": "pan_and_scan_max_num_crops",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum number of crops per image in pan and scan."
+        },
+        {
+            "name": "pan_and_scan_min_ratio_to_activate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Minimum aspect ratio to activate pan and scan."
+        }
+    ],
+    "return": ""
+}

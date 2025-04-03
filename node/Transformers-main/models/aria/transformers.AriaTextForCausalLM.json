@@ -1,0 +1,19 @@
+{
+    "api": "transformers.AriaTextForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "AriaTextConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "AriaTextConfig",
+            "optional": false,
+            "default": "",
+            "description": "Configuration object for the model."
+        }
+    ],
+    "return": ""
+}

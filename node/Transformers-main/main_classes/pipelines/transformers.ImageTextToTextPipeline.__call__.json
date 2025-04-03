@@ -1,0 +1,72 @@
+{
+    "api": "transformers.ImageTextToTextPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.List[str],",
+        "typing.List[typing.List[str]],",
+        "ForwardRef('Image.Image'),",
+        "typing.List[ForwardRef('Image.Image')],",
+        "typing.List[typing.List[ForwardRef('Image.Image')]],",
+        "NoneType]",
+        "text",
+        "typing.List[str],",
+        "typing.List[dict],",
+        "NoneType]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "str, List[str], PIL.Image,List[PIL.Image]`",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing a HTTP(s) link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyThe pipeline accepts either a single image or a batch of images."
+        },
+        {
+            "name": "text",
+            "type": "str, List[str], List[Dict[str, Union[str, PIL.Image]]]",
+            "optional": false,
+            "default": "",
+            "description": "The text to be used for generation. If a list of strings is passed, the length of the list should be thesame as the number of images. Text can also follow the chat format: a list of dictionaries where eachdictionary represents a message in a conversation. Each dictionary should have two keys: role andcontent. role should be one of user, system or assistant. content should be a list of dictionarycontaining the text of the message and the type of the message. The type of the message can be eithertext or image. If the type is image, no text is needed."
+        },
+        {
+            "name": "return_tensors",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Returns the tensors of predictions (as token indices) in the outputs. If set toTrue, the decoded text is not returned."
+        },
+        {
+            "name": "return_text",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Returns the decoded texts in the outputs."
+        },
+        {
+            "name": "return_full_text",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to False only added text is returned, otherwise the full text is returned. Cannot bespecified at the same time as return_text."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean up the potential extra spaces in the text output."
+        },
+        {
+            "name": "continue_final_message(",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "This indicates that you want the model to continue thelast message in the input chat rather than starting a new one, allowing you to prefill its response.By default this is True when the final message in the input chat has the assistant role andFalse otherwise, but you can manually override that behaviour by setting this flag."
+        }
+    ],
+    "return": "A list or a list of list of dict"
+}

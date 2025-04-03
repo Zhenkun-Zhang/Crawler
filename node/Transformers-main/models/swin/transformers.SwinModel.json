@@ -1,0 +1,34 @@
+{
+    "api": "transformers.SwinModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "add_pooling_layer",
+        "use_mask_token"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "SwinConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        },
+        {
+            "name": "add_pooling_layer",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to apply pooling layer."
+        },
+        {
+            "name": "use_mask_token",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to create and apply mask tokens in the embedding layer."
+        }
+    ],
+    "return": ""
+}

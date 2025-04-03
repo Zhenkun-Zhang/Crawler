@@ -1,0 +1,20 @@
+{
+    "api": "transformers.FlaxWhisperTimeStampLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "generate_config",
+        "model_config",
+        "decoder_input_length"
+    ],
+    "params": [
+        {
+            "name": "generate_config",
+            "type": "GenerateConfig",
+            "optional": false,
+            "default": "",
+            "description": "The generate config used to generate the output. The following parameters are required:eos_token_id (int, optional, defaults to 50257):The id of the end-of-sequence token.no_timestamps_token_id (int, optional, defaults to 50363):The id of the <|notimestamps|> token.max_initial_timestamp_index (int, optional, defaults to 1):Used to set the maximum value of the initial timestamp. This is used to prevent the model frompredicting timestamps that are too far in the future."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,116 @@
+{
+    "api": "transformers.GroundingDinoImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "format:",
+        "typing.Union[str,",
+        "transformers.models.grounding_dino.image_processing_grounding_dino.AnnotationFormat]",
+        "<AnnotationFormat.COCO_DETECTION",
+        "do_resize",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float]]",
+        "image_std",
+        "typing.List[float]]",
+        "do_convert_annotations",
+        "do_pad",
+        "pad_size",
+        "int]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "format",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Data format of the annotations. One of coco_detection or coco_panoptic."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to resize the images (height, width) dimensions to the specified size. Can beoverridden by the do_resize parameter in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"shortest_edge\" -- 800, \"longest_edge\": 1333}):Size of the image’s (height, width) dimensions after resizing. Can be overridden by the size parameterin the preprocess method. Available options are:{\"height\": int, \"width\": int}: The image will be resized to the exact size (height, width).Do NOT keep the aspect ratio.{\"shortest_edge\": int, \"longest_edge\": int}: The image will be resized to a maximum size respectingthe aspect ratio and keeping the shortest edge less,equal to shortest_edge and the longest edgeless,equal to longest_edge.{\"max_height\": int, \"max_width\": int}: The image will be resized to the maximum size respecting theaspect ratio and keeping the height less,equal to max_height and the width less,equal tomax_width.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to rescale the image by the specified scale rescale_factor. Can be overridden by thedo_rescale parameter in the preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by the rescale_factor parameter in thepreprocess method. Controls whether to normalize the image. Can be overridden by the do_normalizeparameter in the preprocess method."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in the preprocessmethod."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean values to use when normalizing the image. Can be a single value or a list of values, one for eachchannel. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation values to use when normalizing the image. Can be a single value or a list of values, onefor each channel. Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "do_convert_annotations",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to convert the annotations to the format expected by the DETR model. Converts thebounding boxes to the format (center_x, center_y, width, height) and in the range [0, 1].Can be overridden by the do_convert_annotations parameter in the preprocess method."
+        },
+        {
+            "name": "do_pad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to pad the image. Can be overridden by the do_pad parameter in the preprocessmethod. If True, padding will be applied to the bottom and right of the image with zeros.If pad_size is provided, the image will be padded to the specified dimensions.Otherwise, the image will be padded to the maximum height and width of the batch."
+        },
+        {
+            "name": "pad_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "The size {height: int, width int} to pad the images to. Must be larger than any image sizeprovided for preprocessing. If pad_size is not provided, images will be padded to the largestheight and width in the batch."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,55 @@
+{
+    "api": "transformers.Text2TextGenerationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "args",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "Input text for the encoder."
+        },
+        {
+            "name": "return_tensors",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to include the tensors of predictions (as token indices) in the outputs."
+        },
+        {
+            "name": "return_text",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to include the decoded texts in the outputs."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean up the potential extra spaces in the text output."
+        },
+        {
+            "name": "truncation",
+            "type": "TruncationStrategy",
+            "optional": true,
+            "default": "",
+            "description": "The truncation strategy for the tokenization within the pipeline. TruncationStrategy.DO_NOT_TRUNCATE(default) will never truncate, but it is sometimes desirable to truncate the input to fit the modelsmax_length instead of throwing an error down the line."
+        },
+        {
+            "name": "generate_kwargs",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments to pass along to the generate method of the model (see the generate methodcorresponding to your framework here)."
+        }
+    ],
+    "return": "A list or a list of list of dict"
+}

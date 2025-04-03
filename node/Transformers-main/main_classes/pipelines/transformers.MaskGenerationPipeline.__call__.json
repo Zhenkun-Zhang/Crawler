@@ -1,0 +1,86 @@
+{
+    "api": "transformers.MaskGenerationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image",
+        "*args",
+        "num_workers",
+        "batch_size",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "np.ndarray,bytes,str,dict",
+            "optional": false,
+            "default": "",
+            "description": "Image or list of images."
+        },
+        {
+            "name": "mask_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Threshold to use when turning the predicted masks into binary values."
+        },
+        {
+            "name": "pred_iou_thresh",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "A filtering threshold in [0,1] applied on the models predicted mask quality."
+        },
+        {
+            "name": "stability_score_thresh",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "A filtering threshold in [0,1], using the stability of the mask under changes to the cutoff used tobinarize the models mask predictions."
+        },
+        {
+            "name": "stability_score_offset",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The amount to shift the cutoff when calculated the stability score."
+        },
+        {
+            "name": "crops_nms_thresh",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The box IoU cutoff used by non-maximal suppression to filter duplicate masks."
+        },
+        {
+            "name": "crops_n_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If crops_n_layers>0, mask prediction will be run again on crops of the image. Sets the number oflayers to run, where each layer has 2**i_layer number of image crops."
+        },
+        {
+            "name": "crop_overlap_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Sets the degree to which crops overlap. In the first crop layer, crops will overlap by this fraction ofthe image length. Later layers with more crops scale down this overlap."
+        },
+        {
+            "name": "crop_n_points_downscale_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of points-per-side sampled in layer n is scaled down by crop_n_points_downscale_factor**n."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The maximum time in seconds to wait for fetching images from the web. If None, no timeout is set andthe call may block forever."
+        }
+    ],
+    "return": "Dict"
+}

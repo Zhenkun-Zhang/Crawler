@@ -1,0 +1,67 @@
+{
+    "api": "transformers.models.wav2vec2.modeling_wav2vec2.Wav2Vec2ForPreTrainingOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "projected_states",
+        "projected_quantized_states",
+        "codevector_perplexity",
+        "hidden_states",
+        "attentions",
+        "contrastive_loss",
+        "diversity_loss"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "optional, returned when sample_negative_indices are passed, torch.FloatTensor of shape (1,)",
+            "optional": true,
+            "default": "",
+            "description": "Total loss as the sum of the contrastive loss (L_m) and the diversity loss (L_d) as stated in the officialpaper . (classification) loss."
+        },
+        {
+            "name": "projected_states",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, config.proj_codevector_dim)",
+            "optional": false,
+            "default": "",
+            "description": "Hidden-states of the model projected to config.proj_codevector_dim that can be used to predict the maskedprojected quantized states."
+        },
+        {
+            "name": "projected_quantized_states",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, config.proj_codevector_dim)",
+            "optional": false,
+            "default": "",
+            "description": "Quantized extracted feature vectors projected to config.proj_codevector_dim representing the positivetarget vectors for contrastive loss."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        },
+        {
+            "name": "contrastive_loss",
+            "type": "optional, returned when sample_negative_indices are passed, torch.FloatTensor of shape (1,)",
+            "optional": true,
+            "default": "",
+            "description": "The contrastive loss (L_m) as stated in the official paper ."
+        },
+        {
+            "name": "diversity_loss",
+            "type": "optional, returned when sample_negative_indices are passed, torch.FloatTensor of shape (1,)",
+            "optional": true,
+            "default": "",
+            "description": "The diversity loss (L_d) as stated in the official paper ."
+        }
+    ],
+    "return": ""
+}

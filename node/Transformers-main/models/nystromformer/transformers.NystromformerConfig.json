@@ -1,0 +1,142 @@
+{
+    "api": "transformers.NystromformerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "max_position_embeddings",
+        "type_vocab_size",
+        "segment_means_seq_len",
+        "num_landmarks",
+        "conv_kernel_size",
+        "inv_coeff_init_option",
+        "initializer_range",
+        "layer_norm_eps",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30000",
+            "description": "Vocabulary size of the Nystromformer model. Defines the number of different tokens that can be representedby the inputs_ids passed when calling NystromformerModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimension of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimension of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu_new",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "510",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "type_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The vocabulary size of the token_type_ids passed when calling NystromformerModel."
+        },
+        {
+            "name": "segment_means_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Sequence length used in segment-means."
+        },
+        {
+            "name": "num_landmarks",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "The number of landmark (or Nystrom) points to use in Nystrom approximation of the softmax self-attentionmatrix."
+        },
+        {
+            "name": "conv_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "65",
+            "description": "The kernel size of depthwise convolution used in Nystrom approximation."
+        },
+        {
+            "name": "inv_coeff_init_option",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to use exact coefficient computation for the initial values for the iterative method ofcalculating the Moore-Penrose inverse of a matrix."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,67 @@
+{
+    "api": "transformers.ViTModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "bool_masked_pos",
+        "head_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "interpolate_pos_encoding",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. See ViTImageProcessor.call()for details."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained position encodings."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "bool_masked_pos",
+            "type": "torch.BoolTensor of shape (batch_size, num_patches",
+            "optional": true,
+            "default": "",
+            "description": "Boolean masked positions. Indicates which patches are masked (1) and which arent (0)."
+        }
+    ],
+    "return": "transformers.modeling_outputs.BaseModelOutputWithPooling or tuple(torch.FloatTensor)"
+}

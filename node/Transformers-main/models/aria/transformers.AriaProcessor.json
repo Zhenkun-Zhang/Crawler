@@ -1,0 +1,45 @@
+{
+    "api": "transformers.AriaProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "str]",
+        "chat_template",
+        "size_conversion",
+        "int],",
+        "int]]"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "AriaImageProcessor",
+            "optional": true,
+            "default": "None",
+            "description": "The AriaImageProcessor to use for image preprocessing."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizerBase",
+            "optional": true,
+            "default": "",
+            "description": "An instance of PreTrainedTokenizerBase. This should correspond with the models text model. The tokenizer is a required input."
+        },
+        {
+            "name": "chat_template",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A Jinja template which will be used to convert lists of messages in a chat into a tokenizable string."
+        },
+        {
+            "name": "size_conversion",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary indicating size conversions for images."
+        }
+    ],
+    "return": ""
+}

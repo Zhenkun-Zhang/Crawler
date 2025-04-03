@@ -1,0 +1,19 @@
+{
+    "api": "transformers.Toolbox.remove_tool",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tool_name:",
+        "str"
+    ],
+    "params": [
+        {
+            "name": "tool_name",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The tool to remove from the toolbox."
+        }
+    ],
+    "return": ""
+}

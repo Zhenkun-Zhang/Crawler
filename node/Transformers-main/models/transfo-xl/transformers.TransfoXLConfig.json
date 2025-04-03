@@ -1,0 +1,221 @@
+{
+    "api": "transformers.TransfoXLConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "cutoffs",
+        "40000,",
+        "200000]",
+        "d_model",
+        "d_embed",
+        "n_head",
+        "d_head",
+        "d_inner",
+        "div_val",
+        "pre_lnorm",
+        "n_layer",
+        "mem_len",
+        "clamp_len",
+        "same_length",
+        "proj_share_all_but_first",
+        "attn_type",
+        "sample_softmax",
+        "adaptive",
+        "dropout",
+        "dropatt",
+        "untie_r",
+        "init",
+        "init_range",
+        "proj_init_std",
+        "init_std",
+        "layer_norm_epsilon",
+        "eos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "267735",
+            "description": "Vocabulary size of the BERT model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling TransfoXLModel or TFTransfoXLModel."
+        },
+        {
+            "name": "cutoffs",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[20000,",
+            "description": "Cutoffs for the adaptive softmax."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the models hidden states."
+        },
+        {
+            "name": "d_embed",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the embeddings"
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "d_head",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Dimensionality of the models heads."
+        },
+        {
+            "name": "d_inner",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Inner dimension in FF"
+        },
+        {
+            "name": "div_val",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Divident value for adapative input and softmax"
+        },
+        {
+            "name": "pre_lnorm",
+            "type": "boolean",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to apply LayerNorm to the input instead of the output in the blocks."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "18",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "mem_len",
+            "type": "int",
+            "optional": true,
+            "default": "1600",
+            "description": "Length of the retained previous heads."
+        },
+        {
+            "name": "clamp_len",
+            "type": "int",
+            "optional": true,
+            "default": "1000",
+            "description": "Use the same pos embeddings after clamp_len."
+        },
+        {
+            "name": "same_length",
+            "type": "boolean",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use the same attn length for all tokens"
+        },
+        {
+            "name": "proj_share_all_but_first",
+            "type": "boolean",
+            "optional": true,
+            "default": "True",
+            "description": "True to share all but first projs, False not to share."
+        },
+        {
+            "name": "attn_type",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Attention type. 0 for Transformer-XL, 1 for Shaw et al, 2 for Vaswani et al, 3 for Al Rfou et al."
+        },
+        {
+            "name": "sample_softmax",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "Number of samples in the sampled softmax."
+        },
+        {
+            "name": "adaptive",
+            "type": "boolean",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use adaptive softmax."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "dropatt",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "untie_r",
+            "type": "boolean",
+            "optional": true,
+            "default": "True",
+            "description": "Whether ot not to untie relative position biases."
+        },
+        {
+            "name": "init",
+            "type": "str",
+            "optional": true,
+            "default": "normal",
+            "description": "Parameter initializer to use."
+        },
+        {
+            "name": "init_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "Parameters initialized by U(-init_range, init_range)."
+        },
+        {
+            "name": "proj_init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "Parameters initialized by N(0, init_std)"
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "Parameters initialized by N(0, init_std)"
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon to use in the layer normalization layers"
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "End of stream token id."
+        }
+    ],
+    "return": ""
+}

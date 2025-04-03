@@ -1,0 +1,45 @@
+{
+    "api": "transformers.modeling_tf_outputs.TFSequenceClassifierOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "|",
+        "logits",
+        "hidden_states",
+        "|",
+        "attentions",
+        "|"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "tf.Tensor of shape (batch_size, ",
+            "optional": true,
+            "default": "",
+            "description": "Classification (or regression if config.num_labels==1) loss."
+        },
+        {
+            "name": "logits",
+            "type": "tf.Tensor of shape (batch_size, config.num_labels)",
+            "optional": false,
+            "default": "",
+            "description": "Classification (or regression if config.num_labels==1) scores (before SoftMax)."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

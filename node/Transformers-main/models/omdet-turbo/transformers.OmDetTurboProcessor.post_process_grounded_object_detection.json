@@ -1,0 +1,64 @@
+{
+    "api": "transformers.OmDetTurboProcessor.post_process_grounded_object_detection",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs:",
+        "OmDetTurboObjectDetectionOutput",
+        "text_labels",
+        "typing.List[typing.List[str]],",
+        "NoneType]",
+        "threshold",
+        "nms_threshold",
+        "target_sizes",
+        "typing.List[typing.Tuple],",
+        "NoneType]",
+        "max_num_det",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "OmDetTurboObjectDetectionOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "text_labels",
+            "type": "Union[List[str], List[List[str]]]",
+            "optional": true,
+            "default": "",
+            "description": "The input classes names. If not provided, text_labels will be set to None in outputs."
+        },
+        {
+            "name": "threshold",
+            "type": "float, defaults to 0.3",
+            "optional": false,
+            "default": "",
+            "description": "Only return detections with a confidence score exceeding this threshold."
+        },
+        {
+            "name": "nms_threshold",
+            "type": "float, defaults to 0.5",
+            "optional": false,
+            "default": "",
+            "description": "The threshold to use for box non-maximum suppression. Value in [0, 1]."
+        },
+        {
+            "name": "target_sizes",
+            "type": "torch.Tensor,List[Tuple[int, int]]",
+            "optional": true,
+            "default": "",
+            "description": "Tensor of shape (batch_size, 2) or list of tuples (Tuple[int, int]) containing the target size(height, width) of each image in the batch. If unset, predictions will not be resized."
+        },
+        {
+            "name": "max_num_det",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum number of detections to return."
+        }
+    ],
+    "return": "List[Dict]"
+}

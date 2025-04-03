@@ -1,0 +1,60 @@
+{
+    "api": "transformers.PerceiverTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "pad_token",
+        "bos_token",
+        "eos_token",
+        "mask_token",
+        "cls_token",
+        "sep_token",
+        "model_max_length",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "[PAD]",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "[BOS]",
+            "description": "The BOS token (reserved in the vocab, but not actually used)."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "[EOS]",
+            "description": "The end of sequence token (reserved in the vocab, but not actually used).When building a sequence using special tokens, this is not the token that is used for the end of sequence.The token used is the sep_token."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "[MASK]",
+            "description": "The MASK token, useful for masked language modeling."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "[CLS]",
+            "description": "The CLS token (reserved in the vocab, but not actually used)."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "[SEP]",
+            "description": "The separator token, which is used when building a sequence from two sequences."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,43 @@
+{
+    "api": "transformers.OneFormerProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "max_seq_length",
+        "task_seq_length",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "OneFormerImageProcessor",
+            "optional": false,
+            "default": "None",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "[CLIPTokenizer, CLIPTokenizerFast]",
+            "optional": false,
+            "default": "None",
+            "description": "The tokenizer is a required input."
+        },
+        {
+            "name": "max_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Sequence length for input text list."
+        },
+        {
+            "name": "task_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Sequence length for input task token."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,19 @@
+{
+    "api": "transformers.generation.FlaxGreedySearchOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "sequences:",
+        "Array"
+    ],
+    "params": [
+        {
+            "name": "sequences",
+            "type": "jnp.ndarray of shape (batch_size, max_length)",
+            "optional": false,
+            "default": "",
+            "description": "The generated sequences."
+        }
+    ],
+    "return": ""
+}

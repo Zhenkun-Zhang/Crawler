@@ -1,0 +1,13 @@
+{
+    "api": "transformers.OneFormerProcessor.encode_inputs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images",
+        "task_inputs",
+        "segmentation_maps",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

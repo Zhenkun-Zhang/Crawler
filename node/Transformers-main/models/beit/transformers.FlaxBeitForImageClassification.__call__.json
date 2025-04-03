@@ -1,0 +1,21 @@
+{
+    "api": "transformers.FlaxBeitForImageClassification.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values",
+        "bool_masked_pos",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7f3a03b75090>",
+        "train",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [],
+    "return": "transformers.modeling_flax_outputs.FlaxSequenceClassifierOutput or tuple(torch.FloatTensor)"
+}

@@ -1,0 +1,63 @@
+{
+    "api": "transformers.Gemma3ImageProcessor.pan_and_scan",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "pan_and_scan_min_crop_size",
+        "pan_and_scan_max_num_crops",
+        "pan_and_scan_min_ratio_to_activate",
+        "data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "Image to resize."
+        },
+        {
+            "name": "pan_and_scan_min_crop_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Minimum size of each crop in pan and scan."
+        },
+        {
+            "name": "pan_and_scan_max_num_crops",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum number of crops per image in pan and scan."
+        },
+        {
+            "name": "pan_and_scan_min_ratio_to_activate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Minimum aspect ratio to activate pan and scan."
+        },
+        {
+            "name": "data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the image. If not provided, it will be the same as the input image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If not provided, it will be inferred."
+        }
+    ],
+    "return": ""
+}

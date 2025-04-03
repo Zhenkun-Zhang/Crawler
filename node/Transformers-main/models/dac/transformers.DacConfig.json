@@ -1,0 +1,94 @@
+{
+    "api": "transformers.DacConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "encoder_hidden_size",
+        "downsampling_ratios",
+        "4,",
+        "8,",
+        "8]",
+        "decoder_hidden_size",
+        "n_codebooks",
+        "codebook_size",
+        "codebook_dim",
+        "quantizer_dropout",
+        "commitment_loss_weight",
+        "codebook_loss_weight",
+        "sampling_rate",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "encoder_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Intermediate representation dimension for the encoder."
+        },
+        {
+            "name": "downsampling_ratios",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "Ratios for downsampling in the encoder. These are used in reverse order for upsampling in the decoder."
+        },
+        {
+            "name": "decoder_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "1536",
+            "description": "Intermediate representation dimension for the decoder."
+        },
+        {
+            "name": "n_codebooks",
+            "type": "int",
+            "optional": true,
+            "default": "9",
+            "description": "Number of codebooks in the VQVAE."
+        },
+        {
+            "name": "codebook_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Number of discrete codes in each codebook."
+        },
+        {
+            "name": "codebook_dim",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Dimension of the codebook vectors. If not defined, uses encoder_hidden_size."
+        },
+        {
+            "name": "quantizer_dropout",
+            "type": "bool",
+            "optional": true,
+            "default": "0",
+            "description": "Whether to apply dropout to the quantizer."
+        },
+        {
+            "name": "commitment_loss_weight",
+            "type": "float",
+            "optional": true,
+            "default": "0.25",
+            "description": "Weight of the commitment loss term in the VQVAE loss function."
+        },
+        {
+            "name": "codebook_loss_weight",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Weight of the codebook loss term in the VQVAE loss function."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "16000",
+            "description": "The sampling rate at which the audio waveform should be digitalized expressed in hertz (Hz)."
+        }
+    ],
+    "return": ""
+}

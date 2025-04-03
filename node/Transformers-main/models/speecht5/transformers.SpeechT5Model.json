@@ -1,0 +1,35 @@
+{
+    "api": "transformers.SpeechT5Model",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "SpeechT5Config",
+        "encoder",
+        "decoder"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "SpeechT5Config",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model. Initializing with a config file does notload the weights associated with the model, only the configuration. Check out thefrom_pretrained() method to load the model weights."
+        },
+        {
+            "name": "encoder",
+            "type": "SpeechT5EncoderWithSpeechPrenet,SpeechT5EncoderWithTextPrenet,None",
+            "optional": false,
+            "default": "",
+            "description": "The Transformer encoder module that applies the appropiate speech or text encoder prenet. If None,SpeechT5EncoderWithoutPrenet will be used and the input_values are assumed to be hidden states."
+        },
+        {
+            "name": "decoder",
+            "type": "SpeechT5DecoderWithSpeechPrenet,SpeechT5DecoderWithTextPrenet,None",
+            "optional": false,
+            "default": "",
+            "description": "The Transformer decoder module that applies the appropiate speech or text decoder prenet. If None,SpeechT5DecoderWithoutPrenet will be used and the decoder_input_values are assumed to be hiddenstates."
+        }
+    ],
+    "return": ""
+}

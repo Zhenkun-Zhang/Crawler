@@ -1,0 +1,10 @@
+{
+    "api": "transformers.Trainer.propagate_args_to_deepspeed",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "auto_find_batch_size"
+    ],
+    "params": [],
+    "return": ""
+}

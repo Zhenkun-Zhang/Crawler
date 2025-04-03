@@ -1,0 +1,43 @@
+{
+    "api": "transformers.InstructBlipVideoProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "qformer_tokenizer",
+        "num_query_tokens",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "InstructBlipVideoImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of InstructBlipVideoImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "AutoTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of [PreTrainedTokenizer`]. The tokenizer is a required input."
+        },
+        {
+            "name": "qformer_tokenizer",
+            "type": "AutoTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of [PreTrainedTokenizer`]. The Q-Former tokenizer is a required input."
+        },
+        {
+            "name": "num_query_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Number of tokens used by the Qformer as queries, should be same as in models config."
+        }
+    ],
+    "return": ""
+}

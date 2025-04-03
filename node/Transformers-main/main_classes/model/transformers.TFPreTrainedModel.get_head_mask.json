@@ -1,0 +1,29 @@
+{
+    "api": "transformers.TFPreTrainedModel.get_head_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "head_mask:",
+        "tf.Tensor",
+        "|",
+        "None",
+        "num_hidden_layers"
+    ],
+    "params": [
+        {
+            "name": "head_mask",
+            "type": "tf.Tensor with shape [num_heads],[num_hidden_layers x num_heads]",
+            "optional": true,
+            "default": "",
+            "description": "The mask indicating if we should keep the heads or not (1.0 for keep, 0.0 for discard)."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of hidden layers in the model."
+        }
+    ],
+    "return": ""
+}

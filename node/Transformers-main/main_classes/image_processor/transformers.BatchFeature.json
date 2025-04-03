@@ -1,0 +1,30 @@
+{
+    "api": "transformers.BatchFeature",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "data:",
+        "typing.Optional[dict[str,",
+        "typing.Any]]",
+        "tensor_type",
+        "str,",
+        "transformers.utils.generic.TensorType]"
+    ],
+    "params": [
+        {
+            "name": "data",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of lists/arrays/tensors returned by the call/pad methods (input_values, attention_mask,etc.)."
+        },
+        {
+            "name": "tensor_type",
+            "type": "Union[None, str, TensorType]",
+            "optional": true,
+            "default": "",
+            "description": "You can give a tensor_type here to convert the lists of integers in PyTorch/TensorFlow/Numpy Tensors atinitialization."
+        }
+    ],
+    "return": ""
+}

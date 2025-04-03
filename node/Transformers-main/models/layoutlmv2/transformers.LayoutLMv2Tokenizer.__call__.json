@@ -1,0 +1,177 @@
+{
+    "api": "transformers.LayoutLMv2Tokenizer.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "typing.List[str],",
+        "typing.List[typing.List[str]]]",
+        "text_pair",
+        "typing.List[typing.List[str]],",
+        "NoneType]",
+        "boxes",
+        "typing.List[typing.List[typing.List[int]]]]",
+        "word_labels",
+        "typing.List[typing.List[int]],",
+        "NoneType]",
+        "add_special_tokens",
+        "padding",
+        "str,",
+        "transformers.utils.generic.PaddingStrategy]",
+        "truncation",
+        "str,",
+        "transformers.tokenization_utils_base.TruncationStrategy]",
+        "max_length",
+        "stride",
+        "pad_to_multiple_of",
+        "padding_side",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "return_token_type_ids",
+        "return_attention_mask",
+        "return_overflowing_tokens",
+        "return_special_tokens_mask",
+        "return_offsets_mapping",
+        "return_length",
+        "verbose",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str, List[str], List[List[str]]",
+            "optional": false,
+            "default": "",
+            "description": "The sequence or batch of sequences to be encoded. Each sequence can be a string, a list of strings(words of a single example or questions of a batch of examples) or a list of list of strings (batch ofwords)."
+        },
+        {
+            "name": "text_pair",
+            "type": "List[str], List[List[str]]",
+            "optional": false,
+            "default": "",
+            "description": "The sequence or batch of sequences to be encoded. Each sequence should be a list of strings(pretokenized string)."
+        },
+        {
+            "name": "boxes",
+            "type": "List[List[int]], List[List[List[int]]]",
+            "optional": false,
+            "default": "",
+            "description": "Word-level bounding boxes. Each bounding box should be normalized to be on a 0-1000 scale."
+        },
+        {
+            "name": "word_labels",
+            "type": "List[int], List[List[int]]",
+            "optional": true,
+            "default": "",
+            "description": "Word-level integer labels (for token classification tasks such as FUNSD, CORD)."
+        },
+        {
+            "name": "add_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to encode the sequences with the special tokens relative to their model."
+        },
+        {
+            "name": "padding",
+            "type": "bool, str,PaddingStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Activates and controls padding. Accepts the following values:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths)."
+        },
+        {
+            "name": "truncation",
+            "type": "bool, str,TruncationStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Activates and controls truncation. Accepts the following values:True or longest_first: Truncate to a maximum length specified with the argument max_length orto the maximum acceptable input length for the model if that argument is not provided. This willtruncate token by token, removing a token from the longest sequence in the pair if a pair ofsequences (or a batch of pairs) is provided.only_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the first sequence of a pair if a pair of sequences (or a batch of pairs) is provided.only_second: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the second sequence of a pair if a pair of sequences (or a batch of pairs) is provided.False or do_not_truncate (default): No truncation (i.e., can output batch with sequence lengthsgreater than the model maximum admissible input size)."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Controls the maximum length to use by one of the truncation/padding parameters.If left unset or set to None, this will use the predefined model maximum length if a maximum lengthis required by one of the truncation/padding parameters. If the model has no specific maximum inputlength (like XLNet) truncation/padding to a maximum length will be deactivated."
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set to a number along with max_length, the overflowing tokens returned whenreturn_overflowing_tokens=True will contain some tokens from the end of the truncated sequencereturned to provide some overlap between truncated and overflowing sequences. The value of thisargument defines the number of overlapping tokens."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set will pad the sequence to a multiple of the provided value. This is especially useful to enablethe use of Tensor Cores on NVIDIA hardware with compute capability >= 7.5 (Volta)."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        },
+        {
+            "name": "return_token_type_ids",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return token type IDs. If left to the default, will return the token type IDs according tothe specific tokenizers default, defined by the return_outputs attribute.What are token type IDs?"
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the attention mask. If left to the default, will return the attention mask accordingto the specific tokenizers default, defined by the return_outputs attribute.What are attention masks?"
+        },
+        {
+            "name": "return_overflowing_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return overflowing token sequences. If a pair of sequences of input ids (or a batchof pairs) is provided with truncation_strategy = longest_first or True, an error is raised insteadof returning overflowing tokens."
+        },
+        {
+            "name": "return_special_tokens_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return special tokens mask information."
+        },
+        {
+            "name": "return_offsets_mapping",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return (char_start, char_end) for each token.This is only available on fast tokenizers inheriting from PreTrainedTokenizerFast, if usingPythons tokenizer, this method will raise NotImplementedError."
+        },
+        {
+            "name": "return_length",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the lengths of the encoded inputs."
+        },
+        {
+            "name": "verbose",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to print more information and warnings."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "passed to the self.tokenize() method"
+        }
+    ],
+    "return": "BatchEncoding"
+}

@@ -1,0 +1,36 @@
+{
+    "api": "transformers.FlaubertForQuestionAnswering.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "langs",
+        "token_type_ids",
+        "position_ids",
+        "lengths",
+        "cache",
+        "torch.Tensor]]",
+        "head_mask",
+        "inputs_embeds",
+        "start_positions",
+        "end_positions",
+        "is_impossible",
+        "cls_index",
+        "p_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary."
+        }
+    ],
+    "return": "transformers.models.flaubert.modeling_flaubert.FlaubertForQuestionAnsweringOutput or tuple(torch.FloatTensor)"
+}

@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ReactAgent.direct_run",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "task:",
+        "str"
+    ],
+    "params": [],
+    "return": ""
+}

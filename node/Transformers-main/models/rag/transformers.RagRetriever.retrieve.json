@@ -1,0 +1,28 @@
+{
+    "api": "transformers.RagRetriever.retrieve",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "question_hidden_states:",
+        "ndarray",
+        "n_docs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "question_hidden_states",
+            "type": "np.ndarray of shape (batch_size, vector_size)",
+            "optional": false,
+            "default": "",
+            "description": "A batch of query vectors to retrieve with."
+        },
+        {
+            "name": "n_docs",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of docs retrieved per query."
+        }
+    ],
+    "return": "Tuple[np.ndarray, np.ndarray, List[dict]]"
+}

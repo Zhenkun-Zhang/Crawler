@@ -1,0 +1,43 @@
+{
+    "api": "transformers.SmolVLMProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "image_seq_len",
+        "chat_template",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "SmolVLMImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of SmolVLMImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizerBase",
+            "optional": true,
+            "default": "None",
+            "description": "An instance of PreTrainedTokenizerBase. This should correspond with the models text model. The tokenizer is a required input."
+        },
+        {
+            "name": "image_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The length of the image sequence i.e. the number of  tokens per image in the input.This parameter is used to build the string from the input prompt and image tokens and should match thevalue the model used. It is computed as: image_seq_len = int(((image_size // patch_size)  2) / (scale_factor2))"
+        },
+        {
+            "name": "chat_template",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A Jinja template which will be used to convert lists of messagesin a chat into a tokenizable string."
+        }
+    ],
+    "return": ""
+}

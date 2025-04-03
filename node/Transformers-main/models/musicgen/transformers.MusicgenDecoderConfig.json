@@ -1,0 +1,150 @@
+{
+    "api": "transformers.MusicgenDecoderConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "max_position_embeddings",
+        "num_hidden_layers",
+        "ffn_dim",
+        "num_attention_heads",
+        "layerdrop",
+        "use_cache",
+        "activation_function",
+        "hidden_size",
+        "dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "initializer_factor",
+        "scale_embedding",
+        "num_codebooks",
+        "audio_channels",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "tie_word_embeddings",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Vocabulary size of the MusicgenDecoder model. Defines the number of different tokens that can berepresented by the inputs_ids passed when calling MusicgenDecoder."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer block."
+        },
+        {
+            "name": "ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in the Transformer block."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the decoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, text_encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "The maximum sequence length that this model might ever be used with. Typically, set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "initializer_factor",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability for the decoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "scale_embedding",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Scale embeddings by diving by sqrt(hidden_size)."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the model should return the last key/values attentions (not used by all models)"
+        },
+        {
+            "name": "num_codebooks",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The number of parallel codebooks forwarded to the model."
+        },
+        {
+            "name": "tie_word_embeddings(bool,",
+            "type": "optional, defaults to False",
+            "optional": true,
+            "default": "",
+            "description": "Whether input and output word embeddings should be tied."
+        },
+        {
+            "name": "audio_channels",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of channels in the audio data. Either 1 for mono or 2 for stereo. Stereo models generate a separateaudio stream for the left/right output channels. Mono models generate a single audio stream output."
+        }
+    ],
+    "return": ""
+}

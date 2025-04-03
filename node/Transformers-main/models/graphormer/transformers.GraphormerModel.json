@@ -1,0 +1,11 @@
+{
+    "api": "transformers.GraphormerModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "GraphormerConfig"
+    ],
+    "params": [],
+    "return": ""
+}

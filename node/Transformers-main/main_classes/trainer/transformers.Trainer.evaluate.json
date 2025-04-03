@@ -1,0 +1,38 @@
+{
+    "api": "transformers.Trainer.evaluate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "eval_dataset:",
+        "typing.Union[torch.utils.data.dataset.Dataset,",
+        "dict[str,",
+        "torch.utils.data.dataset.Dataset],",
+        "NoneType]",
+        "ignore_keys",
+        "metric_key_prefix"
+    ],
+    "params": [
+        {
+            "name": "eval_dataset",
+            "type": "Union[Dataset, Dict[str, Dataset]",
+            "optional": true,
+            "default": "",
+            "description": "Pass a dataset if you wish to override self.eval_dataset. If it is a Dataset, columnsnot accepted by the model.forward() method are automatically removed. If it is a dictionary, it willevaluate on each dataset, prepending the dictionary key to the metric name. Datasets must implement the__len__ method.If you pass a dictionary with names of datasets as keys and datasets as values, evaluate will runseparate evaluations on each dataset. This can be useful to monitor how training affects otherdatasets or simply to get a more fine-grained evaluation.When used with load_best_model_at_end, make sure metric_for_best_model references exactly oneof the datasets. If you, for example, pass in {data1: data1, data2: data2} for two datasetsdata1 and data2, you could specify metric_for_best_model=eval_data1_loss for using theloss on data1 and metric_for_best_model=eval_data2_loss for the loss on data2."
+        },
+        {
+            "name": "ignore_keys",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "A list of keys in the output of your model (if it is a dictionary) that should be ignored whengathering predictions."
+        },
+        {
+            "name": "metric_key_prefix",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "An optional prefix to be used as the metrics key prefix. For example the metrics bleu will be namedeval_bleu if the prefix is eval (default)"
+        }
+    ],
+    "return": ""
+}

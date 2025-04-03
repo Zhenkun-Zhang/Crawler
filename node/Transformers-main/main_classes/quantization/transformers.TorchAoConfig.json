@@ -1,0 +1,14 @@
+{
+    "api": "transformers.TorchAoConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "quant_type:",
+        "typing.Union[str,",
+        "ForwardRef('AOBaseConfig')]",
+        "modules_to_not_convert",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

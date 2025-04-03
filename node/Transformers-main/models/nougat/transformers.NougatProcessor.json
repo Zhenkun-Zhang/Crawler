@@ -1,0 +1,26 @@
+{
+    "api": "transformers.NougatProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "NougatImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of NougatImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "NougatTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "An instance of NougatTokenizerFast. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,13 @@
+{
+    "api": "transformers.integrations.SwanLabCallback.setup",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args",
+        "state",
+        "model",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,27 @@
+{
+    "api": "transformers.MobileNetV2ImageProcessor.post_process_semantic_segmentation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs",
+        "target_sizes",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "MobileNetV2ForSemanticSegmentation",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "target_sizes",
+            "type": "List[Tuple] of length batch_size",
+            "optional": true,
+            "default": "",
+            "description": "List of tuples corresponding to the requested final size (height, width) of each prediction. If unset,predictions will not be resized."
+        }
+    ],
+    "return": "semantic_segmentation"
+}

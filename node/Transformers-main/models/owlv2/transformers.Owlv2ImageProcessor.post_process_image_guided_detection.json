@@ -1,0 +1,43 @@
+{
+    "api": "transformers.Owlv2ImageProcessor.post_process_image_guided_detection",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs",
+        "threshold",
+        "nms_threshold",
+        "target_sizes",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "OwlViTImageGuidedObjectDetectionOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Minimum confidence threshold to use to filter out predicted boxes."
+        },
+        {
+            "name": "nms_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "0.3",
+            "description": "IoU threshold for non-maximum suppression of overlapping boxes."
+        },
+        {
+            "name": "target_sizes",
+            "type": "torch.Tensor",
+            "optional": true,
+            "default": "None",
+            "description": "Tensor of shape (batch_size, 2) where each entry is the (height, width) of the corresponding image inthe batch. If set, predicted normalized bounding boxes are rescaled to the target sizes. If left toNone, predictions will not be unnormalized."
+        }
+    ],
+    "return": "List[Dict]"
+}

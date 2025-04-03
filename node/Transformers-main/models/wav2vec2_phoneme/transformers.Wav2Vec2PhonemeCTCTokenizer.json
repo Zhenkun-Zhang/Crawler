@@ -1,0 +1,84 @@
+{
+    "api": "transformers.Wav2Vec2PhonemeCTCTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "bos_token",
+        "eos_token",
+        "unk_token",
+        "pad_token",
+        "phone_delimiter_token",
+        "word_delimiter_token",
+        "do_phonemize",
+        "phonemizer_lang",
+        "phonemizer_backend",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the vocabulary."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sentence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sentence token."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "do_phonemize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the tokenizer should phonetize the input or not. Only if a sequence of phonemes is passed to thetokenizer, do_phonemize should be set to False."
+        },
+        {
+            "name": "phonemizer_lang",
+            "type": "str",
+            "optional": true,
+            "default": "en-us",
+            "description": "The language of the phoneme set to which the tokenizer should phonetize the input text to."
+        },
+        {
+            "name": "phonemizer_backend",
+            "type": "str",
+            "optional": true,
+            "default": "espeak",
+            "description": "The backend phonetization library that shall be used by the phonemizer library. Defaults to espeak-ng.See the phonemizer package. for more information."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments passed along to PreTrainedTokenizer"
+        }
+    ],
+    "return": ""
+}

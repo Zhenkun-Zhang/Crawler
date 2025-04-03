@@ -1,0 +1,34 @@
+{
+    "api": "transformers.MllamaProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "chat_template"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "MllamaImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "[PreTrainedTokenizer, PreTrainedTokenizerFast]",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer is a required input."
+        },
+        {
+            "name": "chat_template",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A Jinja template which will be used to convert lists of messagesin a chat into a tokenizable string."
+        }
+    ],
+    "return": ""
+}

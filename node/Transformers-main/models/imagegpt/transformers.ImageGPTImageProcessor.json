@@ -1,0 +1,64 @@
+{
+    "api": "transformers.ImageGPTImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "clusters:",
+        "typing.Union[typing.List[typing.List[int]],",
+        "numpy.ndarray,",
+        "NoneType]",
+        "do_resize",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_normalize",
+        "do_color_quantize",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "clusters",
+            "type": "np.ndarray,List[List[int]]",
+            "optional": true,
+            "default": "",
+            "description": "The color clusters to use, of shape (n_clusters, 3) when color quantizing. Can be overriden by clustersin preprocess."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images dimensions to (size[height], size[width]). Can be overridden bydo_resize in preprocess."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 256, \"width\": 256}):Size of the image after resizing. Can be overridden by size in preprocess.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by resample in preprocess."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image pixel value to between [-1, 1]. Can be overridden by do_normalize inpreprocess."
+        },
+        {
+            "name": "do_color_quantize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to color quantize the image. Can be overridden by do_color_quantize in preprocess."
+        }
+    ],
+    "return": ""
+}

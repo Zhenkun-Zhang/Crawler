@@ -1,0 +1,27 @@
+{
+    "api": "transformers.set_seed",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "seed:",
+        "int",
+        "deterministic"
+    ],
+    "params": [
+        {
+            "name": "seed",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The seed to set."
+        },
+        {
+            "name": "deterministic",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use deterministic algorithms where available. Can slow down training."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,19 @@
+{
+    "api": "transformers.modeling_outputs.SampleTSPredictionOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "sequences:",
+        "typing.Optional[torch.FloatTensor]"
+    ],
+    "params": [
+        {
+            "name": "sequences",
+            "type": "torch.FloatTensor of shape (batch_size, num_samples, prediction_length),(batch_size, num_samples, prediction_length, input_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sampled values from the chosen distribution."
+        }
+    ],
+    "return": ""
+}

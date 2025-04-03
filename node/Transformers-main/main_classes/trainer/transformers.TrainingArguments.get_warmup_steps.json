@@ -1,0 +1,11 @@
+{
+    "api": "transformers.TrainingArguments.get_warmup_steps",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "num_training_steps:",
+        "int"
+    ],
+    "params": [],
+    "return": ""
+}

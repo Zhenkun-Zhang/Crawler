@@ -1,0 +1,26 @@
+{
+    "api": "transformers.DepthProForDepthEstimation",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "use_fov_model"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "DepthProConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        },
+        {
+            "name": "use_fov_model",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether to use DepthProFovModel to generate the field of view."
+        }
+    ],
+    "return": ""
+}

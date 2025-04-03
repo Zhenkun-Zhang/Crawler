@@ -1,0 +1,83 @@
+{
+    "api": "transformers.squad_convert_examples_to_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "examples",
+        "tokenizer",
+        "max_seq_length",
+        "doc_stride",
+        "max_query_length",
+        "is_training",
+        "padding_strategy",
+        "return_dataset",
+        "threads",
+        "tqdm_enabled"
+    ],
+    "params": [
+        {
+            "name": "examples",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "list of SquadExample"
+        },
+        {
+            "name": "tokenizer",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "an instance of a child of PreTrainedTokenizer"
+        },
+        {
+            "name": "max_seq_length",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The maximum sequence length of the inputs."
+        },
+        {
+            "name": "doc_stride",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The stride used when the context is too large and is split across several features."
+        },
+        {
+            "name": "max_query_length",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The maximum length of the query."
+        },
+        {
+            "name": "is_training",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "whether to create features for model evaluation or model training."
+        },
+        {
+            "name": "padding_strategy",
+            "type": "",
+            "optional": false,
+            "default": "max_length",
+            "description": "Default to max_length. Which padding strategy to use"
+        },
+        {
+            "name": "return_dataset",
+            "type": "",
+            "optional": false,
+            "default": "False",
+            "description": "Default False. Either pt or tf.if pt: returns a torch.data.TensorDataset, if tf: returns a tf.data.Dataset"
+        },
+        {
+            "name": "threads",
+            "type": "",
+            "optional": false,
+            "default": "1",
+            "description": "multiple processing threads."
+        }
+    ],
+    "return": ""
+}

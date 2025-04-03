@@ -1,0 +1,11 @@
+{
+    "api": "transformers.TimmBackbone",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,19 @@
+{
+    "api": "transformers.GenerationConfig.update",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary of attributes to tentatively update this class."
+        }
+    ],
+    "return": "Dict[str, Any]"
+}

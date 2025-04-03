@@ -1,0 +1,68 @@
+{
+    "api": "transformers.Blip2ForImageTextRetrieval.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor",
+        "input_ids",
+        "attention_mask",
+        "use_image_text_matching_head",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using Blip2Processor. See Blip2Processor.__call__() fordetails."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary of the language model. Input tokens can optionally beprovided to serve as text prompt, which the language model can continue.Indices can be obtained using Blip2Processor. See Blip2Processor.__call__() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "use_image_text_matching_head",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the Image-Text Matching or Contrastive scores."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.blip_2.modeling_blip_2.Blip2ImageTextMatchingModelOutput or tuple(torch.FloatTensor)"
+}

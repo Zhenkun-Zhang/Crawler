@@ -1,0 +1,27 @@
+{
+    "api": "transformers.modeling_utils.ModuleUtilsMixin.num_parameters",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "only_trainable:",
+        "exclude_embeddings",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "only_trainable",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return only the number of trainable parameters"
+        },
+        {
+            "name": "exclude_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return only the number of non-embeddings parameters"
+        }
+    ],
+    "return": "int"
+}

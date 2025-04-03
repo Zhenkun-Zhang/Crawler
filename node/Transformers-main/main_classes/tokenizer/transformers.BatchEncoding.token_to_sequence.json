@@ -1,0 +1,28 @@
+{
+    "api": "transformers.BatchEncoding.token_to_sequence",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "batch_or_token_index:",
+        "int",
+        "token_index",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "batch_or_token_index",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index of the sequence in the batch. If the batch only comprises one sequence, this can be the index ofthe token in the sequence."
+        },
+        {
+            "name": "token_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If a batch index is provided in batch_or_token_index, this can be the index of the token in thesequence."
+        }
+    ],
+    "return": "int"
+}

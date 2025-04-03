@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFBertLMHeadModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "BertConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

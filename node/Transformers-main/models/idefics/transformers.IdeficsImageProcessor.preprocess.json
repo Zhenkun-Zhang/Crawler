@@ -1,0 +1,74 @@
+{
+    "api": "transformers.IdeficsImageProcessor.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "image_num_channels",
+        "image_size",
+        "int]]",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "transform",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "<TensorType.PYTORCH",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "A list of images to preprocess."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Resize to image size"
+        },
+        {
+            "name": "image_num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of image channels."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method. Canbe overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocessmethod. Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "transform",
+            "type": "Callable",
+            "optional": true,
+            "default": "",
+            "description": "A custom transform function that accepts a single image can be passed for training. For example,torchvision.Compose can be used to compose multiple transforms. If None - an inference mode isassumed - and then a preset of inference-specific transforms will be applied to the images"
+        }
+    ],
+    "return": ""
+}

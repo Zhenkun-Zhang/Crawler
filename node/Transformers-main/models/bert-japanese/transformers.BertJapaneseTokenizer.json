@@ -1,0 +1,97 @@
+{
+    "api": "transformers.BertJapaneseTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "spm_file",
+        "do_lower_case",
+        "do_word_tokenize",
+        "do_subword_tokenize",
+        "word_tokenizer_type",
+        "subword_tokenizer_type",
+        "never_split",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "mecab_kwargs",
+        "sudachi_kwargs",
+        "jumanpp_kwargs",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to a one-wordpiece-per-line vocabulary file."
+        },
+        {
+            "name": "spm_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to SentencePiece file (generally has a .spm or .modelextension) that contains the vocabulary."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to lower case the input. Only has an effect when do_basic_tokenize=True."
+        },
+        {
+            "name": "do_word_tokenize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to do word tokenization."
+        },
+        {
+            "name": "do_subword_tokenize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to do subword tokenization."
+        },
+        {
+            "name": "word_tokenizer_type",
+            "type": "str",
+            "optional": true,
+            "default": "basic",
+            "description": "Type of word tokenizer. Choose from [basic, mecab, sudachi, jumanpp]."
+        },
+        {
+            "name": "subword_tokenizer_type",
+            "type": "str",
+            "optional": true,
+            "default": "wordpiece",
+            "description": "Type of subword tokenizer. Choose from [wordpiece, character, sentencepiece,]."
+        },
+        {
+            "name": "mecab_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary passed to the MecabTokenizer constructor."
+        },
+        {
+            "name": "sudachi_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary passed to the SudachiTokenizer constructor."
+        },
+        {
+            "name": "jumanpp_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary passed to the JumanppTokenizer constructor."
+        }
+    ],
+    "return": ""
+}

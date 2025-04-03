@@ -1,0 +1,36 @@
+{
+    "api": "transformers.RobertaTokenizer.get_special_tokens_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0:",
+        "typing.List[int]",
+        "token_ids_1",
+        "already_has_special_tokens",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids_0",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "List of IDs."
+        },
+        {
+            "name": "token_ids_1",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Optional second list of IDs for sequence pairs."
+        },
+        {
+            "name": "already_has_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the token list is already formatted with special tokens for the model."
+        }
+    ],
+    "return": "List[int]"
+}

@@ -1,0 +1,64 @@
+{
+    "api": "transformers.models.xlnet.modeling_tf_xlnet.TFXLNetForQuestionAnsweringSimpleOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "|",
+        "start_logits",
+        "end_logits",
+        "mems",
+        "|",
+        "hidden_states",
+        "...]",
+        "|",
+        "attentions",
+        "...]",
+        "|"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "tf.Tensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Total span extraction loss is the sum of a Cross-Entropy for the start and end positions."
+        },
+        {
+            "name": "start_logits",
+            "type": "tf.Tensor of shape (batch_size, sequence_length,)",
+            "optional": false,
+            "default": "",
+            "description": "Span-start scores (before SoftMax)."
+        },
+        {
+            "name": "end_logits",
+            "type": "tf.Tensor of shape (batch_size, sequence_length,)",
+            "optional": false,
+            "default": "",
+            "description": "Span-end scores (before SoftMax)."
+        },
+        {
+            "name": "mems",
+            "type": "List[tf.Tensor] of length config.n_layers",
+            "optional": false,
+            "default": "",
+            "description": "Contains pre-computed hidden-states. Can be used (see mems input) to speed up sequential decoding. Thetoken ids which have their past given to this model should not be passed as input_ids as they havealready been computed."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

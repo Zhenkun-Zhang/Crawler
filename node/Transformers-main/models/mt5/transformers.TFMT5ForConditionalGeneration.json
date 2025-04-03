@@ -1,0 +1,11 @@
+{
+    "api": "transformers.TFMT5ForConditionalGeneration",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

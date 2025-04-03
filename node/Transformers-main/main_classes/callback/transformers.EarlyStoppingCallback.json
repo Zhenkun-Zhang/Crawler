@@ -1,0 +1,27 @@
+{
+    "api": "transformers.EarlyStoppingCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "early_stopping_patience:",
+        "int",
+        "early_stopping_threshold"
+    ],
+    "params": [
+        {
+            "name": "early_stopping_patience",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Use with metric_for_best_model to stop training when the specified metric worsens forearly_stopping_patience evaluation calls."
+        },
+        {
+            "name": "early_stopping_threshold(float,",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Use with TrainingArguments metric_for_best_model and early_stopping_patience to denote how much thespecified metric must improve to satisfy early stopping conditions. `"
+        }
+    ],
+    "return": ""
+}

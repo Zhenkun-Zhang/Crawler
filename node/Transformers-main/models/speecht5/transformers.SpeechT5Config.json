@@ -1,0 +1,450 @@
+{
+    "api": "transformers.SpeechT5Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "encoder_layers",
+        "encoder_attention_heads",
+        "encoder_ffn_dim",
+        "encoder_layerdrop",
+        "decoder_layers",
+        "decoder_ffn_dim",
+        "decoder_attention_heads",
+        "decoder_layerdrop",
+        "hidden_act",
+        "positional_dropout",
+        "hidden_dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "initializer_range",
+        "layer_norm_eps",
+        "scale_embedding",
+        "feat_extract_norm",
+        "feat_proj_dropout",
+        "feat_extract_activation",
+        "conv_dim",
+        "512,",
+        "512,",
+        "512,",
+        "512,",
+        "512,",
+        "512)",
+        "conv_stride",
+        "2,",
+        "2,",
+        "2,",
+        "2,",
+        "2,",
+        "2)",
+        "conv_kernel",
+        "3,",
+        "3,",
+        "3,",
+        "3,",
+        "2,",
+        "2)",
+        "conv_bias",
+        "num_conv_pos_embeddings",
+        "num_conv_pos_embedding_groups",
+        "apply_spec_augment",
+        "mask_time_prob",
+        "mask_time_length",
+        "mask_time_min_masks",
+        "mask_feature_prob",
+        "mask_feature_length",
+        "mask_feature_min_masks",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "decoder_start_token_id",
+        "num_mel_bins",
+        "speech_decoder_prenet_layers",
+        "speech_decoder_prenet_units",
+        "speech_decoder_prenet_dropout",
+        "speaker_embedding_dim",
+        "speech_decoder_postnet_layers",
+        "speech_decoder_postnet_units",
+        "speech_decoder_postnet_kernel",
+        "speech_decoder_postnet_dropout",
+        "reduction_factor",
+        "max_speech_positions",
+        "max_text_positions",
+        "encoder_max_relative_position",
+        "use_guided_attention_loss",
+        "guided_attention_loss_num_heads",
+        "guided_attention_loss_sigma",
+        "guided_attention_loss_scale",
+        "use_cache",
+        "is_encoder_decoder",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "81",
+            "description": "Vocabulary size of the SpeechT5 model. Defines the number of different tokens that can be represented bythe inputs_ids passed to the forward method of SpeechT5Model."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "encoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The LayerDrop probability for the encoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of hidden layers in the Transformer decoder."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in the Transformer decoder."
+        },
+        {
+            "name": "decoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The LayerDrop probability for the decoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "positional_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for the text position encoding layers."
+        },
+        {
+            "name": "hidden_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "scale_embedding",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Scale embeddings by diving by sqrt(d_model)."
+        },
+        {
+            "name": "feat_extract_norm",
+            "type": "str",
+            "optional": true,
+            "default": "group",
+            "description": "The norm to be applied to 1D convolutional layers in the speech encoder pre-net. One of group for groupnormalization of only the first 1D convolutional layer or layer for layer normalization of all 1Dconvolutional layers."
+        },
+        {
+            "name": "feat_proj_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for output of the speech encoder pre-net."
+        },
+        {
+            "name": "feat_extract_activation",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": ""
+        },
+        {
+            "name": "conv_dim",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(512,",
+            "description": "A tuple of integers defining the number of input and output channels of each 1D convolutional layer in thespeech encoder pre-net. The length of conv_dim defines the number of 1D convolutional layers."
+        },
+        {
+            "name": "conv_stride",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(5,",
+            "description": "A tuple of integers defining the stride of each 1D convolutional layer in the speech encoder pre-net. Thelength of conv_stride defines the number of convolutional layers and has to match the length ofconv_dim."
+        },
+        {
+            "name": "conv_kernel",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(10,",
+            "description": "A tuple of integers defining the kernel size of each 1D convolutional layer in the speech encoder pre-net.The length of conv_kernel defines the number of convolutional layers and has to match the length ofconv_dim."
+        },
+        {
+            "name": "conv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether the 1D convolutional layers have a bias."
+        },
+        {
+            "name": "num_conv_pos_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Number of convolutional positional embeddings. Defines the kernel size of 1D convolutional positionalembeddings layer."
+        },
+        {
+            "name": "num_conv_pos_embedding_groups",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of groups of 1D convolutional positional embeddings layer."
+        },
+        {
+            "name": "apply_spec_augment",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to apply SpecAugment data augmentation to the outputs of the speech encoder pre-net. Forreference see SpecAugment: A Simple Data Augmentation Method for Automatic SpeechRecognition."
+        },
+        {
+            "name": "mask_time_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.05",
+            "description": "Percentage (between 0 and 1) of all feature vectors along the time axis which will be masked. The maskingprocecure generates mask_time_problen(time_axis)/mask_time_length independent masks over the axis. Ifreasoning from the propability of each feature vector to be chosen as the start of the vector span to bemasked, mask_time_prob should be `prob_vector_startmask_time_length. Note that overlap may decrease the actual percentage of masked vectors. This is only relevant if apply_spec_augment is True`."
+        },
+        {
+            "name": "mask_time_length",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Length of vector span along the time axis."
+        },
+        {
+            "name": "mask_time_min_masks",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The minimum number of masks of length mask_feature_length generated along the time axis, each time step,irrespectively of mask_feature_prob. Only relevant if mask_time_prob*len(time_axis)/mask_time_length <mask_time_min_masks"
+        },
+        {
+            "name": "mask_feature_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Percentage (between 0 and 1) of all feature vectors along the feature axis which will be masked. Themasking procecure generates mask_feature_problen(feature_axis)/mask_time_length independent masks overthe axis. If reasoning from the propability of each feature vector to be chosen as the start of the vectorspan to be masked, mask_feature_prob should be `prob_vector_startmask_feature_length. Note that overlap may decrease the actual percentage of masked vectors. This is only relevant if apply_spec_augment isTrue`."
+        },
+        {
+            "name": "mask_feature_length",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Length of vector span along the feature axis."
+        },
+        {
+            "name": "mask_feature_min_masks",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The minimum number of masks of length mask_feature_length generated along the feature axis, each timestep, irrespectively of mask_feature_prob. Only relevant ifmask_feature_prob*len(feature_axis)/mask_feature_length < mask_feature_min_masks"
+        },
+        {
+            "name": "num_mel_bins",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "Number of mel features used per input features. Used by the speech decoder pre-net. Should correspond tothe value used in the SpeechT5Processor class."
+        },
+        {
+            "name": "speech_decoder_prenet_layers",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of layers in the speech decoder pre-net."
+        },
+        {
+            "name": "speech_decoder_prenet_units",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the layers in the speech decoder pre-net."
+        },
+        {
+            "name": "speech_decoder_prenet_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "The dropout probability for the speech decoder pre-net layers."
+        },
+        {
+            "name": "speaker_embedding_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of the XVector embedding vectors."
+        },
+        {
+            "name": "speech_decoder_postnet_layers",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Number of layers in the speech decoder post-net."
+        },
+        {
+            "name": "speech_decoder_postnet_units",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the layers in the speech decoder post-net."
+        },
+        {
+            "name": "speech_decoder_postnet_kernel",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Number of convolutional filter channels in the speech decoder post-net."
+        },
+        {
+            "name": "speech_decoder_postnet_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "The dropout probability for the speech decoder post-net layers."
+        },
+        {
+            "name": "reduction_factor",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Spectrogram length reduction factor for the speech decoder inputs."
+        },
+        {
+            "name": "max_speech_positions",
+            "type": "int",
+            "optional": true,
+            "default": "4000",
+            "description": "The maximum sequence length of speech features that this model might ever be used with."
+        },
+        {
+            "name": "max_text_positions",
+            "type": "int",
+            "optional": true,
+            "default": "450",
+            "description": "The maximum sequence length of text features that this model might ever be used with."
+        },
+        {
+            "name": "encoder_max_relative_position",
+            "type": "int",
+            "optional": true,
+            "default": "160",
+            "description": "Maximum distance for relative position embedding in the encoder."
+        },
+        {
+            "name": "use_guided_attention_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to apply guided attention loss while training the TTS model."
+        },
+        {
+            "name": "guided_attention_loss_num_heads",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of attention heads the guided attention loss will be applied to. Use -1 to apply this loss to allattention heads."
+        },
+        {
+            "name": "guided_attention_loss_sigma",
+            "type": "float",
+            "optional": true,
+            "default": "0.4",
+            "description": "Standard deviation for guided attention loss."
+        },
+        {
+            "name": "guided_attention_loss_scale",
+            "type": "float",
+            "optional": true,
+            "default": "10.0",
+            "description": "Scaling coefficient for guided attention loss (also known as lambda)."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        }
+    ],
+    "return": ""
+}

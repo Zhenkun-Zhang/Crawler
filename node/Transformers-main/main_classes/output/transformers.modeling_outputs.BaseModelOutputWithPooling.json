@@ -1,0 +1,44 @@
+{
+    "api": "transformers.modeling_outputs.BaseModelOutputWithPooling",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "last_hidden_state:",
+        "pooler_output",
+        "hidden_states",
+        "...]]",
+        "attentions",
+        "...]]"
+    ],
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the model."
+        },
+        {
+            "name": "pooler_output",
+            "type": "torch.FloatTensor of shape (batch_size, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Last layer hidden-state of the first token of the sequence (classification token) after further processingthrough the layers used for the auxiliary pretraining task. E.g. for BERT-family of models, this returnsthe classification token after processing through a linear layer and a tanh activation function. The linearlayer weights are trained from the next sentence prediction (classification) objective during pretraining."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

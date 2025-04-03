@@ -1,0 +1,28 @@
+{
+    "api": "transformers.EetqConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "weights:",
+        "str",
+        "modules_to_not_convert",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "weights",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The target dtype for the weights. Supported value is only int8"
+        },
+        {
+            "name": "modules_to_not_convert",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "The list of modules to not quantize, useful for quantizing models that explicitly require to havesome modules left in their original precision."
+        }
+    ],
+    "return": ""
+}

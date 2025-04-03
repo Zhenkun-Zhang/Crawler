@@ -1,0 +1,143 @@
+{
+    "api": "transformers.TrOCRConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "d_model",
+        "decoder_layers",
+        "decoder_attention_heads",
+        "decoder_ffn_dim",
+        "activation_function",
+        "max_position_embeddings",
+        "dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "decoder_start_token_id",
+        "init_std",
+        "decoder_layerdrop",
+        "use_cache",
+        "scale_embedding",
+        "use_learned_position_embeddings",
+        "layernorm_embedding",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "50265",
+            "description": "Vocabulary size of the TrOCR model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling TrOCRForCausalLM."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the layers and the pooler layer."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the pooler. If string, gelu, relu,silu and gelu_new are supported."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "decoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability for the decoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "scale_embedding",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to scale the word embeddings by sqrt(d_model)."
+        },
+        {
+            "name": "use_learned_position_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use learned position embeddings. If not, sinusoidal position embeddings will be used."
+        },
+        {
+            "name": "layernorm_embedding",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use a layernorm after the word + position embeddings."
+        }
+    ],
+    "return": ""
+}

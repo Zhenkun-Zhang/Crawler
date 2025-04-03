@@ -1,0 +1,68 @@
+{
+    "api": "transformers.SpecialTokensMixin",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "verbose",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "bos_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing the beginning of a sentence."
+        },
+        {
+            "name": "eos_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing the end of a sentence."
+        },
+        {
+            "name": "unk_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing an out-of-vocabulary token."
+        },
+        {
+            "name": "sep_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token separating two different sentences in the same input (used by BERT for instance)."
+        },
+        {
+            "name": "pad_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token used to make arrays of tokens the same size for batching purpose. Will then be ignored byattention mechanisms or loss computation."
+        },
+        {
+            "name": "cls_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing the class of the input (used by BERT for instance)."
+        },
+        {
+            "name": "mask_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing a masked token (used by masked-language modeling pretraining objectives, likeBERT)."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "tuple,list of str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A tuple or a list of additional tokens, which will be marked as special, meaning that they will beskipped when decoding if skip_special_tokens is set to True."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,52 @@
+{
+    "api": "transformers.ReformerTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "eos_token",
+        "unk_token",
+        "additional_special_tokens",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "SentencePiece file (generally has a .spm extension) thatcontains the vocabulary necessary to instantiate a tokenizer."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token.When building a sequence using special tokens, this is not the token that is used for the end of sequence.The token used is the sep_token."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "[]",
+            "description": "Additional special tokens used by the tokenizer."
+        },
+        {
+            "name": "sp_model_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the SentencePieceProcessor.__init__() method. The Python wrapper forSentencePiece can be used, among other things,to set:enable_sampling: Enable subword regularization.nbest_size: Sampling parameters for unigram. Invalid for BPE-Dropout.nbest_size = {0,1}: No sampling is performed.nbest_size > 1: samples from the nbest_size results.nbest_size < 0: assuming that nbest_size is infinite and samples from the all hypothesis (lattice)using forward-filtering-and-backward-sampling algorithm.alpha: Smoothing parameter for unigram sampling, and dropout probability of merge operations forBPE-dropout."
+        }
+    ],
+    "return": ""
+}

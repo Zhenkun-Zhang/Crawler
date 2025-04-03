@@ -1,0 +1,228 @@
+{
+    "api": "transformers.PretrainedConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "name_or_path",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Store the string that was passed to PreTrainedModel.from_pretrained() orTFPreTrainedModel.from_pretrained() as pretrained_model_name_or_path if the configuration was createdwith such a method."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should return all hidden-states."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should returns all attentions."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "is_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether the model is used as an encoder/decoder or not."
+        },
+        {
+            "name": "is_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to only use the decoder in an encoder-decoder architecture, otherwise it has no effect on decoder-only or encoder-only architectures."
+        },
+        {
+            "name": "cross_attention_hidden_size**",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "The hidden size of the cross-attention layer in case the model is used as a decoder in an encoder-decodersetting and the cross-attention hidden dimension differs from self.config.hidden_size."
+        },
+        {
+            "name": "add_cross_attention",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether cross-attention layers should be added to the model. Note, this option is only relevant for modelsthat can be used as decoder models within the EncoderDecoderModel class, which consists of all modelsin AUTO_MODELS_FOR_CAUSAL_LM."
+        },
+        {
+            "name": "tie_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether all encoder weights should be tied to their equivalent decoder weights. This requires the encoderand decoder model to have the exact same parameter names."
+        },
+        {
+            "name": "prune_heads",
+            "type": "Dict[int, List[int]]",
+            "optional": true,
+            "default": "",
+            "description": "Pruned heads of the model. The keys are the selected layer indices and the associated values, the list ofheads to prune in said layer.For instance {1: [0, 2], 2: [2, 3]} will prune heads 0 and 2 on layer 1 and heads 2 and 3 on layer 2."
+        },
+        {
+            "name": "chunk_size_feed_forward",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The chunk size of all feed forward layers in the residual attention blocks. A chunk size of 0 means thatthe feed forward layer is not chunked. A chunk size of n means that the feed forward layer processes n <sequence_length embeddings at a time. For more information on feed forward chunking, see How does FeedForward Chunking work?."
+        },
+        {
+            "name": "architectures",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "Model architectures that can be used with the model pretrained weights."
+        },
+        {
+            "name": "finetuning_task",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Name of the task used to fine-tune the model. This can be used when converting from an original (TensorFlowor PyTorch) checkpoint."
+        },
+        {
+            "name": "id2label",
+            "type": "Dict[int, str]",
+            "optional": true,
+            "default": "",
+            "description": "A map from index (for instance prediction index, or target index) to label."
+        },
+        {
+            "name": "label2id",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "A map from label to index for the model."
+        },
+        {
+            "name": "num_labels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of labels to use in the last layer added to the model, typically for a classification task."
+        },
+        {
+            "name": "task_specific_params",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments to store for the current task."
+        },
+        {
+            "name": "problem_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Problem type for XxxForSequenceClassification models. Can be one of regression,single_label_classification or multi_label_classification."
+        },
+        {
+            "name": "tokenizer_class",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The name of the associated tokenizer class to use (if none is set, will use the tokenizer associated to themodel by default)."
+        },
+        {
+            "name": "prefix",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A specific prompt that should be added at the beginning of each text before calling the model."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id of the beginning-of-stream token."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id of the end-of-stream token."
+        },
+        {
+            "name": "decoder_start_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If an encoder-decoder model starts decoding with a different token than bos, the id of that token."
+        },
+        {
+            "name": "sep_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id of the separation token."
+        },
+        {
+            "name": "torchscript",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should be used with Torchscript."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether the models input and output word embeddings should be tied. Note that this is only relevant if themodel has a output word embedding layer."
+        },
+        {
+            "name": "torch_dtype",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The dtype of the weights. This attribute can be used to initialize the model to a non-default dtype(which is normally float32) and thus allow for optimal storage allocation. For example, if the savedmodel is float16, ideally we want to load it back using the minimal amount of memory needed to loadfloat16 weights. Since the config object is stored in plain text, this attribute contains just thefloating type string without the torch. prefix. For example, for torch.float16 `torch_dtype is thefloat16 string.This attribute is currently not being used during model loading time, but this may change in the futureversions. But we can already start preparing for the future by saving the dtype with save_pretrained."
+        },
+        {
+            "name": "use_bfloat16",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should use BFloat16 scalars (only used by some TensorFlow models)."
+        },
+        {
+            "name": "tf_legacy_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether the model should use legacy TensorFlow losses. Legacy losses have variable output shapes and maynot be XLA-compatible. This option is here for backward compatibility and will be removed in Transformersv5."
+        },
+        {
+            "name": "loss_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The type of loss that the model should use. It should be in LOSS_MAPPINGs keys, otherwise the loss willbe automatically inferred from the model architecture."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,19 @@
+{
+    "api": "transformers.Mask2FormerForUniversalSegmentation",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Mask2FormerConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "Mask2FormerConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        }
+    ],
+    "return": ""
+}

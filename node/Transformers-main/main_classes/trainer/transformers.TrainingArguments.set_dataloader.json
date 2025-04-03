@@ -1,0 +1,76 @@
+{
+    "api": "transformers.TrainingArguments.set_dataloader",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "train_batch_size:",
+        "eval_batch_size",
+        "drop_last",
+        "num_workers",
+        "pin_memory",
+        "persistent_workers",
+        "prefetch_factor",
+        "auto_find_batch_size",
+        "ignore_data_skip",
+        "sampler_seed"
+    ],
+    "params": [
+        {
+            "name": "drop_last",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to drop the last incomplete batch (if the length of the dataset is not divisible by the batchsize) or not."
+        },
+        {
+            "name": "num_workers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of subprocesses to use for data loading (PyTorch only). 0 means that the data will be loaded inthe main process."
+        },
+        {
+            "name": "pin_memory",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether you want to pin memory in data loaders or not. Will default to True."
+        },
+        {
+            "name": "persistent_workers",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, the data loader will not shut down the worker processes after a dataset has been consumedonce. This allows to maintain the workers Dataset instances alive. Can potentially speed up training,but will increase RAM usage. Will default to False."
+        },
+        {
+            "name": "prefetch_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of batches loaded in advance by each worker.2 means there will be a total of 2 * num_workers batches prefetched across all workers."
+        },
+        {
+            "name": "auto_find_batch_size",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to find a batch size that will fit into memory automatically through exponential decay,avoiding CUDA Out-of-Memory errors. Requires accelerate to be installed (pip install accelerate)"
+        },
+        {
+            "name": "ignore_data_skip",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "When resuming training, whether or not to skip the epochs and batches to get the data loading at thesame stage as in the previous training. If set to True, the training will begin faster (as thatskipping step can take a long time) but will not yield the same results as the interrupted trainingwould have."
+        },
+        {
+            "name": "sampler_seed",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Random seed to be used with data samplers. If not set, random generators for data sampling will use thesame seed as self.seed. This can be used to ensure reproducibility of data sampling, independent ofthe model seed."
+        }
+    ],
+    "return": ""
+}

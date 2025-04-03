@@ -1,0 +1,13 @@
+{
+    "api": "transformers.onnx.OnnxConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PretrainedConfig",
+        "task",
+        "patching_specs"
+    ],
+    "params": [],
+    "return": ""
+}

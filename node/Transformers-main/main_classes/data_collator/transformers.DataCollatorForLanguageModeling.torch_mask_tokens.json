@@ -1,0 +1,12 @@
+{
+    "api": "transformers.DataCollatorForLanguageModeling.torch_mask_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "typing.Any",
+        "special_tokens_mask"
+    ],
+    "params": [],
+    "return": ""
+}

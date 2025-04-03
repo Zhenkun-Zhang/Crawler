@@ -1,0 +1,21 @@
+{
+    "api": "transformers.Trainer.get_optimizer_group",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "param:",
+        "typing.Union[str,",
+        "torch.nn.parameter.Parameter,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "param",
+            "type": "str,torch.nn.parameter.Parameter",
+            "optional": true,
+            "default": "",
+            "description": "The parameter for which optimizer group needs to be returned."
+        }
+    ],
+    "return": ""
+}

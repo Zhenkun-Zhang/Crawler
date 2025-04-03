@@ -1,0 +1,36 @@
+{
+    "api": "transformers.pytorch_utils.prune_conv1d_layer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "layer:",
+        "Conv1D",
+        "index",
+        "dim",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "layer",
+            "type": "Conv1D",
+            "optional": false,
+            "default": "",
+            "description": "The layer to prune."
+        },
+        {
+            "name": "index",
+            "type": "torch.LongTensor",
+            "optional": false,
+            "default": "",
+            "description": "The indices to keep in the layer."
+        },
+        {
+            "name": "dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The dimension on which to keep the indices."
+        }
+    ],
+    "return": "Conv1D"
+}

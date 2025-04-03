@@ -1,0 +1,70 @@
+{
+    "api": "transformers.image_transforms.resize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "size",
+        "resample",
+        "reducing_gap",
+        "data_format",
+        "return_numpy",
+        "input_data_format",
+        "str,",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The image to resize."
+        },
+        {
+            "name": "size",
+            "type": "Tuple[int, int]",
+            "optional": false,
+            "default": "",
+            "description": "The size to use for resizing the image."
+        },
+        {
+            "name": "resample",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The filter to user for resampling."
+        },
+        {
+            "name": "reducing_gap",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Apply optimization by resizing the image in two steps. The bigger reducing_gap, the closer the result tothe fair resampling. See corresponding Pillow documentation for more details."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the output image. If unset, will use the inferred format from the input."
+        },
+        {
+            "name": "return_numpy",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the resized image as a numpy array. If False a PIL.Image.Image object isreturned."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If unset, will use the inferred format from the input."
+        }
+    ],
+    "return": "np.ndarray"
+}

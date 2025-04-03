@@ -1,0 +1,52 @@
+{
+    "api": "transformers.UnivNetModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_features:",
+        "FloatTensor",
+        "noise_sequence",
+        "padding_mask",
+        "generator",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_features",
+            "type": "torch.FloatTensor",
+            "optional": false,
+            "default": "",
+            "description": "Tensor containing the log-mel spectrograms. Can be batched and of shape (batch_size, sequence_length, config.num_mel_channels), or un-batched and of shape (sequence_length, config.num_mel_channels)."
+        },
+        {
+            "name": "noise_sequence",
+            "type": "torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tensor containing a noise sequence of standard Gaussian noise. Can be batched and of shape (batch_size, sequence_length, config.model_in_channels), or un-batched and of shape (sequence_length,config.model_in_channels)`. If not supplied, will be randomly generated."
+        },
+        {
+            "name": "padding_mask",
+            "type": "torch.BoolTensor",
+            "optional": true,
+            "default": "",
+            "description": "Mask indicating which parts of each sequence are padded. Mask values are selected in [0, 1]:1 for tokens that are not masked0 for tokens that are maskedThe mask can be batched and of shape (batch_size, sequence_length) or un-batched and of shape(sequence_length,)."
+        },
+        {
+            "name": "generator",
+            "type": "torch.Generator",
+            "optional": true,
+            "default": "",
+            "description": "A torch generator to make generationdeterministic."
+        },
+        {
+            "name": "return_dict",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Whether to return a ModelOutput subclass instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.univnet.modeling_univnet.UnivNetModelOutput or tuple(torch.FloatTensor)"
+}

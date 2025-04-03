@@ -1,0 +1,14 @@
+{
+    "api": "transformers.Gemma3Processor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "chat_template",
+        "image_seq_length",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

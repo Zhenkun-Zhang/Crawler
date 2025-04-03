@@ -1,0 +1,12 @@
+{
+    "api": "transformers.Wav2Vec2BertProcessor.pad",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_features",
+        "labels",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

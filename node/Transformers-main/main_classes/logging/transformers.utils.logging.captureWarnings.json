@@ -1,0 +1,10 @@
+{
+    "api": "transformers.utils.logging.captureWarnings",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "capture"
+    ],
+    "params": [],
+    "return": ""
+}

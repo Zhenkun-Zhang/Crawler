@@ -1,0 +1,107 @@
+{
+    "api": "transformers.PoolFormerImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "crop_pct",
+        "resample",
+        "<Resampling.BICUBIC",
+        "do_center_crop",
+        "crop_size",
+        "int]",
+        "rescale_factor",
+        "float]",
+        "do_rescale",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to the specified size. Can be overridden bydo_resize in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"shortest_edge\" -- 224}):Size of the image after resizing. Can be overridden by size in the preprocess method. If crop_pct isunset:size is {\"height\": h, \"width\": w}: the image is resized to (h, w).size is {\"shortest_edge\": s}: the shortest edge of the image is resized to s whilst maintaining theaspect ratio.If crop_pct is set:size is {\"height\": h, \"width\": w}: the image is resized to (int(floor(h/crop_pct)), int(floor(w/crop_pct)))size is {\"height\": c, \"width\": c}: the shortest edge of the image is resized to int(floor(c/crop_pct)whilst maintaining the aspect ratio.size is {\"shortest_edge\": c}: the shortest edge of the image is resized to int(floor(c/crop_pct)whilst maintaining the aspect ratio.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "crop_pct",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Percentage of the image to crop from the center. Can be overridden by crop_pct in the preprocessmethod."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by resample in the preprocess method."
+        },
+        {
+            "name": "do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to center crop the image. If the input size is smaller than crop_size along any edge, the imageis padded with 0s and then center cropped. Can be overridden by do_center_crop in the preprocessmethod."
+        },
+        {
+            "name": "crop_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by the rescale_factor parameter in thepreprocess method."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by the do_rescaleparameter in the preprocess method."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to normalize the image. Can be overridden by the do_normalize parameter in thepreprocess method."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method."
+        }
+    ],
+    "return": ""
+}

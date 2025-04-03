@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Siglip2Processor.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

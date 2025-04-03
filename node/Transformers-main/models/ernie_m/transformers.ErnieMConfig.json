@@ -1,0 +1,123 @@
+{
+    "api": "transformers.ErnieMConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size:",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "max_position_embeddings",
+        "initializer_range",
+        "pad_token_id",
+        "layer_norm_eps",
+        "classifier_dropout",
+        "act_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Vocabulary size of inputs_ids in ErnieMModel. Also is the vocab size of token embedding matrix.Defines the number of different tokens that can be represented by the inputs_ids passed when callingErnieMModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the embedding layer, encoder layers and pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the feed-forward (ff) layer in the encoder. Input tensors to feed-forward layers arefirstly projected from hidden_size to intermediate_size, and then projected back to hidden_size. Typicallyintermediate_size is larger than hidden_size."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function in the feed-forward layer. gelu, relu and any other torchsupported activation functions are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for all fully connected layers in the embeddings and encoder."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability used in MultiHeadAttention in all encoder layers to drop some attention target."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum value of the dimensionality of position encoding, which dictates the maximum supported lengthof an input sequence."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the normal initializer for initializing all weight matrices. The index of paddingtoken in the token vocabulary."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Padding token id."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "classifier_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The dropout ratio for the classification head."
+        },
+        {
+            "name": "act_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "This dropout probability is used in ErnieMEncoderLayer after activation."
+        }
+    ],
+    "return": ""
+}

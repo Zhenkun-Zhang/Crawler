@@ -1,0 +1,250 @@
+{
+    "api": "transformers.FlavaImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BICUBIC",
+        "do_center_crop",
+        "crop_size",
+        "int]",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.Iterable[float],",
+        "NoneType]",
+        "image_std",
+        "typing.Iterable[float],",
+        "NoneType]",
+        "return_image_mask",
+        "input_size_patches",
+        "total_mask_patches",
+        "mask_group_min_patches",
+        "mask_group_max_patches",
+        "mask_group_min_aspect_ratio",
+        "mask_group_max_aspect_ratio",
+        "return_codebook_pixels",
+        "codebook_do_resize",
+        "codebook_size",
+        "codebook_resample",
+        "<Resampling.LANCZOS",
+        "codebook_do_center_crop",
+        "codebook_crop_size",
+        "codebook_do_rescale",
+        "codebook_rescale_factor",
+        "float]",
+        "codebook_do_map_pixels",
+        "codebook_do_normalize",
+        "codebook_image_mean",
+        "typing.Iterable[float],",
+        "NoneType]",
+        "codebook_image_std",
+        "typing.Iterable[float],",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to the specified size. Can be overridden by thedo_resize parameter in preprocess."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 224, \"width\": 224}):Size of the image after resizing. Can be overridden by the size parameter in preprocess.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by the resample parameter inpreprocess."
+        },
+        {
+            "name": "do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to center crop the images. Can be overridden by the do_center_crop parameter in preprocess."
+        },
+        {
+            "name": "crop_size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 224, \"width\": 224}):Size of image after the center crop (crop_size[\"height\"], crop_size[\"width\"]). Can be overridden by thecrop_size parameter in preprocess.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by the do_rescaleparameter in preprocess."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by the rescale_factor parameter inpreprocess."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in preprocess."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "return_image_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the image mask. Can be overridden by the return_image_mask parameter in preprocess."
+        },
+        {
+            "name": "input_size_patches",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of patches in the image in height and width direction. 14x14 = 196 total patches. Can be overriddenby the input_size_patches parameter in preprocess."
+        },
+        {
+            "name": "total_mask_patches",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Total number of patches that should be masked. Can be overridden by the total_mask_patches parameter inpreprocess."
+        },
+        {
+            "name": "mask_group_min_patches",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Minimum number of patches that should be masked. Can be overridden by the mask_group_min_patchesparameter in preprocess."
+        },
+        {
+            "name": "mask_group_max_patches",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum number of patches that should be masked. Can be overridden by the mask_group_max_patchesparameter in preprocess."
+        },
+        {
+            "name": "mask_group_min_aspect_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Minimum aspect ratio of the mask window. Can be overridden by the mask_group_min_aspect_ratio parameterin preprocess."
+        },
+        {
+            "name": "mask_group_max_aspect_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Maximum aspect ratio of the mask window. Can be overridden by the mask_group_max_aspect_ratio parameterin preprocess."
+        },
+        {
+            "name": "codebook_do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the input for codebook to a certain. Can be overridden by the codebook_do_resizeparameter in preprocess. codebook_size."
+        },
+        {
+            "name": "codebook_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "codebook_resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the codebook image. Can be overridden by the codebook_resampleparameter in preprocess."
+        },
+        {
+            "name": "codebook_do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to crop the input for codebook at the center. If the input size is smaller thancodebook_crop_size along any edge, the image is padded with 0s and then center cropped. Can beoverridden by the codebook_do_center_crop parameter in preprocess."
+        },
+        {
+            "name": "codebook_crop_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "codebook_do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the input for codebook by the specified scale codebook_rescale_factor. Can beoverridden by the codebook_do_rescale parameter in preprocess."
+        },
+        {
+            "name": "codebook_rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Defines the scale factor to use if rescaling the codebook image. Can be overridden by thecodebook_rescale_factor parameter in preprocess."
+        },
+        {
+            "name": "codebook_do_map_pixels",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to map the pixel values of the codebook input to (1 - 2e)x + e. Can be overridden by thecodebook_do_map_pixels parameter in preprocess."
+        },
+        {
+            "name": "codebook_do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to normalize the input for codebook with codebook_image_mean and codebook_image_std. Canbe overridden by the codebook_do_normalize parameter in preprocess."
+        },
+        {
+            "name": "codebook_image_mean",
+            "type": "Optional[Union[float, Iterable[float]]]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence of means for each channel, to be used when normalizing images for codebook. Can be overriddenby the codebook_image_mean parameter in preprocess."
+        },
+        {
+            "name": "codebook_image_std",
+            "type": "Optional[Union[float, Iterable[float]]]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence of standard deviations for each channel, to be used when normalizing images for codebook. Canbe overridden by the codebook_image_std parameter in preprocess."
+        }
+    ],
+    "return": ""
+}

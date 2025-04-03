@@ -1,0 +1,12 @@
+{
+    "api": "transformers.MoonshineModel._mask_input_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_features:",
+        "FloatTensor",
+        "attention_mask"
+    ],
+    "params": [],
+    "return": ""
+}

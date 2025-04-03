@@ -1,0 +1,125 @@
+{
+    "api": "transformers.BigBirdPegasusForSequenceClassification.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "attention_mask",
+        "decoder_input_ids",
+        "decoder_attention_mask",
+        "head_mask",
+        "decoder_head_mask",
+        "cross_attn_head_mask",
+        "encoder_outputs",
+        "inputs_embeds",
+        "decoder_inputs_embeds",
+        "labels",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "torch.LongTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Provide for translation and summarization training. By default, the model will create this tensor byshifting the input_ids to the right, following the paper."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default.If you want to change padding behavior, you should readmodeling_bigbird_pegasus._prepare_decoder_attention_mask and modify to your needs. See diagram 1 inthe paper for more information on the default strategy."
+        },
+        {
+            "name": "decoder_head_mask",
+            "type": "torch.Tensor of shape (num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the decoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple consists of (last_hidden_state, optional: hidden_states, optional: attentions)last_hidden_state of shape (batch_size, sequence_length, hidden_size), optional) is a sequence ofhidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and 2 additional tensors of shape(batch_size, num_heads, encoder_sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used (see past_key_values input) to speed up sequential decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation.This is useful if you want more control over how to convert input_ids indices into associated vectorsthan the models internal embedding lookup matrix."
+        },
+        {
+            "name": "decoder_inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, target_sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing decoder_input_ids you can choose to directly pass an embeddedrepresentation. If past_key_values is used, optionally only the last decoder_inputs_embeds have to beinput (see past_key_values). This is useful if you want more control over how to convertdecoder_input_ids indices into associated vectors than the models internal embedding lookup matrix.If decoder_input_ids and decoder_inputs_embeds are both unset, decoder_inputs_embeds takes the valueof inputs_embeds."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the sequence classification/regression loss. Indices should be in [0, ..., config.num_labels - 1]. If config.num_labels > 1 a classification loss is computed (Cross-Entropy)."
+        }
+    ],
+    "return": "transformers.modeling_outputs.Seq2SeqSequenceClassifierOutput or tuple(torch.FloatTensor)"
+}

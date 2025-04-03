@@ -1,0 +1,21 @@
+{
+    "api": "transformers.PreTrainedTokenizer.convert_tokens_to_ids",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tokens:",
+        "typing.Union[str,",
+        "list[str]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "tokens",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "One or several token(s) to convert to token id(s)."
+        }
+    ],
+    "return": "int or List[int]"
+}

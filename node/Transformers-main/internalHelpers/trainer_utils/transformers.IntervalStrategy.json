@@ -1,0 +1,15 @@
+{
+    "api": "transformers.IntervalStrategy",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "value",
+        "names",
+        "module",
+        "qualname",
+        "type",
+        "start"
+    ],
+    "params": [],
+    "return": ""
+}

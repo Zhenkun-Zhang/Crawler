@@ -1,0 +1,84 @@
+{
+    "api": "transformers.RecurrentGemmaForCausalLM.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "position_ids",
+        "cache_position",
+        "attention_mask",
+        "inputs_embeds",
+        "labels",
+        "output_hidden_states",
+        "return_dict",
+        "use_cache",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details."
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.n_positions - 1].What are position IDs?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all  See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "cache_position",
+            "type": "torch.LongTensor of shape (sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices depicting the position of the input sequence tokens in the sequence. Contrarily to position_ids,this tensor is not affected by padding. It is used to update the cache in the correct position and to inferthe complete sequence length."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the masked language modeling loss. Indices should either be in [0, ..., config.vocab_size] or -100 (see input_ids docstring). Tokens with indices set to -100 are ignored(masked), the loss is only computed for the tokens with labels in [0, ..., config.vocab_size]."
+        }
+    ],
+    "return": "transformers.modeling_outputs.CausalLMOutput or tuple(torch.FloatTensor)"
+}

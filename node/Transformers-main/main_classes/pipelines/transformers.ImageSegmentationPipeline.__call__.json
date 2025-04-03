@@ -1,0 +1,54 @@
+{
+    "api": "transformers.ImageSegmentationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "str, List[str], PIL.Image,List[PIL.Image]",
+            "optional": false,
+            "default": "None",
+            "description": "The pipeline handles three types of images:A string containing an HTTP(S) link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyThe pipeline accepts either a single image or a batch of images. Images in a batch must all be in thesame format: all as HTTP(S) links, all as local paths, or all as PIL images."
+        },
+        {
+            "name": "subtask",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Segmentation task to be performed, choose [semantic, instance and panoptic] depending on modelcapabilities. If not set, the pipeline will attempt tp resolve in the following order:panoptic, instance, semantic."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Probability threshold to filter out predicted masks."
+        },
+        {
+            "name": "mask_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Threshold to use when turning the predicted masks into binary values."
+        },
+        {
+            "name": "overlap_mask_area_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Mask overlap threshold to eliminate small, disconnected segments."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The maximum time in seconds to wait for fetching images from the web. If None, no timeout is set andthe call may block forever."
+        }
+    ],
+    "return": ""
+}

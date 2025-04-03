@@ -1,0 +1,10 @@
+{
+    "api": "transformers.SwitchTransformersSparseMLP.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "hidden_states"
+    ],
+    "params": [],
+    "return": ""
+}

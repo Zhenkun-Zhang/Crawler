@@ -1,0 +1,19 @@
+{
+    "api": "transformers.FlaxForcedBOSTokenLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "bos_token_id:",
+        "int"
+    ],
+    "params": [
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The id of the token to force as the first generated token."
+        }
+    ],
+    "return": ""
+}

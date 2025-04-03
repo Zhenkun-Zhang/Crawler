@@ -1,0 +1,29 @@
+{
+    "api": "transformers.MarkupLMTokenizer.get_special_tokens_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0:",
+        "typing.List[int]",
+        "token_ids_1",
+        "already_has_special_tokens",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "Retrieve",
+            "type": "sequence ids from a token list that has no special tokens added. This method is called when adding",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "special",
+            "type": "tokens using the tokenizer prepare_for_model method.",
+            "optional": false,
+            "default": "",
+            "description": "token_ids_0 (List[int]):List of IDs.token_ids_1 (List[int], optional):Optional second list of IDs for sequence pairs.already_has_special_tokens (bool, optional, defaults to False):Whether or not the token list is already formatted with special tokens for the model."
+        }
+    ],
+    "return": "List[int]"
+}

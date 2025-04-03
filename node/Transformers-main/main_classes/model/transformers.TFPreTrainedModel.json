@@ -1,0 +1,12 @@
+{
+    "api": "transformers.TFPreTrainedModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

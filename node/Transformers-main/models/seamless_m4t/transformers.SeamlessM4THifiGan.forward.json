@@ -1,0 +1,20 @@
+{
+    "api": "transformers.SeamlessM4THifiGan.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_embeds:",
+        "FloatTensor",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "spectrogram",
+            "type": "torch.FloatTensor",
+            "optional": false,
+            "default": "",
+            "description": "Tensor containing the log-mel spectrograms. Can be batched and of shape (batch_size, sequence_length, model_in_dim), or un-batched and of shape (sequence_length, model_in_dim). Note that model_in_dimis the sum of config.unit_embed_dim, config.lang_embed_dim and config.spkr_embed_dim."
+        }
+    ],
+    "return": "torch.FloatTensor"
+}

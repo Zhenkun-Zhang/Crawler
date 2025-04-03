@@ -1,0 +1,10 @@
+{
+    "api": "transformers.DecisionTransformerGPT2Model",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [],
+    "return": ""
+}

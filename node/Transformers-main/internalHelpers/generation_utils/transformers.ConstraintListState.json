@@ -1,0 +1,19 @@
+{
+    "api": "transformers.ConstraintListState",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "constraints:",
+        "typing.List[transformers.generation.beam_constraints.Constraint]"
+    ],
+    "params": [
+        {
+            "name": "constraints",
+            "type": "List[Constraint]",
+            "optional": false,
+            "default": "",
+            "description": "A list of Constraint objects that must be fulfilled by the beam scorer."
+        }
+    ],
+    "return": ""
+}

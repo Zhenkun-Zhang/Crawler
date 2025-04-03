@@ -1,0 +1,8 @@
+{
+    "api": "transformers.pipelines.QuestionAnsweringArgumentHandler",
+    "type": "class",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

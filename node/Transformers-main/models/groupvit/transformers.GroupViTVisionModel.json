@@ -1,0 +1,11 @@
+{
+    "api": "transformers.GroupViTVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "GroupViTVisionConfig"
+    ],
+    "params": [],
+    "return": ""
+}

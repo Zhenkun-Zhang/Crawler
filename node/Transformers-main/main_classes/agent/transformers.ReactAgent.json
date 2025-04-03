@@ -1,0 +1,19 @@
+{
+    "api": "transformers.ReactAgent",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tools:",
+        "typing.List[transformers.agents.tools.Tool]",
+        "llm_engine",
+        "system_prompt",
+        "tool_description_template",
+        "grammar",
+        "str]]",
+        "plan_type",
+        "planning_interval",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

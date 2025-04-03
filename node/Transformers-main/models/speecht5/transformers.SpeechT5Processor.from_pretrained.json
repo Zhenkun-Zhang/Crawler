@@ -1,0 +1,36 @@
+{
+    "api": "transformers.SpeechT5Processor.from_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pretrained_model_name_or_path:",
+        "os.PathLike]",
+        "cache_dir",
+        "os.PathLike,",
+        "NoneType]",
+        "force_download",
+        "local_files_only",
+        "token",
+        "str,",
+        "NoneType]",
+        "revision",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pretrained_model_name_or_path",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "This can be either:a string, the model id of a pretrained feature_extractor hosted inside a model repo onhuggingface.co.a path to a directory containing a feature extractor file saved using thesave_pretrained() method, e.g., ./my_model_directory/.a path or url to a saved feature extractor JSON file, e.g.,./my_model_directory/preprocessor_config.json."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments passed along to bothfrom_pretrained() and~tokenization_utils_base.PreTrainedTokenizer.from_pretrained."
+        }
+    ],
+    "return": ""
+}

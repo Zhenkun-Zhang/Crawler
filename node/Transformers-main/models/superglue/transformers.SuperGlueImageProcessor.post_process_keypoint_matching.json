@@ -1,0 +1,37 @@
+{
+    "api": "transformers.SuperGlueImageProcessor.post_process_keypoint_matching",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs:",
+        "KeypointMatchingOutput",
+        "target_sizes",
+        "typing.List[typing.Tuple]]",
+        "threshold",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "KeypointMatchingOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "target_sizes",
+            "type": "torch.Tensor,List[Tuple[Tuple[int, int]]]",
+            "optional": true,
+            "default": "",
+            "description": "Tensor of shape (batch_size, 2, 2) or list of tuples of tuples (Tuple[int, int]) containing thetarget size (height, width) of each image in the batch. This must be the original image size (beforeany processing)."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Threshold to filter out the matches with low scores."
+        }
+    ],
+    "return": "List[Dict]"
+}

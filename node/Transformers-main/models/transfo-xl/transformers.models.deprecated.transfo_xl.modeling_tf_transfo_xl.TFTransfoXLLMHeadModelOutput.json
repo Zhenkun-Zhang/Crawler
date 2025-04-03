@@ -1,0 +1,52 @@
+{
+    "api": "transformers.models.deprecated.transfo_xl.modeling_tf_transfo_xl.TFTransfoXLLMHeadModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "prediction_scores:",
+        "tf.Tensor",
+        "mems",
+        "hidden_states",
+        "|",
+        "attentions",
+        "|"
+    ],
+    "params": [
+        {
+            "name": "losses",
+            "type": "tf.Tensor of shape (batch_size, sequence_length-1",
+            "optional": true,
+            "default": "",
+            "description": "Language modeling losses (not reduced)."
+        },
+        {
+            "name": "prediction_scores",
+            "type": "tf.Tensor of shape (batch_size, sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the language modeling head (scores for each vocabulary token after SoftMax)."
+        },
+        {
+            "name": "mems",
+            "type": "List[tf.Tensor] of length config.n_layers",
+            "optional": false,
+            "default": "",
+            "description": "Contains pre-computed hidden-states (key and values in the attention blocks). Can be used (see memsinput) to speed up sequential decoding. The token ids which have their past given to this model should notbe passed as input ids as they have already been computed."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,10 @@
+{
+    "api": "transformers.BigBirdForPreTraining",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [],
+    "return": ""
+}

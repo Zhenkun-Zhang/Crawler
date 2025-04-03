@@ -1,0 +1,19 @@
+{
+    "api": "transformers.Constraint.copy",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "stateful",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "stateful(bool)",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Whether to not only copy the constraint for new instance, but also its state."
+        }
+    ],
+    "return": "constraint(Constraint)"
+}

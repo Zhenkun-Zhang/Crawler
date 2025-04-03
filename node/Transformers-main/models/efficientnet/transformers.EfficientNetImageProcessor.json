@@ -1,0 +1,114 @@
+{
+    "api": "transformers.EfficientNetImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "resample",
+        "do_center_crop",
+        "crop_size",
+        "int]",
+        "rescale_factor",
+        "float]",
+        "rescale_offset",
+        "do_rescale",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "include_top",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to the specified size. Can be overridden bydo_resize in preprocess."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 346, \"width\": 346}):Size of the image after resize. Can be overridden by size in preprocess.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling filter",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by resample in preprocess."
+        },
+        {
+            "name": "do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to center crop the image. If the input size is smaller than crop_size along any edge, the imageis padded with 0s and then center cropped. Can be overridden by do_center_crop in preprocess."
+        },
+        {
+            "name": "crop_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by the rescale_factor parameter in thepreprocess method."
+        },
+        {
+            "name": "rescale_offset",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image between [-scale_range, scale_range] instead of [0, scale_range]. Can beoverridden by the rescale_factor parameter in the preprocess method."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by the do_rescaleparameter in the preprocess method."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in the preprocessmethod."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "include_top",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image again. Should be set to True if the inputs are used for image classification."
+        }
+    ],
+    "return": ""
+}

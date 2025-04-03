@@ -1,0 +1,8 @@
+{
+    "api": "transformers.pipelines.ArgumentHandler",
+    "type": "class",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

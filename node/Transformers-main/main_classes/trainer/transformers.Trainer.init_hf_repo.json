@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Trainer.init_hf_repo",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token:",
+        "typing.Optional[str]"
+    ],
+    "params": [],
+    "return": ""
+}

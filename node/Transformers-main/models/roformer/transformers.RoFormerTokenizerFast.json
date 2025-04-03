@@ -1,0 +1,20 @@
+{
+    "api": "transformers.RoFormerTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "do_lower_case",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "tokenize_chinese_chars",
+        "strip_accents",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

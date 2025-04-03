@@ -1,0 +1,121 @@
+{
+    "api": "transformers.TokenClassificationPipeline",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "args_parser",
+        "object",
+        "at",
+        "0x7fcbd6b66c50>",
+        "*args",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "PreTrainedModel,TFPreTrainedModel",
+            "optional": false,
+            "default": "",
+            "description": "The model that will be used by the pipeline to make predictions. This needs to be a model inheriting fromPreTrainedModel for PyTorch and TFPreTrainedModel for TensorFlow."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer that will be used by the pipeline to encode data for the model. This object inherits fromPreTrainedTokenizer."
+        },
+        {
+            "name": "modelcard",
+            "type": "str,ModelCard",
+            "optional": true,
+            "default": "",
+            "description": "Model card attributed to the model for this pipeline."
+        },
+        {
+            "name": "framework",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The framework to use, either pt for PyTorch or tf for TensorFlow. The specified framework must beinstalled.If no framework is specified, will default to the one currently installed. If no framework is specified andboth frameworks are installed, will default to the framework of the model, or to PyTorch if no model isprovided."
+        },
+        {
+            "name": "task",
+            "type": "str, defaults to \"\"",
+            "optional": false,
+            "default": "",
+            "description": "A task-identifier for the pipeline."
+        },
+        {
+            "name": "num_workers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "When the pipeline will use DataLoader (when passing a dataset, on GPU for a Pytorch model), the number ofworkers to be used."
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "When the pipeline will use DataLoader (when passing a dataset, on GPU for a Pytorch model), the size ofthe batch to use, for inference this is not always beneficial, please read Batching withpipelines ."
+        },
+        {
+            "name": "args_parser",
+            "type": "ArgumentHandler",
+            "optional": true,
+            "default": "<transformers.pipelines.token_classification.TokenClassificationArgumentHandler",
+            "description": "Reference to the object in charge of parsing supplied pipeline parameters."
+        },
+        {
+            "name": "device",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Device ordinal for CPU/GPU supports. Setting this to -1 will leverage CPU, a positive will run the model onthe associated CUDA device id. You can pass native torch.device or a str too"
+        },
+        {
+            "name": "torch_dtype",
+            "type": "str,torch.dtype",
+            "optional": true,
+            "default": "",
+            "description": "Sent directly as model_kwargs (just a simpler shortcut) to use the available precision for this model(torch.float16, torch.bfloat16, … or auto)"
+        },
+        {
+            "name": "binary_output",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Flag indicating if the output the pipeline should happen in a serialized format (i.e., pickle) or asthe raw output data e.g. text."
+        },
+        {
+            "name": "ignore_labels",
+            "type": "List[str], defaults to [\"O\"]",
+            "optional": false,
+            "default": "",
+            "description": "A list of labels to ignore."
+        },
+        {
+            "name": "grouped_entities",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "DEPRECATED, use aggregation_strategy instead. Whether or not to group the tokens corresponding to thesame entity together in the predictions or not."
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If stride is provided, the pipeline is applied on all the text. The text is split into chunks of sizemodel_max_length. Works only with fast tokenizers and aggregation_strategy different from NONE. Thevalue of this argument defines the number of overlapping tokens between chunks. In other words, the modelwill shift forward by tokenizer.model_max_length - stride tokens each step."
+        },
+        {
+            "name": "aggregation_strategy",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The strategy to fuse (or not) tokens based on the model prediction.none : Will simply not do any aggregation and simply return raw results from the modelsimple : Will attempt to group entities following the default schema. (A, B-TAG), (B, I-TAG), (C,I-TAG), (D, B-TAG2) (E, B-TAG2) will end up being [{word: ABC, entity: TAG}, {word: D,entity: TAG2}, {word: E, entity: TAG2}] Notice that two consecutive B tags will end up asdifferent entities. On word based languages, we might end up splitting words undesirably : ImagineMicrosoft being tagged as [{word: Micro, entity: ENTERPRISE}, {word: soft, entity:NAME}]. Look for FIRST, MAX, AVERAGE for ways to mitigate that and disambiguate words (on languagesthat support that meaning, which is basically tokens separated by a space). These mitigations willonly work on real words, New york might still be tagged with two different entities.first : (works only on word based models) Will use the SIMPLE strategy except that words, cannotend up with different tags. Words will simply use the tag of the first token of the word when thereis ambiguity.average : (works only on word based models) Will use the SIMPLE strategy except that words,cannot end up with different tags. scores will be averaged first across tokens, and then the maximumlabel is applied.max : (works only on word based models) Will use the SIMPLE strategy except that words, cannotend up with different tags. Word entity will simply be the token with the maximum score."
+        }
+    ],
+    "return": ""
+}

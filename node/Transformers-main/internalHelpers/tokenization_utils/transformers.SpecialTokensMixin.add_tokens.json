@@ -1,0 +1,31 @@
+{
+    "api": "transformers.SpecialTokensMixin.add_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "new_tokens:",
+        "typing.Union[str,",
+        "tokenizers.AddedToken,",
+        "typing.List[typing.Union[str,",
+        "tokenizers.AddedToken]]]",
+        "special_tokens",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "new_tokens",
+            "type": "str, tokenizers.AddedToken,a list of str,tokenizers.AddedToken",
+            "optional": false,
+            "default": "",
+            "description": "Tokens are only added if they are not already in the vocabulary. tokenizers.AddedToken wraps a stringtoken to let you personalize its behavior: whether this token should only match against a single word,whether this token should strip all potential whitespaces on the left side, whether this token shouldstrip all potential whitespaces on the right side, etc."
+        },
+        {
+            "name": "special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Can be used to specify if the token is a special token. This mostly change the normalization behavior(special tokens like CLS or [MASK] are usually not lower-cased for instance).See details for tokenizers.AddedToken in HuggingFace tokenizers library."
+        }
+    ],
+    "return": "int"
+}

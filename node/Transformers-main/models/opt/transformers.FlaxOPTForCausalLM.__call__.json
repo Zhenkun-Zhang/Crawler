@@ -1,0 +1,24 @@
+{
+    "api": "transformers.FlaxOPTForCausalLM.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "Array",
+        "attention_mask",
+        "position_ids",
+        "params",
+        "past_key_values",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7f3a03b75090>",
+        "deterministic",
+        ")"
+    ],
+    "params": [],
+    "return": "transformers.modeling_flax_outputs.FlaxBaseModelOutput or tuple(torch.FloatTensor)"
+}

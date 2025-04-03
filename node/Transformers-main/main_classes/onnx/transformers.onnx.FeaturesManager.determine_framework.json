@@ -1,0 +1,27 @@
+{
+    "api": "transformers.onnx.FeaturesManager.determine_framework",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "str",
+        "framework"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The name of the model to export."
+        },
+        {
+            "name": "framework",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The framework to use for the export. See above for priority if none provided."
+        }
+    ],
+    "return": ""
+}

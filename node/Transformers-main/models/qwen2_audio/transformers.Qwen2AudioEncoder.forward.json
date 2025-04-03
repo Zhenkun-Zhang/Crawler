@@ -1,0 +1,58 @@
+{
+    "api": "transformers.Qwen2AudioEncoder.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_features",
+        "attention_mask",
+        "head_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict"
+    ],
+    "params": [
+        {
+            "name": "input_features",
+            "type": "torch.LongTensor of shape (batch_size, feature_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of mel features extracted from the raw speech waveform. Raw speech waveform can beobtained by loading a .flac or .wav audio file into an array of type List[float] or anumpy.ndarray, e.g. via the soundfile library (pip install soundfile). To prepare the array intoinput_features, the AutoFeatureExtractor should be used for extracting the mel features, paddingand conversion into a tensor of type torch.FloatTensor. See call()"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor), *optional*) -- Qwen2Audio does not support masking of the input_features`, this argument is preserved for compatibility,but it is not used. By default the silence in the input log mel spectrogram are ignored.",
+            "optional": true,
+            "default": "None",
+            "description": ""
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.Tensor of shape (encoder_layers, encoder_attention_heads",
+            "optional": true,
+            "default": "None",
+            "description": "Mask to nullify selected heads of the attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions underreturned tensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensorsfor more detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": ""
+}

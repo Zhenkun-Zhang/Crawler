@@ -1,0 +1,60 @@
+{
+    "api": "transformers.SamPromptEncoderConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size",
+        "image_size",
+        "patch_size",
+        "mask_input_channels",
+        "num_point_embeddings",
+        "hidden_act",
+        "layer_norm_eps",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the hidden states."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The expected output resolution of the image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "mask_input_channels",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The number of channels to be fed to the MaskDecoder module."
+        },
+        {
+            "name": "num_point_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The number of point embeddings to be used."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function in the encoder and pooler."
+        }
+    ],
+    "return": ""
+}

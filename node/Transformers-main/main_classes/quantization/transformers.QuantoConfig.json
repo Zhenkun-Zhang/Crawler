@@ -1,0 +1,35 @@
+{
+    "api": "transformers.QuantoConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "weights",
+        "activations",
+        "modules_to_not_convert",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "weights",
+            "type": "str",
+            "optional": true,
+            "default": "int8",
+            "description": "The target dtype for the weights after quantization. Supported values are (float8,int8,int4,int2)"
+        },
+        {
+            "name": "activations",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The target dtype for the activations after quantization. Supported values are (None,int8,float8)"
+        },
+        {
+            "name": "modules_to_not_convert",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "The list of modules to not quantize, useful for quantizing models that explicitly require to havesome modules left in their original precision (e.g. Whisper encoder, Llava encoder, Mixtral gate layers)."
+        }
+    ],
+    "return": ""
+}

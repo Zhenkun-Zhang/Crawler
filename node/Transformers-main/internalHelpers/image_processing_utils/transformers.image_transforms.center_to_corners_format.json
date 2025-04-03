@@ -1,0 +1,11 @@
+{
+    "api": "transformers.image_transforms.center_to_corners_format",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "bboxes_center:",
+        "TensorType"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,29 @@
+{
+    "api": "transformers.BaseImageProcessorFast.rescale",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "torch.Tensor",
+        "scale",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Image to rescale."
+        },
+        {
+            "name": "scale",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The scaling factor to rescale pixel values by."
+        }
+    ],
+    "return": "torch.Tensor"
+}

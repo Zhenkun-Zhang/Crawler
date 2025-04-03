@@ -1,0 +1,68 @@
+{
+    "api": "transformers.TransfoXLModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "typing.Optional[torch.LongTensor]",
+        "mems",
+        "head_mask",
+        "inputs_embeds",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "mems",
+            "type": "List[torch.FloatTensor] of length config.n_layers",
+            "optional": false,
+            "default": "",
+            "description": "Contains pre-computed hidden-states (key and values in the attention blocks) as computed by the model (seemems output below). Can be used to speed up sequential decoding. The token ids which have their memsgiven to this model should not be passed as input_ids as they have already been computed."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.deprecated.transfo_xl.modeling_transfo_xl.TransfoXLModelOutput or tuple(torch.FloatTensor)"
+}

@@ -1,0 +1,10 @@
+{
+    "api": "transformers.generation.FlaxGreedySearchOutput.replace",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "**updates"
+    ],
+    "params": [],
+    "return": ""
+}

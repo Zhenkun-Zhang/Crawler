@@ -1,0 +1,51 @@
+{
+    "api": "transformers.MgpstrTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "[GO]",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "[GO]",
+            "description": "The beginning of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "[s]",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "[GO]",
+            "description": "A special token used to make arrays of tokens the same size for batching purpose. Will then be ignored byattention mechanisms or loss computation."
+        }
+    ],
+    "return": ""
+}

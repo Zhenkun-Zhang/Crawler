@@ -1,0 +1,11 @@
+{
+    "api": "transformers.time_series_utils.StudentTOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "dim:",
+        "int"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,11 @@
+{
+    "api": "transformers.EsmTokenizer.save_vocabulary",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory",
+        "filename_prefix"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,181 @@
+{
+    "api": "transformers.RagConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "is_encoder_decoder",
+        "prefix",
+        "bos_token_id",
+        "pad_token_id",
+        "eos_token_id",
+        "decoder_start_token_id",
+        "title_sep",
+        "/",
+        "doc_sep",
+        "//",
+        "n_docs",
+        "max_combined_length",
+        "retrieval_vector_size",
+        "retrieval_batch_size",
+        "dataset",
+        "dataset_split",
+        "index_name",
+        "index_path",
+        "passages_path",
+        "use_dummy_dataset",
+        "reduce_loss",
+        "label_smoothing",
+        "do_deduplication",
+        "exclude_bos_score",
+        "do_marginalize",
+        "output_retrieved",
+        "use_cache",
+        "forced_eos_token_id",
+        "dataset_revision",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "title_sep",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Separator inserted between the title and the text of the retrieved document when calling RagRetriever."
+        },
+        {
+            "name": "doc_sep",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Separator inserted between the text of the retrieved document and the original input when callingRagRetriever."
+        },
+        {
+            "name": "n_docs",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Number of documents to retrieve."
+        },
+        {
+            "name": "max_combined_length",
+            "type": "int",
+            "optional": true,
+            "default": "300",
+            "description": "Max length of contextualized input returned by __call__()."
+        },
+        {
+            "name": "retrieval_vector_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the document embeddings indexed by RagRetriever."
+        },
+        {
+            "name": "retrieval_batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Retrieval batch size, defined as the number of queries issues concurrently to the faiss index encapsulatedRagRetriever."
+        },
+        {
+            "name": "dataset",
+            "type": "str",
+            "optional": true,
+            "default": "wiki_dpr",
+            "description": "A dataset identifier of the indexed dataset in HuggingFace Datasets (list all available datasets and idsusing datasets.list_datasets())."
+        },
+        {
+            "name": "dataset_split",
+            "type": "str",
+            "optional": true,
+            "default": "train",
+            "description": "Which split of the dataset to load."
+        },
+        {
+            "name": "index_name",
+            "type": "str",
+            "optional": true,
+            "default": "compressed",
+            "description": "The index name of the index associated with the dataset. One can choose between legacy, exact andcompressed."
+        },
+        {
+            "name": "index_path",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The path to the serialized faiss index on disk."
+        },
+        {
+            "name": "passages_path",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A path to text passages compatible with the faiss index. Required if usingLegacyIndex"
+        },
+        {
+            "name": "use_dummy_dataset",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to load a dummy variant of the dataset specified by dataset."
+        },
+        {
+            "name": "label_smoothing",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Only relevant if return_loss is set to True. Controls the epsilon parameter value for label smoothingin the loss calculation. If set to 0, no label smoothing is performed."
+        },
+        {
+            "name": "do_marginalize",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "If True, the logits are marginalized over all documents by making use oftorch.nn.functional.log_softmax."
+        },
+        {
+            "name": "reduce_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to reduce the NLL loss using the torch.Tensor.sum operation."
+        },
+        {
+            "name": "do_deduplication",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to deduplicate the generations from different context documents for a given input. Has to beset to False if used while training with distributed backend."
+        },
+        {
+            "name": "exclude_bos_score",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to disregard the BOS token when computing the loss."
+        },
+        {
+            "name": "output_retrieved(bool,",
+            "type": "optional, defaults to False",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, retrieved_doc_embeds, retrieved_doc_ids, context_input_ids andcontext_attention_mask are returned. See returned tensors for more detail."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "forced_eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The id of the token to force as the last generated token when max_length is reached. Usually set toeos_token_id."
+        }
+    ],
+    "return": ""
+}

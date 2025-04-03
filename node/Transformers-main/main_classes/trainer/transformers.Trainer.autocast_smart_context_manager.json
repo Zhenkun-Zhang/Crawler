@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Trainer.autocast_smart_context_manager",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "cache_enabled:",
+        "typing.Optional[bool]"
+    ],
+    "params": [],
+    "return": ""
+}

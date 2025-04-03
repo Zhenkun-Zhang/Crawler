@@ -1,0 +1,29 @@
+{
+    "api": "transformers.BaseImageProcessorFast.center_crop",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "torch.Tensor",
+        "size",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "\"torch.Tensor\"",
+            "optional": false,
+            "default": "",
+            "description": "Image to center crop."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": false,
+            "default": "",
+            "description": "Size of the output image."
+        }
+    ],
+    "return": "torch.Tensor"
+}

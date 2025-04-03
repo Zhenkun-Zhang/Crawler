@@ -1,0 +1,51 @@
+{
+    "api": "transformers.JukeboxPrior",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "JukeboxPriorConfig",
+        "level",
+        "nb_priors",
+        "vqvae_encoder",
+        "vqvae_decoder"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "JukeboxPriorConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model. Initializing with a config file does notload the weights associated with the model, only the configuration. Check out thefrom_pretrained() method to load the model weights."
+        },
+        {
+            "name": "level",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Current level of the Prior. Should be in range [0,nb_priors]."
+        },
+        {
+            "name": "nb_priors",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Total number of priors."
+        },
+        {
+            "name": "vqvae_encoder",
+            "type": "Callable",
+            "optional": true,
+            "default": "None",
+            "description": "Encoding method of the VQVAE encoder used in the forward pass of the model. Passing functions instead ofthe vqvae module to avoid getting the parameters."
+        },
+        {
+            "name": "vqvae_decoder",
+            "type": "Callable",
+            "optional": true,
+            "default": "None",
+            "description": "Decoding method of the VQVAE decoder used in the forward pass of the model. Passing functions instead ofthe vqvae module to avoid getting the parameters."
+        }
+    ],
+    "return": ""
+}

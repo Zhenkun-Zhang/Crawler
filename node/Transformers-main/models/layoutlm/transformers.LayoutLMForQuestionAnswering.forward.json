@@ -1,0 +1,22 @@
+{
+    "api": "transformers.LayoutLMForQuestionAnswering.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "bbox",
+        "attention_mask",
+        "token_type_ids",
+        "position_ids",
+        "head_mask",
+        "inputs_embeds",
+        "start_positions",
+        "end_positions",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [],
+    "return": "transformers.modeling_outputs.QuestionAnsweringModelOutput or tuple(torch.FloatTensor)"
+}

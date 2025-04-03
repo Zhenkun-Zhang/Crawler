@@ -1,0 +1,18 @@
+{
+    "api": "transformers.ImageFeatureExtractionMixin.expand_dims",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "PIL.Image.Image,np.ndarray,torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The image to expand."
+        }
+    ],
+    "return": ""
+}

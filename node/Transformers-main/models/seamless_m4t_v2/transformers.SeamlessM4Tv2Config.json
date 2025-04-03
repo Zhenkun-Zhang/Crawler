@@ -1,0 +1,629 @@
+{
+    "api": "transformers.SeamlessM4Tv2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "t2u_vocab_size",
+        "char_vocab_size",
+        "hidden_size",
+        "initializer_range",
+        "layer_norm_eps",
+        "use_cache",
+        "max_position_embeddings",
+        "is_encoder_decoder",
+        "encoder_layerdrop",
+        "decoder_layerdrop",
+        "activation_function",
+        "dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "scale_embedding",
+        "encoder_layers",
+        "encoder_ffn_dim",
+        "encoder_attention_heads",
+        "decoder_layers",
+        "decoder_ffn_dim",
+        "decoder_attention_heads",
+        "decoder_start_token_id",
+        "max_new_tokens",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "speech_encoder_layers",
+        "speech_encoder_attention_heads",
+        "speech_encoder_intermediate_size",
+        "speech_encoder_hidden_act",
+        "speech_encoder_dropout",
+        "add_adapter",
+        "speech_encoder_layerdrop",
+        "feature_projection_input_dim",
+        "adaptor_kernel_size",
+        "adaptor_stride",
+        "adaptor_dropout",
+        "num_adapter_layers",
+        "position_embeddings_type",
+        "conv_depthwise_kernel_size",
+        "left_max_position_embeddings",
+        "right_max_position_embeddings",
+        "speech_encoder_chunk_size",
+        "speech_encoder_left_chunk_num",
+        "t2u_bos_token_id",
+        "t2u_pad_token_id",
+        "t2u_eos_token_id",
+        "t2u_encoder_layers",
+        "t2u_encoder_ffn_dim",
+        "t2u_encoder_attention_heads",
+        "t2u_decoder_layers",
+        "t2u_decoder_ffn_dim",
+        "t2u_decoder_attention_heads",
+        "t2u_max_position_embeddings",
+        "t2u_variance_predictor_embed_dim",
+        "t2u_variance_predictor_hidden_dim",
+        "t2u_variance_predictor_kernel_size",
+        "t2u_variance_pred_dropout",
+        "sampling_rate",
+        "upsample_initial_channel",
+        "upsample_rates",
+        "4,",
+        "4,",
+        "2,",
+        "2]",
+        "upsample_kernel_sizes",
+        "8,",
+        "8,",
+        "4,",
+        "4]",
+        "resblock_kernel_sizes",
+        "7,",
+        "11]",
+        "resblock_dilation_sizes",
+        "3,",
+        "5],",
+        "[1,",
+        "3,",
+        "5],",
+        "[1,",
+        "3,",
+        "5]]",
+        "leaky_relu_slope",
+        "unit_hifi_gan_vocab_size",
+        "unit_embed_dim",
+        "lang_embed_dim",
+        "spkr_embed_dim",
+        "vocoder_num_langs",
+        "vocoder_num_spkrs",
+        "variance_predictor_kernel_size",
+        "var_pred_dropout",
+        "vocoder_offset",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "256102",
+            "description": "Vocabulary size of the text modality of the SeamlessM4Tv2 model. Defines the number of different tokensthat can be represented by the inputs_ids passed when calling ~SeamlessM4Tv2Model,~SeamlessM4Tv2ForTextToSpeech or ~SeamlessM4Tv2ForTextToText."
+        },
+        {
+            "name": "t2u_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "10082",
+            "description": "Unit vocabulary size of the SeamlessM4Tv2 model. Defines the number of different unit tokens that can berepresented by the inputs_ids passed when calling the Text-To-Units sub-model of ~SeamlessM4Tv2Model,~SeamlessM4Tv2ForSpeechToSpeech or ~SeamlessM4Tv2ForTextToSpeech."
+        },
+        {
+            "name": "char_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "10943",
+            "description": "Character vocabulary size of the SeamlessM4Tv2 model. Defines the number of different character tokens thatcan be represented by the char_inputs_ids passed when calling the Text-To-Units sub-model of~SeamlessM4Tv2Model, ~SeamlessM4Tv2ForSpeechToSpeech or ~SeamlessM4Tv2ForTextToSpeech."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the intermediate layers in the architecture."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "The maximum sequence length that this model text encoder and decoder might ever be used with. Typically setthis to something large just in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "is_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the model is used as an encoder/decoder or not."
+        },
+        {
+            "name": "encoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.05",
+            "description": "The LayerDrop probability for the encoders. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "decoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.05",
+            "description": "The LayerDrop probability for the decoders. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function (function or string) in the decoder and feed-forward layers. If string,gelu, relu, selu, swish and gelu_new are supported."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, decoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all attention layers."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all activation layers in the model."
+        },
+        {
+            "name": "scale_embedding",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Scale embeddings by diving by sqrt(d_model)."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer text encoder."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "Dimension of the intermediate (i.e., feed-forward) layer in the Transformer text encoder."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer text encoder."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer text decoder."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "Dimension of the intermediate (i.e., feed-forward) layer in the Transformer text decoder."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer text decoder."
+        },
+        {
+            "name": "decoder_start_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "If an encoder-decoder model starts decoding with a different token than bos, the id of that token. Onlyapplied in the text decoder."
+        },
+        {
+            "name": "max_new_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The maximum numbers of text tokens to generate, ignoring the number of tokens in the prompt."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the padding text token. Only applied to the text-decoder model."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the beginning-of-stream text token. Only applied to the text-decoder model."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The id of the end-of-stream text token. Only applied to the text-decoder model."
+        },
+        {
+            "name": "speech_encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer speech encoder."
+        },
+        {
+            "name": "speech_encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer speech encoder."
+        },
+        {
+            "name": "speech_encoder_intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimension of the intermediate (i.e., feed-forward) layer in the Transformer speech encoder."
+        },
+        {
+            "name": "speech_encoder_hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "swish",
+            "description": "The non-linear activation function (function or string) in the speech encoder. If string, gelu,relu, selu, swish and gelu_new are supported."
+        },
+        {
+            "name": "speech_encoder_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all layers in the speech encoder."
+        },
+        {
+            "name": "add_adapter",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Add an adapter layer on top of the speech encoder."
+        },
+        {
+            "name": "speech_encoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The LayerDrop probability for the speech encoder. See the [LayerDrop paper](seehttps://arxiv.org/abs/1909.11556) for more details."
+        },
+        {
+            "name": "feature_projection_input_dim",
+            "type": "int",
+            "optional": true,
+            "default": "160",
+            "description": "Input dimension of the input feature projection of the speech encoder, i.e the dimension after processinginput audios with SeamlessM4TFeatureExtractor."
+        },
+        {
+            "name": "adaptor_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Kernel size of the convolutional layers in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "adaptor_stride",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Stride of the convolutional layers in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "adaptor_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all layers in the speech adapter."
+        },
+        {
+            "name": "num_adapter_layers",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of convolutional layers that should be used in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "position_embeddings_type",
+            "type": "str",
+            "optional": true,
+            "default": "relative_key",
+            "description": "Can be specified to relative_key. If left to None, no relative position embedding is applied. Onlyapplied to the speech encoder. For more information on relative_key, please refer to Self-Attentionwith Relative Position Representations (Shaw et al.)."
+        },
+        {
+            "name": "conv_depthwise_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "31",
+            "description": "Kernel size of convolutional depthwise 1D layer in Conformer blocks. Only applied to the speech encoder."
+        },
+        {
+            "name": "left_max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "The left clipping value for relative positions."
+        },
+        {
+            "name": "right_max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "The right clipping value for relative positions."
+        },
+        {
+            "name": "speech_encoder_chunk_size",
+            "type": "int",
+            "optional": true,
+            "default": "20000",
+            "description": "The size of each attention chunk."
+        },
+        {
+            "name": "speech_encoder_left_chunk_num",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Number of chunks on the left up to which lookahead is allowed."
+        },
+        {
+            "name": "t2u_bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the beginning-of-stream unit token. Only applied to the text-to-unit seq2seq model."
+        },
+        {
+            "name": "t2u_pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The id of the padding unit token. Only applied to the text-to-unit seq2seq model."
+        },
+        {
+            "name": "t2u_eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the end-of-stream unit token. Only applied to the text-to-unit seq2seq model."
+        },
+        {
+            "name": "t2u_encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of hidden layers in the Transformer text-to-unit encoder."
+        },
+        {
+            "name": "t2u_encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "Dimension of the intermediate (i.e., feed-forward) layer in the Transformer text-to-unit encoder."
+        },
+        {
+            "name": "t2u_encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer text-to-unit encoder."
+        },
+        {
+            "name": "t2u_decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of hidden layers in the Transformer text-to-unit decoder."
+        },
+        {
+            "name": "t2u_decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "Dimension of the intermediate (i.e., feed-forward) layer in the Transformer text-to-unit decoder."
+        },
+        {
+            "name": "t2u_decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer text-to-unit decoder."
+        },
+        {
+            "name": "t2u_max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "The maximum sequence length that this model text-to-unit component might ever be used with. Typically setthis to something large just in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "t2u_variance_predictor_embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The projection dimension of the text-to-units duration predictor."
+        },
+        {
+            "name": "t2u_variance_predictor_hidden_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Internal dimension of the text-to-units duration predictor."
+        },
+        {
+            "name": "t2u_variance_predictor_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Kernel size of the convolutional layers of the text-to-units duration predictor."
+        },
+        {
+            "name": "t2u_variance_pred_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "The dropout probability of the text-to-units duration predictor.Hifi-Gan Vocoder specific parameters"
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "16000",
+            "description": "The sampling rate at which the output audio will be generated, expressed in hertz (Hz)."
+        },
+        {
+            "name": "upsample_initial_channel",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The number of input channels into the hifi-gan upsampling network. Applies to the vocoder only."
+        },
+        {
+            "name": "upsample_rates",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[5,",
+            "description": "A tuple of integers defining the stride of each 1D convolutional layer in the vocoder upsampling network.The length of upsample_rates defines the number of convolutional layers and has to match the length ofupsample_kernel_sizes. Applies to the vocoder only."
+        },
+        {
+            "name": "upsample_kernel_sizes",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[11,",
+            "description": "A tuple of integers defining the kernel size of each 1D convolutional layer in the vocoder upsamplingnetwork. The length of upsample_kernel_sizes defines the number of convolutional layers and has to matchthe length of upsample_rates. Applies to the vocoder only."
+        },
+        {
+            "name": "resblock_kernel_sizes",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "A tuple of integers defining the kernel sizes of the vocoder 1D convolutional layers in the multi-receptivefield fusion (MRF) module. Applies to the vocoder only."
+        },
+        {
+            "name": "resblock_dilation_sizes",
+            "type": "Tuple[Tuple[int]],List[List[int]]",
+            "optional": true,
+            "default": "[[1,",
+            "description": "A nested tuple of integers defining the dilation rates of the vocoder dilated 1D convolutional layers inthe multi-receptive field fusion (MRF) module. Applies to the vocoder only."
+        },
+        {
+            "name": "leaky_relu_slope",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The angle of the negative slope used by the leaky ReLU activation in the vocoder. Applies to the vocoderonly."
+        },
+        {
+            "name": "unit_hifi_gan_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "10000",
+            "description": "Vocabulary size of the SeamlessM4Tv2 vocoder. Defines the number of different unit tokens that can berepresented by the inputs_ids passed when calling the vocoder of ~SeamlessM4Tv2Model,~SeamlessM4Tv2ForSpeechToSpeech or ~SeamlessM4Tv2ForTextToSpeech."
+        },
+        {
+            "name": "unit_embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "1280",
+            "description": "The projection dimension of the input ids given to the hifi-gan vocoder. Applies to the vocoder only."
+        },
+        {
+            "name": "lang_embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The projection dimension of the target language given to the hifi-gan vocoder. Applies to the vocoder only."
+        },
+        {
+            "name": "spkr_embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The projection dimension of the speaker id given to the hifi-gan vocoder. Applies to the vocoder only."
+        },
+        {
+            "name": "vocoder_num_langs",
+            "type": "int",
+            "optional": true,
+            "default": "36",
+            "description": "Number of langs supported by the vocoder. Might be different from t2u_num_langs."
+        },
+        {
+            "name": "vocoder_num_spkrs",
+            "type": "int",
+            "optional": true,
+            "default": "200",
+            "description": "Number of speakers supported by the vocoder."
+        },
+        {
+            "name": "variance_predictor_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Kernel size of the duration predictor. Applies to the vocoder only."
+        },
+        {
+            "name": "var_pred_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "The dropout probability of the duration predictor. Applies to the vocoder only."
+        },
+        {
+            "name": "vocoder_offset",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Offset the unit token ids by this number to account for symbol tokens. Applies to the vocoder only."
+        }
+    ],
+    "return": ""
+}

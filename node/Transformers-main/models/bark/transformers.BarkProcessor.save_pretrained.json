@@ -1,0 +1,50 @@
+{
+    "api": "transformers.BarkProcessor.save_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory",
+        "speaker_embeddings_dict_path",
+        "speaker_embeddings_directory",
+        "push_to_hub",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "Directory where the tokenizer files and the speaker embeddings will be saved (directory will be createdif it does not exist)."
+        },
+        {
+            "name": "speaker_embeddings_dict_path",
+            "type": "str",
+            "optional": true,
+            "default": "speaker_embeddings_path.json",
+            "description": "The name of the .json file that will contains the speaker_embeddings nested path dictionary, if itexists, and that will be located in pretrained_model_name_or_path/speaker_embeddings_directory."
+        },
+        {
+            "name": "speaker_embeddings_directory",
+            "type": "str",
+            "optional": true,
+            "default": "speaker_embeddings",
+            "description": "The name of the folder in which the speaker_embeddings arrays will be saved."
+        },
+        {
+            "name": "push_to_hub",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to push your model to the Hugging Face model hub after saving it. You can specify therepository you want to push to with repo_id (will default to the name of save_directory in yournamespace)."
+        },
+        {
+            "name": "kwargs",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Additional key word arguments passed along to the push_to_hub() method."
+        }
+    ],
+    "return": ""
+}

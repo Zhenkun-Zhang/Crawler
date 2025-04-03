@@ -1,0 +1,8 @@
+{
+    "api": "transformers.Trainer.get_train_dataloader",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

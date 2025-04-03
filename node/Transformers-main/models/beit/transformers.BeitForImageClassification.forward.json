@@ -1,0 +1,67 @@
+{
+    "api": "transformers.BeitForImageClassification.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "head_mask",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "interpolate_pos_encoding",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeBeitImageProcessor.call() for details."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained position encodings."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the image classification/regression loss. Indices should be in [0, ..., config.num_labels - 1]. If config.num_labels == 1 a regression loss is computed (Mean-Square loss), Ifconfig.num_labels > 1 a classification loss is computed (Cross-Entropy)."
+        }
+    ],
+    "return": "transformers.modeling_outputs.ImageClassifierOutput or tuple(torch.FloatTensor)"
+}

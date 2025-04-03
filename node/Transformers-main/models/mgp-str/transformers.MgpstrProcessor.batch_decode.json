@@ -1,0 +1,19 @@
+{
+    "api": "transformers.MgpstrProcessor.batch_decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "sequences",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "sequences",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "List of tokenized input ids."
+        }
+    ],
+    "return": "Dict[str, any]"
+}

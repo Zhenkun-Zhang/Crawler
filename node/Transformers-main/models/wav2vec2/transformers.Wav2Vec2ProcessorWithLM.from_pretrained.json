@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Wav2Vec2ProcessorWithLM.from_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pretrained_model_name_or_path",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pretrained_model_name_or_path",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "This can be either:a string, the model id of a pretrained feature_extractor hosted inside a model repo onhuggingface.co.a path to a directory containing a feature extractor file saved using thesave_pretrained() method, e.g., ./my_model_directory/.a path or url to a saved feature extractor JSON file, e.g.,./my_model_directory/preprocessor_config.json."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments passed along to both SequenceFeatureExtractor andPreTrainedTokenizer"
+        }
+    ],
+    "return": ""
+}

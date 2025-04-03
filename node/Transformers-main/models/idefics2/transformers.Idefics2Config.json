@@ -1,0 +1,59 @@
+{
+    "api": "transformers.Idefics2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "use_cache",
+        "image_token_id",
+        "tie_word_embeddings",
+        "vision_config",
+        "perceiver_config",
+        "text_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should cache the key/value pairs of the attention mechanism."
+        },
+        {
+            "name": "image_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "32001",
+            "description": "The id of the image token."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to tie the word embeddings with the token embeddings."
+        },
+        {
+            "name": "vision_config",
+            "type": "IdeficsVisionConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "Custom vision config or dict"
+        },
+        {
+            "name": "perceiver_config",
+            "type": "IdeficsPerceiverConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "Custom perceiver config or dict"
+        },
+        {
+            "name": "text_config",
+            "type": "MistralConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "Custom text config or dict for the text model"
+        }
+    ],
+    "return": ""
+}

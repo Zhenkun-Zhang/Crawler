@@ -1,0 +1,10 @@
+{
+    "api": "transformers.TFPreTrainedModel.train_step",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "data"
+    ],
+    "params": [],
+    "return": ""
+}

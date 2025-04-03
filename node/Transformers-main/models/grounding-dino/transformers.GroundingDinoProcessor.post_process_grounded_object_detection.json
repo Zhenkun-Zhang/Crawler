@@ -1,0 +1,62 @@
+{
+    "api": "transformers.GroundingDinoProcessor.post_process_grounded_object_detection",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs:",
+        "GroundingDinoObjectDetectionOutput",
+        "input_ids",
+        "threshold",
+        "text_threshold",
+        "target_sizes",
+        "typing.List[typing.Tuple],",
+        "NoneType]",
+        "text_labels",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "GroundingDinoObjectDetectionOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The token ids of the input text. If not provided will be taken from the model output."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Threshold to keep object detection predictions based on confidence score."
+        },
+        {
+            "name": "text_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Score threshold to keep text detection predictions."
+        },
+        {
+            "name": "target_sizes",
+            "type": "torch.Tensor,List[Tuple[int, int]]",
+            "optional": true,
+            "default": "",
+            "description": "Tensor of shape (batch_size, 2) or list of tuples (Tuple[int, int]) containing the target size(height, width) of each image in the batch. If unset, predictions will not be resized."
+        },
+        {
+            "name": "text_labels",
+            "type": "List[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "List of candidate labels to be detected on each image. At the moment its NOT used, but requiredto be in signature for the zero-shot object detection pipeline. Text labels are instead extractedfrom the input_ids tensor provided in outputs."
+        }
+    ],
+    "return": "List[Dict]"
+}

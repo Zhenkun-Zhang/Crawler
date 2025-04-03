@@ -1,0 +1,38 @@
+{
+    "api": "transformers.ExponentialDecayLengthPenalty",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "exponential_decay_length_penalty:",
+        "typing.Tuple[int,",
+        "float]",
+        "eos_token_id",
+        "typing.List[int],",
+        "torch.Tensor]",
+        "input_ids_seq_length"
+    ],
+    "params": [
+        {
+            "name": "exponential_decay_length_penalty",
+            "type": "tuple(int, float)",
+            "optional": false,
+            "default": "",
+            "description": "This tuple shall consist of: (start_index, decay_factor) where start_index indicates where penaltystarts and decay_factor represents the factor of exponential decay"
+        },
+        {
+            "name": "eos_token_id",
+            "type": "Union[int, List[int], torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "The id(s) of the end-of-sequence token."
+        },
+        {
+            "name": "input_ids_seq_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The length of the input sequence."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,12 @@
+{
+    "api": "transformers.TransformersEngine",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "pipeline:",
+        "Pipeline",
+        "model_id"
+    ],
+    "params": [],
+    "return": ""
+}

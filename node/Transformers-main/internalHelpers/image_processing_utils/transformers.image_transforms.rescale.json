@@ -1,0 +1,54 @@
+{
+    "api": "transformers.image_transforms.rescale",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "scale",
+        "data_format",
+        "'numpy.float32'>",
+        "input_data_format",
+        "str,",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The image to rescale."
+        },
+        {
+            "name": "scale",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The scale to use for rescaling the image."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the image. If not provided, it will be the same as the input image."
+        },
+        {
+            "name": "dtype",
+            "type": "np.dtype",
+            "optional": true,
+            "default": "<class",
+            "description": "The dtype of the output image. Defaults to np.float32. Used for backwards compatibility with featureextractors."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If not provided, it will be inferred from the input image."
+        }
+    ],
+    "return": "np.ndarray"
+}

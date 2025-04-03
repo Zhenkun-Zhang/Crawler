@@ -1,0 +1,28 @@
+{
+    "api": "transformers.HfArgumentParser.parse_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args:",
+        "dict",
+        "allow_extra_keys",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "args",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "dict containing config values"
+        },
+        {
+            "name": "allow_extra_keys",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Defaults to False. If False, will raise an exception if the dict contains keys that are not parsed."
+        }
+    ],
+    "return": "Tuple consisting of"
+}

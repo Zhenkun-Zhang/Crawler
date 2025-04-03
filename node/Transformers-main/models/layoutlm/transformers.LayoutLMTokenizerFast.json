@@ -1,0 +1,98 @@
+{
+    "api": "transformers.LayoutLMTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "do_lower_case",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "tokenize_chinese_chars",
+        "strip_accents",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "None",
+            "description": "File containing the vocabulary."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "[UNK]",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "[SEP]",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "[PAD]",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "[CLS]",
+            "description": "The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "[MASK]",
+            "description": "The token used for masking values. This is the token used when training this model with masked languagemodeling. This is the token which the model will try to predict."
+        },
+        {
+            "name": "clean_text",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean the text before tokenization by removing any control characters and replacing allwhitespaces by the classic one."
+        },
+        {
+            "name": "tokenize_chinese_chars",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to tokenize Chinese characters. This should likely be deactivated for Japanese (see thisissue)."
+        },
+        {
+            "name": "strip_accents",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to strip all accents. If this option is not specified, then it will be determined by thevalue for lowercase (as in the original LayoutLM)."
+        },
+        {
+            "name": "wordpieces_prefix",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The prefix for subwords."
+        }
+    ],
+    "return": ""
+}

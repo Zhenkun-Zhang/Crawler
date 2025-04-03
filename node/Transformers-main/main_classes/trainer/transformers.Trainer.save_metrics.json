@@ -1,0 +1,34 @@
+{
+    "api": "transformers.Trainer.save_metrics",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "split",
+        "metrics",
+        "combined"
+    ],
+    "params": [
+        {
+            "name": "split",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Mode/split name: one of train, eval, test, all"
+        },
+        {
+            "name": "metrics",
+            "type": "Dict[str, float]",
+            "optional": false,
+            "default": "",
+            "description": "The metrics returned from train/evaluate/predict"
+        },
+        {
+            "name": "combined",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Creates combined metrics by updating all_results.json with metrics of this call"
+        }
+    ],
+    "return": ""
+}

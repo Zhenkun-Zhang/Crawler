@@ -1,0 +1,52 @@
+{
+    "api": "transformers.CompileConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "fullgraph:",
+        "bool",
+        "dynamic",
+        "backend",
+        "typing.Callable]",
+        "mode",
+        "options"
+    ],
+    "params": [
+        {
+            "name": "fullgraph",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, requires that the whole forward be capturable in a single graph."
+        },
+        {
+            "name": "dynamic",
+            "type": "bool,None",
+            "optional": true,
+            "default": "",
+            "description": "Whether to try to use dynamic shape graphs."
+        },
+        {
+            "name": "backend",
+            "type": "str,Callable",
+            "optional": true,
+            "default": "",
+            "description": "Backend to be used."
+        },
+        {
+            "name": "mode",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Controls balance between performance and overhead."
+        },
+        {
+            "name": "options",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary of options to pass to the backend."
+        }
+    ],
+    "return": ""
+}

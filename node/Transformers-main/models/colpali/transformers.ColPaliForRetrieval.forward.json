@@ -1,0 +1,68 @@
+{
+    "api": "transformers.ColPaliForRetrieval.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "pixel_values",
+        "attention_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, image_size, image_size)) -- The tensors corresponding to the input images. Pixel values can be obtained using [AutoImageProcessor](/docs/transformers/main/en/model_doc/auto#transformers.AutoImageProcessor). See [SiglipImageProcessor.__call__()](/docs/transformers/main/en/model_doc/poolformer#transformers.PoolFormerFeatureExtractor.__call__) for details ([]PaliGemmaProcessor`] usesSiglipImageProcessor for processing images). If none, ColPali will only process text (query embeddings).",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.If past_key_values is used, optionally only the last decoder_input_ids have to be input (seepast_key_values).If you want to change padding behavior, you should read modeling_opt._prepare_decoder_attention_maskand modify to your needs. See diagram 1 in the paper for moreinformation on the default strategy.1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional key word arguments passed along to the vlm backbone model."
+        }
+    ],
+    "return": "transformers.models.colpali.modeling_colpali.ColPaliForRetrievalOutput or tuple(torch.FloatTensor)"
+}

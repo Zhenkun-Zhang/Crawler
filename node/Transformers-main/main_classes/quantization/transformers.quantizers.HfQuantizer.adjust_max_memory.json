@@ -1,0 +1,13 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.adjust_max_memory",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "max_memory:",
+        "typing.Dict[str,",
+        "typing.Union[int,",
+        "str]]"
+    ],
+    "params": [],
+    "return": ""
+}

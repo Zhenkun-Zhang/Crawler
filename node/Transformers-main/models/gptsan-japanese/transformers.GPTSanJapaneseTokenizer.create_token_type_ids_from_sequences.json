@@ -1,0 +1,12 @@
+{
+    "api": "transformers.GPTSanJapaneseTokenizer.create_token_type_ids_from_sequences",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0:",
+        "typing.List[int]",
+        "token_ids_1"
+    ],
+    "params": [],
+    "return": ""
+}

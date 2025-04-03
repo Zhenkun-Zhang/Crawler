@@ -1,0 +1,19 @@
+{
+    "api": "transformers.CsvPipelineDataFormat.save",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "data:",
+        "typing.List[dict]"
+    ],
+    "params": [
+        {
+            "name": "data",
+            "type": "List[dict]",
+            "optional": false,
+            "default": "",
+            "description": "The data to store."
+        }
+    ],
+    "return": ""
+}

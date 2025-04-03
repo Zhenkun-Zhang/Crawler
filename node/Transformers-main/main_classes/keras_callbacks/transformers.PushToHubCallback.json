@@ -1,0 +1,69 @@
+{
+    "api": "transformers.PushToHubCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "output_dir:",
+        "pathlib.Path]",
+        "save_strategy",
+        "transformers.trainer_utils.IntervalStrategy]",
+        "save_steps",
+        "tokenizer",
+        "hub_model_id",
+        "hub_token",
+        "checkpoint",
+        "**model_card_args"
+    ],
+    "params": [
+        {
+            "name": "output_dir",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The output directory where the model predictions and checkpoints will be written and synced with therepository on the Hub."
+        },
+        {
+            "name": "save_strategy",
+            "type": "str,IntervalStrategy",
+            "optional": true,
+            "default": "",
+            "description": "The checkpoint save strategy to adopt during training. Possible values are:no: Save is done at the end of training.epoch: Save is done at the end of each epoch.steps: Save is done every save_steps"
+        },
+        {
+            "name": "save_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of steps between saves when using the steps save_strategy."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizerBase",
+            "optional": true,
+            "default": "",
+            "description": "The tokenizer used by the model. If supplied, will be uploaded to the repo alongside the weights."
+        },
+        {
+            "name": "hub_model_id",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The name of the repository to keep in sync with the local output_dir. It can be a simple model ID inwhich case the model will be pushed in your namespace. Otherwise it should be the whole repository name,for instance user_name/model, which allows you to push to an organization you are a member of withorganization_name/model.Will default to the name of output_dir."
+        },
+        {
+            "name": "hub_token",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The token to use to push the model to the Hub. Will default to the token in the cache folder obtained withhuggingface-cli login."
+        },
+        {
+            "name": "checkpoint",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to save full training checkpoints (including epoch and optimizer state) to allow training to beresumed. Only usable when save_strategy is epoch."
+        }
+    ],
+    "return": ""
+}

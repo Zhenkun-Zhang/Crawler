@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Wav2Vec2Processor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "Wav2Vec2FeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of Wav2Vec2FeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of PreTrainedTokenizer. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

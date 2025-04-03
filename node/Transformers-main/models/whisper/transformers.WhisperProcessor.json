@@ -1,0 +1,26 @@
+{
+    "api": "transformers.WhisperProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "WhisperFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of WhisperFeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "WhisperTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of WhisperTokenizer. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

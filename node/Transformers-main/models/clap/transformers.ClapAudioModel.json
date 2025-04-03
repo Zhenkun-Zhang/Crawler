@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ClapAudioModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "ClapAudioConfig"
+    ],
+    "params": [],
+    "return": ""
+}

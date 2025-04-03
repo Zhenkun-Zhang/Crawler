@@ -1,0 +1,44 @@
+{
+    "api": "transformers.TFRagTokenForGeneration",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Optional[PretrainedConfig]",
+        "question_encoder",
+        "generator",
+        "retriever",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "RagConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model. Initializing with a config file does notload the weights associated with the model, only the configuration. Check out thefrom_pretrained() method to load the model weights."
+        },
+        {
+            "name": "question_encoder",
+            "type": "TFPreTrainedModel",
+            "optional": false,
+            "default": "",
+            "description": "An encoder model compatible with the faiss index encapsulated by the retriever."
+        },
+        {
+            "name": "generator",
+            "type": "TFPreTrainedModel",
+            "optional": false,
+            "default": "",
+            "description": "A seq2seq model used as the generator in the RAG architecture."
+        },
+        {
+            "name": "retriever",
+            "type": "RagRetriever",
+            "optional": false,
+            "default": "",
+            "description": "A retriever class encapsulating a faiss index queried to obtain context documents for current inputs."
+        }
+    ],
+    "return": ""
+}

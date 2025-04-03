@@ -1,0 +1,76 @@
+{
+    "api": "transformers.DataCollatorForLanguageModeling",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tokenizer:",
+        "PreTrainedTokenizerBase",
+        "mlm",
+        "mlm_probability",
+        "mask_replace_prob",
+        "random_replace_prob",
+        "pad_to_multiple_of",
+        "tf_experimental_compile",
+        "return_tensors",
+        "seed"
+    ],
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer,PreTrainedTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer used for encoding the data."
+        },
+        {
+            "name": "mlm",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use masked language modeling. If set to False, the labels are the same as the inputswith the padding tokens ignored (by setting them to -100). Otherwise, the labels are -100 for non-maskedtokens and the value to predict for the masked token."
+        },
+        {
+            "name": "mlm_probability",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The probability with which to (randomly) mask tokens in the input, when mlm is set to True."
+        },
+        {
+            "name": "mask_replace_prob",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The probability with which masked tokens are replaced by the tokenizers mask token (e.g., [MASK]).Defaults to 0.8, meaning 80% of the masked tokens will be replaced with [MASK].Only works when mlm is set to True."
+        },
+        {
+            "name": "random_replace_prob",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The probability with which masked tokens are replaced by random tokens from the tokenizers vocabulary.Defaults to 0.1, meaning 10% of the masked tokens will be replaced with random tokens. The remainingmasked tokens (1 - mask_replace_prob - random_replace_prob) are left unchanged.Only works when mlm is set to True."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set, will pad the sequence to a multiple of the provided value."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The type of Tensor to return. Allowable values are np, pt and tf."
+        },
+        {
+            "name": "seed",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The seed to use for the random number generator for masking. If not provided, the global RNG will be used."
+        }
+    ],
+    "return": ""
+}

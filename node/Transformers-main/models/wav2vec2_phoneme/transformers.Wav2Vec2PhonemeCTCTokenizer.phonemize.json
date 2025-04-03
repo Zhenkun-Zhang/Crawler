@@ -1,0 +1,12 @@
+{
+    "api": "transformers.Wav2Vec2PhonemeCTCTokenizer.phonemize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "str",
+        "phonemizer_lang"
+    ],
+    "params": [],
+    "return": ""
+}

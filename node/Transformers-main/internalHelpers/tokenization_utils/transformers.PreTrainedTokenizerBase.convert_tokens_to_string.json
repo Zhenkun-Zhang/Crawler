@@ -1,0 +1,20 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase.convert_tokens_to_string",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tokens:",
+        "typing.List[str]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "tokens",
+            "type": "List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The token to join in a string."
+        }
+    ],
+    "return": "str"
+}

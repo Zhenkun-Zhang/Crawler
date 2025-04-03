@@ -1,0 +1,12 @@
+{
+    "api": "transformers.default_data_collator",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "features:",
+        "typing.List[transformers.data.data_collator.InputDataClass]",
+        "return_tensors"
+    ],
+    "params": [],
+    "return": ""
+}

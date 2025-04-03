@@ -1,0 +1,12 @@
+{
+    "api": "transformers.TFIdeficsForVisionText2Text",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "vision_model",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

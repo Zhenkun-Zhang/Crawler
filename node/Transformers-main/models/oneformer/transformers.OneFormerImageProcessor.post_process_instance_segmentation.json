@@ -1,0 +1,76 @@
+{
+    "api": "transformers.OneFormerImageProcessor.post_process_instance_segmentation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs",
+        "task_type",
+        "is_demo",
+        "threshold",
+        "mask_threshold",
+        "overlap_mask_area_threshold",
+        "target_sizes",
+        "int]]]",
+        "return_coco_annotation",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "OneFormerForUniversalSegmentationOutput",
+            "optional": false,
+            "default": "",
+            "description": "The outputs from OneFormerForUniversalSegmentationOutput."
+        },
+        {
+            "name": "task_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The post processing depends on the task token input. If the task_type is panoptic, we need toignore the stuff predictions."
+        },
+        {
+            "name": "is_demo",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether the model is in demo mode. If true, use threshold to predict final masks."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The probability score threshold to keep predicted instance masks."
+        },
+        {
+            "name": "mask_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Threshold to use when turning the predicted masks into binary values."
+        },
+        {
+            "name": "overlap_mask_area_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The overlap mask area threshold to merge or discard small disconnected parts within each binaryinstance mask."
+        },
+        {
+            "name": "target_sizes",
+            "type": "List[Tuple]",
+            "optional": true,
+            "default": "",
+            "description": "List of length (batch_size), where each list item (Tuple[int, int]]) corresponds to the requestedfinal size (height, width) of each prediction in batch. If left to None, predictions will not beresized."
+        },
+        {
+            "name": "return_coco_annotation",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return predictions in COCO format."
+        }
+    ],
+    "return": "List[Dict]"
+}

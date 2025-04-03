@@ -1,0 +1,27 @@
+{
+    "api": "transformers.TorchExportableModuleWithStaticCache.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "cache_position",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Tensor representing current input token id to the module."
+        },
+        {
+            "name": "cache_position",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Tensor representing current input position in the cache."
+        }
+    ],
+    "return": "torch.Tensor"
+}

@@ -1,0 +1,19 @@
+{
+    "api": "transformers.torch_distributed_zero_first",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "local_rank:",
+        "int"
+    ],
+    "params": [
+        {
+            "name": "local_rank",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The rank of the local process."
+        }
+    ],
+    "return": ""
+}

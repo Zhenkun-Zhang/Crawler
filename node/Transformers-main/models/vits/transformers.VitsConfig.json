@@ -1,0 +1,379 @@
+{
+    "api": "transformers.VitsConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "window_size",
+        "use_bias",
+        "ffn_dim",
+        "layerdrop",
+        "ffn_kernel_size",
+        "flow_size",
+        "spectrogram_bins",
+        "hidden_act",
+        "hidden_dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "initializer_range",
+        "layer_norm_eps",
+        "use_stochastic_duration_prediction",
+        "num_speakers",
+        "speaker_embedding_size",
+        "upsample_initial_channel",
+        "upsample_rates",
+        "8,",
+        "2,",
+        "2]",
+        "upsample_kernel_sizes",
+        "16,",
+        "4,",
+        "4]",
+        "resblock_kernel_sizes",
+        "7,",
+        "11]",
+        "resblock_dilation_sizes",
+        "3,",
+        "5],",
+        "[1,",
+        "3,",
+        "5],",
+        "[1,",
+        "3,",
+        "5]]",
+        "leaky_relu_slope",
+        "depth_separable_channels",
+        "depth_separable_num_layers",
+        "duration_predictor_flow_bins",
+        "duration_predictor_tail_bound",
+        "duration_predictor_kernel_size",
+        "duration_predictor_dropout",
+        "duration_predictor_num_flows",
+        "duration_predictor_filter_channels",
+        "prior_encoder_num_flows",
+        "prior_encoder_num_wavenet_layers",
+        "posterior_encoder_num_wavenet_layers",
+        "wavenet_kernel_size",
+        "wavenet_dilation_rate",
+        "wavenet_dropout",
+        "speaking_rate",
+        "noise_scale",
+        "noise_scale_duration",
+        "sampling_rate",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "38",
+            "description": "Vocabulary size of the VITS model. Defines the number of different tokens that can be represented by theinputs_ids passed to the forward method of VitsModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "192",
+            "description": "Dimensionality of the text encoder layers."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "window_size",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Window size for the relative positional embeddings in the attention layers of the Transformer encoder."
+        },
+        {
+            "name": "use_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use bias in the key, query, value projection layers in the Transformer encoder."
+        },
+        {
+            "name": "ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The LayerDrop probability for the encoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "ffn_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Kernel size of the 1D convolution layers used by the feed-forward network in the Transformer encoder."
+        },
+        {
+            "name": "flow_size",
+            "type": "int",
+            "optional": true,
+            "default": "192",
+            "description": "Dimensionality of the flow layers."
+        },
+        {
+            "name": "spectrogram_bins",
+            "type": "int",
+            "optional": true,
+            "default": "513",
+            "description": "Number of frequency bins in the target spectrogram."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings and encoder."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "use_stochastic_duration_prediction",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use the stochastic duration prediction module or the regular duration predictor."
+        },
+        {
+            "name": "num_speakers",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of speakers if this is a multi-speaker model."
+        },
+        {
+            "name": "speaker_embedding_size",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Number of channels used by the speaker embeddings. Is zero for single-speaker models."
+        },
+        {
+            "name": "upsample_initial_channel",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The number of input channels into the HiFi-GAN upsampling network."
+        },
+        {
+            "name": "upsample_rates",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[8,",
+            "description": "A tuple of integers defining the stride of each 1D convolutional layer in the HiFi-GAN upsampling network.The length of upsample_rates defines the number of convolutional layers and has to match the length ofupsample_kernel_sizes."
+        },
+        {
+            "name": "upsample_kernel_sizes",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[16,",
+            "description": "A tuple of integers defining the kernel size of each 1D convolutional layer in the HiFi-GAN upsamplingnetwork. The length of upsample_kernel_sizes defines the number of convolutional layers and has to matchthe length of upsample_rates."
+        },
+        {
+            "name": "resblock_kernel_sizes",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "A tuple of integers defining the kernel sizes of the 1D convolutional layers in the HiFi-GANmulti-receptive field fusion (MRF) module."
+        },
+        {
+            "name": "resblock_dilation_sizes",
+            "type": "Tuple[Tuple[int]],List[List[int]]",
+            "optional": true,
+            "default": "[[1,",
+            "description": "A nested tuple of integers defining the dilation rates of the dilated 1D convolutional layers in theHiFi-GAN multi-receptive field fusion (MRF) module."
+        },
+        {
+            "name": "leaky_relu_slope",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The angle of the negative slope used by the leaky ReLU activation."
+        },
+        {
+            "name": "depth_separable_channels",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of channels to use in each depth-separable block."
+        },
+        {
+            "name": "depth_separable_num_layers",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of convolutional layers to use in each depth-separable block."
+        },
+        {
+            "name": "duration_predictor_flow_bins",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Number of channels to map using the unonstrained rational spline in the duration predictor model."
+        },
+        {
+            "name": "duration_predictor_tail_bound",
+            "type": "float",
+            "optional": true,
+            "default": "5.0",
+            "description": "Value of the tail bin boundary when computing the unconstrained rational spline in the duration predictormodel."
+        },
+        {
+            "name": "duration_predictor_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Kernel size of the 1D convolution layers used in the duration predictor model."
+        },
+        {
+            "name": "duration_predictor_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "The dropout ratio for the duration predictor model."
+        },
+        {
+            "name": "duration_predictor_num_flows",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of flow stages used by the duration predictor model."
+        },
+        {
+            "name": "duration_predictor_filter_channels",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Number of channels for the convolution layers used in the duration predictor model."
+        },
+        {
+            "name": "prior_encoder_num_flows",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of flow stages used by the prior encoder flow model."
+        },
+        {
+            "name": "prior_encoder_num_wavenet_layers",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of WaveNet layers used by the prior encoder flow model."
+        },
+        {
+            "name": "posterior_encoder_num_wavenet_layers",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of WaveNet layers used by the posterior encoder model."
+        },
+        {
+            "name": "wavenet_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Kernel size of the 1D convolution layers used in the WaveNet model."
+        },
+        {
+            "name": "wavenet_dilation_rate",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Dilation rates of the dilated 1D convolutional layers used in the WaveNet model."
+        },
+        {
+            "name": "wavenet_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the WaveNet layers."
+        },
+        {
+            "name": "speaking_rate",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Speaking rate. Larger values give faster synthesised speech."
+        },
+        {
+            "name": "noise_scale",
+            "type": "float",
+            "optional": true,
+            "default": "0.667",
+            "description": "How random the speech prediction is. Larger values create more variation in the predicted speech."
+        },
+        {
+            "name": "noise_scale_duration",
+            "type": "float",
+            "optional": true,
+            "default": "0.8",
+            "description": "How random the duration prediction is. Larger values create more variation in the predicted durations."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "16000",
+            "description": "The sampling rate at which the output audio waveform is digitalized expressed in hertz (Hz)."
+        }
+    ],
+    "return": ""
+}

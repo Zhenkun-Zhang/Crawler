@@ -1,0 +1,58 @@
+{
+    "api": "transformers.models.openai.modeling_openai.OpenAIGPTDoubleHeadsModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "mc_loss",
+        "logits",
+        "mc_logits",
+        "hidden_states",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Language modeling loss."
+        },
+        {
+            "name": "mc_loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Multiple choice classification loss."
+        },
+        {
+            "name": "logits",
+            "type": "torch.FloatTensor of shape (batch_size, num_choices, sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)."
+        },
+        {
+            "name": "mc_logits",
+            "type": "torch.FloatTensor of shape (batch_size, num_choices)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the multiple choice classification head (scores for each choice before SoftMax)."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

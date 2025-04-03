@@ -1,0 +1,147 @@
+{
+    "api": "transformers.DepthProConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "fusion_hidden_size",
+        "patch_size",
+        "initializer_range",
+        "intermediate_hook_ids",
+        "5]",
+        "intermediate_feature_dims",
+        "256]",
+        "scaled_images_ratios",
+        "0.5,",
+        "1]",
+        "scaled_images_overlap_ratios",
+        "0.5,",
+        "0.25]",
+        "scaled_images_feature_dims",
+        "1024,",
+        "512]",
+        "merge_padding_value",
+        "use_batch_norm_in_fusion_residual",
+        "use_bias_in_fusion_residual",
+        "use_fov_model",
+        "num_fov_head_layers",
+        "image_model_config",
+        "patch_model_config",
+        "fov_model_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "fusion_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The number of channels before fusion."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "384",
+            "description": "The size (resolution) of each patch. This is also the image_size for backbone model."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "intermediate_hook_ids",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[11,",
+            "description": "Indices of the intermediate hidden states from the patch encoder to use for fusion."
+        },
+        {
+            "name": "intermediate_feature_dims",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[256,",
+            "description": "Hidden state dimensions during upsampling for each intermediate hidden state in intermediate_hook_ids."
+        },
+        {
+            "name": "scaled_images_ratios",
+            "type": "List[float]",
+            "optional": true,
+            "default": "[0.25,",
+            "description": "Ratios of scaled images to be used by the patch encoder."
+        },
+        {
+            "name": "scaled_images_overlap_ratios",
+            "type": "List[float]",
+            "optional": true,
+            "default": "[0.0,",
+            "description": "Overlap ratios between patches for each scaled image in scaled_images_ratios."
+        },
+        {
+            "name": "scaled_images_feature_dims",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1024,",
+            "description": "Hidden state dimensions during upsampling for each scaled image in scaled_images_ratios."
+        },
+        {
+            "name": "merge_padding_value",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "When merging smaller patches back to the image size, overlapping sections of this size are removed."
+        },
+        {
+            "name": "use_batch_norm_in_fusion_residual",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use batch normalization in the pre-activate residual units of the fusion blocks."
+        },
+        {
+            "name": "use_bias_in_fusion_residual",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use bias in the pre-activate residual units of the fusion blocks."
+        },
+        {
+            "name": "use_fov_model",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use DepthProFovModel to generate the field of view."
+        },
+        {
+            "name": "num_fov_head_layers",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of convolution layers in the head of DepthProFovModel."
+        },
+        {
+            "name": "image_model_config",
+            "type": "Union[Dict[str, Any], PretrainedConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the image encoder model, which is loaded using the AutoModel API.By default, Dinov2 model is used as backbone."
+        },
+        {
+            "name": "patch_model_config",
+            "type": "Union[Dict[str, Any], PretrainedConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the patch encoder model, which is loaded using the AutoModel API.By default, Dinov2 model is used as backbone."
+        },
+        {
+            "name": "fov_model_config",
+            "type": "Union[Dict[str, Any], PretrainedConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the fov encoder model, which is loaded using the AutoModel API.By default, Dinov2 model is used as backbone."
+        }
+    ],
+    "return": ""
+}

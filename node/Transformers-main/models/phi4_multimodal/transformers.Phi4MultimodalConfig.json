@@ -1,0 +1,212 @@
+{
+    "api": "transformers.Phi4MultimodalConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "num_key_value_heads",
+        "resid_pdrop",
+        "embd_pdrop",
+        "attention_dropout",
+        "hidden_act",
+        "max_position_embeddings",
+        "initializer_range",
+        "rms_norm_eps",
+        "use_cache",
+        "tie_word_embeddings",
+        "rope_theta",
+        "rope_scaling",
+        "partial_rotary_factor",
+        "bos_token_id",
+        "eos_token_id",
+        "200020]",
+        "pad_token_id",
+        "original_max_position_embeddings",
+        "sliding_window",
+        "vision_config",
+        "audio_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "200064",
+            "description": "Vocabulary size of the Phi-3 model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling Phi3Model."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of hidden layers in the Transformer decoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "This is the number of key_value heads that should be used to implement Grouped Query Attention. Ifnum_key_value_heads=num_attention_heads, the model will use Multi Head Attention (MHA), ifnum_key_value_heads=1 the model will use Multi Query Attention (MQA) otherwise GQA is used. Whenconverting a multi-head checkpoint to a GQA checkpoint, each group key and value head should be constructedby meanpooling all the original heads within that group. For more details checkout thispaper. If it is not specified, will default tonum_attention_heads."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Dropout probability for mlp outputs."
+        },
+        {
+            "name": "embd_pdrop",
+            "type": "int",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the embeddings."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio after computing the attention scores."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "silu",
+            "description": "The non-linear activation function (function or string) in the decoder."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "131072",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon value used for the RMSNorm."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True. Whether to tie weight embeddings or not."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to tie weight embeddings"
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "rope_scaling",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "The scaling strategy for the RoPE embeddings. If None, no scaling is applied. If a dictionary, it mustcontain the following keys: type, short_factor and long_factor. The type must be longrope andthe short_factor and long_factor must be lists of numbers with the same length as the hidden sizedivided by the number of attention heads divided by 2."
+        },
+        {
+            "name": "partial_rotary_factor",
+            "type": "float",
+            "optional": true,
+            "default": "1",
+            "description": "Percentage of the query and keys which will have rotary embedding. Must be between 0.0 and 1.0."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "199999",
+            "description": "The id of the beginning-of-sequence token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int,list[int]",
+            "optional": true,
+            "default": "[199999,",
+            "description": "The id of the end-of-sequence token."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "199999",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "original_max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "The maximum sequence length that this model was trained with. This is used to determine the size of theoriginal RoPE embeddings when using long scaling."
+        },
+        {
+            "name": "sliding_window",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Sliding window attention window size. If None, no sliding window is applied."
+        },
+        {
+            "name": "vision_config",
+            "type": "Phi4MultimodalVisionConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "The vision config for the underlying image embedding model. If not provided, will default to the configurationused to instantiate a model similar in architecture asmicrosoft/Phi-4-multimodal-instruct."
+        },
+        {
+            "name": "audio_config",
+            "type": "Phi4MultimodalAudioConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "The audio config for the underlying audio embedding model. If not provided, will default to the configurationused to instantiate a model similar in architecture asmicrosoft/Phi-4-multimodal-instruct."
+        }
+    ],
+    "return": ""
+}

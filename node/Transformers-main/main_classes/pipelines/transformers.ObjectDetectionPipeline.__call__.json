@@ -1,0 +1,33 @@
+{
+    "api": "transformers.ObjectDetectionPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "str, List[str], PIL.Image,List[PIL.Image]",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing an HTTP(S) link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyThe pipeline accepts either a single image or a batch of images. Images in a batch must all be in thesame format: all as HTTP(S) links, all as local paths, or all as PIL images."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The probability necessary to make a prediction."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The maximum time in seconds to wait for fetching images from the web. If None, no timeout is set andthe call may block forever."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,26 @@
+{
+    "api": "transformers.tool",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tool_function:",
+        "typing.Callable"
+    ],
+    "params": [
+        {
+            "name": "tool_function",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Your function. Should have type hints for each input and a type hint for the output."
+        },
+        {
+            "name": "Should",
+            "type": "also have a docstring description including an ‘Args",
+            "optional": false,
+            "default": "",
+            "description": " part where each argument is described."
+        }
+    ],
+    "return": ""
+}

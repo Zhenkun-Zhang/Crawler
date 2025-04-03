@@ -1,0 +1,93 @@
+{
+    "api": "transformers.TFPreTrainedModel.create_model_card",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "output_dir",
+        "model_name",
+        "language",
+        "license",
+        "tags",
+        "finetuned_from",
+        "tasks",
+        "dataset_tags",
+        "List[str]]]",
+        "dataset",
+        "List[str]]]",
+        "dataset_args",
+        "List[str]]]"
+    ],
+    "params": [
+        {
+            "name": "output_dir",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "The folder in which to create the model card."
+        },
+        {
+            "name": "model_name",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The name of the model."
+        },
+        {
+            "name": "language",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The language of the model (if applicable)"
+        },
+        {
+            "name": "license",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The license of the model. Will default to the license of the pretrained model used, if the originalmodel given to the Trainer comes from a repo on the Hub."
+        },
+        {
+            "name": "tags",
+            "type": "str,List[str]",
+            "optional": true,
+            "default": "",
+            "description": "Some tags to be included in the metadata of the model card."
+        },
+        {
+            "name": "finetuned_from",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The name of the model used to fine-tune this one (if applicable). Will default to the name of the repoof the original model given to the Trainer (if it comes from the Hub)."
+        },
+        {
+            "name": "tasks",
+            "type": "str,List[str]",
+            "optional": true,
+            "default": "",
+            "description": "One or several task identifiers, to be included in the metadata of the model card."
+        },
+        {
+            "name": "dataset_tags",
+            "type": "str,List[str]",
+            "optional": true,
+            "default": "",
+            "description": "One or several dataset tags, to be included in the metadata of the model card."
+        },
+        {
+            "name": "dataset",
+            "type": "str,List[str]",
+            "optional": true,
+            "default": "",
+            "description": "One or several dataset identifiers, to be included in the metadata of the model card."
+        },
+        {
+            "name": "dataset_args",
+            "type": "str,List[str]",
+            "optional": true,
+            "default": "",
+            "description": "One or several dataset arguments, to be included in the metadata of the model card."
+        }
+    ],
+    "return": ""
+}

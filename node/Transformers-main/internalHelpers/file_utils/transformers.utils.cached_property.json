@@ -1,0 +1,13 @@
+{
+    "api": "transformers.utils.cached_property",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "fget",
+        "fset",
+        "fdel",
+        "doc"
+    ],
+    "params": [],
+    "return": ""
+}

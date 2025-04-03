@@ -1,0 +1,12 @@
+{
+    "api": "transformers.HqqConfig.from_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "typing.Dict[str,",
+        "typing.Any]"
+    ],
+    "params": [],
+    "return": ""
+}

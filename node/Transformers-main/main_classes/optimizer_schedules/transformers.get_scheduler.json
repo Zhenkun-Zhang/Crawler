@@ -1,0 +1,52 @@
+{
+    "api": "transformers.get_scheduler",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "name:",
+        "typing.Union[str,",
+        "transformers.trainer_utils.SchedulerType]",
+        "optimizer",
+        "num_warmup_steps",
+        "num_training_steps",
+        "scheduler_specific_kwargs"
+    ],
+    "params": [
+        {
+            "name": "name",
+            "type": "str,SchedulerType",
+            "optional": false,
+            "default": "",
+            "description": "The name of the scheduler to use."
+        },
+        {
+            "name": "optimizer",
+            "type": "torch.optim.Optimizer",
+            "optional": false,
+            "default": "",
+            "description": "The optimizer that will be used during training."
+        },
+        {
+            "name": "num_warmup_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of warmup steps to do. This is not required by all schedulers (hence the argument beingoptional), the function will raise an error if its unset and the scheduler type requires it."
+        },
+        {
+            "name": "num_training_steps",
+            "type": "`int“",
+            "optional": true,
+            "default": "",
+            "description": "The number of training steps to do. This is not required by all schedulers (hence the argument beingoptional), the function will raise an error if its unset and the scheduler type requires it."
+        },
+        {
+            "name": "scheduler_specific_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Extra parameters for schedulers such as cosine with restarts. Mismatched scheduler types and schedulerparameters will cause the scheduler function to raise a TypeError."
+        }
+    ],
+    "return": ""
+}

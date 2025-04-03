@@ -1,0 +1,11 @@
+{
+    "api": "transformers.FlavaImageCodebook.get_codebook_indices",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "Tensor"
+    ],
+    "params": [],
+    "return": ""
+}

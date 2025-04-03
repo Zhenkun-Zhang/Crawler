@@ -1,0 +1,48 @@
+{
+    "api": "transformers.IdeficsImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_size:",
+        "int",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "image_num_channels",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Resize to image size"
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method. Can beoverridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method.Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "image_num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of image channels."
+        }
+    ],
+    "return": ""
+}

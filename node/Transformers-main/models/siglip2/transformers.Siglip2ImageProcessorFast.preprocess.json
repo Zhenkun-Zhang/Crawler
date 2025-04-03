@@ -1,0 +1,144 @@
+{
+    "api": "transformers.Siglip2ImageProcessorFast.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "Image to preprocess. Expects a single or batch of images with pixel values ranging from 0 to 255. Ifpassing in images with pixel values between 0 and 1, set do_rescale=False."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the image."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "Describes the maximum input dimensions to the model."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling,InterpolationMode",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. This can be one of the enum PILImageResampling. Onlyhas an effect if do_resize is set to True."
+        },
+        {
+            "name": "do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to center crop the image."
+        },
+        {
+            "name": "crop_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "Size of the output image after applying center_crop."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Rescale factor to rescale the image by if do_rescale is set to True."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image mean to use for normalization. Only has an effect if do_normalize is set to True."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image standard deviation to use for normalization. Only has an effect if do_normalize is set toTrue."
+        },
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "Returns stacked tensors if set to `pt, otherwise returns a list of tensors."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "Only ChannelDimension.FIRST is supported. Added for compatibility with slow processors."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. If unset, the channel dimension format is inferredfrom the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.none or ChannelDimension.NONE: image in (height, width) format."
+        },
+        {
+            "name": "device",
+            "type": "torch.device",
+            "optional": true,
+            "default": "",
+            "description": "The device to process the images on. If unset, the device is inferred from the input images."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size (resolution) of each patch the image will be split to."
+        },
+        {
+            "name": "max_num_patches",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The image will be resized to have at most this number of patches,and then padded in patch dimension to match this number exactly."
+        }
+    ],
+    "return": ""
+}

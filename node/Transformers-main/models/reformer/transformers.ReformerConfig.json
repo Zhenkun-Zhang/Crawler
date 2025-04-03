@@ -1,0 +1,282 @@
+{
+    "api": "transformers.ReformerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "attention_head_size",
+        "attn_layers",
+        "'lsh',",
+        "'local',",
+        "'lsh',",
+        "'local',",
+        "'lsh']",
+        "axial_norm_std",
+        "axial_pos_embds",
+        "axial_pos_shape",
+        "64]",
+        "axial_pos_embds_dim",
+        "192]",
+        "chunk_size_lm_head",
+        "eos_token_id",
+        "feed_forward_size",
+        "hash_seed",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "hidden_size",
+        "initializer_range",
+        "is_decoder",
+        "layer_norm_eps",
+        "local_num_chunks_before",
+        "local_num_chunks_after",
+        "local_attention_probs_dropout_prob",
+        "local_attn_chunk_length",
+        "lsh_attn_chunk_length",
+        "lsh_attention_probs_dropout_prob",
+        "lsh_num_chunks_before",
+        "lsh_num_chunks_after",
+        "max_position_embeddings",
+        "num_attention_heads",
+        "num_buckets",
+        "num_hashes",
+        "pad_token_id",
+        "vocab_size",
+        "tie_word_embeddings",
+        "use_cache",
+        "classifier_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "attention_head_size",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Dimensionality of the projected key, query and value vectors"
+        },
+        {
+            "name": "attn_layers",
+            "type": "List[str]",
+            "optional": true,
+            "default": "[local,",
+            "description": "List of attention layer types in ascending order. It can be chosen between a LSHSelfAttention layer(lsh) and a LocalSelfAttention layer (local).For more information on LSHSelfAttention layer, see LSH Self Attention. Formore information on LocalSelfAttention layer, see Local Self Attention."
+        },
+        {
+            "name": "axial_pos_embds",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use axial position embeddings. For more information on how axial position embeddingswork, see Axial Position Encodings."
+        },
+        {
+            "name": "axial_norm_std",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "The standard deviation of the normal_initializer for initializing the weight matrices of the axialpositional encodings."
+        },
+        {
+            "name": "axial_pos_shape",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[64,",
+            "description": "The position dims of the axial position encodings. During training, the product of the position dims has tobe equal to the sequence length.For more information on how axial position embeddings work, see Axial PositionEncodings."
+        },
+        {
+            "name": "axial_pos_embds_dim",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[64,",
+            "description": "The embedding dims of the axial position encodings. The sum of the embedding dims has to be equal to thehidden size.For more information on how axial position embeddings work, see Axial PositionEncodings."
+        },
+        {
+            "name": "chunk_size_lm_head",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The chunk size of the final language model feed forward head layer. A chunk size of 0 means that the feedforward layer is not chunked. A chunk size of n means that the feed forward layer processes n <sequence_length embeddings at a time.For more information on feed forward chunking, see How does Feed Forward Chunkingwork?."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The token id for the end-of-sentence token."
+        },
+        {
+            "name": "feed_forward_size",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of the feed_forward layer in the residual attention block."
+        },
+        {
+            "name": "hash_seed",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Seed that can be used to make local sensitive hashing in LSHSelfAttention deterministic. This should onlybe set for testing purposed. For evaluation and training purposes hash_seed should be left as None toensure fully random rotations in local sensitive hashing scheme."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,Callable",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function (function or string) in the feed forward layer in the residual attentionblock. If string, gelu, relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.05",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the output hidden states of the residual attention blocks."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "is_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to use a causal mask in addition to the attention_mask passed to ReformerModel. Whenusing the Reformer for causal language modeling, this argument should be set to True."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "local_chunk_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Length of chunk which attends to itself in LocalSelfAttention. Chunking reduces memory complexity fromsequence length x sequence length (self attention) to chunk length x chunk length x sequence length / chunklength (chunked self attention)."
+        },
+        {
+            "name": "local_num_chunks_before",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of previous neighbouring chunks to attend to in LocalSelfAttention layer to itself."
+        },
+        {
+            "name": "local_num_chunks_after",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Number of following neighbouring chunks to attend to in LocalSelfAttention layer in addition to itself."
+        },
+        {
+            "name": "local_attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.05",
+            "description": "The dropout ratio for the attention probabilities in LocalSelfAttention."
+        },
+        {
+            "name": "lsh_attn_chunk_length",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Length of chunk which attends to itself in LSHSelfAttention. Chunking reduces memory complexity fromsequence length x sequence length (self attention) to chunk length x chunk length x sequence length / chunklength (chunked self attention)."
+        },
+        {
+            "name": "lsh_num_chunks_before",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of previous neighbouring chunks to attend to in LSHSelfAttention layer to itself."
+        },
+        {
+            "name": "lsh_num_chunks_after",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Number of following neighbouring chunks to attend to in LSHSelfAttention layer to itself."
+        },
+        {
+            "name": "lsh_attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities in LSHSelfAttention."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "num_buckets",
+            "type": "int,List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "Number of buckets, the key query vectors can be hashed into using the locality sensitive hashing scheme.Each query key vector is hashed into a hash in 1, ..., num_buckets. The number of buckets can also befactorized into a list for improved memory complexity. In this case, each query key vector is hashed into ahash in 1-1, 1-2, ..., num_buckets[0]-1, ..., num_buckets[0]-num_buckets[1] if num_buckets isfactorized into two factors. The number of buckets (or the product the factors) should approximately equalsequence length / lsh_chunk_length. If num_buckets not set, a good value is calculated on the fly."
+        },
+        {
+            "name": "num_hashes",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of hashing rounds (e.g., number of random rotations) in Local Sensitive Hashing scheme. The highernum_hashes, the more accurate the LSHSelfAttention becomes, but also the more memory and time intensivethe hashing becomes."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The token id for the padding token."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "320",
+            "description": "\\Vocabulary size of the Reformer model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling ReformerModel."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to tie input and output embeddings."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "classifier_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The dropout ratio for the classification head."
+        }
+    ],
+    "return": ""
+}

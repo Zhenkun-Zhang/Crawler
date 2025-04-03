@@ -1,0 +1,16 @@
+{
+    "api": "transformers.BarkConfig.from_sub_model_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "semantic_config:",
+        "BarkSemanticConfig",
+        "coarse_acoustics_config",
+        "fine_acoustics_config",
+        "codec_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "BarkConfig"
+}

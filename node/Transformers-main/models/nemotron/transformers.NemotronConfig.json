@@ -1,0 +1,179 @@
+{
+    "api": "transformers.NemotronConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "head_dim",
+        "num_key_value_heads",
+        "hidden_act",
+        "max_position_embeddings",
+        "initializer_range",
+        "norm_eps",
+        "use_cache",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "tie_word_embeddings",
+        "rope_theta",
+        "partial_rotary_factor",
+        "attention_bias",
+        "attention_dropout",
+        "mlp_bias",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "256000",
+            "description": "Vocabulary size of the Nemotron model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling NemotronModel"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "6144",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "24576",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of hidden layers in the Transformer decoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "48",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "head_dim",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Projection weights dimension in multi-head attention. Set to hidden_size // num_attention_heads if None"
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "This is the number of key_value heads that should be used to implement Grouped Query Attention. Ifnum_key_value_heads=num_attention_heads, the model will use Multi Head Attention (MHA), ifnum_key_value_heads=1 the model will use Multi Query Attention (MQA) otherwise GQA is used. When converting a multi-head checkpoint to a GQA checkpoint, each group key and value head should be constructed by meanpooling all the original heads within that group. For more details checkout [this paper](https://arxiv.org/pdf/2305.13245.pdf). If it is not specified, will default to num_attention_heads`."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu2",
+            "description": "The non-linear activation function (function or string) in the decoder."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.0134",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Padding token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Beginning of stream token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to tie weight embeddings"
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "partial_rotary_factor",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "Percentage of the query and keys which will have rotary embedding."
+        },
+        {
+            "name": "attention_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a bias in the query, key, value and output projection layers during self-attention."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "mlp_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a bias in up_proj and down_proj layers in the MLP layers."
+        }
+    ],
+    "return": ""
+}

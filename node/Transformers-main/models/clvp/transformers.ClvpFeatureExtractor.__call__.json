@@ -1,0 +1,81 @@
+{
+    "api": "transformers.ClvpFeatureExtractor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "raw_speech:",
+        "typing.Union[numpy.ndarray,",
+        "typing.List[float],",
+        "typing.List[numpy.ndarray],",
+        "typing.List[typing.List[float]]]",
+        "sampling_rate",
+        "truncation",
+        "pad_to_multiple_of",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "return_attention_mask",
+        "padding",
+        "max_length",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "raw_speech",
+            "type": "np.ndarray, List[float], List[np.ndarray], List[List[float]]",
+            "optional": false,
+            "default": "",
+            "description": "The sequence or batch of sequences to be padded. Each sequence can be a numpy array, a list of floatvalues, a list of numpy arrays or a list of list of float values. Must be mono channel audio, notstereo, i.e. single float per timestep."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the raw_speech input was sampled. It is strongly recommended to passsampling_rate at the forward call to prevent silent errors and allow automatic speech recognitionpipeline."
+        },
+        {
+            "name": "truncation",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Activates truncation to cut input sequences longer than max_length to max_length."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set will pad the sequence to a multiple of the provided value.This is especially useful to enable the use of Tensor Cores on NVIDIA hardware with compute capability>= 7.5 (Volta), or on TPUs which benefit from having sequence lengths be a multiple of 128."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the attention mask. If left to the default, it will return the attention mask.What are attention masks?"
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The value that is used to fill the padding values / vectors."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum input length of the inputs."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,374 @@
+{
+    "api": "transformers.OneFormerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "backbone_config:",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "backbone_kwargs",
+        "ignore_value",
+        "num_queries",
+        "no_object_weight",
+        "class_weight",
+        "mask_weight",
+        "dice_weight",
+        "contrastive_weight",
+        "contrastive_temperature",
+        "train_num_points",
+        "oversample_ratio",
+        "importance_sample_ratio",
+        "init_std",
+        "init_xavier_std",
+        "layer_norm_eps",
+        "is_training",
+        "use_auxiliary_loss",
+        "output_auxiliary_logits",
+        "strides",
+        "8,",
+        "16,",
+        "32]",
+        "task_seq_len",
+        "text_encoder_width",
+        "text_encoder_context_length",
+        "text_encoder_num_layers",
+        "text_encoder_vocab_size",
+        "text_encoder_proj_layers",
+        "text_encoder_n_ctx",
+        "conv_dim",
+        "mask_dim",
+        "hidden_dim",
+        "encoder_feedforward_dim",
+        "norm",
+        "encoder_layers",
+        "decoder_layers",
+        "use_task_norm",
+        "num_attention_heads",
+        "dropout",
+        "dim_feedforward",
+        "pre_norm",
+        "enforce_input_proj",
+        "query_dec_layers",
+        "common_stride",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig",
+            "optional": true,
+            "default": "",
+            "description": "The configuration of the backbone model."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to load backbone from the timm library. If False, the backbone is loaded from the transformerslibrary."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "ignore_value",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Values to be ignored in GT label while calculating loss."
+        },
+        {
+            "name": "num_queries",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of object queries."
+        },
+        {
+            "name": "no_object_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight for no-object class predictions."
+        },
+        {
+            "name": "class_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight for Classification CE loss."
+        },
+        {
+            "name": "mask_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight for binary CE loss."
+        },
+        {
+            "name": "dice_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight for dice loss."
+        },
+        {
+            "name": "contrastive_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight for contrastive loss."
+        },
+        {
+            "name": "contrastive_temperature",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Initial value for scaling the contrastive logits."
+        },
+        {
+            "name": "train_num_points",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of points to sample while calculating losses on mask predictions."
+        },
+        {
+            "name": "oversample_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Ratio to decide how many points to oversample."
+        },
+        {
+            "name": "importance_sample_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Ratio of points that are sampled via importance sampling."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation for normal intialization."
+        },
+        {
+            "name": "init_xavier_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation for xavier uniform initialization."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Epsilon for layer normalization."
+        },
+        {
+            "name": "is_training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to run in training or inference mode."
+        },
+        {
+            "name": "use_auxiliary_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to calculate loss using intermediate predictions from transformer decoder."
+        },
+        {
+            "name": "output_auxiliary_logits",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return intermediate predictions from transformer decoder."
+        },
+        {
+            "name": "strides",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "List containing the strides for feature maps in the encoder."
+        },
+        {
+            "name": "task_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Sequence length for tokenizing text list input."
+        },
+        {
+            "name": "text_encoder_width",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Hidden size for text encoder."
+        },
+        {
+            "name": "text_encoder_context_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Input sequence length for text encoder."
+        },
+        {
+            "name": "text_encoder_num_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of layers for transformer in text encoder."
+        },
+        {
+            "name": "text_encoder_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Vocabulary size for tokenizer."
+        },
+        {
+            "name": "text_encoder_proj_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of layers in MLP for project text queries."
+        },
+        {
+            "name": "text_encoder_n_ctx",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of learnable text context queries."
+        },
+        {
+            "name": "conv_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Feature map dimension to map outputs from the backbone."
+        },
+        {
+            "name": "mask_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension for feature maps in pixel decoder."
+        },
+        {
+            "name": "hidden_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension for hidden states in transformer decoder."
+        },
+        {
+            "name": "encoder_feedforward_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension for FFN layer in pixel decoder."
+        },
+        {
+            "name": "norm",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Type of normalization."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of layers in pixel decoder."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of layers in transformer decoder."
+        },
+        {
+            "name": "use_task_norm",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the task token."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads in transformer layers in the pixel and transformer decoders."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Dropout probability for pixel and transformer decoders."
+        },
+        {
+            "name": "dim_feedforward",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension for FFN layer in transformer decoder."
+        },
+        {
+            "name": "pre_norm",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize hidden states before attention layers in transformer decoder."
+        },
+        {
+            "name": "enforce_input_proj",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to project hidden states in transformer decoder."
+        },
+        {
+            "name": "query_dec_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of layers in query transformer."
+        },
+        {
+            "name": "common_stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Common stride used for features in pixel decoder."
+        }
+    ],
+    "return": ""
+}

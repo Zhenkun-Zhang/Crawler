@@ -1,0 +1,67 @@
+{
+    "api": "transformers.PaliGemmaConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vision_config",
+        "text_config",
+        "ignore_index",
+        "image_token_index",
+        "vocab_size",
+        "projection_dim",
+        "hidden_size",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vision_config",
+            "type": "PaliGemmaVisionConfig,  optional",
+            "optional": true,
+            "default": "None",
+            "description": "Custom vision config or dict"
+        },
+        {
+            "name": "text_config",
+            "type": "Union[AutoConfig, dict]",
+            "optional": true,
+            "default": "None",
+            "description": "The config object of the text backbone. Can be any of LlamaConfig or MistralConfig."
+        },
+        {
+            "name": "ignore_index",
+            "type": "int",
+            "optional": true,
+            "default": "-100",
+            "description": "The ignore index for the loss function."
+        },
+        {
+            "name": "image_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "256000",
+            "description": "The image token index to encode the image prompt."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "257152",
+            "description": "Vocabulary size of the PaliGemmamodel. Defines the number of different tokens that can be represented by theinputs_ids passed when calling ~PaliGemmaForConditionalGeneration"
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimension of the multimodal projection space."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimension of the hidden layer of the Language model."
+        }
+    ],
+    "return": ""
+}

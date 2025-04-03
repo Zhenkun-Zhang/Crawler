@@ -1,0 +1,58 @@
+{
+    "api": "transformers.Siglip2Model.get_text_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "position_ids",
+        "output_attentions",
+        "output_hidden_states",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "text_features (torch.FloatTensor of shape (batch_size, output_dim)"
+}

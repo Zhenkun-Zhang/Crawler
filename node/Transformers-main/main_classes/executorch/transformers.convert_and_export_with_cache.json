@@ -1,0 +1,36 @@
+{
+    "api": "transformers.convert_and_export_with_cache",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "PreTrainedModel",
+        "example_input_ids",
+        "example_cache_position",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "PreTrainedModel",
+            "optional": false,
+            "default": "",
+            "description": "The pretrained model to be exported."
+        },
+        {
+            "name": "example_input_ids",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Example input token id used by torch.export."
+        },
+        {
+            "name": "example_cache_position",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Example current cache position used by torch.export."
+        }
+    ],
+    "return": "Exported program (torch.export.ExportedProgram)"
+}

@@ -1,0 +1,18 @@
+{
+    "api": "transformers.TFPreTrainedModel.set_bias",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "value"
+    ],
+    "params": [
+        {
+            "name": "value",
+            "type": "Dict[tf.Variable]",
+            "optional": false,
+            "default": "",
+            "description": "All the new bias attached to an LM head."
+        }
+    ],
+    "return": ""
+}

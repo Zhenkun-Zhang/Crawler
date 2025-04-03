@@ -1,0 +1,28 @@
+{
+    "api": "transformers.Mask2FormerImageProcessor.post_process_semantic_segmentation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs",
+        "target_sizes",
+        "int]]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "Mask2FormerForUniversalSegmentation",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "target_sizes",
+            "type": "List[Tuple[int, int]]",
+            "optional": true,
+            "default": "",
+            "description": "List of length (batch_size), where each list item (Tuple[int, int]]) corresponds to the requestedfinal size (height, width) of each prediction. If left to None, predictions will not be resized."
+        }
+    ],
+    "return": "List[torch.Tensor]"
+}

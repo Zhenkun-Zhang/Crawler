@@ -1,0 +1,8 @@
+{
+    "api": "transformers.PreTrainedModel.init_weights",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

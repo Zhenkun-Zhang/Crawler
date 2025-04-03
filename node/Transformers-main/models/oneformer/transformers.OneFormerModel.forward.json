@@ -1,0 +1,60 @@
+{
+    "api": "transformers.OneFormerModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "task_inputs",
+        "text_inputs",
+        "pixel_mask",
+        "output_hidden_states",
+        "output_attentions",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using OneFormerProcessor. SeeOneFormerProcessor.__call__() for details."
+        },
+        {
+            "name": "task_inputs",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Task inputs. Task inputs can be obtained using AutoImageProcessor. See OneFormerProcessor.__call__()for details."
+        },
+        {
+            "name": "pixel_mask",
+            "type": "torch.LongTensor of shape (batch_size, height, width",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding pixel values. Mask values selected in [0, 1]:1 for pixels that are real (i.e. not masked),0 for pixels that are padding (i.e. masked).What are attention masks?"
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of Detrs decoder attention layers."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ~OneFormerModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.oneformer.modeling_oneformer.OneFormerModelOutput or tuple(torch.FloatTensor)"
+}

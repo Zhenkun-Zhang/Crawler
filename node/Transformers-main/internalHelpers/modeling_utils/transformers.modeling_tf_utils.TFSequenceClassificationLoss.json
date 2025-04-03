@@ -1,0 +1,8 @@
+{
+    "api": "transformers.modeling_tf_utils.TFSequenceClassificationLoss",
+    "type": "class",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

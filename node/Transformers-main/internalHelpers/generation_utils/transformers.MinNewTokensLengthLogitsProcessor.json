@@ -1,0 +1,44 @@
+{
+    "api": "transformers.MinNewTokensLengthLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "prompt_length_to_skip:",
+        "min_new_tokens",
+        "eos_token_id",
+        "typing.List[int],",
+        "torch.Tensor]",
+        "device"
+    ],
+    "params": [
+        {
+            "name": "prompt_length_to_skip",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The input tokens length. Not a valid argument when used with generate as it will automatically assign theinput length."
+        },
+        {
+            "name": "min_new_tokens",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The minimum new tokens length below which the score of eos_token_id is set to -float(Inf)."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "Union[int, List[int], torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "The id(s) of the end-of-sequence token."
+        },
+        {
+            "name": "device",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The device to allocate the tensors."
+        }
+    ],
+    "return": ""
+}

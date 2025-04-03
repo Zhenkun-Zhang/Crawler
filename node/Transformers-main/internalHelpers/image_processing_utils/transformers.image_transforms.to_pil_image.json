@@ -1,0 +1,50 @@
+{
+    "api": "transformers.image_transforms.to_pil_image",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "typing.Union[numpy.ndarray,",
+        "ForwardRef('PIL.Image.Image'),",
+        "ForwardRef('torch.Tensor'),",
+        "ForwardRef('tf.Tensor'),",
+        "ForwardRef('jnp.ndarray')]",
+        "do_rescale",
+        "image_mode",
+        "input_data_format",
+        "str,",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "PIL.Image.Image,numpy.ndarray,torch.Tensor,tf.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The image to convert to the PIL.Image format."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to apply the scaling factor (to make pixel values integers between 0 and 255). Will defaultto True if the image type is a floating type and casting to int would result in a loss of precision,and False otherwise."
+        },
+        {
+            "name": "image_mode",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The mode to use for the PIL image. If unset, will use the default mode for the input image type."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If unset, will use the inferred format from the input."
+        }
+    ],
+    "return": "PIL.Image.Image"
+}

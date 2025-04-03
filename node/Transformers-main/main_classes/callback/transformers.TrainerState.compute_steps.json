@@ -1,0 +1,11 @@
+{
+    "api": "transformers.TrainerState.compute_steps",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args",
+        "max_steps"
+    ],
+    "params": [],
+    "return": ""
+}

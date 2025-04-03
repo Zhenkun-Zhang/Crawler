@@ -1,0 +1,25 @@
+{
+    "api": "transformers.BlenderbotSmallTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "add_prefix_space",
+        "trim_offsets",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "None",
+            "description": "Path to the vocabulary file."
+        }
+    ],
+    "return": ""
+}

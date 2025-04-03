@@ -1,0 +1,44 @@
+{
+    "api": "transformers.PatchTSMixerModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "past_values:",
+        "Tensor",
+        "observed_mask",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "past_values",
+            "type": "torch.FloatTensor of shape (batch_size, seq_length, num_input_channels)",
+            "optional": false,
+            "default": "",
+            "description": "Context values of the time series. For a pretraining task, this denotes the input time series to predictthe masked portion. For a forecasting task, this denotes the history/past time series values. Similarly,for classification or regression tasks, it denotes the appropriate context values of the time series.For univariate time series, num_input_channels dimension should be 1. For multivariate time series, it isgreater than 1."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "observed_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, num_input_channels",
+            "optional": true,
+            "default": "",
+            "description": "Boolean mask to indicate which past_values were observed and which were missing. Mask values selectedin [0, 1]:1 for values that are observed,0 for values that are missing (i.e. NaNs that were replaced by zeros)."
+        }
+    ],
+    "return": "transformers.models.patchtsmixer.modeling_patchtsmixer.PatchTSMixerModelOutput or tuple(torch.FloatTensor)"
+}

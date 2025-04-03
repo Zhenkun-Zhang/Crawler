@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Agent.write_inner_memory_from_logs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "summary_mode:",
+        "typing.Optional[bool]"
+    ],
+    "params": [],
+    "return": ""
+}

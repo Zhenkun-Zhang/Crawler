@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFRobertaForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "RobertaConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

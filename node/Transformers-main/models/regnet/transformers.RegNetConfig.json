@@ -1,0 +1,73 @@
+{
+    "api": "transformers.RegNetConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "embedding_size",
+        "hidden_sizes",
+        "192,",
+        "512,",
+        "1088]",
+        "depths",
+        "6,",
+        "12,",
+        "2]",
+        "groups_width",
+        "layer_type",
+        "hidden_act",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "embedding_size",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Dimensionality (hidden size) for the embedding layer."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[128,",
+            "description": "Dimensionality (hidden size) at each stage."
+        },
+        {
+            "name": "depths",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "Depth (number of layers) for each stage."
+        },
+        {
+            "name": "layer_type",
+            "type": "str",
+            "optional": true,
+            "default": "y",
+            "description": "The layer to use, it can be either x or y. An xlayer is a ResNets BottleNeck layer withreductionfixed to1. While a ylayer is ax` but with squeeze and excitation. Please refer to thepaper for a detailed explanation of how these layers were constructed."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function in each block. If string, gelu, relu, selu and gelu_neware supported."
+        },
+        {
+            "name": "downsample_in_first_stage",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, the first stage will downsample the inputs using a stride of 2."
+        }
+    ],
+    "return": ""
+}

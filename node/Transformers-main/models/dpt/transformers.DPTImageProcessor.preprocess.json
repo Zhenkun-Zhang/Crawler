@@ -1,0 +1,160 @@
+{
+    "api": "transformers.DPTImageProcessor.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "segmentation_maps",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor'],",
+        "NoneType]",
+        "do_resize",
+        "size",
+        "keep_aspect_ratio",
+        "ensure_multiple_of",
+        "resample",
+        "do_rescale",
+        "rescale_factor",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "do_pad",
+        "size_divisor",
+        "do_reduce_labels",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "data_format",
+        "<ChannelDimension.FIRST",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "Image to preprocess. Expects a single or batch of images with pixel values ranging from 0 to 255. Ifpassing in images with pixel values between 0 and 1, set do_rescale=False."
+        },
+        {
+            "name": "segmentation_maps",
+            "type": "ImageInput",
+            "optional": true,
+            "default": "",
+            "description": "Segmentation map to preprocess."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the image."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "Size of the image after reszing. If keep_aspect_ratio is True, the image is resized to the largestpossible size such that the aspect ratio is preserved. If ensure_multiple_of is set, the image isresized to a size that is a multiple of this value."
+        },
+        {
+            "name": "keep_aspect_ratio",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to keep the aspect ratio of the image. If False, the image will be resized to (size, size). IfTrue, the image will be resized to keep the aspect ratio and the size will be the maximum possible."
+        },
+        {
+            "name": "ensure_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Ensure that the image size is a multiple of this value."
+        },
+        {
+            "name": "resample",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. This can be one of the enum PILImageResampling, Onlyhas an effect if do_resize is set to True."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image values between [0 - 1]."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Rescale factor to rescale the image by if do_rescale is set to True."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image mean."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image standard deviation."
+        },
+        {
+            "name": "do_reduce_labels",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to reduce all label values of segmentation maps by 1. Usually used for datasets where 0is used for background, and background itself is not included in all classes of a dataset (e.g.ADE20k). The background label will be replaced by 255."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to return. Can be one of:Unset: Return a list of np.ndarray.TensorType.TENSORFLOW or tf: Return a batch of type tf.Tensor.TensorType.PYTORCH or pt: Return a batch of type torch.Tensor.TensorType.NUMPY or np: Return a batch of type np.ndarray.TensorType.JAX or jax: Return a batch of type jax.numpy.ndarray."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. Can be one of:ChannelDimension.FIRST: image in (num_channels, height, width) format.ChannelDimension.LAST: image in (height, width, num_channels) format."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. If unset, the channel dimension format is inferredfrom the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.none or ChannelDimension.NONE: image in (height, width) format."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,91 @@
+{
+    "api": "transformers.MoshiForConditionalGeneration.generate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "typing.Optional[torch.LongTensor]",
+        "user_input_values",
+        "user_audio_codes",
+        "moshi_input_values",
+        "moshi_audio_codes",
+        "inputs_embeds",
+        "return_audio_waveforms",
+        "return_audio_codes",
+        "concat_unconditional_inputs",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.Tensor of shape `(batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The sequence used as a text prompt for the generation."
+        },
+        {
+            "name": "user_input_values",
+            "type": "torch.Tensor of shape `(batch_size, 1, audio_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The audio waveforms used as audio user prompt for the generation."
+        },
+        {
+            "name": "user_audio_codes",
+            "type": "torch.Tensor of shape (batch_size, num_codebooks, sequence_length), *optional*) -- The audio codes used as audio user prompt for the generation. Has priority over user_input_valuesand represents the audio \"tokens\" ofuser_input_values` once passed through the audio encoder.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "moshi_input_values",
+            "type": "torch.Tensor of shape `(batch_size, 1, audio_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The audio waveforms used as audio Moshi prompt for the generation."
+        },
+        {
+            "name": "moshi_audio_codes",
+            "type": "torch.Tensor of shape (batch_size, num_codebooks, sequence_length), *optional*) -- The audio codes used as audio Moshi prompt for the generation. Has priority over moshi_input_valuesand represents the audio \"tokens\" ofmoshi_input_values` once passed through the audio encoder.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids and the audio inputs you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert the inputs into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "return_audio_waveforms",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If False, wont generate the audio waveforms."
+        },
+        {
+            "name": "return_audio_codes",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, will also returns the generated audio codes, i.e the intermediate audio tokens which transforms to audio_sequences once passed through the audio decoder."
+        },
+        {
+            "name": "concat_unconditional_inputs",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If False, wont concatenate initial audio and text tokens."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Remaining dictionary of keyword arguments that are passed to the generate method. Refers to theoriginal generate docstringsfor more information on how to use them.Note that keywords with a depth_ prefix will be input for the generate method of thedepth decoder. Otherwise, the latter will use its default generation config."
+        }
+    ],
+    "return": ""
+}

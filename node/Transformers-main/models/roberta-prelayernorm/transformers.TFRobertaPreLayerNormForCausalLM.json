@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFRobertaPreLayerNormForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "RobertaPreLayerNormConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

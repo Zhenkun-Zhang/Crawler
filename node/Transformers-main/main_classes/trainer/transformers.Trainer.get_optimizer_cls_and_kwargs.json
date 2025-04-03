@@ -1,0 +1,20 @@
+{
+    "api": "transformers.Trainer.get_optimizer_cls_and_kwargs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args:",
+        "TrainingArguments",
+        "model"
+    ],
+    "params": [
+        {
+            "name": "args",
+            "type": "transformers.training_args.TrainingArguments",
+            "optional": false,
+            "default": "",
+            "description": "The training arguments for the training session."
+        }
+    ],
+    "return": ""
+}

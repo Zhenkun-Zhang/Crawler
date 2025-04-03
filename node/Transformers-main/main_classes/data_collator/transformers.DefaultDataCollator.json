@@ -1,0 +1,19 @@
+{
+    "api": "transformers.DefaultDataCollator",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "return_tensors:",
+        "str"
+    ],
+    "params": [
+        {
+            "name": "return_tensors",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The type of Tensor to return. Allowable values are np, pt and tf."
+        }
+    ],
+    "return": ""
+}

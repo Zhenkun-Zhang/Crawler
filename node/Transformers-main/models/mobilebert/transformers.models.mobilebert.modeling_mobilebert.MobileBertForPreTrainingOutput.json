@@ -1,0 +1,51 @@
+{
+    "api": "transformers.models.mobilebert.modeling_mobilebert.MobileBertForPreTrainingOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "typing.Optional[torch.FloatTensor]",
+        "prediction_logits",
+        "seq_relationship_logits",
+        "hidden_states",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "optional, returned when labels is provided, torch.FloatTensor of shape (1,)",
+            "optional": true,
+            "default": "",
+            "description": "Total loss as the sum of the masked language modeling loss and the next sequence prediction(classification) loss."
+        },
+        {
+            "name": "prediction_logits",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)."
+        },
+        {
+            "name": "seq_relationship_logits",
+            "type": "torch.FloatTensor of shape (batch_size, 2)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the next sequence prediction (classification) head (scores of True/False continuationbefore SoftMax)."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

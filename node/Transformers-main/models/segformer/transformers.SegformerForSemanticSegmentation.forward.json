@@ -1,0 +1,52 @@
+{
+    "api": "transformers.SegformerForSemanticSegmentation.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Padding will be ignored by default should you provide it. Pixel values can be obtained usingAutoImageProcessor. See SegformerImageProcessor.call() for details."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, height, width",
+            "optional": true,
+            "default": "",
+            "description": "Ground truth semantic segmentation maps for computing the loss. Indices should be in [0, ..., config.num_labels - 1]. If config.num_labels > 1, a classification loss is computed (Cross-Entropy)."
+        }
+    ],
+    "return": "transformers.modeling_outputs.SemanticSegmenterOutput or tuple(torch.FloatTensor)"
+}

@@ -1,0 +1,36 @@
+{
+    "api": "transformers.ClvpConfig.from_sub_model_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text_config:",
+        "speech_config",
+        "decoder_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "ClvpEncoderConfig",
+            "optional": false,
+            "default": "",
+            "description": "Text model configuration of type ClvpEncoderConfig."
+        },
+        {
+            "name": "speech_config",
+            "type": "ClvpEncoderConfig",
+            "optional": false,
+            "default": "",
+            "description": "Speech model configuration of type ClvpEncoderConfig."
+        },
+        {
+            "name": "decoder_config",
+            "type": "ClvpDecoderConfig",
+            "optional": false,
+            "default": "",
+            "description": "Decoder model configuration of type ClvpDecoderConfig."
+        }
+    ],
+    "return": "ClvpConfig"
+}

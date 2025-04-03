@@ -1,0 +1,59 @@
+{
+    "api": "transformers.generation.TFBeamSampleDecoderOnlyOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "sequences:",
+        "Tensor",
+        "sequences_scores",
+        "scores",
+        "beam_indices",
+        "attentions",
+        "hidden_states"
+    ],
+    "params": [
+        {
+            "name": "sequences",
+            "type": "tf.Tensor of shape (batch_size*num_return_sequences, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "The generated sequences. The second dimension (sequence_length) is either equal to max_length or shorterif all batches finished early due to the eos_token_id."
+        },
+        {
+            "name": "sequences_scores",
+            "type": "tf.Tensor of shape (batch_size * num_return_sequence",
+            "optional": true,
+            "default": "",
+            "description": "Final beam scores of the generated sequences."
+        },
+        {
+            "name": "scores",
+            "type": "tuple(tf.Tensor) optional, returned when output_scores=True is passed,when config.output_scores=True",
+            "optional": true,
+            "default": "",
+            "description": "Processed beam scores for each vocabulary token at each generation step. Beam scores consisting of logsoftmax scores for each vocabulary token and sum of log softmax of previously generated tokens in thisbeam. Tuple of tf.Tensor with up to max_new_tokens elements (one element for each generated token),with each tensor of shape (batch_size*num_beams*num_return_sequences, config.vocab_size)."
+        },
+        {
+            "name": "beam_indices",
+            "type": "tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Beam indices of generated token id at each generation step. tf.Tensor of shape(batch_size*num_return_sequences, sequence_length)."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(tuple(tf.Tensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple (one element for each generated token) of tuples (one element for each layer of the decoder) oftf.Tensor of shape (batch_size*num_beams, num_heads, generated_length, sequence_length)."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(tuple(tf.Tensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple (one element for each generated token) of tuples (one element for each layer of the decoder) oftf.Tensor of shape (batch_size*num_beams, generated_length, hidden_size)."
+        }
+    ],
+    "return": ""
+}

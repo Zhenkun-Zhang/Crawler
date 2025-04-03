@@ -1,0 +1,179 @@
+{
+    "api": "transformers.UnivNetFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size:",
+        "sampling_rate",
+        "padding_value",
+        "do_normalize",
+        "num_mel_bins",
+        "hop_length",
+        "win_length",
+        "win_function",
+        "filter_length",
+        "max_length_s",
+        "fmin",
+        "fmax",
+        "mel_floor",
+        "center",
+        "compression_factor",
+        "compression_clip_val",
+        "normalize_min",
+        "normalize_max",
+        "model_in_channels",
+        "pad_end_length",
+        "return_attention_mask",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The feature dimension of the extracted features."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The value to pad with when applying the padding strategy defined by the padding argument toUnivNetFeatureExtractor.call(). Should correspond to audio silence. The pad_end argument to__call__ will also use this padding value."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to perform Tacotron 2 normalization on the input. Normalizing can help to significantly improve theperformance for some models."
+        },
+        {
+            "name": "num_mel_bins",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of mel-frequency bins in the extracted spectrogram features. This should matchUnivNetModel.config.num_mel_bins."
+        },
+        {
+            "name": "hop_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The direct number of samples between sliding windows. Otherwise referred to as shift in many papers. Notethat this is different from other audio feature extractors such as SpeechT5FeatureExtractor which takethe hop_length in ms."
+        },
+        {
+            "name": "win_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The direct number of samples for each sliding window. Note that this is different from other audio featureextractors such as SpeechT5FeatureExtractor which take the win_length in ms."
+        },
+        {
+            "name": "win_function",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Name for the window function used for windowing, must be accessible via torch.{win_function}"
+        },
+        {
+            "name": "filter_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of FFT components to use. If None, this is determined usingtransformers.audio_utils.optimal_fft_length."
+        },
+        {
+            "name": "max_length_s",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum input lenght of the model in seconds. This is used to pad the audio."
+        },
+        {
+            "name": "fmin",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Minimum mel frequency in Hz."
+        },
+        {
+            "name": "fmax",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Maximum mel frequency in Hz. If not set, defaults to sampling_rate / 2."
+        },
+        {
+            "name": "mel_floor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Minimum value of mel frequency banks. Note that the way UnivNetFeatureExtractor uses mel_floor isdifferent than in transformers.audio_utils.spectrogram()."
+        },
+        {
+            "name": "center",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to pad the waveform so that frame t is centered around time t * hop_length. If False, framet will start at time t * hop_length."
+        },
+        {
+            "name": "compression_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The multiplicative compression factor for dynamic range compression during spectral normalization."
+        },
+        {
+            "name": "compression_clip_val",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The clip value applied to the waveform before applying dynamic range compression during spectralnormalization."
+        },
+        {
+            "name": "normalize_min",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The min value used for Tacotron 2-style linear normalization. The default is the original value from theTacotron 2 implementation."
+        },
+        {
+            "name": "normalize_max",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The max value used for Tacotron 2-style linear normalization. The default is the original value from theTacotron 2 implementation."
+        },
+        {
+            "name": "model_in_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of input channels to the UnivNetModel model. This should matchUnivNetModel.config.model_in_channels."
+        },
+        {
+            "name": "pad_end_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If padding the end of each waveform, the number of spectrogram frames worth of samples to append. Thenumber of appended samples will be pad_end_length * hop_length."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not call() should return attention_mask."
+        }
+    ],
+    "return": ""
+}

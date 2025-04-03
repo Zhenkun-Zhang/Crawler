@@ -1,0 +1,51 @@
+{
+    "api": "transformers.UnbatchedClassifierFreeGuidanceLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "guidance_scale:",
+        "float",
+        "model",
+        "unconditional_ids",
+        "unconditional_attention_mask",
+        "use_cache"
+    ],
+    "params": [
+        {
+            "name": "guidance_scale",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The guidance scale for classifier free guidance (CFG). CFG is enabled by setting guidance_scale != 1.Higher guidance scale encourages the model to generate samples that are more closely linked to the inputprompt, usually at the expense of poorer quality. A value smaller than 1 has the opposite effect, whilemaking the negative prompt provided with negative_prompt_ids (if any) act as a positive prompt."
+        },
+        {
+            "name": "model",
+            "type": "PreTrainedModel",
+            "optional": false,
+            "default": "",
+            "description": "The model computing the unconditional scores. Supposedly the same as the one computing the conditionalscores. Both models must use the same tokenizer."
+        },
+        {
+            "name": "unconditional_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary for the unconditional branch. If unset, will default tothe last token of the prompt."
+        },
+        {
+            "name": "unconditional_attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Attention mask for unconditional_ids."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to cache key/values during the negative prompt forward pass."
+        }
+    ],
+    "return": ""
+}

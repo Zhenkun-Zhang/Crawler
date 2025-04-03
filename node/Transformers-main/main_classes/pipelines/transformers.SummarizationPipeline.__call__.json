@@ -1,0 +1,48 @@
+{
+    "api": "transformers.SummarizationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "documents",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "One or several articles (or one list of articles) to summarize."
+        },
+        {
+            "name": "return_text",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to include the decoded texts in the outputs"
+        },
+        {
+            "name": "return_tensors",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to include the tensors of predictions (as token indices) in the outputs."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean up the potential extra spaces in the text output."
+        },
+        {
+            "name": "generate_kwargs",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments to pass along to the generate method of the model (see the generate methodcorresponding to your framework here)."
+        }
+    ],
+    "return": "A list or a list of list of dict"
+}

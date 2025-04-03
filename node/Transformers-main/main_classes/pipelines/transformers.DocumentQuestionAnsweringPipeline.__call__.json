@@ -1,0 +1,102 @@
+{
+    "api": "transformers.DocumentQuestionAnsweringPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "typing.Union[ForwardRef('Image.Image'),",
+        "str]",
+        "question",
+        "word_boxes",
+        "typing.List[float]]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "str,PIL.Image",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing a http link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyThe pipeline accepts either a single image or a batch of images. If given a single image, it can bebroadcasted to multiple questions."
+        },
+        {
+            "name": "question",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "A question to ask of the document."
+        },
+        {
+            "name": "word_boxes",
+            "type": "List[str, Tuple[float, float, float, float]]",
+            "optional": true,
+            "default": "",
+            "description": "A list of words and bounding boxes (normalized 0->1000). If you provide this optional input, then thepipeline will use these words and boxes instead of running OCR on the image to derive them for modelsthat need them (e.g. LayoutLM). This allows you to reuse OCRd results across many invocations of thepipeline without having to re-run it each time."
+        },
+        {
+            "name": "top_k",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of answers to return (will be chosen by order of likelihood). Note that we return less thantop_k answers if there are not enough options available within the context."
+        },
+        {
+            "name": "doc_stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If the words in the document are too long to fit with the question for the model, it will be split inseveral chunks with some overlap. This argument controls the size of that overlap."
+        },
+        {
+            "name": "max_answer_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length of predicted answers (e.g., only answers with a shorter length are considered)."
+        },
+        {
+            "name": "max_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length of the total sentence (context + question) in tokens of each chunk passed to themodel. The context will be split in several chunks (using doc_stride as overlap) if needed."
+        },
+        {
+            "name": "max_question_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length of the question after tokenization. It will be truncated if needed."
+        },
+        {
+            "name": "handle_impossible_answer",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not we accept impossible as an answer."
+        },
+        {
+            "name": "lang",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Language to use while running OCR. Defaults to english."
+        },
+        {
+            "name": "tesseract_config",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Additional flags to pass to tesseract while running OCR."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The maximum time in seconds to wait for fetching images from the web. If None, no timeout is set andthe call may block forever."
+        }
+    ],
+    "return": "A dict or a list of dict"
+}

@@ -1,0 +1,59 @@
+{
+    "api": "transformers.PreTrainedTokenizerFast.train_new_from_iterator",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text_iterator",
+        "vocab_size",
+        "length",
+        "new_special_tokens",
+        "special_tokens_map",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text_iterator",
+            "type": "generator of List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The training corpus. Should be a generator of batches of texts, for instance a list of lists of textsif you have everything in memory."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The size of the vocabulary you want for your tokenizer."
+        },
+        {
+            "name": "length",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The total number of sequences in the iterator. This is used to provide meaningful progress tracking"
+        },
+        {
+            "name": "new_special_tokens",
+            "type": "list of str,AddedToken",
+            "optional": true,
+            "default": "None",
+            "description": "A list of new special tokens to add to the tokenizer you are training."
+        },
+        {
+            "name": "special_tokens_map",
+            "type": "Dict[str, str]",
+            "optional": true,
+            "default": "None",
+            "description": "If you want to rename some of the special tokens this tokenizer uses, pass along a mapping old specialtoken name to new special token name in this argument."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments passed along to the trainer from the 🤗 Tokenizers library."
+        }
+    ],
+    "return": "PreTrainedTokenizerFast"
+}

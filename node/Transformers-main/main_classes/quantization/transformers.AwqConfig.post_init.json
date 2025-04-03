@@ -1,0 +1,8 @@
+{
+    "api": "transformers.AwqConfig.post_init",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

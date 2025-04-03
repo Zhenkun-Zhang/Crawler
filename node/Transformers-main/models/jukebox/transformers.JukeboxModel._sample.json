@@ -1,0 +1,122 @@
+{
+    "api": "transformers.JukeboxModel._sample",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "music_tokens",
+        "labels",
+        "sample_levels",
+        "metas",
+        "chunk_size",
+        "sampling_temperature",
+        "lower_batch_size",
+        "max_batch_size",
+        "sample_length_in_seconds",
+        "compute_alignments",
+        "sample_tokens",
+        "offset",
+        "save_results",
+        "sample_length"
+    ],
+    "params": [
+        {
+            "name": "music_tokens",
+            "type": "List[torch.LongTensor]",
+            "optional": false,
+            "default": "",
+            "description": "A sequence of music tokens of length self.levels which will be used as context to continue thesampling process. Should have self.levels tensors, each corresponding to the generation at a certainlevel."
+        },
+        {
+            "name": "labels",
+            "type": "List[torch.LongTensor]",
+            "optional": false,
+            "default": "",
+            "description": "List of length n_sample, and shape (self.levels, 4 + self.config.max_nb_genre + lyric_sequence_length) metadata such as artist_id, genre_id and the full list of lyric tokenswhich are used to condition the generation."
+        },
+        {
+            "name": "sample_levels",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "List of the desired levels at which the sampling will be done. A level is equivalent to the index ofthe prior in the list of priors"
+        },
+        {
+            "name": "metas",
+            "type": "List[Any]",
+            "optional": true,
+            "default": "None",
+            "description": "Metadatas used to generate the labels"
+        },
+        {
+            "name": "chunk_size",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Size of a chunk of audio, used to fill up the memory in chuncks to prevent OOM erros. Bigger chunksmeans faster memory filling but more consumption."
+        },
+        {
+            "name": "sampling_temperature",
+            "type": "float",
+            "optional": true,
+            "default": "0.98",
+            "description": "Temperature used to ajust the randomness of the sampling."
+        },
+        {
+            "name": "lower_batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Maximum batch size for the lower level priors"
+        },
+        {
+            "name": "max_batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Maximum batch size for the top level priors"
+        },
+        {
+            "name": "sample_length_in_seconds",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Desired length of the generation in seconds"
+        },
+        {
+            "name": "compute_alignments",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to compute the alignment between the lyrics and the audio using the top_prior"
+        },
+        {
+            "name": "sample_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Precise number of tokens that should be sampled at each level. This is mostly useful for running dummyexperiments"
+        },
+        {
+            "name": "offset",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Audio offset used as conditioning, corresponds to the starting sample in the music. If the offset isgreater than 0, the lyrics will be shifted take that intoaccount"
+        },
+        {
+            "name": "save_results",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to save the intermediate results. If True, will generate a folder named with the starttime."
+        },
+        {
+            "name": "sample_length",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Desired length of the generation in samples."
+        }
+    ],
+    "return": ""
+}

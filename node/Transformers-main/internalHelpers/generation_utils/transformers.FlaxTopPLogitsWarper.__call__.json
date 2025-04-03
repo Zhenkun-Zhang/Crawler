@@ -1,0 +1,12 @@
+{
+    "api": "transformers.FlaxTopPLogitsWarper.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "scores",
+        "cur_len"
+    ],
+    "params": [],
+    "return": ""
+}

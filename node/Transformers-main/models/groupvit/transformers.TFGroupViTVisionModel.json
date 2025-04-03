@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFGroupViTVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "GroupViTVisionConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

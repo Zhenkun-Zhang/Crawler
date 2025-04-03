@@ -1,0 +1,31 @@
+{
+    "api": "transformers.DepthProImageProcessorFast.post_process_depth_estimation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs:",
+        "DepthProDepthEstimatorOutput",
+        "target_sizes",
+        "typing.List[typing.Tuple[int,",
+        "int]],",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "DepthProDepthEstimatorOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "target_sizes",
+            "type": "Optional[Union[TensorType, List[Tuple[int, int]], None]]",
+            "optional": true,
+            "default": "",
+            "description": "Target sizes to resize the depth predictions. Can be a tensor of shape (batch_size, 2)or a list of tuples (height, width) for each image in the batch. If None, no resizingis performed."
+        }
+    ],
+    "return": "List[Dict[str, TensorType]]"
+}

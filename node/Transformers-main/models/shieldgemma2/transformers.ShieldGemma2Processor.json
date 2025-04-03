@@ -1,0 +1,15 @@
+{
+    "api": "transformers.ShieldGemma2Processor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "chat_template",
+        "image_seq_length",
+        "policy_definitions",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

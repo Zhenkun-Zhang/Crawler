@@ -1,0 +1,8 @@
+{
+    "api": "transformers.PreTrainedModel.gradient_checkpointing_disable",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

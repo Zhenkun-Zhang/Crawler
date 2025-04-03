@@ -1,0 +1,43 @@
+{
+    "api": "transformers.JukeboxPrior.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "hidden_states:",
+        "Tensor",
+        "metadata",
+        "decode",
+        "get_preds"
+    ],
+    "params": [
+        {
+            "name": "hidden_states",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Hidden states which should be raw audio"
+        },
+        {
+            "name": "metadata",
+            "type": "List[torch.LongTensor]",
+            "optional": true,
+            "default": "",
+            "description": "List containing the metadata conditioning tensorwith the lyric and the metadata tokens."
+        },
+        {
+            "name": "decode",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to decode the encoded to tokens."
+        },
+        {
+            "name": "get_preds",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the actual predicitons of the model."
+        }
+    ],
+    "return": ""
+}

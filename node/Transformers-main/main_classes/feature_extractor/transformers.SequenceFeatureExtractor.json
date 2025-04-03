@@ -1,0 +1,35 @@
+{
+    "api": "transformers.SequenceFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size:",
+        "sampling_rate",
+        "padding_value",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The feature dimension of the extracted features."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The value that is used to fill the padding values / vectors."
+        }
+    ],
+    "return": ""
+}

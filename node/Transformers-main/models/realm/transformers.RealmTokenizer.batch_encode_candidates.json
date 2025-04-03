@@ -1,0 +1,34 @@
+{
+    "api": "transformers.RealmTokenizer.batch_encode_candidates",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "List[List[str]]",
+            "optional": false,
+            "default": "",
+            "description": "The batch of sequences to be encoded. Each sequence must be in this format: (batch_size,num_candidates, text)."
+        },
+        {
+            "name": "text_pair",
+            "type": "List[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "The batch of sequences to be encoded. Each sequence must be in this format: (batch_size,num_candidates, text)."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Keyword arguments of the call method."
+        }
+    ],
+    "return": "BatchEncoding"
+}

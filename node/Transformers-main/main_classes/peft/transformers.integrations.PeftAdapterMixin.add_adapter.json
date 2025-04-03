@@ -1,0 +1,26 @@
+{
+    "api": "transformers.integrations.PeftAdapterMixin.add_adapter",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "adapter_config",
+        "adapter_name"
+    ],
+    "params": [
+        {
+            "name": "adapter_config",
+            "type": "~peft.PeftConfig",
+            "optional": false,
+            "default": "",
+            "description": "The configuration of the adapter to add, supported adapters are non-prefix tuning and adaption promptsmethods"
+        },
+        {
+            "name": "adapter_name",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The name of the adapter to add. If no name is passed, a default name is assigned to the adapter."
+        }
+    ],
+    "return": ""
+}

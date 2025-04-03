@@ -1,0 +1,76 @@
+{
+    "api": "transformers.TextGenerationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text_inputs",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text_inputs",
+            "type": "str, List[str], List[Dict[str, str]],,List[List[Dict[str, str]]]",
+            "optional": false,
+            "default": "",
+            "description": "One or several prompts (or one list of prompts) to complete. If strings or a list of string arepassed, this pipeline will continue each prompt. Alternatively, a chat, in the form of a listof dicts with role and content keys, can be passed, or a list of such chats. When chats are passed,the models chat template will be used to format them before passing them to the model."
+        },
+        {
+            "name": "return_tensors",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Returns the tensors of predictions (as token indices) in the outputs. If set toTrue, the decoded text is not returned."
+        },
+        {
+            "name": "return_text",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Returns the decoded texts in the outputs."
+        },
+        {
+            "name": "return_full_text",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to False only added text is returned, otherwise the full text is returned. Cannot bespecified at the same time as return_text."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean up the potential extra spaces in the text output."
+        },
+        {
+            "name": "continue_final_message(",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "This indicates that you want the model to continue thelast message in the input chat rather than starting a new one, allowing you to prefill its response.By default this is True when the final message in the input chat has the assistant role andFalse otherwise, but you can manually override that behaviour by setting this flag."
+        },
+        {
+            "name": "prefix",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Prefix added to prompt."
+        },
+        {
+            "name": "handle_long_generation",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "By default, this pipelines does not handle long generation (ones that exceed in one form or the otherthe model maximum length). There is no perfect way to address this (more info:https://github.com/huggingface/transformers/issues/14033#issuecomment-948385227). This provides commonstrategies to work around that problem depending on your use case.None : default strategy where nothing in particular happenshole: Truncates left of input, and leaves a gap wide enough to let generation happen (mighttruncate a lot of the prompt and not suitable when generation exceed the model capacity)"
+        },
+        {
+            "name": "generate_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments to pass along to the generate method of the model (see the generate methodcorresponding to your framework here)."
+        }
+    ],
+    "return": "A list or a list of lists of dict"
+}

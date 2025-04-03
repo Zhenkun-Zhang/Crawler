@@ -1,0 +1,37 @@
+{
+    "api": "transformers.models.dpr.modeling_dpr.DPRContextEncoderOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "pooler_output:",
+        "FloatTensor",
+        "hidden_states",
+        "...]]",
+        "attentions",
+        "...]]"
+    ],
+    "params": [
+        {
+            "name": "pooler_output",
+            "type": "torch.FloatTensor of shape (batch_size, embeddings_size)",
+            "optional": false,
+            "default": "",
+            "description": "The DPR encoder outputs the pooler_output that corresponds to the context representation. Last layerhidden-state of the first token of the sequence (classification token) further processed by a Linear layer.This output is to be used to embed contexts for nearest neighbors queries with questions embeddings."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

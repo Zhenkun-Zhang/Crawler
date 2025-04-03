@@ -1,0 +1,72 @@
+{
+    "api": "transformers.BeamScorer.process",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "next_scores",
+        "next_tokens",
+        "next_indices",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size * num_beams, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using any class inheriting from PreTrainedTokenizer. SeePreTrainedTokenizer.encode() and PreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "next_scores",
+            "type": "torch.FloatTensor of shape (batch_size, 2 * num_beams)",
+            "optional": false,
+            "default": "",
+            "description": "Current scores of the top 2 * num_beams non-finished beam hypotheses."
+        },
+        {
+            "name": "next_tokens",
+            "type": "torch.LongTensor of shape (batch_size, 2 * num_beams)",
+            "optional": false,
+            "default": "",
+            "description": "input_ids of the tokens corresponding to the top 2 * num_beams non-finished beam hypotheses."
+        },
+        {
+            "name": "next_indices",
+            "type": "torch.LongTensor of shape (batch_size, 2 * num_beams)",
+            "optional": false,
+            "default": "",
+            "description": "Beam indices indicating to which beam hypothesis the next_tokens correspond."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "Union[int, List[int]]",
+            "optional": true,
+            "default": "",
+            "description": "The id of the end-of-sequence token. Optionally, use a list to set multiple end-of-sequence tokens."
+        },
+        {
+            "name": "beam_indices",
+            "type": "torch.LongTensor",
+            "optional": true,
+            "default": "",
+            "description": "Beam indices indicating to which beam hypothesis each token correspond."
+        },
+        {
+            "name": "group_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The index of the group of beams. Used with ~PreTrainedModel.group_beam_search."
+        }
+    ],
+    "return": "UserDict"
+}

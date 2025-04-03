@@ -1,0 +1,75 @@
+{
+    "api": "transformers.modeling_flax_outputs.FlaxSeq2SeqLMOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "logits:",
+        "Array",
+        "past_key_values",
+        "decoder_hidden_states",
+        "decoder_attentions",
+        "cross_attentions",
+        "encoder_last_hidden_state",
+        "encoder_hidden_states",
+        "encoder_attentions"
+    ],
+    "params": [
+        {
+            "name": "logits",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(jnp.ndarray)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(jnp.ndarray) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and 2 additional tensors of shape(batch_size, num_heads, encoder_sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used (see past_key_values input) to speed up sequential decoding."
+        },
+        {
+            "name": "decoder_hidden_states",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the decoder at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "decoder_attentions",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights of the decoder, after the attention softmax, used to compute the weighted average in theself-attention heads."
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights of the decoders cross-attention layer, after the attention softmax, used to compute theweighted average in the cross-attention heads."
+        },
+        {
+            "name": "encoder_last_hidden_state",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the encoder of the model."
+        },
+        {
+            "name": "encoder_hidden_states",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the encoder at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "encoder_attentions",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights of the encoder, after the attention softmax, used to compute the weighted average in theself-attention heads."
+        }
+    ],
+    "return": ""
+}

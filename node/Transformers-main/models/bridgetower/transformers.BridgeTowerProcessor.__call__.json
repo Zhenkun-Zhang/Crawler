@@ -1,0 +1,16 @@
+{
+    "api": "transformers.BridgeTowerProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images",
+        "text",
+        "typing.List[str],",
+        "typing.List[typing.List[str]]]",
+        "audio",
+        "videos",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

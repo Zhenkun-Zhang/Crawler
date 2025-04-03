@@ -1,0 +1,19 @@
+{
+    "api": "transformers.Toolbox.show_tool_descriptions",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tool_description_template:",
+        "typing.Optional[str]"
+    ],
+    "params": [
+        {
+            "name": "tool_description_template",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The template to use to describe the tools. If not provided, the default template will be used."
+        }
+    ],
+    "return": ""
+}

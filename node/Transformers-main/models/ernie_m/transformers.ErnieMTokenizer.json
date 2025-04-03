@@ -1,0 +1,78 @@
+{
+    "api": "transformers.ErnieMTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "sentencepiece_model_ckpt",
+        "vocab_file",
+        "do_lower_case",
+        "encoding",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "sentencepiece_model_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The file path of sentencepiece model."
+        },
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The file path of the vocabulary."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "str",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "[UNK]",
+            "description": "A special token representing the unknown (out-of-vocabulary) token. An unknown token is set to beunk_token inorder to be converted to an ID."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "[SEP]",
+            "description": "A special token separating two different sentences in the same input."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "[PAD]",
+            "description": "A special token used to make arrays of tokens the same size for batching purposes."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "[CLS]",
+            "description": "A special token used for sequence classification. It is the last token of the sequence when built withspecial tokens."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "[MASK]",
+            "description": "A special token representing a masked token. This is the token used in the masked language modeling taskwhich the model tries to predict the original unmasked ones."
+        }
+    ],
+    "return": ""
+}

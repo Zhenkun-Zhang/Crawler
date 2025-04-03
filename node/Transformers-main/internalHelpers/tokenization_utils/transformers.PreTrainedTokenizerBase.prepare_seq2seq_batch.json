@@ -1,0 +1,76 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase.prepare_seq2seq_batch",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "src_texts:",
+        "typing.List[str]",
+        "tgt_texts",
+        "max_length",
+        "max_target_length",
+        "padding",
+        "return_tensors",
+        "truncation",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "src_texts",
+            "type": "List[str]",
+            "optional": false,
+            "default": "",
+            "description": "List of documents to summarize or source language texts."
+        },
+        {
+            "name": "tgt_texts",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "List of summaries or target language texts."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Controls the maximum length for encoder inputs (documents to summarize or source language texts) Ifleft unset or set to None, this will use the predefined model maximum length if a maximum length isrequired by one of the truncation/padding parameters. If the model has no specific maximum input length(like XLNet) truncation/padding to a maximum length will be deactivated."
+        },
+        {
+            "name": "max_target_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Controls the maximum length of decoder inputs (target language texts or summaries) If left unset or setto None, this will use the max_length value."
+        },
+        {
+            "name": "padding",
+            "type": "bool, str,PaddingStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Activates and controls padding. Accepts the following values:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths)."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        },
+        {
+            "name": "truncation",
+            "type": "bool, str,TruncationStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Activates and controls truncation. Accepts the following values:True or longest_first: Truncate to a maximum length specified with the argument max_length orto the maximum acceptable input length for the model if that argument is not provided. This willtruncate token by token, removing a token from the longest sequence in the pair if a pair ofsequences (or a batch of pairs) is provided.only_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the first sequence of a pair if a pair of sequences (or a batch of pairs) is provided.only_second: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the second sequence of a pair if a pair of sequences (or a batch of pairs) is provided.False or do_not_truncate (default): No truncation (i.e., can output batch with sequence lengthsgreater than the model maximum admissible input size)."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments passed along to self.__call__."
+        }
+    ],
+    "return": "BatchEncoding"
+}

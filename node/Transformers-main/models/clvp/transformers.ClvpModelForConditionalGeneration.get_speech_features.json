@@ -1,0 +1,60 @@
+{
+    "api": "transformers.ClvpModelForConditionalGeneration.get_speech_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "speech_ids:",
+        "input_ids",
+        "input_features",
+        "conditioning_encoder_inputs_embeds",
+        "attention_mask",
+        "generation_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "speech_ids",
+            "type": "torch.LongTensor of shape (batch_size, num_speech_ids",
+            "optional": true,
+            "default": "",
+            "description": "Speech Tokens. Padding will be ignored by default should you provide it. If speech_ids are providedthen input_ids and input_features will be automatically ignored."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Input text Tokens. Processed from the ClvpTokenizer. If speech_ids is not provided, then input_idsand input_features will be used."
+        },
+        {
+            "name": "input_features",
+            "type": "torch.FloatTensor of shape (batch_size, feature_size, time_dim",
+            "optional": true,
+            "default": "",
+            "description": "Indicates log-melspectrogram representations for audio returned by ClvpFeatureExtractor. Ifspeech_ids is not provided, then input_ids and input_features will be used."
+        },
+        {
+            "name": "conditioning_encoder_inputs_embeds",
+            "type": "torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "inputs_embeds for ClvpConditioningEncoder. Can be used in place of input_ids."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding speech token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "generation_config",
+            "type": "GenerationConfig",
+            "optional": true,
+            "default": "",
+            "description": "generation config to control the generation of speech_ids if they are not provided."
+        }
+    ],
+    "return": "torch.FloatTensor of shape (batch_size, output_dim)"
+}

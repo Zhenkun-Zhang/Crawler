@@ -1,0 +1,35 @@
+{
+    "api": "transformers.Wav2Vec2ProcessorWithLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor:",
+        "FeatureExtractionMixin",
+        "tokenizer",
+        "decoder"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "Wav2Vec2FeatureExtractor,SeamlessM4TFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of Wav2Vec2FeatureExtractor or SeamlessM4TFeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "Wav2Vec2CTCTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of Wav2Vec2CTCTokenizer. The tokenizer is a required input."
+        },
+        {
+            "name": "decoder",
+            "type": "pyctcdecode.BeamSearchDecoderCTC",
+            "optional": false,
+            "default": "",
+            "description": "An instance of pyctcdecode.BeamSearchDecoderCTC. The decoder is a required input."
+        }
+    ],
+    "return": ""
+}

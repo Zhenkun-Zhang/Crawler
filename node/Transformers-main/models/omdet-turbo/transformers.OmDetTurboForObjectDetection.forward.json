@@ -1,0 +1,85 @@
+{
+    "api": "transformers.OmDetTurboForObjectDetection.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor",
+        "classes_input_ids",
+        "classes_attention_mask",
+        "tasks_input_ids",
+        "tasks_attention_mask",
+        "classes_structure",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Padding will be ignored by default should you provide it.Pixel values can be obtained using AutoImageProcessor. See DetrImageProcessor.call() fordetails."
+        },
+        {
+            "name": "classes_input_ids",
+            "type": "torch.LongTensor of shape (total_classes (>= batch_size), sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input classes sequence tokens in the vocabulary of the language model.Several classes can be provided for each tasks, thus the tokenized classes are flattenedand the structure of the classes is provided in the classes_structure argument.Indices can be obtained using OmDetTurboProcessor. See OmDetTurboProcessor.__call__() fordetails.What are input IDs?"
+        },
+        {
+            "name": "classes_attention_mask",
+            "type": "torch.BoolTensor of shape (total_classes (>= batch_size), num_classes, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Attention mask for the classes. This is a binary mask that indicates which tokens should be attended to,and which should not."
+        },
+        {
+            "name": "tasks_input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input tasks sequence tokens in the vocabulary of the language model.Indices can be obtained using OmDetTurboProcessor. See OmDetTurboProcessor.__call__() fordetails.What are input IDs?"
+        },
+        {
+            "name": "tasks_attention_mask",
+            "type": "torch.BoolTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Attention mask for the tasks. This is a binary mask that indicates which tokens should be attended to,and which should not."
+        },
+        {
+            "name": "classes_structure",
+            "type": "torch.LongTensor of shape (batch_size)",
+            "optional": false,
+            "default": "",
+            "description": "Structure of the classes. This tensor indicates the number of classes for each task."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.omdet_turbo.modeling_omdet_turbo.OmDetTurboObjectDetectionOutput or tuple(torch.FloatTensor)"
+}

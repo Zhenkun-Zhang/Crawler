@@ -1,0 +1,107 @@
+{
+    "api": "transformers.TransfoXLTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "special",
+        "min_freq",
+        "max_size",
+        "lower_case",
+        "delimiter",
+        "vocab_file",
+        "pretrained_vocab_file",
+        "never_split",
+        "unk_token",
+        "eos_token",
+        "additional_special_tokens",
+        "language",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "special",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "A list of special tokens (to be treated by the original implementation of this tokenizer)."
+        },
+        {
+            "name": "min_freq",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The minimum number of times a token has to be present in order to be kept in the vocabulary (otherwise itwill be mapped to unk_token)."
+        },
+        {
+            "name": "max_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The maximum size of the vocabulary. If left unset, it will default to the size of the vocabulary foundafter excluding the tokens according to the min_freq rule."
+        },
+        {
+            "name": "lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "delimiter",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The delimiter used between tokens."
+        },
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "File containing the vocabulary (from the original implementation)."
+        },
+        {
+            "name": "pretrained_vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "File containing the vocabulary as saved with the save_pretrained() method."
+        },
+        {
+            "name": "never_split",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "List of tokens that should never be split. If no list is specified, will simply use the existing specialtokens."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<eos>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "[<formula>]",
+            "description": "A list of additional special tokens (for the HuggingFace functionality)."
+        },
+        {
+            "name": "language",
+            "type": "str",
+            "optional": true,
+            "default": "en",
+            "description": "The language of this tokenizer (used for mose preprocessing)."
+        }
+    ],
+    "return": ""
+}

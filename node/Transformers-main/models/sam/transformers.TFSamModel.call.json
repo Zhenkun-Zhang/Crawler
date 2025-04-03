@@ -1,0 +1,102 @@
+{
+    "api": "transformers.TFSamModel.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "TFModelInputType",
+        "|",
+        "input_points",
+        "|",
+        "input_labels",
+        "|",
+        "input_boxes",
+        "|",
+        "input_masks",
+        "|",
+        "image_embeddings",
+        "|",
+        "multimask_output",
+        "output_attentions",
+        "|",
+        "output_hidden_states",
+        "|",
+        "return_dict",
+        "|",
+        "training",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "tf.Tensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using SamProcessor. See SamProcessor.__call__() fordetails."
+        },
+        {
+            "name": "input_points",
+            "type": "tf.Tensor of shape (batch_size, num_points, 2)",
+            "optional": false,
+            "default": "",
+            "description": "Input 2D spatial points, this is used by the prompt encoder to encode the prompt. Generally yields to muchbetter results. The points can be obtained by passing a list of list of list to the processor that willcreate corresponding tf tensors of dimension 4. The first dimension is the image batch size, the seconddimension is the point batch size (i.e. how many segmentation masks do we want the model to predict perinput point), the third dimension is the number of points per segmentation mask (it is possible to passmultiple points for a single mask), and the last dimension is the x (vertical) and y (horizontal)coordinates of the point. If a different number of points is passed either for each image, or for eachmask, the processor will create PAD points that will correspond to the (0, 0) coordinate, and thecomputation of the embedding will be skipped for these points using the labels."
+        },
+        {
+            "name": "input_labels",
+            "type": "tf.Tensor of shape (batch_size, point_batch_size, num_points)",
+            "optional": false,
+            "default": "",
+            "description": "Input labels for the points, this is used by the prompt encoder to encode the prompt. According to theofficial implementation, there are 3 types of labels1: the point is a point that contains the object of interest0: the point is a point that does not contain the object of interest-1: the point corresponds to the backgroundWe added the label:-10: the point is a padding point, thus should be ignored by the prompt encoderThe padding labels should be automatically done by the processor."
+        },
+        {
+            "name": "input_boxes",
+            "type": "tf.Tensor of shape (batch_size, num_boxes, 4)",
+            "optional": false,
+            "default": "",
+            "description": "Input boxes for the points, this is used by the prompt encoder to encode the prompt. Generally yields tomuch better generated masks. The boxes can be obtained by passing a list of list of list to the processor,that will generate a tf tensor, with each dimension corresponding respectively to the image batch size,the number of boxes per image and the coordinates of the top left and botton right point of the box. In theorder (x1, y1, x2, y2):x1: the x coordinate of the top left point of the input boxy1: the y coordinate of the top left point of the input boxx2: the x coordinate of the bottom right point of the input boxy2: the y coordinate of the bottom right point of the input box"
+        },
+        {
+            "name": "input_masks",
+            "type": "tf.Tensor of shape (batch_size, image_size, image_size)",
+            "optional": false,
+            "default": "",
+            "description": "SAM model also accepts segmentation masks as input. The mask will be embedded by the prompt encoder togenerate a corresponding embedding, that will be fed later on to the mask decoder. These masks needs to bemanually fed by the user, and they need to be of shape (batch_size, image_size, image_size)."
+        },
+        {
+            "name": "image_embeddings",
+            "type": "tf.Tensor of shape (batch_size, output_channels, window_size, window_size)",
+            "optional": false,
+            "default": "",
+            "description": "Image embeddings, this is used by the mask decder to generate masks and iou scores. For more memoryefficient computation, users can first retrieve the image embeddings using the get_image_embeddingsmethod, and then feed them to the call method instead of feeding the pixel_values."
+        },
+        {
+            "name": "multimask_output",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "In the original implementation and paper, the model always outputs 3 masks per image (or per point / perbounding box if relevant). However, it is possible to just output a single mask, that corresponds to thebest mask, by specifying multimask_output=False."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": ""
+}

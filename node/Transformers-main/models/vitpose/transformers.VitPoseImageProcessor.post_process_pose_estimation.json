@@ -1,0 +1,54 @@
+{
+    "api": "transformers.VitPoseImageProcessor.post_process_pose_estimation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs:",
+        "VitPoseEstimatorOutput",
+        "boxes",
+        "numpy.ndarray]",
+        "kernel_size",
+        "threshold",
+        "target_sizes",
+        "typing.List[typing.Tuple]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "VitPoseEstimatorOutput",
+            "optional": false,
+            "default": "",
+            "description": "VitPoseForPoseEstimation model outputs."
+        },
+        {
+            "name": "boxes",
+            "type": "List[List[List[float]]],np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "List or array of bounding boxes for each image. Each box should be a list of 4 floats representing the boundingbox coordinates in COCO format (top_left_x, top_left_y, width, height)."
+        },
+        {
+            "name": "kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Gaussian kernel size (K) for modulation."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Score threshold to keep object detection predictions."
+        },
+        {
+            "name": "target_sizes",
+            "type": "torch.Tensor,List[Tuple[int, int]]",
+            "optional": true,
+            "default": "",
+            "description": "Tensor of shape (batch_size, 2) or list of tuples (Tuple[int, int]) containing the target size(height, width) of each image in the batch. If unset, predictions will be resize with the default value."
+        }
+    ],
+    "return": "List[List[Dict]]"
+}

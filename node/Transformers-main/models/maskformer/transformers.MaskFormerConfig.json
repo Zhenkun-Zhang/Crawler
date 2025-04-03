@@ -1,0 +1,132 @@
+{
+    "api": "transformers.MaskFormerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "fpn_feature_size:",
+        "mask_feature_size",
+        "no_object_weight",
+        "use_auxiliary_loss",
+        "backbone_config",
+        "decoder_config",
+        "init_std",
+        "init_xavier_std",
+        "dice_weight",
+        "cross_entropy_weight",
+        "mask_weight",
+        "output_auxiliary_logits",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "backbone_kwargs",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "mask_feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The masks features size, this value will also be used to specify the Feature Pyramid Network featuressize."
+        },
+        {
+            "name": "no_object_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight to apply to the null (no object) class."
+        },
+        {
+            "name": "use_auxiliary_loss(bool,",
+            "type": "optional, defaults to False",
+            "optional": true,
+            "default": "",
+            "description": "If True MaskFormerForInstanceSegmentationOutput will contain the auxiliary losses computed using thelogits from each decoders stage."
+        },
+        {
+            "name": "backbone_config",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "The configuration passed to the backbone, if unset, the configuration corresponding toswin-base-patch4-window12-384 will be used."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to load backbone from the timm library. If False, the backbone is loaded from the transformerslibrary."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "decoder_config",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "The configuration passed to the transformer decoder model, if unset the base config for detr-resnet-50will be used."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "init_xavier_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The scaling factor used for the Xavier initialization gain in the HM Attention map module."
+        },
+        {
+            "name": "dice_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The weight for the dice loss."
+        },
+        {
+            "name": "cross_entropy_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The weight for the cross entropy loss."
+        },
+        {
+            "name": "mask_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The weight for the mask loss."
+        },
+        {
+            "name": "output_auxiliary_logits",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Should the model output its auxiliary_logits or not."
+        }
+    ],
+    "return": ""
+}

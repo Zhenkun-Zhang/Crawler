@@ -1,0 +1,51 @@
+{
+    "api": "transformers.ImageFeatureExtractionMixin.resize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image",
+        "size",
+        "resample",
+        "default_to_square",
+        "max_size",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "PIL.Image.Image,np.ndarray,torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The image to resize."
+        },
+        {
+            "name": "size",
+            "type": "int,Tuple[int, int]",
+            "optional": false,
+            "default": "",
+            "description": "The size to use for resizing the image. If size is a sequence like (h, w), output size will bematched to this.If size is an int and default_to_square is True, then image will be resized to (size, size). Ifsize is an int and default_to_square is False, then smaller edge of the image will be matched tothis number. i.e, if height > width, then image will be rescaled to (size * height / width, size)."
+        },
+        {
+            "name": "resample",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The filter to user for resampling."
+        },
+        {
+            "name": "default_to_square",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "How to convert size when it is a single int. If set to True, the size will be converted to asquare (size,size). If set to False, will replicatetorchvision.transforms.Resizewith support for resizing only the smallest edge and providing an optional max_size."
+        },
+        {
+            "name": "max_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The maximum allowed for the longer edge of the resized image: if the longer edge of the image isgreater than max_size after being resized according to size, then the image is resized again sothat the longer edge is equal to max_size. As a result, size might be overruled, i.e the smalleredge may be shorter than size. Only used if default_to_square is False."
+        }
+    ],
+    "return": "image"
+}

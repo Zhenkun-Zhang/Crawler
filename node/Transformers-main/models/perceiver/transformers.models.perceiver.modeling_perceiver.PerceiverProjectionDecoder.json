@@ -1,0 +1,18 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverProjectionDecoder",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "PerceiverConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        }
+    ],
+    "return": ""
+}

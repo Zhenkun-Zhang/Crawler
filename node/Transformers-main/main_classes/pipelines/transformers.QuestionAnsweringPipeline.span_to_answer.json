@@ -1,0 +1,36 @@
+{
+    "api": "transformers.QuestionAnsweringPipeline.span_to_answer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "str",
+        "start",
+        "end",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The actual context to extract the answer from."
+        },
+        {
+            "name": "start",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The answer starting token index."
+        },
+        {
+            "name": "end",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The answer end token index."
+        }
+    ],
+    "return": "Dictionary like `{‘answer’"
+}

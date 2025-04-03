@@ -1,0 +1,19 @@
+{
+    "api": "transformers.TemperatureLogitsWarper",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "temperature:",
+        "float"
+    ],
+    "params": [
+        {
+            "name": "temperature",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "Strictly positive float value used to modulate the logits distribution. A value smaller than 1 decreasesrandomness (and vice versa), with 0 being equivalent to shifting all probability mass to the most likelytoken."
+        }
+    ],
+    "return": ""
+}

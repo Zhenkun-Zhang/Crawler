@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Conv1D",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "nf",
+        "nx"
+    ],
+    "params": [
+        {
+            "name": "nf",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of output features."
+        },
+        {
+            "name": "nx",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of input features."
+        }
+    ],
+    "return": ""
+}

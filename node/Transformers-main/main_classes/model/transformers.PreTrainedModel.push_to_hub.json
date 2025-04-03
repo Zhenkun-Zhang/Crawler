@@ -1,0 +1,104 @@
+{
+    "api": "transformers.PreTrainedModel.push_to_hub",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "repo_id:",
+        "str",
+        "use_temp_dir",
+        "commit_message",
+        "private",
+        "token",
+        "str,",
+        "NoneType]",
+        "max_shard_size",
+        "str,",
+        "NoneType]",
+        "create_pr",
+        "safe_serialization",
+        "revision",
+        "commit_description",
+        "tags",
+        "**deprecated_kwargs"
+    ],
+    "params": [
+        {
+            "name": "repo_id",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The name of the repository you want to push your model to. It should contain your organization namewhen pushing to a given organization."
+        },
+        {
+            "name": "use_temp_dir",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use a temporary directory to store the files saved before they are pushed to the Hub.Will default to True if there is no directory named like repo_id, False otherwise."
+        },
+        {
+            "name": "commit_message",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Message to commit while pushing. Will default to Upload model."
+        },
+        {
+            "name": "private",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to make the repo private. If None (default), the repo will be public unless the organizations default is private. This value is ignored if the repo already exists."
+        },
+        {
+            "name": "token",
+            "type": "bool,str",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If True, will use the token generatedwhen running huggingface-cli login (stored in ~/.huggingface). Will default to True if repo_urlis not specified."
+        },
+        {
+            "name": "max_shard_size",
+            "type": "int,str",
+            "optional": true,
+            "default": "",
+            "description": "Only applicable for models. The maximum size for a checkpoint before being sharded. Checkpoints shardwill then be each of size lower than this size. If expressed as a string, needs to be digits followedby a unit (like 5MB). We default it to 5GB so that users can easily load models on free-tierGoogle Colab instances without any CPU OOM issues."
+        },
+        {
+            "name": "create_pr",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to create a PR with the uploaded files or directly commit."
+        },
+        {
+            "name": "safe_serialization",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to convert the model weights in safetensors format for safer serialization."
+        },
+        {
+            "name": "revision",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Branch to push the uploaded files to."
+        },
+        {
+            "name": "commit_description",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The description of the commit that will be created"
+        },
+        {
+            "name": "tags",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "List of tags to push on the Hub."
+        }
+    ],
+    "return": ""
+}

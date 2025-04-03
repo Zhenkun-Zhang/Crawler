@@ -1,0 +1,24 @@
+{
+    "api": "transformers.UdopProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor'],",
+        "NoneType]",
+        "text",
+        "typing.List[str],",
+        "typing.List[typing.List[str]]]",
+        "*args",
+        "audio",
+        "videos",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

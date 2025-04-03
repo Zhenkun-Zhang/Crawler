@@ -1,0 +1,83 @@
+{
+    "api": "transformers.LlavaNextVideoProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "video_processor",
+        "image_processor",
+        "tokenizer",
+        "chat_template",
+        "patch_size",
+        "vision_feature_select_strategy",
+        "video_token",
+        "image_token",
+        "num_additional_image_tokens",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "video_processor",
+            "type": "LlavaNextVideoImageProcessor",
+            "optional": true,
+            "default": "None",
+            "description": "The video processor is a required input."
+        },
+        {
+            "name": "image_processor",
+            "type": "LlavaNextImageProcessor",
+            "optional": true,
+            "default": "None",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "LlamaTokenizerFast",
+            "optional": true,
+            "default": "None",
+            "description": "The tokenizer is a required input."
+        },
+        {
+            "name": "chat_template",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Jinja chat template that will be used in tokenizers apply_chat_template"
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Patch size from the vision tower."
+        },
+        {
+            "name": "vision_feature_select_strategy",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The feature selection strategy used to select the vision feature from the vision backbone.Shoudl be same as in models config"
+        },
+        {
+            "name": "video_token",
+            "type": "str",
+            "optional": true,
+            "default": "<video>",
+            "description": "Special token used to denote video location."
+        },
+        {
+            "name": "image_token",
+            "type": "str",
+            "optional": true,
+            "default": "<image>",
+            "description": "Special token used to denote image location."
+        },
+        {
+            "name": "num_additional_image_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Number of additional tokens added to the image embeddings, such as CLS (+1). If the backbone has no CLS or otherextra tokens appended, no need to set this arg."
+        }
+    ],
+    "return": ""
+}

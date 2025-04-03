@@ -1,0 +1,22 @@
+{
+    "api": "transformers.PrefixConstrainedLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "prefix_allowed_tokens_fn:",
+        "typing.Callable[[int,",
+        "torch.Tensor],",
+        "typing.List[int]]",
+        "num_beams"
+    ],
+    "params": [
+        {
+            "name": "prefix_allowed_tokens_fn",
+            "type": "Callable[[int, torch.Tensor], List[int]]",
+            "optional": false,
+            "default": "",
+            "description": "This function constraints the beam search to allowed tokens only at each step. This function takes 2arguments inputs_ids and the batch ID batch_id. It has to return a list with the allowed tokens for thenext generation step conditioned on the previously generated tokens inputs_ids and the batch IDbatch_id."
+        }
+    ],
+    "return": ""
+}

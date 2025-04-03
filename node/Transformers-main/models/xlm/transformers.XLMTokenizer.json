@@ -1,0 +1,116 @@
+{
+    "api": "transformers.XLMTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "unk_token",
+        "bos_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "additional_special_tokens",
+        "'<special1>',",
+        "'<special2>',",
+        "'<special3>',",
+        "'<special4>',",
+        "'<special5>',",
+        "'<special6>',",
+        "'<special7>',",
+        "'<special8>',",
+        "'<special9>']",
+        "lang2id",
+        "id2lang",
+        "do_lowercase_and_remove_accent",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Merges file."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token.When building a sequence using special tokens, this is not the token that is used for the beginning ofsequence. The token used is the cls_token."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "<special1>",
+            "description": "The token used for masking values. This is the token used when training this model with masked languagemodeling. This is the token which the model will try to predict."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "[<special0>,",
+            "description": "List of additional special tokens."
+        },
+        {
+            "name": "lang2id",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary mapping languages string identifiers to their IDs."
+        },
+        {
+            "name": "id2lang",
+            "type": "Dict[int, str]",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary mapping language IDs to their string identifiers."
+        },
+        {
+            "name": "do_lowercase_and_remove_accent",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to lowercase and remove accents when tokenizing."
+        }
+    ],
+    "return": ""
+}

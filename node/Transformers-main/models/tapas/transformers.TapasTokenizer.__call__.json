@@ -1,0 +1,122 @@
+{
+    "api": "transformers.TapasTokenizer.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "table:",
+        "pd.DataFrame",
+        "queries",
+        "typing.List[str],",
+        "typing.List[int],",
+        "typing.List[typing.List[str]],",
+        "typing.List[typing.List[int]],",
+        "NoneType]",
+        "answer_coordinates",
+        "typing.List[typing.List[typing.Tuple]],",
+        "NoneType]",
+        "answer_text",
+        "typing.List[typing.List[str]],",
+        "NoneType]",
+        "add_special_tokens",
+        "padding",
+        "str,",
+        "transformers.utils.generic.PaddingStrategy]",
+        "truncation",
+        "str,",
+        "transformers.models.tapas.tokenization_tapas.TapasTruncationStrategy]",
+        "max_length",
+        "pad_to_multiple_of",
+        "padding_side",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "return_token_type_ids",
+        "return_attention_mask",
+        "return_overflowing_tokens",
+        "return_special_tokens_mask",
+        "return_offsets_mapping",
+        "return_length",
+        "verbose",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "table",
+            "type": "pd.DataFrame",
+            "optional": false,
+            "default": "",
+            "description": "Table containing tabular data. Note that all cell values must be text. Use .astype(str) on a Pandasdataframe to convert it to string."
+        },
+        {
+            "name": "queries",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "Question or batch of questions related to a table to be encoded. Note that in case of a batch, allquestions must refer to the same table."
+        },
+        {
+            "name": "answer_coordinates",
+            "type": "List[Tuple],List[List[Tuple]]",
+            "optional": true,
+            "default": "",
+            "description": "Answer coordinates of each table-question pair in the batch. In case only a single table-question pairis provided, then the answer_coordinates must be a single list of one or more tuples. Each tuple mustbe a (row_index, column_index) pair. The first data row (not the column header row) has index 0. Thefirst column has index 0. In case a batch of table-question pairs is provided, then theanswer_coordinates must be a list of lists of tuples (each list corresponding to a singletable-question pair)."
+        },
+        {
+            "name": "answer_text",
+            "type": "List[str],List[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "Answer text of each table-question pair in the batch. In case only a single table-question pair isprovided, then the answer_text must be a single list of one or more strings. Each string must be theanswer text of a corresponding answer coordinate. In case a batch of table-question pairs is provided,then the answer_coordinates must be a list of lists of strings (each list corresponding to a singletable-question pair)."
+        },
+        {
+            "name": "add_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to encode the sequences with the special tokens relative to their model."
+        },
+        {
+            "name": "padding",
+            "type": "bool, str,PaddingStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Activates and controls padding. Accepts the following values:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths)."
+        },
+        {
+            "name": "truncation",
+            "type": "bool, str,TapasTruncationStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Activates and controls truncation. Accepts the following values:True or drop_rows_to_fit: Truncate to a maximum length specified with the argument max_lengthor to the maximum acceptable input length for the model if that argument is not provided. This willtruncate row by row, removing rows from the table.False or do_not_truncate (default): No truncation (i.e., can output batch with sequence lengthsgreater than the model maximum admissible input size)."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Controls the maximum length to use by one of the truncation/padding parameters.If left unset or set to None, this will use the predefined model maximum length if a maximum lengthis required by one of the truncation/padding parameters. If the model has no specific maximum inputlength (like XLNet) truncation/padding to a maximum length will be deactivated."
+        },
+        {
+            "name": "is_split_into_words",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the input is already pre-tokenized (e.g., split into words). If set to True, thetokenizer assumes the input is already split into words (for instance, by splitting it on whitespace)which it will tokenize. This is useful for NER or token classification."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set will pad the sequence to a multiple of the provided value. This is especially useful to enablethe use of Tensor Cores on NVIDIA hardware with compute capability >= 7.5 (Volta)."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        }
+    ],
+    "return": ""
+}

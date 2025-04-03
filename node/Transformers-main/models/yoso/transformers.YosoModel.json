@@ -1,0 +1,18 @@
+{
+    "api": "transformers.YosoModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "YosoConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        }
+    ],
+    "return": ""
+}

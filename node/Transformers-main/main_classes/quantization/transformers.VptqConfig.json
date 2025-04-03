@@ -1,0 +1,53 @@
+{
+    "api": "transformers.VptqConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "enable_proxy_error:",
+        "bool",
+        "config_for_layers",
+        "typing.Any]",
+        "shared_layer_config",
+        "typing.Any]",
+        "modules_to_not_convert",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "enable_proxy_error",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "calculate proxy error for each layer"
+        },
+        {
+            "name": "config_for_layers",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "quantization params for each layer"
+        },
+        {
+            "name": "shared_layer_config",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "shared quantization params among layers"
+        },
+        {
+            "name": "modules_to_not_convert",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "The list of modules to not quantize, useful for quantizing models that explicitly require to havesome modules left in their original precision (e.g. Whisper encoder, Llava encoder, Mixtral gate layers)."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional parameters from which to initialize the configuration object."
+        }
+    ],
+    "return": ""
+}

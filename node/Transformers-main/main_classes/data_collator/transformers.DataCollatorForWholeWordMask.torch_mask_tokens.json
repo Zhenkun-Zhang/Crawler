@@ -1,0 +1,11 @@
+{
+    "api": "transformers.DataCollatorForWholeWordMask.torch_mask_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "mask_labels"
+    ],
+    "params": [],
+    "return": ""
+}

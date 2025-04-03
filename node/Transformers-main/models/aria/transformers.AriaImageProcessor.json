@@ -1,0 +1,85 @@
+{
+    "api": "transformers.AriaImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_mean:",
+        "image_std",
+        "max_image_size",
+        "min_image_size",
+        "split_resolutions",
+        "int]]]",
+        "split_image",
+        "do_convert_rgb",
+        "do_normalize",
+        "resample",
+        "<Resampling.BICUBIC",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_mean",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "Mean values for normalization."
+        },
+        {
+            "name": "image_std",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation values for normalization."
+        },
+        {
+            "name": "max_image_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum image size."
+        },
+        {
+            "name": "min_image_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Minimum image size."
+        },
+        {
+            "name": "split_resolutions",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "The optimal resolutions for splitting the image."
+        },
+        {
+            "name": "split_image",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to split the image."
+        },
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "The resampling filter to use if resizing the image."
+        }
+    ],
+    "return": ""
+}

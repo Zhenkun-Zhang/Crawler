@@ -1,0 +1,97 @@
+{
+    "api": "transformers.TFOPTModel.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "TFModelInputType",
+        "|",
+        "attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "head_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "past_key_values",
+        "tf.Tensor]]]]",
+        "inputs_embeds",
+        "|",
+        "tf.Tensor",
+        "|",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "training",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "tf.Tensor of shape ({0})",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "tf.Tensor of shape ({0}",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "head_mask",
+            "type": "tf.Tensor of shape (encoder_layers, encoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "past_key_values",
+            "type": "Tuple[Tuple[tf.Tensor]] of length config.n_layers",
+            "optional": false,
+            "default": "",
+            "description": "contains precomputed key and value hidden states of the attention blocks. Can be used to speed up decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values). Set to False during training, True during generation"
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail. This argument can be used only in eager mode, in graph mode the value in theconfig will be used instead."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail. This argument can be used only in eager mode, in graph mode the value in the config will beused instead."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple. This argument can be used ineager mode, in graph mode the value will always be set to True."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        }
+    ],
+    "return": "transformers.modeling_tf_outputs.TFBaseModelOutputWithPast or tuple(tf.Tensor)"
+}

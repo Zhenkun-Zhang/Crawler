@@ -1,0 +1,31 @@
+{
+    "api": "transformers.ProcessorMixin.apply_chat_template",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "conversation:",
+        "typing.Union[list[dict[str,",
+        "str]],",
+        "list[list[dict[str,",
+        "str]]]]",
+        "chat_template",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "conversation",
+            "type": "Union[List[Dict, [str, str]], List[List[Dict[str, str]]]]",
+            "optional": false,
+            "default": "",
+            "description": "The conversation to format."
+        },
+        {
+            "name": "chat_template",
+            "type": "Optional[str]",
+            "optional": true,
+            "default": "",
+            "description": "The Jinja template to use for formatting the conversation. If not provided, the tokenizerschat template is used."
+        }
+    ],
+    "return": ""
+}

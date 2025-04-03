@@ -1,0 +1,48 @@
+{
+    "api": "transformers.EvalPrediction",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "predictions:",
+        "tuple[numpy.ndarray]]",
+        "label_ids",
+        "tuple[numpy.ndarray]]",
+        "inputs",
+        "tuple[numpy.ndarray],",
+        "NoneType]",
+        "losses",
+        "tuple[numpy.ndarray],",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "predictions",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "Predictions of the model."
+        },
+        {
+            "name": "label_ids",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "Targets to be matched."
+        },
+        {
+            "name": "inputs",
+            "type": "np.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Input data passed to the model."
+        },
+        {
+            "name": "losses",
+            "type": "np.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Loss values computed during evaluation."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,61 @@
+{
+    "api": "transformers.ClvpModelForConditionalGeneration.generate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "input_features",
+        "attention_mask",
+        "generation_config",
+        "pad_to_max_mel_tokens",
+        "output_hidden_states",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Input text Tokens. Processed from the ClvpTokenizer."
+        },
+        {
+            "name": "input_features",
+            "type": "torch.FloatTensor of shape (batch_size, feature_size, time_dim",
+            "optional": true,
+            "default": "",
+            "description": "Indicates log-melspectrogram representations for audio returned by ClvpFeatureExtractor."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding text token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "generation_config",
+            "type": "~generation.GenerationConfig",
+            "optional": true,
+            "default": "",
+            "description": "The generation configuration to be used as base parametrization for the generation call. **kwargspassed to generate matching the attributes of generation_config will override them. Ifgeneration_config is not provided, the default will be used, which had the following loadingpriority: 1) from the generation_config.json model file, if it exists, 2) from the modelconfiguration. Please note that unspecified parameters will inherit GenerationConfigsdefault values, whose documentation should be checked to parameterize generation."
+        },
+        {
+            "name": "pad_to_max_mel_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Pads generated speech_ids to the specified value. This is to implement the same logic from the officialrepo, link: https://github.com/neonbjb/tortoise-tts/blob/80f89987a5abda5e2b082618cd74f9c7411141dc/tortoise/api.py#L430and to make sure the logits are same.This does not affect generation quality so please dont consider using it since it is less efficient."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of decoder model, text encoder and speech encoder models."
+        }
+    ],
+    "return": "ClvpOutput or tuple"
+}

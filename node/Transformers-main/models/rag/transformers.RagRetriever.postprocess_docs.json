@@ -1,0 +1,37 @@
+{
+    "api": "transformers.RagRetriever.postprocess_docs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "docs",
+        "input_strings",
+        "prefix",
+        "n_docs",
+        "return_tensors",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "docs",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "Retrieved documents."
+        },
+        {
+            "name": "input_strings",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Input strings decoded by preprocess_query."
+        },
+        {
+            "name": "prefix",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Prefix added at the beginning of each input, typically used with T5-based models."
+        }
+    ],
+    "return": "tuple(tensors)"
+}

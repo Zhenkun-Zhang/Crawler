@@ -1,0 +1,94 @@
+{
+    "api": "transformers.AwqConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "bits:",
+        "group_size",
+        "zero_point",
+        "version",
+        "<AWQLinearVersion.GEMM",
+        "backend",
+        "<AwqBackendPackingMethod.AUTOAWQ",
+        "do_fuse",
+        "fuse_max_seq_len",
+        "modules_to_fuse",
+        "modules_to_not_convert",
+        "exllama_config",
+        "int]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "bits",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of bits to quantize to."
+        },
+        {
+            "name": "group_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The group size to use for quantization. Recommended value is 128 and -1 uses per-column quantization."
+        },
+        {
+            "name": "zero_point",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use zero point quantization."
+        },
+        {
+            "name": "version",
+            "type": "AWQLinearVersion",
+            "optional": true,
+            "default": "",
+            "description": "The version of the quantization algorithm to use. GEMM is better for big batch_size (e.g. >= 8) otherwise,GEMV is better (e.g. < 8 ). GEMM models are compatible with Exllama kernels."
+        },
+        {
+            "name": "backend",
+            "type": "AwqBackendPackingMethod",
+            "optional": true,
+            "default": "",
+            "description": "The quantization backend. Some models might be quantized using llm-awq backend. This is useful for usersthat quantize their own models using llm-awq library."
+        },
+        {
+            "name": "do_fuse",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to fuse attention and mlp layers together for faster inference"
+        },
+        {
+            "name": "fuse_max_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The Maximum sequence length to generate when using fusing."
+        },
+        {
+            "name": "modules_to_fuse",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Overwrite the natively supported fusing scheme with the one specified by the users."
+        },
+        {
+            "name": "modules_to_not_convert",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "The list of modules to not quantize, useful for quantizing models that explicitly require to havesome modules left in their original precision (e.g. Whisper encoder, Llava encoder, Mixtral gate layers).Note you cannot quantize directly with transformers, please refer to AutoAWQ documentation for quantizing HF models."
+        },
+        {
+            "name": "exllama_config",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "You can specify the version of the exllama kernel through the version key, the maximum sequencelength through the max_input_len key, and the maximum batch size through the max_batch_size key.Defaults to {version: 2, max_input_len: 2048, max_batch_size: 8} if unset."
+        }
+    ],
+    "return": ""
+}

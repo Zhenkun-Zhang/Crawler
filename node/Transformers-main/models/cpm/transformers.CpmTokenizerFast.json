@@ -1,0 +1,24 @@
+{
+    "api": "transformers.CpmTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "do_lower_case",
+        "remove_space",
+        "keep_accents",
+        "bos_token",
+        "eos_token",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "additional_special_tokens",
+        "'<eod>']",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

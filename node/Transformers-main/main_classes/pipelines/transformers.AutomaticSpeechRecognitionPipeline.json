@@ -1,0 +1,87 @@
+{
+    "api": "transformers.AutomaticSpeechRecognitionPipeline",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "PreTrainedModel",
+        "feature_extractor",
+        "str]",
+        "tokenizer",
+        "decoder",
+        "str,",
+        "NoneType]",
+        "device",
+        "ForwardRef('torch.device')]",
+        "torch_dtype",
+        "ForwardRef('torch.dtype'),",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "PreTrainedModel,TFPreTrainedModel",
+            "optional": false,
+            "default": "",
+            "description": "The model that will be used by the pipeline to make predictions. This needs to be a model inheriting fromPreTrainedModel for PyTorch and TFPreTrainedModel for TensorFlow."
+        },
+        {
+            "name": "feature_extractor",
+            "type": "SequenceFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "The feature extractor that will be used by the pipeline to encode waveform for the model."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer that will be used by the pipeline to encode data for the model. This object inherits fromPreTrainedTokenizer."
+        },
+        {
+            "name": "decoder",
+            "type": "pyctcdecode.BeamSearchDecoderCTC",
+            "optional": true,
+            "default": "",
+            "description": "PyCTCDecodesBeamSearchDecoderCTCcan be passed for language model boosted decoding. See Wav2Vec2ProcessorWithLM for more information."
+        },
+        {
+            "name": "chunk_length_s",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The input length for in each chunk. If chunk_length_s = 0 then chunking is disabled (default).For more information on how to effectively use chunk_length_s, please have a look at the ASR chunkingblog post."
+        },
+        {
+            "name": "stride_length_s",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The length of stride on the left and right of each chunk. Used only with chunk_length_s > 0. This enablesthe model to see more context and infer letters better than without this context but the pipelinediscards the stride bits at the end to make the final reconstitution as perfect as possible.For more information on how to effectively use stride_length_s, please have a look at the ASR chunkingblog post."
+        },
+        {
+            "name": "framework",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The framework to use, either pt for PyTorch or tf for TensorFlow. The specified framework must beinstalled. If no framework is specified, will default to the one currently installed. If no framework isspecified and both frameworks are installed, will default to the framework of the model, or to PyTorch ifno model is provided."
+        },
+        {
+            "name": "device",
+            "type": "Union[int, torch.device]",
+            "optional": true,
+            "default": "",
+            "description": "Device ordinal for CPU/GPU supports. Setting this to None will leverage CPU, a positive will run themodel on the associated CUDA device id."
+        },
+        {
+            "name": "torch_dtype",
+            "type": "Union[int, torch.dtype]",
+            "optional": true,
+            "default": "",
+            "description": "The data-type (dtype) of the computation. Setting this to None will use float32 precision. Set totorch.float16 or torch.bfloat16 to use half-precision in the respective dtypes."
+        }
+    ],
+    "return": ""
+}

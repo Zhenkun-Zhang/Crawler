@@ -1,0 +1,11 @@
+{
+    "api": "transformers.FlavaImageCodebook.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor"
+    ],
+    "params": [],
+    "return": ""
+}

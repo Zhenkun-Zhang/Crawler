@@ -1,0 +1,73 @@
+{
+    "api": "transformers.VitPoseImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_affine_transform:",
+        "size",
+        "int]",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_affine_transform",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to apply an affine transformation to the input images."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 256, \"width\": 192}):Resolution of the image after affine_transform is applied. Only has an effect if do_affine_transform is set to True. Canbe overriden by size in the preprocess method.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to apply the scaling factor (to make pixel values floats between 0. and 1.)."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overriden by rescale_factor in the preprocessmethod."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to normalize the input with mean and standard deviation."
+        },
+        {
+            "name": "image_mean",
+            "type": "List[int], defaults to [0.485, 0.456, 0.406]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence of means for each channel, to be used when normalizing images."
+        },
+        {
+            "name": "image_std",
+            "type": "List[int], defaults to [0.229, 0.224, 0.225]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence of standard deviations for each channel, to be used when normalizing images."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,21 @@
+{
+    "api": "transformers.PretrainedConfig.from_json_file",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "json_file:",
+        "typing.Union[str,",
+        "os.PathLike]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "json_file",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "Path to the JSON file containing the parameters."
+        }
+    ],
+    "return": "PretrainedConfig"
+}

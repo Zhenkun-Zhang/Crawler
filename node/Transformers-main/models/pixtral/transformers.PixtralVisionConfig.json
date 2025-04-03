@@ -1,0 +1,99 @@
+{
+    "api": "transformers.PixtralVisionConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "num_channels",
+        "image_size",
+        "patch_size",
+        "hidden_act",
+        "attention_dropout",
+        "rope_theta",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads in the Transformer encoder."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of input channels in the input images."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Max dimension of the input images."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Size of the image patches."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "Activation function used in the hidden layers."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Dropout probability for the attention layers."
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,26 @@
+{
+    "api": "transformers.TFMinLengthLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "min_length:",
+        "eos_token_id"
+    ],
+    "params": [
+        {
+            "name": "min_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The minimum length below which the score of eos_token_id is set to -float(Inf)."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The id of the end-of-sequence token."
+        }
+    ],
+    "return": ""
+}

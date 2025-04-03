@@ -1,0 +1,104 @@
+{
+    "api": "transformers.BloomForQuestionAnswering.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "position_ids",
+        "head_mask",
+        "inputs_embeds",
+        "start_positions",
+        "end_positions",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, input_ids_length)",
+            "optional": false,
+            "default": "",
+            "description": "input_ids_length = sequence_length if past_key_values is None else past_key_values[0][0].shape[2](sequence_length of input past key value states). Indices of input sequence tokens in the vocabulary.If past_key_values is used, only input_ids that do not have their past calculated should be passed asinput_ids.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "past_key_values",
+            "type": "Cache,tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used to speed up sequential decoding. This typically consists in the past_key_valuesreturned by the model at a previous stage of decoding, when use_cache=True or config.use_cache=True.Two formats are allowed:a Cache instance, see ourkv cache guide,Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors ofshape (batch_size, num_heads, sequence_length, embed_size_per_head)). This is also known as the legacycache format.The model will output the same cache format that is fed as input. If no past_key_values are passed, thelegacy cache format will be returned.If past_key_values are used, the user can optionally input only the last input_ids (those that donthave their past key value states given to this model) of shape (batch_size, 1) instead of all input_idsof shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix.If past_key_values is used, optionally only the last inputs_embeds have to be input (seepast_key_values)."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "cache_position",
+            "type": "torch.LongTensor of shape (sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices depicting the position of the input sequence tokens in the sequence. Contrarily to position_ids,this tensor is not affected by padding. It is used to update the cache in the correct position and to inferthe complete sequence length."
+        },
+        {
+            "name": "start_positions",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for position (index) of the start of the labelled span for computing the token classification loss.Positions are clamped to the length of the sequence (sequence_length). Position outside of the sequenceare not taken into account for computing the loss."
+        },
+        {
+            "name": "end_positions",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for position (index) of the end of the labelled span for computing the token classification loss.Positions are clamped to the length of the sequence (sequence_length). Position outside of the sequenceare not taken into account for computing the loss."
+        }
+    ],
+    "return": ""
+}

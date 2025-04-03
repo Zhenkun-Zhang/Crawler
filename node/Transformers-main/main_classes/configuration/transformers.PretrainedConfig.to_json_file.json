@@ -1,0 +1,28 @@
+{
+    "api": "transformers.PretrainedConfig.to_json_file",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "json_file_path:",
+        "typing.Union[str,",
+        "os.PathLike]",
+        "use_diff"
+    ],
+    "params": [
+        {
+            "name": "json_file_path",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "Path to the JSON file in which this configuration instances parameters will be saved."
+        },
+        {
+            "name": "use_diff",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, only the difference between the config instance and the default PretrainedConfig()is serialized to JSON file."
+        }
+    ],
+    "return": ""
+}

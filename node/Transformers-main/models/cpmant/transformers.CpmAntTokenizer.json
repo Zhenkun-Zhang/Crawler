@@ -1,0 +1,84 @@
+{
+    "api": "transformers.CpmAntTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "bod_token",
+        "eod_token",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "unk_token",
+        "line_token",
+        "space_token",
+        "padding_side",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "bod_token",
+            "type": "str",
+            "optional": true,
+            "default": "<d>",
+            "description": "The beginning of document token."
+        },
+        {
+            "name": "eod_token",
+            "type": "str",
+            "optional": true,
+            "default": "</d>",
+            "description": "The end of document token."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token."
+        },
+        {
+            "name": "line_token",
+            "type": "str",
+            "optional": true,
+            "default": "</n>",
+            "description": "The line token."
+        },
+        {
+            "name": "space_token",
+            "type": "str",
+            "optional": true,
+            "default": "</_>",
+            "description": "The space token."
+        }
+    ],
+    "return": ""
+}

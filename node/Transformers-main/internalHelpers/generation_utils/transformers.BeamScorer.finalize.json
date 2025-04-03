@@ -1,0 +1,59 @@
+{
+    "api": "transformers.BeamScorer.finalize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "next_scores",
+        "next_tokens",
+        "next_indices",
+        "max_length",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size * num_beams, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using any class inheriting from PreTrainedTokenizer. SeePreTrainedTokenizer.encode() and PreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "final_beam_scores",
+            "type": "torch.FloatTensor of shape (batch_size * num_beams)",
+            "optional": false,
+            "default": "",
+            "description": "The final scores of all non-finished beams."
+        },
+        {
+            "name": "final_beam_tokens",
+            "type": "torch.FloatTensor of shape (batch_size * num_beams)",
+            "optional": false,
+            "default": "",
+            "description": "The last tokens to be added to the non-finished beam_hypotheses."
+        },
+        {
+            "name": "final_beam_indices",
+            "type": "torch.FloatTensor of shape (batch_size * num_beams)",
+            "optional": false,
+            "default": "",
+            "description": "The beam indices indicating to which beam the final_beam_tokens shall be added."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "Union[int, List[int]]",
+            "optional": true,
+            "default": "",
+            "description": "The id of the end-of-sequence token. Optionally, use a list to set multiple end-of-sequence tokens."
+        }
+    ],
+    "return": "torch.LongTensor of shape (batch_size * num_return_sequences, sequence_length)"
+}

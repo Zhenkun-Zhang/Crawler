@@ -1,0 +1,52 @@
+{
+    "api": "transformers.DPRReaderOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "start_logits:",
+        "end_logits",
+        "relevance_logits",
+        "hidden_states",
+        "...]]",
+        "attentions",
+        "...]]"
+    ],
+    "params": [
+        {
+            "name": "start_logits",
+            "type": "torch.FloatTensor of shape (n_passages, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Logits of the start index of the span for each passage."
+        },
+        {
+            "name": "end_logits",
+            "type": "torch.FloatTensor of shape (n_passages, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Logits of the end index of the span for each passage."
+        },
+        {
+            "name": "relevance_logits",
+            "type": "torch.FloatTensor of shape (n_passages, )",
+            "optional": false,
+            "default": "",
+            "description": "Outputs of the QA classifier of the DPRReader that corresponds to the scores of each passage to answer thequestion, compared to all the other passages."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

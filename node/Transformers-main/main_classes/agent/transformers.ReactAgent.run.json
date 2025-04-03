@@ -1,0 +1,22 @@
+{
+    "api": "transformers.ReactAgent.run",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "task:",
+        "str",
+        "stream",
+        "reset",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "task",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The task to perform"
+        }
+    ],
+    "return": ""
+}

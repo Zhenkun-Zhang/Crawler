@@ -1,0 +1,34 @@
+{
+    "api": "transformers.FillMaskPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "One or several texts (or one list of prompts) with masked tokens."
+        },
+        {
+            "name": "targets",
+            "type": "str,List[str]",
+            "optional": true,
+            "default": "",
+            "description": "When passed, the model will limit the scores to the passed targets instead of looking up in the wholevocab. If the provided targets are not in the model vocab, they will be tokenized and the firstresulting token will be used (with a warning, and that might be slower)."
+        },
+        {
+            "name": "top_k",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "When passed, overrides the number of predictions to return."
+        }
+    ],
+    "return": "A list or a list of list of dict"
+}

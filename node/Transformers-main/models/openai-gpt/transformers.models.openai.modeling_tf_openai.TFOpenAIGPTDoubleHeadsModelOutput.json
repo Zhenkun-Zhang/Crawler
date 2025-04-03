@@ -1,0 +1,44 @@
+{
+    "api": "transformers.models.openai.modeling_tf_openai.TFOpenAIGPTDoubleHeadsModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "logits:",
+        "mc_logits",
+        "hidden_states",
+        "|",
+        "attentions",
+        "|"
+    ],
+    "params": [
+        {
+            "name": "logits",
+            "type": "tf.Tensor of shape (batch_size, num_choices, sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)."
+        },
+        {
+            "name": "mc_logits",
+            "type": "tf.Tensor of shape (batch_size, num_choices)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the multiple choice classification head (scores for each choice before SoftMax)."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

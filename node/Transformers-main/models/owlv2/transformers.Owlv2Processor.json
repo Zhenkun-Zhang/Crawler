@@ -1,0 +1,27 @@
+{
+    "api": "transformers.Owlv2Processor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "Owlv2ImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "[CLIPTokenizer, CLIPTokenizerFast]",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

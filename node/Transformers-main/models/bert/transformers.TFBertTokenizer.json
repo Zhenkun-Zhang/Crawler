@@ -1,0 +1,108 @@
+{
+    "api": "transformers.TFBertTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_list:",
+        "typing.List",
+        "do_lower_case",
+        "cls_token_id",
+        "sep_token_id",
+        "pad_token_id",
+        "padding",
+        "truncation",
+        "max_length",
+        "pad_to_multiple_of",
+        "return_token_type_ids",
+        "return_attention_mask",
+        "use_fast_bert_tokenizer",
+        "**tokenizer_kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_list",
+            "type": "list",
+            "optional": false,
+            "default": "",
+            "description": "List containing the vocabulary."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "cls_token_id",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens."
+        },
+        {
+            "name": "sep_token_id",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "padding",
+            "type": "str, defaults to \"longest\"",
+            "optional": false,
+            "default": "",
+            "description": "The type of padding to use. Can be either longest, to pad only up to the longest sample in the batch,or `max_length, to pad all inputs to the maximum length supported by the tokenizer."
+        },
+        {
+            "name": "truncation",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to truncate the sequence to the maximum length."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length of the sequence, used for padding (if padding is max_length) and/or truncation (iftruncation is True)."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set, the sequence will be padded to a multiple of this value."
+        },
+        {
+            "name": "return_token_type_ids",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return token_type_ids."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the attention_mask."
+        },
+        {
+            "name": "use_fast_bert_tokenizer",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, will use the FastBertTokenizer class from Tensorflow Text. If False, will use the BertTokenizerclass instead. BertTokenizer supports some additional options, but is slower and cannot be exported toTFLite."
+        }
+    ],
+    "return": ""
+}

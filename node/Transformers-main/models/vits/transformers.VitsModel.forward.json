@@ -1,0 +1,67 @@
+{
+    "api": "transformers.VitsModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "speaker_id",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "labels",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing convolution and attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "speaker_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Which speaker embedding to use. Only used for multispeaker models."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.FloatTensor of shape (batch_size, config.spectrogram_bins, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Float values of target spectrogram. Timesteps set to -100.0 are ignored (masked) for the losscomputation."
+        }
+    ],
+    "return": "transformers.models.vits.modeling_vits.VitsModelOutput or tuple(torch.FloatTensor)"
+}

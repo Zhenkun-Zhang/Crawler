@@ -1,0 +1,26 @@
+{
+    "api": "transformers.data.processors.squad.SquadProcessor.get_train_examples",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "data_dir",
+        "filename"
+    ],
+    "params": [
+        {
+            "name": "data_dir",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Directory containing the data files used for training and evaluating."
+        },
+        {
+            "name": "filename",
+            "type": "",
+            "optional": false,
+            "default": "None",
+            "description": "None by default, specify this if the training file has a different name than the original onewhich is train-v1.1.json and train-v2.0.json for squad versions 1.1 and 2.0 respectively."
+        }
+    ],
+    "return": ""
+}

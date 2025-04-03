@@ -1,0 +1,195 @@
+{
+    "api": "transformers.GPT2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "n_positions",
+        "n_embd",
+        "n_layer",
+        "n_head",
+        "n_inner",
+        "activation_function",
+        "resid_pdrop",
+        "embd_pdrop",
+        "attn_pdrop",
+        "layer_norm_epsilon",
+        "initializer_range",
+        "summary_type",
+        "summary_use_proj",
+        "summary_activation",
+        "summary_proj_to_labels",
+        "summary_first_dropout",
+        "scale_attn_weights",
+        "use_cache",
+        "bos_token_id",
+        "eos_token_id",
+        "scale_attn_by_inverse_layer_idx",
+        "reorder_and_upcast_attn",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "50257",
+            "description": "Vocabulary size of the GPT-2 model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling GPT2Model or TFGPT2Model."
+        },
+        {
+            "name": "n_positions",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "n_embd",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "n_inner",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the inner feed-forward layers. None will set it to 4 times n_embd"
+        },
+        {
+            "name": "activation_function",
+            "type": "str",
+            "optional": true,
+            "default": "gelu_new",
+            "description": "Activation function, to be selected in the list [relu, silu, gelu, tanh, gelu_new]."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "embd_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the embeddings."
+        },
+        {
+            "name": "attn_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon to use in the layer normalization layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "summary_type",
+            "type": "string",
+            "optional": true,
+            "default": "cls_index",
+            "description": "Argument used when doing sequence summary, used in the models GPT2DoubleHeadsModel andTFGPT2DoubleHeadsModel.Has to be one of the following options:last: Take the last token hidden state (like XLNet).first: Take the first token hidden state (like BERT).mean: Take the mean of all tokens hidden states.cls_index: Supply a Tensor of classification token position (like GPT/GPT-2).attn: Not implemented now, use multi-head attention."
+        },
+        {
+            "name": "summary_use_proj",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Argument used when doing sequence summary, used in the models GPT2DoubleHeadsModel andTFGPT2DoubleHeadsModel.Whether or not to add a projection after the vector extraction."
+        },
+        {
+            "name": "summary_activation",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Argument used when doing sequence summary. Used in for the multiple choice head inGPT2DoubleHeadsModel.Pass tanh for a tanh activation to the output, any other value will result in no activation."
+        },
+        {
+            "name": "summary_proj_to_labels",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Argument used when doing sequence summary, used in the models GPT2DoubleHeadsModel andTFGPT2DoubleHeadsModel.Whether the projection outputs should have config.num_labels or config.hidden_size classes."
+        },
+        {
+            "name": "summary_first_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Argument used when doing sequence summary, used in the models GPT2DoubleHeadsModel andTFGPT2DoubleHeadsModel.The dropout ratio to be used after the projection and activation."
+        },
+        {
+            "name": "scale_attn_weights",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Scale attention weights by dividing by sqrt(hidden_size).."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50256",
+            "description": "Id of the beginning of sentence token in the vocabulary."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50256",
+            "description": "Id of the end of sentence token in the vocabulary."
+        },
+        {
+            "name": "scale_attn_by_inverse_layer_idx",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to additionally scale attention weights by 1 / layer_idx + 1."
+        },
+        {
+            "name": "reorder_and_upcast_attn",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to scale keys (K) prior to computing attention (dot-product) and upcast attentiondot-product/softmax to float() when training with mixed precision."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,20 @@
+{
+    "api": "transformers.ProcessorMixin.to_json_file",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "json_file_path:",
+        "typing.Union[str,",
+        "os.PathLike]"
+    ],
+    "params": [
+        {
+            "name": "json_file_path",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "Path to the JSON file in which this processor instances parameters will be saved."
+        }
+    ],
+    "return": ""
+}

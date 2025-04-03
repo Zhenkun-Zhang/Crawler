@@ -1,0 +1,34 @@
+{
+    "api": "transformers.WhisperTokenizerFast.set_prefix_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "language:",
+        "task",
+        "predict_timestamps"
+    ],
+    "params": [
+        {
+            "name": "language",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The language of the transcription text."
+        },
+        {
+            "name": "task",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Task identifier to append at the start of sequence (if any)."
+        },
+        {
+            "name": "predict_timestamps",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to omit the <|notimestamps|> token at the start of the sequence."
+        }
+    ],
+    "return": ""
+}

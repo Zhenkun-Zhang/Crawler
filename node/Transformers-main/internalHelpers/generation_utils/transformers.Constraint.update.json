@@ -1,0 +1,20 @@
+{
+    "api": "transformers.Constraint.update",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_id:",
+        "int",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_id(int)",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The id of a newly generated token in the beam search."
+        }
+    ],
+    "return": "stepped(bool)"
+}

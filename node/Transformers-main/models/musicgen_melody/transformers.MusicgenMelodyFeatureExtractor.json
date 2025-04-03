@@ -1,0 +1,84 @@
+{
+    "api": "transformers.MusicgenMelodyFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size",
+        "sampling_rate",
+        "hop_length",
+        "chunk_length",
+        "n_fft",
+        "num_chroma",
+        "padding_value",
+        "return_attention_mask",
+        "stem_indices",
+        "2]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "The feature dimension of the extracted features."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "32000",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "hop_length",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Length of the overlaping windows for the STFT used to obtain the Mel Frequency coefficients."
+        },
+        {
+            "name": "chunk_length",
+            "type": "int",
+            "optional": true,
+            "default": "30",
+            "description": "The maximum number of chunks of sampling_rate samples used to trim and pad longer or shorter audiosequences."
+        },
+        {
+            "name": "n_fft",
+            "type": "int",
+            "optional": true,
+            "default": "16384",
+            "description": "Size of the Fourier transform."
+        },
+        {
+            "name": "num_chroma",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of chroma bins to use."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Padding value used to pad the audio."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to return the attention mask. Can be overwritten when calling the feature extractor.What are attention masks?For Whisper models, attention_mask should always be passed for batched inference, to avoid subtlebugs."
+        },
+        {
+            "name": "stem_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "Stem channels to extract if demucs outputs are passed."
+        }
+    ],
+    "return": ""
+}

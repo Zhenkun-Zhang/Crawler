@@ -1,0 +1,154 @@
+{
+    "api": "transformers.PoolFormerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "patch_size",
+        "stride",
+        "pool_size",
+        "mlp_ratio",
+        "depths",
+        "2,",
+        "6,",
+        "2]",
+        "hidden_sizes",
+        "128,",
+        "320,",
+        "512]",
+        "patch_sizes",
+        "3,",
+        "3,",
+        "3]",
+        "strides",
+        "2,",
+        "2,",
+        "2]",
+        "padding",
+        "1,",
+        "1,",
+        "1]",
+        "num_encoder_blocks",
+        "drop_path_rate",
+        "hidden_act",
+        "use_layer_scale",
+        "layer_scale_init_value",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of channels in the input image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size of the input patch."
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The stride of the input patch."
+        },
+        {
+            "name": "pool_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The size of the pooling window."
+        },
+        {
+            "name": "mlp_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "4.0",
+            "description": "The ratio of the number of channels in the output of the MLP to the number of channels in the input."
+        },
+        {
+            "name": "depths",
+            "type": "list",
+            "optional": true,
+            "default": "[2,",
+            "description": "The depth of each encoder block."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "list",
+            "optional": true,
+            "default": "[64,",
+            "description": "The hidden sizes of each encoder block."
+        },
+        {
+            "name": "patch_sizes",
+            "type": "list",
+            "optional": true,
+            "default": "[7,",
+            "description": "The size of the input patch for each encoder block."
+        },
+        {
+            "name": "strides",
+            "type": "list",
+            "optional": true,
+            "default": "[4,",
+            "description": "The stride of the input patch for each encoder block."
+        },
+        {
+            "name": "padding",
+            "type": "list",
+            "optional": true,
+            "default": "[2,",
+            "description": "The padding of the input patch for each encoder block."
+        },
+        {
+            "name": "num_encoder_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The number of encoder blocks."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout rate for the dropout layers."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The activation function for the hidden layers."
+        },
+        {
+            "name": "use_layer_scale",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use layer scale."
+        },
+        {
+            "name": "layer_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The initial value for the layer scale."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The initializer range for the weights."
+        }
+    ],
+    "return": ""
+}

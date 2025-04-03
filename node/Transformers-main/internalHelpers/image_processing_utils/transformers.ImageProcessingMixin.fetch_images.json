@@ -1,0 +1,12 @@
+{
+    "api": "transformers.ImageProcessingMixin.fetch_images",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image_url_or_urls:",
+        "typing.Union[str,",
+        "list[str]]"
+    ],
+    "params": [],
+    "return": ""
+}

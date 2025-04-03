@@ -1,0 +1,49 @@
+{
+    "api": "transformers.Phi4MultimodalProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "audio_processor",
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "Phi4MultimodalImageProcessorFast",
+            "optional": false,
+            "default": "",
+            "description": "The image processor to use for images."
+        },
+        {
+            "name": "audio_processor",
+            "type": "Phi4MultimodalFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "The audio processor to use for audio inputs."
+        },
+        {
+            "name": "tokenizer",
+            "type": "GPT2TokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer to use for text."
+        },
+        {
+            "name": "fake_image_token_pattern",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The fake image token pattern."
+        },
+        {
+            "name": "fake_audio_token_pattern",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The fake audio token pattern."
+        }
+    ],
+    "return": ""
+}

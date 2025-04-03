@@ -1,0 +1,19 @@
+{
+    "api": "transformers.PreTrainedModel.set_input_embeddings",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "value:",
+        "Module"
+    ],
+    "params": [
+        {
+            "name": "value",
+            "type": "nn.Module",
+            "optional": false,
+            "default": "",
+            "description": "A module mapping vocabulary to hidden states."
+        }
+    ],
+    "return": ""
+}

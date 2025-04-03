@@ -1,0 +1,116 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "model_max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length (in number of tokens) for the inputs to the transformer model. When the tokenizer isloaded with from_pretrained(), this will be set to thevalue stored for the associated model in max_model_input_sizes (see above). If no value is provided, willdefault to VERY_LARGE_INTEGER (int(1e30))."
+        },
+        {
+            "name": "padding_side",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The side on which the model should have padding applied. Should be selected between [right, left].Default value is picked from the class attribute of the same name."
+        },
+        {
+            "name": "truncation_side",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The side on which the model should have truncation applied. Should be selected between [right, left].Default value is picked from the class attribute of the same name."
+        },
+        {
+            "name": "chat_template",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A Jinja template string that will be used to format lists of chat messages. Seehttps://huggingface.co/docs/transformers/chat_templating for a full description."
+        },
+        {
+            "name": "model_input_names",
+            "type": "List[string]",
+            "optional": true,
+            "default": "",
+            "description": "The list of inputs accepted by the forward pass of the model (like token_type_ids orattention_mask). Default value is picked from the class attribute of the same name."
+        },
+        {
+            "name": "bos_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing the beginning of a sentence. Will be associated to self.bos_token andself.bos_token_id."
+        },
+        {
+            "name": "eos_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing the end of a sentence. Will be associated to self.eos_token andself.eos_token_id."
+        },
+        {
+            "name": "unk_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing an out-of-vocabulary token. Will be associated to self.unk_token andself.unk_token_id."
+        },
+        {
+            "name": "sep_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token separating two different sentences in the same input (used by BERT for instance). Will beassociated to self.sep_token and self.sep_token_id."
+        },
+        {
+            "name": "pad_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token used to make arrays of tokens the same size for batching purpose. Will then be ignored byattention mechanisms or loss computation. Will be associated to self.pad_token and self.pad_token_id."
+        },
+        {
+            "name": "cls_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing the class of the input (used by BERT for instance). Will be associated toself.cls_token and self.cls_token_id."
+        },
+        {
+            "name": "mask_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A special token representing a masked token (used by masked-language modeling pretraining objectives, likeBERT). Will be associated to self.mask_token and self.mask_token_id."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "tuple,list of str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "",
+            "description": "A tuple or a list of additional special tokens. Add them here to ensure they are skipped when decoding withskip_special_tokens is set to True. If they are not part of the vocabulary, they will be added at the endof the vocabulary."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should cleanup the spaces that were added when splitting the input text during thetokenization process."
+        },
+        {
+            "name": "split_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the special tokens should be split during the tokenization process. Passing will affect theinternal state of the tokenizer. The default behavior is to not split special tokens. This means that if<s> is the bos_token, then tokenizer.tokenize(<s>) = [<s>]. Otherwise, ifsplit_special_tokens=True, then tokenizer.tokenize(<s>) will be give [<,s, >]."
+        }
+    ],
+    "return": ""
+}

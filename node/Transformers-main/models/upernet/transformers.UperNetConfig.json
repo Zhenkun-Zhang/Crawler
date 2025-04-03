@@ -1,0 +1,127 @@
+{
+    "api": "transformers.UperNetConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "backbone_config",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "backbone_kwargs",
+        "hidden_size",
+        "initializer_range",
+        "pool_scales",
+        "2,",
+        "3,",
+        "6]",
+        "use_auxiliary_head",
+        "auxiliary_loss_weight",
+        "auxiliary_in_channels",
+        "auxiliary_channels",
+        "auxiliary_num_convs",
+        "auxiliary_concat_input",
+        "loss_ignore_index",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the backbone model."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to load backbone from the timm library. If False, the backbone is loaded from the transformerslibrary."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The number of hidden units in the convolutional layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "pool_scales",
+            "type": "Tuple[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "Pooling scales used in Pooling Pyramid Module applied on the last feature map."
+        },
+        {
+            "name": "use_auxiliary_head",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use an auxiliary head during training."
+        },
+        {
+            "name": "auxiliary_loss_weight",
+            "type": "float",
+            "optional": true,
+            "default": "0.4",
+            "description": "Weight of the cross-entropy loss of the auxiliary head."
+        },
+        {
+            "name": "auxiliary_channels",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Number of channels to use in the auxiliary head."
+        },
+        {
+            "name": "auxiliary_num_convs",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of convolutional layers to use in the auxiliary head."
+        },
+        {
+            "name": "auxiliary_concat_input",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to concatenate the output of the auxiliary head with the input before the classification layer."
+        },
+        {
+            "name": "loss_ignore_index",
+            "type": "int",
+            "optional": true,
+            "default": "255",
+            "description": "The index that is ignored by the loss function."
+        }
+    ],
+    "return": ""
+}

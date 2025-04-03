@@ -1,0 +1,36 @@
+{
+    "api": "transformers.ImageProcessingMixin.save_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory:",
+        "typing.Union[str,",
+        "os.PathLike]",
+        "push_to_hub",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "Directory where the image processor JSON file will be saved (will be created if it does not exist)."
+        },
+        {
+            "name": "push_to_hub",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to push your model to the Hugging Face model hub after saving it. You can specify therepository you want to push to with repo_id (will default to the name of save_directory in yournamespace)."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional key word arguments passed along to the push_to_hub() method."
+        }
+    ],
+    "return": ""
+}

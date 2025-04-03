@@ -1,0 +1,92 @@
+{
+    "api": "transformers.AdamWeightDecay",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "learning_rate:",
+        "typing.Union[float,",
+        "tf_keras.src.optimizers.schedules.learning_rate_schedule.LearningRateSchedule]",
+        "beta_1",
+        "beta_2",
+        "epsilon",
+        "amsgrad",
+        "weight_decay_rate",
+        "include_in_weight_decay",
+        "exclude_from_weight_decay",
+        "name",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "learning_rate",
+            "type": "Union[float, LearningRateSchedule]",
+            "optional": true,
+            "default": "",
+            "description": "The learning rate to use or a schedule."
+        },
+        {
+            "name": "beta_1",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The beta1 parameter in Adam, which is the exponential decay rate for the 1st momentum estimates."
+        },
+        {
+            "name": "beta_2",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The beta2 parameter in Adam, which is the exponential decay rate for the 2nd momentum estimates."
+        },
+        {
+            "name": "epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon parameter in Adam, which is a small constant for numerical stability."
+        },
+        {
+            "name": "amsgrad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to apply AMSGrad variant of this algorithm or not, see On the Convergence of Adam andBeyond."
+        },
+        {
+            "name": "weight_decay_rate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The weight decay to apply."
+        },
+        {
+            "name": "include_in_weight_decay",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "List of the parameter names (or re patterns) to apply weight decay to. If none is passed, weight decay isapplied to all parameters by default (unless they are in exclude_from_weight_decay)."
+        },
+        {
+            "name": "exclude_from_weight_decay",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "List of the parameter names (or re patterns) to exclude from applying weight decay to. If ainclude_in_weight_decay is passed, the names in it will supersede this list."
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Optional name for the operations created when applying gradients."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments. Allowed to be {clipnorm, clipvalue, lr, decay}. clipnorm is clip gradients bynorm, clipvalue is clip gradients by value, decay is included for backward compatibility to allow timeinverse decay of learning rate. lr is included for backward compatibility, recommended to uselearning_rate instead."
+        }
+    ],
+    "return": ""
+}

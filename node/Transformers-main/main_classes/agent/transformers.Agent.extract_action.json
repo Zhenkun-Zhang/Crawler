@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Agent.extract_action",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "llm_output:",
+        "split_token"
+    ],
+    "params": [
+        {
+            "name": "llm_output",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Output of the LLM"
+        },
+        {
+            "name": "split_token",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Separator for the action. Should match the example in the system prompt."
+        }
+    ],
+    "return": ""
+}

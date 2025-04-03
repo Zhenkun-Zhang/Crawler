@@ -1,0 +1,19 @@
+{
+    "api": "transformers.QuantoQuantizedCache",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "cache_config:",
+        "CacheConfig"
+    ],
+    "params": [
+        {
+            "name": "cache_config",
+            "type": "QuantizedCacheConfig",
+            "optional": false,
+            "default": "",
+            "description": "A configuration containing all the arguments to be used by the quantizer, including axis, qtype and group size."
+        }
+    ],
+    "return": ""
+}

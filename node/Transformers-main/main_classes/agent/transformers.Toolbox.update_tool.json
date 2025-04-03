@@ -1,0 +1,19 @@
+{
+    "api": "transformers.Toolbox.update_tool",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tool:",
+        "Tool"
+    ],
+    "params": [
+        {
+            "name": "tool",
+            "type": "Tool",
+            "optional": false,
+            "default": "",
+            "description": "The tool to update to the toolbox."
+        }
+    ],
+    "return": ""
+}

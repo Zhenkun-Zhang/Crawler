@@ -1,0 +1,11 @@
+{
+    "api": "transformers.FunnelForPreTraining",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "FunnelConfig"
+    ],
+    "params": [],
+    "return": ""
+}

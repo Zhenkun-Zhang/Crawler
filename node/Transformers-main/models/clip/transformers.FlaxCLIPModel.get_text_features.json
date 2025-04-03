@@ -1,0 +1,27 @@
+{
+    "api": "transformers.FlaxCLIPModel.get_text_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids",
+        "attention_mask",
+        "position_ids",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7fd23718d090>",
+        "train",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should youprovide it.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        }
+    ],
+    "return": "text_features (jnp.ndarray of shape (batch_size, output_dim)"
+}

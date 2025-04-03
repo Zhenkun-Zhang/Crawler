@@ -1,0 +1,34 @@
+{
+    "api": "transformers.SiglipConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "vision_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize SiglipTextConfig."
+        },
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize SiglipVisionConfig."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

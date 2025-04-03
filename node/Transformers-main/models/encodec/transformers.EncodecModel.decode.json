@@ -1,0 +1,42 @@
+{
+    "api": "transformers.EncodecModel.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "audio_codes:",
+        "audio_scales",
+        "padding_mask",
+        "return_dict"
+    ],
+    "params": [
+        {
+            "name": "audio_codes",
+            "type": "torch.LongTensor  of shape (batch_size, nb_chunks, chunk_length",
+            "optional": true,
+            "default": "",
+            "description": "Discret code embeddings computed using model.encode."
+        },
+        {
+            "name": "audio_scales",
+            "type": "torch.Tensor of shape (batch_size, nb_chunks",
+            "optional": true,
+            "default": "",
+            "description": "Scaling factor for each audio_codes input."
+        },
+        {
+            "name": "padding_mask",
+            "type": "torch.Tensor of shape (batch_size, channels, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Padding mask used to pad the input_values."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": ""
+}

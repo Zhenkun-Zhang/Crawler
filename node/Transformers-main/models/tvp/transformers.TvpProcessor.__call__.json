@@ -1,0 +1,36 @@
+{
+    "api": "transformers.TvpProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text",
+        "videos",
+        "return_tensors",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str, List[str], List[List[str]]",
+            "optional": false,
+            "default": "None",
+            "description": "The sequence or batch of sequences to be encoded. Each sequence can be a string or a list of strings(pretokenized string). If the sequences are provided as list of strings (pretokenized), you must setis_split_into_words=True (to lift the ambiguity with a batch of sequences)."
+        },
+        {
+            "name": "videos",
+            "type": "List[PIL.Image.Image], List[np.ndarray], List[torch.Tensor], List[List[PIL.Image.Image]], List[List[np.ndarray]],",
+            "optional": false,
+            "default": "None",
+            "description": "List[List[torch.Tensor]]): The video or batch of videos to be prepared. Each video should be a listof frames, which can be either PIL images or NumPy arrays. In case of NumPy arrays/PyTorch tensors,each frame should be of shape (H, W, C), where H and W are frame height and width, and C is a number ofchannels."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "None",
+            "description": "If set, will return tensors of a particular framework. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return NumPy np.ndarray objects.jax: Return JAX jnp.ndarray objects."
+        }
+    ],
+    "return": "BatchEncoding"
+}

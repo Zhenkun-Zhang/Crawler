@@ -1,0 +1,19 @@
+{
+    "api": "transformers.Trainer.get_test_dataloader",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "test_dataset:",
+        "Dataset"
+    ],
+    "params": [
+        {
+            "name": "test_dataset",
+            "type": "torch.utils.data.Dataset",
+            "optional": true,
+            "default": "",
+            "description": "The test dataset to use. If it is a Dataset, columns not accepted by themodel.forward() method are automatically removed. It must implement __len__."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,72 @@
+{
+    "api": "transformers.VitMatteImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_rescale:",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "do_pad",
+        "size_divisibility",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by the do_rescaleparameter in the preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by the rescale_factor parameter in thepreprocess method."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in the preprocessmethod."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "do_pad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to pad the image to make the width and height divisible by size_divisibility. Can be overriddenby the do_pad parameter in the preprocess method."
+        },
+        {
+            "name": "size_divisibility",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The width and height of the image will be padded to be divisible by this number."
+        }
+    ],
+    "return": ""
+}

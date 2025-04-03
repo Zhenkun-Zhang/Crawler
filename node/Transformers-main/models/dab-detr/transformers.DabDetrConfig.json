@@ -1,0 +1,315 @@
+{
+    "api": "transformers.DabDetrConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "use_timm_backbone",
+        "backbone_config",
+        "backbone",
+        "use_pretrained_backbone",
+        "backbone_kwargs",
+        "num_queries",
+        "encoder_layers",
+        "encoder_ffn_dim",
+        "encoder_attention_heads",
+        "decoder_layers",
+        "decoder_ffn_dim",
+        "decoder_attention_heads",
+        "is_encoder_decoder",
+        "activation_function",
+        "hidden_size",
+        "dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "init_std",
+        "init_xavier_std",
+        "auxiliary_loss",
+        "dilation",
+        "class_cost",
+        "bbox_cost",
+        "giou_cost",
+        "cls_loss_coefficient",
+        "bbox_loss_coefficient",
+        "giou_loss_coefficient",
+        "focal_alpha",
+        "temperature_height",
+        "temperature_width",
+        "query_dim",
+        "random_refpoints_xy",
+        "keep_query_pos",
+        "num_patterns",
+        "normalize_before",
+        "sine_position_embedding_scale",
+        "initializer_bias_prior_prob",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use the timm library for the backbone. If set to False, will use the AutoBackboneAPI."
+        },
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the backbone model. Only used in case use_timm_backbone is set to False in whichcase it will default to ResNetConfig()."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "resnet50",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "num_queries",
+            "type": "int",
+            "optional": true,
+            "default": "300",
+            "description": "Number of object queries, i.e. detection slots. This is the maximal number of objectsDabDetrModel can detect in a single image. For COCO, we recommend 100 queries."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of encoder layers."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in encoder."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "is_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Indicates whether the transformer model architecture is an encoder-decoder or not."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "prelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "This parameter is a general dimension parameter, defining dimensions for components such as the encoder layer and projection parameters in the decoder layer, among others."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "init_xavier_std",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "The scaling factor used for the Xavier initialization gain in the HM Attention map module."
+        },
+        {
+            "name": "auxiliary_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether auxiliary decoding losses (loss at each decoder layer) are to be used."
+        },
+        {
+            "name": "dilation",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to replace stride with dilation in the last convolutional block (DC5). Only supported when use_timm_backbone = True."
+        },
+        {
+            "name": "class_cost",
+            "type": "float",
+            "optional": true,
+            "default": "2",
+            "description": "Relative weight of the classification error in the Hungarian matching cost."
+        },
+        {
+            "name": "bbox_cost",
+            "type": "float",
+            "optional": true,
+            "default": "5",
+            "description": "Relative weight of the L1 error of the bounding box coordinates in the Hungarian matching cost."
+        },
+        {
+            "name": "giou_cost",
+            "type": "float",
+            "optional": true,
+            "default": "2",
+            "description": "Relative weight of the generalized IoU loss of the bounding box in the Hungarian matching cost."
+        },
+        {
+            "name": "cls_loss_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "2",
+            "description": "Relative weight of the classification loss in the object detection loss function."
+        },
+        {
+            "name": "bbox_loss_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "5",
+            "description": "Relative weight of the L1 bounding box loss in the object detection loss."
+        },
+        {
+            "name": "giou_loss_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "2",
+            "description": "Relative weight of the generalized IoU loss in the object detection loss."
+        },
+        {
+            "name": "focal_alpha",
+            "type": "float",
+            "optional": true,
+            "default": "0.25",
+            "description": "Alpha parameter in the focal loss."
+        },
+        {
+            "name": "temperature_height",
+            "type": "int",
+            "optional": true,
+            "default": "20",
+            "description": "Temperature parameter to tune the flatness of positional attention (HEIGHT)"
+        },
+        {
+            "name": "temperature_width",
+            "type": "int",
+            "optional": true,
+            "default": "20",
+            "description": "Temperature parameter to tune the flatness of positional attention (WIDTH)"
+        },
+        {
+            "name": "query_dim",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Query dimension parameter represents the size of the output vector."
+        },
+        {
+            "name": "random_refpoints_xy",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to fix the x and y coordinates of the anchor boxes with random initialization."
+        },
+        {
+            "name": "keep_query_pos",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to concatenate the projected positional embedding from the object query into the original query (key) in every decoder layer."
+        },
+        {
+            "name": "num_patterns",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Number of pattern embeddings."
+        },
+        {
+            "name": "normalize_before",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether we use a normalization layer in the Encoder or not."
+        },
+        {
+            "name": "sine_position_embedding_scale",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "Scaling factor applied to the normalized positional encodings."
+        },
+        {
+            "name": "initializer_bias_prior_prob",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The prior probability used by the bias initializer to initialize biases for enc_score_head and class_embed.If None, prior_prob computed as prior_prob = 1 / (num_labels + 1) while initializing model weights."
+        }
+    ],
+    "return": ""
+}

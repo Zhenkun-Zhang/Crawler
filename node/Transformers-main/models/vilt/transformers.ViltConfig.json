@@ -1,0 +1,164 @@
+{
+    "api": "transformers.ViltConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "type_vocab_size",
+        "modality_type_vocab_size",
+        "max_position_embeddings",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "image_size",
+        "patch_size",
+        "num_channels",
+        "qkv_bias",
+        "max_image_length",
+        "tie_word_embeddings",
+        "num_images",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30522",
+            "description": "Vocabulary size of the text part of the model. Defines the number of different tokens that can berepresented by the inputs_ids passed when calling ViltModel."
+        },
+        {
+            "name": "type_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The vocabulary size of the token_type_ids passed when calling ViltModel. This is used when encodingtext."
+        },
+        {
+            "name": "modality_type_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The vocabulary size of the modalities passed when calling ViltModel. This is used after concatening theembeddings of the text and image modalities."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "40",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "384",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to add a bias to the queries, keys and values."
+        },
+        {
+            "name": "max_image_length",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "The maximum number of patches to take as input for the Transformer encoder. If set to a positive integer,the encoder will sample max_image_length patches at maximum. If set to -1, will not be taken intoaccount."
+        },
+        {
+            "name": "num_images",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "The number of images to use for natural language visual reasoning. If set to a positive integer, will beused by ViltForImagesAndTextClassification for defining the classifier head."
+        }
+    ],
+    "return": ""
+}

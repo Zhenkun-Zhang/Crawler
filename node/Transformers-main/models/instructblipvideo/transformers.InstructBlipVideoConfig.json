@@ -1,0 +1,58 @@
+{
+    "api": "transformers.InstructBlipVideoConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vision_config",
+        "qformer_config",
+        "text_config",
+        "num_query_tokens",
+        "video_token_index",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize InstructBlipVideoVisionConfig."
+        },
+        {
+            "name": "qformer_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize InstructBlipVideoQFormerConfig."
+        },
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize any PretrainedConfig."
+        },
+        {
+            "name": "num_query_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "The number of query tokens passed through the Transformer."
+        },
+        {
+            "name": "video_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Token index of special video token."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

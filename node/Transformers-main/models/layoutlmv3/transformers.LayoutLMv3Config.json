@@ -1,0 +1,223 @@
+{
+    "api": "transformers.LayoutLMv3Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "max_position_embeddings",
+        "type_vocab_size",
+        "initializer_range",
+        "layer_norm_eps",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "max_2d_position_embeddings",
+        "coordinate_size",
+        "shape_size",
+        "has_relative_attention_bias",
+        "rel_pos_bins",
+        "max_rel_pos",
+        "rel_2d_pos_bins",
+        "max_rel_2d_pos",
+        "has_spatial_attention_bias",
+        "text_embed",
+        "visual_embed",
+        "input_size",
+        "num_channels",
+        "patch_size",
+        "classifier_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "50265",
+            "description": "Vocabulary size of the LayoutLMv3 model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling LayoutLMv3Model."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimension of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimension of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "type_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The vocabulary size of the token_type_ids passed when calling LayoutLMv3Model."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "max_2d_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The maximum value that the 2D position embedding might ever be used with. Typically set this to somethinglarge just in case (e.g., 1024)."
+        },
+        {
+            "name": "coordinate_size",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Dimension of the coordinate embeddings."
+        },
+        {
+            "name": "shape_size",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Dimension of the width and height embeddings."
+        },
+        {
+            "name": "has_relative_attention_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use a relative attention bias in the self-attention mechanism."
+        },
+        {
+            "name": "rel_pos_bins",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "The number of relative position bins to be used in the self-attention mechanism."
+        },
+        {
+            "name": "max_rel_pos",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "The maximum number of relative positions to be used in the self-attention mechanism."
+        },
+        {
+            "name": "max_rel_2d_pos",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The maximum number of relative 2D positions in the self-attention mechanism."
+        },
+        {
+            "name": "rel_2d_pos_bins",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "The number of 2D relative position bins in the self-attention mechanism."
+        },
+        {
+            "name": "has_spatial_attention_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use a spatial attention bias in the self-attention mechanism."
+        },
+        {
+            "name": "visual_embed",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to add patch embeddings."
+        },
+        {
+            "name": "input_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "The size (resolution) of the images."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of channels of the images."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size (resolution) of the patches."
+        },
+        {
+            "name": "classifier_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The dropout ratio for the classification head."
+        }
+    ],
+    "return": ""
+}

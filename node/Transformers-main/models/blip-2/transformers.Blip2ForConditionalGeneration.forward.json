@@ -1,0 +1,92 @@
+{
+    "api": "transformers.Blip2ForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "input_ids",
+        "attention_mask",
+        "decoder_input_ids",
+        "decoder_attention_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "labels",
+        "return_dict",
+        "interpolate_pos_encoding",
+        "use_cache",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using Blip2Processor. See Blip2Processor.__call__() fordetails."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary of the language model. Input tokens can optionally beprovided to serve as text prompt, which the language model can continue.Indices can be obtained using Blip2Processor. See Blip2Processor.__call__() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "torch.LongTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary of the language model. Only relevant in case anencoder-decoder language model (like T5) is used.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details. What are decoder input IDs?"
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "torch.BoolTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default.Only relevant in case an encoder-decoder language model (like T5) is used."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained position encodings."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        }
+    ],
+    "return": "transformers.models.blip_2.modeling_blip_2.Blip2ForConditionalGenerationModelOutput or tuple(torch.FloatTensor)"
+}

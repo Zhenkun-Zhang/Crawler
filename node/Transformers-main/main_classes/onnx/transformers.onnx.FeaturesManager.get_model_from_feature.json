@@ -1,0 +1,35 @@
+{
+    "api": "transformers.onnx.FeaturesManager.get_model_from_feature",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "feature:",
+        "model",
+        "framework",
+        "cache_dir"
+    ],
+    "params": [
+        {
+            "name": "feature",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The feature required."
+        },
+        {
+            "name": "model",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The name of the model to export."
+        },
+        {
+            "name": "framework",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The framework to use for the export. See FeaturesManager.determine_framework for the priority shouldnone be provided."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,75 @@
+{
+    "api": "transformers.CodeGenTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "tokenizer_file",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "add_prefix_space",
+        "return_token_type_ids",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to the merges file."
+        },
+        {
+            "name": "tokenizer_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to tokenizers file (generally has a .json extension) thatcontains everything needed to load the tokenizer."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The beginning of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "add_prefix_space",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to add an initial space to the input. This allows to treat the leading word just as anyother word. (CodeGen tokenizer detect beginning of words by the preceding space)."
+        },
+        {
+            "name": "return_token_type_ids",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to return token type IDs."
+        }
+    ],
+    "return": ""
+}

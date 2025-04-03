@@ -1,0 +1,12 @@
+{
+    "api": "transformers.Trainer.save_model",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "output_dir:",
+        "typing.Optional[str]",
+        "_internal_call"
+    ],
+    "params": [],
+    "return": ""
+}

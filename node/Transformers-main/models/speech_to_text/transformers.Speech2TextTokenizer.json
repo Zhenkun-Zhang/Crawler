@@ -1,0 +1,101 @@
+{
+    "api": "transformers.Speech2TextTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "spm_file",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "unk_token",
+        "do_upper_case",
+        "do_lower_case",
+        "tgt_lang",
+        "lang_codes",
+        "additional_special_tokens",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the vocabulary."
+        },
+        {
+            "name": "spm_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the SentencePiece model file"
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sentence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sentence token."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "do_upper_case",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to uppercase the output when decoding."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "tgt_lang",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A string representing the target language."
+        },
+        {
+            "name": "sp_model_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the SentencePieceProcessor.__init__() method. The Python wrapper forSentencePiece can be used, among other things,to set:enable_sampling: Enable subword regularization.nbest_size: Sampling parameters for unigram. Invalid for BPE-Dropout.nbest_size = {0,1}: No sampling is performed.nbest_size > 1: samples from the nbest_size results.nbest_size < 0: assuming that nbest_size is infinite and samples from the all hypothesis (lattice)using forward-filtering-and-backward-sampling algorithm.alpha: Smoothing parameter for unigram sampling, and dropout probability of merge operations forBPE-dropout."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments passed along to PreTrainedTokenizer"
+        }
+    ],
+    "return": ""
+}

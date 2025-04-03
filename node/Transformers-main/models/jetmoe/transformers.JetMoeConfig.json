@@ -1,0 +1,171 @@
+{
+    "api": "transformers.JetMoeConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_key_value_heads",
+        "kv_channels",
+        "intermediate_size",
+        "max_position_embeddings",
+        "activation_function",
+        "num_local_experts",
+        "num_experts_per_tok",
+        "output_router_logits",
+        "aux_loss_coef",
+        "use_cache",
+        "bos_token_id",
+        "eos_token_id",
+        "tie_word_embeddings",
+        "rope_theta",
+        "rms_norm_eps",
+        "initializer_range",
+        "attention_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "32000",
+            "description": "Vocabulary size of the JetMoe model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling JetMoeModel"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each key and value in the Transformer encoder."
+        },
+        {
+            "name": "kv_channels",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Defines the number of channels for the key and value tensors."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "5632",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "The maximum sequence length that this model might ever be used with. JetMoes attention allows sequence ofup to 4096 tokens."
+        },
+        {
+            "name": "activation_function",
+            "type": "string",
+            "optional": true,
+            "default": "silu",
+            "description": "Defines the activation function for MLP experts."
+        },
+        {
+            "name": "num_local_experts",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Defines the number of experts in the MoE and MoA."
+        },
+        {
+            "name": "num_experts_per_tok",
+            "type": "`int",
+            "optional": true,
+            "default": "2",
+            "description": "The number of experts to route per-token and for MoE and MoA."
+        },
+        {
+            "name": "output_router_logits",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the router logits should be returned by the model. Enabeling this will alsoallow the model to output the auxiliary loss."
+        },
+        {
+            "name": "aux_loss_coef",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "The coefficient for the auxiliary loss."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The id of the beginning-of-sequence token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the end-of-sequence token."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the models input and output word embeddings should be tied."
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        }
+    ],
+    "return": ""
+}

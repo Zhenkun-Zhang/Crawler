@@ -1,0 +1,26 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.get_special_dtypes_update",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model",
+        "torch_dtype"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "~transformers.PreTrainedModel",
+            "optional": false,
+            "default": "",
+            "description": "The model to quantize"
+        },
+        {
+            "name": "torch_dtype",
+            "type": "torch.dtype",
+            "optional": false,
+            "default": "",
+            "description": "The dtype passed in from_pretrained method."
+        }
+    ],
+    "return": ""
+}

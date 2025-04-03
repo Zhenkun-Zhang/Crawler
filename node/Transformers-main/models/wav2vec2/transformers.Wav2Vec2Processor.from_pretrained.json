@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Wav2Vec2Processor.from_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pretrained_model_name_or_path",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

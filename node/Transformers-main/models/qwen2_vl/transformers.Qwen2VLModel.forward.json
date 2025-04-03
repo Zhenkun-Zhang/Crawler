@@ -1,0 +1,20 @@
+{
+    "api": "transformers.Qwen2VLModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "attention_mask",
+        "position_ids",
+        "past_key_values",
+        "inputs_embeds",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "cache_position"
+    ],
+    "params": [],
+    "return": ""
+}

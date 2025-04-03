@@ -1,0 +1,222 @@
+{
+    "api": "transformers.ClvpDecoderConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "max_position_embeddings",
+        "max_text_tokens",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "n_inner",
+        "num_mel_attn_blocks",
+        "activation_function",
+        "resid_pdrop",
+        "embd_pdrop",
+        "attention_dropout",
+        "layer_norm_epsilon",
+        "initializer_range",
+        "summary_type",
+        "summary_use_proj",
+        "summary_activation",
+        "summary_proj_to_labels",
+        "summary_first_dropout",
+        "use_cache",
+        "bos_token_id",
+        "eos_token_id",
+        "feature_size",
+        "use_attention_bias",
+        "initializer_factor",
+        "decoder_fixing_codes",
+        "45,",
+        "45,",
+        "248]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "8194",
+            "description": "Vocabulary size of the model."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "608",
+            "description": "The maximum sequence length of mel tokens that this model might ever be used with. Similar to n_positionsin GPT2Config."
+        },
+        {
+            "name": "max_text_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "404",
+            "description": "The maximum sequence length of text tokens that this model might ever be used with. Similar ton_positions in GPT2Config."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "30",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "n_inner",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the inner feed-forward layers. None will set it to 4 times hidden_size."
+        },
+        {
+            "name": "num_mel_attn_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Denotes the number of self attention layers in ClvpConditioningEncoder."
+        },
+        {
+            "name": "activation_function",
+            "type": "str",
+            "optional": true,
+            "default": "gelu_new",
+            "description": "Activation function, to be selected in the list [relu, silu, gelu, tanh, gelu_new]."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "embd_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the embeddings."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon to use in the layer normalization layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "summary_type",
+            "type": "string",
+            "optional": true,
+            "default": "cls_index",
+            "description": "Argument used when doing sequence summary.Has to be one of the following options:last: Take the last token hidden state (like XLNet).first: Take the first token hidden state (like BERT).mean: Take the mean of all tokens hidden states.cls_index: Supply a Tensor of classification token position (like GPT/GPT-2).attn: Not implemented now, use multi-head attention."
+        },
+        {
+            "name": "summary_use_proj",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to add a projection after the vector extraction."
+        },
+        {
+            "name": "summary_activation",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Pass tanh for a tanh activation to the output, any other value will result in no activation."
+        },
+        {
+            "name": "summary_proj_to_labels",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the projection outputs should have config.num_labels or config.hidden_size classes."
+        },
+        {
+            "name": "summary_first_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio to be used after the projection and activation."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "Beginning of sequence token id, used at the start of the generation."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "8193",
+            "description": "End of sequence token id, used in the methodClvpModelForConditionalGeneration.fix_speech_decoder_output() to correct decoder outputs."
+        },
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "The feature dimension of the extracted mel features. This value is used in ClvpConditioningEncoder."
+        },
+        {
+            "name": "use_attention_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use bias in Query, Key and Value layers during self attention."
+        },
+        {
+            "name": "initializer_factor",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "A factor for initializing all weight matrices (should be kept to 1.0, used internally for initializationtesting)."
+        },
+        {
+            "name": "decoder_fixing_codes",
+            "type": "list",
+            "optional": true,
+            "default": "[83,",
+            "description": "These values are used in the method fix_speech_decoder_output to fix decoder generated outputs."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,20 @@
+{
+    "api": "transformers.Pipeline.check_model_type",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "supported_models:",
+        "typing.Union[typing.List[str],",
+        "dict]"
+    ],
+    "params": [
+        {
+            "name": "supported_models",
+            "type": "List[str],dict",
+            "optional": false,
+            "default": "",
+            "description": "The list of models supported by the pipeline, or a dictionary with model class values."
+        }
+    ],
+    "return": ""
+}

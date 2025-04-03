@@ -1,0 +1,32 @@
+{
+    "api": "transformers.HerbertTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "tokenizer_file",
+        "cls_token",
+        "unk_token",
+        "pad_token",
+        "mask_token",
+        "sep_token",
+        "bos_token",
+        "do_lowercase_and_remove_accent",
+        "additional_special_tokens",
+        "'<special1>',",
+        "'<special2>',",
+        "'<special3>',",
+        "'<special4>',",
+        "'<special5>',",
+        "'<special6>',",
+        "'<special7>',",
+        "'<special8>',",
+        "'<special9>']",
+        "lang2id",
+        "id2lang",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

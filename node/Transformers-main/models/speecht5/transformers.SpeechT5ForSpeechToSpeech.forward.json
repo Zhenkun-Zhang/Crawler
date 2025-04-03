@@ -1,0 +1,132 @@
+{
+    "api": "transformers.SpeechT5ForSpeechToSpeech.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "attention_mask",
+        "decoder_input_values",
+        "decoder_attention_mask",
+        "head_mask",
+        "decoder_head_mask",
+        "cross_attn_head_mask",
+        "encoder_outputs",
+        "past_key_values",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "speaker_embeddings",
+        "labels",
+        "stop_labels",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing convolution and attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?attention_mask should only be passed if the corresponding processor has config.return_attention_mask == True. For all models whose processor has config.return_attention_mask == False, attention_mask shouldnot be passed to avoid degraded performance when doing batched inference. For such modelsinput_values should simply be padded with 0 and passed without attention_mask. Be aware that thesemodels also yield slightly different results depending on whether input_values is padded or not."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_values. Causal mask willalso be used by default.If you want to change padding behavior, you should read SpeechT5Decoder._prepare_decoder_attention_maskand modify to your needs. See diagram 1 in the paper for moreinformation on the default strategy."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (encoder_layers, encoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "decoder_head_mask",
+            "type": "torch.FloatTensor of shape (decoder_layers, decoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the decoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "cross_attn_head_mask",
+            "type": "torch.Tensor of shape (decoder_layers, decoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the cross-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple consists of (last_hidden_state, optional: hidden_states, optional: attentions)last_hidden_state of shape (batch_size, sequence_length, hidden_size), optional) is a sequence ofhidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and 2 additional tensors of shape(batch_size, num_heads, encoder_sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used (see past_key_values input) to speed up sequential decoding.If past_key_values are used, the user can optionally input only the last decoder_input_values (thosethat dont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_values of shape (batch_size, sequence_length). decoder_inputs_embeds (torch.FloatTensorof shape (batch_size, target_sequence_length, hidden_size), optional): Optionally, instead of passingdecoder_input_values you can choose to directly pass an embedded representation. If past_key_values isused, optionally only the last decoder_inputs_embeds have to be input (see past_key_values). This isuseful if you want more control over how to convert decoder_input_values indices into associated vectorsthan the models internal embedding lookup matrix."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "input_values",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of input raw speech waveform. Values can be obtained by loading a .flac or .wav audio fileinto an array of type List[float] or a numpy.ndarray, e.g. via the soundfile library (pip installsoundfile). To prepare the array into input_values, the SpeechT5Processor should be used for paddingand conversion into a tensor of type torch.FloatTensor. See SpeechT5Processor.call() for details."
+        },
+        {
+            "name": "decoder_input_values",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, config.num_mel_bins)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of input mel spectrogram.SpeechT5 uses an all-zero spectrum as the starting token for decoder_input_values generation. Ifpast_key_values is used, optionally only the last decoder_input_values have to be input (seepast_key_values)."
+        },
+        {
+            "name": "speaker_embeddings",
+            "type": "torch.FloatTensor of shape (batch_size, config.speaker_embedding_dim",
+            "optional": true,
+            "default": "",
+            "description": "Tensor containing the speaker embeddings."
+        },
+        {
+            "name": "labels",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, config.num_mel_bins",
+            "optional": true,
+            "default": "",
+            "description": "Float values of target mel spectrogram. Spectrograms can be obtained using SpeechT5Processor. SeeSpeechT5Processor.call() for details."
+        }
+    ],
+    "return": "transformers.modeling_outputs.Seq2SeqSpectrogramOutput or tuple(torch.FloatTensor)"
+}

@@ -1,0 +1,105 @@
+{
+    "api": "transformers.Idefics2ImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_convert_rgb:",
+        "do_resize",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_rescale",
+        "rescale_factor",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "do_pad",
+        "do_image_splitting",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB. This is useful if the input image is of a different format e.g. RGBA.Only has an effect if the input image is in the PIL format."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the image. The longest edge of the image is resized to  be <= size[longest_edge], with theshortest edge resized to keep the input aspect ratio, with a minimum size of size[shortest_edge]."
+        },
+        {
+            "name": "size",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "Controls the size of the output image. This is a dictionary containing the keys shortest_edge and longest_edge."
+        },
+        {
+            "name": "resample",
+            "type": "Resampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use when resizing the image."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image. If set to True, the image is rescaled to have pixel values between 0 and 1."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Rescale factor to rescale the image by if do_rescale is set to True."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. If set to True, the image is normalized to have a mean of image_mean anda standard deviation of image_std."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method. Can beoverridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method.Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "do_pad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to pad the images to the largest height and width in the batch and number of images persample in the batch, such that the returned tensor is of shape (batch_size, max_num_images, num_channels, max_height, max_width)."
+        },
+        {
+            "name": "do_image_splitting",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to split the image into a sequence 4 equal sub-images concatenated with the original image. Thatstrategy was first introduced in https://arxiv.org/abs/2311.06607."
+        }
+    ],
+    "return": ""
+}

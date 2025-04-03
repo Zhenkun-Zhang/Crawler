@@ -1,0 +1,234 @@
+{
+    "api": "transformers.HieraConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "embed_dim",
+        "image_size",
+        "224]",
+        "patch_size",
+        "7]",
+        "patch_stride",
+        "4]",
+        "patch_padding",
+        "3]",
+        "mlp_ratio",
+        "depths",
+        "3,",
+        "16,",
+        "3]",
+        "num_heads",
+        "2,",
+        "4,",
+        "8]",
+        "embed_dim_multiplier",
+        "num_query_pool",
+        "query_stride",
+        "2]",
+        "masked_unit_size",
+        "8]",
+        "masked_unit_attention",
+        "True,",
+        "False,",
+        "False]",
+        "drop_path_rate",
+        "num_channels",
+        "hidden_act",
+        "initializer_range",
+        "layer_norm_init",
+        "layer_norm_eps",
+        "decoder_hidden_size",
+        "decoder_depth",
+        "decoder_num_heads",
+        "normalize_pixel_loss",
+        "mask_ratio",
+        "out_features",
+        "out_indices",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "96",
+            "description": "Dimensionality of patch embedding."
+        },
+        {
+            "name": "image_size",
+            "type": "list(int",
+            "optional": true,
+            "default": "[224,",
+            "description": "The size (resolution) of input in the format (height, width) for imagesand (frames, height, width) for videos."
+        },
+        {
+            "name": "patch_size",
+            "type": "list(int",
+            "optional": true,
+            "default": "[7,",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "patch_stride",
+            "type": "list(int",
+            "optional": true,
+            "default": "[4,",
+            "description": "The stride of the patch."
+        },
+        {
+            "name": "patch_padding",
+            "type": "list(int",
+            "optional": true,
+            "default": "[3,",
+            "description": "The padding of the patch."
+        },
+        {
+            "name": "mlp_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "4.0",
+            "description": "The ratio of mlp hidden dim to embedding dim."
+        },
+        {
+            "name": "depths",
+            "type": "list(int",
+            "optional": true,
+            "default": "[2,",
+            "description": "Depth of each layer in the Transformer encoder."
+        },
+        {
+            "name": "num_heads",
+            "type": "list(int",
+            "optional": true,
+            "default": "[1,",
+            "description": "Number of attention heads in each layer of the Transformer encoder."
+        },
+        {
+            "name": "embed_dim_multiplier",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "The multiplier to the dimensionality of patch embedding in each layer of the Transformer encoder."
+        },
+        {
+            "name": "num_query_pool",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of query pool stages."
+        },
+        {
+            "name": "query_stride",
+            "type": "list(int",
+            "optional": true,
+            "default": "[2,",
+            "description": "The stride of the query pool."
+        },
+        {
+            "name": "masked_unit_size",
+            "type": "list(int",
+            "optional": true,
+            "default": "[8,",
+            "description": "The size of the masked unit."
+        },
+        {
+            "name": "masked_unit_attention",
+            "type": "list(bool",
+            "optional": true,
+            "default": "[True,",
+            "description": "Whether to use masked unit attention in each layer of the Transformer encoder."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The drop path rate."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder. If string, gelu, relu,selu and gelu_new are supported."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices andthe zero_initializer for initializing all bias vectors."
+        },
+        {
+            "name": "layer_norm_init",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "The initial weight value for layer normalization layers."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "decoder_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of decoder embeddings for MAE pretraining."
+        },
+        {
+            "name": "decoder_depth",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Depth of the decoder for MAE pretraining."
+        },
+        {
+            "name": "decoder_num_heads",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Number of attention heads in each layer of the decoder for MAE pretraining."
+        },
+        {
+            "name": "normalize_pixel_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to normalize the pixel loss by the number of pixels."
+        },
+        {
+            "name": "mask_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "0.6",
+            "description": "The ratio of masked tokens in the input."
+        },
+        {
+            "name": "out_features",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of features to output. Can be any of stem, stage1, stage2, etc.(depending on how many stages the model has). If unset and out_indices is set, will default to thecorresponding stages. If unset and out_indices is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        },
+        {
+            "name": "out_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of indices of features to output. Can be any of 0, 1, 2, etc. (depending on howmany stages the model has). If unset and out_features is set, will default to the corresponding stages.If unset and out_features is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        }
+    ],
+    "return": ""
+}

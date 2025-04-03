@@ -1,0 +1,44 @@
+{
+    "api": "transformers.modeling_outputs.MultipleChoiceModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "logits",
+        "hidden_states",
+        "...]]",
+        "attentions",
+        "...]]"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Classification loss."
+        },
+        {
+            "name": "logits",
+            "type": "torch.FloatTensor of shape (batch_size, num_choices)",
+            "optional": false,
+            "default": "",
+            "description": "num_choices is the second dimension of the input tensors. (see input_ids above).Classification scores (before SoftMax)."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

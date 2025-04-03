@@ -1,0 +1,68 @@
+{
+    "api": "transformers.Blip2Model.get_text_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "decoder_input_ids",
+        "decoder_attention_mask",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit. Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details. What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "torch.LongTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are decoder input IDs?T5 uses the pad_token_id as the starting token for decoder_input_ids generation. If past_key_valuesis used, optionally only the last decoder_input_ids have to be input (see past_key_values).To know more on how to prepare decoder_input_ids for pretraining take a look at T5Training."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "torch.BoolTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "text_outputs (CausalLMOutputWithPast, or tuple(torch.FloatTensor) if return_dict=False)"
+}

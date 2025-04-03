@@ -1,0 +1,165 @@
+{
+    "api": "transformers.MptConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "d_model:",
+        "n_heads",
+        "n_layers",
+        "expansion_ratio",
+        "max_seq_len",
+        "vocab_size",
+        "resid_pdrop",
+        "layer_norm_epsilon",
+        "emb_pdrop",
+        "learned_pos_emb",
+        "attn_config",
+        "init_device",
+        "logit_scale",
+        "str,",
+        "NoneType]",
+        "no_bias",
+        "verbose",
+        "embedding_fraction",
+        "norm_type",
+        "use_cache",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "n_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "n_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "expansion_ratio",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The ratio of the up/down scale in the MLP."
+        },
+        {
+            "name": "max_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum sequence length of the model."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Vocabulary size of the Mpt model. Defines the maximum number of different tokens that can be represented bythe inputs_ids passed when calling MptModel. Check thisdiscussion on how thevocab_size has been defined."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability applied to the attention output before combining with residual."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon to use in the layer normalization layers."
+        },
+        {
+            "name": "emb_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for the embedding layer."
+        },
+        {
+            "name": "learned_pos_emb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use learned positional embeddings."
+        },
+        {
+            "name": "attn_config",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary used to configure the models attention module."
+        },
+        {
+            "name": "init_device",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The device to use for parameter initialization. Defined for backward compatibility"
+        },
+        {
+            "name": "logit_scale",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "If not None, scale the logits by this value."
+        },
+        {
+            "name": "no_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use bias in all linear layers."
+        },
+        {
+            "name": "verbose",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The verbosity level to use for logging. Used in the previous versions of MPT models for logging. Thisargument is deprecated."
+        },
+        {
+            "name": "embedding_fraction",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The fraction to scale the gradients of the embedding layer by."
+        },
+        {
+            "name": "norm_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Type of layer norm to use. All MPT models uses the same layer norm implementation. Defined for backwardcompatibility."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        }
+    ],
+    "return": ""
+}

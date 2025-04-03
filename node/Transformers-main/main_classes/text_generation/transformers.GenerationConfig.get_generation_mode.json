@@ -1,0 +1,20 @@
+{
+    "api": "transformers.GenerationConfig.get_generation_mode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "assistant_model:",
+        "typing.Optional[ForwardRef('PreTrainedModel')]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "assistant_model",
+            "type": "PreTrainedModel",
+            "optional": true,
+            "default": "",
+            "description": "The assistant model to be used for assisted generation. If set, the generation mode will beassisted generation."
+        }
+    ],
+    "return": "GenerationMode"
+}

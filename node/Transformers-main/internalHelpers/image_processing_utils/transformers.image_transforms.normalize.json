@@ -1,0 +1,55 @@
+{
+    "api": "transformers.image_transforms.normalize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "mean",
+        "collections.abc.Collection[float]]",
+        "std",
+        "collections.abc.Collection[float]]",
+        "data_format",
+        "input_data_format",
+        "str,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The image to normalize."
+        },
+        {
+            "name": "mean",
+            "type": "float,Collection[float]",
+            "optional": false,
+            "default": "",
+            "description": "The mean to use for normalization."
+        },
+        {
+            "name": "std",
+            "type": "float,Collection[float]",
+            "optional": false,
+            "default": "",
+            "description": "The standard deviation to use for normalization."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the output image. If unset, will use the inferred format from the input."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If unset, will use the inferred format from the input."
+        }
+    ],
+    "return": ""
+}

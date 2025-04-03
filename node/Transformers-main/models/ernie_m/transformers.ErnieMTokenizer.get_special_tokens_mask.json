@@ -1,0 +1,35 @@
+{
+    "api": "transformers.ErnieMTokenizer.get_special_tokens_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0",
+        "token_ids_1",
+        "already_has_special_tokens",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids_0",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "List of ids of the first sequence."
+        },
+        {
+            "name": "token_ids_1",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "Optional second list of IDs for sequence pairs."
+        },
+        {
+            "name": "already_has_special_tokens",
+            "type": "str",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the token list is already formatted with special tokens for the model."
+        }
+    ],
+    "return": "List[int]"
+}

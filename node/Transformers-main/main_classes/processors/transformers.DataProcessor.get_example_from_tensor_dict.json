@@ -1,0 +1,18 @@
+{
+    "api": "transformers.DataProcessor.get_example_from_tensor_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tensor_dict"
+    ],
+    "params": [
+        {
+            "name": "tensor_dict",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Keys and values should match the corresponding Gluetensorflow_dataset examples."
+        }
+    ],
+    "return": ""
+}

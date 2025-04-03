@@ -1,0 +1,10 @@
+{
+    "api": "transformers.trainer_pt_utils.DistributedTensorGatherer.add_arrays",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "arrays"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,125 @@
+{
+    "api": "transformers.XLNetForQuestionAnsweringSimple.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "mems",
+        "perm_mask",
+        "target_mapping",
+        "token_type_ids",
+        "input_mask",
+        "head_mask",
+        "inputs_embeds",
+        "start_positions",
+        "end_positions",
+        "use_mems",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "mems",
+            "type": "List[torch.FloatTensor] of length config.n_layers",
+            "optional": false,
+            "default": "",
+            "description": "Contains pre-computed hidden-states (see mems output below) . Can be used to speed up sequentialdecoding. The token ids which have their past given to this model should not be passed as input_ids asthey have already been computed.use_mems has to be set to True to make use of mems."
+        },
+        {
+            "name": "perm_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to indicate the attention pattern for each input token with values selected in [0, 1]:if perm_mask[k, i, j] = 0, i attend to j in batch k,if perm_mask[k, i, j] = 1, i does not attend to j in batch k.If not set, each token attends to all the others (full bidirectional attention). Only used duringpretraining (to define factorization order) or for sequential decoding (generation)."
+        },
+        {
+            "name": "target_mapping",
+            "type": "torch.FloatTensor of shape (batch_size, num_predict, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to indicate the output tokens to use. If target_mapping[k, i, j] = 1, the i-th predict in batch k ison the j-th token. Only used during pretraining for partial prediction or for sequential decoding(generation)."
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token.What are token type IDs?"
+        },
+        {
+            "name": "input_mask",
+            "type": "torch.FloatTensor of shape batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Negative of attention_mask, i.e. with 0 forreal tokens and 1 for padding which is kept for compatibility with the original code base.Mask values selected in [0, 1]:1 for tokens that are masked,0 for tokens that are not masked.You can only uses one of input_mask and attention_mask."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "start_positions",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for position (index) of the start of the labelled span for computing the token classification loss.Positions are clamped to the length of the sequence (sequence_length). Position outside of the sequenceare not taken into account for computing the loss."
+        },
+        {
+            "name": "end_positions",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for position (index) of the end of the labelled span for computing the token classification loss.Positions are clamped to the length of the sequence (sequence_length). Position outside of the sequenceare not taken into account for computing the loss."
+        }
+    ],
+    "return": "transformers.models.xlnet.modeling_xlnet.XLNetForQuestionAnsweringSimpleOutput or tuple(torch.FloatTensor)"
+}

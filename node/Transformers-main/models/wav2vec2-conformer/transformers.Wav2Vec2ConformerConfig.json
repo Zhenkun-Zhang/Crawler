@@ -1,0 +1,491 @@
+{
+    "api": "transformers.Wav2Vec2ConformerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout",
+        "activation_dropout",
+        "attention_dropout",
+        "feat_proj_dropout",
+        "feat_quantizer_dropout",
+        "final_dropout",
+        "layerdrop",
+        "initializer_range",
+        "layer_norm_eps",
+        "feat_extract_norm",
+        "feat_extract_activation",
+        "conv_dim",
+        "512,",
+        "512,",
+        "512,",
+        "512,",
+        "512,",
+        "512)",
+        "conv_stride",
+        "2,",
+        "2,",
+        "2,",
+        "2,",
+        "2,",
+        "2)",
+        "conv_kernel",
+        "3,",
+        "3,",
+        "3,",
+        "3,",
+        "2,",
+        "2)",
+        "conv_bias",
+        "num_conv_pos_embeddings",
+        "num_conv_pos_embedding_groups",
+        "apply_spec_augment",
+        "mask_time_prob",
+        "mask_time_length",
+        "mask_time_min_masks",
+        "mask_feature_prob",
+        "mask_feature_length",
+        "mask_feature_min_masks",
+        "num_codevectors_per_group",
+        "num_codevector_groups",
+        "contrastive_logits_temperature",
+        "num_negatives",
+        "codevector_dim",
+        "proj_codevector_dim",
+        "diversity_loss_weight",
+        "ctc_loss_reduction",
+        "ctc_zero_infinity",
+        "use_weighted_layer_sum",
+        "classifier_proj_size",
+        "tdnn_dim",
+        "512,",
+        "512,",
+        "512,",
+        "1500)",
+        "tdnn_kernel",
+        "3,",
+        "3,",
+        "1,",
+        "1)",
+        "tdnn_dilation",
+        "2,",
+        "3,",
+        "1,",
+        "1)",
+        "xvector_output_dim",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "add_adapter",
+        "adapter_kernel_size",
+        "adapter_stride",
+        "num_adapter_layers",
+        "output_hidden_size",
+        "position_embeddings_type",
+        "rotary_embedding_base",
+        "max_source_positions",
+        "conv_depthwise_kernel_size",
+        "conformer_conv_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Vocabulary size of the Wav2Vec2Conformer model. Defines the number of different tokens that can berepresented by the inputs_ids passed when calling Wav2Vec2ConformerModel. Vocabulary size of themodel. Defines the different tokens that can be represented by the inputs_ids passed to the forwardmethod of Wav2Vec2ConformerModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "final_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for the final projection layer of Wav2Vec2ConformerForCTC."
+        },
+        {
+            "name": "layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The LayerDrop probability. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556) for moredetails."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "feat_extract_norm",
+            "type": "str",
+            "optional": true,
+            "default": "group",
+            "description": "The norm to be applied to 1D convolutional layers in feature encoder. One of group for groupnormalization of only the first 1D convolutional layer or layer for layer normalization of all 1Dconvolutional layers."
+        },
+        {
+            "name": "feat_proj_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for output of the feature encoder."
+        },
+        {
+            "name": "feat_extract_activation",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": ""
+        },
+        {
+            "name": "feat_quantizer_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for quantized feature encoder states."
+        },
+        {
+            "name": "conv_dim",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(512,",
+            "description": "A tuple of integers defining the number of input and output channels of each 1D convolutional layer in thefeature encoder. The length of conv_dim defines the number of 1D convolutional layers."
+        },
+        {
+            "name": "conv_stride",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(5,",
+            "description": "A tuple of integers defining the stride of each 1D convolutional layer in the feature encoder. The lengthof conv_stride defines the number of convolutional layers and has to match the length of conv_dim."
+        },
+        {
+            "name": "conv_kernel",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(10,",
+            "description": "A tuple of integers defining the kernel size of each 1D convolutional layer in the feature encoder. Thelength of conv_kernel defines the number of convolutional layers and has to match the length ofconv_dim."
+        },
+        {
+            "name": "conv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether the 1D convolutional layers have a bias."
+        },
+        {
+            "name": "num_conv_pos_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Number of convolutional positional embeddings. Defines the kernel size of 1D convolutional positionalembeddings layer."
+        },
+        {
+            "name": "num_conv_pos_embedding_groups",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of groups of 1D convolutional positional embeddings layer."
+        },
+        {
+            "name": "apply_spec_augment",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to apply SpecAugment data augmentation to the outputs of the feature encoder. For reference seeSpecAugment: A Simple Data Augmentation Method for Automatic SpeechRecognition."
+        },
+        {
+            "name": "mask_time_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.05",
+            "description": "Percentage (between 0 and 1) of all feature vectors along the time axis which will be masked. The maskingprocecure generates mask_time_problen(time_axis)/mask_time_length independent masks over the axis. Ifreasoning from the propability of each feature vector to be chosen as the start of the vector span to bemasked, mask_time_prob should be `prob_vector_startmask_time_length. Note that overlap may decrease the actual percentage of masked vectors. This is only relevant if apply_spec_augment is True`."
+        },
+        {
+            "name": "mask_time_length",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Length of vector span along the time axis."
+        },
+        {
+            "name": "mask_time_min_masks",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The minimum number of masks of length mask_feature_length generated along the time axis, each time step,irrespectively of mask_feature_prob. Only relevant if mask_time_prob*len(time_axis)/mask_time_length <mask_time_min_masks"
+        },
+        {
+            "name": "mask_feature_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Percentage (between 0 and 1) of all feature vectors along the feature axis which will be masked. Themasking procecure generates mask_feature_problen(feature_axis)/mask_time_length independent masks overthe axis. If reasoning from the propability of each feature vector to be chosen as the start of the vectorspan to be masked, mask_feature_prob should be `prob_vector_startmask_feature_length. Note that overlap may decrease the actual percentage of masked vectors. This is only relevant if apply_spec_augment isTrue`."
+        },
+        {
+            "name": "mask_feature_length",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Length of vector span along the feature axis."
+        },
+        {
+            "name": "mask_feature_min_masks",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The minimum number of masks of length mask_feature_length generated along the feature axis, each timestep, irrespectively of mask_feature_prob. Only relevant ifmask_feature_prob*len(feature_axis)/mask_feature_length < mask_feature_min_masks"
+        },
+        {
+            "name": "num_codevectors_per_group",
+            "type": "int",
+            "optional": true,
+            "default": "320",
+            "description": "Number of entries in each quantization codebook (group)."
+        },
+        {
+            "name": "num_codevector_groups",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of codevector groups for product codevector quantization."
+        },
+        {
+            "name": "contrastive_logits_temperature",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The temperature kappa in the contrastive loss."
+        },
+        {
+            "name": "feat_quantizer_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for the output of the feature encoder thats used by the quantizer."
+        },
+        {
+            "name": "num_negatives",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "Number of negative samples for the contrastive loss."
+        },
+        {
+            "name": "codevector_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the quantized feature vectors."
+        },
+        {
+            "name": "proj_codevector_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the final projection of both the quantized and the transformer features."
+        },
+        {
+            "name": "diversity_loss_weight",
+            "type": "int",
+            "optional": true,
+            "default": "0.1",
+            "description": "The weight of the codebook diversity loss component."
+        },
+        {
+            "name": "ctc_loss_reduction",
+            "type": "str",
+            "optional": true,
+            "default": "sum",
+            "description": "Specifies the reduction to apply to the output of torch.nn.CTCLoss. Only relevant when training aninstance of Wav2Vec2ConformerForCTC."
+        },
+        {
+            "name": "ctc_zero_infinity",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to zero infinite losses and the associated gradients of torch.nn.CTCLoss. Infinite losses mainlyoccur when the inputs are too short to be aligned to the targets. Only relevant when training an instanceof Wav2Vec2ConformerForCTC."
+        },
+        {
+            "name": "use_weighted_layer_sum",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a weighted average of layer outputs with learned weights. Only relevant when using aninstance of Wav2Vec2ConformerForSequenceClassification."
+        },
+        {
+            "name": "classifier_proj_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the projection before token mean-pooling for classification."
+        },
+        {
+            "name": "tdnn_dim",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(512,",
+            "description": "A tuple of integers defining the number of output channels of each 1D convolutional layer in the TDNNmodule of the XVector model. The length of tdnn_dim defines the number of TDNN layers."
+        },
+        {
+            "name": "tdnn_kernel",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(5,",
+            "description": "A tuple of integers defining the kernel size of each 1D convolutional layer in the TDNN module of theXVector model. The length of tdnn_kernel has to match the length of tdnn_dim."
+        },
+        {
+            "name": "tdnn_dilation",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(1,",
+            "description": "A tuple of integers defining the dilation factor of each 1D convolutional layer in TDNN module of theXVector model. The length of tdnn_dilation has to match the length of tdnn_dim."
+        },
+        {
+            "name": "xvector_output_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of the XVector embedding vectors."
+        },
+        {
+            "name": "add_adapter",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether a convolutional network should be stacked on top of the Wav2Vec2Conformer Encoder. Can be veryuseful for warm-starting Wav2Vec2Conformer for SpeechEncoderDecoder models."
+        },
+        {
+            "name": "adapter_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Kernel size of the convolutional layers in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "adapter_stride",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Stride of the convolutional layers in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "num_adapter_layers",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of convolutional layers that should be used in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "output_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the encoder output layer. If not defined, this defaults to hidden-size. Only relevantif add_adapter is True."
+        },
+        {
+            "name": "position_embeddings_type",
+            "type": "str",
+            "optional": true,
+            "default": "relative",
+            "description": "Can be specified to relative or rotary for relative or rotary position embeddings respectively. If leftNone no relative position embedding is applied."
+        },
+        {
+            "name": "rotary_embedding_base",
+            "type": "int",
+            "optional": true,
+            "default": "10000",
+            "description": "If rotary position embeddings are used, defines the size of the embedding base."
+        },
+        {
+            "name": "max_source_positions",
+            "type": "int",
+            "optional": true,
+            "default": "5000",
+            "description": "if relative position embeddings are used, defines the maximum source input positions."
+        },
+        {
+            "name": "conv_depthwise_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "31",
+            "description": "Kernel size of convolutional depthwise 1D layer in Conformer blocks."
+        },
+        {
+            "name": "conformer_conv_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all convolutional layers in Conformer blocks."
+        }
+    ],
+    "return": ""
+}

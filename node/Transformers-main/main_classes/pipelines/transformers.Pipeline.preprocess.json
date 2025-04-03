@@ -1,0 +1,12 @@
+{
+    "api": "transformers.Pipeline.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_:",
+        "typing.Any",
+        "**preprocess_parameters"
+    ],
+    "params": [],
+    "return": ""
+}

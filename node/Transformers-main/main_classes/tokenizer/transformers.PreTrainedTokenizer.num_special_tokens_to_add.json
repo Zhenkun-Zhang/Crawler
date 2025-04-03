@@ -1,0 +1,20 @@
+{
+    "api": "transformers.PreTrainedTokenizer.num_special_tokens_to_add",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pair:",
+        "bool",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pair",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether the number of added tokens should be computed in the case of a sequence pair or a singlesequence."
+        }
+    ],
+    "return": "int"
+}

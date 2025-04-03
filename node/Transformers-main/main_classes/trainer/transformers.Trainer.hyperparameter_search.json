@@ -1,0 +1,75 @@
+{
+    "api": "transformers.Trainer.hyperparameter_search",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "hp_space:",
+        "dict[str,",
+        "float]]]",
+        "compute_objective",
+        "float]],",
+        "float]]",
+        "n_trials",
+        "direction",
+        "list[str]]",
+        "backend",
+        "transformers.trainer_utils.HPSearchBackend,",
+        "NoneType]",
+        "hp_name",
+        "str]]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "hp_space",
+            "type": "Callable[[\"optuna.Trial\"], Dict[str, float]]",
+            "optional": true,
+            "default": "",
+            "description": "A function that defines the hyperparameter search space. Will default todefault_hp_space_optuna() or default_hp_space_ray() ordefault_hp_space_sigopt() depending on your backend."
+        },
+        {
+            "name": "compute_objective",
+            "type": "Callable[[Dict[str, float]], float]",
+            "optional": true,
+            "default": "",
+            "description": "A function computing the objective to minimize or maximize from the metrics returned by the evaluatemethod. Will default to default_compute_objective()."
+        },
+        {
+            "name": "n_trials",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of trial runs to test."
+        },
+        {
+            "name": "direction",
+            "type": "str,List[str]",
+            "optional": true,
+            "default": "",
+            "description": "If its single objective optimization, direction is str, can be minimize or maximize, youshould pick minimize when optimizing the validation loss, maximize when optimizing one orseveral metrics. If its multi objectives optimization, direction is List[str], can be List ofminimize and maximize, you should pick minimize when optimizing the validation loss,maximize when optimizing one or several metrics."
+        },
+        {
+            "name": "backend",
+            "type": "str,~training_utils.HPSearchBackend",
+            "optional": true,
+            "default": "",
+            "description": "The backend to use for hyperparameter search. Will default to optuna or Ray Tune or SigOpt, dependingon which one is installed. If all are installed, will default to optuna."
+        },
+        {
+            "name": "hp_name",
+            "type": "Callable[[\"optuna.Trial\"], str]]",
+            "optional": true,
+            "default": "",
+            "description": "A function that defines the trial/run name. Will default to None."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments for each backend:optuna: parameters fromoptuna.study.create_studyand also the parameters timeout, n_jobs and gc_after_trial fromoptuna.study.Study.optimizeray: parameters from tune.run.If resources_per_trial is not set in the kwargs, it defaults to 1 CPU core and 1 GPU (if available).If progress_reporter is not set in the kwargs,ray.tune.CLIReporter is used.sigopt: the parameter proxies fromsigopt.Connection.set_proxies."
+        }
+    ],
+    "return": "[trainer_utils.BestRun or List[trainer_utils.BestRun]]"
+}

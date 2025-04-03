@@ -1,0 +1,43 @@
+{
+    "api": "transformers.OffloadedCache.update",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "key_states:",
+        "value_states",
+        "layer_idx",
+        "cache_kwargs",
+        "typing.Any]]"
+    ],
+    "params": [
+        {
+            "name": "key_states",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The new key states to cache."
+        },
+        {
+            "name": "value_states",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The new value states to cache."
+        },
+        {
+            "name": "layer_idx",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The index of the layer to cache the states for."
+        },
+        {
+            "name": "cache_kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional arguments for the cache subclass. No additional arguments are used in OffloadedCache."
+        }
+    ],
+    "return": ""
+}

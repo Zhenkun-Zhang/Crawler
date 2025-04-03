@@ -1,0 +1,8 @@
+{
+    "api": "transformers.model_addition_debugger",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

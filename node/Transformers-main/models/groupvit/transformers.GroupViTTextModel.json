@@ -1,0 +1,11 @@
+{
+    "api": "transformers.GroupViTTextModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "GroupViTTextConfig"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,76 @@
+{
+    "api": "transformers.SuperGlueConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "keypoint_detector_config:",
+        "SuperPointConfig",
+        "hidden_size",
+        "keypoint_encoder_sizes",
+        "gnn_layers_types",
+        "num_attention_heads",
+        "sinkhorn_iterations",
+        "matching_threshold",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "keypoint_detector_config",
+            "type": "Union[AutoConfig, dict],  optional, defaults to SuperPointConfig",
+            "optional": true,
+            "default": "",
+            "description": "The config object or dictionary of the keypoint detector."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The dimension of the descriptors."
+        },
+        {
+            "name": "keypoint_encoder_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "The sizes of the keypoint encoder layers."
+        },
+        {
+            "name": "gnn_layers_types",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "The types of the GNN layers. Must be either self or cross."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of heads in the GNN layers."
+        },
+        {
+            "name": "sinkhorn_iterations",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of Sinkhorn iterations."
+        },
+        {
+            "name": "matching_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The matching threshold."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        }
+    ],
+    "return": ""
+}

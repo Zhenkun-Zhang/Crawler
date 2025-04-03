@@ -1,0 +1,12 @@
+{
+    "api": "transformers.AlternatingCodebooksLogitsProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "scores"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,10 @@
+{
+    "api": "transformers.PreTrainedModel.get_output_embeddings",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        ")"
+    ],
+    "params": [],
+    "return": "nn.Module"
+}

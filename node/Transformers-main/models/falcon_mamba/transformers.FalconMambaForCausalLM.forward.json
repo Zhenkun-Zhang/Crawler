@@ -1,0 +1,70 @@
+{
+    "api": "transformers.FalconMambaForCausalLM.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "inputs_embeds",
+        "cache_params",
+        "labels",
+        "output_hidden_states",
+        "return_dict",
+        "use_cache",
+        "cache_position",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, input_ids_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.If cache_params.seqlen_offset>0, only input_ids that do not have their past calculated should be passed asinput_ids.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "cache_params",
+            "type": "MambaCache",
+            "optional": true,
+            "default": "",
+            "description": "If passed along, the model uses the previous state in all the blocks (which will give the output for theinput_ids provided as if the model add state_input_ids + input_ids as context)."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, the cache_params is returned and can be used to quickly generate the next logits."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for language modeling. Note that the labels are shifted inside the model, i.e. you can setlabels = input_ids Indices are selected in [-100, 0, ..., config.vocab_size] All labels set to -100are ignored (masked), the loss is only computed for labels in [0, ..., config.vocab_size]"
+        }
+    ],
+    "return": "transformers.models.falcon_mamba.modeling_falcon_mamba.FalconMambaCausalLMOutput or tuple(torch.FloatTensor)"
+}

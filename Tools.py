@@ -1,4 +1,5 @@
 
+
 def dealDefault(default):
     default = default.replace("mstype", "mindspore")
     i = default.strip()

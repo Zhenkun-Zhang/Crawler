@@ -1,0 +1,15 @@
+{
+    "api": "transformers.InstructBlipConfig.from_vision_qformer_text_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "vision_config:",
+        "InstructBlipVisionConfig",
+        "qformer_config",
+        "text_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "InstructBlipConfig"
+}

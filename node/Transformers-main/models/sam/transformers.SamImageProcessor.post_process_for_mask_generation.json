@@ -1,0 +1,50 @@
+{
+    "api": "transformers.SamImageProcessor.post_process_for_mask_generation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "all_masks",
+        "all_scores",
+        "all_boxes",
+        "crops_nms_thresh",
+        "return_tensors"
+    ],
+    "params": [
+        {
+            "name": "all_masks",
+            "type": "Union[List[torch.Tensor], List[tf.Tensor]]",
+            "optional": false,
+            "default": "",
+            "description": "List of all predicted segmentation masks"
+        },
+        {
+            "name": "all_scores",
+            "type": "Union[List[torch.Tensor], List[tf.Tensor]]",
+            "optional": false,
+            "default": "",
+            "description": "List of all predicted iou scores"
+        },
+        {
+            "name": "all_boxes",
+            "type": "Union[List[torch.Tensor], List[tf.Tensor]]",
+            "optional": false,
+            "default": "",
+            "description": "List of all bounding boxes of the predicted masks"
+        },
+        {
+            "name": "crops_nms_thresh",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "Threshold for NMS (Non Maximum Suppression) algorithm."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str",
+            "optional": true,
+            "default": "pt",
+            "description": "If pt, returns torch.Tensor. If tf, returns tf.Tensor."
+        }
+    ],
+    "return": ""
+}

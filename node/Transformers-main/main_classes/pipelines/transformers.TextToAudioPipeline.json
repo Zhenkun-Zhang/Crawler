@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TextToAudioPipeline",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "vocoder",
+        "sampling_rate",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

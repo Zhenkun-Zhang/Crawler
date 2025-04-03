@@ -1,0 +1,26 @@
+{
+    "api": "transformers.RealmRetriever",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "block_records",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "block_records",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "A numpy array which cantains evidence texts."
+        },
+        {
+            "name": "tokenizer",
+            "type": "RealmTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer to encode retrieved texts."
+        }
+    ],
+    "return": ""
+}

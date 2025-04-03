@@ -1,0 +1,42 @@
+{
+    "api": "transformers.trainer_pt_utils.DistributedTensorGatherer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "world_size",
+        "num_samples",
+        "make_multiple_of",
+        "padding_index"
+    ],
+    "params": [
+        {
+            "name": "world_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of processes used in the distributed training."
+        },
+        {
+            "name": "num_samples",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of samples in our dataset."
+        },
+        {
+            "name": "make_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "If passed, the class assumes the datasets passed to each process are made to be a multiple of this argument(by adding samples)."
+        },
+        {
+            "name": "padding_index",
+            "type": "int",
+            "optional": true,
+            "default": "-100",
+            "description": "The padding index to use if the arrays dont all have the same sequence length."
+        }
+    ],
+    "return": ""
+}

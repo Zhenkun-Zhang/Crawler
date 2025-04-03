@@ -1,0 +1,189 @@
+{
+    "api": "transformers.RecurrentGemmaConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_hidden_layers",
+        "vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_attention_heads",
+        "lru_width",
+        "attention_window_size",
+        "conv1d_width",
+        "logits_soft_cap",
+        "rms_norm_eps",
+        "use_cache",
+        "pad_token_id",
+        "eos_token_id",
+        "bos_token_id",
+        "hidden_activation",
+        "partial_rotary_factor",
+        "rope_theta",
+        "block_types",
+        "'recurrent',",
+        "'attention')",
+        "attention_dropout",
+        "num_key_value_heads",
+        "attention_bias",
+        "w_init_variance_scale",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "26",
+            "description": "The number of hidden layers in the model."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "256000",
+            "description": "Vocabulary size of the RecurrentGemma model. Defines the number ofdifferent tokens that can be represented by theinputs_ids passed when calling RecurrentGemmaModel"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "2560",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "7680",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "The number of heads for the attention block and the number ofheads/blocks for the block-diagonal layers used in the RG-LRU gates.This number must divide hidden_size and lru_width."
+        },
+        {
+            "name": "lru_width",
+            "type": "int,None",
+            "optional": true,
+            "default": "None",
+            "description": "Dimension of the hidden representations of the RG-LRU. If Nonethis will be set to hidden_size.Whether to scale the output of the embeddings by sqrt(hidden_size)."
+        },
+        {
+            "name": "attention_window_size",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "The size of the attention window used in the attention block."
+        },
+        {
+            "name": "conv1d_width",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The kernel size of conv1d layers used in the recurrent blocks."
+        },
+        {
+            "name": "logits_soft_cap",
+            "type": "float",
+            "optional": true,
+            "default": "30.0",
+            "description": "The value at which the logits should be soft-capped to after the transformer and LM-head computation in the Causal LM architecture."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the model should return the last key/valuesattentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Padding token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Beginning of stream token id."
+        },
+        {
+            "name": "hidden_activation",
+            "type": "str`,`function",
+            "optional": true,
+            "default": "gelu_pytorch_tanh",
+            "description": "The hidden activation used in the recurrent block as well as the MLP layer of the decoder layers."
+        },
+        {
+            "name": "partial_rotary_factor",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "The partial rotary factor used in the initialization of the rotary embeddings."
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "block_types",
+            "type": "List[str]",
+            "optional": true,
+            "default": "(recurrent,",
+            "description": "List of aleternating blocks that will be repeated to initialize the temporal_block layer."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "dropout value to use after the attention softmax."
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "16",
+            "optional": true,
+            "default": "None",
+            "description": "Number of key value heads to use GQA."
+        },
+        {
+            "name": "attention_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "whether or not the linear q,k,v of the Attention layer should have bias"
+        },
+        {
+            "name": "w_init_variance_scale",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "weight initialization variance."
+        }
+    ],
+    "return": ""
+}

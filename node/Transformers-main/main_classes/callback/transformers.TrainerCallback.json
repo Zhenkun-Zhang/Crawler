@@ -1,0 +1,93 @@
+{
+    "api": "transformers.TrainerCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [],
+    "params": [
+        {
+            "name": "args",
+            "type": "TrainingArguments",
+            "optional": false,
+            "default": "",
+            "description": "The training arguments used to instantiate the Trainer."
+        },
+        {
+            "name": "state",
+            "type": "TrainerState",
+            "optional": false,
+            "default": "",
+            "description": "The current state of the Trainer."
+        },
+        {
+            "name": "control",
+            "type": "TrainerControl",
+            "optional": false,
+            "default": "",
+            "description": "The object that is returned to the Trainer and can be used to make some decisions."
+        },
+        {
+            "name": "model",
+            "type": "PreTrainedModel,torch.nn.Module",
+            "optional": false,
+            "default": "",
+            "description": "The model being trained."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer used for encoding the data. This is deprecated in favour of processing_class."
+        },
+        {
+            "name": "processing_class",
+            "type": "[PreTrainedTokenizer,BaseImageProcessor,ProcessorMixin,FeatureExtractionMixin]",
+            "optional": false,
+            "default": "",
+            "description": "The processing class used for encoding the data. Can be a tokenizer, a processor, an image processor or a feature extractor."
+        },
+        {
+            "name": "optimizer",
+            "type": "torch.optim.Optimizer",
+            "optional": false,
+            "default": "",
+            "description": "The optimizer used for the training steps."
+        },
+        {
+            "name": "lr_scheduler",
+            "type": "torch.optim.lr_scheduler.LambdaLR",
+            "optional": false,
+            "default": "",
+            "description": "The scheduler used for setting the learning rate."
+        },
+        {
+            "name": "train_dataloader",
+            "type": "torch.utils.data.DataLoader",
+            "optional": true,
+            "default": "",
+            "description": "The current dataloader used for training."
+        },
+        {
+            "name": "eval_dataloader",
+            "type": "torch.utils.data.DataLoader",
+            "optional": true,
+            "default": "",
+            "description": "The current dataloader used for evaluation."
+        },
+        {
+            "name": "metrics",
+            "type": "Dict[str, float]",
+            "optional": false,
+            "default": "",
+            "description": "The metrics computed by the last evaluation phase.Those are only accessible in the event on_evaluate."
+        },
+        {
+            "name": "logs",
+            "type": "Dict[str, float]",
+            "optional": false,
+            "default": "",
+            "description": "The values to log.Those are only accessible in the event on_log."
+        }
+    ],
+    "return": ""
+}

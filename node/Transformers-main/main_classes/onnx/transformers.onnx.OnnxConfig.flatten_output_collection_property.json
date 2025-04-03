@@ -1,0 +1,28 @@
+{
+    "api": "transformers.onnx.OnnxConfig.flatten_output_collection_property",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "name:",
+        "str",
+        "field",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "name",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The name of the nested structure"
+        },
+        {
+            "name": "field",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The structure to, potentially, be flattened"
+        }
+    ],
+    "return": "(Dict[str, Any])"
+}

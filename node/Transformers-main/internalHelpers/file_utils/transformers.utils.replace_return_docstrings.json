@@ -1,0 +1,11 @@
+{
+    "api": "transformers.utils.replace_return_docstrings",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "output_type",
+        "config_class"
+    ],
+    "params": [],
+    "return": ""
+}

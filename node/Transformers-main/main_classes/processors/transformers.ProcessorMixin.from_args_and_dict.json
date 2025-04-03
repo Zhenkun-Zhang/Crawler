@@ -1,0 +1,28 @@
+{
+    "api": "transformers.ProcessorMixin.from_args_and_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args",
+        "processor_dict",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "processor_dict",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary that will be used to instantiate the processor object. Such a dictionary can beretrieved from a pretrained checkpoint by leveraging the~processing_utils.ProcessingMixin.to_dict method."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "Additional parameters from which to initialize the processor object."
+        }
+    ],
+    "return": "~processing_utils.ProcessingMixin"
+}

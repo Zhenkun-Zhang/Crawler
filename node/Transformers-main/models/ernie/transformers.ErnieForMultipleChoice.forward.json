@@ -1,0 +1,99 @@
+{
+    "api": "transformers.ErnieForMultipleChoice.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "token_type_ids",
+        "task_type_ids",
+        "position_ids",
+        "head_mask",
+        "inputs_embeds",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, num_choices, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, num_choices, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.LongTensor of shape (batch_size, num_choices, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token.What are token type IDs?"
+        },
+        {
+            "name": "task_type_ids",
+            "type": "torch.LongTensor of shape (batch_size, num_choices, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Task type embedding is a special embedding to represent the characteristic of different tasks, such asword-aware pre-training task, structure-aware pre-training task and semantic-aware pre-training task. Weassign a task_type_id to each task and the task_type_id is in the range `[0,config.task_type_vocab_size-1]"
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, num_choices, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, num_choices, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the multiple choice classification loss. Indices should be in [0, ..., num_choices-1] where num_choices is the size of the second dimension of the input tensors. (Seeinput_ids above)"
+        }
+    ],
+    "return": "transformers.modeling_outputs.MultipleChoiceModelOutput or tuple(torch.FloatTensor)"
+}

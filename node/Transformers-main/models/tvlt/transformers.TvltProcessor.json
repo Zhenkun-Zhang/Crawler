@@ -1,0 +1,26 @@
+{
+    "api": "transformers.TvltProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "feature_extractor"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "TvltImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of TvltImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "feature_extractor",
+            "type": "TvltFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of TvltFeatureExtractor. The feature extractor is a required input."
+        }
+    ],
+    "return": ""
+}

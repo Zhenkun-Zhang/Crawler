@@ -1,0 +1,20 @@
+{
+    "api": "transformers.MT5Tokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "eos_token",
+        "unk_token",
+        "pad_token",
+        "extra_ids",
+        "additional_special_tokens",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "legacy",
+        "add_prefix_space",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,12 @@
+{
+    "api": "transformers.MambaCache.update_ssm_state",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "layer_idx:",
+        "int",
+        "new_ssm_state"
+    ],
+    "params": [],
+    "return": ""
+}

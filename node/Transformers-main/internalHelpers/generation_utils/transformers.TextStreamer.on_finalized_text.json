@@ -1,0 +1,12 @@
+{
+    "api": "transformers.TextStreamer.on_finalized_text",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "str",
+        "stream_end"
+    ],
+    "params": [],
+    "return": ""
+}

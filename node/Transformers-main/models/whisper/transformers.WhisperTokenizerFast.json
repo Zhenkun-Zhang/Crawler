@@ -1,0 +1,99 @@
+{
+    "api": "transformers.WhisperTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "normalizer_file",
+        "tokenizer_file",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "add_prefix_space",
+        "language",
+        "task",
+        "predict_timestamps",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to the merges file."
+        },
+        {
+            "name": "normalizer_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to the normalizer_file file."
+        },
+        {
+            "name": "tokenizer_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to tokenizers file (generally has a .json extension) thatcontains everything needed to load the tokenizer."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The beginning of sequence token. The decoder_start_token_id is used to set the first token as<|startoftranscript|> when generating."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "add_prefix_space",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to add an initial space to the input. This allows to treat the leading word just as anyother word. (Whisper tokenizer detect beginning of words by the preceding space)."
+        },
+        {
+            "name": "language",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The language of the transcription text. The corresponding language id token is appended to the start of thesequence for multilingual speech recognition and speech translation tasks, e.g. for Spanish the token<|es|> is appended to the start of sequence. This should be used for multilingual fine-tuning only."
+        },
+        {
+            "name": "task",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Task identifier to append at the start of sequence (if any). This should be used for mulitlingualfine-tuning, with transcribe for speech recognition and translate for speech translation."
+        },
+        {
+            "name": "predict_timestamps",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to omit the <|notimestamps|> token at the start of the sequence."
+        }
+    ],
+    "return": ""
+}

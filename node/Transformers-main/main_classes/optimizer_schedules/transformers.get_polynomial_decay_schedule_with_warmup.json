@@ -1,0 +1,58 @@
+{
+    "api": "transformers.get_polynomial_decay_schedule_with_warmup",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "optimizer",
+        "num_warmup_steps",
+        "num_training_steps",
+        "lr_end",
+        "power",
+        "last_epoch"
+    ],
+    "params": [
+        {
+            "name": "optimizer",
+            "type": "~torch.optim.Optimizer",
+            "optional": false,
+            "default": "",
+            "description": "The optimizer for which to schedule the learning rate."
+        },
+        {
+            "name": "num_warmup_steps",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of steps for the warmup phase."
+        },
+        {
+            "name": "num_training_steps",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The total number of training steps."
+        },
+        {
+            "name": "lr_end",
+            "type": "float",
+            "optional": true,
+            "default": "1e-07",
+            "description": "The end LR."
+        },
+        {
+            "name": "power",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Power factor."
+        },
+        {
+            "name": "last_epoch",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "The index of the last epoch when resuming training."
+        }
+    ],
+    "return": ""
+}

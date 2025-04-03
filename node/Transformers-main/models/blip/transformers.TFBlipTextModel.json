@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFBlipTextModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "add_pooling_layer",
+        "name",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

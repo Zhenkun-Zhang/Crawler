@@ -1,0 +1,94 @@
+{
+    "api": "transformers.MarianTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "source_spm",
+        "target_spm",
+        "vocab",
+        "target_vocab_file",
+        "source_lang",
+        "target_lang",
+        "unk_token",
+        "eos_token",
+        "pad_token",
+        "model_max_length",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "separate_vocabs",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "source_spm",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "SentencePiece file (generally has a .spm extension) thatcontains the vocabulary for the source language."
+        },
+        {
+            "name": "target_spm",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "SentencePiece file (generally has a .spm extension) thatcontains the vocabulary for the target language."
+        },
+        {
+            "name": "source_lang",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A string representing the source language."
+        },
+        {
+            "name": "target_lang",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A string representing the target language."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "model_max_length",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sentence length the model accepts."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "Additional special tokens used by the tokenizer."
+        },
+        {
+            "name": "sp_model_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the SentencePieceProcessor.__init__() method. The Python wrapper forSentencePiece can be used, among other things,to set:enable_sampling: Enable subword regularization.nbest_size: Sampling parameters for unigram. Invalid for BPE-Dropout.nbest_size = {0,1}: No sampling is performed.nbest_size > 1: samples from the nbest_size results.nbest_size < 0: assuming that nbest_size is infinite and samples from the all hypothesis (lattice)using forward-filtering-and-backward-sampling algorithm.alpha: Smoothing parameter for unigram sampling, and dropout probability of merge operations forBPE-dropout."
+        }
+    ],
+    "return": ""
+}

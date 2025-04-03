@@ -1,0 +1,84 @@
+{
+    "api": "transformers.Owlv2Model.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "typing.Optional[torch.LongTensor]",
+        "pixel_values",
+        "attention_mask",
+        "return_loss",
+        "output_attentions",
+        "output_hidden_states",
+        "interpolate_pos_encoding",
+        "return_base_image_embeds",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Indices can be obtained using AutoTokenizer. SeePreTrainedTokenizer.encode() and PreTrainedTokenizer.call() for details. What are inputIDs?"
+        },
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "return_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the contrastive loss."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained position encodings."
+        },
+        {
+            "name": "return_base_image_embeds",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the base image embeddings."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.owlv2.modeling_owlv2.Owlv2Output or tuple(torch.FloatTensor)"
+}

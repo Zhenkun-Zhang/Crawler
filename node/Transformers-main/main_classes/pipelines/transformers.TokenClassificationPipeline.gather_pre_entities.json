@@ -1,0 +1,17 @@
+{
+    "api": "transformers.TokenClassificationPipeline.gather_pre_entities",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "sentence:",
+        "str",
+        "input_ids",
+        "scores",
+        "offset_mapping",
+        "int]]]",
+        "special_tokens_mask",
+        "aggregation_strategy"
+    ],
+    "params": [],
+    "return": ""
+}

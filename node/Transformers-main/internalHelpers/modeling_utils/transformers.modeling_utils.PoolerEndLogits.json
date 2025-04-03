@@ -1,0 +1,19 @@
+{
+    "api": "transformers.modeling_utils.PoolerEndLogits",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PretrainedConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The config used by the model, will be used to grab the hidden_size of the model and the layer_norm_epsto use."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,143 @@
+{
+    "api": "transformers.OPTConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "ffn_dim",
+        "max_position_embeddings",
+        "do_layer_norm_before",
+        "_remove_final_layer_norm",
+        "word_embed_proj_dim",
+        "dropout",
+        "attention_dropout",
+        "num_attention_heads",
+        "activation_function",
+        "layerdrop",
+        "init_std",
+        "use_cache",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "enable_bias",
+        "layer_norm_elementwise_affine",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "50272",
+            "description": "Vocabulary size of the OPT model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling OPTModel"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "do_layer_norm_before",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to perform layer normalization before the attention block."
+        },
+        {
+            "name": "word_embed_proj_dim",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "word_embed_proj_dim can be set to down-project word embeddings, e.g. opt-350m. Defaults tohidden_size."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556) for moredetails."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "enable_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not if the linear layers in the attention blocks should use the bias term."
+        },
+        {
+            "name": "layer_norm_elementwise_affine",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not if the layer norms should have learnable parameters."
+        }
+    ],
+    "return": ""
+}

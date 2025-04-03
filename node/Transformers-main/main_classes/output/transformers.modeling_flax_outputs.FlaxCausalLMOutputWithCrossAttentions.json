@@ -1,0 +1,51 @@
+{
+    "api": "transformers.modeling_flax_outputs.FlaxCausalLMOutputWithCrossAttentions",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "logits:",
+        "Array",
+        "past_key_values",
+        "hidden_states",
+        "attentions",
+        "cross_attentions"
+    ],
+    "params": [
+        {
+            "name": "logits",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Cross attentions weights after the attention softmax, used to compute the weighted average in thecross-attention heads."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(jnp.ndarray)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray tuples of length config.n_layers, with each tuple containing the cached key, valuestates of the self-attention and the cross-attention layers if model is used in encoder-decoder setting.Only relevant if config.is_decoder = True.Contains pre-computed hidden-states (key and values in the attention blocks) that can be used (seepast_key_values input) to speed up sequential decoding."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,21 @@
+{
+    "api": "transformers.TFGPT2Tokenizer.from_tokenizer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tokenizer:",
+        "GPT2Tokenizer",
+        "*args",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "GPT2Tokenizer",
+            "optional": false,
+            "default": "",
+            "description": ""
+        }
+    ],
+    "return": ""
+}

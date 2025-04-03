@@ -1,0 +1,173 @@
+{
+    "api": "transformers.TapasTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "do_lower_case",
+        "do_basic_tokenize",
+        "never_split",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "empty_token",
+        "tokenize_chinese_chars",
+        "strip_accents",
+        "cell_trim_length",
+        "max_column_id",
+        "max_row_id",
+        "strip_column_names",
+        "update_answer_coordinates",
+        "min_question_length",
+        "max_question_length",
+        "model_max_length",
+        "additional_special_tokens",
+        "clean_up_tokenization_spaces",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the vocabulary."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "do_basic_tokenize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to do basic tokenization before WordPiece."
+        },
+        {
+            "name": "never_split",
+            "type": "Iterable",
+            "optional": true,
+            "default": "None",
+            "description": "Collection of tokens which will never be split during tokenization. Only has an effect whendo_basic_tokenize=True"
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "[UNK]",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "[SEP]",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "[PAD]",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "[CLS]",
+            "description": "The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "[MASK]",
+            "description": "The token used for masking values. This is the token used when training this model with masked languagemodeling. This is the token which the model will try to predict."
+        },
+        {
+            "name": "empty_token",
+            "type": "str",
+            "optional": true,
+            "default": "[EMPTY]",
+            "description": "The token used for empty cell values in a table. Empty cell values include , n/a, nan and ?."
+        },
+        {
+            "name": "tokenize_chinese_chars",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to tokenize Chinese characters. This should likely be deactivated for Japanese (see thisissue)."
+        },
+        {
+            "name": "strip_accents",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to strip all accents. If this option is not specified, then it will be determined by thevalue for lowercase (as in the original BERT)."
+        },
+        {
+            "name": "cell_trim_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If > 0: Trim cells so that the length is <= this value. Also disables further cell trimming, should thus beused with truncation set to True."
+        },
+        {
+            "name": "max_column_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Max column id to extract."
+        },
+        {
+            "name": "max_row_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Max row id to extract."
+        },
+        {
+            "name": "strip_column_names",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to add empty strings instead of column names."
+        },
+        {
+            "name": "update_answer_coordinates",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to recompute the answer coordinates from the answer text."
+        },
+        {
+            "name": "min_question_length",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Minimum length of each question in terms of tokens (will be skipped otherwise)."
+        },
+        {
+            "name": "max_question_length",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Maximum length of each question in terms of tokens (will be skipped otherwise)."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to cleanup spaces after decoding, cleanup consists in removing potential artifacts likeextra spaces."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,70 @@
+{
+    "api": "transformers.FlaxBertModel.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids",
+        "attention_mask",
+        "token_type_ids",
+        "position_ids",
+        "head_mask",
+        "encoder_hidden_states",
+        "encoder_attention_mask",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7f3a03b75090>",
+        "train",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "past_key_values",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "None",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "None",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token.What are token type IDs?"
+        },
+        {
+            "name": "position_ids",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "None",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1]."
+        },
+        {
+            "name": "head_mask",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "None",
+            "description": ""
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling or tuple(torch.FloatTensor)"
+}

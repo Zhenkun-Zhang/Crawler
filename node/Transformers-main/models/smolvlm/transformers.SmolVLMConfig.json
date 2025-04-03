@@ -1,0 +1,67 @@
+{
+    "api": "transformers.SmolVLMConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "use_cache",
+        "image_token_id",
+        "tie_word_embeddings",
+        "vision_config",
+        "text_config",
+        "scale_factor",
+        "pad_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should cache the key/value pairs of the attention mechanism. Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "image_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "128257",
+            "description": "The id of the image token."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to tie the word embeddings with the token embeddings."
+        },
+        {
+            "name": "vision_config",
+            "type": "IdeficsVisionConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "Custom vision config or dict for the vision tower"
+        },
+        {
+            "name": "text_config",
+            "type": "PretrainedConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "Custom text config or dict for the text model"
+        },
+        {
+            "name": "scale_factor",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The scale factor for the image encoder."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "128002",
+            "description": "The id of the padding token."
+        }
+    ],
+    "return": ""
+}

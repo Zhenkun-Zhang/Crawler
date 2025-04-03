@@ -1,0 +1,26 @@
+{
+    "api": "transformers.generation.FlaxBeamSearchOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "sequences:",
+        "scores"
+    ],
+    "params": [
+        {
+            "name": "sequences",
+            "type": "jnp.ndarray of shape (batch_size, max_length)",
+            "optional": false,
+            "default": "",
+            "description": "The generated sequences."
+        },
+        {
+            "name": "scores",
+            "type": "jnp.ndarray of shape (batch_size,)",
+            "optional": false,
+            "default": "",
+            "description": "The scores (log probabilities) of the generated sequences."
+        }
+    ],
+    "return": ""
+}

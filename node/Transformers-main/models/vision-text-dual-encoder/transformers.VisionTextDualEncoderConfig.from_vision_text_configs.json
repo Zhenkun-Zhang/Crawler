@@ -1,0 +1,13 @@
+{
+    "api": "transformers.VisionTextDualEncoderConfig.from_vision_text_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "vision_config:",
+        "text_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "VisionTextDualEncoderConfig"
+}

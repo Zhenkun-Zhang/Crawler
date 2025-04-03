@@ -1,0 +1,10 @@
+{
+    "api": "transformers.Wav2Vec2ProcessorWithLM.save_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory"
+    ],
+    "params": [],
+    "return": ""
+}

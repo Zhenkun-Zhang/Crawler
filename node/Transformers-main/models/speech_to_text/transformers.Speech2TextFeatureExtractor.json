@@ -1,0 +1,75 @@
+{
+    "api": "transformers.Speech2TextFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size",
+        "sampling_rate",
+        "num_mel_bins",
+        "padding_value",
+        "dither",
+        "do_ceptral_normalize",
+        "normalize_means",
+        "normalize_vars",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "The feature dimension of the extracted features."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "16000",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "num_mel_bins",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "Number of Mel-frequency bins."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The value that is used to fill the padding vectors."
+        },
+        {
+            "name": "dither",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Adds dithering. In other words, adds a small Gaussian noise to each frame.E.g. use 4.0 to add dithering with a normal distribution centeredaround 0.0 with standard deviation 4.0 (assuming [-32k,+32k] range of kaldi waveform).The value 0.0 means no dithering.Dithering has similar effect as mel_floor. It reduces the high log_mel_fbankvalues for signals with hard-zero sections, when VAD cutoff is present in the signal."
+        },
+        {
+            "name": "do_ceptral_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to apply utterance-level cepstral mean and variance normalization to extracted features."
+        },
+        {
+            "name": "normalize_means",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to zero-mean normalize the extracted features."
+        },
+        {
+            "name": "normalize_vars",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to unit-variance normalize the extracted features."
+        }
+    ],
+    "return": ""
+}

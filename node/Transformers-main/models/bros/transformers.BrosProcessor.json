@@ -1,0 +1,19 @@
+{
+    "api": "transformers.BrosProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "BertTokenizerFast",
+            "optional": true,
+            "default": "None",
+            "description": "An instance of [BertTokenizerFast`]. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

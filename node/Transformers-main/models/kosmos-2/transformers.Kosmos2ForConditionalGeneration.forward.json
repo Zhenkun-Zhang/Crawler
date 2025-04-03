@@ -1,0 +1,130 @@
+{
+    "api": "transformers.Kosmos2ForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "input_ids",
+        "image_embeds_position_mask",
+        "attention_mask",
+        "head_mask",
+        "past_key_values",
+        "image_embeds",
+        "inputs_embeds",
+        "position_ids",
+        "labels",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeCLIPImageProcessor.call() for details."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "image_embeds_position_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to indicate the location in a sequence to insert the image features . Mask values selected in [0, 1]:1 for places where to put the image features,0 for places that are not for image features (i.e. for text tokens)."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)) of length config.n_layers with each tuple having 4 tensors of shape (batch_size, num_heads, sequence_length - 1, embed_size_per_head)",
+            "optional": false,
+            "default": "",
+            "description": "Contains precomputed key and value hidden states of the attention blocks. Can be used to speed up decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "image_embeds",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "(torch.FloatTensor of shape (batch_size, latent_query_num, hidden_size), optional):Sequence of hidden-states at the output of Kosmos2ImageToTextProjection."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained position encodings."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the left-to-right language modeling loss (next word prediction). Indices should be in[-100, 0, ..., config.vocab_size] (see input_ids docstring) Tokens with indices set to -100 areignored (masked), the loss is only computed for the tokens with labels in [0, ..., config.vocab_size]"
+        }
+    ],
+    "return": "transformers.models.kosmos2.modeling_kosmos2.Kosmos2ForConditionalGenerationModelOutput or tuple(torch.FloatTensor)"
+}

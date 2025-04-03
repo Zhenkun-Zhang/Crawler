@@ -1,0 +1,11 @@
+{
+    "api": "transformers.SinkCache.reorder_cache",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "beam_idx:",
+        "LongTensor"
+    ],
+    "params": [],
+    "return": ""
+}

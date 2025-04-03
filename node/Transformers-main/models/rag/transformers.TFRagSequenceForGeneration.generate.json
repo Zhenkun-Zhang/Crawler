@@ -1,0 +1,94 @@
+{
+    "api": "transformers.TFRagSequenceForGeneration.generate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "TFModelInputType",
+        "|",
+        "attention_mask",
+        "|",
+        "context_input_ids",
+        "context_attention_mask",
+        "doc_scores",
+        "do_deduplication",
+        "num_return_sequences",
+        "num_beams",
+        "n_docs",
+        "**model_kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The sequence used as a prompt for the generation. If input_ids is not passed, thencontext_input_ids has to be provided."
+        },
+        {
+            "name": "attention_mask",
+            "type": "tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]: - 1 fortokens that are not masked, - 0 for tokens that are masked. What are attentionmasks?"
+        },
+        {
+            "name": "context_input_ids",
+            "type": "tf.Tensor of shape (batch_size * config.n_docs, config.max_combined_length",
+            "optional": true,
+            "default": "None",
+            "description": "Input IDs post-processed from the retrieved documents and the question encoder input_ids by theretriever."
+        },
+        {
+            "name": "context_attention_mask",
+            "type": "tf.Tensor of shape (batch_size * config.n_docs, config.max_combined_length",
+            "optional": true,
+            "default": "None",
+            "description": "Attention mask post-processed from the retrieved documents and the question encoder input_ids by theretriever. If the model has is not initialized with a retriever or input_ids is not given,context_input_ids and context_attention_mask have to be provided to the forward pass. They arereturned by __call__()."
+        },
+        {
+            "name": "doc_scores",
+            "type": "tf.Tensor of shape (batch_size, config.n_docs)",
+            "optional": false,
+            "default": "None",
+            "description": "Score between each retrieved document embeddings (see retrieved_doc_embeds) andquestion_encoder_last_hidden_state. If the model has is not initialized with a retriever orinput_ids is not given, doc_scores has to be provided to the forward pass. doc_scores arereturned by __call__()."
+        },
+        {
+            "name": "do_deduplication",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to deduplicate the generations from different context documents for a given input. Hasto be set to False if used while training with distributed backend."
+        },
+        {
+            "name": "num_return_sequences(int,",
+            "type": "optional, defaults to 1",
+            "optional": true,
+            "default": "",
+            "description": "The number of independently computed returned sequences for each element in the batch. Note that thisis not the value we pass to the generators [generate()](/docs/transformers/main/en/main_classes/text_generation#transformers.GenerationMixin.generate) function,where we set num_return_sequences to num_beams."
+        },
+        {
+            "name": "num_beams",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Number of beams for beam search. 1 means no beam search."
+        },
+        {
+            "name": "n_docs",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Number of documents to retrieve and/or number of documents for which to generate an answer."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional kwargs will be passed to generate()"
+        }
+    ],
+    "return": "tf.Tensor of shape (batch_size * num_return_sequences, sequence_length)"
+}

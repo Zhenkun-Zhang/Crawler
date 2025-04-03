@@ -1,0 +1,12 @@
+{
+    "api": "transformers.enable_full_determinism",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "seed:",
+        "int",
+        "warn_only"
+    ],
+    "params": [],
+    "return": ""
+}

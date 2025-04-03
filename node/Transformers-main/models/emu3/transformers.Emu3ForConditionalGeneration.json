@@ -1,0 +1,10 @@
+{
+    "api": "transformers.Emu3ForConditionalGeneration",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [],
+    "return": ""
+}

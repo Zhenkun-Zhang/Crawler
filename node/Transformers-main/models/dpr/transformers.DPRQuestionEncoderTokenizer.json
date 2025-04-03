@@ -1,0 +1,22 @@
+{
+    "api": "transformers.DPRQuestionEncoderTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "do_lower_case",
+        "do_basic_tokenize",
+        "never_split",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "tokenize_chinese_chars",
+        "strip_accents",
+        "clean_up_tokenization_spaces",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

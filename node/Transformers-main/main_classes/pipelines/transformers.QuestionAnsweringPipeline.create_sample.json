@@ -1,0 +1,29 @@
+{
+    "api": "transformers.QuestionAnsweringPipeline.create_sample",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "question:",
+        "typing.List[str]]",
+        "context",
+        "typing.List[str]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "question",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The question(s) asked."
+        },
+        {
+            "name": "context",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The context(s) in which we will look for the answer."
+        }
+    ],
+    "return": "One or a list of SquadExample"
+}

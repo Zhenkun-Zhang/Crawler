@@ -1,0 +1,60 @@
+{
+    "api": "transformers.EncodecModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "Tensor",
+        "padding_mask",
+        "bandwidth",
+        "audio_codes",
+        "audio_scales",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "torch.FloatTensor of shape (batch_size, channels, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Raw audio input converted to Float and padded to the approriate length in order to be encoded using chunksof length self.chunk_length and a stride of config.chunk_stride."
+        },
+        {
+            "name": "padding_mask",
+            "type": "torch.BoolTensor of shape (batch_size, channels, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid computing scaling factors on padding token indices (can we avoid computing conv on these+).Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.padding_mask should always be passed, unless the input was truncated or not padded. This is because inorder to process tensors effectively, the input audio should be padded so that input_length % stride = step with step = chunk_length-stride. This ensures that all chunks are of the same shape"
+        },
+        {
+            "name": "bandwidth",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The target bandwidth. Must be one of config.target_bandwidths. If None, uses the smallest possiblebandwidth. bandwidth is represented as a thousandth of what it is, e.g. 6kbps bandwidth is represented asbandwidth == 6.0"
+        },
+        {
+            "name": "audio_codes",
+            "type": "torch.LongTensor  of shape (batch_size, nb_chunks, chunk_length",
+            "optional": true,
+            "default": "",
+            "description": "Discret code embeddings computed using model.encode."
+        },
+        {
+            "name": "audio_scales",
+            "type": "torch.Tensor of shape (batch_size, nb_chunks",
+            "optional": true,
+            "default": "",
+            "description": "Scaling factor for each audio_codes input."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.encodec.modeling_encodec.EncodecOutput or tuple(torch.FloatTensor)"
+}

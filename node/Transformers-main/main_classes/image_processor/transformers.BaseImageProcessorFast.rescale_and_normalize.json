@@ -1,0 +1,18 @@
+{
+    "api": "transformers.BaseImageProcessorFast.rescale_and_normalize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "torch.Tensor",
+        "do_rescale",
+        "rescale_factor",
+        "do_normalize",
+        "image_mean",
+        "list[float]]",
+        "image_std",
+        "list[float]]"
+    ],
+    "params": [],
+    "return": ""
+}

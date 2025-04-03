@@ -1,0 +1,19 @@
+{
+    "api": "transformers.launch_gradio_demo",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tool_class:",
+        "Tool"
+    ],
+    "params": [
+        {
+            "name": "tool_class",
+            "type": "type",
+            "optional": false,
+            "default": "",
+            "description": "The class of the tool for which to launch the demo."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,166 @@
+{
+    "api": "transformers.SamVisionConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size",
+        "output_channels",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "num_channels",
+        "image_size",
+        "patch_size",
+        "hidden_act",
+        "layer_norm_eps",
+        "attention_dropout",
+        "initializer_range",
+        "qkv_bias",
+        "mlp_ratio",
+        "use_abs_pos",
+        "use_rel_pos",
+        "window_size",
+        "global_attn_indexes",
+        "5,",
+        "8,",
+        "11]",
+        "num_pos_feats",
+        "mlp_dim",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "output_channels",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the output channels in the Patch Encoder."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of channels in the input image."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Expected resolution. Target size of the resized input image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Size of the patches to be extracted from the input image."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string)"
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "1e-10",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to add a bias to query, key, value projections."
+        },
+        {
+            "name": "mlp_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "4.0",
+            "description": "Ratio of mlp hidden dim to embedding dim."
+        },
+        {
+            "name": "use_abs_pos",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use absolute position embedding."
+        },
+        {
+            "name": "use_rel_pos",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use relative position embedding."
+        },
+        {
+            "name": "window_size",
+            "type": "int",
+            "optional": true,
+            "default": "14",
+            "description": "Window size for relative position."
+        },
+        {
+            "name": "global_attn_indexes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "The indexes of the global attention layers."
+        },
+        {
+            "name": "num_pos_feats",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "The dimensionality of the position embedding."
+        },
+        {
+            "name": "mlp_dim",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The dimensionality of the MLP layer in the Transformer encoder. If None, defaults to mlp_ratio * hidden_size."
+        }
+    ],
+    "return": ""
+}

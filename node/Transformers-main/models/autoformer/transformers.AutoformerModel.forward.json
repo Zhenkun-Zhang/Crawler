@@ -1,0 +1,161 @@
+{
+    "api": "transformers.AutoformerModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "past_values:",
+        "past_time_features",
+        "past_observed_mask",
+        "static_categorical_features",
+        "static_real_features",
+        "future_values",
+        "future_time_features",
+        "decoder_attention_mask",
+        "head_mask",
+        "decoder_head_mask",
+        "cross_attn_head_mask",
+        "encoder_outputs",
+        "past_key_values",
+        "output_hidden_states",
+        "output_attentions",
+        "use_cache",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "past_values",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Past values of the time series, that serve as context in order to predict the future. These values maycontain lags, i.e. additional values from the past which are added in order to serve as extra context.The past_values is what the Transformer encoder gets as input (with optional additional features, such asstatic_categorical_features, static_real_features, past_time_features).The sequence length here is equal to context_length + max(config.lags_sequence).Missing values need to be replaced with zeros."
+        },
+        {
+            "name": "past_time_features",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, num_features",
+            "optional": true,
+            "default": "",
+            "description": "Optional time features, which the model internally will add to past_values. These could be things likemonth of year, day of the month, etc. encoded as vectors (for instance as Fourier features). Thesecould also be so-called age features, which basically help the model know at which point in life atime-series is. Age features have small values for distant past time steps and increase monotonically themore we approach the current time step.These features serve as the positional encodings of the inputs. So contrary to a model like BERT, wherethe position encodings are learned from scratch internally as parameters of the model, the Time SeriesTransformer requires to provide additional time features.The Autoformer only learns additional embeddings for static_categorical_features."
+        },
+        {
+            "name": "past_observed_mask",
+            "type": "torch.BoolTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Boolean mask to indicate which past_values were observed and which were missing. Mask values selected in[0, 1]:1 for values that are observed,0 for values that are missing (i.e. NaNs that were replaced by zeros)."
+        },
+        {
+            "name": "static_categorical_features",
+            "type": "torch.LongTensor of shape (batch_size, number of static categorical features",
+            "optional": true,
+            "default": "",
+            "description": "Optional static categorical features for which the model will learn an embedding, which it will add to thevalues of the time series.Static categorical features are features which have the same value for all time steps (static over time).A typical example of a static categorical feature is a time series ID."
+        },
+        {
+            "name": "static_real_features",
+            "type": "torch.FloatTensor of shape (batch_size, number of static real features",
+            "optional": true,
+            "default": "",
+            "description": "Optional static real features which the model will add to the values of the time series.Static real features are features which have the same value for all time steps (static over time).A typical example of a static real feature is promotion information."
+        },
+        {
+            "name": "future_values",
+            "type": "torch.FloatTensor of shape (batch_size, prediction_length)",
+            "optional": false,
+            "default": "",
+            "description": "Future values of the time series, that serve as labels for the model. The future_values is what theTransformer needs to learn to output, given the past_values.See the demo notebook and code snippets for details.Missing values need to be replaced with zeros."
+        },
+        {
+            "name": "future_time_features",
+            "type": "torch.FloatTensor of shape (batch_size, prediction_length, num_features",
+            "optional": true,
+            "default": "",
+            "description": "Optional time features, which the model internally will add to future_values. These could be things likemonth of year, day of the month, etc. encoded as vectors (for instance as Fourier features). Thesecould also be so-called age features, which basically help the model know at which point in life atime-series is. Age features have small values for distant past time steps and increase monotonically themore we approach the current time step.These features serve as the positional encodings of the inputs. So contrary to a model like BERT, wherethe position encodings are learned from scratch internally as parameters of the model, the Time SeriesTransformer requires to provide additional features.The Autoformer only learns additional embeddings for static_categorical_features."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on certain token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on certain token indices. By default, a causal mask will be used, tomake sure the model can only look at previous inputs in order to predict the future."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.Tensor of shape (encoder_layers, encoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "decoder_head_mask",
+            "type": "torch.Tensor of shape (decoder_layers, decoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the decoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "cross_attn_head_mask",
+            "type": "torch.Tensor of shape (decoder_layers, decoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the cross-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple consists of last_hidden_state, hidden_states (optional) and attentions (optional)last_hidden_state of shape (batch_size, sequence_length, hidden_size) (optional) is a sequence ofhidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and 2 additional tensors of shape(batch_size, num_heads, encoder_sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used (see past_key_values input) to speed up sequential decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.autoformer.modeling_autoformer.AutoformerModelOutput or tuple(torch.FloatTensor)"
+}

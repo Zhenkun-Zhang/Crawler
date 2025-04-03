@@ -1,0 +1,12 @@
+{
+    "api": "transformers.SuppressTokensAtBeginLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "begin_suppress_tokens",
+        "begin_index",
+        "device"
+    ],
+    "params": [],
+    "return": ""
+}

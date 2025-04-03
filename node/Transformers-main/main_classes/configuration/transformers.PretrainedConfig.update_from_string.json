@@ -1,0 +1,19 @@
+{
+    "api": "transformers.PretrainedConfig.update_from_string",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "update_str:",
+        "str"
+    ],
+    "params": [
+        {
+            "name": "update_str",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "String with attributes that should be updated for this class."
+        }
+    ],
+    "return": ""
+}

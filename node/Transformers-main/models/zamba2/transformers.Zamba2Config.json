@@ -1,0 +1,299 @@
+{
+    "api": "transformers.Zamba2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "max_position_embeddings",
+        "hidden_size",
+        "num_hidden_layers",
+        "layers_block_type",
+        "mamba_d_state",
+        "mamba_d_conv",
+        "mamba_expand",
+        "mamba_ngroups",
+        "time_step_min",
+        "time_step_max",
+        "time_step_floor",
+        "time_step_limit",
+        "n_mamba_heads",
+        "use_conv_bias",
+        "chunk_size",
+        "use_mem_eff_path",
+        "add_bias_linear",
+        "intermediate_size",
+        "hidden_act",
+        "num_attention_heads",
+        "num_key_value_heads",
+        "attention_dropout",
+        "num_mem_blocks",
+        "use_shared_attention_adapter",
+        "adapter_rank",
+        "use_mem_rope",
+        "rope_theta",
+        "initializer_range",
+        "rms_norm_eps",
+        "use_cache",
+        "num_logits_to_keep",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "use_long_context",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "32000",
+            "description": "Vocabulary size of the Zamba2 model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling Zamba2Model"
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "2560",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "54",
+            "description": "Number of hidden layers in the model."
+        },
+        {
+            "name": "layers_block_type",
+            "type": "list",
+            "optional": true,
+            "default": "None",
+            "description": "List of layer types, which can be either mamba or hybrid."
+        },
+        {
+            "name": "mamba_d_state",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "shape of the state space latents."
+        },
+        {
+            "name": "mamba_d_conv",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Size of the convolution kernel."
+        },
+        {
+            "name": "mamba_expand",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Expanding factor used to determine the intermediate size."
+        },
+        {
+            "name": "mamba_ngroups",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of groups for the evolution matrices of mamba 2."
+        },
+        {
+            "name": "time_step_min",
+            "type": "float",
+            "optional": true,
+            "default": "0.001",
+            "description": "Minimum time_step used to bound dt_proj.bias."
+        },
+        {
+            "name": "time_step_max",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Maximum time_step used to bound dt_proj.bias."
+        },
+        {
+            "name": "time_step_floor",
+            "type": "float",
+            "optional": true,
+            "default": "0.0001",
+            "description": "Minimum clamping value of the dt_proj.bias layer initialization."
+        },
+        {
+            "name": "time_step_limit",
+            "type": "tuple",
+            "optional": true,
+            "default": "None",
+            "description": "Accepted range of time step values."
+        },
+        {
+            "name": "n_mamba_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of heads for the evolution matrices of mamba 2."
+        },
+        {
+            "name": "use_conv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use bias in the convolution layer of the mixer block."
+        },
+        {
+            "name": "chunk_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Size of the chunks that will comprise the sequence."
+        },
+        {
+            "name": "use_mem_eff_path",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to use the fused conv1d and scan in mamba2 layers."
+        },
+        {
+            "name": "add_bias_linear",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Flag indicating whether or not to use bias in various layers"
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the MLP."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "This is the number of key_value heads that should be used to implement Grouped Query Attention. Ifnum_key_value_heads=None, the model will use Multi Head Attention (MHA), if`num_key_value_heads=1 the model will use Multi Query Attention (MQA) otherwise GQA is used. Whenconverting a multi-head checkpoint to a GQA checkpoint, each group key and value head should be constructedby meanpooling all the original heads within that group. For more details checkout thispaper."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "num_mem_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of unshared transformer blocks."
+        },
+        {
+            "name": "use_shared_attention_adapter",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "If True, unshared adapters (formally the same as LoRA but used in the base model) will be added to the q, k, v projectors in the shared attention layers."
+        },
+        {
+            "name": "adapter_rank",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Rank of the adapter in the shared MLP and shared attention layers."
+        },
+        {
+            "name": "use_mem_rope",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "If True, includes RoPE in the shared attention layers."
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "num_logits_to_keep",
+            "type": "int,None",
+            "optional": true,
+            "default": "1",
+            "description": "Number of prompt logits to calculate during generation. If None, all logits will be calculated. If aninteger value, only last num_logits_to_keep logits will be calculated. Default is 1 because only thelogits of the last prompt token are needed for generation. For long sequences, the logits for the entiresequence may use a lot of memory so, setting num_logits_to_keep=1 will reduce memory footprintsignificantly."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The id of the beginning-of-sequence token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the end-of-sequence token."
+        },
+        {
+            "name": "use_long_context",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Activates the context-extended version of Zamba by modifying RoPE."
+        }
+    ],
+    "return": ""
+}

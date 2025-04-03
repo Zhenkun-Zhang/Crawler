@@ -1,0 +1,27 @@
+{
+    "api": "transformers.VisionTextDualEncoderProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "AutoImageProcessor",
+            "optional": true,
+            "default": "None",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": true,
+            "default": "None",
+            "description": "The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

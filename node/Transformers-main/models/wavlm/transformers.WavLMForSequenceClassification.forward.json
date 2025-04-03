@@ -1,0 +1,59 @@
+{
+    "api": "transformers.WavLMForSequenceClassification.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "attention_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "labels",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of input raw speech waveform. Values can be obtained by loading a .flac or .wav audio fileinto an array of type List[float] or a numpy.ndarray, e.g. via the soundfile library (pip install soundfile). To prepare the array into input_values, the AutoProcessor should be used for padding andconversion into a tensor of type torch.FloatTensor. See Wav2Vec2Processor.call() for details."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing convolution and attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?attention_mask should only be passed if the corresponding processor has config.return_attention_mask == True. For all models whose processor has config.return_attention_mask == False, attention_mask shouldnot be passed to avoid degraded performance when doing batched inference. For such modelsinput_values should simply be padded with 0 and passed without attention_mask. Be aware that thesemodels also yield slightly different results depending on whether input_values is padded or not."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the sequence classification/regression loss. Indices should be in [0, ..., config.num_labels - 1]. If config.num_labels == 1 a regression loss is computed (Mean-Square loss), Ifconfig.num_labels > 1 a classification loss is computed (Cross-Entropy)."
+        }
+    ],
+    "return": "transformers.modeling_outputs.SequenceClassifierOutput or tuple(torch.FloatTensor)"
+}

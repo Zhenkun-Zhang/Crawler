@@ -1,0 +1,8 @@
+{
+    "api": "transformers.MT5Model.deparallelize",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

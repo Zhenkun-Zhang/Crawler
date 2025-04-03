@@ -1,0 +1,29 @@
+{
+    "api": "transformers.SuperPointImageProcessor.post_process_keypoint_detection",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs:",
+        "SuperPointKeypointDescriptionOutput",
+        "target_sizes",
+        "typing.List[typing.Tuple]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "SuperPointKeypointDescriptionOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model containing keypoints in a relative (x, y) format, with scores and descriptors."
+        },
+        {
+            "name": "target_sizes",
+            "type": "torch.Tensor,List[Tuple[int, int]]",
+            "optional": false,
+            "default": "",
+            "description": "Tensor of shape (batch_size, 2) or list of tuples (Tuple[int, int]) containing the target size(height, width) of each image in the batch. This must be the originalimage size (before any processing)."
+        }
+    ],
+    "return": "List[Dict]"
+}

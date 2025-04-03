@@ -1,0 +1,164 @@
+{
+    "api": "transformers.BlipTextConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "encoder_hidden_size",
+        "intermediate_size",
+        "projection_dim",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "max_position_embeddings",
+        "hidden_act",
+        "layer_norm_eps",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "initializer_range",
+        "bos_token_id",
+        "eos_token_id",
+        "pad_token_id",
+        "sep_token_id",
+        "is_decoder",
+        "use_cache",
+        "label_smoothing",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30524",
+            "description": "Vocabulary size of the Blip text model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling BlipModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "encoder_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers from the vision model."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new gelu are supported."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "30522",
+            "description": "The id of the beginning-of-sequence token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the end-of-sequence token."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "sep_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "102",
+            "description": "The id of the separator token."
+        },
+        {
+            "name": "is_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the model is used as a decoder."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "label_smoothing",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "A float in [0.0, 1.0]. Specifies the amount of smoothing when computing the loss, where 0.0 means no smoothing. The targetsbecome a mixture of the original ground truth and a uniform distribution as described inRethinking the Inception Architecture for Computer Vision <https://arxiv.org/abs/1512.00567>__. Default: :math:0.0."
+        }
+    ],
+    "return": ""
+}

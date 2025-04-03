@@ -1,0 +1,121 @@
+{
+    "api": "transformers.TvltImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "patch_size",
+        "16]",
+        "num_frames",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_center_crop",
+        "crop_size",
+        "int]",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "0.5,",
+        "0.5]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "0.5,",
+        "0.5]",
+        "init_mask_generator",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to the specified size. Can be overridden by thedo_resize parameter in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"shortest_edge\" -- 224}):Size of the output image after resizing. The shortest edge of the image will be resized tosize[\"shortest_edge\"] while maintaining the aspect ratio of the original image. Can be overriden bysize in the preprocess method.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "patch_size",
+            "type": "List[int] optional, defaults to [16,16]",
+            "optional": true,
+            "default": "",
+            "description": "The patch size of image patch embedding."
+        },
+        {
+            "name": "num_frames",
+            "type": "int optional, defaults to 8",
+            "optional": true,
+            "default": "",
+            "description": "The maximum number of video frames."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by the resample parameter in thepreprocess method."
+        },
+        {
+            "name": "do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to center crop the image to the specified crop_size. Can be overridden by the do_center_cropparameter in the preprocess method."
+        },
+        {
+            "name": "crop_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by the do_rescaleparameter in the preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Defines the scale factor to use if rescaling the image. Can be overridden by the rescale_factor parameterin the preprocess method."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in the preprocessmethod."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method."
+        }
+    ],
+    "return": ""
+}

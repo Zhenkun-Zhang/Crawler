@@ -1,0 +1,36 @@
+{
+    "api": "transformers.PreTrainedTokenizer.prepare_for_tokenization",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "str",
+        "is_split_into_words",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The text to prepare."
+        },
+        {
+            "name": "is_split_into_words",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the input is already pre-tokenized (e.g., split into words). If set to True, thetokenizer assumes the input is already split into words (for instance, by splitting it on whitespace)which it will tokenize. This is useful for NER or token classification."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments to use for the tokenization."
+        }
+    ],
+    "return": "Tuple[str, Dict[str, Any]]"
+}

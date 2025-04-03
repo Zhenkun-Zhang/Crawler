@@ -1,0 +1,76 @@
+{
+    "api": "transformers.VitPoseConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "backbone_config:",
+        "typing.Optional[transformers.configuration_utils.PretrainedConfig]",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "backbone_kwargs",
+        "initializer_range",
+        "scale_factor",
+        "use_simple_decoder",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig,dict",
+            "optional": true,
+            "default": "",
+            "description": "The configuration of the backbone model. Currently, only backbone_config with vitpose_backbone as model_type is supported."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to load backbone from the timm library. If False, the backbone is loaded from the transformerslibrary."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "scale_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Factor to upscale the feature maps coming from the ViT backbone."
+        },
+        {
+            "name": "use_simple_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use a VitPoseSimpleDecoder to decode the feature maps from the backbone into heatmaps. Otherwise it uses VitPoseClassicDecoder."
+        }
+    ],
+    "return": ""
+}

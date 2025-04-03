@@ -1,0 +1,35 @@
+{
+    "api": "transformers.Trainer.predict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "test_dataset:",
+        "Dataset",
+        "ignore_keys",
+        "metric_key_prefix"
+    ],
+    "params": [
+        {
+            "name": "test_dataset",
+            "type": "Dataset",
+            "optional": false,
+            "default": "",
+            "description": "Dataset to run the predictions on. If it is an datasets.Dataset, columns not accepted by themodel.forward() method are automatically removed. Has to implement the method __len__"
+        },
+        {
+            "name": "ignore_keys",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "A list of keys in the output of your model (if it is a dictionary) that should be ignored whengathering predictions."
+        },
+        {
+            "name": "metric_key_prefix",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "An optional prefix to be used as the metrics key prefix. For example the metrics bleu will be namedtest_bleu if the prefix is test (default)"
+        }
+    ],
+    "return": ""
+}

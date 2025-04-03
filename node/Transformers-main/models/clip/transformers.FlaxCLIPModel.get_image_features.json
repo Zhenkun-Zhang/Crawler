@@ -1,0 +1,25 @@
+{
+    "api": "transformers.FlaxCLIPModel.get_image_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7fd23718d090>",
+        "train",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "numpy.ndarray of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Padding will be ignored by default should you provide it. Pixel values can be obtainedusing AutoImageProcessor. See CLIPImageProcessor.call() for details."
+        }
+    ],
+    "return": "image_features (jnp.ndarray of shape (batch_size, output_dim)"
+}

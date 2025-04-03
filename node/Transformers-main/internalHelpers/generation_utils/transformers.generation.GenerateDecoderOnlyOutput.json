@@ -1,0 +1,59 @@
+{
+    "api": "transformers.generation.GenerateDecoderOnlyOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "sequences:",
+        "LongTensor",
+        "scores",
+        "logits",
+        "attentions",
+        "hidden_states",
+        "past_key_values"
+    ],
+    "params": [
+        {
+            "name": "sequences",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "The generated sequences. The second dimension (sequence_length) is either equal to max_length or shorterif all batches finished early due to the eos_token_id."
+        },
+        {
+            "name": "scores",
+            "type": "tuple(torch.FloatTensor) optional, returned when output_scores=True",
+            "optional": true,
+            "default": "",
+            "description": "Processed prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)at each generation step. Tuple of torch.FloatTensor with up to max_new_tokens elements (one element foreach generated token), with each tensor of shape (batch_size, config.vocab_size)."
+        },
+        {
+            "name": "logits",
+            "type": "tuple(torch.FloatTensor) optional, returned when output_logits=True",
+            "optional": true,
+            "default": "",
+            "description": "Unprocessed prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)at each generation step. Tuple of torch.FloatTensor with up to max_new_tokens elements (one element foreach generated token), with each tensor of shape (batch_size, config.vocab_size)."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple (one element for each generated token) of tuples (one element for each layer of the decoder) oftorch.FloatTensor of shape (batch_size, num_heads, generated_length, sequence_length)."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple (one element for each generated token) of tuples (one element for each layer of the decoder) oftorch.FloatTensor of shape (batch_size, generated_length, hidden_size)."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor))",
+            "optional": true,
+            "default": "",
+            "description": "Returns the model cache, used to speed up decoding. Different models have a different cache format, checkthe models documentation. Usually, a Cache instance."
+        }
+    ],
+    "return": ""
+}

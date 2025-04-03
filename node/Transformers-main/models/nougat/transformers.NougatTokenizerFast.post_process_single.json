@@ -1,0 +1,28 @@
+{
+    "api": "transformers.NougatTokenizerFast.post_process_single",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "generation:",
+        "str",
+        "fix_markdown",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "generation",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The generated text to be postprocessed."
+        },
+        {
+            "name": "fix_markdown",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to perform Markdown formatting fixes. Default is True."
+        }
+    ],
+    "return": "str"
+}

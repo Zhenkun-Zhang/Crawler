@@ -1,0 +1,66 @@
+{
+    "api": "transformers.HqqConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "nbits:",
+        "group_size",
+        "view_as_float",
+        "axis",
+        "dynamic_config",
+        "skip_modules",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "nbits",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of bits. Supported values are (8, 4, 3, 2, 1)."
+        },
+        {
+            "name": "group_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Group-size value. Supported values are any value that is divisble by weight.shape[axis])."
+        },
+        {
+            "name": "view_as_float",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "View the quantized weight as float (used in distributed training) if set to True."
+        },
+        {
+            "name": "axis",
+            "type": "Optional[int]",
+            "optional": true,
+            "default": "",
+            "description": "Axis along which grouping is performed. Supported values are 0 or 1."
+        },
+        {
+            "name": "dynamic_config",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Parameters for dynamic configuration. The key is the name tag of the layer and the value is a quantization config.If set, each layer specified by its id will use its dedicated quantization configuration."
+        },
+        {
+            "name": "skip_modules",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "List of nn.Linear layers to skip."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional parameters from which to initialize the configuration object."
+        }
+    ],
+    "return": ""
+}

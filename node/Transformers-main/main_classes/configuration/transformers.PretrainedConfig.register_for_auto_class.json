@@ -1,0 +1,18 @@
+{
+    "api": "transformers.PretrainedConfig.register_for_auto_class",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "auto_class"
+    ],
+    "params": [
+        {
+            "name": "auto_class",
+            "type": "str,type",
+            "optional": true,
+            "default": "AutoConfig",
+            "description": "The auto class to register this new configuration with."
+        }
+    ],
+    "return": ""
+}

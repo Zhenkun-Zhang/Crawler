@@ -1,0 +1,91 @@
+{
+    "api": "transformers.LlavaNextConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vision_config",
+        "text_config",
+        "image_token_index",
+        "projector_hidden_act",
+        "vision_feature_select_strategy",
+        "vision_feature_layer",
+        "image_grid_pinpoints",
+        "tie_word_embeddings",
+        "image_seq_length",
+        "multimodal_projector_bias",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vision_config",
+            "type": "Union[AutoConfig, dict],  optional, defaults to CLIPVisionConfig",
+            "optional": true,
+            "default": "None",
+            "description": "The config object or dictionary of the vision backbone."
+        },
+        {
+            "name": "text_config",
+            "type": "Union[AutoConfig, dict]",
+            "optional": true,
+            "default": "None",
+            "description": "The config object or dictionary of the text backbone."
+        },
+        {
+            "name": "image_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "32000",
+            "description": "The image token index to encode the image prompt."
+        },
+        {
+            "name": "projector_hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The activation function used by the multimodal projector."
+        },
+        {
+            "name": "vision_feature_select_strategy",
+            "type": "str",
+            "optional": true,
+            "default": "default",
+            "description": "The feature selection strategy used to select the vision feature from the vision backbone.Can be one of default or full. If default, the CLS token is removed from the vision features.If full, the full vision features are used."
+        },
+        {
+            "name": "vision_feature_layer",
+            "type": "Union[int, List[int]]",
+            "optional": true,
+            "default": "-2",
+            "description": "The index of the layer to select the vision feature. If multiple indices are provided,the vision feature of the corresponding indices will be concatenated to form thevision features."
+        },
+        {
+            "name": "image_grid_pinpoints",
+            "type": "List",
+            "optional": true,
+            "default": "None",
+            "description": "A list of possible resolutions to use for processing high resolution images. Each item in the list should be a tuple or listof the form (height, width)."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether the models input and output word embeddings should be tied."
+        },
+        {
+            "name": "image_seq_length",
+            "type": "int",
+            "optional": true,
+            "default": "576",
+            "description": "Sequence length of one image embedding."
+        },
+        {
+            "name": "multimodal_projector_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use bias in the multimodal projector."
+        }
+    ],
+    "return": ""
+}

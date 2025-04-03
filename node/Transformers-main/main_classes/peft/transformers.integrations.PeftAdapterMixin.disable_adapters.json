@@ -1,0 +1,8 @@
+{
+    "api": "transformers.integrations.PeftAdapterMixin.disable_adapters",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

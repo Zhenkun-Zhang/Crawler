@@ -1,0 +1,20 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.update_unexpected_keys",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model",
+        "unexpected_keys",
+        "prefix"
+    ],
+    "params": [
+        {
+            "name": "unexpected_keys",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "The list of unexpected keys in the checkpoint compared to the state dict of the model"
+        }
+    ],
+    "return": ""
+}

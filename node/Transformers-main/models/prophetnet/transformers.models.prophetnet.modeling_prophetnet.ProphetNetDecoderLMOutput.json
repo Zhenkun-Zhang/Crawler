@@ -1,0 +1,82 @@
+{
+    "api": "transformers.models.prophetnet.modeling_prophetnet.ProphetNetDecoderLMOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "logits",
+        "logits_ngram",
+        "past_key_values",
+        "hidden_states",
+        "hidden_states_ngram",
+        "attentions",
+        "ngram_attentions",
+        "cross_attentions"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Language modeling loss."
+        },
+        {
+            "name": "logits",
+            "type": "torch.FloatTensor of shape (batch_size, decoder_sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the main stream language modeling head (scores for each vocabulary token beforeSoftMax)."
+        },
+        {
+            "name": "logits_ngram",
+            "type": "torch.FloatTensor of shape (batch_size, ngram * decoder_sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the predict stream language modeling head (scores for each vocabulary token beforeSoftMax)."
+        },
+        {
+            "name": "past_key_values",
+            "type": "List[torch.FloatTensor]",
+            "optional": true,
+            "default": "",
+            "description": "List of torch.FloatTensor of length config.n_layers, with each tensor of shape (2, batch_size, num_attn_heads, decoder_sequence_length, embed_size_per_head)).Contains pre-computed hidden-states (key and values in the attention blocks) of the decoder that can beused (see past_key_values input) to speed up sequential decoding."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, decoder_sequence_length, hidden_size).Hidden-states of main stream of the decoder at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "ngram_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, ngram * decoder_sequence_length, hidden_size).Hidden-states of the predict stream of the decoder at the output of each layer plus the initial embeddingoutputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_attn_heads, decoder_sequence_length, decoder_sequence_length).Attentions weights of the decoder, after the attention softmax, used to compute the weighted average in theself-attention heads."
+        },
+        {
+            "name": "ngram_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_attn_heads, decoder_sequence_length, decoder_sequence_length).Attentions weights of the predict stream of the decoder, after the attention softmax, used to compute theweighted average in the"
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_attn_heads, encoder_sequence_length, decoder_sequence_length).Attentions weights of the cross-attention layer of the decoder, after the attention softmax, used tocompute the weighted average in the"
+        }
+    ],
+    "return": ""
+}

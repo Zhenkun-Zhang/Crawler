@@ -1,0 +1,215 @@
+{
+    "api": "transformers.CvtConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "patch_sizes",
+        "3,",
+        "3]",
+        "patch_stride",
+        "2,",
+        "2]",
+        "patch_padding",
+        "1,",
+        "1]",
+        "embed_dim",
+        "192,",
+        "384]",
+        "num_heads",
+        "3,",
+        "6]",
+        "depth",
+        "2,",
+        "10]",
+        "mlp_ratio",
+        "4.0,",
+        "4.0]",
+        "attention_drop_rate",
+        "0.0,",
+        "0.0]",
+        "drop_rate",
+        "0.0,",
+        "0.0]",
+        "drop_path_rate",
+        "0.0,",
+        "0.1]",
+        "qkv_bias",
+        "True,",
+        "True]",
+        "cls_token",
+        "False,",
+        "True]",
+        "qkv_projection_method",
+        "'dw_bn',",
+        "'dw_bn']",
+        "kernel_qkv",
+        "3,",
+        "3]",
+        "padding_kv",
+        "1,",
+        "1]",
+        "stride_kv",
+        "2,",
+        "2]",
+        "padding_q",
+        "1,",
+        "1]",
+        "stride_q",
+        "1,",
+        "1]",
+        "initializer_range",
+        "layer_norm_eps",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "patch_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[7,",
+            "description": "The kernel size of each encoders patch embedding."
+        },
+        {
+            "name": "patch_stride",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "The stride size of each encoders patch embedding."
+        },
+        {
+            "name": "patch_padding",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "The padding size of each encoders patch embedding."
+        },
+        {
+            "name": "embed_dim",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[64,",
+            "description": "Dimension of each of the encoder blocks."
+        },
+        {
+            "name": "num_heads",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "Number of attention heads for each attention layer in each block of the Transformer encoder."
+        },
+        {
+            "name": "depth",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "The number of layers in each encoder block."
+        },
+        {
+            "name": "mlp_ratios",
+            "type": "List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Ratio of the size of the hidden layer compared to the size of the input layer of the Mix FFNs in theencoder blocks."
+        },
+        {
+            "name": "attention_drop_rate",
+            "type": "List[float]",
+            "optional": true,
+            "default": "[0.0,",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "drop_rate",
+            "type": "List[float]",
+            "optional": true,
+            "default": "[0.0,",
+            "description": "The dropout ratio for the patch embeddings probabilities."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "List[float]",
+            "optional": true,
+            "default": "[0.0,",
+            "description": "The dropout probability for stochastic depth, used in the blocks of the Transformer encoder."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "List[bool]",
+            "optional": true,
+            "default": "[True,",
+            "description": "The bias bool for query, key and value in attentions"
+        },
+        {
+            "name": "cls_token",
+            "type": "List[bool]",
+            "optional": true,
+            "default": "[False,",
+            "description": "Whether or not to add a classification token to the output of each of the last 3 stages."
+        },
+        {
+            "name": "qkv_projection_method",
+            "type": "List[string]",
+            "optional": true,
+            "default": "[dw_bn,",
+            "description": "The projection method for query, key and value Default is depth-wise convolutions with batch norm. ForLinear projection use avg."
+        },
+        {
+            "name": "kernel_qkv",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "The kernel size for query, key and value in attention layer"
+        },
+        {
+            "name": "padding_kv",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "The padding size for key and value in attention layer"
+        },
+        {
+            "name": "stride_kv",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "The stride size for key and value in attention layer"
+        },
+        {
+            "name": "padding_q",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "The padding size for query in attention layer"
+        },
+        {
+            "name": "stride_q",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "The stride size for query in attention layer"
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        }
+    ],
+    "return": ""
+}

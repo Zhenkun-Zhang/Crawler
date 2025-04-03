@@ -1,0 +1,19 @@
+{
+    "api": "transformers.MarkupLMFeatureExtractor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "html_strings",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "html_strings",
+            "type": "str, List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The HTML string or batch of HTML strings from which to extract nodes and corresponding xpaths."
+        }
+    ],
+    "return": "BatchFeature"
+}

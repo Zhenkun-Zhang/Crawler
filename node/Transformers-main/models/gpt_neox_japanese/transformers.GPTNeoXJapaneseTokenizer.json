@@ -1,0 +1,67 @@
+{
+    "api": "transformers.GPTNeoXJapaneseTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "emoji_file",
+        "unk_token",
+        "pad_token",
+        "bos_token",
+        "eos_token",
+        "do_clean_text",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the vocabulary."
+        },
+        {
+            "name": "emoji_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the emoji."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The token used for padding"
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|startoftext|>",
+            "description": "The beginning of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "do_clean_text",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to clean text for URL, EMAIL, TEL, Japanese DATE and Japanese PRICE."
+        }
+    ],
+    "return": ""
+}

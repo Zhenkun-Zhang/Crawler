@@ -1,0 +1,43 @@
+{
+    "api": "transformers.DacFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size:",
+        "sampling_rate",
+        "padding_value",
+        "hop_length",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The feature dimension of the extracted features. Use 1 for mono, 2 for stereo."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the audio waveform should be digitalized, expressed in hertz (Hz)."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The value that is used for padding."
+        },
+        {
+            "name": "hop_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Overlap length between successive windows."
+        }
+    ],
+    "return": ""
+}

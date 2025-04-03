@@ -1,0 +1,25 @@
+{
+    "api": "transformers.TFPreTrainedModel.serving",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs"
+    ],
+    "params": [
+        {
+            "name": "Method",
+            "type": "used for serving the model. Does not have a specific signature, but will be specialized as concrete",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "functions",
+            "type": "when saving with save_pretrained.",
+            "optional": false,
+            "default": "",
+            "description": "inputs (Dict[str, tf.Tensor]):The input of the saved model as a dictionary of tensors."
+        }
+    ],
+    "return": ""
+}

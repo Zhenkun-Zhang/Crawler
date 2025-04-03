@@ -1,0 +1,11 @@
+{
+    "api": "transformers.model_addition_debugger_context",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model",
+        "debug_path"
+    ],
+    "params": [],
+    "return": ""
+}

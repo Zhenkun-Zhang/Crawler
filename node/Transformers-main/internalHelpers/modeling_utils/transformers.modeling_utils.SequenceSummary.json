@@ -1,0 +1,19 @@
+{
+    "api": "transformers.modeling_utils.SequenceSummary",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PretrainedConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The config used by the model. Relevant arguments in the config class of the model are (refer to the actualconfig class of your model for the default values it uses):summary_type (str) — The method to use to make this summary. Accepted values are:last — Take the last token hidden state (like XLNet)first — Take the first token hidden state (like Bert)mean — Take the mean of all tokens hidden statescls_index — Supply a Tensor of classification token position (GPT/GPT-2)attn — Not implemented now, use multi-head attentionsummary_use_proj (bool) — Add a projection after the vector extraction.summary_proj_to_labels (bool) — If True, the projection outputs to config.num_labels classes(otherwise to config.hidden_size).summary_activation (Optional[str]) — Set to tanh to add a tanh activation to the output,another string or None will add no activation.summary_first_dropout (float) — Optional dropout probability before the projection and activation.summary_last_dropout (float)— Optional dropout probability after the projection and activation."
+        }
+    ],
+    "return": ""
+}

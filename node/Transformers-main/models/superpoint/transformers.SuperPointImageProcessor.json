@@ -1,0 +1,52 @@
+{
+    "api": "transformers.SuperPointImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "do_rescale",
+        "rescale_factor",
+        "do_grayscale",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to resize the images (height, width) dimensions to the specified size. Can be overridenby do_resize in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 480, \"width\": 640}):Resolution of the output image after resize is applied. Only has an effect if do_resize is set toTrue. Can be overriden by size in the preprocess method.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overriden by do_rescale inthe preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overriden by rescale_factor in the preprocessmethod."
+        },
+        {
+            "name": "do_grayscale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to grayscale. Can be overriden by do_grayscale in the preprocess method."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,42 @@
+{
+    "api": "transformers.modeling_tf_utils.TFConv1D",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "nf",
+        "nx",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "nf",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of output features."
+        },
+        {
+            "name": "nx",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of input features."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation to use to initialize the weights."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments passed along to the __init__ of keras.layers.Layer."
+        }
+    ],
+    "return": ""
+}

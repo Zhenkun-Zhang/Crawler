@@ -1,0 +1,103 @@
+{
+    "api": "transformers.TvltForAudioVisualClassification.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "audio_values",
+        "pixel_mask",
+        "audio_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "labels",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_frames, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using TvltProcessor. See TvltProcessor.call() fordetails."
+        },
+        {
+            "name": "audio_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Audio values. Audio values can be obtained using TvltProcessor. See TvltProcessor.call() fordetails."
+        },
+        {
+            "name": "pixel_mask",
+            "type": "torch.FloatTensor of shape (batch_size, num_pixel_patches)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel masks. Pixel masks can be obtained using TvltProcessor. See TvltProcessor.call() fordetails."
+        },
+        {
+            "name": "audio_mask",
+            "type": "torch.FloatTensor of shape (batch_size, num_audio_patches)",
+            "optional": false,
+            "default": "",
+            "description": "Audio masks. Audio masks can be obtained using TvltProcessor. See TvltProcessor.call() fordetails."
+        },
+        {
+            "name": "pixel_values_mixed",
+            "type": "torch.FloatTensor of shape (batch_size, num_frames, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values that mix positive and negative samples in Tvlt vision-audio matching. Pixel values mixed canbe obtained using TvltProcessor. See TvltProcessor.call() for details."
+        },
+        {
+            "name": "pixel_mask_mixed",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel masks of pixel_values_mixed. Pixel masks mixed can be obtained using TvltProcessor. SeeTvltProcessor.call() for details."
+        },
+        {
+            "name": "mask_pixel",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to mask pixel for MAE tasks. Only set to True in TvltForPreTraining."
+        },
+        {
+            "name": "mask_audio",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to mask audio for MAE tasks. Only set to True in TvltForPreTraining."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, num_labels",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the audiovisual loss. Indices should be in [0, ..., num_classes-1] where num_classesrefers to the number of classes in audiovisual tasks."
+        }
+    ],
+    "return": "transformers.modeling_outputs.SequenceClassifierOutput or tuple(torch.FloatTensor)"
+}

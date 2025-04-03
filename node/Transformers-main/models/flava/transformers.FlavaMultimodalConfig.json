@@ -1,0 +1,99 @@
+{
+    "api": "transformers.FlavaMultimodalConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size:",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "qkv_bias",
+        "use_cls_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to add a bias to the queries, keys and values."
+        },
+        {
+            "name": "use_cls_token",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use an extra CLS token for multimodal settings. Usually needed by the FLAVA model."
+        }
+    ],
+    "return": ""
+}

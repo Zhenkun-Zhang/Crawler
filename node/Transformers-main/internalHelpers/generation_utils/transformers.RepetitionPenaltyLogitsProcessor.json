@@ -1,0 +1,19 @@
+{
+    "api": "transformers.RepetitionPenaltyLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "penalty:",
+        "float"
+    ],
+    "params": [
+        {
+            "name": "penalty",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The parameter for repetition penalty. 1.0 means no penalty. Above 1.0 penalizes previously generatedtokens. Between 0.0 and 1.0 rewards previously generated tokens."
+        }
+    ],
+    "return": ""
+}

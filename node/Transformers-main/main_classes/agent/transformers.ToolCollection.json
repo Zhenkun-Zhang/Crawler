@@ -1,0 +1,27 @@
+{
+    "api": "transformers.ToolCollection",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "collection_slug:",
+        "str",
+        "token"
+    ],
+    "params": [
+        {
+            "name": "collection_slug",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The collection slug referencing the collection."
+        },
+        {
+            "name": "token",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The authentication token if the collection is private."
+        }
+    ],
+    "return": ""
+}

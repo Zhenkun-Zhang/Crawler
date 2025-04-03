@@ -1,0 +1,161 @@
+{
+    "api": "transformers.FlavaForPreTraining.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "input_ids_masked",
+        "pixel_values",
+        "codebook_pixel_values",
+        "attention_mask",
+        "token_type_ids",
+        "bool_masked_pos",
+        "position_ids",
+        "image_attention_mask",
+        "skip_unmasked_multimodal_encoder",
+        "mlm_labels",
+        "mim_labels",
+        "itm_labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "return_loss",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids_masked",
+            "type": "torch.LongTensor of shape (batch_size, text_seq_len)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. These ones are the masked version of the original taskto be used with MLM. Indices can be obtained using AutoTokenizer along withDataCollatorForMaskedLanguageModeling. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details. What are input IDs?"
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, text_seq_len)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Indices can be obtained using AutoTokenizer. SeePreTrainedTokenizer.encode() and PreTrainedTokenizer.call() for details. What are inputIDs?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.LongTensor of shape (batch_size, text_seq_len",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token.What are token type IDs?"
+        },
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeFlavaImageProcessor.call() for details."
+        },
+        {
+            "name": "bool_masked_pos",
+            "type": "torch.BoolTensor of shape (batch_size, image_num_patches)",
+            "optional": false,
+            "default": "",
+            "description": "Boolean masked positions. Indicates which patches are masked (1) and which arent (0)."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained position encodings."
+        },
+        {
+            "name": "image_attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, image_num_patches",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices specifically for images. Mask values selectedin [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "skip_unmasked_multimodal_encoder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Skip any calculations for multimodal encoder for unmasked inputs. FLAVA pretraining doesnt need unmaskedmultimodal embeddings or outputs as of now."
+        },
+        {
+            "name": "mlm_labels",
+            "type": "torch.LongTensor of shape (batch_size, text_seq_len",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the left-to-right language and multimodal masked modeling loss (next word prediction).Indices should be in [-100, 0, ..., text_config.vocab_size - 1] (see input_ids docstring). Tokens withindices set to -100 are ignored (masked), the loss is only computed for the tokens with labels in [0, ..., text_config.vocab_size - 1]."
+        },
+        {
+            "name": "mim_labels",
+            "type": "torch.LongTensor of shape (batch_size, image_num_patches",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the image and multimodal masked modeling loss. Indices should be in [-100, 0, ..., image_config.vocab_size - 1]. Tokens with indices set to -100 are ignored (masked), the loss is onlycomputed for the tokens with labels in [0, ..., image_config.vocab_size - 1]. If not passed, they aregenerated automatically using the image codebook assigned to the model. By default, it usesFlavaImageCodebook. See FlavaImageCodebook to understand how to generate mim_labels."
+        },
+        {
+            "name": "itm_labels",
+            "type": "torch.LongTensor of shape (batch_size, 1",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the image-text matching loss. 0 means the pairs dont match and 1 means they match.The pairs with 0 will be skipped for calculation of MMM and global contrastive losses as well."
+        },
+        {
+            "name": "return_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return calculated loss or not."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, text_seq_len",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "Examples",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "```python",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "from PIL import Imageimport requestsfrom transformers import FlavaForPreTraining, AutoProcessor"
+        }
+    ],
+    "return": "transformers.models.flava.modeling_flava.FlavaForPreTrainingOutput or tuple(torch.FloatTensor)"
+}

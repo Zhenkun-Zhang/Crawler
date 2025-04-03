@@ -1,0 +1,38 @@
+{
+    "api": "transformers.BaseImageProcessorFast.resize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "torch.Tensor",
+        "size",
+        "interpolation",
+        "antialias",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Image to resize."
+        },
+        {
+            "name": "size",
+            "type": "SizeDict",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary in the format {height: int, width: int} specifying the size of the output image."
+        },
+        {
+            "name": "resample",
+            "type": "InterpolationMode",
+            "optional": true,
+            "default": "",
+            "description": "InterpolationMode filter to use when resizing the image e.g. InterpolationMode.BICUBIC."
+        }
+    ],
+    "return": "torch.Tensor"
+}

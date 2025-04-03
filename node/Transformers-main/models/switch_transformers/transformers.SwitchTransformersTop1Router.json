@@ -1,0 +1,11 @@
+{
+    "api": "transformers.SwitchTransformersTop1Router",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "SwitchTransformersConfig"
+    ],
+    "params": [],
+    "return": ""
+}

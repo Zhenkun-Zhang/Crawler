@@ -1,0 +1,91 @@
+{
+    "api": "transformers.LxmertModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "visual_feats",
+        "visual_pos",
+        "attention_mask",
+        "visual_attention_mask",
+        "token_type_ids",
+        "inputs_embeds",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "visual_feats",
+            "type": "torch.FloatTensor of shape (batch_size, num_visual_features, visual_feat_dim)",
+            "optional": false,
+            "default": "",
+            "description": "This input represents visual features. They ROI pooled object features from bounding boxes using afaster-RCNN model)These are currently not provided by the transformers library."
+        },
+        {
+            "name": "visual_pos",
+            "type": "torch.FloatTensor of shape (batch_size, num_visual_features, visual_pos_dim)",
+            "optional": false,
+            "default": "",
+            "description": "This input represents spacial features corresponding to their relative (via index) visual features. Thepre-trained LXMERT model expects these spacial features to be normalized bounding boxes on a scale of 0 toThese are currently not provided by the transformers library."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "visual_attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token.What are token type IDs?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.lxmert.modeling_lxmert.LxmertModelOutput or tuple(torch.FloatTensor)"
+}

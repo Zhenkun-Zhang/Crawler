@@ -1,0 +1,76 @@
+{
+    "api": "transformers.TvltFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "spectrogram_length",
+        "num_channels",
+        "patch_size",
+        "16]",
+        "feature_size",
+        "sampling_rate",
+        "hop_length_to_sampling_rate",
+        "n_fft",
+        "padding_value",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "spectrogram_length",
+            "type": "Dict[str, int] optional, defaults to 2048",
+            "optional": true,
+            "default": "2048",
+            "description": "The time length of each audio spectrogram."
+        },
+        {
+            "name": "num_channels",
+            "type": "int optional, defaults to 1",
+            "optional": true,
+            "default": "1",
+            "description": "Number of audio channels."
+        },
+        {
+            "name": "patch_size",
+            "type": "List[int] optional, defaults to [16, 16]",
+            "optional": true,
+            "default": "[16,",
+            "description": "The patch size of audio patch embedding."
+        },
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "The frequency length of audio spectrogram."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "44100",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in Hertz (Hz)."
+        },
+        {
+            "name": "hop_length_to_sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "86",
+            "description": "Hop length is length of the overlaping windows for the STFT used to obtain the Mel Frequency coefficients.For example, with sampling rate 44100, the hop length is 512, with 44100 / 512 = 86"
+        },
+        {
+            "name": "n_fft",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Size of the Fourier transform."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Padding value used to pad the audio. Should correspond to silences."
+        }
+    ],
+    "return": ""
+}

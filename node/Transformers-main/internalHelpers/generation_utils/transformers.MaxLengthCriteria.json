@@ -1,0 +1,27 @@
+{
+    "api": "transformers.MaxLengthCriteria",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "max_length:",
+        "int",
+        "max_position_embeddings"
+    ],
+    "params": [
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The maximum length that the output sequence can have in number of tokens."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum model length, as defined by the models config.max_position_embeddings attribute."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,10 @@
+{
+    "api": "transformers.FlaxLogitsProcessorList",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "iterable"
+    ],
+    "params": [],
+    "return": ""
+}

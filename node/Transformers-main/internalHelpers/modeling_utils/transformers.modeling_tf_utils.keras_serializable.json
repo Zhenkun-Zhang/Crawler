@@ -1,0 +1,16 @@
+{
+    "api": "transformers.modeling_tf_utils.keras_serializable",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [
+        {
+            "name": "cls",
+            "type": "a keras.layers.Layers subclass",
+            "optional": false,
+            "default": "",
+            "description": "Typically a TF.MainLayer class in this project, in general must accept a config argument to itsinitializer."
+        }
+    ],
+    "return": ""
+}

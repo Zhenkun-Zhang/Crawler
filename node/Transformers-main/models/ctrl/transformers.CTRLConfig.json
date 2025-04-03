@@ -1,0 +1,99 @@
+{
+    "api": "transformers.CTRLConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "n_positions",
+        "n_embd",
+        "dff",
+        "n_layer",
+        "n_head",
+        "resid_pdrop",
+        "embd_pdrop",
+        "layer_norm_epsilon",
+        "initializer_range",
+        "use_cache",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "246534",
+            "description": "Vocabulary size of the CTRL model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling CTRLModel or TFCTRLModel."
+        },
+        {
+            "name": "n_positions",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "n_embd",
+            "type": "int",
+            "optional": true,
+            "default": "1280",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "dff",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "Dimensionality of the inner dimension of the feed forward networks (FFN)."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "48",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "embd_pdrop",
+            "type": "int",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the embeddings."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon to use in the layer normalization layers"
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        }
+    ],
+    "return": ""
+}

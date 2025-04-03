@@ -1,0 +1,163 @@
+{
+    "api": "transformers.CanineConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "max_position_embeddings",
+        "type_vocab_size",
+        "initializer_range",
+        "layer_norm_eps",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "downsampling_rate",
+        "upsampling_kernel_size",
+        "num_hash_functions",
+        "num_hash_buckets",
+        "local_transformer_stride",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimension of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the deep Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoders."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimension of the intermediate (i.e., feed-forward) layer in the Transformer encoders."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoders, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "16384",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "type_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The vocabulary size of the token_type_ids passed when calling CanineModel."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Padding token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "57344",
+            "description": "Beginning of stream token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "57345",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "downsampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The rate at which to downsample the original character sequence length before applying the deep Transformerencoder."
+        },
+        {
+            "name": "upsampling_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The kernel size (i.e. the number of characters in each window) of the convolutional projection layer whenprojecting back from hidden_size*2 to hidden_size."
+        },
+        {
+            "name": "num_hash_functions",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "The number of hash functions to use. Each hash function has its own embedding matrix."
+        },
+        {
+            "name": "num_hash_buckets",
+            "type": "int",
+            "optional": true,
+            "default": "16384",
+            "description": "The number of hash buckets to use."
+        },
+        {
+            "name": "local_transformer_stride",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "The stride of the local attention of the first shallow Transformer encoder. Defaults to 128 for goodTPU/XLA memory alignment."
+        }
+    ],
+    "return": ""
+}

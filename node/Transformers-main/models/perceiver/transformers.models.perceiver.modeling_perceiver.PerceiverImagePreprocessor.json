@@ -1,0 +1,114 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverImagePreprocessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "prep_type",
+        "spatial_downsample",
+        "temporal_downsample",
+        "position_encoding_type",
+        "in_channels",
+        "out_channels",
+        "conv_after_patching",
+        "conv_after_patching_in_channels",
+        "conv2d_use_batchnorm",
+        "concat_or_add_pos",
+        "project_pos_dim",
+        "**position_encoding_kwargs"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "[PerceiverConfig]",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        },
+        {
+            "name": "prep_type",
+            "type": "str",
+            "optional": true,
+            "default": "conv",
+            "description": "Preprocessing type. Can be conv1x1, conv, patches, pixels."
+        },
+        {
+            "name": "spatial_downsample",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Spatial downsampling factor."
+        },
+        {
+            "name": "temporal_downsample",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Temporal downsampling factor (only relevant in case a time dimension is present)."
+        },
+        {
+            "name": "position_encoding_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Position encoding type. Can be fourier or trainable."
+        },
+        {
+            "name": "in_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of channels in the input."
+        },
+        {
+            "name": "out_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of channels in the output."
+        },
+        {
+            "name": "conv_after_patching",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to apply a convolutional layer after patching."
+        },
+        {
+            "name": "conv_after_patching_in_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of channels in the input of the convolutional layer after patching."
+        },
+        {
+            "name": "conv2d_use_batchnorm",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use batch normalization in the convolutional layer."
+        },
+        {
+            "name": "concat_or_add_pos",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "How to concatenate the position encoding to the input. Can be concat or add."
+        },
+        {
+            "name": "project_pos_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of the position encoding to project to. If -1, no projection is applied."
+        },
+        {
+            "name": "*position_encoding_kwargs",
+            "type": "s (Dict",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments for the position encoding."
+        }
+    ],
+    "return": ""
+}

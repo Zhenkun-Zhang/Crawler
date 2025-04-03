@@ -1,0 +1,91 @@
+{
+    "api": "transformers.BarkCoarseModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "past_key_values",
+        "attention_mask",
+        "position_ids",
+        "head_mask",
+        "labels",
+        "input_embeds",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit. Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details. What are input IDs?"
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks) that can be used (seepast_key_values input) to speed up sequential decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of allinput_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.Tensor of shape (encoder_layers, encoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "input_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, input_sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation.Here, due to Bark particularities, if past_key_values is used, input_embeds will be ignored and youhave to use input_ids. If past_key_values is not used and use_cache is set to True, input_embedsis used in priority instead of input_ids."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": ""
+}

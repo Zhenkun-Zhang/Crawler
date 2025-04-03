@@ -1,0 +1,54 @@
+{
+    "api": "transformers.ColPaliProcessor.score_retrieval",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "query_embeddings:",
+        "typing.List[ForwardRef('torch.Tensor')]]",
+        "passage_embeddings",
+        "typing.List[ForwardRef('torch.Tensor')]]",
+        "batch_size",
+        "output_dtype",
+        "output_device",
+        "str]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "query_embeddings",
+            "type": "Union[torch.Tensor, List[torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "Query embeddings."
+        },
+        {
+            "name": "passage_embeddings",
+            "type": "Union[torch.Tensor, List[torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "Passage embeddings."
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Batch size for computing scores."
+        },
+        {
+            "name": "output_dtype",
+            "type": "torch.dtype",
+            "optional": true,
+            "default": "",
+            "description": "The dtype of the output tensor.If None, the dtype of the input embeddings is used."
+        },
+        {
+            "name": "output_device",
+            "type": "torch.device,str",
+            "optional": true,
+            "default": "",
+            "description": "The device of the output tensor."
+        }
+    ],
+    "return": "torch.Tensor"
+}

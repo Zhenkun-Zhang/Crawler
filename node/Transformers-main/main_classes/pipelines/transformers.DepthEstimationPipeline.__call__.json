@@ -1,0 +1,37 @@
+{
+    "api": "transformers.DepthEstimationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "typing.Union[str,",
+        "typing.List[str],",
+        "ForwardRef('Image.Image'),",
+        "typing.List[ForwardRef('Image.Image')]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "str, List[str], PIL.Image,List[PIL.Image]",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing a http link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyThe pipeline accepts either a single image or a batch of images, which must then be passed as a string.Images in a batch must all be in the same format: all as http links, all as local paths, or all as PILimages."
+        },
+        {
+            "name": "parameters",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary of argument names to parameter values, to control pipeline behaviour.The only parameter available right now is timeout, which is the length of time, in seconds,that the pipeline should wait before giving up on trying to download an image."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The maximum time in seconds to wait for fetching images from the web. If None, no timeout is set andthe call may block forever."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,10 @@
+{
+    "api": "transformers.PipelineTool.encode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "raw_inputs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Constraint.does_advance",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_id:",
+        "int"
+    ],
+    "params": [],
+    "return": ""
+}

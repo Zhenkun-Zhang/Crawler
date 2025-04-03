@@ -1,0 +1,241 @@
+{
+    "api": "transformers.PreTrainedModel.from_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pretrained_model_name_or_path:",
+        "os.PathLike,",
+        "NoneType]",
+        "*model_args",
+        "config",
+        "str,",
+        "os.PathLike,",
+        "NoneType]",
+        "cache_dir",
+        "os.PathLike,",
+        "NoneType]",
+        "ignore_mismatched_sizes",
+        "force_download",
+        "local_files_only",
+        "token",
+        "str,",
+        "NoneType]",
+        "revision",
+        "use_safetensors",
+        "weights_only",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pretrained_model_name_or_path",
+            "type": "str,os.PathLike",
+            "optional": true,
+            "default": "",
+            "description": "Can be either:A string, the model id of a pretrained model hosted inside a model repo on huggingface.co.A path to a directory containing model weights saved usingsave_pretrained(), e.g., ./my_model_directory/.A path or url to a tensorflow index checkpoint file (e.g, ./tf_model/model.ckpt.index). Inthis case, from_tf should be set to True and a configuration object should be provided asconfig argument. This loading path is slower than converting the TensorFlow checkpoint in aPyTorch model using the provided conversion scripts and loading the PyTorch model afterwards.A path or url to a model folder containing a flax checkpoint file in .msgpack format (e.g,./flax_model/ containing flax_model.msgpack). In this case, from_flax should be set toTrue.None if you are both providing the configuration and state dictionary (resp. with keywordarguments config and state_dict)."
+        },
+        {
+            "name": "model_args",
+            "type": "sequence of positional arguments",
+            "optional": true,
+            "default": "",
+            "description": "All remaining positional arguments will be passed to the underlying models __init__ method."
+        },
+        {
+            "name": "config",
+            "type": "Union[PretrainedConfig, str, os.PathLike]",
+            "optional": true,
+            "default": "",
+            "description": "Can be either:an instance of a class derived from PretrainedConfig,a string or path valid as input to from_pretrained().Configuration for the model to use instead of an automatically loaded configuration. Configuration canbe automatically loaded when:The model is a model provided by the library (loaded with the model id string of a pretrainedmodel).The model was saved using save_pretrained() and is reloaded by supplying thesave directory.The model is loaded by supplying a local directory as pretrained_model_name_or_path and aconfiguration JSON file named config.json is found in the directory."
+        },
+        {
+            "name": "state_dict",
+            "type": "Dict[str, torch.Tensor]",
+            "optional": true,
+            "default": "",
+            "description": "A state dictionary to use instead of a state dictionary loaded from saved weights file.This option can be used if you want to create a model from a pretrained configuration but load your ownweights. In this case though, you should check if using save_pretrained() andfrom_pretrained() is not a simpler option."
+        },
+        {
+            "name": "cache_dir",
+            "type": "Union[str, os.PathLike]",
+            "optional": true,
+            "default": "",
+            "description": "Path to a directory in which a downloaded pretrained model configuration should be cached if thestandard cache should not be used."
+        },
+        {
+            "name": "from_tf",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Load the model weights from a TensorFlow checkpoint save file (see docstring ofpretrained_model_name_or_path argument)."
+        },
+        {
+            "name": "from_flax",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Load the model weights from a Flax checkpoint save file (see docstring ofpretrained_model_name_or_path argument)."
+        },
+        {
+            "name": "ignore_mismatched_sizes",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to raise an error if some of the weights from the checkpoint do not have the same sizeas the weights of the model (if for instance, you are instantiating a model with 10 labels from acheckpoint with 3 labels)."
+        },
+        {
+            "name": "force_download",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to force the (re-)download of the model weights and configuration files, overriding thecached versions if they exist."
+        },
+        {
+            "name": "resume_download",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Deprecated and ignored. All downloads are now resumed by default when possible.Will be removed in v5 of Transformers."
+        },
+        {
+            "name": "proxies",
+            "type": "Dict[str, str]",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary of proxy servers to use by protocol or endpoint, e.g., {http: foo.bar:3128, http://hostname: foo.bar:4012}. The proxies are used on each request."
+        },
+        {
+            "name": "output_loading_info(bool,",
+            "type": "optional, defaults to False",
+            "optional": true,
+            "default": "",
+            "description": "Whether ot not to also return a dictionary containing missing keys, unexpected keys and error messages."
+        },
+        {
+            "name": "local_files_only(bool,",
+            "type": "optional, defaults to False",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to only look at local files (i.e., do not try to download the model)."
+        },
+        {
+            "name": "token",
+            "type": "str,bool",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If True, or not specified, will usethe token generated when running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "revision",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use agit-based system for storing models and other artifacts on huggingface.co, so revision can be anyidentifier allowed by git.To test a pull request you made on the Hub, you can pass revision=refs/pr/<pr_number>."
+        },
+        {
+            "name": "attn_implementation",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The attention implementation to use in the model (if relevant). Can be any of eager (manual implementation of the attention), sdpa (using F.scaled_dot_product_attention), or flash_attention_2 (using Dao-AILab/flash-attention). By default, if available, SDPA will be used for torch>=2.1.1. The default is otherwise the manual eager implementation."
+        },
+        {
+            "name": "torch_dtype",
+            "type": "str,torch.dtype",
+            "optional": true,
+            "default": "",
+            "description": "Override the default torch.dtype and load the model under a specific dtype. The different optionsare:torch.float16 or torch.bfloat16 or torch.float: load in a specifieddtype, ignoring the models config.torch_dtype if one exists. If not specifiedthe model will get loaded in torch.float (fp32).auto - A torch_dtype entry in the config.json file of the model will beattempted to be used. If this entry isnt found then next check the dtype of the first weight inthe checkpoint thats of a floating point type and use that as dtype. This will load the modelusing the dtype it was saved in at the end of the training. It cant be used as an indicator of howthe model was trained. Since it could be trained in one of half precision dtypes, but saved in fp32.A string that is a valid torch.dtype. E.g. float32 loads the model in torch.float32, float16 loads in torch.float16 etc.For some models the dtype they were trained in is unknown - you may try to check the models paper orreach out to the authors and ask them to add this information to the models card and to insert thetorch_dtype entry in config.json on the hub."
+        },
+        {
+            "name": "device_map",
+            "type": "str,Dict[str, Union[int, str, torch.device]],int,torch.device",
+            "optional": true,
+            "default": "",
+            "description": "A map that specifies where each submodule should go. It doesnt need to be refined to eachparameter/buffer name, once a given module name is inside, every submodule of it will be sent to thesame device. If we only pass the device (e.g., cpu, cuda:1, mps, or a GPU ordinal ranklike 1) on which the model will be allocated, the device map will map the entire model to thisdevice. Passing device_map = 0 means put the whole model on GPU 0.To have Accelerate compute the most optimized device_map automatically, set device_map=auto. Formore information about each option see designing a devicemap."
+        },
+        {
+            "name": "max_memory",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary device identifier to maximum memory if using device_map. Will default to the maximum memory available for eachGPU and the available CPU RAM if unset."
+        },
+        {
+            "name": "tp_plan",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A torch tensor parallel plan, see here. Currently, it only acceptstp_plan=auto to use predefined plan based on the model. Note that if you use it, you should launch your script accordingly withtorchrun [args] script.py. This will be much faster than using a device_map, but has limitations."
+        },
+        {
+            "name": "offload_folder",
+            "type": "str,os.PathLike",
+            "optional": true,
+            "default": "",
+            "description": "If the device_map contains any value disk, the folder where we will offload weights."
+        },
+        {
+            "name": "offload_state_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, will temporarily offload the CPU state dict to the hard drive to avoid getting out of CPURAM if the weight of the CPU state dict + the biggest shard of the checkpoint does not fit. Defaults toTrue when there is some disk offload."
+        },
+        {
+            "name": "offload_buffers",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to offload the buffers with the model parameters."
+        },
+        {
+            "name": "quantization_config",
+            "type": "Union[QuantizationConfigMixin,Dict]",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary of configuration parameters or a QuantizationConfigMixin object for quantization (e.gbitsandbytes, gptq). There may be other quantization-related kwargs, including load_in_4bit andload_in_8bit, which are parsed by QuantizationConfigParser. Supported only for bitsandbytesquantizations and not preferred. consider inserting all such arguments into quantization_configinstead."
+        },
+        {
+            "name": "subfolder",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you canspecify the folder name here."
+        },
+        {
+            "name": "variant",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "If specified load weights from variant filename, e.g. pytorch_model..bin. variant isignored when using from_tf or from_flax."
+        },
+        {
+            "name": "use_safetensors",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use safetensors checkpoints. Defaults to None. If not specified and safetensorsis not installed, it will be set to False."
+        },
+        {
+            "name": "weights_only",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Indicates whether unpickler should be restricted to loading only tensors, primitive types,dictionaries and any types added via torch.serialization.add_safe_globals().When set to False, we can load wrapper tensor subclass weights."
+        },
+        {
+            "name": "key_mapping",
+            "type": "`Dict[str, str]",
+            "optional": true,
+            "default": "",
+            "description": "A potential mapping of the weight names if using a model on the Hub which is compatible to a Transformersarchitecture, but was not converted accordingly."
+        },
+        {
+            "name": "kwargs",
+            "type": "remaining dictionary of keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Can be used to update the configuration object (after it being loaded) and initiate the model (e.g.,output_attentions=True). Behaves differently depending on whether a config is provided orautomatically loaded:If a configuration is provided with config, **kwargs will be directly passed to theunderlying models __init__ method (we assume all relevant updates to the configuration havealready been done)If a configuration is not provided, kwargs will be first passed to the configuration classinitialization function (from_pretrained()). Each key of kwargs thatcorresponds to a configuration attribute will be used to override said attribute with thesupplied kwargs value. Remaining keys that do not correspond to any configuration attributewill be passed to the underlying models __init__ function."
+        }
+    ],
+    "return": ""
+}

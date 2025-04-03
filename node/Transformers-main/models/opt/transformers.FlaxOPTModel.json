@@ -1,0 +1,17 @@
+{
+    "api": "transformers.FlaxOPTModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "OPTConfig",
+        "input_shape",
+        "1)",
+        "seed",
+        "'jax.numpy.float32'>",
+        "_do_init",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

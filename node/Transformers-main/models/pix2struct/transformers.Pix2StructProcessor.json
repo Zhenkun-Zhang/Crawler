@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Pix2StructProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "Pix2StructImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of Pix2StructImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "Union[T5TokenizerFast, T5Tokenizer]",
+            "optional": false,
+            "default": "",
+            "description": "An instance of [T5TokenizerFast`] or [T5Tokenizer`]. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

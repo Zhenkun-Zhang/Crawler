@@ -1,0 +1,11 @@
+{
+    "api": "transformers.CodeAgent.parse_code_blob",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "result:",
+        "str"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Trainer.log_metrics",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "split",
+        "metrics"
+    ],
+    "params": [
+        {
+            "name": "split",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Mode/split name: one of train, eval, test"
+        },
+        {
+            "name": "metrics",
+            "type": "Dict[str, float]",
+            "optional": false,
+            "default": "",
+            "description": "The metrics returned from train/evaluate/predictmetrics: metrics dict"
+        }
+    ],
+    "return": ""
+}

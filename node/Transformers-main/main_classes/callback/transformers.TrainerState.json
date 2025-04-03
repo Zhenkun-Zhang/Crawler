@@ -1,0 +1,149 @@
+{
+    "api": "transformers.TrainerState",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "epoch:",
+        "global_step",
+        "max_steps",
+        "logging_steps",
+        "eval_steps",
+        "save_steps",
+        "train_batch_size",
+        "num_train_epochs",
+        "num_input_tokens_seen",
+        "total_flos",
+        "log_history",
+        "best_metric",
+        "best_global_step",
+        "best_model_checkpoint",
+        "is_local_process_zero",
+        "is_world_process_zero",
+        "is_hyper_param_search",
+        "trial_name",
+        "trial_params",
+        "stateful_callbacks"
+    ],
+    "params": [
+        {
+            "name": "epoch",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Only set during training, will represent the epoch the training is at (the decimal part being thepercentage of the current epoch completed)."
+        },
+        {
+            "name": "global_step",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "During training, represents the number of update steps completed."
+        },
+        {
+            "name": "max_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of update steps to do during the current training."
+        },
+        {
+            "name": "logging_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Log every X updates steps"
+        },
+        {
+            "name": "eval_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Run an evaluation every X steps."
+        },
+        {
+            "name": "save_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Save checkpoint every X updates steps."
+        },
+        {
+            "name": "train_batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The batch size for the training dataloader. Only needed whenauto_find_batch_size has been used."
+        },
+        {
+            "name": "num_input_tokens_seen",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "When tracking the inputs tokens, the number of tokens seen during training (number of input tokens, not thenumber of prediction tokens)."
+        },
+        {
+            "name": "total_flos",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The total number of floating operations done by the model since the beginning of training (stored as floatsto avoid overflow)."
+        },
+        {
+            "name": "log_history",
+            "type": "List[Dict[str, float]]",
+            "optional": true,
+            "default": "",
+            "description": "The list of logs done since the beginning of training."
+        },
+        {
+            "name": "best_metric",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "When tracking the best model, the value of the best metric encountered so far."
+        },
+        {
+            "name": "best_global_step",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "When tracking the best model, the step at which the best metric was encountered.Used for setting best_model_checkpoint."
+        },
+        {
+            "name": "best_model_checkpoint",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "When tracking the best model, the value of the name of the checkpoint for the best model encountered sofar."
+        },
+        {
+            "name": "is_local_process_zero",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not this process is the local (e.g., on one machine if training in a distributed fashion onseveral machines) main process."
+        },
+        {
+            "name": "is_world_process_zero",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not this process is the global main process (when training in a distributed fashion on severalmachines, this is only going to be True for one process)."
+        },
+        {
+            "name": "is_hyper_param_search",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether we are in the process of a hyper parameter search using Trainer.hyperparameter_search. This willimpact the way data will be logged in TensorBoard."
+        },
+        {
+            "name": "stateful_callbacks",
+            "type": "List[StatefulTrainerCallback]",
+            "optional": true,
+            "default": "",
+            "description": "Callbacks attached to the Trainer that should have their states be saved or restored.Relevant callbacks should implement a state and from_state function."
+        }
+    ],
+    "return": ""
+}

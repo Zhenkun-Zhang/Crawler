@@ -1,0 +1,35 @@
+{
+    "api": "transformers.Kosmos2Processor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "num_patch_index_tokens",
+        "*kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "CLIPImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of CLIPImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "XLMRobertaTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "An instance of [XLMRobertaTokenizerFast`]. The tokenizer is a required input."
+        },
+        {
+            "name": "num_patch_index_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The number of tokens that represent patch indices."
+        }
+    ],
+    "return": ""
+}

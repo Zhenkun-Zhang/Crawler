@@ -1,0 +1,74 @@
+{
+    "api": "transformers.TrainingArguments.set_training",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "learning_rate:",
+        "batch_size",
+        "weight_decay",
+        "num_epochs",
+        "max_steps",
+        "gradient_accumulation_steps",
+        "seed",
+        "gradient_checkpointing"
+    ],
+    "params": [
+        {
+            "name": "learning_rate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The initial learning rate for the optimizer."
+        },
+        {
+            "name": "batch_size",
+            "type": "int optional, defaults to 8",
+            "optional": true,
+            "default": "",
+            "description": "The batch size per device (GPU/TPU core/CPU…) used for training."
+        },
+        {
+            "name": "weight_decay",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The weight decay to apply (if not zero) to all layers except all bias and LayerNorm weights in theoptimizer."
+        },
+        {
+            "name": "num_train_epochs(float,",
+            "type": "optional, defaults to 3.0",
+            "optional": true,
+            "default": "",
+            "description": "Total number of training epochs to perform (if not an integer, will perform the decimal part percentsof the last epoch before stopping training)."
+        },
+        {
+            "name": "max_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set to a positive number, the total number of training steps to perform. Overrides num_train_epochs.For a finite dataset, training is reiterated through the dataset (if all data is exhausted) untilmax_steps is reached."
+        },
+        {
+            "name": "gradient_accumulation_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of updates steps to accumulate the gradients for, before performing a backward/update pass.When using gradient accumulation, one step is counted as one step with backward pass. Therefore,logging, evaluation, save will be conducted every gradient_accumulation_steps * xxx_step trainingexamples."
+        },
+        {
+            "name": "seed",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Random seed that will be set at the beginning of training. To ensure reproducibility across runs, usethe ~Trainer.model_init function to instantiate the model if it has some randomly initializedparameters."
+        },
+        {
+            "name": "gradient_checkpointing",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, use gradient checkpointing to save memory at the expense of slower backward pass."
+        }
+    ],
+    "return": ""
+}

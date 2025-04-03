@@ -1,0 +1,26 @@
+{
+    "api": "transformers.OmDetTurboProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "DetrImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of DetrImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "AutoTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of [PreTrainedTokenizer`]. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

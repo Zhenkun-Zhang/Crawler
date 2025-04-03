@@ -1,0 +1,108 @@
+{
+    "api": "transformers.FastSpeech2ConformerWithHifiGan.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "attention_mask",
+        "spectrogram_labels",
+        "duration_labels",
+        "pitch_labels",
+        "energy_labels",
+        "speaker_ids",
+        "lang_ids",
+        "speaker_embedding",
+        "return_dict",
+        "output_attentions",
+        "output_hidden_states",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Input sequence of text vectors."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing convolution and attention on padding token indices. Mask values selected in[0, 1]: 0 for tokens that are masked, 1 for tokens that are not masked."
+        },
+        {
+            "name": "spectrogram_labels",
+            "type": "torch.FloatTensor of shape (batch_size, max_spectrogram_length, num_mel_bins",
+            "optional": true,
+            "default": "",
+            "description": "Batch of padded target features."
+        },
+        {
+            "name": "duration_labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length + 1",
+            "optional": true,
+            "default": "",
+            "description": "Batch of padded durations."
+        },
+        {
+            "name": "pitch_labels",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length + 1, 1",
+            "optional": true,
+            "default": "",
+            "description": "Batch of padded token-averaged pitch."
+        },
+        {
+            "name": "energy_labels",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length + 1, 1",
+            "optional": true,
+            "default": "",
+            "description": "Batch of padded token-averaged energy."
+        },
+        {
+            "name": "speaker_ids",
+            "type": "torch.LongTensor of shape (batch_size, 1",
+            "optional": true,
+            "default": "",
+            "description": "Speaker ids used to condition features of speech output by the model."
+        },
+        {
+            "name": "lang_ids",
+            "type": "torch.LongTensor of shape (batch_size, 1",
+            "optional": true,
+            "default": "",
+            "description": "Language ids used to condition features of speech output by the model."
+        },
+        {
+            "name": "speaker_embedding",
+            "type": "torch.FloatTensor of shape (batch_size, embedding_dim",
+            "optional": true,
+            "default": "",
+            "description": "Embedding containing conditioning signals for the features of the speech."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a FastSpeech2ConformerModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions underreturned tensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensorsfor more detail."
+        }
+    ],
+    "return": "transformers.models.fastspeech2_conformer.modeling_fastspeech2_conformer.FastSpeech2ConformerWithHifiGanOutput or tuple(torch.FloatTensor)"
+}

@@ -1,0 +1,42 @@
+{
+    "api": "transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "last_hidden_state:",
+        "pooler_output",
+        "hidden_states",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the model."
+        },
+        {
+            "name": "pooler_output",
+            "type": "jnp.ndarray of shape (batch_size, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Last layer hidden-state of the first token of the sequence (classification token) further processed by aLinear layer and a Tanh activation function. The Linear layer weights are trained from the next sentenceprediction (classification) objective during pretraining."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

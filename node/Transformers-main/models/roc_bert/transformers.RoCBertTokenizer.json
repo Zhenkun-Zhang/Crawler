@@ -1,0 +1,45 @@
+{
+    "api": "transformers.RoCBertTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "word_shape_file",
+        "word_pronunciation_file",
+        "do_lower_case",
+        "do_basic_tokenize",
+        "never_split",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "tokenize_chinese_chars",
+        "strip_accents",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "Construct",
+            "type": "a RoCBert tokenizer. Based on WordPiece. This tokenizer inherits from PreTrainedTokenizer which",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "contains",
+            "type": "most of the main methods. Users should refer to this superclass for more information regarding those",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "methods.",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "vocab_file (str):File containing the vocabulary.word_shape_file (str):File containing the word => shape info.word_pronunciation_file (str):File containing the word => pronunciation info.do_lower_case (bool, optional, defaults to True):Whether or not to lowercase the input when tokenizing.do_basic_tokenize (bool, optional, defaults to True):Whether or not to do basic tokenization before WordPiece.never_split (Iterable, optional):Collection of tokens which will never be split during tokenization. Only has an effect whendo_basic_tokenize=Trueunk_token (str, optional, defaults to [UNK]):The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead.sep_token (str, optional, defaults to [SEP]):The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens.pad_token (str, optional, defaults to [PAD]):The token used for padding, for example when batching sequences of different lengths.cls_token (str, optional, defaults to [CLS]):The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens.mask_token (str, optional, defaults to [MASK]):The token used for masking values. This is the token used when training this model with masked languagemodeling. This is the token which the model will try to predict.tokenize_chinese_chars (bool, optional, defaults to True):Whether or not to tokenize Chinese characters. This should likely be deactivated for Japanese (see thisissue).strip_accents (bool, optional):Whether or not to strip all accents. If this option is not specified, then it will be determined by thevalue for lowercase (as in the original BERT)."
+        }
+    ],
+    "return": ""
+}

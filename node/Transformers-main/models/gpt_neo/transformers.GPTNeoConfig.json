@@ -1,0 +1,157 @@
+{
+    "api": "transformers.GPTNeoConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "max_position_embeddings",
+        "hidden_size",
+        "num_layers",
+        "attention_types",
+        "'local'],",
+        "12]]",
+        "num_heads",
+        "intermediate_size",
+        "window_size",
+        "activation_function",
+        "resid_dropout",
+        "embed_dropout",
+        "attention_dropout",
+        "classifier_dropout",
+        "layer_norm_epsilon",
+        "initializer_range",
+        "use_cache",
+        "bos_token_id",
+        "eos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "50257",
+            "description": "Vocabulary size of the GPT Neo model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling GPTNeoModel. Vocabulary size of the model. Defines the differenttokens that can be represented by the inputs_ids passed to the forward method of GPTNeoModel."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "attention_types",
+            "type": "List",
+            "optional": true,
+            "default": "[[[global,",
+            "description": "The type of attention for each layer in a List of the following format [[[attention_type], num_layerss]] e.g. for a 24 layer model [[[global], 24]] or [[[global, local], 12]] Choose thevalue of attention_type from [global, local]"
+        },
+        {
+            "name": "num_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "window_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The size of the sliding window for local attention."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu_new",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "resid_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Residual dropout used in the attention pattern."
+        },
+        {
+            "name": "embed_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "classifier_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Argument used when doing token classification, used in the model GPTNeoForTokenClassification. Thedropout ratio for the hidden layer."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50256",
+            "description": "The id of the beginning of sentence token in the vocabulary."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50256",
+            "description": "The id of the end of sentence token in the vocabulary."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,34 @@
+{
+    "api": "transformers.VisionTextDualEncoderConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "projection_dim",
+        "logit_scale_init_value",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of text and vision projection layers."
+        },
+        {
+            "name": "logit_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "2.6592",
+            "description": "The initial value of the logit_scale parameter. Default is used as per the original CLIP implementation."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

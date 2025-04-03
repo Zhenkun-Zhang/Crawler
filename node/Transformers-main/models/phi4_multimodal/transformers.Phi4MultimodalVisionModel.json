@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Phi4MultimodalVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Phi4MultimodalVisionConfig"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,8 @@
+{
+    "api": "transformers.trainer_pt_utils.DistributedTensorGatherer.finalize",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

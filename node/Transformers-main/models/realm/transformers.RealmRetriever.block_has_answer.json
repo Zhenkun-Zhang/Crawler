@@ -1,0 +1,11 @@
+{
+    "api": "transformers.RealmRetriever.block_has_answer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "concat_inputs",
+        "answer_ids"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,11 @@
+{
+    "api": "transformers.IdeficsForVisionText2Text",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "vision_model"
+    ],
+    "params": [],
+    "return": ""
+}

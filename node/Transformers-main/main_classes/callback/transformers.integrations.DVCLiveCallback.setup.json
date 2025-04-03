@@ -1,0 +1,12 @@
+{
+    "api": "transformers.integrations.DVCLiveCallback.setup",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args",
+        "state",
+        "model"
+    ],
+    "params": [],
+    "return": ""
+}

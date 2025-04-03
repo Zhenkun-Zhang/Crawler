@@ -1,0 +1,35 @@
+{
+    "api": "transformers.SeamlessM4TCodeHifiGan.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "spkr_id",
+        "lang_id"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using SeamlessM4TTextToUnitForConditionalGeneration. What are inputIDs?"
+        },
+        {
+            "name": "spkr_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id of the speaker used for speech synthesis. Must be lower than config.vocoder_num_spkrs."
+        },
+        {
+            "name": "tgt_lang",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The language id to use as target language for translation."
+        }
+    ],
+    "return": ""
+}

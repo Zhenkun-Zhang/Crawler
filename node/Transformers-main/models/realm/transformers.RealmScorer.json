@@ -1,0 +1,26 @@
+{
+    "api": "transformers.RealmScorer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "query_embedder"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "RealmConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        },
+        {
+            "name": "query_embedder",
+            "type": "RealmEmbedder",
+            "optional": false,
+            "default": "None",
+            "description": "Embedder for input sequences. If not specified, it will use the same embedder as candidate sequences."
+        }
+    ],
+    "return": ""
+}

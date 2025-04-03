@@ -1,0 +1,30 @@
+{
+    "api": "transformers.TFGPT2Tokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab:",
+        "typing.Dict[str,",
+        "int]",
+        "merges",
+        "max_length",
+        "pad_token_id"
+    ],
+    "params": [
+        {
+            "name": "vocab",
+            "type": "Dict[str, int]",
+            "optional": false,
+            "default": "",
+            "description": "Vocabulary dict for Byte Pair Tokenizer"
+        },
+        {
+            "name": "merges",
+            "type": "List[str]",
+            "optional": false,
+            "default": "",
+            "description": "Merges list for Byte Pair Tokenizer"
+        }
+    ],
+    "return": ""
+}

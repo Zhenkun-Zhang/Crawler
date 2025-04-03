@@ -1,0 +1,214 @@
+{
+    "api": "transformers.ProphetNetConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "activation_dropout:",
+        "activation_function",
+        "typing.Callable,",
+        "NoneType]",
+        "vocab_size",
+        "hidden_size",
+        "encoder_ffn_dim",
+        "num_encoder_layers",
+        "num_encoder_attention_heads",
+        "decoder_ffn_dim",
+        "num_decoder_layers",
+        "num_decoder_attention_heads",
+        "attention_dropout",
+        "dropout",
+        "max_position_embeddings",
+        "init_std",
+        "is_encoder_decoder",
+        "add_cross_attention",
+        "decoder_start_token_id",
+        "ngram",
+        "num_buckets",
+        "relative_max_distance",
+        "disable_ngram_loss",
+        "eps",
+        "use_cache",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Vocabulary size of the ProphetNET model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling ProphetNetModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the layers and the pooler layer."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "num_encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of encoder layers."
+        },
+        {
+            "name": "num_encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "num_decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "num_decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "add_cross_attention",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether cross-attention layers should be added to the model."
+        },
+        {
+            "name": "is_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether this is an encoder/decoder model."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Padding token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Beginning of stream token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "ngram",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of future tokens to predict. Set to 1 to be same as traditional Language model to predict next firsttoken."
+        },
+        {
+            "name": "num_buckets",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of buckets to use for each attention layer. This is for relative position calculation. See the[T5 paper](see https://arxiv.org/abs/1910.10683) for more details."
+        },
+        {
+            "name": "relative_max_distance",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Relative distances greater than this number will be put into the last same bucket. This is for relativeposition calculation. See the [T5 paper](see https://arxiv.org/abs/1910.10683) for more details."
+        },
+        {
+            "name": "disable_ngram_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether be trained predicting only the next first token."
+        },
+        {
+            "name": "eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Controls the epsilon parameter value for label smoothing in the loss calculation. If set to 0, no labelsmoothing is performed."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,39 @@
+{
+    "api": "transformers.BaseImageProcessorFast.normalize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "torch.Tensor",
+        "mean",
+        "collections.abc.Iterable[float]]",
+        "std",
+        "collections.abc.Iterable[float]]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Image to normalize."
+        },
+        {
+            "name": "mean",
+            "type": "torch.Tensor, float,Iterable[float]",
+            "optional": false,
+            "default": "",
+            "description": "Image mean to use for normalization."
+        },
+        {
+            "name": "std",
+            "type": "torch.Tensor, float,Iterable[float]",
+            "optional": false,
+            "default": "",
+            "description": "Image standard deviation to use for normalization."
+        }
+    ],
+    "return": "torch.Tensor"
+}

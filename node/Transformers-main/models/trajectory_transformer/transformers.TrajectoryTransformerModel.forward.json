@@ -1,0 +1,76 @@
+{
+    "api": "transformers.TrajectoryTransformerModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "trajectories:",
+        "typing.Optional[torch.LongTensor]",
+        "past_key_values",
+        "targets",
+        "attention_mask",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "trajectories",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Batch of trajectories, where a trajectory is a sequence of states, actions and rewards."
+        },
+        {
+            "name": "past_key_values",
+            "type": "Tuple[Tuple[torch.Tensor]] of length config.n_layers",
+            "optional": true,
+            "default": "",
+            "description": "Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (seepast_key_values output below). Can be used to speed up sequential decoding. The input_ids which havetheir past given to this model should not be passed as input_ids as they have already been computed."
+        },
+        {
+            "name": "targets",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Desired targets used to compute the loss."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.deprecated.trajectory_transformer.modeling_trajectory_transformer.TrajectoryTransformerOutput or tuple(torch.FloatTensor)"
+}

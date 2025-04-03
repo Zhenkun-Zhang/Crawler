@@ -1,0 +1,10 @@
+{
+    "api": "transformers.utils.add_start_docstrings_to_model_forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*docstr"
+    ],
+    "params": [],
+    "return": ""
+}

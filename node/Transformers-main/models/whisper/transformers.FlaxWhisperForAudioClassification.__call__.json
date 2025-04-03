@@ -1,0 +1,87 @@
+{
+    "api": "transformers.FlaxWhisperForAudioClassification.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_features:",
+        "Array",
+        "attention_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "train",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7fd23718d090>",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_features",
+            "type": "numpy.ndarray of shape (batch_size, feature_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values mel features extracted from the raw speech waveform. Raw speech waveform can be obtained byloading a .flac or .wav audio file into an array of type List[float] or a numpy.ndarray, e.g. viathe soundfile library (pip install soundfile). To prepare the array into input_features, theWhisperFeatureExtractor should be used for extracting the features, padding and conversion into atensor of type numpy.ndarray. See call()"
+        },
+        {
+            "name": "attention_mask",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Whisper does not support masking of the input_features, this argument is preserved for compatibility, butis not used. By default the silence in the input log mel spectrogram are ignored."
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "numpy.ndarray of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary. Indices can be obtained usingWhisperTokenizer. See PreTrainedTokenizer.encode() and PreTrainedTokenizer.call() for details.What are decoder input IDs? Whisper uses the decoder_start_token_id asthe starting token for decoder_input_ids generation."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "numpy.ndarray of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default. If you want to change padding behavior, you should modify to your needs. See diagram 1in the paper for more information on the default strategy."
+        },
+        {
+            "name": "position_ids",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Whisper does not use position_ids in the encoder as input_features is always the same size and doesntuse masking, but this argument is preserved for compatibility. By default the silence in the input log melspectrogram are ignored."
+        },
+        {
+            "name": "decoder_position_ids",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each decoder input sequence tokens in the position embeddings. Selected in therange [0, config.max_position_embeddings - 1]."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_flax_outputs.FlaxSequenceClassifierOutput or tuple(torch.FloatTensor)"
+}

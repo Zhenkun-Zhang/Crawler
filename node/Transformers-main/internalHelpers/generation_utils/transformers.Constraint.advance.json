@@ -1,0 +1,10 @@
+{
+    "api": "transformers.Constraint.advance",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        ")"
+    ],
+    "params": [],
+    "return": "token_ids (Union[int, List[int], None])"
+}

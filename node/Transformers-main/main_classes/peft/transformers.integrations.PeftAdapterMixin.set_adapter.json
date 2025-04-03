@@ -1,0 +1,20 @@
+{
+    "api": "transformers.integrations.PeftAdapterMixin.set_adapter",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "adapter_name:",
+        "typing.Union[typing.List[str],",
+        "str]"
+    ],
+    "params": [
+        {
+            "name": "adapter_name",
+            "type": "Union[List[str], str]",
+            "optional": false,
+            "default": "",
+            "description": "The name of the adapter to set. Can be also a list of strings to set multiple adapters."
+        }
+    ],
+    "return": ""
+}

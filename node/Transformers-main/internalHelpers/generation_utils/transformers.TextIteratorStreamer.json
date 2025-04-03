@@ -1,0 +1,43 @@
+{
+    "api": "transformers.TextIteratorStreamer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tokenizer:",
+        "'AutoTokenizer'",
+        "skip_prompt",
+        "timeout",
+        "**decode_kwargs"
+    ],
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "AutoTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "The tokenized used to decode the tokens."
+        },
+        {
+            "name": "skip_prompt",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to skip the prompt to .generate() or not. Useful e.g. for chatbots."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The timeout for the text queue. If None, the queue will block indefinitely. Useful to handle exceptionsin .generate(), when it is called in a separate thread."
+        },
+        {
+            "name": "decode_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments to pass to the tokenizers decode method."
+        }
+    ],
+    "return": ""
+}

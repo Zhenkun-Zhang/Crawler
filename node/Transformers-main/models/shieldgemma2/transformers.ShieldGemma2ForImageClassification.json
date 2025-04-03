@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ShieldGemma2ForImageClassification",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "ShieldGemma2Config"
+    ],
+    "params": [],
+    "return": ""
+}

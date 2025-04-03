@@ -1,0 +1,91 @@
+{
+    "api": "transformers.Adafactor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "params",
+        "lr",
+        "eps",
+        "0.001)",
+        "clip_threshold",
+        "decay_rate",
+        "beta1",
+        "weight_decay",
+        "scale_parameter",
+        "relative_step",
+        "warmup_init"
+    ],
+    "params": [
+        {
+            "name": "params",
+            "type": "Iterable[nn.parameter.Parameter]",
+            "optional": false,
+            "default": "",
+            "description": "Iterable of parameters to optimize or dictionaries defining parameter groups."
+        },
+        {
+            "name": "lr",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The external learning rate."
+        },
+        {
+            "name": "eps",
+            "type": "Tuple[float, float]",
+            "optional": true,
+            "default": "(1e-30,",
+            "description": "Regularization constants for square gradient and parameter scale respectively"
+        },
+        {
+            "name": "clip_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Threshold of root mean square of final gradient update"
+        },
+        {
+            "name": "decay_rate",
+            "type": "float",
+            "optional": true,
+            "default": "-0.8",
+            "description": "Coefficient used to compute running averages of square"
+        },
+        {
+            "name": "beta1",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "Coefficient used for computing running averages of gradient"
+        },
+        {
+            "name": "weight_decay",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Weight decay (L2 penalty)"
+        },
+        {
+            "name": "scale_parameter",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "If True, learning rate is scaled by root mean square"
+        },
+        {
+            "name": "relative_step",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "If True, time-dependent learning rate is computed instead of external learning rate"
+        },
+        {
+            "name": "warmup_init",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Time-dependent learning rate computation depends on whether warm-up initialization is being used"
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,35 @@
+{
+    "api": "transformers.SynthIDTextWatermarkDetector",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "detector_module:",
+        "BayesianDetectorModel",
+        "logits_processor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "detector_module",
+            "type": "BayesianDetectorModel",
+            "optional": false,
+            "default": "",
+            "description": "Bayesian detector module object initialized with parameters.Check https://github.com/huggingface/transformers-research-projects/tree/main/synthid_text for usage."
+        },
+        {
+            "name": "logits_processor",
+            "type": "SynthIDTextWatermarkLogitsProcessor",
+            "optional": false,
+            "default": "",
+            "description": "The logits processor used for watermarking."
+        },
+        {
+            "name": "tokenizer",
+            "type": "Any",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer used for the model."
+        }
+    ],
+    "return": ""
+}

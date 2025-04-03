@@ -1,0 +1,203 @@
+{
+    "api": "transformers.Gemma2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "num_key_value_heads",
+        "head_dim",
+        "hidden_activation",
+        "max_position_embeddings",
+        "initializer_range",
+        "rms_norm_eps",
+        "use_cache",
+        "pad_token_id",
+        "eos_token_id",
+        "bos_token_id",
+        "tie_word_embeddings",
+        "rope_theta",
+        "attention_bias",
+        "attention_dropout",
+        "query_pre_attn_scalar",
+        "sliding_window",
+        "final_logit_softcapping",
+        "attn_logit_softcapping",
+        "cache_implementation",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "256000",
+            "description": "Vocabulary size of the Gemma2 model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling Gemma2Model"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "2304",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "9216",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "26",
+            "description": "Number of hidden layers in the Transformer decoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "This is the number of key_value heads that should be used to implement Grouped Query Attention. Ifnum_key_value_heads=num_attention_heads, the model will use Multi Head Attention (MHA), ifnum_key_value_heads=1 the model will use Multi Query Attention (MQA) otherwise GQA is used. Whenconverting a multi-head checkpoint to a GQA checkpoint, each group key and value head should be constructedby meanpooling all the original heads within that group. For more details checkout thispaper. If it is not specified, will default tonum_attention_heads."
+        },
+        {
+            "name": "head_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The attention head dimension."
+        },
+        {
+            "name": "hidden_activation",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu_pytorch_tanh",
+            "description": "The non-linear activation function (function or string) in the decoder. Will default to gelu_pytorch_tanhif not specified. gelu_pytorch_tanh uses an approximation of the gelu activation function."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Padding token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Beginning of stream token id."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to tie weight embeddings"
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "attention_bias",
+            "type": "bool, defaults to False",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a bias in the query, key, value and output projection layers during self-attention."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "query_pre_attn_scalar",
+            "type": "float",
+            "optional": true,
+            "default": "256",
+            "description": "scaling factor used on the attention scores"
+        },
+        {
+            "name": "sliding_window",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "in Gemma2, every other layer uses sliding window attention. This is thesize of the sliding window."
+        },
+        {
+            "name": "final_logit_softcapping",
+            "type": "float",
+            "optional": true,
+            "default": "30.0",
+            "description": "scaling factor when applying tanh softcapping on the logits."
+        },
+        {
+            "name": "attn_logit_softcapping",
+            "type": "float",
+            "optional": true,
+            "default": "50.0",
+            "description": "scaling factor when applying tanh softcapping on the attention scores."
+        },
+        {
+            "name": "cache_implementation",
+            "type": "str",
+            "optional": true,
+            "default": "hybrid",
+            "description": "the cache type to be used with generate."
+        }
+    ],
+    "return": ""
+}

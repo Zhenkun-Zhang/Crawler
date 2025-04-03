@@ -1,0 +1,43 @@
+{
+    "api": "transformers.TapasTokenizer.convert_logits_to_predictions",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "data",
+        "logits",
+        "logits_agg",
+        "cell_classification_threshold",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "data",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary mapping features to actual values. Should be created using TapasTokenizer."
+        },
+        {
+            "name": "logits",
+            "type": "torch.Tensor,tf.Tensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Tensor containing the logits at the token level."
+        },
+        {
+            "name": "logits_agg",
+            "type": "torch.Tensor,tf.Tensor of shape (batch_size, num_aggregation_labels",
+            "optional": true,
+            "default": "None",
+            "description": "Tensor containing the aggregation logits."
+        },
+        {
+            "name": "cell_classification_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "Threshold to be used for cell selection. All table cells for which their probability is larger thanthis threshold will be selected."
+        }
+    ],
+    "return": "tuple comprising various elements depending on the inputs"
+}

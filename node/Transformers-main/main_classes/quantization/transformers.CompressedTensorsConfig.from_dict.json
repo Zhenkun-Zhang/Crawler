@@ -1,0 +1,35 @@
+{
+    "api": "transformers.CompressedTensorsConfig.from_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "config_dict",
+        "return_unused_kwargs",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "config_dict",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary that will be used to instantiate the configuration object."
+        },
+        {
+            "name": "return_unused_kwargs",
+            "type": "bool,optional, defaults to False",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to return a list of unused keyword arguments. Used for from_pretrained method inPreTrainedModel."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "Additional parameters from which to initialize the configuration object."
+        }
+    ],
+    "return": "QuantizationConfigMixin"
+}

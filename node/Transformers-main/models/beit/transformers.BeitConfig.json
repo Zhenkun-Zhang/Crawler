@@ -1,0 +1,262 @@
+{
+    "api": "transformers.BeitConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "image_size",
+        "patch_size",
+        "num_channels",
+        "use_mask_token",
+        "use_absolute_position_embeddings",
+        "use_relative_position_bias",
+        "use_shared_relative_position_bias",
+        "layer_scale_init_value",
+        "drop_path_rate",
+        "use_mean_pooling",
+        "pool_scales",
+        "2,",
+        "3,",
+        "6]",
+        "use_auxiliary_head",
+        "auxiliary_loss_weight",
+        "auxiliary_channels",
+        "auxiliary_num_convs",
+        "auxiliary_concat_input",
+        "semantic_loss_ignore_index",
+        "out_features",
+        "out_indices",
+        "add_fpn",
+        "reshape_hidden_states",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "Vocabulary size of the BEiT model. Defines the number of different image tokens that can be used duringpre-training."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "use_mask_token",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a mask token for masked image modeling."
+        },
+        {
+            "name": "use_absolute_position_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use BERT-style absolute position embeddings."
+        },
+        {
+            "name": "use_relative_position_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use T5-style relative position embeddings in the self-attention layers."
+        },
+        {
+            "name": "use_shared_relative_position_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use the same relative position embeddings across all self-attention layers of the Transformer."
+        },
+        {
+            "name": "layer_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Scale to use in the self-attention layers. 0.1 for base, 1e-5 for large. Set 0 to disable layer scale."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Stochastic depth rate per sample (when applied in the main path of residual layers)."
+        },
+        {
+            "name": "use_mean_pooling",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to mean pool the final hidden states of the patches instead of using the final hidden state of theCLS token, before applying the classification head."
+        },
+        {
+            "name": "pool_scales",
+            "type": "Tuple[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "Pooling scales used in Pooling Pyramid Module applied on the last feature map."
+        },
+        {
+            "name": "use_auxiliary_head",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use an auxiliary head during training."
+        },
+        {
+            "name": "auxiliary_loss_weight",
+            "type": "float",
+            "optional": true,
+            "default": "0.4",
+            "description": "Weight of the cross-entropy loss of the auxiliary head."
+        },
+        {
+            "name": "auxiliary_channels",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Number of channels to use in the auxiliary head."
+        },
+        {
+            "name": "auxiliary_num_convs",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of convolutional layers to use in the auxiliary head."
+        },
+        {
+            "name": "auxiliary_concat_input",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to concatenate the output of the auxiliary head with the input before the classification layer."
+        },
+        {
+            "name": "semantic_loss_ignore_index",
+            "type": "int",
+            "optional": true,
+            "default": "255",
+            "description": "The index that is ignored by the loss function of the semantic segmentation model."
+        },
+        {
+            "name": "out_features",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of features to output. Can be any of stem, stage1, stage2, etc.(depending on how many stages the model has). If unset and out_indices is set, will default to thecorresponding stages. If unset and out_indices is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        },
+        {
+            "name": "out_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of indices of features to output. Can be any of 0, 1, 2, etc. (depending on howmany stages the model has). If unset and out_features is set, will default to the corresponding stages.If unset and out_features is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        },
+        {
+            "name": "add_fpn",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to add a FPN as part of the backbone. Only relevant for BeitBackbone."
+        },
+        {
+            "name": "reshape_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to reshape the feature maps to 4D tensors of shape (batch_size, hidden_size, height, width) incase the model is used as backbone. If False, the feature maps will be 3D tensors of shape (batch_size, seq_len, hidden_size). Only relevant for BeitBackbone."
+        }
+    ],
+    "return": ""
+}

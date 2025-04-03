@@ -1,0 +1,29 @@
+{
+    "api": "transformers.TimmWrapperImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "pretrained_cfg:",
+        "typing.Dict[str,",
+        "typing.Any]",
+        "architecture",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pretrained_cfg",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "The configuration of the pretrained model used to resolve evaluation andtraining transforms."
+        },
+        {
+            "name": "architecture",
+            "type": "Optional[str]",
+            "optional": true,
+            "default": "",
+            "description": "Name of the architecture of the model."
+        }
+    ],
+    "return": ""
+}

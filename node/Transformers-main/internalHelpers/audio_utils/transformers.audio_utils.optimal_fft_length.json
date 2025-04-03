@@ -1,0 +1,11 @@
+{
+    "api": "transformers.audio_utils.optimal_fft_length",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "window_length:",
+        "int"
+    ],
+    "params": [],
+    "return": ""
+}

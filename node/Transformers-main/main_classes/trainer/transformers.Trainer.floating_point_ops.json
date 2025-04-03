@@ -1,0 +1,20 @@
+{
+    "api": "transformers.Trainer.floating_point_ops",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "Dict[str, Union[torch.Tensor, Any]]",
+            "optional": false,
+            "default": "",
+            "description": "The inputs and targets of the model."
+        }
+    ],
+    "return": "int"
+}

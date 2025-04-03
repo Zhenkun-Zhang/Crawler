@@ -1,0 +1,131 @@
+{
+    "api": "transformers.Speech2TextForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_features:",
+        "attention_mask",
+        "decoder_input_ids",
+        "decoder_attention_mask",
+        "head_mask",
+        "decoder_head_mask",
+        "cross_attn_head_mask",
+        "encoder_outputs",
+        "past_key_values",
+        "decoder_inputs_embeds",
+        "labels",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_features",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, feature_size)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of fbank features extracted from the raw speech waveform. Raw speech waveform can be obtainedby loading a .flac or .wav audio file into an array of type List[float] or a numpy.ndarray, e.g.via the soundfile library (pip install soundfile). To prepare the array into input_features, theAutoFeatureExtractor should be used for extracting the fbank features, padding and conversion into atensor of type torch.FloatTensor. See call()"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing convolution and attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "torch.LongTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary.Indices can be obtained using SpeechToTextTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are decoder input IDs?SpeechToText uses the eos_token_id as the starting token for decoder_input_ids generation. Ifpast_key_values is used, optionally only the last decoder_input_ids have to be input (seepast_key_values)."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default.If you want to change padding behavior, you should readmodeling_speech_to_text._prepare_decoder_attention_mask and modify to your needs. See diagram 1 in thepaper for more information on the default strategy."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.Tensor of shape (encoder_layers, encoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "decoder_head_mask",
+            "type": "torch.Tensor of shape (decoder_layers, decoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the decoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "cross_attn_head_mask",
+            "type": "torch.Tensor of shape (decoder_layers, decoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the cross-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple consists of (last_hidden_state, optional: hidden_states, optional: attentions)last_hidden_state of shape (batch_size, sequence_length, hidden_size), optional) is a sequence ofhidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and 2 additional tensors of shape(batch_size, num_heads, encoder_sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used (see past_key_values input) to speed up sequential decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "decoder_inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, target_sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing decoder_input_ids you can choose to directly pass an embeddedrepresentation. If past_key_values is used, optionally only the last decoder_inputs_embeds have to beinput (see past_key_values). This is useful if you want more control over how to convertdecoder_input_ids indices into associated vectors than the models internal embedding lookup matrix."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the language modeling loss. Indices should either be in [0, ..., config.vocab_size]or -100 (see input_ids docstring). Tokens with indices set to -100 are ignored (masked), the loss isonly computed for the tokens with labels in [0, ..., config.vocab_size]."
+        }
+    ],
+    "return": "transformers.modeling_outputs.Seq2SeqLMOutput or tuple(torch.FloatTensor)"
+}

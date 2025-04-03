@@ -1,0 +1,34 @@
+{
+    "api": "transformers.TimmWrapperImageProcessor.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "Image to preprocess. Expects a single or batch of images"
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to return."
+        }
+    ],
+    "return": ""
+}

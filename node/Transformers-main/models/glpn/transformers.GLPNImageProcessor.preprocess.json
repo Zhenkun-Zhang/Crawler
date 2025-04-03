@@ -1,0 +1,83 @@
+{
+    "api": "transformers.GLPNImageProcessor.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "transformers.utils.generic.TensorType,",
+        "typing.List[ForwardRef('PIL.Image.Image')],",
+        "typing.List[transformers.utils.generic.TensorType]]",
+        "do_resize",
+        "size_divisor",
+        "resample",
+        "do_rescale",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "data_format",
+        "<ChannelDimension.FIRST",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "PIL.Image.Image,TensorType,List[np.ndarray],List[TensorType]",
+            "optional": false,
+            "default": "",
+            "description": "Images to preprocess. Expects a single or batch of images with pixel values ranging from 0 to 255. Ifpassing in images with pixel values between 0 and 1, set do_normalize=False."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the input such that the (height, width) dimensions are a multiple of size_divisor."
+        },
+        {
+            "name": "size_divisor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "When do_resize is True, images are resized so their height and width are rounded down to theclosest multiple of size_divisor."
+        },
+        {
+            "name": "resample",
+            "type": "PIL.Image resampling filter",
+            "optional": true,
+            "default": "None",
+            "description": "PIL.Image resampling filter to use if resizing the image e.g. PILImageResampling.BILINEAR. Only hasan effect if do_resize is set to True."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to apply the scaling factor (to make pixel values floats between 0. and 1.)."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to return. Can be one of:None: Return a list of np.ndarray.TensorType.TENSORFLOW or tf: Return a batch of type tf.Tensor.TensorType.PYTORCH or pt: Return a batch of type torch.Tensor.TensorType.NUMPY or np: Return a batch of type np.ndarray.TensorType.JAX or jax: Return a batch of type jax.numpy.ndarray."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. Can be one of:ChannelDimension.FIRST: image in (num_channels, height, width) format.ChannelDimension.LAST: image in (height, width, num_channels) format."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. If unset, the channel dimension format is inferredfrom the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.none or ChannelDimension.NONE: image in (height, width) format."
+        }
+    ],
+    "return": ""
+}

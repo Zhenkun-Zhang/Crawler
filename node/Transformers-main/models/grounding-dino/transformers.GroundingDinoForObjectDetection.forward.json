@@ -1,0 +1,96 @@
+{
+    "api": "transformers.GroundingDinoForObjectDetection.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor",
+        "input_ids",
+        "token_type_ids",
+        "attention_mask",
+        "pixel_mask",
+        "encoder_outputs",
+        "typing.Tuple,",
+        "NoneType]",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "labels",
+        "typing.Union[torch.LongTensor,",
+        "torch.FloatTensor]]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Padding will be ignored by default should you provide it.Pixel values can be obtained using AutoImageProcessor. See GroundingDinoImageProcessor.call() fordetails."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, text_sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See BertTokenizer.call() for details."
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.LongTensor of shape (batch_size, text_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]: 0 corresponds to a sentence A token, 1 corresponds to a sentence B tokenWhat are token type IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, text_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are real (i.e. not masked),0 for tokens that are padding (i.e. masked).What are attention masks?"
+        },
+        {
+            "name": "pixel_mask",
+            "type": "torch.LongTensor of shape (batch_size, height, width",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding pixel values. Mask values selected in [0, 1]:1 for pixels that are real (i.e. not masked),0 for pixels that are padding (i.e. masked).What are attention masks?"
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple consists of (last_hidden_state_vision, optional: last_hidden_state_text, optional:vision_hidden_states, optional: text_hidden_states, optional: attentions)last_hidden_state_vision of shape (batch_size, sequence_length, hidden_size), optional) is a sequenceof hidden-states at the output of the last layer of the encoder. Used in the cross-attention of thedecoder."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "List[Dict] of len (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the bipartite matching loss. List of dicts, each dictionary containing at least thefollowing 2 keys: class_labels and boxes (the class labels and bounding boxes of an image in the batchrespectively). The class labels themselves should be a torch.LongTensor of len (number of bounding boxes in the image,) and the boxes a torch.FloatTensor of shape (number of bounding boxes in the image, 4)."
+        }
+    ],
+    "return": "transformers.models.grounding_dino.modeling_grounding_dino.GroundingDinoObjectDetectionOutput or tuple(torch.FloatTensor)"
+}

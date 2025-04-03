@@ -1,0 +1,277 @@
+{
+    "api": "transformers.FlaubertConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "pre_norm",
+        "layerdrop",
+        "vocab_size",
+        "emb_dim",
+        "n_layers",
+        "n_heads",
+        "dropout",
+        "attention_dropout",
+        "gelu_activation",
+        "sinusoidal_embeddings",
+        "causal",
+        "asm",
+        "n_langs",
+        "use_lang_emb",
+        "max_position_embeddings",
+        "embed_init_std",
+        "layer_norm_eps",
+        "init_std",
+        "bos_index",
+        "eos_index",
+        "pad_index",
+        "unk_index",
+        "mask_index",
+        "is_encoder",
+        "summary_type",
+        "summary_use_proj",
+        "summary_activation",
+        "summary_proj_to_labels",
+        "summary_first_dropout",
+        "start_n_top",
+        "end_n_top",
+        "mask_token_id",
+        "lang_id",
+        "pad_token_id",
+        "bos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pre_norm",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to apply the layer normalization before or after the feed forward layer following the attention ineach layer (Vaswani et al., Tensor2Tensor for Neural Machine Translation. 2018)"
+        },
+        {
+            "name": "layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Probability to drop layers during training (Fan et al., Reducing Transformer Depth on Demand withStructured Dropout. ICLR 2020)"
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30145",
+            "description": "Vocabulary size of the FlauBERT model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling FlaubertModel or TFFlaubertModel."
+        },
+        {
+            "name": "emb_dim",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for the attention mechanism"
+        },
+        {
+            "name": "gelu_activation",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use a gelu activation instead of relu."
+        },
+        {
+            "name": "sinusoidal_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to use sinusoidal positional embeddings instead of absolute positional embeddings."
+        },
+        {
+            "name": "causal",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the model should behave in a causal manner. Causal models use a triangular attention mask inorder to only attend to the left-side context instead if a bidirectional context."
+        },
+        {
+            "name": "asm",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to use an adaptive log softmax projection layer instead of a linear layer for the predictionlayer."
+        },
+        {
+            "name": "n_langs",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The number of languages the model handles. Set to 1 for monolingual models."
+        },
+        {
+            "name": "use_lang_emb",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use language embeddings. Some models use additional language embeddings, see the multilingualmodels page for informationon how to use them."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "embed_init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02209708691207961",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing the embedding matrices."
+        },
+        {
+            "name": "init_std",
+            "type": "int",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices except theembedding matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "bos_index",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The index of the beginning of sentence token in the vocabulary."
+        },
+        {
+            "name": "eos_index",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The index of the end of sentence token in the vocabulary."
+        },
+        {
+            "name": "pad_index",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The index of the padding token in the vocabulary."
+        },
+        {
+            "name": "unk_index",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The index of the unknown token in the vocabulary."
+        },
+        {
+            "name": "mask_index",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "The index of the masking token in the vocabulary."
+        },
+        {
+            "name": "is_encoder(bool,",
+            "type": "optional, defaults to True",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the initialized model should be a transformer encoder or decoder as seen in Vaswani et al."
+        },
+        {
+            "name": "summary_type",
+            "type": "string",
+            "optional": true,
+            "default": "first",
+            "description": "Argument used when doing sequence summary. Used in the sequence classification and multiple choice models.Has to be one of the following options:last: Take the last token hidden state (like XLNet).first: Take the first token hidden state (like BERT).mean: Take the mean of all tokens hidden states.cls_index: Supply a Tensor of classification token position (like GPT/GPT-2).attn: Not implemented now, use multi-head attention."
+        },
+        {
+            "name": "summary_use_proj",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Argument used when doing sequence summary. Used in the sequence classification and multiple choice models.Whether or not to add a projection after the vector extraction."
+        },
+        {
+            "name": "summary_activation",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Argument used when doing sequence summary. Used in the sequence classification and multiple choice models.Pass tanh for a tanh activation to the output, any other value will result in no activation."
+        },
+        {
+            "name": "summary_proj_to_labels",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Used in the sequence classification and multiple choice models.Whether the projection outputs should have config.num_labels or config.hidden_size classes."
+        },
+        {
+            "name": "summary_first_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Used in the sequence classification and multiple choice models.The dropout ratio to be used after the projection and activation."
+        },
+        {
+            "name": "start_n_top",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Used in the SQuAD evaluation script."
+        },
+        {
+            "name": "end_n_top",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Used in the SQuAD evaluation script."
+        },
+        {
+            "name": "mask_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Model agnostic parameter to identify masked tokens when generating text in an MLM context."
+        },
+        {
+            "name": "lang_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The ID of the language used by the model. This parameter is used when generating text in a given language."
+        }
+    ],
+    "return": ""
+}

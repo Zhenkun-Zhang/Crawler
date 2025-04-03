@@ -1,0 +1,11 @@
+{
+    "api": "transformers.NougatProcessor.post_process_generation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

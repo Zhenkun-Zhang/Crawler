@@ -1,0 +1,97 @@
+{
+    "api": "transformers.RTDetrResNetConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "embedding_size",
+        "hidden_sizes",
+        "512,",
+        "1024,",
+        "2048]",
+        "depths",
+        "4,",
+        "6,",
+        "3]",
+        "layer_type",
+        "hidden_act",
+        "downsample_in_first_stage",
+        "downsample_in_bottleneck",
+        "out_features",
+        "out_indices",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "embedding_size",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Dimensionality (hidden size) for the embedding layer."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[256,",
+            "description": "Dimensionality (hidden size) at each stage."
+        },
+        {
+            "name": "depths",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "Depth (number of layers) for each stage."
+        },
+        {
+            "name": "layer_type",
+            "type": "str",
+            "optional": true,
+            "default": "bottleneck",
+            "description": "The layer to use, it can be either basic (used for smaller models, like resnet-18 or resnet-34) orbottleneck (used for larger models like resnet-50 and above)."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function in each block. If string, gelu, relu, selu and gelu_neware supported."
+        },
+        {
+            "name": "downsample_in_first_stage",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "If True, the first stage will downsample the inputs using a stride of 2."
+        },
+        {
+            "name": "downsample_in_bottleneck",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "If True, the first conv 1x1 in ResNetBottleNeckLayer will downsample the inputs using a stride of 2."
+        },
+        {
+            "name": "out_features",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of features to output. Can be any of stem, stage1, stage2, etc.(depending on how many stages the model has). If unset and out_indices is set, will default to thecorresponding stages. If unset and out_indices is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        },
+        {
+            "name": "out_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of indices of features to output. Can be any of 0, 1, 2, etc. (depending on howmany stages the model has). If unset and out_features is set, will default to the corresponding stages.If unset and out_features is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        }
+    ],
+    "return": ""
+}

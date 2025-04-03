@@ -1,0 +1,20 @@
+{
+    "api": "transformers.modeling_tf_utils.get_initializer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "initializer_range:",
+        "float",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "initializer_range",
+            "type": "float, defaults to 0.02",
+            "optional": false,
+            "default": "",
+            "description": "Standard deviation of the initializer range."
+        }
+    ],
+    "return": "keras.initializers.TruncatedNormal"
+}

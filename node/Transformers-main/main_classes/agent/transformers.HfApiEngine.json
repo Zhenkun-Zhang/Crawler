@@ -1,0 +1,43 @@
+{
+    "api": "transformers.HfApiEngine",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "str",
+        "token",
+        "max_tokens",
+        "timeout"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The Hugging Face model ID to be used for inference. This can be a path or model identifier from the Hugging Face model hub."
+        },
+        {
+            "name": "token",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Token used by the Hugging Face API for authentication.If not provided, the class will use the token stored in the Hugging Face CLI configuration."
+        },
+        {
+            "name": "max_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum number of tokens allowed in the output."
+        },
+        {
+            "name": "timeout",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Timeout for the API request, in seconds."
+        }
+    ],
+    "return": ""
+}

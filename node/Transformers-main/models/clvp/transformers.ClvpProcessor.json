@@ -1,0 +1,26 @@
+{
+    "api": "transformers.ClvpProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "ClvpFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of ClvpFeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "ClvpTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of ClvpTokenizer. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

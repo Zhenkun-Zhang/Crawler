@@ -1,0 +1,11 @@
+{
+    "api": "transformers.TFDebertaV2PreTrainedModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

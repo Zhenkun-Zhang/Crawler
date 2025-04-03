@@ -1,0 +1,79 @@
+{
+    "api": "transformers.KerasMetricCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "metric_fn:",
+        "typing.Callable",
+        "eval_dataset",
+        "numpy.ndarray,",
+        "tensorflow.python.framework.tensor.Tensor,",
+        "tuple,",
+        "dict]",
+        "output_cols",
+        "label_cols",
+        "batch_size",
+        "predict_with_generate",
+        "use_xla_generation",
+        "generate_kwargs"
+    ],
+    "params": [
+        {
+            "name": "metric_fn",
+            "type": "Callable",
+            "optional": false,
+            "default": "",
+            "description": "Metric function provided by the user. It will be called with two arguments - predictions and labels.These contain the models outputs and matching labels from the dataset. It should return a dict mappingmetric names to numerical values."
+        },
+        {
+            "name": "eval_dataset",
+            "type": "tf.data.Dataset,dict,tuple,np.ndarray,tf.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Validation data to be used to generate predictions for the metric_fn."
+        },
+        {
+            "name": "output_cols",
+            "type": "`List[str]",
+            "optional": true,
+            "default": "",
+            "description": "A list of columns to be retained from the model output as the predictions. Defaults to all."
+        },
+        {
+            "name": "label_cols",
+            "type": "’List[str]",
+            "optional": true,
+            "default": "",
+            "description": "A list of columns to be retained from the input dataset as the labels. Will be autodetected if this is notsupplied."
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Batch size. Only used when the data is not a pre-batched tf.data.Dataset."
+        },
+        {
+            "name": "predict_with_generate",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether we should use model.generate() to get outputs for the model."
+        },
+        {
+            "name": "use_xla_generation",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If were generating, whether to compile model generation with XLA. This can massively increase the speed ofgeneration (up to 100X speedup) but will require a new XLA compilation for each input shape. When using XLAgeneration, its a good idea to pad your inputs to the same size, or to use the pad_to_multiple_ofargument in your tokenizer or DataCollator, which will reduce the number of unique input shapes andsave a lot of compilation time. This option has no effect is predict_with_generate is False."
+        },
+        {
+            "name": "generate_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments to pass to model.generate() when generating. Has no effect if predict_with_generateis False."
+        }
+    ],
+    "return": ""
+}

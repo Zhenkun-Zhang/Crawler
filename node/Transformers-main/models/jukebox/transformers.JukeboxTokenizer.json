@@ -1,0 +1,69 @@
+{
+    "api": "transformers.JukeboxTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "artists_file",
+        "genres_file",
+        "lyrics_file",
+        "version",
+        "'v2',",
+        "'v2']",
+        "max_n_lyric_tokens",
+        "n_genres",
+        "unk_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "artists_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file which contains a mapping between artists and ids. The default file supportsboth v2 and v3"
+        },
+        {
+            "name": "genres_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file which contain a mapping between genres and ids."
+        },
+        {
+            "name": "lyrics_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file which contains the accepted characters for the lyrics tokenization."
+        },
+        {
+            "name": "version",
+            "type": "List[str]",
+            "optional": true,
+            "default": "[v3,",
+            "description": "List of the tokenizer versions. The 5b-lyricss top level prior model was trained using v3 instead ofv2."
+        },
+        {
+            "name": "n_genres",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Maximum number of genres to use for composition."
+        },
+        {
+            "name": "max_n_lyric_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Maximum number of lyric tokens to keep."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        }
+    ],
+    "return": ""
+}

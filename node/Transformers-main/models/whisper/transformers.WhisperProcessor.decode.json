@@ -1,0 +1,11 @@
+{
+    "api": "transformers.WhisperProcessor.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

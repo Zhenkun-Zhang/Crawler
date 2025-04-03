@@ -1,0 +1,62 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverMultimodalDecoder",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PerceiverConfig",
+        "modalities",
+        "transformers.models.perceiver.modeling_perceiver.PerceiverAbstractDecoder]",
+        "num_outputs",
+        "output_num_channels",
+        "min_padding_size",
+        "subsampled_index_dims",
+        "transformers.models.perceiver.modeling_perceiver.PerceiverAbstractDecoder]]",
+        "**decoder_kwargs"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "[PerceiverConfig]",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        },
+        {
+            "name": "modalities",
+            "type": "Dict[str, PerceiverAbstractDecoder]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary mapping modality name to the decoder of that modality."
+        },
+        {
+            "name": "num_outputs",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of outputs of the decoder."
+        },
+        {
+            "name": "output_num_channels",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of channels in the output."
+        },
+        {
+            "name": "min_padding_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The minimum padding size for all modalities. The final output will have num_channels equal to the maximumchannels across all modalities plus min_padding_size."
+        },
+        {
+            "name": "subsampled_index_dims",
+            "type": "Dict[str, PerceiverAbstractDecoder]",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary mapping modality name to the subsampled index dimensions to use for the decoder query of thatmodality."
+        }
+    ],
+    "return": ""
+}

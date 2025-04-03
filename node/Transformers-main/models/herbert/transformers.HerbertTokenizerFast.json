@@ -1,0 +1,33 @@
+{
+    "api": "transformers.HerbertTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "tokenizer_file",
+        "cls_token",
+        "unk_token",
+        "pad_token",
+        "mask_token",
+        "sep_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "None",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": false,
+            "default": "None",
+            "description": "Path to the merges file."
+        }
+    ],
+    "return": ""
+}

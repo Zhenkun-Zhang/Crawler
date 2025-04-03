@@ -1,0 +1,36 @@
+{
+    "api": "transformers.DacModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "Tensor",
+        "n_quantizers",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "torch.Tensor of shape (batch_size, 1, time_steps)).",
+            "optional": false,
+            "default": "",
+            "description": "Audio data to encode,"
+        },
+        {
+            "name": "n_quantizers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of quantizers to use. If None, all quantizers are used. Default is None."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.dac.modeling_dac.DacOutput or tuple(torch.FloatTensor)"
+}

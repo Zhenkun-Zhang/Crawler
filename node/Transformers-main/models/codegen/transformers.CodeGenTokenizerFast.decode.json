@@ -1,0 +1,49 @@
+{
+    "api": "transformers.CodeGenTokenizerFast.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids:",
+        "typing.Union[int,",
+        "typing.List[int],",
+        "ForwardRef('np.ndarray'),",
+        "ForwardRef('torch.Tensor'),",
+        "ForwardRef('tf.Tensor')]",
+        "skip_special_tokens",
+        "clean_up_tokenization_spaces",
+        "truncate_before_pattern",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids",
+            "type": "Union[int, List[int], np.ndarray, torch.Tensor, tf.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "List of tokenized input ids. Can be obtained using the __call__ method."
+        },
+        {
+            "name": "skip_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to remove special tokens in the decoding."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean up the tokenization spaces. If None, will default toself.clean_up_tokenization_spaces (available in the tokenizer_config)."
+        },
+        {
+            "name": "truncate_before_pattern",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "A list of regular expression strings that will be used to truncate the returned string. This can beused to remove extra pieces of code (e.g. truncate if observing a comment symbol # at the beginningof a new line). An example pattern could be `[^#, re.escape(<|endoftext|>), ^, "
+        }
+    ],
+    "return": "str"
+}

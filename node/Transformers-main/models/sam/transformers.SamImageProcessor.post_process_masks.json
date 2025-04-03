@@ -1,0 +1,67 @@
+{
+    "api": "transformers.SamImageProcessor.post_process_masks",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "masks",
+        "original_sizes",
+        "reshaped_input_sizes",
+        "mask_threshold",
+        "binarize",
+        "pad_size",
+        "return_tensors",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "masks",
+            "type": "Union[List[torch.Tensor], List[np.ndarray], List[tf.Tensor]]",
+            "optional": false,
+            "default": "",
+            "description": "Batched masks from the mask_decoder in (batch_size, num_channels, height, width) format."
+        },
+        {
+            "name": "original_sizes",
+            "type": "Union[torch.Tensor, tf.Tensor, List[Tuple[int,int]]]",
+            "optional": false,
+            "default": "",
+            "description": "The original sizes of each image before it was resized to the models expected input shape, in (height,width) format."
+        },
+        {
+            "name": "reshaped_input_sizes",
+            "type": "Union[torch.Tensor, tf.Tensor, List[Tuple[int,int]]]",
+            "optional": false,
+            "default": "",
+            "description": "The size of each image as it is fed to the model, in (height, width) format. Used to remove padding."
+        },
+        {
+            "name": "mask_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The threshold to use for binarizing the masks."
+        },
+        {
+            "name": "binarize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to binarize the masks."
+        },
+        {
+            "name": "pad_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The target size the images were padded to before being passed to the model. If None, the target size isassumed to be the processors pad_size."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str",
+            "optional": true,
+            "default": "pt",
+            "description": "If pt, return PyTorch tensors. If tf, return TensorFlow tensors."
+        }
+    ],
+    "return": "(Union[torch.Tensor, tf.Tensor])"
+}

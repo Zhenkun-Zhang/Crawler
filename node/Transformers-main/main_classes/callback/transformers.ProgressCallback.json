@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ProgressCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "max_str_len:",
+        "int"
+    ],
+    "params": [],
+    "return": ""
+}

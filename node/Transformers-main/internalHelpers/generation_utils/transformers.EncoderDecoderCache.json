@@ -1,0 +1,11 @@
+{
+    "api": "transformers.EncoderDecoderCache",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "self_attention_cache:",
+        "cross_attention_cache"
+    ],
+    "params": [],
+    "return": ""
+}

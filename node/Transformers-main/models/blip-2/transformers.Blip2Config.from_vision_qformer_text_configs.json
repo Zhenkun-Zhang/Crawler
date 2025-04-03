@@ -1,0 +1,37 @@
+{
+    "api": "transformers.Blip2Config.from_vision_qformer_text_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "vision_config:",
+        "Blip2VisionConfig",
+        "qformer_config",
+        "text_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary of configuration options used to initialize Blip2VisionConfig."
+        },
+        {
+            "name": "qformer_config",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary of configuration options used to initialize Blip2QFormerConfig."
+        },
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of configuration options used to initialize any PretrainedConfig."
+        }
+    ],
+    "return": "Blip2Config"
+}

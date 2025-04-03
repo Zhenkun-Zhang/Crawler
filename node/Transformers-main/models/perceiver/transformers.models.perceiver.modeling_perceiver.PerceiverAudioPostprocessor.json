@@ -1,0 +1,35 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverAudioPostprocessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PerceiverConfig",
+        "in_channels",
+        "postproc_type"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "[PerceiverConfig]",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        },
+        {
+            "name": "in_channels",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of channels in the input."
+        },
+        {
+            "name": "postproc_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Postprocessor type to use. Currently, only patches is supported."
+        }
+    ],
+    "return": ""
+}

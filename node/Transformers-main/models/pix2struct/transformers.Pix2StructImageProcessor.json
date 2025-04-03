@@ -1,0 +1,52 @@
+{
+    "api": "transformers.Pix2StructImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_convert_rgb:",
+        "do_normalize",
+        "patch_size",
+        "int]",
+        "max_patches",
+        "is_vqa",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in the preprocessmethod. According to Pix2Struct paper and code, the image is normalized with its own mean and standarddeviation."
+        },
+        {
+            "name": "patch_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "max_patches",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum number of patches to extract from the image as per the Pix2Structpaper."
+        },
+        {
+            "name": "is_vqa",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the image processor is for the VQA task. If True and header_text is passed in, text isrendered onto the input images."
+        }
+    ],
+    "return": ""
+}

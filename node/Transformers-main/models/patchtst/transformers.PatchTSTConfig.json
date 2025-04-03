@@ -1,0 +1,327 @@
+{
+    "api": "transformers.PatchTSTConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_input_channels:",
+        "context_length",
+        "distribution_output",
+        "loss",
+        "patch_length",
+        "patch_stride",
+        "num_hidden_layers",
+        "d_model",
+        "num_attention_heads",
+        "share_embedding",
+        "channel_attention",
+        "ffn_dim",
+        "norm_type",
+        "norm_eps",
+        "attention_dropout",
+        "positional_dropout",
+        "path_dropout",
+        "ff_dropout",
+        "bias",
+        "activation_function",
+        "pre_norm",
+        "positional_encoding_type",
+        "use_cls_token",
+        "init_std",
+        "share_projection",
+        "scaling",
+        "bool,",
+        "NoneType]",
+        "do_mask_input",
+        "mask_type",
+        "random_mask_ratio",
+        "num_forecast_mask_patches",
+        "int,",
+        "NoneType]",
+        "channel_consistent_masking",
+        "unmasked_channel_indices",
+        "mask_value",
+        "pooling_type",
+        "head_dropout",
+        "prediction_length",
+        "num_targets",
+        "output_range",
+        "num_parallel_samples",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_input_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size of the target variable which by default is 1 for univariate targets. Would be > 1 in case ofmultivariate targets."
+        },
+        {
+            "name": "context_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The context length of the input sequence."
+        },
+        {
+            "name": "distribution_output",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The distribution emission head for the model when loss is nll. Could be either student_t, normal ornegative_binomial."
+        },
+        {
+            "name": "loss",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The loss function for the model corresponding to the distribution_output head. For parametricdistributions it is the negative log likelihood (nll) and for point estimates it is the mean squarederror mse."
+        },
+        {
+            "name": "patch_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Define the patch length of the patchification process."
+        },
+        {
+            "name": "patch_stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Define the stride of the patchification process."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the transformer layers."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "share_embedding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Sharing the input embedding across all channels."
+        },
+        {
+            "name": "channel_attention",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Activate channel attention block in the Transformer to allow channels to attend each other."
+        },
+        {
+            "name": "ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "norm_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Normalization at each Transformer layer. Can be batchnorm or layernorm."
+        },
+        {
+            "name": "norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "A value added to the denominator for numerical stability of normalization."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for the attention probabilities."
+        },
+        {
+            "name": "positional_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability in the positional embedding layer."
+        },
+        {
+            "name": "path_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout path in the residual block."
+        },
+        {
+            "name": "ff_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability used between the two layers of the feed-forward networks."
+        },
+        {
+            "name": "bias",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to add bias in the feed-forward networks."
+        },
+        {
+            "name": "activation_function",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function (string) in the Transformer.gelu and relu are supported."
+        },
+        {
+            "name": "pre_norm",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Normalization is applied before self-attention if pre_norm is set to True. Otherwise, normalization isapplied after residual block."
+        },
+        {
+            "name": "positional_encoding_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Positional encodings. Options random and sincos are supported."
+        },
+        {
+            "name": "use_cls_token",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether cls token is used."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated normal weight initialization distribution."
+        },
+        {
+            "name": "share_projection",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Sharing the projection layer across different channels in the forecast head."
+        },
+        {
+            "name": "scaling",
+            "type": "Union",
+            "optional": true,
+            "default": "",
+            "description": "Whether to scale the input targets via mean scaler, std scaler or no scaler if None. If True, thescaler is set to mean."
+        },
+        {
+            "name": "do_mask_input",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Apply masking during the pretraining."
+        },
+        {
+            "name": "mask_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Masking type. Only random and forecast are currently supported."
+        },
+        {
+            "name": "random_mask_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Masking ratio applied to mask the input data during random pretraining."
+        },
+        {
+            "name": "num_forecast_mask_patches",
+            "type": "int,list",
+            "optional": true,
+            "default": "",
+            "description": "Number of patches to be masked at the end of each batch sample. If it is an integer,all the samples in the batch will have the same number of masked patches. If it is a list,samples in the batch will be randomly masked by numbers defined in the list. This argument is only usedfor forecast pretraining."
+        },
+        {
+            "name": "channel_consistent_masking",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If channel consistent masking is True, all the channels will have the same masking pattern."
+        },
+        {
+            "name": "unmasked_channel_indices",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "Indices of channels that are not masked during pretraining. Values in the list are number between 1 andnum_input_channels"
+        },
+        {
+            "name": "mask_value",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Values in the masked patches will be filled by mask_value."
+        },
+        {
+            "name": "pooling_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Pooling of the embedding. mean, max and None are supported."
+        },
+        {
+            "name": "head_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for head."
+        },
+        {
+            "name": "prediction_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The prediction horizon that the model will output."
+        },
+        {
+            "name": "num_targets",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of targets for regression and classification tasks. For classification, it is the number ofclasses."
+        },
+        {
+            "name": "output_range",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "Output range for regression task. The range of output values can be set to enforce the model to producevalues within a range."
+        },
+        {
+            "name": "num_parallel_samples",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of samples is generated in parallel for probabilistic prediction."
+        }
+    ],
+    "return": ""
+}

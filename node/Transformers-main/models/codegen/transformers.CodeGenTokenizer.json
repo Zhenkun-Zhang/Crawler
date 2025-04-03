@@ -1,0 +1,91 @@
+{
+    "api": "transformers.CodeGenTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "errors",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "add_prefix_space",
+        "add_bos_token",
+        "return_token_type_ids",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the merges file."
+        },
+        {
+            "name": "errors",
+            "type": "str",
+            "optional": true,
+            "default": "replace",
+            "description": "Paradigm to follow when decoding bytes to UTF-8. Seebytes.decode for more information."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The beginning of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "add_prefix_space",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to add an initial space to the input. This allows to treat the leading word just as anyother word. (CodeGen tokenizer detect beginning of words by the preceding space)."
+        },
+        {
+            "name": "add_bos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to add a beginning of sequence token at the start of sequences."
+        },
+        {
+            "name": "return_token_type_ids",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to return token type IDs."
+        }
+    ],
+    "return": ""
+}

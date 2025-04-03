@@ -1,0 +1,20 @@
+{
+    "api": "transformers.PipelineDataFormat.save",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "data:",
+        "typing.Union[dict,",
+        "typing.List[dict]]"
+    ],
+    "params": [
+        {
+            "name": "data",
+            "type": "dict,list of dict",
+            "optional": false,
+            "default": "",
+            "description": "The data to store."
+        }
+    ],
+    "return": ""
+}

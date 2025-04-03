@@ -1,0 +1,45 @@
+{
+    "api": "transformers.ImageToTextPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "typing.Union[str,",
+        "typing.List[str],",
+        "ForwardRef('Image.Image'),",
+        "typing.List[ForwardRef('Image.Image')]]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "str, List[str], PIL.Image,List[PIL.Image]",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing a HTTP(s) link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyThe pipeline accepts either a single image or a batch of images."
+        },
+        {
+            "name": "max_new_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The amount of maximum tokens to generate. By default it will use generate default."
+        },
+        {
+            "name": "generate_kwargs",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "Pass it to send all of these arguments directly to generate allowing full control of this function."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The maximum time in seconds to wait for fetching images from the web. If None, no timeout is set andthe call may block forever."
+        }
+    ],
+    "return": "A list or a list of list of dict"
+}

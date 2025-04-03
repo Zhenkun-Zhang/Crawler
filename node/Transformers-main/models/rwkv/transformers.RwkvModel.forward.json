@@ -1,0 +1,75 @@
+{
+    "api": "transformers.RwkvModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "inputs_embeds",
+        "state",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, input_ids_length)",
+            "optional": false,
+            "default": "",
+            "description": "input_ids_length = sequence_length if past_key_values is None elsepast_key_values[0][0].shape[-2] (sequence_length of input past key value states). Indices of inputsequence tokens in the vocabulary.If past_key_values is used, only input_ids that do not have their past calculated should be passed asinput_ids.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, input_ids_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.This is currently not used by RwkvModel, but will be supported in the future.What are attention masks?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "state",
+            "type": "tuple of five torch.FloatTensor of shape (batch_size, hidden_size, num_hidden_layers",
+            "optional": true,
+            "default": "",
+            "description": "If passed along, the model uses the previous state in all the blocks (which will give the output for theinput_ids provided as if the model add state_input_ids + input_ids as context)."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, the last state is returned and can be used to quickly generate the next logits."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.rwkv.modeling_rwkv.RwkvOutput or tuple(torch.FloatTensor)"
+}

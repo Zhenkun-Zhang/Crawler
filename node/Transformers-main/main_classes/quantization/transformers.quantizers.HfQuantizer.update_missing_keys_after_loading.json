@@ -1,0 +1,20 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.update_missing_keys_after_loading",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model",
+        "missing_keys",
+        "prefix"
+    ],
+    "params": [
+        {
+            "name": "missing_keys",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "The list of missing keys in the checkpoint compared to the state dict of the model"
+        }
+    ],
+    "return": ""
+}

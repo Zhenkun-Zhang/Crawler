@@ -1,0 +1,27 @@
+{
+    "api": "transformers.JukeboxModel.ancestral_sample",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "labels",
+        "n_samples",
+        "**sampling_kwargs"
+    ],
+    "params": [
+        {
+            "name": "labels",
+            "type": "List[torch.LongTensor]",
+            "optional": false,
+            "default": "",
+            "description": "List of length n_sample, and shape (self.levels, 4 + self.config.max_nb_genre + lyric_sequence_length) metadata such as artist_id, genre_id and the full list of lyric tokenswhich are used to condition the generation."
+        },
+        {
+            "name": "n_samples",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of samples to be generated in parallel."
+        }
+    ],
+    "return": ""
+}

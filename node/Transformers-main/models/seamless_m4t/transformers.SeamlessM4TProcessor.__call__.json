@@ -1,0 +1,51 @@
+{
+    "api": "transformers.SeamlessM4TProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text",
+        "audios",
+        "src_lang",
+        "tgt_lang",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str, List[str], List[List[str]]",
+            "optional": false,
+            "default": "None",
+            "description": "The sequence or batch of sequences to be encoded. Each sequence can be a string or a list of strings(pretokenized string). If the sequences are provided as list of strings (pretokenized), you must setis_split_into_words=True (to lift the ambiguity with a batch of sequences)."
+        },
+        {
+            "name": "audios",
+            "type": "np.ndarray, torch.Tensor, List[np.ndarray], List[torch.Tensor]",
+            "optional": false,
+            "default": "None",
+            "description": "The audio or batch of audios to be prepared. Each audio can be NumPy array or PyTorch tensor. In caseof a NumPy array/PyTorch tensor, each audio should be of shape (C, T), where C is a number of channels,and T the sample length of the audio."
+        },
+        {
+            "name": "src_lang",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The language code of the input texts/audios. If not specified, the last src_lang specified will beused."
+        },
+        {
+            "name": "tgt_lang",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The code of the target language. If not specified, the last tgt_lang specified will be used."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Remaining dictionary of keyword arguments that will be passed to the feature extractor and/or thetokenizer."
+        }
+    ],
+    "return": "BatchEncoding"
+}

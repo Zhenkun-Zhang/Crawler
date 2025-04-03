@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Speech2TextProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "Speech2TextFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of Speech2TextFeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "Speech2TextTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of Speech2TextTokenizer. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

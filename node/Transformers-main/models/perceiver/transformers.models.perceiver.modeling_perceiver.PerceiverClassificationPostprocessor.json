@@ -1,0 +1,27 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverClassificationPostprocessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PerceiverConfig",
+        "in_channels"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "[PerceiverConfig]",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        },
+        {
+            "name": "in_channels",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of channels in the input."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,27 @@
+{
+    "api": "transformers.onnx.FeaturesManager.get_supported_features_for_model_type",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model_type:",
+        "str",
+        "model_name"
+    ],
+    "params": [
+        {
+            "name": "model_type",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The model type to retrieve the supported features for."
+        },
+        {
+            "name": "model_name",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The name attribute of the model object, only used for the exception message."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,107 @@
+{
+    "api": "transformers.RwkvConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "context_length",
+        "hidden_size",
+        "num_hidden_layers",
+        "attention_hidden_size",
+        "intermediate_size",
+        "layer_norm_epsilon",
+        "bos_token_id",
+        "eos_token_id",
+        "rescale_every",
+        "tie_word_embeddings",
+        "use_cache",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "50277",
+            "description": "Vocabulary size of the RWKV model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling RwkvModel."
+        },
+        {
+            "name": "context_length",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The maximum sequence length that this model can be used with in a single forward (using it in RNN modelets use any sequence length)."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of hidden layers in the model."
+        },
+        {
+            "name": "attention_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the attention hidden states. Will default to hidden_size if unset."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the inner feed-forward layers. Will default to 4 times hidden_size if unset."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon to use in the layer normalization layers."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the beginning of sentence token in the vocabulary. Defaults to 0 as RWKV uses the same tokenizeras GPTNeoX."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the end of sentence token in the vocabulary. Defaults to 0 as RWKV uses the same tokenizer asGPTNeoX."
+        },
+        {
+            "name": "rescale_every",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "At inference, the hidden states (and weights of the correponding output layers) are divided by 2 everyrescale_every layer. If set to 0 or a negative number, no rescale is done."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to tie the word embeddings with the input token embeddings."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last state."
+        }
+    ],
+    "return": ""
+}

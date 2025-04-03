@@ -1,0 +1,25 @@
+{
+    "api": "transformers.BaseImageProcessorFast.convert_to_rgb",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "The image to convert."
+        }
+    ],
+    "return": "ImageInput"
+}

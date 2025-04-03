@@ -1,0 +1,35 @@
+{
+    "api": "transformers.EosTokenCriteria.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "scores",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "scores",
+            "type": "torch.FloatTensor of shape (batch_size, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of a language modeling head. These can be scores for each vocabulary token before SoftMaxor scores for each vocabulary token after SoftMax. If this stopping criteria depends on the scores input,make sure you pass return_dict_in_generate=True, output_scores=True to generate."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional stopping criteria specific kwargs."
+        }
+    ],
+    "return": ""
+}

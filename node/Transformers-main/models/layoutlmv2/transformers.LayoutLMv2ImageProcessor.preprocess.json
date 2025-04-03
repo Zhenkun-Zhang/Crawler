@@ -1,0 +1,95 @@
+{
+    "api": "transformers.LayoutLMv2ImageProcessor.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "do_resize",
+        "size",
+        "int]",
+        "resample",
+        "apply_ocr",
+        "ocr_lang",
+        "tesseract_config",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "data_format",
+        "<ChannelDimension.FIRST",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "Image to preprocess."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the image."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "Desired size of the output image after resizing."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. This can be one of the enum PIL.Image resamplingfilter. Only has an effect if do_resize is set to True."
+        },
+        {
+            "name": "apply_ocr",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to apply the Tesseract OCR engine to get words + normalized bounding boxes."
+        },
+        {
+            "name": "ocr_lang",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The language, specified by its ISO code, to be used by the Tesseract OCR engine. By default, English isused."
+        },
+        {
+            "name": "tesseract_config",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Any additional custom configuration flags that are forwarded to the config parameter when callingTesseract."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to return. Can be one of:Unset: Return a list of np.ndarray.TensorType.TENSORFLOW or tf: Return a batch of type tf.Tensor.TensorType.PYTORCH or pt: Return a batch of type torch.Tensor.TensorType.NUMPY or np: Return a batch of type np.ndarray.TensorType.JAX or jax: Return a batch of type jax.numpy.ndarray."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. Can be one of:ChannelDimension.FIRST: image in (num_channels, height, width) format.ChannelDimension.LAST: image in (height, width, num_channels) format."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,67 @@
+{
+    "api": "transformers.CLIPTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "errors",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the merges file."
+        },
+        {
+            "name": "errors",
+            "type": "str",
+            "optional": true,
+            "default": "replace",
+            "description": "Paradigm to follow when decoding bytes to UTF-8. Seebytes.decode for more information."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|startoftext|>",
+            "description": "The beginning of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        }
+    ],
+    "return": ""
+}

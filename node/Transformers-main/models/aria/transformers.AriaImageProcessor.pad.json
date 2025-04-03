@@ -1,0 +1,70 @@
+{
+    "api": "transformers.AriaImageProcessor.pad",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "padding",
+        "typing.Tuple[int,",
+        "int],",
+        "typing.Iterable[typing.Tuple[int,",
+        "int]]]",
+        "mode",
+        "<PaddingMode.CONSTANT",
+        "constant_values",
+        "typing.Iterable[float]]",
+        "data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The image to pad."
+        },
+        {
+            "name": "padding",
+            "type": "int,Tuple[int, int],Iterable[Tuple[int, int]]",
+            "optional": false,
+            "default": "",
+            "description": "Padding to apply to the edges of the height, width axes. Can be one of three formats:((before_height, after_height), (before_width, after_width)) unique pad widths for each axis.((before, after),) yields same before and after pad for height and width.(pad,) or int is a shortcut for before = after = pad width for all axes."
+        },
+        {
+            "name": "mode",
+            "type": "PaddingMode",
+            "optional": false,
+            "default": "",
+            "description": "The padding mode to use. Can be one of:constant: pads with a constant value.reflect: pads with the reflection of the vector mirrored on the first and last values of thevector along each axis.replicate: pads with the replication of the last value on the edge of the array along each axis.symmetric: pads with the reflection of the vector mirrored along the edge of the array."
+        },
+        {
+            "name": "constant_values",
+            "type": "float,Iterable[float]",
+            "optional": true,
+            "default": "",
+            "description": "The value to use for the padding if mode is constant."
+        },
+        {
+            "name": "data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.If unset, will use same as the input image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.If unset, will use the inferred format of the input image."
+        }
+    ],
+    "return": "np.ndarray"
+}

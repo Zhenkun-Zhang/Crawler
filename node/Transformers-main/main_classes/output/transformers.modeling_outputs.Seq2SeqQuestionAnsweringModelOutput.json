@@ -1,0 +1,95 @@
+{
+    "api": "transformers.modeling_outputs.Seq2SeqQuestionAnsweringModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "start_logits",
+        "end_logits",
+        "past_key_values",
+        "decoder_hidden_states",
+        "...]]",
+        "decoder_attentions",
+        "...]]",
+        "cross_attentions",
+        "...]]",
+        "encoder_last_hidden_state",
+        "encoder_hidden_states",
+        "...]]",
+        "encoder_attentions",
+        "...]]"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Total span extraction loss is the sum of a Cross-Entropy for the start and end positions."
+        },
+        {
+            "name": "start_logits",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Span-start scores (before SoftMax)."
+        },
+        {
+            "name": "end_logits",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Span-end scores (before SoftMax)."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and 2 additional tensors of shape(batch_size, num_heads, encoder_sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used (see past_key_values input) to speed up sequential decoding."
+        },
+        {
+            "name": "decoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Hidden-states of the decoder at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "decoder_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights of the decoder, after the attention softmax, used to compute the weighted average in theself-attention heads."
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights of the decoders cross-attention layer, after the attention softmax, used to compute theweighted average in the cross-attention heads."
+        },
+        {
+            "name": "encoder_last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the encoder of the model."
+        },
+        {
+            "name": "encoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, sequence_length, hidden_size).Hidden-states of the encoder at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "encoder_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights of the encoder, after the attention softmax, used to compute the weighted average in theself-attention heads."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,83 @@
+{
+    "api": "transformers.FSMTTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "langs",
+        "src_vocab_file",
+        "tgt_vocab_file",
+        "merges_file",
+        "do_lower_case",
+        "unk_token",
+        "bos_token",
+        "sep_token",
+        "pad_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "langs",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "A list of two languages to translate from and to, for instance [en, ru]."
+        },
+        {
+            "name": "src_vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "File containing the vocabulary for the source language."
+        },
+        {
+            "name": "tgt_vocab_file",
+            "type": "st",
+            "optional": true,
+            "default": "None",
+            "description": "File containing the vocabulary for the target language."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "File containing the merges."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token.When building a sequence using special tokens, this is not the token that is used for the beginning ofsequence. The token used is the cls_token."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        }
+    ],
+    "return": ""
+}

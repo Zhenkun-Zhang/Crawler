@@ -1,0 +1,21 @@
+{
+    "api": "transformers.TFWav2Vec2ForSequenceClassification.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "attention_mask",
+        "|",
+        "output_attentions",
+        "|",
+        "output_hidden_states",
+        "|",
+        "return_dict",
+        "|",
+        "labels",
+        "|",
+        "training"
+    ],
+    "params": [],
+    "return": ""
+}

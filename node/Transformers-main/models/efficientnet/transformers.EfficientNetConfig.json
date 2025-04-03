@@ -1,0 +1,215 @@
+{
+    "api": "transformers.EfficientNetConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels:",
+        "image_size",
+        "width_coefficient",
+        "depth_coefficient",
+        "depth_divisor",
+        "kernel_sizes",
+        "3,",
+        "5,",
+        "3,",
+        "5,",
+        "5,",
+        "3]",
+        "in_channels",
+        "16,",
+        "24,",
+        "40,",
+        "80,",
+        "112,",
+        "192]",
+        "out_channels",
+        "24,",
+        "40,",
+        "80,",
+        "112,",
+        "192,",
+        "320]",
+        "depthwise_padding",
+        "strides",
+        "2,",
+        "2,",
+        "2,",
+        "1,",
+        "2,",
+        "1]",
+        "num_block_repeats",
+        "2,",
+        "2,",
+        "3,",
+        "3,",
+        "4,",
+        "1]",
+        "expand_ratios",
+        "6,",
+        "6,",
+        "6,",
+        "6,",
+        "6,",
+        "6]",
+        "squeeze_expansion_ratio",
+        "hidden_act",
+        "hidden_dim",
+        "pooling_type",
+        "initializer_range",
+        "batch_norm_eps",
+        "batch_norm_momentum",
+        "dropout_rate",
+        "drop_connect_rate",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The input image size."
+        },
+        {
+            "name": "width_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Scaling coefficient for network width at each stage."
+        },
+        {
+            "name": "depth_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Scaling coefficient for network depth at each stage."
+        },
+        {
+            "name": "depth_divisor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "A unit of network width."
+        },
+        {
+            "name": "kernel_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "List of kernel sizes to be used in each block."
+        },
+        {
+            "name": "in_channels",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "List of input channel sizes to be used in each block for convolutional layers."
+        },
+        {
+            "name": "out_channels",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "List of output channel sizes to be used in each block for convolutional layers."
+        },
+        {
+            "name": "depthwise_padding",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "List of block indices with square padding."
+        },
+        {
+            "name": "strides",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "List of stride sizes to be used in each block for convolutional layers."
+        },
+        {
+            "name": "num_block_repeats",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "List of the number of times each block is to repeated."
+        },
+        {
+            "name": "expand_ratios",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "List of scaling coefficient of each block."
+        },
+        {
+            "name": "squeeze_expansion_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Squeeze expansion ratio."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function (function or string) in each block. If string, gelu, relu,selu, gelu_new, siluandmish` are supported."
+        },
+        {
+            "name": "hiddem_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The hidden dimension of the layer before the classification head."
+        },
+        {
+            "name": "pooling_type",
+            "type": "str,function",
+            "optional": true,
+            "default": "",
+            "description": "Type of final pooling to be applied before the dense classification head. Available options are [mean,max]"
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "batch_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon used by the batch normalization layers."
+        },
+        {
+            "name": "batch_norm_momentum",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The momentum used by the batch normalization layers."
+        },
+        {
+            "name": "dropout_rate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout rate to be applied before final classifier layer."
+        },
+        {
+            "name": "drop_connect_rate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The drop rate for skip connections."
+        }
+    ],
+    "return": ""
+}

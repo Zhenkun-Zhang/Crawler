@@ -1,0 +1,27 @@
+{
+    "api": "transformers.Toolbox",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tools:",
+        "typing.List[transformers.agents.tools.Tool]",
+        "add_base_tools"
+    ],
+    "params": [
+        {
+            "name": "tools",
+            "type": "List[Tool]",
+            "optional": false,
+            "default": "",
+            "description": "The list of tools to instantiate the toolbox with"
+        },
+        {
+            "name": "add_base_tools",
+            "type": "bool, defaults to False",
+            "optional": true,
+            "default": "",
+            "description": "Whether to add the tools available within transformers to the toolbox."
+        }
+    ],
+    "return": ""
+}

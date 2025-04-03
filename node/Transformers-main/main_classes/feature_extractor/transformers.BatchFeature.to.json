@@ -1,0 +1,27 @@
+{
+    "api": "transformers.BatchFeature.to",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "args",
+            "type": "Tuple",
+            "optional": false,
+            "default": "",
+            "description": "Will be passed to the to(...) function of the tensors."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the to(...) function of the tensors.To enable asynchronous data transfer, set the non_blocking flag in kwargs (defaults to False)."
+        }
+    ],
+    "return": "BatchFeature"
+}

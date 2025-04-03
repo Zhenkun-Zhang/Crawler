@@ -1,0 +1,12 @@
+{
+    "api": "transformers.Text2TextGenerationPipeline.check_inputs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_length:",
+        "min_length",
+        "max_length"
+    ],
+    "params": [],
+    "return": ""
+}

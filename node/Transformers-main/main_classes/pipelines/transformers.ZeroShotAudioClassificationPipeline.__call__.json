@@ -1,0 +1,36 @@
+{
+    "api": "transformers.ZeroShotAudioClassificationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "audios:",
+        "typing.Union[numpy.ndarray,",
+        "bytes,",
+        "str]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "audios",
+            "type": "str, List[str], np.array,List[np.array]",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of inputs:A string containing a http link pointing to an audioA string containing a local path to an audioAn audio loaded in numpy"
+        },
+        {
+            "name": "candidate_labels",
+            "type": "List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The candidate labels for this audio. They will be formatted using hypothesis_template."
+        },
+        {
+            "name": "hypothesis_template",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The format used in conjunction with candidate_labels to attempt the audio classification byreplacing the placeholder with the candidate_labels. Pass {} if candidate_labels arealready formatted."
+        }
+    ],
+    "return": ""
+}

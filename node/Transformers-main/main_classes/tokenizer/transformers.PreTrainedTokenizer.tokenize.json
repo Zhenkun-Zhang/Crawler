@@ -1,0 +1,28 @@
+{
+    "api": "transformers.PreTrainedTokenizer.tokenize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "str",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The sequence to be encoded."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s (additional keyword arguments",
+            "optional": false,
+            "default": "",
+            "description": "Passed along to the model-specific prepare_for_tokenization preprocessing method."
+        }
+    ],
+    "return": "List[str]"
+}

@@ -1,0 +1,37 @@
+{
+    "api": "transformers.ForcedEOSTokenLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "max_length:",
+        "int",
+        "eos_token_id",
+        "typing.List[int],",
+        "torch.Tensor]",
+        "device"
+    ],
+    "params": [
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The maximum length of the sequence to be generated."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "Union[int, List[int], torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "The id(s) of the end-of-sequence token."
+        },
+        {
+            "name": "device",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The device to allocate the tensors."
+        }
+    ],
+    "return": ""
+}

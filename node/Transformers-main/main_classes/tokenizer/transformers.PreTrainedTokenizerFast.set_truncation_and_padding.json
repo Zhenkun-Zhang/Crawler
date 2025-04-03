@@ -1,0 +1,59 @@
+{
+    "api": "transformers.PreTrainedTokenizerFast.set_truncation_and_padding",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "padding_strategy:",
+        "PaddingStrategy",
+        "truncation_strategy",
+        "max_length",
+        "stride",
+        "pad_to_multiple_of",
+        "padding_side"
+    ],
+    "params": [
+        {
+            "name": "padding_strategy",
+            "type": "PaddingStrategy",
+            "optional": false,
+            "default": "",
+            "description": "The kind of padding that will be applied to the input"
+        },
+        {
+            "name": "truncation_strategy",
+            "type": "TruncationStrategy",
+            "optional": false,
+            "default": "",
+            "description": "The kind of truncation that will be applied to the input"
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The maximum size of a sequence."
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The stride to use when handling overflow."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set will pad the sequence to a multiple of the provided value. This is especially useful to enablethe use of Tensor Cores on NVIDIA hardware with compute capability >= 7.5 (Volta)."
+        },
+        {
+            "name": "padding_side",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The side on which the model should have padding applied. Should be selected between [right, left].Default value is picked from the class attribute of the same name."
+        }
+    ],
+    "return": ""
+}

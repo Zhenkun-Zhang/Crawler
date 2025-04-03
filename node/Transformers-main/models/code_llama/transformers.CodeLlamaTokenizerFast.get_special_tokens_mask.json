@@ -1,0 +1,36 @@
+{
+    "api": "transformers.CodeLlamaTokenizerFast.get_special_tokens_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0:",
+        "typing.List[int]",
+        "token_ids_1",
+        "already_has_special_tokens",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids_0",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "List of ids of the first sequence."
+        },
+        {
+            "name": "token_ids_1",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "List of ids of the second sequence."
+        },
+        {
+            "name": "already_has_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the token list is already formatted with special tokens for the model."
+        }
+    ],
+    "return": "A list of integers in the range [0, 1]"
+}

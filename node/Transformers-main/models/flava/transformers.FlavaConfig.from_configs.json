@@ -1,0 +1,16 @@
+{
+    "api": "transformers.FlavaConfig.from_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image_config:",
+        "FlavaImageConfig",
+        "text_config",
+        "multimodal_config",
+        "image_codebook_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "FlavaConfig"
+}

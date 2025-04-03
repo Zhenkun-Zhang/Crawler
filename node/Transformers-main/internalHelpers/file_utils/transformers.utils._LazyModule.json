@@ -1,0 +1,16 @@
+{
+    "api": "transformers.utils._LazyModule",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "name:",
+        "module_file",
+        "import_structure",
+        "typing.Set[str]]]",
+        "module_spec",
+        "extra_objects",
+        "object]"
+    ],
+    "params": [],
+    "return": ""
+}

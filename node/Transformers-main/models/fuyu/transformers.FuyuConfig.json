@@ -1,0 +1,203 @@
+{
+    "api": "transformers.FuyuConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "hidden_act",
+        "max_position_embeddings",
+        "image_size",
+        "patch_size",
+        "num_channels",
+        "initializer_range",
+        "layer_norm_eps",
+        "use_cache",
+        "tie_word_embeddings",
+        "rope_theta",
+        "rope_scaling",
+        "qk_layernorm",
+        "hidden_dropout",
+        "attention_dropout",
+        "partial_rotary_factor",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "text_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "262144",
+            "description": "Vocabulary size of the Fuyu model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling FuyuForCausalLM"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "16384",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "36",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu2",
+            "description": "The non-linear activation function (function or string) in the decoder."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "16384",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "300",
+            "description": "The input image size."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "30",
+            "description": "The input vision transformer encoding patch size."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The input image number of channels."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True. Whether to tie weight embeddings"
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to tie input and output embeddings."
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "25000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "rope_scaling",
+            "type": "Dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary containing the scaling configuration for the RoPE embeddings. Currently supports two scalingstrategies: linear and dynamic. Their scaling factor must be a float greater than 1. The expected format is{type: strategy name, factor: scaling factor}. When using this flag, dont updatemax_position_embeddings to the expected new maximum. See the following thread for more information on howthese scaling strategies behave:https://www.reddit.com/r/LocalFuyu/comments/14mrgpr/dynamically_scaled_rope_further_increases/. This is anexperimental feature, subject to breaking API changes in future versions."
+        },
+        {
+            "name": "qk_layernorm",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to normalize the Queries and Keys after projecting the hidden states"
+        },
+        {
+            "name": "hidden_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio after applying the MLP to the hidden states."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio after computing the attention scores."
+        },
+        {
+            "name": "partial_rotary_factor",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "Percentage of the query and keys which will have rotary embedding."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The id of the beginning-of-sequence token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "Union[int, List[int]]",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the end-of-sequence token. Optionally, use a list to set multiple end-of-sequence tokens."
+        },
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize the language```Aut."
+        }
+    ],
+    "return": ""
+}

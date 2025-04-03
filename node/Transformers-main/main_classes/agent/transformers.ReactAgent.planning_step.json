@@ -1,0 +1,34 @@
+{
+    "api": "transformers.ReactAgent.planning_step",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "task",
+        "is_first_step",
+        "iteration"
+    ],
+    "params": [
+        {
+            "name": "task",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The task to perform"
+        },
+        {
+            "name": "is_first_step",
+            "type": "bool",
+            "optional": false,
+            "default": "",
+            "description": "If this step is not the first one, the plan should be an update over a previous plan."
+        },
+        {
+            "name": "iteration",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of the current step, used as an indication for the LLM."
+        }
+    ],
+    "return": ""
+}

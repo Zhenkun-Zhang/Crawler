@@ -1,0 +1,13 @@
+{
+    "api": "transformers.BridgeTowerConfig.from_text_vision_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text_config:",
+        "BridgeTowerTextConfig",
+        "vision_config",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

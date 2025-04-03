@@ -1,0 +1,91 @@
+{
+    "api": "transformers.BarkSemanticConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "block_size",
+        "input_vocab_size",
+        "output_vocab_size",
+        "num_layers",
+        "num_heads",
+        "hidden_size",
+        "dropout",
+        "bias",
+        "initializer_range",
+        "use_cache",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "block_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "input_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "10048",
+            "description": "Vocabulary size of a Bark sub-model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling BarkSemanticModel. Defaults to 10_048 but should be carefully thought withregards to the chosen sub-model."
+        },
+        {
+            "name": "output_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "10048",
+            "description": "Output vocabulary size of a Bark sub-model. Defines the number of different tokens that can be representedby the: output_ids when passing forward a BarkSemanticModel. Defaults to 10_048 but should be carefully thoughtwith regards to the chosen sub-model."
+        },
+        {
+            "name": "num_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the given sub-model."
+        },
+        {
+            "name": "num_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer architecture."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in the architecture."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use bias in the linear layers and layer norm layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        }
+    ],
+    "return": ""
+}

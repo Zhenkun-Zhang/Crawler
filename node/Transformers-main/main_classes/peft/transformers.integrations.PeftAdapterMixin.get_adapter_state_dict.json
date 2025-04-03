@@ -1,0 +1,27 @@
+{
+    "api": "transformers.integrations.PeftAdapterMixin.get_adapter_state_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "adapter_name:",
+        "typing.Optional[str]",
+        "state_dict"
+    ],
+    "params": [
+        {
+            "name": "adapter_name",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The name of the adapter to get the state dict from. If no name is passed, the active adapter is used."
+        },
+        {
+            "name": "state_dict",
+            "type": "nested dictionary of torch.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "The state dictionary of the model. Will default to self.state_dict(), but can be used if specialprecautions need to be taken when recovering the state dictionary of a model (like when using modelparallelism)."
+        }
+    ],
+    "return": ""
+}

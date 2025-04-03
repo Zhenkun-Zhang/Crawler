@@ -1,0 +1,11 @@
+{
+    "api": "transformers.QuantizedCache",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "cache_config:",
+        "QuantizedCacheConfig"
+    ],
+    "params": [],
+    "return": ""
+}

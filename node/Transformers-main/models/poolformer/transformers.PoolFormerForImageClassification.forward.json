@@ -1,0 +1,30 @@
+{
+    "api": "transformers.PoolFormerForImageClassification.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "typing.Optional[torch.FloatTensor]",
+        "labels",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeePoolFormerImageProcessor.call() for details."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the image classification/regression loss. Indices should be in [0, ..., config.num_labels - 1]. If config.num_labels == 1 a regression loss is computed (Mean-Square loss), Ifconfig.num_labels > 1 a classification loss is computed (Cross-Entropy)."
+        }
+    ],
+    "return": "transformers.modeling_outputs.ImageClassifierOutputWithNoAttention or tuple(torch.FloatTensor)"
+}

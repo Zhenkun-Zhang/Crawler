@@ -1,0 +1,19 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverOneHotPreprocessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PerceiverConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "PerceiverConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        }
+    ],
+    "return": ""
+}

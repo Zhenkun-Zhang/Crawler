@@ -1,0 +1,20 @@
+{
+    "api": "transformers.SpeechT5HifiGan.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "spectrogram:",
+        "FloatTensor",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "spectrogram",
+            "type": "torch.FloatTensor",
+            "optional": false,
+            "default": "",
+            "description": "Tensor containing the log-mel spectrograms. Can be batched and of shape (batch_size, sequence_length, config.model_in_dim), or un-batched and of shape (sequence_length, config.model_in_dim)."
+        }
+    ],
+    "return": "torch.FloatTensor"
+}

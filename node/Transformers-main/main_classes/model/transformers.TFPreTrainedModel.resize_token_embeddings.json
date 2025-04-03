@@ -1,0 +1,20 @@
+{
+    "api": "transformers.TFPreTrainedModel.resize_token_embeddings",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "new_num_tokens:",
+        "Optional[int]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "new_num_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of new tokens in the embedding matrix. Increasing the size will add newly initializedvectors at the end. Reducing the size will remove vectors from the end. If not provided or None, justreturns a pointer to the input tokens without doing anything."
+        }
+    ],
+    "return": "tf.Variable or keras.layers.Embedding"
+}

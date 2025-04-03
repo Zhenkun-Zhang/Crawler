@@ -1,0 +1,73 @@
+{
+    "api": "transformers.SynthIDTextWatermarkLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "ngram_len:",
+        "keys",
+        "sampling_table_size",
+        "sampling_table_seed",
+        "context_history_size",
+        "skip_first_ngram_calls",
+        "debug_mode"
+    ],
+    "params": [
+        {
+            "name": "ngram_len",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Ngram length."
+        },
+        {
+            "name": "keys",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "A sequence of watermarking keys, one for each depth."
+        },
+        {
+            "name": "sampling_table_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Size of the sampling table."
+        },
+        {
+            "name": "sampling_table_seed",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Random seed to generate the sampling table."
+        },
+        {
+            "name": "context_history_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Size of the tensor to keep track of seen contexts."
+        },
+        {
+            "name": "device",
+            "type": "torch.device",
+            "optional": false,
+            "default": "",
+            "description": "Device to use."
+        },
+        {
+            "name": "skip_first_ngram_calls",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to skip first ngram calls."
+        },
+        {
+            "name": "debug_mode",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Logits are modified to uniform one got before watermarking modification is applied. This is to test theimplementation."
+        }
+    ],
+    "return": ""
+}

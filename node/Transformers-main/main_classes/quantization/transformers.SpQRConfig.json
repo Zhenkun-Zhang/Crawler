@@ -1,0 +1,59 @@
+{
+    "api": "transformers.SpQRConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "bits:",
+        "beta1",
+        "beta2",
+        "shapes",
+        "int]]",
+        "modules_to_not_convert",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "bits",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Specifies the bit count for the weights and first order zero-points and scales.Currently only bits = 3 is supported."
+        },
+        {
+            "name": "beta1",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "SpQR tile width. Currently only beta1 = 16 is supported."
+        },
+        {
+            "name": "beta2",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "SpQR tile height. Currently only beta2 = 16 is supported."
+        },
+        {
+            "name": "shapes",
+            "type": "Optional",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary holding the shape of each object. We need this because its impossibleto deduce the exact size of the parameters just from bits, beta1, beta2."
+        },
+        {
+            "name": "modules_to_not_convert",
+            "type": "Optional[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, provides a list of full paths of nn.Linear weight parameters that shall not be quantized.Defaults to None."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional parameters from which to initialize the configuration object."
+        }
+    ],
+    "return": ""
+}

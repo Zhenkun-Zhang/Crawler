@@ -1,0 +1,28 @@
+{
+    "api": "transformers.FbgemmFp8Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "activation_scale_ub:",
+        "float",
+        "modules_to_not_convert",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "activation_scale_ub",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The activation scale upper bound. This is used when quantizing the input activation."
+        },
+        {
+            "name": "modules_to_not_convert",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "The list of modules to not quantize, useful for quantizing models that explicitly require to havesome modules left in their original precision."
+        }
+    ],
+    "return": ""
+}

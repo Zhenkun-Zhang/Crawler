@@ -1,0 +1,44 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase.tokenize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "str",
+        "pair",
+        "add_special_tokens",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The sequence to be encoded."
+        },
+        {
+            "name": "pair",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A second sequence to be encoded with the first."
+        },
+        {
+            "name": "add_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to add the special tokens associated with the corresponding model."
+        },
+        {
+            "name": "kwargs",
+            "type": "additional keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the underlying model specific encode method. See details incall()"
+        }
+    ],
+    "return": "List[str]"
+}

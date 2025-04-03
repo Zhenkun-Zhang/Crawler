@@ -1,0 +1,67 @@
+{
+    "api": "transformers.Qwen2TokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "tokenizer_file",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to the merges file."
+        },
+        {
+            "name": "tokenizer_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Path to tokenizers file (generally has a .json extension) thatcontains everything needed to load the tokenizer."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead. Not applicable to this tokenizer."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The beginning of sequence token. Not applicable for this tokenizer."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        }
+    ],
+    "return": ""
+}

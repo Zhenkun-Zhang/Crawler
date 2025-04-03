@@ -1,0 +1,21 @@
+{
+    "api": "transformers.BatchFeature.convert_to_tensors",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tensor_type:",
+        "typing.Union[str,",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "tensor_type",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to use. If str, should be one of the values of the enum TensorType. IfNone, no modification is done."
+        }
+    ],
+    "return": ""
+}

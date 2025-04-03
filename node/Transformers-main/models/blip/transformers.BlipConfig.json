@@ -1,0 +1,66 @@
+{
+    "api": "transformers.BlipConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "vision_config",
+        "projection_dim",
+        "logit_scale_init_value",
+        "image_text_hidden_size",
+        "label_smoothing",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize BlipTextConfig."
+        },
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize BlipVisionConfig."
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of text and vision projection layers."
+        },
+        {
+            "name": "logit_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "2.6592",
+            "description": "The initial value of the logit_scale parameter. Default is used as per the original BLIP implementation."
+        },
+        {
+            "name": "image_text_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the hidden state of the image-text fusion layer."
+        },
+        {
+            "name": "label_smoothing",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "A float in [0.0, 1.0]. Specifies the amount of smoothing when computing the loss, where 0.0 means no smoothing. The targetsbecome a mixture of the original ground truth and a uniform distribution as described inRethinking the Inception Architecture for Computer Vision <https://arxiv.org/abs/1512.00567>__. Default: :math:0.0."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

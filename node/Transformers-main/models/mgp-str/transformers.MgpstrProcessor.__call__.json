@@ -1,0 +1,13 @@
+{
+    "api": "transformers.MgpstrProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text",
+        "images",
+        "return_tensors",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

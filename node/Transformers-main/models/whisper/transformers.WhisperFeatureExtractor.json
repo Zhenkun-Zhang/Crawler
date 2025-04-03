@@ -1,0 +1,68 @@
+{
+    "api": "transformers.WhisperFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size",
+        "sampling_rate",
+        "hop_length",
+        "chunk_length",
+        "n_fft",
+        "padding_value",
+        "dither",
+        "return_attention_mask",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "The feature dimension of the extracted features."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "16000",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "hop_length",
+            "type": "int",
+            "optional": true,
+            "default": "160",
+            "description": "Length of the overlaping windows for the STFT used to obtain the Mel Frequency coefficients."
+        },
+        {
+            "name": "chunk_length",
+            "type": "int",
+            "optional": true,
+            "default": "30",
+            "description": "The maximum number of chuncks of sampling_rate samples used to trim and pad longer or shorter audiosequences."
+        },
+        {
+            "name": "n_fft",
+            "type": "int",
+            "optional": true,
+            "default": "400",
+            "description": "Size of the Fourier transform."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Padding value used to pad the audio. Should correspond to silences."
+        },
+        {
+            "name": "dither",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Adds dithering. In other words, adds a small Gaussian noise to each frame.E.g. use 0.0001 to add dithering with a normal distribution centeredaround 0.0 with standard deviation 0.0001 (assuming [-1,+1] range of raw_speech).The value 0.0 means no dithering.Dithering has similar effect as spectrogram(mel_floor=...). It reducesthe high log_mel_fbank values for signals with hard-zero sections,when VAD cutoff is present in the signal."
+        }
+    ],
+    "return": ""
+}

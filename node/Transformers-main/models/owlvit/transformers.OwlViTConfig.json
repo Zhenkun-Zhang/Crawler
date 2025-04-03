@@ -1,0 +1,58 @@
+{
+    "api": "transformers.OwlViTConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "vision_config",
+        "projection_dim",
+        "logit_scale_init_value",
+        "return_dict",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize OwlViTTextConfig."
+        },
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize OwlViTVisionConfig."
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of text and vision projection layers."
+        },
+        {
+            "name": "logit_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "2.6592",
+            "description": "The initial value of the logit_scale parameter. Default is used as per the original OWL-ViTimplementation."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return a dictionary. If False, returns a tuple."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

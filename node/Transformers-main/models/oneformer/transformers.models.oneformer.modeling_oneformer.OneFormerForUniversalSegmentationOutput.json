@@ -1,0 +1,132 @@
+{
+    "api": "transformers.models.oneformer.modeling_oneformer.OneFormerForUniversalSegmentationOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "class_queries_logits",
+        "masks_queries_logits",
+        "auxiliary_predictions",
+        "torch.FloatTensor]]",
+        "encoder_hidden_states",
+        "pixel_decoder_hidden_states",
+        "transformer_decoder_hidden_states",
+        "transformer_decoder_object_queries",
+        "transformer_decoder_contrastive_queries",
+        "transformer_decoder_mask_predictions",
+        "transformer_decoder_class_predictions",
+        "transformer_decoder_auxiliary_predictions",
+        "torch.FloatTensor]]]",
+        "text_queries",
+        "task_token",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "The computed loss, returned when labels are present."
+        },
+        {
+            "name": "class_queries_logits",
+            "type": "torch.FloatTensor",
+            "optional": false,
+            "default": "",
+            "description": "A tensor of shape (batch_size, num_queries, num_labels + 1) representing the proposed classes for eachquery. Note the + 1 is needed because we incorporate the null class."
+        },
+        {
+            "name": "masks_queries_logits",
+            "type": "torch.FloatTensor",
+            "optional": false,
+            "default": "",
+            "description": "A tensor of shape (batch_size, num_queries, height, width) representing the proposed masks for eachquery."
+        },
+        {
+            "name": "auxiliary_predictions",
+            "type": "List of Dict of str, torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "List of class and mask predictions from each layer of the transformer decoder."
+        },
+        {
+            "name": "encoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each stage) ofshape (batch_size, num_channels, height, width). Hidden-states (also called feature maps) of the encodermodel at the output of each stage."
+        },
+        {
+            "name": "pixel_decoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each stage) ofshape (batch_size, num_channels, height, width). Hidden-states (also called feature maps) of the pixeldecoder model at the output of each stage."
+        },
+        {
+            "name": "transformer_decoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each stage) ofshape (batch_size, sequence_length, hidden_size). Hidden-states (also called feature maps) of thetransformer decoder at the output of each stage."
+        },
+        {
+            "name": "transformer_decoder_object_queries",
+            "type": "torch.FloatTensor of shape (batch_size, num_queries, hidden_dim)",
+            "optional": false,
+            "default": "",
+            "description": "Output object queries from the last layer in the transformer decoder."
+        },
+        {
+            "name": "transformer_decoder_contrastive_queries",
+            "type": "torch.FloatTensor of shape (batch_size, num_queries, hidden_dim)",
+            "optional": false,
+            "default": "",
+            "description": "Contrastive queries from the transformer decoder."
+        },
+        {
+            "name": "transformer_decoder_mask_predictions",
+            "type": "torch.FloatTensor of shape (batch_size, num_queries, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Mask Predictions from the last layer in the transformer decoder."
+        },
+        {
+            "name": "transformer_decoder_class_predictions",
+            "type": "torch.FloatTensor of shape (batch_size, num_queries, num_classes+1)",
+            "optional": false,
+            "default": "",
+            "description": "Class Predictions from the last layer in the transformer decoder."
+        },
+        {
+            "name": "transformer_decoder_auxiliary_predictions",
+            "type": "List of Dict of str, torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "List of class and mask predictions from each layer of the transformer decoder."
+        },
+        {
+            "name": "text_queries",
+            "type": "torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Text queries derived from the input text list used for calculating contrastive loss during training."
+        },
+        {
+            "name": "task_token",
+            "type": "torch.FloatTensor of shape (batch_size, hidden_dim)",
+            "optional": false,
+            "default": "",
+            "description": "1D task token to condition the queries."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(torch.FloatTensor) (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Self and Cross Attentions weights from transformer decoder."
+        }
+    ],
+    "return": ""
+}

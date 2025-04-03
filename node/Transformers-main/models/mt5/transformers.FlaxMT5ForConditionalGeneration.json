@@ -1,0 +1,18 @@
+{
+    "api": "transformers.FlaxMT5ForConditionalGeneration",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "T5Config",
+        "input_shape",
+        "1)",
+        "seed",
+        "'jax.numpy.float32'>",
+        "_do_init",
+        "gradient_checkpointing",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

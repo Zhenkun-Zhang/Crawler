@@ -1,0 +1,77 @@
+{
+    "api": "transformers.TFPreTrainedModel.prepare_tf_dataset",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "dataset:",
+        "'datasets.Dataset'",
+        "batch_size",
+        "shuffle",
+        "tokenizer",
+        "collate_fn",
+        "collate_fn_args",
+        "Any]]",
+        "drop_remainder",
+        "prefetch",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "dataset",
+            "type": "Any",
+            "optional": false,
+            "default": "",
+            "description": "A [~datasets.Dataset] to be wrapped as a tf.data.Dataset."
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size of batches to return."
+        },
+        {
+            "name": "shuffle",
+            "type": "bool, defaults to True",
+            "optional": false,
+            "default": "",
+            "description": "Whether to return samples from the dataset in random order. Usually True for training datasets andFalse for validation/test datasets."
+        },
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizerBase",
+            "optional": true,
+            "default": "",
+            "description": "A PreTrainedTokenizer that will be used to pad samples to create batches. Has no effect if a specificcollate_fn is passed instead."
+        },
+        {
+            "name": "collate_fn",
+            "type": "Callable",
+            "optional": true,
+            "default": "",
+            "description": "A function that collates samples from the dataset into a single batch. Defaults toDefaultDataCollator if no tokenizer is supplied or DataCollatorWithPadding if a tokenizer ispassed."
+        },
+        {
+            "name": "collate_fn_args",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "A dict of arguments to pass to the collate_fn alongside the list of samples."
+        },
+        {
+            "name": "drop_remainder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to drop the final batch, if the batch_size does not evenly divide the dataset length. Defaultsto the same setting as shuffle."
+        },
+        {
+            "name": "prefetch",
+            "type": "bool, defaults to True",
+            "optional": false,
+            "default": "",
+            "description": "Whether to add prefetching to the end of the tf.data pipeline. This is almost always beneficial forperformance, but can be disabled in edge cases."
+        }
+    ],
+    "return": "Dataset"
+}

@@ -1,0 +1,38 @@
+{
+    "api": "transformers.Emu3Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vq_config:",
+        "transformers.models.emu3.configuration_emu3.Emu3VQVAEConfig]",
+        "text_config",
+        "transformers.models.emu3.configuration_emu3.Emu3TextConfig]",
+        "vocabulary_map",
+        "int]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vq_config",
+            "type": "Union[Dict, Emu3VQVAEConfig]",
+            "optional": true,
+            "default": "",
+            "description": "Emu3VQVAEConfig instance containing the configuration for the VQ-VAE model."
+        },
+        {
+            "name": "text_config",
+            "type": "`Union[Dict, Emu3TextConfig]“",
+            "optional": true,
+            "default": "",
+            "description": "Emu3TextConfig instance containing the configuration for the language model."
+        },
+        {
+            "name": "vocabulary_map",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary containing the vocabulary map from the tokenizer. Used to obtain tokens from the image inputs."
+        }
+    ],
+    "return": ""
+}

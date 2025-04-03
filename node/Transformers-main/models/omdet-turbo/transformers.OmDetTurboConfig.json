@@ -1,0 +1,374 @@
+{
+    "api": "transformers.OmDetTurboConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "backbone_config",
+        "use_timm_backbone",
+        "backbone",
+        "backbone_kwargs",
+        "use_pretrained_backbone",
+        "apply_layernorm_after_vision_backbone",
+        "image_size",
+        "disable_custom_kernels",
+        "layer_norm_eps",
+        "batch_norm_eps",
+        "init_std",
+        "text_projection_in_dim",
+        "text_projection_out_dim",
+        "task_encoder_hidden_dim",
+        "class_embed_dim",
+        "class_distance_type",
+        "num_queries",
+        "csp_activation",
+        "conv_norm_activation",
+        "encoder_feedforward_activation",
+        "encoder_feedforward_dropout",
+        "encoder_dropout",
+        "hidden_expansion",
+        "vision_features_channels",
+        "256,",
+        "256]",
+        "encoder_hidden_dim",
+        "encoder_in_channels",
+        "384,",
+        "768]",
+        "encoder_projection_indices",
+        "encoder_attention_heads",
+        "encoder_dim_feedforward",
+        "encoder_layers",
+        "positional_encoding_temperature",
+        "num_feature_levels",
+        "decoder_hidden_dim",
+        "decoder_num_heads",
+        "decoder_num_layers",
+        "decoder_activation",
+        "decoder_dim_feedforward",
+        "decoder_num_points",
+        "decoder_dropout",
+        "eval_size",
+        "learn_initial_query",
+        "cache_size",
+        "is_encoder_decoder",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "PretrainedConfig",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the text backbone."
+        },
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the vision backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use the timm for the vision backbone."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "swin_tiny_patch4_window7_224",
+            "description": "The name of the pretrained vision backbone to use. If use_pretrained_backbone=False a randomly initializedbackbone with the same architecture backbone is used."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Additional kwargs for the vision backbone."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a pretrained vision backbone."
+        },
+        {
+            "name": "apply_layernorm_after_vision_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to apply layer normalization on the feature maps of the vision backbone output."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "640",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "disable_custom_kernels",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to disable custom kernels."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon value for layer normalization."
+        },
+        {
+            "name": "batch_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon value for batch normalization."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "text_projection_in_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The input dimension for the text projection."
+        },
+        {
+            "name": "text_projection_out_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The output dimension for the text projection."
+        },
+        {
+            "name": "task_encoder_hidden_dim",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The feedforward dimension for the task encoder."
+        },
+        {
+            "name": "class_embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The dimension of the classes embeddings."
+        },
+        {
+            "name": "class_distance_type",
+            "type": "str",
+            "optional": true,
+            "default": "cosine",
+            "description": "The type of of distance to compare predicted classes to projected classes embeddings.Can be cosine or dot."
+        },
+        {
+            "name": "num_queries",
+            "type": "int",
+            "optional": true,
+            "default": "900",
+            "description": "The number of queries."
+        },
+        {
+            "name": "csp_activation",
+            "type": "str",
+            "optional": true,
+            "default": "silu",
+            "description": "The activation function of the Cross Stage Partial (CSP) networks of the encoder."
+        },
+        {
+            "name": "conv_norm_activation",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The activation function of the ConvNormLayer layers of the encoder."
+        },
+        {
+            "name": "encoder_feedforward_activation",
+            "type": "str",
+            "optional": true,
+            "default": "relu",
+            "description": "The activation function for the feedforward network of the encoder."
+        },
+        {
+            "name": "encoder_feedforward_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout rate following the activation of the encoder feedforward network."
+        },
+        {
+            "name": "encoder_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout rate of the encoder multi-head attention module."
+        },
+        {
+            "name": "hidden_expansion",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The hidden expansion of the CSP networks in the encoder."
+        },
+        {
+            "name": "vision_features_channels",
+            "type": "tuple(int",
+            "optional": true,
+            "default": "[256,",
+            "description": "The projected vision features channels used as inputs for the decoder."
+        },
+        {
+            "name": "encoder_hidden_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The hidden dimension of the encoder."
+        },
+        {
+            "name": "encoder_in_channels",
+            "type": "List(int",
+            "optional": true,
+            "default": "[192,",
+            "description": "The input channels for the encoder."
+        },
+        {
+            "name": "encoder_projection_indices",
+            "type": "List(int",
+            "optional": true,
+            "default": "[2]",
+            "description": "The indices of the input features projected by each layers."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "The number of attention heads for the encoder."
+        },
+        {
+            "name": "encoder_dim_feedforward",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "The feedforward dimension for the encoder."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The number of layers in the encoder."
+        },
+        {
+            "name": "positional_encoding_temperature",
+            "type": "int",
+            "optional": true,
+            "default": "10000",
+            "description": "The positional encoding temperature in the encoder."
+        },
+        {
+            "name": "num_feature_levels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of feature levels for the multi-scale deformable attention module of the decoder."
+        },
+        {
+            "name": "decoder_hidden_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The hidden dimension of the decoder."
+        },
+        {
+            "name": "decoder_num_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "The number of heads for the decoder."
+        },
+        {
+            "name": "decoder_num_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "The number of layers for the decoder."
+        },
+        {
+            "name": "decoder_activation",
+            "type": "str",
+            "optional": true,
+            "default": "relu",
+            "description": "The activation function for the decoder."
+        },
+        {
+            "name": "decoder_dim_feedforward",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "The feedforward dimension for the decoder."
+        },
+        {
+            "name": "decoder_num_points",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The number of points sampled in the decoder multi-scale deformable attention module."
+        },
+        {
+            "name": "decoder_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout rate for the decoder."
+        },
+        {
+            "name": "eval_size",
+            "type": "Tuple[int, int]",
+            "optional": true,
+            "default": "None",
+            "description": "Height and width used to computes the effective height and width of the position embeddings after takinginto account the stride (see RTDetr)."
+        },
+        {
+            "name": "learn_initial_query",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to learn the initial query."
+        },
+        {
+            "name": "cache_size",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "The cache size for the classes and prompts caches."
+        },
+        {
+            "name": "is_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the model is used as an encoder-decoder model or not."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional parameters from the architecture. The values in kwargs will be saved as part of the configurationand can be used to control the model outputs."
+        }
+    ],
+    "return": ""
+}

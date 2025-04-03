@@ -1,0 +1,11 @@
+{
+    "api": "transformers.AltCLIPVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "AltCLIPVisionConfig"
+    ],
+    "params": [],
+    "return": ""
+}

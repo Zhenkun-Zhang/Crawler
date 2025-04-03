@@ -1,0 +1,19 @@
+{
+    "api": "transformers.FlaxSuppressTokensLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "suppress_tokens:",
+        "list"
+    ],
+    "params": [
+        {
+            "name": "suppress_tokens",
+            "type": "list",
+            "optional": false,
+            "default": "",
+            "description": "Tokens to not sample."
+        }
+    ],
+    "return": ""
+}

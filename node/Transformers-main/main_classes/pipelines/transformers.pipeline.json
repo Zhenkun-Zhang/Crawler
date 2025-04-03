@@ -1,0 +1,168 @@
+{
+    "api": "transformers.pipeline",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "task:",
+        "model",
+        "ForwardRef('PreTrainedModel'),",
+        "ForwardRef('TFPreTrainedModel'),",
+        "NoneType]",
+        "config",
+        "transformers.configuration_utils.PretrainedConfig,",
+        "NoneType]",
+        "tokenizer",
+        "transformers.tokenization_utils.PreTrainedTokenizer,",
+        "ForwardRef('PreTrainedTokenizerFast'),",
+        "NoneType]",
+        "feature_extractor",
+        "ForwardRef('SequenceFeatureExtractor'),",
+        "NoneType]",
+        "image_processor",
+        "transformers.image_processing_utils.BaseImageProcessor,",
+        "NoneType]",
+        "processor",
+        "transformers.processing_utils.ProcessorMixin,",
+        "NoneType]",
+        "framework",
+        "revision",
+        "use_fast",
+        "token",
+        "str,",
+        "NoneType]",
+        "device",
+        "str,",
+        "ForwardRef('torch.device'),",
+        "NoneType]",
+        "device_map",
+        "torch_dtype",
+        "trust_remote_code",
+        "model_kwargs",
+        "typing.Any]]",
+        "pipeline_class",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "task",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The task defining which pipeline will be returned. Currently accepted tasks are:audio-classification: will return a AudioClassificationPipeline.automatic-speech-recognition: will return a AutomaticSpeechRecognitionPipeline.depth-estimation: will return a DepthEstimationPipeline.document-question-answering: will return a DocumentQuestionAnsweringPipeline.feature-extraction: will return a FeatureExtractionPipeline.fill-mask: will return a FillMaskPipeline:.image-classification: will return a ImageClassificationPipeline.image-feature-extraction: will return an ImageFeatureExtractionPipeline.image-segmentation: will return a ImageSegmentationPipeline.image-text-to-text: will return a ImageTextToTextPipeline.image-to-image: will return a ImageToImagePipeline.image-to-text: will return a ImageToTextPipeline.mask-generation: will return a MaskGenerationPipeline.object-detection: will return a ObjectDetectionPipeline.question-answering: will return a QuestionAnsweringPipeline.summarization: will return a SummarizationPipeline.table-question-answering: will return a TableQuestionAnsweringPipeline.text2text-generation: will return a Text2TextGenerationPipeline.text-classification (alias sentiment-analysis available): will return aTextClassificationPipeline.text-generation: will return a TextGenerationPipeline:.text-to-audio (alias text-to-speech available): will return a TextToAudioPipeline:.token-classification (alias ner available): will return a TokenClassificationPipeline.translation: will return a TranslationPipeline.translation_xx_to_yy: will return a TranslationPipeline.video-classification: will return a VideoClassificationPipeline.visual-question-answering: will return a VisualQuestionAnsweringPipeline.zero-shot-classification: will return a ZeroShotClassificationPipeline.zero-shot-image-classification: will return a ZeroShotImageClassificationPipeline.zero-shot-audio-classification: will return a ZeroShotAudioClassificationPipeline.zero-shot-object-detection: will return a ZeroShotObjectDetectionPipeline."
+        },
+        {
+            "name": "model",
+            "type": "str,PreTrainedModel,TFPreTrainedModel",
+            "optional": true,
+            "default": "",
+            "description": "The model that will be used by the pipeline to make predictions. This can be a model identifier or anactual instance of a pretrained model inheriting from PreTrainedModel (for PyTorch) orTFPreTrainedModel (for TensorFlow).If not provided, the default for the task will be loaded."
+        },
+        {
+            "name": "config",
+            "type": "str,PretrainedConfig",
+            "optional": true,
+            "default": "",
+            "description": "The configuration that will be used by the pipeline to instantiate the model. This can be a modelidentifier or an actual pretrained model configuration inheriting from PretrainedConfig.If not provided, the default configuration file for the requested model will be used. That means that ifmodel is given, its default configuration will be used. However, if model is not supplied, thistasks default models config is used instead."
+        },
+        {
+            "name": "tokenizer",
+            "type": "str,PreTrainedTokenizer",
+            "optional": true,
+            "default": "",
+            "description": "The tokenizer that will be used by the pipeline to encode data for the model. This can be a modelidentifier or an actual pretrained tokenizer inheriting from PreTrainedTokenizer.If not provided, the default tokenizer for the given model will be loaded (if it is a string). If modelis not specified or not a string, then the default tokenizer for config is loaded (if it is a string).However, if config is also not given or not a string, then the default tokenizer for the given taskwill be loaded."
+        },
+        {
+            "name": "feature_extractor",
+            "type": "str,PreTrainedFeatureExtractor",
+            "optional": true,
+            "default": "",
+            "description": "The feature extractor that will be used by the pipeline to encode data for the model. This can be a modelidentifier or an actual pretrained feature extractor inheriting from PreTrainedFeatureExtractor.Feature extractors are used for non-NLP models, such as Speech or Vision models as well as multi-modalmodels. Multi-modal models will also require a tokenizer to be passed.If not provided, the default feature extractor for the given model will be loaded (if it is a string). Ifmodel is not specified or not a string, then the default feature extractor for config is loaded (if itis a string). However, if config is also not given or not a string, then the default feature extractorfor the given task will be loaded."
+        },
+        {
+            "name": "image_processor",
+            "type": "str,BaseImageProcessor",
+            "optional": true,
+            "default": "",
+            "description": "The image processor that will be used by the pipeline to preprocess images for the model. This can be amodel identifier or an actual image processor inheriting from BaseImageProcessor.Image processors are used for Vision models and multi-modal models that require image inputs. Multi-modalmodels will also require a tokenizer to be passed.If not provided, the default image processor for the given model will be loaded (if it is a string). Ifmodel is not specified or not a string, then the default image processor for config is loaded (if it isa string)."
+        },
+        {
+            "name": "processor",
+            "type": "str,ProcessorMixin",
+            "optional": true,
+            "default": "",
+            "description": "The processor that will be used by the pipeline to preprocess data for the model. This can be a modelidentifier or an actual processor inheriting from ProcessorMixin.Processors are used for multi-modal models that require multi-modal inputs, for example, a model thatrequires both text and image inputs.If not provided, the default processor for the given model will be loaded (if it is a string). If modelis not specified or not a string, then the default processor for config is loaded (if it is a string)."
+        },
+        {
+            "name": "framework",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The framework to use, either pt for PyTorch or tf for TensorFlow. The specified framework must beinstalled.If no framework is specified, will default to the one currently installed. If no framework is specified andboth frameworks are installed, will default to the framework of the model, or to PyTorch if no model isprovided."
+        },
+        {
+            "name": "revision",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "When passing a task name or a string model identifier: The specific model version to use. It can be abranch name, a tag name, or a commit id, since we use a git-based system for storing models and otherartifacts on huggingface.co, so revision can be any identifier allowed by git."
+        },
+        {
+            "name": "use_fast",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use a Fast tokenizer if possible (a PreTrainedTokenizerFast)."
+        },
+        {
+            "name": "use_auth_token",
+            "type": "str,bool",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If True, will use the token generatedwhen running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "device",
+            "type": "int,str,torch.device",
+            "optional": false,
+            "default": "",
+            "description": "Defines the device (e.g., cpu, cuda:1, mps, or a GPU ordinal rank like 1) on which thispipeline will be allocated."
+        },
+        {
+            "name": "device_map",
+            "type": "str,Dict[str, Union[int, str, torch.device]",
+            "optional": true,
+            "default": "None",
+            "description": "Sent directly as model_kwargs (just a simpler shortcut). When accelerate library is present, setdevice_map=auto to compute the most optimized device_map automatically (seeherefor more information).Do not use device_map AND device at the same time as they will conflict"
+        },
+        {
+            "name": "torch_dtype",
+            "type": "str,torch.dtype",
+            "optional": true,
+            "default": "None",
+            "description": "Sent directly as model_kwargs (just a simpler shortcut) to use the available precision for this model(torch.float16, torch.bfloat16, … or auto)."
+        },
+        {
+            "name": "trust_remote_code",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to allow for custom code defined on the Hub in their own modeling, configuration,tokenization or even pipeline files. This option should only be set to True for repositories you trustand in which you have read the code, as it will execute code present on the Hub on your local machine."
+        },
+        {
+            "name": "model_kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional dictionary of keyword arguments passed along to the models from_pretrained(..., **model_kwargs) function."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments passed along to the specific pipeline init (see the documentation for thecorresponding pipeline class for possible values)."
+        }
+    ],
+    "return": "Pipeline"
+}

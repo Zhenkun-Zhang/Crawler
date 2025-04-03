@@ -1,0 +1,29 @@
+{
+    "api": "transformers.audio_utils.mel_to_hertz",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "mels:",
+        "typing.Union[float,",
+        "numpy.ndarray]",
+        "mel_scale",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "mels",
+            "type": "float,np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The frequency, or multiple frequencies, in mels."
+        },
+        {
+            "name": "mel_scale",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The mel frequency scale to use, htk, kaldi or slaney."
+        }
+    ],
+    "return": "float or np.ndarray"
+}

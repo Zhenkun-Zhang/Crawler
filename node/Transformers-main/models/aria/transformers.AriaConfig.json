@@ -1,0 +1,94 @@
+{
+    "api": "transformers.AriaConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vision_config",
+        "vision_feature_layer",
+        "text_config",
+        "projector_patch_to_query_dict",
+        "image_token_index",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vision_config",
+            "type": "AriaVisionConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "Configuration for the vision component."
+        },
+        {
+            "name": "vision_feature_layer",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The index of the layer to select the vision feature."
+        },
+        {
+            "name": "text_config",
+            "type": "AriaTextConfig,dict",
+            "optional": true,
+            "default": "",
+            "description": "Configuration for the text component."
+        },
+        {
+            "name": "projector_patch_to_query_dict",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Mapping of patch sizes to query dimensions."
+        },
+        {
+            "name": "image_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Index used to represent image tokens."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated normal initializer for initializing all weight matrices."
+        },
+        {
+            "name": "model_type",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Type of the model, set to aria."
+        },
+        {
+            "name": "image_token_index",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index used to represent image tokens."
+        },
+        {
+            "name": "projector_patch_to_query_dict",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "Mapping of patch sizes to query dimensions."
+        },
+        {
+            "name": "vision_config",
+            "type": "AriaVisionConfig",
+            "optional": false,
+            "default": "None",
+            "description": "Configuration for the vision component."
+        },
+        {
+            "name": "text_config",
+            "type": "AriaTextConfig",
+            "optional": false,
+            "default": "",
+            "description": "Configuration for the text component."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,26 @@
+{
+    "api": "transformers.ClapProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "ClapFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "The audio processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "RobertaTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,40 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverMultimodalPreprocessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "modalities:",
+        "typing.Mapping[str,",
+        "typing.Callable[...,",
+        "typing.Tuple[torch.Tensor,",
+        "typing.Optional[torch.Tensor],",
+        "torch.Tensor]]]",
+        "mask_probs",
+        "float]]",
+        "min_padding_size"
+    ],
+    "params": [
+        {
+            "name": "modalities",
+            "type": "Mapping[str, PreprocessorType]",
+            "optional": false,
+            "default": "",
+            "description": "Dict mapping modality name to preprocessor."
+        },
+        {
+            "name": "mask_probs",
+            "type": "Dict[str, float]",
+            "optional": false,
+            "default": "",
+            "description": "Dict mapping modality name to masking probability of that modality."
+        },
+        {
+            "name": "min_padding_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The minimum padding size for all modalities. The final output will have num_channels equal to the maximumchannels across all modalities plus min_padding_size."
+        }
+    ],
+    "return": ""
+}

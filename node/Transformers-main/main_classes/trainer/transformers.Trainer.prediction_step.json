@@ -1,0 +1,44 @@
+{
+    "api": "transformers.Trainer.prediction_step",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "Module",
+        "inputs",
+        "prediction_loss_only",
+        "ignore_keys",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "nn.Module",
+            "optional": false,
+            "default": "",
+            "description": "The model to evaluate."
+        },
+        {
+            "name": "inputs",
+            "type": "Dict[str, Union[torch.Tensor, Any]]",
+            "optional": false,
+            "default": "",
+            "description": "The inputs and targets of the model.The dictionary will be unpacked before being fed to the model. Most models expect the targets under theargument labels. Check your models documentation for all accepted arguments."
+        },
+        {
+            "name": "prediction_loss_only",
+            "type": "bool",
+            "optional": false,
+            "default": "",
+            "description": "Whether or not to return the loss only."
+        },
+        {
+            "name": "ignore_keys",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "A list of keys in the output of your model (if it is a dictionary) that should be ignored whengathering predictions."
+        }
+    ],
+    "return": "Tuple[Optional[torch.Tensor], Optional[torch.Tensor], Optional[torch.Tensor]]"
+}

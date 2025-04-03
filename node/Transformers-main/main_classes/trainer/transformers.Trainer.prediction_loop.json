@@ -1,0 +1,15 @@
+{
+    "api": "transformers.Trainer.prediction_loop",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "dataloader:",
+        "DataLoader",
+        "description",
+        "prediction_loss_only",
+        "ignore_keys",
+        "metric_key_prefix"
+    ],
+    "params": [],
+    "return": ""
+}

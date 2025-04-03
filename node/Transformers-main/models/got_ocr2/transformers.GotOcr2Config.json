@@ -1,0 +1,51 @@
+{
+    "api": "transformers.GotOcr2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vision_config",
+        "text_config",
+        "image_token_index",
+        "image_seq_length",
+        "pad_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vision_config",
+            "type": "Union[AutoConfig, dict],  optional, defaults to CLIPVisionConfig",
+            "optional": true,
+            "default": "None",
+            "description": "The config object or dictionary of the vision backbone."
+        },
+        {
+            "name": "text_config",
+            "type": "Union[AutoConfig, dict]",
+            "optional": true,
+            "default": "None",
+            "description": "The config object or dictionary of the text backbone."
+        },
+        {
+            "name": "image_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "151859",
+            "description": "The image token index to encode the image prompt."
+        },
+        {
+            "name": "image_seq_length",
+            "type": "int",
+            "optional": true,
+            "default": "576",
+            "description": "Sequence length of one image embedding."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "Padding token id."
+        }
+    ],
+    "return": ""
+}

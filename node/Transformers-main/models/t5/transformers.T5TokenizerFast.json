@@ -1,0 +1,75 @@
+{
+    "api": "transformers.T5TokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "eos_token",
+        "unk_token",
+        "pad_token",
+        "extra_ids",
+        "additional_special_tokens",
+        "add_prefix_space",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "None",
+            "description": "SentencePiece file (generally has a .spm extension) thatcontains the vocabulary necessary to instantiate a tokenizer."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token.When building a sequence using special tokens, this is not the token that is used for the end of sequence.The token used is the sep_token."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "extra_ids",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "Add a number of extra ids added to the vocabulary for use as sentinels. These tokens are accessible asid{%d}> where {%d} is a number between 0 and extra_ids-1. These tokens can be retrieved bycalling get_sentinel_tokens method and token ids can be by calling get_sentinel_token_ids method"
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "Additional special tokens used by the tokenizer."
+        },
+        {
+            "name": "add_prefix_space",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not the tokenizer should automatically add a prefix space"
+        },
+        {
+            "name": "from_slow",
+            "type": "book",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the tokenizer should be converted from a slow one. If add_prefix_space is set, this will be set to True."
+        }
+    ],
+    "return": ""
+}

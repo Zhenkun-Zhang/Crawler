@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFIdeficsModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "IdeficsConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,44 @@
+{
+    "api": "transformers.modeling_outputs.DepthEstimatorOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "predicted_depth",
+        "hidden_states",
+        "...]]",
+        "attentions",
+        "...]]"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Classification (or regression if config.num_labels==1) loss."
+        },
+        {
+            "name": "predicted_depth",
+            "type": "torch.FloatTensor of shape (batch_size, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Predicted depth for each pixel."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, num_channels, height, width).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, patch_size, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

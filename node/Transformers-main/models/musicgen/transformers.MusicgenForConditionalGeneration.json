@@ -1,0 +1,22 @@
+{
+    "api": "transformers.MusicgenForConditionalGeneration",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "typing.Optional[transformers.models.musicgen.configuration_musicgen.MusicgenConfig]",
+        "text_encoder",
+        "audio_encoder",
+        "decoder"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "MusicgenConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        }
+    ],
+    "return": ""
+}

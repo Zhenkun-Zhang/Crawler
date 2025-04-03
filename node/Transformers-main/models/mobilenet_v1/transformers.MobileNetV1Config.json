@@ -1,0 +1,83 @@
+{
+    "api": "transformers.MobileNetV1Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "image_size",
+        "depth_multiplier",
+        "min_depth",
+        "hidden_act",
+        "tf_padding",
+        "classifier_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "depth_multiplier",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Shrinks or expands the number of channels in each layer. Default is 1.0, which starts the network with 32channels. This is sometimes also called alpha or width multiplier."
+        },
+        {
+            "name": "min_depth",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "All layers will have at least this many channels."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu6",
+            "description": "The non-linear activation function (function or string) in the Transformer encoder and convolution layers."
+        },
+        {
+            "name": "tf_padding",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use TensorFlow padding rules on the convolution layers."
+        },
+        {
+            "name": "classifier_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.999",
+            "description": "The dropout ratio for attached classifiers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "0.001",
+            "description": "The epsilon used by the layer normalization layers."
+        }
+    ],
+    "return": ""
+}

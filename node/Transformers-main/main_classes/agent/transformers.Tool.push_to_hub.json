@@ -1,0 +1,53 @@
+{
+    "api": "transformers.Tool.push_to_hub",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "repo_id:",
+        "commit_message",
+        "tool'",
+        "private",
+        "token",
+        "str,",
+        "NoneType]",
+        "create_pr"
+    ],
+    "params": [
+        {
+            "name": "repo_id",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The name of the repository you want to push your tool to. It should contain your organization name whenpushing to a given organization."
+        },
+        {
+            "name": "commit_message",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Message to commit while pushing."
+        },
+        {
+            "name": "private",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to make the repo private. If None (default), the repo will be public unless the organizations default is private. This value is ignored if the repo already exists."
+        },
+        {
+            "name": "token",
+            "type": "bool,str",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If unset, will use the token generatedwhen running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "create_pr",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to create a PR with the uploaded files or directly commit."
+        }
+    ],
+    "return": ""
+}

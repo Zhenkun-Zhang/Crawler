@@ -1,0 +1,26 @@
+{
+    "api": "transformers.MCTCTProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "MCTCTFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of MCTCTFeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "AutoTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of AutoTokenizer. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

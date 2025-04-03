@@ -1,0 +1,143 @@
+{
+    "api": "transformers.ConvBertConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "max_position_embeddings",
+        "type_vocab_size",
+        "initializer_range",
+        "layer_norm_eps",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "embedding_size",
+        "head_ratio",
+        "conv_kernel_size",
+        "num_groups",
+        "classifier_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30522",
+            "description": "Vocabulary size of the ConvBERT model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling ConvBertModel or TFConvBertModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "type_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The vocabulary size of the token_type_ids passed when calling ConvBertModel or TFConvBertModel."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "head_ratio",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Ratio gamma to reduce the number of attention heads."
+        },
+        {
+            "name": "num_groups",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The number of groups for grouped linear layers for ConvBert model"
+        },
+        {
+            "name": "conv_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "9",
+            "description": "The size of the convolutional kernel."
+        },
+        {
+            "name": "classifier_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The dropout ratio for the classification head."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,12 @@
+{
+    "api": "transformers.AttentionInterface.register",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "key:",
+        "str",
+        "value"
+    ],
+    "params": [],
+    "return": ""
+}

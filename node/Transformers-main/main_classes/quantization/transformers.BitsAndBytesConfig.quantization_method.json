@@ -1,0 +1,8 @@
+{
+    "api": "transformers.BitsAndBytesConfig.quantization_method",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,26 @@
+{
+    "api": "transformers.FlaxBlenderbotSmallModel.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "Array",
+        "attention_mask",
+        "decoder_input_ids",
+        "decoder_attention_mask",
+        "position_ids",
+        "decoder_position_ids",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "train",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7f3a03b75090>",
+        ")"
+    ],
+    "params": [],
+    "return": "transformers.modeling_flax_outputs.FlaxSeq2SeqModelOutput or tuple(torch.FloatTensor)"
+}

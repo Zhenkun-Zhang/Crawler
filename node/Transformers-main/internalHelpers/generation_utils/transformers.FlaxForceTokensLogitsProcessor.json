@@ -1,0 +1,18 @@
+{
+    "api": "transformers.FlaxForceTokensLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "force_token_map"
+    ],
+    "params": [
+        {
+            "name": "force_token_map",
+            "type": "list",
+            "optional": false,
+            "default": "",
+            "description": "Map giving token ids and indices where they will be forced to be sampled."
+        }
+    ],
+    "return": ""
+}

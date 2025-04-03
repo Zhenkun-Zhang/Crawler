@@ -1,0 +1,179 @@
+{
+    "api": "transformers.JukeboxVQVAEConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "act_fn",
+        "nb_discrete_codes",
+        "commit",
+        "conv_input_shape",
+        "conv_res_scale",
+        "embed_dim",
+        "hop_fraction",
+        "0.5,",
+        "0.5]",
+        "levels",
+        "lmu",
+        "multipliers",
+        "1,",
+        "1]",
+        "res_conv_depth",
+        "res_conv_width",
+        "res_convolution_multiplier",
+        "res_dilation_cycle",
+        "res_dilation_growth_rate",
+        "res_downs_t",
+        "2,",
+        "2]",
+        "res_strides_t",
+        "2,",
+        "2]",
+        "sample_length",
+        "init_scale",
+        "zero_out",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "act_fn",
+            "type": "str",
+            "optional": true,
+            "default": "relu",
+            "description": "Activation function of the model."
+        },
+        {
+            "name": "nb_discrete_codes",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Number of codes of the VQVAE."
+        },
+        {
+            "name": "commit",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "Commit loss multiplier."
+        },
+        {
+            "name": "conv_input_shape",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of audio channels."
+        },
+        {
+            "name": "conv_res_scale",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to scale the residuals of the JukeboxResConv1DBlock."
+        },
+        {
+            "name": "embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Embedding dimension of the codebook vectors."
+        },
+        {
+            "name": "hop_fraction",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[0.125,",
+            "description": "Fraction of non-intersecting window used when continuing the sampling process."
+        },
+        {
+            "name": "levels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of hierarchical levels that used in the VQVAE."
+        },
+        {
+            "name": "lmu",
+            "type": "float",
+            "optional": true,
+            "default": "0.99",
+            "description": "Used in the codebook update, exponential moving average coefficient. For more detail refer to Appendix A.1of the original VQVAE paper"
+        },
+        {
+            "name": "multipliers",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "Depth and width multipliers used for each level. Used on the res_conv_width and res_conv_depth"
+        },
+        {
+            "name": "res_conv_depth",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Depth of the encoder and decoder block. If no multipliers are used, this is the same for each level."
+        },
+        {
+            "name": "res_conv_width",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Width of the encoder and decoder block. If no multipliers are used, this is the same for each level."
+        },
+        {
+            "name": "res_convolution_multiplier",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Scaling factor of the hidden dimension used in the JukeboxResConv1DBlock."
+        },
+        {
+            "name": "res_dilation_cycle",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dilation cycle value used in the JukeboxResnet. If an int is used, each new Conv1 block will have a depthreduced by a power of res_dilation_cycle."
+        },
+        {
+            "name": "res_dilation_growth_rate",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Resnet dilation growth rate used in the VQVAE (dilation_growth_rate ** depth)"
+        },
+        {
+            "name": "res_downs_t",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "Downsampling rate for each level of the hierarchical VQ-VAE."
+        },
+        {
+            "name": "res_strides_t",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "Stride used for each level of the hierarchical VQ-VAE."
+        },
+        {
+            "name": "sample_length",
+            "type": "int",
+            "optional": true,
+            "default": "1058304",
+            "description": "Provides the max input shape of the VQVAE. Is used to compute the input shape of each level."
+        },
+        {
+            "name": "init_scale",
+            "type": "float",
+            "optional": true,
+            "default": "0.2",
+            "description": "Initialization scale."
+        },
+        {
+            "name": "zero_out",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to zero out convolution weights when initializing."
+        }
+    ],
+    "return": ""
+}

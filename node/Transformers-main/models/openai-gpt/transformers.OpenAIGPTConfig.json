@@ -1,0 +1,139 @@
+{
+    "api": "transformers.OpenAIGPTConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "n_positions",
+        "n_embd",
+        "n_layer",
+        "n_head",
+        "afn",
+        "resid_pdrop",
+        "embd_pdrop",
+        "attn_pdrop",
+        "layer_norm_epsilon",
+        "initializer_range",
+        "summary_type",
+        "summary_use_proj",
+        "summary_activation",
+        "summary_proj_to_labels",
+        "summary_first_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "40478",
+            "description": "Vocabulary size of the GPT-2 model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling OpenAIGPTModel or TFOpenAIGPTModel."
+        },
+        {
+            "name": "n_positions",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "n_embd",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "afn",
+            "type": "str,Callable",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "embd_pdrop",
+            "type": "int",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the embeddings."
+        },
+        {
+            "name": "attn_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon to use in the layer normalization layers"
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "summary_type",
+            "type": "str",
+            "optional": true,
+            "default": "cls_index",
+            "description": "Argument used when doing sequence summary, used in the models OpenAIGPTDoubleHeadsModel andOpenAIGPTDoubleHeadsModel.Has to be one of the following options:last: Take the last token hidden state (like XLNet).first: Take the first token hidden state (like BERT).mean: Take the mean of all tokens hidden states.cls_index: Supply a Tensor of classification token position (like GPT/GPT-2).attn: Not implemented now, use multi-head attention."
+        },
+        {
+            "name": "summary_use_proj",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Argument used when doing sequence summary, used in the models OpenAIGPTDoubleHeadsModel andOpenAIGPTDoubleHeadsModel.Whether or not to add a projection after the vector extraction."
+        },
+        {
+            "name": "summary_activation",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Argument used when doing sequence summary, used in the models OpenAIGPTDoubleHeadsModel andOpenAIGPTDoubleHeadsModel.Pass tanh for a tanh activation to the output, any other value will result in no activation."
+        },
+        {
+            "name": "summary_proj_to_labels",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Argument used when doing sequence summary, used in the models OpenAIGPTDoubleHeadsModel andOpenAIGPTDoubleHeadsModel.Whether the projection outputs should have config.num_labels or config.hidden_size classes."
+        },
+        {
+            "name": "summary_first_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Argument used when doing sequence summary, used in the models OpenAIGPTDoubleHeadsModel andOpenAIGPTDoubleHeadsModel.The dropout ratio to be used after the projection and activation."
+        }
+    ],
+    "return": ""
+}

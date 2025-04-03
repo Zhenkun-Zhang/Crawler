@@ -1,0 +1,19 @@
+{
+    "api": "transformers.Idefics3VisionTransformer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Idefics3VisionConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "Idefics3VisionConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model. Initializing with a config file does notload the weights associated with the model, only the configuration. Check out thefrom_pretrained() method to load the model weights."
+        }
+    ],
+    "return": ""
+}

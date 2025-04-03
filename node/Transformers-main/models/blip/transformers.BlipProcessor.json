@@ -1,0 +1,27 @@
+{
+    "api": "transformers.BlipProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "BlipImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of BlipImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "BertTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "An instance of [BertTokenizerFast`]. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

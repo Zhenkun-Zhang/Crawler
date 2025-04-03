@@ -1,0 +1,140 @@
+{
+    "api": "transformers.CodeLlamaTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "prefix_token",
+        "middle_token",
+        "suffix_token",
+        "eot_token",
+        "fill_token",
+        "suffix_first",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "add_bos_token",
+        "add_eos_token",
+        "clean_up_tokenization_spaces",
+        "additional_special_tokens",
+        "use_default_system_prompt",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token.When building a sequence using special tokens, this is not the token that is used for the end of sequence.The token used is the sep_token."
+        },
+        {
+            "name": "prefix_token",
+            "type": "str",
+            "optional": true,
+            "default": "▁<PRE>",
+            "description": "Prefix token used for infilling."
+        },
+        {
+            "name": "middle_token",
+            "type": "str",
+            "optional": true,
+            "default": "▁<MID>",
+            "description": "Middle token used for infilling."
+        },
+        {
+            "name": "suffix_token",
+            "type": "str",
+            "optional": true,
+            "default": "▁<SUF>",
+            "description": "Suffix token used for infilling."
+        },
+        {
+            "name": "eot_token",
+            "type": "str",
+            "optional": true,
+            "default": "▁<EOT>",
+            "description": "End of text token used for infilling."
+        },
+        {
+            "name": "fill_token",
+            "type": "str",
+            "optional": true,
+            "default": "<FILL_ME>",
+            "description": "The token used to split the input between the prefix and suffix."
+        },
+        {
+            "name": "suffix_first",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether the input prompt and suffix should be formatted with the suffix first."
+        },
+        {
+            "name": "sp_model_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the SentencePieceProcessor.__init__() method. The Python wrapper forSentencePiece can be used, among other things,to set:enable_sampling: Enable subword regularization.nbest_size: Sampling parameters for unigram. Invalid for BPE-Dropout.nbest_size = {0,1}: No sampling is performed.nbest_size > 1: samples from the nbest_size results.nbest_size < 0: assuming that nbest_size is infinite and samples from the all hypothesis (lattice)using forward-filtering-and-backward-sampling algorithm.alpha: Smoothing parameter for unigram sampling, and dropout probability of merge operations forBPE-dropout."
+        },
+        {
+            "name": "add_bos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to add a beginning of sequence token at the start of sequences."
+        },
+        {
+            "name": "add_eos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to add an end of sequence token at the end of sequences."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to clean up the tokenization spaces."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "Additional special tokens used by the tokenizer."
+        },
+        {
+            "name": "use_default_system_prompt",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the default system prompt for Llama should be used."
+        }
+    ],
+    "return": ""
+}

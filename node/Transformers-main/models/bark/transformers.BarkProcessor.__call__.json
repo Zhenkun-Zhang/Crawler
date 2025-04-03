@@ -1,0 +1,40 @@
+{
+    "api": "transformers.BarkProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text",
+        "voice_preset",
+        "return_tensors",
+        "max_length",
+        "add_special_tokens",
+        "return_attention_mask",
+        "return_token_type_ids",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str, List[str], List[List[str]]",
+            "optional": false,
+            "default": "None",
+            "description": "The sequence or batch of sequences to be encoded. Each sequence can be a string or a list of strings(pretokenized string). If the sequences are provided as list of strings (pretokenized), you must setis_split_into_words=True (to lift the ambiguity with a batch of sequences)."
+        },
+        {
+            "name": "voice_preset",
+            "type": "str, Dict[np.ndarray]",
+            "optional": false,
+            "default": "None",
+            "description": "The voice preset, i.e the speaker embeddings. It can either be a valid voice_preset name, e.gen_speaker_1, or directly a dictionary of np.ndarray embeddings for each submodel of Bark. Orit can be a valid file name of a local .npz single voice preset."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "pt",
+            "description": "If set, will return tensors of a particular framework. Acceptable values are:pt: Return PyTorch torch.Tensor objects.np: Return NumPy np.ndarray objects."
+        }
+    ],
+    "return": "Tuple(BatchEncoding, BatchFeature)"
+}

@@ -1,0 +1,90 @@
+{
+    "api": "transformers.FlaxBartForCausalLM.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "Array",
+        "attention_mask",
+        "position_ids",
+        "encoder_hidden_states",
+        "encoder_attention_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "train",
+        "params",
+        "past_key_values",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7f3a03b75090>",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "decoder_input_ids",
+            "type": "jnp.ndarray of shape (batch_size, target_sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are decoder input IDs?For translation and summarization training, decoder_input_ids should be provided. If nodecoder_input_ids is provided, the model will create this tensor by shifting the input_ids to the rightfor denoising pre-training following the paper."
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(jnp.ndarray)",
+            "optional": false,
+            "default": "",
+            "description": "Tuple consists of (last_hidden_state, optional: hidden_states, optional: attentions)last_hidden_state of shape (batch_size, sequence_length, hidden_size), optional) is a sequence ofhidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder."
+        },
+        {
+            "name": "encoder_attention_mask",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "jnp.ndarray of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default.If you want to change padding behavior, you should modify to your needs. See diagram 1 in thepaper for more information on the default strategy."
+        },
+        {
+            "name": "decoder_position_ids",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each decoder input sequence tokens in the position embeddings. Selected in therange [0, config.max_position_embeddings - 1]."
+        },
+        {
+            "name": "past_key_values",
+            "type": "Dict[str, np.ndarray]",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of pre-computed hidden-states (key and values in the attention blocks) that can be used for fastauto-regressive decoding. Pre-computed key and value hidden-states are of shape [batch_size, max_length]."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_flax_outputs.FlaxCausalLMOutputWithCrossAttentions or tuple(torch.FloatTensor)"
+}

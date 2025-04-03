@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ReactAgent.stream_run",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "task:",
+        "str"
+    ],
+    "params": [],
+    "return": ""
+}

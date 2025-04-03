@@ -1,0 +1,16 @@
+{
+    "api": "transformers.EsmTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "unk_token",
+        "cls_token",
+        "pad_token",
+        "mask_token",
+        "eos_token",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

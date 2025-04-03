@@ -1,0 +1,74 @@
+{
+    "api": "transformers.models.lxmert.modeling_lxmert.LxmertModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "language_output:",
+        "vision_output",
+        "pooled_output",
+        "language_hidden_states",
+        "vision_hidden_states",
+        "language_attentions",
+        "vision_attentions",
+        "cross_encoder_attentions"
+    ],
+    "params": [
+        {
+            "name": "language_output",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the language encoder."
+        },
+        {
+            "name": "vision_output",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the visual encoder."
+        },
+        {
+            "name": "pooled_output",
+            "type": "torch.FloatTensor of shape (batch_size, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Last layer hidden-state of the first token of the sequence (classification, CLS, token) further processedby a Linear layer and a Tanh activation function. The Linear"
+        },
+        {
+            "name": "language_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for input features + one for the output of each cross-modality layer) ofshape (batch_size, sequence_length, hidden_size)."
+        },
+        {
+            "name": "vision_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for input features + one for the output of each cross-modality layer) ofshape (batch_size, sequence_length, hidden_size)."
+        },
+        {
+            "name": "language_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights after the attention softmax, used to compute the weighted average inthe self-attention heads."
+        },
+        {
+            "name": "vision_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights after the attention softmax, used to compute the weighted average inthe self-attention heads."
+        },
+        {
+            "name": "cross_encoder_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights after the attention softmax, used to compute the weighted average inthe self-attention heads."
+        }
+    ],
+    "return": ""
+}

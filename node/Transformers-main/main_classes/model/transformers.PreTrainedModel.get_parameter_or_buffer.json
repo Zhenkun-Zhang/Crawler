@@ -1,0 +1,11 @@
+{
+    "api": "transformers.PreTrainedModel.get_parameter_or_buffer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "target:",
+        "str"
+    ],
+    "params": [],
+    "return": ""
+}

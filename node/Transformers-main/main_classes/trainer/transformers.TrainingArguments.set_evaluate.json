@@ -1,0 +1,68 @@
+{
+    "api": "transformers.TrainingArguments.set_evaluate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "strategy:",
+        "typing.Union[str,",
+        "transformers.trainer_utils.IntervalStrategy]",
+        "steps",
+        "batch_size",
+        "accumulation_steps",
+        "delay",
+        "loss_only",
+        "jit_mode"
+    ],
+    "params": [
+        {
+            "name": "strategy",
+            "type": "str,IntervalStrategy",
+            "optional": true,
+            "default": "",
+            "description": "The evaluation strategy to adopt during training. Possible values are:no: No evaluation is done during training.steps: Evaluation is done (and logged) every steps.epoch: Evaluation is done at the end of each epoch.Setting a strategy different from no will set self.do_eval to True."
+        },
+        {
+            "name": "steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of update steps between two evaluations if strategy=steps."
+        },
+        {
+            "name": "batch_size",
+            "type": "int optional, defaults to 8",
+            "optional": true,
+            "default": "",
+            "description": "The batch size per device (GPU/TPU core/CPU…) used for evaluation."
+        },
+        {
+            "name": "accumulation_steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of predictions steps to accumulate the output tensors for, before moving the results to the CPU.If left unset, the whole predictions are accumulated on GPU/TPU before being moved to the CPU (fasterbut requires more memory)."
+        },
+        {
+            "name": "delay",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Number of epochs or steps to wait for before the first evaluation can be performed, depending on theeval_strategy."
+        },
+        {
+            "name": "loss_only",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Ignores all outputs except the loss."
+        },
+        {
+            "name": "jit_mode",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use PyTorch jit trace for inference."
+        }
+    ],
+    "return": ""
+}

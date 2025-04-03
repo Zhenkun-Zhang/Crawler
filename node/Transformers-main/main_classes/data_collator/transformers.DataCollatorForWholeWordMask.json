@@ -1,0 +1,19 @@
+{
+    "api": "transformers.DataCollatorForWholeWordMask",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tokenizer:",
+        "PreTrainedTokenizerBase",
+        "mlm",
+        "mlm_probability",
+        "mask_replace_prob",
+        "random_replace_prob",
+        "pad_to_multiple_of",
+        "tf_experimental_compile",
+        "return_tensors",
+        "seed"
+    ],
+    "params": [],
+    "return": ""
+}

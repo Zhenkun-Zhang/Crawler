@@ -1,0 +1,111 @@
+{
+    "api": "transformers.PLBartTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "bos_token",
+        "eos_token",
+        "sep_token",
+        "cls_token",
+        "unk_token",
+        "pad_token",
+        "mask_token",
+        "language_codes",
+        "tokenizer_file",
+        "src_lang",
+        "tgt_lang",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "additional_special_tokens",
+        "clean_up_tokenization_spaces",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "src_lang",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A string representing the source language."
+        },
+        {
+            "name": "tgt_lang",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A string representing the target language."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The start of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The cls token, which is a special token used as the first token for all tasks."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "mask_token(str,",
+            "type": "optional, defaults to \"<mask>\"",
+            "optional": true,
+            "default": "",
+            "description": "The token used for masking values. This is the token used when training this model with masking tasks. Thisis only used in the base tokenizer type. For multi tokenizer, masking is never done for thedownstream tasks."
+        },
+        {
+            "name": "language_codes",
+            "type": "str",
+            "optional": true,
+            "default": "base",
+            "description": "What language codes to use. Should be one of base or multi."
+        },
+        {
+            "name": "sp_model_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the SentencePieceProcessor.__init__() method. The Python wrapper forSentencePiece can be used, among other things,to set:enable_sampling: Enable subword regularization.nbest_size: Sampling parameters for unigram. Invalid for BPE-Dropout.nbest_size = {0,1}: No sampling is performed.nbest_size > 1: samples from the nbest_size results.nbest_size < 0: assuming that nbest_size is infinite and samples from the all hypothesis (lattice)using forward-filtering-and-backward-sampling algorithm.alpha: Smoothing parameter for unigram sampling, and dropout probability of merge operations forBPE-dropout."
+        }
+    ],
+    "return": ""
+}

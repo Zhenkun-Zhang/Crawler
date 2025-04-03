@@ -1,0 +1,25 @@
+{
+    "api": "transformers.MoshiForConditionalGeneration.get_unconditional_inputs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "num_samples"
+    ],
+    "params": [
+        {
+            "name": "num_samples",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of audio samples to unconditionally generate."
+        },
+        {
+            "name": "max_new_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of tokens to generate for each sample. More tokens means longer audio samples, at the expense oflonger inference (since more audio tokens need to be generated per sample)."
+        }
+    ],
+    "return": ""
+}

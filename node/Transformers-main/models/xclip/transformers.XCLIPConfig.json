@@ -1,0 +1,98 @@
+{
+    "api": "transformers.XCLIPConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "vision_config",
+        "projection_dim",
+        "prompt_layers",
+        "prompt_alpha",
+        "prompt_hidden_act",
+        "prompt_num_attention_heads",
+        "prompt_attention_dropout",
+        "prompt_projection_dropout",
+        "logit_scale_init_value",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize XCLIPTextConfig."
+        },
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize XCLIPVisionConfig."
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of text and vision projection layers."
+        },
+        {
+            "name": "prompt_layers",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of layers in the video specific prompt generator."
+        },
+        {
+            "name": "prompt_alpha",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Alpha value to use in the video specific prompt generator."
+        },
+        {
+            "name": "prompt_hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "quick_gelu",
+            "description": "The non-linear activation function (function or string) in the video specific prompt generator. If string,gelu, relu, selu and gelu_new quick_gelu are supported."
+        },
+        {
+            "name": "prompt_num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads in the cross-attention of the video specific prompt generator."
+        },
+        {
+            "name": "prompt_attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for the attention layers in the video specific prompt generator."
+        },
+        {
+            "name": "prompt_projection_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for the projection layers in the video specific prompt generator."
+        },
+        {
+            "name": "logit_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "2.6592",
+            "description": "The inital value of the logit_scale parameter. Default is used as per the original XCLIP implementation."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

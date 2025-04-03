@@ -1,0 +1,45 @@
+{
+    "api": "transformers.InputFeatures",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "typing.List[int]",
+        "attention_mask",
+        "token_type_ids",
+        "label",
+        "float,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary."
+        },
+        {
+            "name": "attention_mask",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices.Mask values selected in [0, 1]: Usually 1 for tokens that are NOT MASKED, 0 for MASKED (padded)tokens."
+        },
+        {
+            "name": "token_type_ids",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "(Optional) Segment token indices to indicate first and secondportions of the inputs. Only some models use them."
+        },
+        {
+            "name": "label",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "(Optional) Label corresponding to the input. Int for classification problems,float for regression problems."
+        }
+    ],
+    "return": ""
+}

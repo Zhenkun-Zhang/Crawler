@@ -1,0 +1,28 @@
+{
+    "api": "transformers.MaskFormerConfig.from_backbone_and_decoder_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "backbone_config:",
+        "decoder_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The backbone configuration."
+        },
+        {
+            "name": "decoder_config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The transformer decoder configuration to use."
+        }
+    ],
+    "return": "MaskFormerConfig"
+}

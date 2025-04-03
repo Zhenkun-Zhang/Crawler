@@ -1,0 +1,11 @@
+{
+    "api": "transformers.InstructBlipVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "InstructBlipVisionConfig"
+    ],
+    "params": [],
+    "return": ""
+}

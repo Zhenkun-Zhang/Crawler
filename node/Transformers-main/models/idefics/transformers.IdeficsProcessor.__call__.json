@@ -1,0 +1,55 @@
+{
+    "api": "transformers.IdeficsProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor'],",
+        "typing.List[typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]],",
+        "str,",
+        "typing.List[str],",
+        "typing.List[typing.List[str]]]",
+        "text",
+        "typing.List[str],",
+        "typing.List[typing.List[str]],",
+        "typing.List[typing.List[typing.List[str]]]]",
+        "audio",
+        "videos",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "Union[ImageInput, List[ImageInput], str, List[str], List[List[str]]]",
+            "optional": false,
+            "default": "",
+            "description": "either a single image or a batched list of images - can be passed in when text contains only text prompts,in order to use the image-text-to-text behavior."
+        },
+        {
+            "name": "text",
+            "type": "Union[List[TextInput], [List[List[TextInput]]]]",
+            "optional": false,
+            "default": "",
+            "description": "either a single prompt or a batched list of prompts - see the detailed description immediately afterthe end of the arguments doc section."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to return. Can be one of:TensorType.PYTORCH or pt: Return a batch of type torch.Tensor."
+        }
+    ],
+    "return": "a dict with entries"
+}

@@ -1,0 +1,36 @@
+{
+    "api": "transformers.pytorch_utils.prune_linear_layer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "layer:",
+        "nn.Linear",
+        "index",
+        "dim",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "layer",
+            "type": "torch.nn.Linear",
+            "optional": false,
+            "default": "",
+            "description": "The layer to prune."
+        },
+        {
+            "name": "index",
+            "type": "torch.LongTensor",
+            "optional": false,
+            "default": "",
+            "description": "The indices to keep in the layer."
+        },
+        {
+            "name": "dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The dimension on which to keep the indices."
+        }
+    ],
+    "return": "torch.nn.Linear"
+}

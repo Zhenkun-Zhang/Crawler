@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Phi4MultimodalAudioModel.forward_embeddings",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "hidden_states",
+        "masks"
+    ],
+    "params": [],
+    "return": ""
+}

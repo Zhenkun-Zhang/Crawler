@@ -1,0 +1,44 @@
+{
+    "api": "transformers.GLPNImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size_divisor",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_rescale",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions, rounding them down to the closest multiple ofsize_divisor. Can be overridden by do_resize in preprocess."
+        },
+        {
+            "name": "size_divisor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "When do_resize is True, images are resized so their height and width are rounded down to the closestmultiple of size_divisor. Can be overridden by size_divisor in preprocess."
+        },
+        {
+            "name": "resample",
+            "type": "PIL.Image resampling filter",
+            "optional": true,
+            "default": "<Resampling.BILINEAR:",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by resample in preprocess."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to apply the scaling factor (to make pixel values floats between 0. and 1.). Can beoverridden by do_rescale in preprocess."
+        }
+    ],
+    "return": ""
+}

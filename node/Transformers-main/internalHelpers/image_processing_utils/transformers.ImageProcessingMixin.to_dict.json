@@ -1,0 +1,10 @@
+{
+    "api": "transformers.ImageProcessingMixin.to_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        ")"
+    ],
+    "params": [],
+    "return": "Dict[str, Any]"
+}

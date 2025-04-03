@@ -1,0 +1,76 @@
+{
+    "api": "transformers.QuestionAnsweringPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "question",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "One or several question(s) (must be used in conjunction with the context argument)."
+        },
+        {
+            "name": "context",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "One or several context(s) associated with the question(s) (must be used in conjunction with thequestion argument)."
+        },
+        {
+            "name": "top_k",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of answers to return (will be chosen by order of likelihood). Note that we return less thantop_k answers if there are not enough options available within the context."
+        },
+        {
+            "name": "doc_stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If the context is too long to fit with the question for the model, it will be split in several chunkswith some overlap. This argument controls the size of that overlap."
+        },
+        {
+            "name": "max_answer_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length of predicted answers (e.g., only answers with a shorter length are considered)."
+        },
+        {
+            "name": "max_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length of the total sentence (context + question) in tokens of each chunk passed to themodel. The context will be split in several chunks (using doc_stride as overlap) if needed."
+        },
+        {
+            "name": "max_question_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length of the question after tokenization. It will be truncated if needed."
+        },
+        {
+            "name": "handle_impossible_answer",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not we accept impossible as an answer."
+        },
+        {
+            "name": "align_to_words",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Attempts to align the answer to real words. Improves quality on space separated languages. Might hurt onnon-space-separated languages (like Japanese or Chinese)"
+        }
+    ],
+    "return": "A dict or a list of dict"
+}

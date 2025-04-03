@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Owlv2VisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Owlv2VisionConfig"
+    ],
+    "params": [],
+    "return": ""
+}

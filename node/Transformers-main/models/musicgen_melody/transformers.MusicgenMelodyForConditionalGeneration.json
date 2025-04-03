@@ -1,0 +1,43 @@
+{
+    "api": "transformers.MusicgenMelodyForConditionalGeneration",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "MusicgenMelodyConfig",
+        "text_encoder",
+        "audio_encoder",
+        "decoder"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "MusicgenMelodyConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        },
+        {
+            "name": "text_encoder",
+            "type": "Optional[PreTrainedModel]",
+            "optional": true,
+            "default": "",
+            "description": "Text encoder."
+        },
+        {
+            "name": "audio_encoder",
+            "type": "Optional[PreTrainedModel]",
+            "optional": true,
+            "default": "",
+            "description": "Audio code decoder."
+        },
+        {
+            "name": "decoder",
+            "type": "Optional[MusicgenMelodyForCausalLM]",
+            "optional": true,
+            "default": "",
+            "description": "MusicGen Melody decoder used to generate audio codes."
+        }
+    ],
+    "return": ""
+}

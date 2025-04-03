@@ -1,0 +1,110 @@
+{
+    "api": "transformers.TFPreTrainedModel.from_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pretrained_model_name_or_path:",
+        "os.PathLike]]",
+        "*model_args",
+        "config",
+        "str,",
+        "os.PathLike]]",
+        "cache_dir",
+        "os.PathLike]]",
+        "ignore_mismatched_sizes",
+        "force_download",
+        "local_files_only",
+        "token",
+        "bool]]",
+        "revision",
+        "use_safetensors",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pretrained_model_name_or_path",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Can be either:A string, the model id of a pretrained model hosted inside a model repo on huggingface.co.A path to a directory containing model weights saved usingsave_pretrained(), e.g., ./my_model_directory/.A path or url to a PyTorch state_dict save file (e.g, ./pt_model/pytorch_model.bin). In thiscase, from_pt should be set to True and a configuration object should be provided as configargument. This loading path is slower than converting the PyTorch model in a TensorFlow modelusing the provided conversion scripts and loading the TensorFlow model afterwards.None if you are both providing the configuration and state dictionary (resp. with keywordarguments config and state_dict)."
+        },
+        {
+            "name": "model_args",
+            "type": "sequence of positional arguments",
+            "optional": true,
+            "default": "",
+            "description": "All remaining positional arguments will be passed to the underlying models __init__ method."
+        },
+        {
+            "name": "config",
+            "type": "Union[PretrainedConfig, str]",
+            "optional": true,
+            "default": "",
+            "description": "Can be either:an instance of a class derived from PretrainedConfig,a string valid as input to from_pretrained().Configuration for the model to use instead of an automatically loaded configuration. Configuration canbe automatically loaded when:The model is a model provided by the library (loaded with the model id string of a pretrainedmodel).The model was saved using save_pretrained() and is reloaded by supplying thesave directory.The model is loaded by supplying a local directory as pretrained_model_name_or_path and aconfiguration JSON file named config.json is found in the directory."
+        },
+        {
+            "name": "from_pt",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Load the model weights from a PyTorch state_dict save file (see docstring ofpretrained_model_name_or_path argument)."
+        },
+        {
+            "name": "ignore_mismatched_sizes",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to raise an error if some of the weights from the checkpoint do not have the same sizeas the weights of the model (if for instance, you are instantiating a model with 10 labels from acheckpoint with 3 labels)."
+        },
+        {
+            "name": "cache_dir",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Path to a directory in which a downloaded pretrained model configuration should be cached if thestandard cache should not be used."
+        },
+        {
+            "name": "force_download",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to force the (re-)download of the model weights and configuration files, overriding thecached versions if they exist."
+        },
+        {
+            "name": "resume_download",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Deprecated and ignored. All downloads are now resumed by default when possible.Will be removed in v5 of Transformers."
+        },
+        {
+            "name": "proxies",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "(Dict[str, str], optional): A dictionary of proxy servers to use by protocol or endpoint, e.g., {http: foo.bar:3128, http://hostname: foo.bar:4012}. The proxies are used on each request. output_loading_info(bool, *optional*, defaults to False`): Whether ot not to also return adictionary containing missing keys, unexpected keys and error messages."
+        },
+        {
+            "name": "local_files_only(bool,",
+            "type": "optional, defaults to False",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to only look at local files (e.g., not try downloading the model)."
+        },
+        {
+            "name": "token",
+            "type": "str,bool",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If True, or not specified, will usethe token generated when running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "revision",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use agit-based system for storing models and other artifacts on huggingface.co, so revision can be anyidentifier allowed by git."
+        }
+    ],
+    "return": ""
+}

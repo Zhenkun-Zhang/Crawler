@@ -1,0 +1,308 @@
+{
+    "api": "transformers.WhisperConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "num_mel_bins",
+        "encoder_layers",
+        "encoder_attention_heads",
+        "decoder_layers",
+        "decoder_attention_heads",
+        "decoder_ffn_dim",
+        "encoder_ffn_dim",
+        "encoder_layerdrop",
+        "decoder_layerdrop",
+        "decoder_start_token_id",
+        "use_cache",
+        "is_encoder_decoder",
+        "activation_function",
+        "d_model",
+        "dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "init_std",
+        "scale_embedding",
+        "max_source_positions",
+        "max_target_positions",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "suppress_tokens",
+        "begin_suppress_tokens",
+        "50256]",
+        "use_weighted_layer_sum",
+        "classifier_proj_size",
+        "apply_spec_augment",
+        "mask_time_prob",
+        "mask_time_length",
+        "mask_time_min_masks",
+        "mask_feature_prob",
+        "mask_feature_length",
+        "mask_feature_min_masks",
+        "median_filter_width",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "51865",
+            "description": "Vocabulary size of the Whisper model. Defines the number of different tokens that can be represented by thedecoder_input_ids passed when calling WhisperModel"
+        },
+        {
+            "name": "num_mel_bins",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "Number of mel features used per input features. Should correspond to the value used in theWhisperProcessor class."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of encoder layers."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "1536",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in encoder."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "1536",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "encoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability for the encoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "decoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability for the decoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "decoder_start_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50257",
+            "description": "Corresponds to the <|startoftranscript|> token, which is automatically used when no decoder_input_idsare provided to the generate function. It is used to guide the model`s generation process depending onthe task."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "is_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the model is used as an encoder/decoder or not."
+        },
+        {
+            "name": "activation_function",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "384",
+            "description": "Dimensionality of the layers."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "scale_embedding",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Scale embeddings by diving by sqrt(d_model)."
+        },
+        {
+            "name": "max_source_positions",
+            "type": "int",
+            "optional": true,
+            "default": "1500",
+            "description": "The maximum sequence length of log-mel filter-bank features that this model might ever be used with."
+        },
+        {
+            "name": "max_target_positions",
+            "type": "int",
+            "optional": true,
+            "default": "448",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50256",
+            "description": "Padding token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50256",
+            "description": "Begin of stream token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50256",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "suppress_tokens",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "A list containing the non-speech tokens that will be used by the logit processor in the generatefunction. NON_SPEECH_TOKENS and NON_SPEECH_TOKENS_MULTI each correspond to the english-only and themultilingual model."
+        },
+        {
+            "name": "begin_suppress_tokens",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[220,",
+            "description": "A list containing tokens that will be supressed at the beginning of the sampling process. Initialized asthe token for   (blank_token_id) and the eos_token_id"
+        },
+        {
+            "name": "use_weighted_layer_sum",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a weighted average of layer outputs with learned weights. Only relevant when using aninstance of WhisperForAudioClassification."
+        },
+        {
+            "name": "classifier_proj_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimensionality of the projection before token mean-pooling for classification. Only relevant when using aninstance of WhisperForAudioClassification."
+        },
+        {
+            "name": "apply_spec_augment",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to apply SpecAugment data augmentation to the outputs of the feature encoder. For reference seeSpecAugment: A Simple Data Augmentation Method for Automatic SpeechRecognition."
+        },
+        {
+            "name": "mask_time_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.05",
+            "description": "Percentage (between 0 and 1) of all feature vectors along the time axis which will be masked. The maskingprocecure generates mask_time_prob*len(time_axis)/mask_time_length independent masks over the axis. Ifreasoning from the propability of each feature vector to be chosen as the start of the vector span to bemasked, mask_time_prob should be prob_vector_start*mask_time_length. Note that overlap may decrease theactual percentage of masked vectors. This is only relevant if apply_spec_augment == True."
+        },
+        {
+            "name": "mask_time_length",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Length of vector span along the time axis."
+        },
+        {
+            "name": "mask_time_min_masks",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The minimum number of masks of length mask_feature_length generated along the time axis, each time step,irrespectively of mask_feature_prob. Only relevant if mask_time_prob*len(time_axis)/mask_time_length <mask_time_min_masks"
+        },
+        {
+            "name": "mask_feature_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Percentage (between 0 and 1) of all feature vectors along the feature axis which will be masked. Themasking procecure generates mask_feature_prob*len(feature_axis)/mask_time_length independent masks overthe axis. If reasoning from the propability of each feature vector to be chosen as the start of the vectorspan to be masked, mask_feature_prob should be prob_vector_start*mask_feature_length. Note that overlapmay decrease the actual percentage of masked vectors. This is only relevant if apply_spec_augment is True."
+        },
+        {
+            "name": "mask_feature_length",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Length of vector span along the feature axis."
+        },
+        {
+            "name": "mask_feature_min_masks",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The minimum number of masks of length mask_feature_length generated along the feature axis, each timestep, irrespectively of mask_feature_prob. Only relevant ifmask_feature_prob*len(feature_axis)/mask_feature_length < mask_feature_min_masks."
+        },
+        {
+            "name": "median_filter_width",
+            "type": "int",
+            "optional": true,
+            "default": "7",
+            "description": "Width of the median filter used to smoothen to cross-attention outputs when computing token timestamps.Should be an odd number."
+        }
+    ],
+    "return": ""
+}

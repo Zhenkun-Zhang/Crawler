@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Phi4MultimodalAudioModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Phi4MultimodalAudioConfig"
+    ],
+    "params": [],
+    "return": ""
+}

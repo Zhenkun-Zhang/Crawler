@@ -1,0 +1,27 @@
+{
+    "api": "transformers.CpmAntTokenizer.build_inputs_with_special_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0:",
+        "token_ids_1",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids_0",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "The first tokenized sequence that special tokens will be added."
+        },
+        {
+            "name": "token_ids_1",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "The optional second tokenized sequence that special tokens will be added."
+        }
+    ],
+    "return": "List[int]"
+}

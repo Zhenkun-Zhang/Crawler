@@ -1,0 +1,35 @@
+{
+    "api": "transformers.DacModel.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "quantized_representation:",
+        "audio_codes",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "quantized_representation",
+            "type": "torch.Tensor of shape (batch_size, dimension, time_steps",
+            "optional": true,
+            "default": "",
+            "description": "Quantized continuous representation of input."
+        },
+        {
+            "name": "audio_codes",
+            "type": "torch.Tensor of shape (batch_size, num_codebooks, time_steps",
+            "optional": true,
+            "default": "",
+            "description": "The codebook indices for each codebook, representing the quantized discreterepresentation of the input. This parameter should be provided if you wantto decode directly from the audio codes (it will overwrite quantized_representation)."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.dac.modeling_dac.DacDecoderOutput or tuple(torch.FloatTensor)"
+}

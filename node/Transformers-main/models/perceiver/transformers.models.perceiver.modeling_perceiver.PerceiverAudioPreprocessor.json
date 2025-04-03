@@ -1,0 +1,74 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverAudioPreprocessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "prep_type",
+        "samples_per_patch",
+        "position_encoding_type",
+        "concat_or_add_pos",
+        "out_channels",
+        "project_pos_dim",
+        "**position_encoding_kwargs"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "[PerceiverConfig]",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        },
+        {
+            "name": "prep_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Preprocessor type to use. Only patches is supported."
+        },
+        {
+            "name": "samples_per_patch",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of samples per patch."
+        },
+        {
+            "name": "position_encoding_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Type of position encoding to use. Can be trainable or fourier."
+        },
+        {
+            "name": "concat_or_add_pos",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "How to concatenate the position encoding to the input. Can be concat or add."
+        },
+        {
+            "name": "out_channels",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Number of channels in the output."
+        },
+        {
+            "name": "project_pos_dim",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "Dimension of the position encoding to project to. If -1, no projection is applied."
+        },
+        {
+            "name": "*position_encoding_kwargs",
+            "type": "s (Dict",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments for the position encoding."
+        }
+    ],
+    "return": ""
+}

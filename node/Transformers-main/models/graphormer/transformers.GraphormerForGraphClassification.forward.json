@@ -1,0 +1,19 @@
+{
+    "api": "transformers.GraphormerForGraphClassification.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_nodes:",
+        "input_edges",
+        "attn_bias",
+        "in_degree",
+        "out_degree",
+        "spatial_pos",
+        "attn_edge_type",
+        "labels",
+        "return_dict",
+        "**unused"
+    ],
+    "params": [],
+    "return": ""
+}

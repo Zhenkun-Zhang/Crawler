@@ -1,0 +1,18 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase.register_for_auto_class",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "auto_class"
+    ],
+    "params": [
+        {
+            "name": "auto_class",
+            "type": "str,type",
+            "optional": true,
+            "default": "AutoTokenizer",
+            "description": "The auto class to register this new tokenizer with."
+        }
+    ],
+    "return": ""
+}

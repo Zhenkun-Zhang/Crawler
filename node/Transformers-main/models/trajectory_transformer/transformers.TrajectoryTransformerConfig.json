@@ -1,0 +1,181 @@
+{
+    "api": "transformers.TrajectoryTransformerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "action_weight",
+        "reward_weight",
+        "value_weight",
+        "block_size",
+        "action_dim",
+        "observation_dim",
+        "transition_dim",
+        "n_layer",
+        "n_head",
+        "n_embd",
+        "embd_pdrop",
+        "attn_pdrop",
+        "resid_pdrop",
+        "learning_rate",
+        "max_position_embeddings",
+        "initializer_range",
+        "layer_norm_eps",
+        "kaiming_initializer_range",
+        "use_cache",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "Vocabulary size of the TrajectoryTransformer model. Defines the number of different tokens that can berepresented by the trajectories passed when calling TrajectoryTransformerModel"
+        },
+        {
+            "name": "action_weight",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Weight of the action in the loss function"
+        },
+        {
+            "name": "reward_weight",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Weight of the reward in the loss function"
+        },
+        {
+            "name": "value_weight",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Weight of the value in the loss function"
+        },
+        {
+            "name": "block_size",
+            "type": "int",
+            "optional": true,
+            "default": "249",
+            "description": "Size of the blocks in the trajectory transformer."
+        },
+        {
+            "name": "action_dim",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Dimension of the action space."
+        },
+        {
+            "name": "observation_dim",
+            "type": "int",
+            "optional": true,
+            "default": "17",
+            "description": "Dimension of the observation space."
+        },
+        {
+            "name": "transition_dim",
+            "type": "int",
+            "optional": true,
+            "default": "25",
+            "description": "Dimension of the transition space."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "n_embd",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "embd_pdrop",
+            "type": "int",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the embeddings."
+        },
+        {
+            "name": "attn_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "kaiming_initializer_range",
+            "type": "`float",
+            "optional": true,
+            "default": "1",
+            "description": "A coefficient scaling the negative slope of the kaiming initializer rectifier for EinLinear layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "Example",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": ""
+        }
+    ],
+    "return": ""
+}

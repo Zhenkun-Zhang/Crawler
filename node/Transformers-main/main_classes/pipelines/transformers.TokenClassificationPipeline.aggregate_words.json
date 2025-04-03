@@ -1,0 +1,12 @@
+{
+    "api": "transformers.TokenClassificationPipeline.aggregate_words",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "entities:",
+        "typing.List[dict]",
+        "aggregation_strategy"
+    ],
+    "params": [],
+    "return": ""
+}

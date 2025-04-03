@@ -1,0 +1,21 @@
+{
+    "api": "transformers.FastSpeech2ConformerTokenizer.save_vocabulary",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory:",
+        "str",
+        "filename_prefix",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The directory in which to save the vocabulary."
+        }
+    ],
+    "return": "Tuple(str)"
+}

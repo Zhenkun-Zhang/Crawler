@@ -1,0 +1,108 @@
+{
+    "api": "transformers.Qwen2AudioForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "input_features",
+        "attention_mask",
+        "feature_attention_mask",
+        "position_ids",
+        "past_key_values",
+        "inputs_embeds",
+        "labels",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "input_features",
+            "type": "torch.FloatTensor of shape (batch_size, feature_size, feature_sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values mel features extracted from the raw speech waveform. Raw speech waveform can be obtained byloading a .flac or .wav audio file into an array of type List[float] or a numpy.ndarray, e.g. viathe soundfile library (pip install soundfile). To prepare the array into input_features, theAutoFeatureExtractor should be used for extracting the mel features, padding and conversion into atensor of type torch.FloatTensor. See call()"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.If past_key_values is used, optionally only the last decoder_input_ids have to be input (seepast_key_values).If you want to change padding behavior, you should read modeling_opt._prepare_decoder_attention_maskand modify to your needs. See diagram 1 in the paper for moreinformation on the default strategy.1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "feature_attention_mask",
+            "type": "torch.Tensor of shape (batch_size, feature_sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding feature indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked."
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.n_positions - 1]. What are position IDs?"
+        },
+        {
+            "name": "past_key_values",
+            "type": "Cache",
+            "optional": true,
+            "default": "",
+            "description": "Pre-computed hidden-states that can be used to speed up auto-regressive (sequential) decoding. There aretwo sets of pre-computed hidden-states: key and values states in the self-attention blocks.The past_key_values are returned when use_cache=True is passed or when config.use_cache=True.It is a Cache instance.If past_key_values are used, the user can optionally input only the last input_ids (thosethat dont have their past key value states given to this model) of shape (batch_size, 1) instead ofall input_ids of shape (batch_size, sequence_length).shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the masked language modeling loss. Indices should either be in [0, ..., config.vocab_size] or -100 (see input_ids docstring). Tokens with indices set to -100 are ignored(masked), the loss is only computed for the tokens with labels in [0, ..., config.vocab_size]."
+        }
+    ],
+    "return": "transformers.models.qwen2_audio.modeling_qwen2_audio.Qwen2AudioCausalLMOutputWithPast or tuple(torch.FloatTensor)"
+}

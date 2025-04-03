@@ -1,0 +1,13 @@
+{
+    "api": "transformers.SwitchTransformersSparseMLP",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "SwitchTransformersConfig",
+        "expert_class",
+        "'transformers.models.switch_transformers.modeling_switch_transformers.SwitchTransformersDenseActDense'>"
+    ],
+    "params": [],
+    "return": ""
+}

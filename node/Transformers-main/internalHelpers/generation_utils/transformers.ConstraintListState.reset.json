@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ConstraintListState.reset",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids:",
+        "typing.Optional[typing.List[int]]"
+    ],
+    "params": [],
+    "return": ""
+}

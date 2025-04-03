@@ -1,0 +1,14 @@
+{
+    "api": "transformers.NllbMoeSparseMLP",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "NllbMoeConfig",
+        "ffn_dim",
+        "expert_class",
+        "'transformers.models.nllb_moe.modeling_nllb_moe.NllbMoeDenseActDense'>"
+    ],
+    "params": [],
+    "return": ""
+}

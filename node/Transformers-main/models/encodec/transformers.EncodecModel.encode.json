@@ -1,0 +1,35 @@
+{
+    "api": "transformers.EncodecModel.encode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "padding_mask",
+        "bandwidth",
+        "return_dict"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "torch.Tensor of shape (batch_size, channels, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of the input audio waveform."
+        },
+        {
+            "name": "padding_mask",
+            "type": "torch.Tensor of shape (batch_size, channels, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Padding mask used to pad the input_values."
+        },
+        {
+            "name": "bandwidth",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The target bandwidth. Must be one of config.target_bandwidths. If None, uses the smallest possiblebandwidth. bandwidth is represented as a thousandth of what it is, e.g. 6kbps bandwidth is representedas bandwidth == 6.0"
+        }
+    ],
+    "return": ""
+}

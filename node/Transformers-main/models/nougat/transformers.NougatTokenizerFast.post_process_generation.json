@@ -1,0 +1,37 @@
+{
+    "api": "transformers.NougatTokenizerFast.post_process_generation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "generation:",
+        "typing.Union[str,",
+        "typing.List[str]]",
+        "fix_markdown",
+        "num_workers",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "generation",
+            "type": "Union[str, List[str]]",
+            "optional": false,
+            "default": "",
+            "description": "The generated text or a list of generated texts."
+        },
+        {
+            "name": "fix_markdown",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to perform Markdown formatting fixes."
+        },
+        {
+            "name": "num_workers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Optional number of workers to pass to leverage multiprocessing (postprocessing several texts inparallel)."
+        }
+    ],
+    "return": "Union[str, List[str]]"
+}

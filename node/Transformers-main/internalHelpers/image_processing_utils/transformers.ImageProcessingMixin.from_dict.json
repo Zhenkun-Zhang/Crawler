@@ -1,0 +1,28 @@
+{
+    "api": "transformers.ImageProcessingMixin.from_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image_processor_dict:",
+        "dict",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image_processor_dict",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary that will be used to instantiate the image processor object. Such a dictionary can beretrieved from a pretrained checkpoint by leveraging theto_dict() method."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "Additional parameters from which to initialize the image processor object."
+        }
+    ],
+    "return": "ImageProcessingMixin"
+}

@@ -1,0 +1,66 @@
+{
+    "api": "transformers.ClapConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "audio_config",
+        "logit_scale_init_value",
+        "projection_dim",
+        "projection_hidden_act",
+        "initializer_factor",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize ClapTextConfig."
+        },
+        {
+            "name": "audio_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize ClapAudioConfig."
+        },
+        {
+            "name": "logit_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "14.285714285714285",
+            "description": "The initial value of the logit_scale parameter. Default is used as per the original CLAP implementation."
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of text and audio projection layers."
+        },
+        {
+            "name": "projection_hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "relu",
+            "description": "Activation function for the projection layers."
+        },
+        {
+            "name": "initializer_factor",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Factor to scale the initialization of the model weights."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

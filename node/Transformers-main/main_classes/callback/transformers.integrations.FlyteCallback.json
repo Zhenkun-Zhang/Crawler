@@ -1,0 +1,26 @@
+{
+    "api": "transformers.integrations.FlyteCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "save_log_history:",
+        "sync_checkpoints"
+    ],
+    "params": [
+        {
+            "name": "save_log_history",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "When set to True, the training logs are saved as a Flyte Deck."
+        },
+        {
+            "name": "sync_checkpoints",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "When set to True, checkpoints are synced with Flyte and can be used to resume training in the case of aninterruption."
+        }
+    ],
+    "return": ""
+}

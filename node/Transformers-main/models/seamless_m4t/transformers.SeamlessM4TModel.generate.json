@@ -1,0 +1,67 @@
+{
+    "api": "transformers.SeamlessM4TModel.generate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "input_features",
+        "return_intermediate_token_ids",
+        "tgt_lang",
+        "spkr_id",
+        "generate_speech",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using SeamlessM4TTokenizer or SeamlessM4TProcessor. SeePreTrainedTokenizer.encode() and PreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "input_features",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, num_banks",
+            "optional": true,
+            "default": "",
+            "description": "Input audio features. This should be returnes by the SeamlessM4TFeatureExtractor class or theSeamlessM4TProcessor class. See SeamlessM4TFeatureExtractor.call() for details."
+        },
+        {
+            "name": "return_intermediate_token_ids",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, also returns the intermediate generated text and unit tokens. Set to True if you also wantto get translated text alongside the audio. Note that if generate_speech=True, this parameter will beignored."
+        },
+        {
+            "name": "tgt_lang",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The language to use as target language for translation."
+        },
+        {
+            "name": "spkr_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id of the speaker used for speech synthesis. Must be lower than config.vocoder_num_spkrs."
+        },
+        {
+            "name": "generate_speech",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If False, will only returns the text tokens and wont generate speech."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Remaining dictionary of keyword arguments that will be passed to GenerationMixin.generate(). Keywordarguments are of two types:Without a prefix, they will be entered as **kwargs for the generate method of each sub-model,except for decoder_input_ids which will only be passed through the text components.With a text_ or speech_ prefix, they will be input for the generate method of thetext model and speech model respectively. It has the priority over the keywords without a prefix.This means you can, for example, specify a generation strategy for one generation but not for theother."
+        }
+    ],
+    "return": "Union[SeamlessM4TGenerationOutput, Tuple[Tensor], ModelOutput]"
+}

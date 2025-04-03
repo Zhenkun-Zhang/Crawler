@@ -1,0 +1,42 @@
+{
+    "api": "transformers.models.wav2vec2.modeling_flax_wav2vec2.FlaxWav2Vec2BaseModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "last_hidden_state:",
+        "extract_features",
+        "hidden_states",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the model."
+        },
+        {
+            "name": "extract_features",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length, last_conv_dim)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of extracted feature vectors of the last convolutional layer of the model with last_conv_dimbeing the dimension of the last convolutional layer."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(jnp.ndarray",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of jnp.ndarray (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

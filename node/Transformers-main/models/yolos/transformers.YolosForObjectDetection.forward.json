@@ -1,0 +1,59 @@
+{
+    "api": "transformers.YolosForObjectDetection.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeYolosImageProcessor.call() for details."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "List[Dict] of len (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the bipartite matching loss. List of dicts, each dictionary containing at least thefollowing 2 keys: class_labels and boxes (the class labels and bounding boxes of an image in thebatch respectively). The class labels themselves should be a torch.LongTensor of len (number of bounding boxes in the image,) and the boxes a torch.FloatTensor of shape (number of bounding boxes in the image, 4)."
+        }
+    ],
+    "return": "transformers.models.yolos.modeling_yolos.YolosObjectDetectionOutput or tuple(torch.FloatTensor)"
+}

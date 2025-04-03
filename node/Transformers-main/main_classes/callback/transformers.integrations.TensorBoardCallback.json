@@ -1,0 +1,18 @@
+{
+    "api": "transformers.integrations.TensorBoardCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tb_writer"
+    ],
+    "params": [
+        {
+            "name": "tb_writer",
+            "type": "SummaryWriter",
+            "optional": true,
+            "default": "None",
+            "description": "The writer to use. Will instantiate one if not set."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,20 @@
+{
+    "api": "transformers.GenerationConfig.from_model_config",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model_config:",
+        "PretrainedConfig",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "model_config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The model config that will be used to instantiate the generation config."
+        }
+    ],
+    "return": "GenerationConfig"
+}

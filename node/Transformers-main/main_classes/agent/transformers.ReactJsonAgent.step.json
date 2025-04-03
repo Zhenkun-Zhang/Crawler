@@ -1,0 +1,12 @@
+{
+    "api": "transformers.ReactJsonAgent.step",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "log_entry:",
+        "typing.Dict[str,",
+        "typing.Any]"
+    ],
+    "params": [],
+    "return": ""
+}

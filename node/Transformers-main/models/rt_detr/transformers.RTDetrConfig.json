@@ -1,0 +1,465 @@
+{
+    "api": "transformers.RTDetrConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "initializer_range",
+        "initializer_bias_prior_prob",
+        "layer_norm_eps",
+        "batch_norm_eps",
+        "backbone_config",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "freeze_backbone_batch_norms",
+        "backbone_kwargs",
+        "encoder_hidden_dim",
+        "encoder_in_channels",
+        "1024,",
+        "2048]",
+        "feat_strides",
+        "16,",
+        "32]",
+        "encoder_layers",
+        "encoder_ffn_dim",
+        "encoder_attention_heads",
+        "dropout",
+        "activation_dropout",
+        "encode_proj_layers",
+        "positional_encoding_temperature",
+        "encoder_activation_function",
+        "activation_function",
+        "eval_size",
+        "normalize_before",
+        "hidden_expansion",
+        "d_model",
+        "num_queries",
+        "decoder_in_channels",
+        "256,",
+        "256]",
+        "decoder_ffn_dim",
+        "num_feature_levels",
+        "decoder_n_points",
+        "decoder_layers",
+        "decoder_attention_heads",
+        "decoder_activation_function",
+        "attention_dropout",
+        "num_denoising",
+        "label_noise_ratio",
+        "box_noise_scale",
+        "learn_initial_query",
+        "anchor_image_size",
+        "disable_custom_kernels",
+        "with_box_refine",
+        "is_encoder_decoder",
+        "matcher_alpha",
+        "matcher_gamma",
+        "matcher_class_cost",
+        "matcher_bbox_cost",
+        "matcher_giou_cost",
+        "use_focal_loss",
+        "auxiliary_loss",
+        "focal_loss_alpha",
+        "focal_loss_gamma",
+        "weight_loss_vfl",
+        "weight_loss_bbox",
+        "weight_loss_giou",
+        "eos_coefficient",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "initializer_bias_prior_prob",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The prior probability used by the bias initializer to initialize biases for enc_score_head and class_embed.If None, prior_prob computed as prior_prob = 1 / (num_labels + 1) while initializing model weights."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "batch_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the batch normalization layers."
+        },
+        {
+            "name": "backbone_config",
+            "type": "Dict",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the backbone model."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to load backbone from the timm library. If False, the backbone is loaded from the transformerslibrary."
+        },
+        {
+            "name": "freeze_backbone_batch_norms",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to freeze the batch normalization layers in the backbone."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "encoder_hidden_dim",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimension of the layers in hybrid encoder."
+        },
+        {
+            "name": "encoder_in_channels",
+            "type": "list",
+            "optional": true,
+            "default": "[512,",
+            "description": "Multi level features input for encoder."
+        },
+        {
+            "name": "feat_strides",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[8,",
+            "description": "Strides used in each feature map."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Total of layers to be used by the encoder."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The ratio for all dropout layers."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "encode_proj_layers",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2]",
+            "description": "Indexes of the projected layers to be used in the encoder."
+        },
+        {
+            "name": "positional_encoding_temperature",
+            "type": "int",
+            "optional": true,
+            "default": "10000",
+            "description": "The temperature parameter used to create the positional encodings."
+        },
+        {
+            "name": "encoder_activation_function",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "activation_function",
+            "type": "str",
+            "optional": true,
+            "default": "silu",
+            "description": "The non-linear activation function (function or string) in the general layer. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "eval_size",
+            "type": "Tuple[int, int]",
+            "optional": true,
+            "default": "None",
+            "description": "Height and width used to computes the effective height and width of the position embeddings after takinginto account the stride."
+        },
+        {
+            "name": "normalize_before",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Determine whether to apply layer normalization in the transformer encoder layer before self-attention andfeed-forward modules."
+        },
+        {
+            "name": "hidden_expansion",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Expansion ratio to enlarge the dimension size of RepVGGBlock and CSPRepLayer."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimension of the layers exclude hybrid encoder."
+        },
+        {
+            "name": "num_queries",
+            "type": "int",
+            "optional": true,
+            "default": "300",
+            "description": "Number of object queries."
+        },
+        {
+            "name": "decoder_in_channels",
+            "type": "list",
+            "optional": true,
+            "default": "[256,",
+            "description": "Multi level features dimension for decoder"
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "num_feature_levels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input feature levels."
+        },
+        {
+            "name": "decoder_n_points",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The number of sampled keys in each feature level for each attention head in the decoder."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "decoder_activation_function",
+            "type": "str",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function (function or string) in the decoder. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "num_denoising",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "The total number of denoising tasks or queries to be used for contrastive denoising."
+        },
+        {
+            "name": "label_noise_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "0.5",
+            "description": "The fraction of denoising labels to which random noise should be added."
+        },
+        {
+            "name": "box_noise_scale",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Scale or magnitude of noise to be added to the bounding boxes."
+        },
+        {
+            "name": "learn_initial_query",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Indicates whether the initial query embeddings for the decoder should be learned during training"
+        },
+        {
+            "name": "anchor_image_size",
+            "type": "Tuple[int, int]",
+            "optional": true,
+            "default": "None",
+            "description": "Height and width of the input image used during evaluation to generate the bounding box anchors. If None, automatic generate anchor is applied."
+        },
+        {
+            "name": "disable_custom_kernels",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to disable custom kernels."
+        },
+        {
+            "name": "with_box_refine",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to apply iterative bounding box refinement, where each decoder layer refines the bounding boxesbased on the predictions from the previous layer."
+        },
+        {
+            "name": "is_encoder_decoder",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether the architecture has an encoder decoder structure."
+        },
+        {
+            "name": "matcher_alpha",
+            "type": "float",
+            "optional": true,
+            "default": "0.25",
+            "description": "Parameter alpha used by the Hungarian Matcher."
+        },
+        {
+            "name": "matcher_gamma",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "Parameter gamma used by the Hungarian Matcher."
+        },
+        {
+            "name": "matcher_class_cost",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "The relative weight of the class loss used by the Hungarian Matcher."
+        },
+        {
+            "name": "matcher_bbox_cost",
+            "type": "float",
+            "optional": true,
+            "default": "5.0",
+            "description": "The relative weight of the bounding box loss used by the Hungarian Matcher."
+        },
+        {
+            "name": "matcher_giou_cost",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "The relative weight of the giou loss of used by the Hungarian Matcher."
+        },
+        {
+            "name": "use_focal_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Parameter informing if focal focal should be used."
+        },
+        {
+            "name": "auxiliary_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether auxiliary decoding losses (loss at each decoder layer) are to be used."
+        },
+        {
+            "name": "focal_loss_alpha",
+            "type": "float",
+            "optional": true,
+            "default": "0.75",
+            "description": "Parameter alpha used to compute the focal loss."
+        },
+        {
+            "name": "focal_loss_gamma",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "Parameter gamma used to compute the focal loss."
+        },
+        {
+            "name": "weight_loss_vfl",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Relative weight of the varifocal loss in the object detection loss."
+        },
+        {
+            "name": "weight_loss_bbox",
+            "type": "float",
+            "optional": true,
+            "default": "5.0",
+            "description": "Relative weight of the L1 bounding box loss in the object detection loss."
+        },
+        {
+            "name": "weight_loss_giou",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "Relative weight of the generalized IoU loss in the object detection loss."
+        },
+        {
+            "name": "eos_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "0.0001",
+            "description": "Relative classification weight of the no-object class in the object detection loss."
+        }
+    ],
+    "return": ""
+}

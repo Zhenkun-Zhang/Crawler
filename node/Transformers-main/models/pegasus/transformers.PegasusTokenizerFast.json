@@ -1,0 +1,69 @@
+{
+    "api": "transformers.PegasusTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "pad_token",
+        "eos_token",
+        "unk_token",
+        "mask_token",
+        "mask_token_sent",
+        "additional_special_tokens",
+        "offset",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "None",
+            "description": "SentencePiece file (generally has a .spm extension) thatcontains the vocabulary necessary to instantiate a tokenizer."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token.When building a sequence using special tokens, this is not the token that is used for the end of sequence.The token used is the sep_token."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "<mask_2>",
+            "description": "The token used for masking single token values. This is the token used when training this model with maskedlanguage modeling (MLM). This is the token that the PEGASUS encoder will try to predict during pretraining.It corresponds to [MASK2] in PEGASUS: Pre-training with Extracted Gap-sentences for AbstractiveSummarization."
+        },
+        {
+            "name": "mask_token_sent",
+            "type": "str",
+            "optional": true,
+            "default": "<mask_1>",
+            "description": "The token used for masking whole target sentences. This is the token used when training this model with gapsentences generation (GSG). This is the sentence that the PEGASUS decoder will try to predict duringpretraining. It corresponds to [MASK1] in PEGASUS: Pre-training with Extracted Gap-sentences forAbstractive Summarization."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "Additional special tokens used by the tokenizer. If no additional_special_tokens are provided  and are used as additional special tokens corresponding to the original PEGASUStokenizerthat uses the tokens 2 - 104 only for pretraining"
+        }
+    ],
+    "return": ""
+}

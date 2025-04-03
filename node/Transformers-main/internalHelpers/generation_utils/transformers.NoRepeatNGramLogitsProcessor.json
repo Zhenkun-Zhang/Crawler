@@ -1,0 +1,19 @@
+{
+    "api": "transformers.NoRepeatNGramLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "ngram_size:",
+        "int"
+    ],
+    "params": [
+        {
+            "name": "ngram_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "All ngrams of size ngram_size can only occur once."
+        }
+    ],
+    "return": ""
+}

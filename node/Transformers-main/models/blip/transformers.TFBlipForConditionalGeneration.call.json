@@ -1,0 +1,50 @@
+{
+    "api": "transformers.TFBlipForConditionalGeneration.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "input_ids",
+        "|",
+        "attention_mask",
+        "|",
+        "output_attentions",
+        "output_hidden_states",
+        "labels",
+        "|",
+        "return_dict",
+        "training",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "tf.Tensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Padding will be ignored by default should you provide it. Pixel values can be obtained usingBlipImageProcessor. See BlipImageProcessor.call() for details."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.blip.modeling_tf_blip.TFBlipForConditionalGenerationModelOutput or tuple(tf.Tensor)"
+}

@@ -1,0 +1,44 @@
+{
+    "api": "transformers.modeling_outputs.Wav2Vec2BaseModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "last_hidden_state:",
+        "extract_features",
+        "hidden_states",
+        "...]]",
+        "attentions",
+        "...]]"
+    ],
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the model."
+        },
+        {
+            "name": "extract_features",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, conv_dim[-1])",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of extracted feature vectors of the last convolutional layer of the model."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

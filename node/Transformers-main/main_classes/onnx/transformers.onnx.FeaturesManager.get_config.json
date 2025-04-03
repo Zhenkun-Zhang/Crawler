@@ -1,0 +1,27 @@
+{
+    "api": "transformers.onnx.FeaturesManager.get_config",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model_type:",
+        "feature",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "model_type",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The model type to retrieve the config for."
+        },
+        {
+            "name": "feature",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The feature to retrieve the config for."
+        }
+    ],
+    "return": "OnnxConfig"
+}

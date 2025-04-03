@@ -1,0 +1,35 @@
+{
+    "api": "transformers.HammingDiversityLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "diversity_penalty:",
+        "float",
+        "num_beams",
+        "num_beam_groups"
+    ],
+    "params": [
+        {
+            "name": "diversity_penalty",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "This value is subtracted from a beams score if it generates a token same as any beam from other group at aparticular time. A higher diversity_penalty will enforce greater diversity among the beams. Adjustingthis value can help strike a balance between diversity and natural likelihood."
+        },
+        {
+            "name": "num_beams",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of beams for beam search. 1 means no beam search."
+        },
+        {
+            "name": "num_beam_groups",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of groups to divide num_beams into in order to ensure diversity among different groups of beams.this paper for more details."
+        }
+    ],
+    "return": ""
+}

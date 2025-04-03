@@ -1,0 +1,43 @@
+{
+    "api": "transformers.modeling_utils.load_sharded_checkpoint",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model",
+        "folder",
+        "strict",
+        "prefer_safe",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "torch.nn.Module",
+            "optional": false,
+            "default": "",
+            "description": "The model in which to load the checkpoint."
+        },
+        {
+            "name": "folder",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "A path to a folder containing the sharded checkpoint."
+        },
+        {
+            "name": "strict",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to strictly enforce that the keys in the model state dict match the keys in the sharded checkpoint."
+        },
+        {
+            "name": "prefer_safe",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "If both safetensors and PyTorch save files are present in checkpoint and prefer_safe is True, thesafetensors files will be loaded. Otherwise, PyTorch files are always loaded when possible."
+        }
+    ],
+    "return": "NamedTuple"
+}

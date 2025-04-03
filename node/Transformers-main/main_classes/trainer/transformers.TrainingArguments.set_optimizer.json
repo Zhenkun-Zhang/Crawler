@@ -1,0 +1,68 @@
+{
+    "api": "transformers.TrainingArguments.set_optimizer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "name:",
+        "typing.Union[str,",
+        "transformers.training_args.OptimizerNames]",
+        "learning_rate",
+        "weight_decay",
+        "beta1",
+        "beta2",
+        "epsilon",
+        "args"
+    ],
+    "params": [
+        {
+            "name": "name",
+            "type": "str,training_args.OptimizerNames",
+            "optional": true,
+            "default": "",
+            "description": "The optimizer to use: adamw_torch, adamw_torch_fused, adamw_apex_fused,adamw_anyprecision or adafactor."
+        },
+        {
+            "name": "learning_rate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The initial learning rate."
+        },
+        {
+            "name": "weight_decay",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The weight decay to apply (if not zero) to all layers except all bias and LayerNorm weights."
+        },
+        {
+            "name": "beta1",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The beta1 hyperparameter for the adam optimizer or its variants."
+        },
+        {
+            "name": "beta2",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The beta2 hyperparameter for the adam optimizer or its variants."
+        },
+        {
+            "name": "epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon hyperparameter for the adam optimizer or its variants."
+        },
+        {
+            "name": "args",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Optional arguments that are supplied to AnyPrecisionAdamW (only useful whenoptim=adamw_anyprecision)."
+        }
+    ],
+    "return": ""
+}

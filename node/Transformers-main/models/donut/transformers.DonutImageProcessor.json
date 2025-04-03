@@ -1,0 +1,106 @@
+{
+    "api": "transformers.DonutImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_thumbnail",
+        "do_align_long_axis",
+        "do_pad",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to the specified size. Can be overridden bydo_resize in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"shortest_edge\" -- 224}):Size of the image after resizing. The shortest edge of the image is resized to size[“shortest_edge”], withthe longest edge resized to keep the input aspect ratio. Can be overridden by size in the preprocessmethod.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by resample in the preprocess method."
+        },
+        {
+            "name": "do_thumbnail",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the image using thumbnail method."
+        },
+        {
+            "name": "do_align_long_axis",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to align the long axis of the image with the long axis of size by rotating by 90 degrees."
+        },
+        {
+            "name": "do_pad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to pad the image. If random_padding is set to True in preprocess, each image is padded with arandom amont of padding on each size, up to the largest image size in the batch. Otherwise, all images arepadded to the largest image size in the batch."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by do_rescale inthe preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by rescale_factor in the preprocessmethod."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by do_normalize in the preprocess method."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image standard deviation."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,20 @@
+{
+    "api": "transformers.Trainer.metrics_format",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "metrics:",
+        "dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "metrics",
+            "type": "Dict[str, float]",
+            "optional": false,
+            "default": "",
+            "description": "The metrics returned from train/evaluate/predict"
+        }
+    ],
+    "return": "metrics (Dict[str, float])"
+}

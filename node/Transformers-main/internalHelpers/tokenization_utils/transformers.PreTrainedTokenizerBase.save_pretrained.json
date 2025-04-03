@@ -1,0 +1,53 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase.save_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory:",
+        "typing.Union[str,",
+        "os.PathLike]",
+        "legacy_format",
+        "filename_prefix",
+        "push_to_hub",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "The path to a directory where the tokenizer will be saved."
+        },
+        {
+            "name": "legacy_format",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Only applicable for a fast tokenizer. If unset (default), will save the tokenizer in the unified JSONformat as well as in legacy format if it exists, i.e. with tokenizer specific vocabulary and a separateadded_tokens files.If False, will only save the tokenizer in the unified JSON format. This format is incompatible withslow tokenizers (not powered by the tokenizers library), so the tokenizer will not be able to beloaded in the corresponding slow tokenizer.If True, will save the tokenizer in legacy format. If the slow tokenizer doesnt exits, a valueerror is raised."
+        },
+        {
+            "name": "filename_prefix",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A prefix to add to the names of the files saved by the tokenizer."
+        },
+        {
+            "name": "push_to_hub",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to push your model to the Hugging Face model hub after saving it. You can specify therepository you want to push to with repo_id (will default to the name of save_directory in yournamespace)."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional key word arguments passed along to the push_to_hub() method."
+        }
+    ],
+    "return": "A tuple of str"
+}

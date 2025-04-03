@@ -1,0 +1,66 @@
+{
+    "api": "transformers.BlenderbotSmallTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "bos_token",
+        "eos_token",
+        "unk_token",
+        "pad_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the vocabulary."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the merges file."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "__start__",
+            "description": "The beginning of sentence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "__end__",
+            "description": "The end of sentence token."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "__unk__",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "__null__",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments passed along to PreTrainedTokenizer"
+        }
+    ],
+    "return": ""
+}

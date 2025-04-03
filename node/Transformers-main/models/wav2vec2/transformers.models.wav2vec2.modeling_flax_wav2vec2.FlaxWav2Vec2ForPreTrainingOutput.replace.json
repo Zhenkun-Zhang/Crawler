@@ -1,0 +1,10 @@
+{
+    "api": "transformers.models.wav2vec2.modeling_flax_wav2vec2.FlaxWav2Vec2ForPreTrainingOutput.replace",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "**updates"
+    ],
+    "params": [],
+    "return": ""
+}

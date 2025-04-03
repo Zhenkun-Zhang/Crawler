@@ -1,0 +1,84 @@
+{
+    "api": "transformers.SamImageProcessor.generate_crop_boxes",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image",
+        "target_size",
+        "crop_n_layers",
+        "overlap_ratio",
+        "points_per_crop",
+        "crop_n_points_downscale_factor",
+        "device",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "return_tensors"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.array",
+            "optional": false,
+            "default": "",
+            "description": "Input original image"
+        },
+        {
+            "name": "target_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Target size of the resized image"
+        },
+        {
+            "name": "crop_n_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If >0, mask prediction will be run again on crops of the image. Sets the number of layers to run, whereeach layer has 2**i_layer number of image crops."
+        },
+        {
+            "name": "overlap_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Sets the degree to which crops overlap. In the first crop layer, crops will overlap by this fraction ofthe image length. Later layers with more crops scale down this overlap."
+        },
+        {
+            "name": "points_per_crop",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of points to sample from each crop."
+        },
+        {
+            "name": "crop_n_points_downscale_factor",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "The number of points-per-side sampled in layer n is scaled down by crop_n_points_downscale_factor**n."
+        },
+        {
+            "name": "device",
+            "type": "torch.device",
+            "optional": true,
+            "default": "",
+            "description": "Device to use for the computation. If None, cpu will be used."
+        },
+        {
+            "name": "input_data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If not provided, it will be inferred."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "If pt, returns torch.Tensor. If tf, returns tf.Tensor."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,132 @@
+{
+    "api": "transformers.InstructBlipVideoImageProcessor.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[list['PIL.Image.Image'],",
+        "ForwardRef('np.ndarray'),",
+        "ForwardRef('torch.Tensor'),",
+        "list['np.ndarray'],",
+        "list['torch.Tensor'],",
+        "list[list['PIL.Image.Image']],",
+        "list[list['np.ndarray']],",
+        "list[list['torch.Tensor']]]",
+        "do_resize",
+        "size",
+        "int]]",
+        "resample",
+        "do_rescale",
+        "rescale_factor",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "do_convert_rgb",
+        "data_format",
+        "<ChannelDimension.FIRST",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "videos",
+            "type": "VideoInput",
+            "optional": false,
+            "default": "",
+            "description": "Video frames to preprocess. Expects a single or batch of videos as a list of frames with pixel valuesranging from 0 to 255. If passing in video with pixel values between 0 and 1, set do_rescale=False."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the video."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "Controls the size of the video after resize. The shortest edge of the image is resized tosize[shortest_edge] whilst preserving the aspect ratio. If the longest edge of this resized imageis > int(size[shortest_edge] * (1333 / 800)), then the image is resized again to make the longestedge equal to int(size[shortest_edge] * (1333 / 800))."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the video. Only has an effect if do_resize is set to True."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the video values between [0 - 1]."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Rescale factor to rescale the video by if do_rescale is set to True."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the video."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image mean to normalize the video by if do_normalize is set to True."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image standard deviation to normalize the video by if do_normalize is set to True."
+        },
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to return. Can be one of:Unset: Return a list of np.ndarray.TensorType.TENSORFLOW or tf: Return a batch of type tf.Tensor.TensorType.PYTORCH or pt: Return a batch of type torch.Tensor.TensorType.NUMPY or np: Return a batch of type np.ndarray.TensorType.JAX or jax: Return a batch of type jax.numpy.ndarray."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.Unset: Use the channel dimension format of the input image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. If unset, the channel dimension format is inferredfrom the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.none or ChannelDimension.NONE: image in (height, width) format."
+        }
+    ],
+    "return": ""
+}

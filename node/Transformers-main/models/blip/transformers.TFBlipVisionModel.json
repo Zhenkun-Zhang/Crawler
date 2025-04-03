@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFBlipVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "BlipVisionConfig",
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

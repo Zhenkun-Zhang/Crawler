@@ -1,0 +1,11 @@
+{
+    "api": "transformers.PreTrainedModel.get_compiled_call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "compile_config:",
+        "CompileConfig"
+    ],
+    "params": [],
+    "return": ""
+}

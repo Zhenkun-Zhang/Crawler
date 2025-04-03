@@ -1,0 +1,12 @@
+{
+    "api": "transformers.Trainer.num_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "train_dl:",
+        "DataLoader",
+        "max_steps"
+    ],
+    "params": [],
+    "return": ""
+}

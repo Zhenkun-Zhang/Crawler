@@ -1,0 +1,26 @@
+{
+    "api": "transformers.CharSpan",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "start:",
+        "end"
+    ],
+    "params": [
+        {
+            "name": "start",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index of the first character in the original string."
+        },
+        {
+            "name": "end",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index of the character following the last character in the original string."
+        }
+    ],
+    "return": ""
+}

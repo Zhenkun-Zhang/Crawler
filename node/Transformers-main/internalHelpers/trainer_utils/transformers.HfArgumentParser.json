@@ -1,0 +1,29 @@
+{
+    "api": "transformers.HfArgumentParser",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "dataclass_types:",
+        "typing.Union[transformers.hf_argparser.DataClassType,",
+        "collections.abc.Iterable[transformers.hf_argparser.DataClassType],",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "dataclass_types",
+            "type": "DataClassType,Iterable[DataClassType]",
+            "optional": true,
+            "default": "",
+            "description": "Dataclass type, or list of dataclass types for which we will fill instances with the parsed args."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Passed to argparse.ArgumentParser() in the regular way."
+        }
+    ],
+    "return": ""
+}

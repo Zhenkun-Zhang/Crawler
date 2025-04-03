@@ -1,0 +1,20 @@
+{
+    "api": "transformers.GemmaTokenizer.tokenize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "TextInput",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "TextInput"
+        }
+    ],
+    "return": ""
+}

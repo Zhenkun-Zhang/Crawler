@@ -1,0 +1,399 @@
+{
+    "api": "transformers.Wav2Vec2BertConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "feature_projection_input_dim",
+        "hidden_act",
+        "hidden_dropout",
+        "activation_dropout",
+        "attention_dropout",
+        "feat_proj_dropout",
+        "final_dropout",
+        "layerdrop",
+        "initializer_range",
+        "layer_norm_eps",
+        "apply_spec_augment",
+        "mask_time_prob",
+        "mask_time_length",
+        "mask_time_min_masks",
+        "mask_feature_prob",
+        "mask_feature_length",
+        "mask_feature_min_masks",
+        "ctc_loss_reduction",
+        "ctc_zero_infinity",
+        "use_weighted_layer_sum",
+        "classifier_proj_size",
+        "tdnn_dim",
+        "512,",
+        "512,",
+        "512,",
+        "1500)",
+        "tdnn_kernel",
+        "3,",
+        "3,",
+        "1,",
+        "1)",
+        "tdnn_dilation",
+        "2,",
+        "3,",
+        "1,",
+        "1)",
+        "xvector_output_dim",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "add_adapter",
+        "adapter_kernel_size",
+        "adapter_stride",
+        "num_adapter_layers",
+        "adapter_act",
+        "use_intermediate_ffn_before_adapter",
+        "output_hidden_size",
+        "position_embeddings_type",
+        "rotary_embedding_base",
+        "max_source_positions",
+        "left_max_position_embeddings",
+        "right_max_position_embeddings",
+        "conv_depthwise_kernel_size",
+        "conformer_conv_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Vocabulary size of the Wav2Vec2Bert model. Defines the number of different tokens that can berepresented by the inputs_ids passed when calling Wav2Vec2BertModel. Vocabulary size of themodel. Defines the different tokens that can be represented by the inputs_ids passed to the forwardmethod of Wav2Vec2BertModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "feature_projection_input_dim",
+            "type": "int",
+            "optional": true,
+            "default": "160",
+            "description": "Input dimension of this model, i.e the dimension after processing input audios with SeamlessM4TFeatureExtractor or Wav2Vec2BertProcessor."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "swish",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu, swish and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "feat_proj_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for the feature projection."
+        },
+        {
+            "name": "final_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for the final projection layer of Wav2Vec2BertForCTC."
+        },
+        {
+            "name": "layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The LayerDrop probability. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556) for moredetails."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "apply_spec_augment",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to apply SpecAugment data augmentation to the outputs of the feature encoder. For reference seeSpecAugment: A Simple Data Augmentation Method for Automatic SpeechRecognition."
+        },
+        {
+            "name": "mask_time_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.05",
+            "description": "Percentage (between 0 and 1) of all feature vectors along the time axis which will be masked. The maskingprocecure generates mask_time_prob*len(time_axis)/mask_time_length ``independent masks over the axis. If reasoning from the propability of each feature vector to be chosen as the start of the vector span to be masked, *mask_time_prob* should be prob_vector_start*mask_time_length. Note that overlap may decrease the actual percentage of masked vectors. This is only relevant if apply_spec_augment is True`."
+        },
+        {
+            "name": "mask_time_length",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Length of vector span along the time axis."
+        },
+        {
+            "name": "mask_time_min_masks",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The minimum number of masks of length mask_feature_length generated along the time axis, each time step,irrespectively of mask_feature_prob. Only relevant if mask_time_prob*len(time_axis)/mask_time_length < mask_time_min_masks."
+        },
+        {
+            "name": "mask_feature_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Percentage (between 0 and 1) of all feature vectors along the feature axis which will be masked. Themasking procecure generates mask_feature_prob*len(feature_axis)/mask_time_length independent masks overthe axis. If reasoning from the propability of each feature vector to be chosen as the start of the vectorspan to be masked, mask_feature_prob should be prob_vector_start*mask_feature_length. Note that overlapmay decrease the actual percentage of masked vectors. This is only relevant if apply_spec_augment is True."
+        },
+        {
+            "name": "mask_feature_length",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Length of vector span along the feature axis."
+        },
+        {
+            "name": "mask_feature_min_masks",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The minimum number of masks of length mask_feature_length generated along the feature axis, each timestep, irrespectively of mask_feature_prob. Only relevant ifmask_feature_prob*len(feature_axis)/mask_feature_length < mask_feature_min_masks."
+        },
+        {
+            "name": "ctc_loss_reduction",
+            "type": "str",
+            "optional": true,
+            "default": "sum",
+            "description": "Specifies the reduction to apply to the output of torch.nn.CTCLoss. Only relevant when training aninstance of Wav2Vec2BertForCTC."
+        },
+        {
+            "name": "ctc_zero_infinity",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to zero infinite losses and the associated gradients of torch.nn.CTCLoss. Infinite losses mainlyoccur when the inputs are too short to be aligned to the targets. Only relevant when training an instanceof Wav2Vec2BertForCTC."
+        },
+        {
+            "name": "use_weighted_layer_sum",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a weighted average of layer outputs with learned weights. Only relevant when using aninstance of Wav2Vec2BertForSequenceClassification."
+        },
+        {
+            "name": "classifier_proj_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the projection before token mean-pooling for classification."
+        },
+        {
+            "name": "tdnn_dim",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(512,",
+            "description": "A tuple of integers defining the number of output channels of each 1D convolutional layer in the TDNNmodule of the XVector model. The length of tdnn_dim defines the number of TDNN layers."
+        },
+        {
+            "name": "tdnn_kernel",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(5,",
+            "description": "A tuple of integers defining the kernel size of each 1D convolutional layer in the TDNN module of theXVector model. The length of tdnn_kernel has to match the length of tdnn_dim."
+        },
+        {
+            "name": "tdnn_dilation",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "(1,",
+            "description": "A tuple of integers defining the dilation factor of each 1D convolutional layer in TDNN module of theXVector model. The length of tdnn_dilation has to match the length of tdnn_dim."
+        },
+        {
+            "name": "xvector_output_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of the XVector embedding vectors."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the beginning-of-stream token."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the end-of-stream token."
+        },
+        {
+            "name": "add_adapter",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether a convolutional attention network should be stacked on top of the Wav2Vec2Bert Encoder. Can be veryuseful for warm-starting Wav2Vec2Bert for SpeechEncoderDecoder models."
+        },
+        {
+            "name": "adapter_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Kernel size of the convolutional layers in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "adapter_stride",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Stride of the convolutional layers in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "num_adapter_layers",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of convolutional layers that should be used in the adapter network. Only relevant if add_adapter is True."
+        },
+        {
+            "name": "adapter_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function (function or string) in the adapter layers. If string, gelu,relu, selu, swish and gelu_new are supported."
+        },
+        {
+            "name": "use_intermediate_ffn_before_adapter",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether an intermediate feed-forward block should be stacked on top of the Wav2Vec2Bert Encoder and before the adapter network.Only relevant if add_adapter is True."
+        },
+        {
+            "name": "output_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the encoder output layer. If not defined, this defaults to hidden-size. Only relevantif add_adapter is True."
+        },
+        {
+            "name": "position_embeddings_type",
+            "type": "str",
+            "optional": true,
+            "default": "relative_key",
+            "description": "Can be specified to :rotary, for rotary position embeddings.relative, for relative position embeddings.relative_key, for relative position embeddings as defined by Shaw in Self-Attentionwith Relative Position Representations (Shaw et al.).If left to None, no relative position embeddings is applied."
+        },
+        {
+            "name": "rotary_embedding_base",
+            "type": "int",
+            "optional": true,
+            "default": "10000",
+            "description": "If rotary position embeddings are used, defines the size of the embedding base."
+        },
+        {
+            "name": "max_source_positions",
+            "type": "int",
+            "optional": true,
+            "default": "5000",
+            "description": "if relative position embeddings are used, defines the maximum source input positions."
+        },
+        {
+            "name": "left_max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "If relative_key (aka Shaw) position embeddings are used, defines the left clipping value for relative positions."
+        },
+        {
+            "name": "right_max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "If relative_key (aka Shaw) position embeddings are used, defines the right clipping value for relative positions."
+        },
+        {
+            "name": "conv_depthwise_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "31",
+            "description": "Kernel size of convolutional depthwise 1D layer in Conformer blocks."
+        },
+        {
+            "name": "conformer_conv_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all convolutional layers in Conformer blocks."
+        }
+    ],
+    "return": ""
+}

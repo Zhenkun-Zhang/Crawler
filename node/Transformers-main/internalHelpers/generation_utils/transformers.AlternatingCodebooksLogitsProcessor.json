@@ -1,0 +1,34 @@
+{
+    "api": "transformers.AlternatingCodebooksLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "input_start_len:",
+        "semantic_vocab_size",
+        "codebook_size"
+    ],
+    "params": [
+        {
+            "name": "input_start_len",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The length of the initial input sequence."
+        },
+        {
+            "name": "semantic_vocab_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Vocabulary size of the semantic part, i.e number of tokens associated to the semantic vocabulary."
+        },
+        {
+            "name": "codebook_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of tokens associated to the codebook."
+        }
+    ],
+    "return": ""
+}

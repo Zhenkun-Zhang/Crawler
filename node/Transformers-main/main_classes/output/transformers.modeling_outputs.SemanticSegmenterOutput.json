@@ -1,0 +1,44 @@
+{
+    "api": "transformers.modeling_outputs.SemanticSegmenterOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "logits",
+        "hidden_states",
+        "...]]",
+        "attentions",
+        "...]]"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Classification (or regression if config.num_labels==1) loss."
+        },
+        {
+            "name": "logits",
+            "type": "torch.FloatTensor of shape (batch_size, config.num_labels, logits_height, logits_width)",
+            "optional": false,
+            "default": "",
+            "description": "Classification scores for each pixel.The logits returned do not necessarily have the same size as the pixel_values passed as inputs. This isto avoid doing two interpolations and lose some quality when a user needs to resize the logits to theoriginal image size as post-processing. You should always check your logits shape and resize as needed."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings, if the model has an embedding layer, +one for the output of each layer) of shape (batch_size, patch_size, hidden_size).Hidden-states of the model at the output of each layer plus the optional initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, patch_size, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        }
+    ],
+    "return": ""
+}

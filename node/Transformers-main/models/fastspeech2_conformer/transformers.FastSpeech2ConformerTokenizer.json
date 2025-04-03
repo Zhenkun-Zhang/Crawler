@@ -1,0 +1,59 @@
+{
+    "api": "transformers.FastSpeech2ConformerTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "unk_token",
+        "should_strip_spaces",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<sos/eos>",
+            "description": "The begin of sequence token. Note that for FastSpeech2, it is the same as the eos_token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<sos/eos>",
+            "description": "The end of sequence token. Note that for FastSpeech2, it is the same as the bos_token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<blank>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "should_strip_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to strip the spaces from the list of tokens."
+        }
+    ],
+    "return": ""
+}

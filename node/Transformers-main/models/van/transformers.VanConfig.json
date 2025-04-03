@@ -1,0 +1,130 @@
+{
+    "api": "transformers.VanConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_size",
+        "num_channels",
+        "patch_sizes",
+        "3,",
+        "3,",
+        "3]",
+        "strides",
+        "2,",
+        "2,",
+        "2]",
+        "hidden_sizes",
+        "128,",
+        "320,",
+        "512]",
+        "depths",
+        "3,",
+        "12,",
+        "3]",
+        "mlp_ratios",
+        "8,",
+        "4,",
+        "4]",
+        "hidden_act",
+        "initializer_range",
+        "layer_norm_eps",
+        "layer_scale_init_value",
+        "drop_path_rate",
+        "dropout_rate",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "patch_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[7,",
+            "description": "Patch size to use in each stages embedding layer."
+        },
+        {
+            "name": "strides",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "Stride size to use in each stages embedding layer to downsample the input."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[64,",
+            "description": "Dimensionality (hidden size) at each stage."
+        },
+        {
+            "name": "depths",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "Depth (number of layers) for each stage."
+        },
+        {
+            "name": "mlp_ratios",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[8,",
+            "description": "The expansion ratio for mlp layer at each stage."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in each layer. If string, gelu, relu,selu and gelu_new are supported."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "layer_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "The initial value for layer scaling."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for stochastic depth."
+        },
+        {
+            "name": "dropout_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for dropout."
+        }
+    ],
+    "return": ""
+}

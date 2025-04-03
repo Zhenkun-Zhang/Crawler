@@ -1,0 +1,19 @@
+{
+    "api": "transformers.JukeboxVQVAE.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "raw_audio:",
+        "FloatTensor"
+    ],
+    "params": [
+        {
+            "name": "raw_audio",
+            "type": "torch.FloatTensor",
+            "optional": false,
+            "default": "",
+            "description": "Audio input which will be encoded and decoded."
+        }
+    ],
+    "return": ""
+}

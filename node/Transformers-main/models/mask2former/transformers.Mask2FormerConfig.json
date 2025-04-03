@@ -1,0 +1,263 @@
+{
+    "api": "transformers.Mask2FormerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "backbone_config:",
+        "feature_size",
+        "mask_feature_size",
+        "hidden_dim",
+        "encoder_feedforward_dim",
+        "activation_function",
+        "encoder_layers",
+        "decoder_layers",
+        "num_attention_heads",
+        "dropout",
+        "dim_feedforward",
+        "pre_norm",
+        "enforce_input_projection",
+        "common_stride",
+        "ignore_value",
+        "num_queries",
+        "no_object_weight",
+        "class_weight",
+        "mask_weight",
+        "dice_weight",
+        "train_num_points",
+        "oversample_ratio",
+        "importance_sample_ratio",
+        "init_std",
+        "init_xavier_std",
+        "use_auxiliary_loss",
+        "feature_strides",
+        "8,",
+        "16,",
+        "32]",
+        "output_auxiliary_logits",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "backbone_kwargs",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig,dict",
+            "optional": true,
+            "default": "",
+            "description": "The configuration of the backbone model. If unset, the configuration corresponding toswin-base-patch4-window12-384 will be used."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to load backbone from the timm library. If False, the backbone is loaded from the transformerslibrary."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The features (channels) of the resulting feature maps."
+        },
+        {
+            "name": "mask_feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The masks features size, this value will also be used to specify the Feature Pyramid Network featuressize."
+        },
+        {
+            "name": "hidden_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the encoder layers."
+        },
+        {
+            "name": "encoder_feedforward_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of feedforward network for deformable detr encoder used as part of pixel decoder."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of layers in the deformable detr encoder used as part of pixel decoder."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of layers in the Transformer decoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder."
+        },
+        {
+            "name": "dim_feedforward",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Feature dimension in feedforward network for transformer decoder."
+        },
+        {
+            "name": "pre_norm",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use pre-LayerNorm or not for transformer decoder."
+        },
+        {
+            "name": "enforce_input_projection",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to add an input projection 1x1 convolution even if the input channels and hidden dim are identicalin the Transformer decoder."
+        },
+        {
+            "name": "common_stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Parameter used for determining number of FPN levels used as part of pixel decoder."
+        },
+        {
+            "name": "ignore_value",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Category id to be ignored during training."
+        },
+        {
+            "name": "num_queries",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of queries for the decoder."
+        },
+        {
+            "name": "no_object_weight",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The weight to apply to the null (no object) class."
+        },
+        {
+            "name": "class_weight",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The weight for the cross entropy loss."
+        },
+        {
+            "name": "mask_weight",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The weight for the mask loss."
+        },
+        {
+            "name": "dice_weight",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The weight for the dice loss."
+        },
+        {
+            "name": "train_num_points",
+            "type": "str,function",
+            "optional": true,
+            "default": "",
+            "description": "Number of points used for sampling during loss calculation."
+        },
+        {
+            "name": "oversample_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Oversampling parameter used for calculating no. of sampled points"
+        },
+        {
+            "name": "importance_sample_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Ratio of points that are sampled via importance sampling."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "init_xavier_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The scaling factor used for the Xavier initialization gain in the HM Attention map module."
+        },
+        {
+            "name": "use_auxiliary_loss",
+            "type": "boolean``, *optional*, defaults to True) -- If True Mask2FormerForUniversalSegmentationOutput` will contain the auxiliary losses computed usingthe logits from each decoder’s stage.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "feature_strides",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Feature strides corresponding to features generated from backbone network."
+        },
+        {
+            "name": "output_auxiliary_logits",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Should the model output its auxiliary_logits or not."
+        }
+    ],
+    "return": ""
+}

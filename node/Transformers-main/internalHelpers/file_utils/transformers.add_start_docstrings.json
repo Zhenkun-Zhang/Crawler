@@ -1,0 +1,10 @@
+{
+    "api": "transformers.add_start_docstrings",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*docstr"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,29 @@
+{
+    "api": "transformers.Trainer.training_step",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "Module",
+        "inputs",
+        "num_items_in_batch",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "nn.Module",
+            "optional": false,
+            "default": "",
+            "description": "The model to train."
+        },
+        {
+            "name": "inputs",
+            "type": "Dict[str, Union[torch.Tensor, Any]]",
+            "optional": false,
+            "default": "",
+            "description": "The inputs and targets of the model.The dictionary will be unpacked before being fed to the model. Most models expect the targets under theargument labels. Check your models documentation for all accepted arguments."
+        }
+    ],
+    "return": "torch.Tensor"
+}

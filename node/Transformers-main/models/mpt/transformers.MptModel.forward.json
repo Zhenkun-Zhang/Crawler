@@ -1,0 +1,78 @@
+{
+    "api": "transformers.MptModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "past_key_values",
+        "torch.Tensor],",
+        "...]]",
+        "attention_mask",
+        "inputs_embeds",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, input_ids_length)",
+            "optional": false,
+            "default": "",
+            "description": "input_ids_length = sequence_length if past_key_values is None else past_key_values[0][0].shape[2](sequence_length of input past key value states). Indices of input sequence tokens in the vocabulary.If past_key_values is used, only input_ids that do not have their past calculated should be passed asinput_ids.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "past_key_values",
+            "type": "Tuple[Tuple[torch.Tensor]] of length config.n_layers",
+            "optional": false,
+            "default": "",
+            "description": "Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (seepast_key_values output below). Can be used to speed up sequential decoding. The input_ids which havetheir past given to this model should not be passed as input_ids as they have already been computed.Each element of past_key_values is a tuple (past_key, past_value):past_key: [batch_size * num_heads, head_dim, kv_length]past_value: [batch_size * num_heads, kv_length, head_dim]"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix.If past_key_values is used, optionally only the last inputs_embeds have to be input (seepast_key_values)."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_outputs.BaseModelOutputWithPastAndCrossAttentions or tuple(torch.FloatTensor)"
+}

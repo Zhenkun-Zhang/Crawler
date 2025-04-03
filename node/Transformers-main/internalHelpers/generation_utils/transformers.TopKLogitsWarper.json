@@ -1,0 +1,34 @@
+{
+    "api": "transformers.TopKLogitsWarper",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "top_k:",
+        "filter_value",
+        "min_tokens_to_keep"
+    ],
+    "params": [
+        {
+            "name": "top_k",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of highest probability vocabulary tokens to keep for top-k-filtering."
+        },
+        {
+            "name": "filter_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "All filtered values will be set to this float value."
+        },
+        {
+            "name": "min_tokens_to_keep",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Minimum number of tokens that cannot be filtered."
+        }
+    ],
+    "return": ""
+}

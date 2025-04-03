@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Gemma3ForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Gemma3TextConfig"
+    ],
+    "params": [],
+    "return": ""
+}

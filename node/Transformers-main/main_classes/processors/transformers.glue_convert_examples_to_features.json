@@ -1,0 +1,60 @@
+{
+    "api": "transformers.glue_convert_examples_to_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "examples:",
+        "typing.Union[typing.List[transformers.data.processors.utils.InputExample],",
+        "ForwardRef('tf.data.Dataset')]",
+        "tokenizer",
+        "max_length",
+        "task",
+        "label_list",
+        "output_mode"
+    ],
+    "params": [
+        {
+            "name": "examples",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "List of InputExamples or tf.data.Dataset containing the examples."
+        },
+        {
+            "name": "tokenizer",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Instance of a tokenizer that will tokenize the examples"
+        },
+        {
+            "name": "max_length",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Maximum example length. Defaults to the tokenizers max_len"
+        },
+        {
+            "name": "task",
+            "type": "",
+            "optional": false,
+            "default": "None",
+            "description": "GLUE task"
+        },
+        {
+            "name": "label_list",
+            "type": "",
+            "optional": false,
+            "default": "None",
+            "description": "List of labels. Can be obtained from the processor using the processor.get_labels() method"
+        },
+        {
+            "name": "output_mode",
+            "type": "",
+            "optional": false,
+            "default": "None",
+            "description": "String indicating the output mode. Either regression or classification"
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,37 @@
+{
+    "api": "transformers.AutomaticSpeechRecognitionPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "typing.Union[numpy.ndarray,",
+        "bytes,",
+        "str]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "np.ndarray,bytes,str,dict",
+            "optional": false,
+            "default": "",
+            "description": "The inputs is either :str that is either the filename of a local audio file, or a public URL address to download theaudio file. The file will be read at the correct sampling rate to get the waveform usingffmpeg. This requires ffmpeg to be installed on the system.bytes it is supposed to be the content of an audio file and is interpreted by ffmpeg in thesame way.(np.ndarray of shape (n, ) of type np.float32 or np.float64)Raw audio at the correct sampling rate (no further check will be done)dict form can be used to pass raw audio sampled at arbitrary sampling_rate and let thispipeline do the resampling. The dict must be in the format {sampling_rate: int, raw: np.array} with optionally a stride: (left: int, right: int) than can ask the pipeline totreat the first left samples and last right samples to be ignored in decoding (but used atinference to provide more context to the model). Only use stride with CTC models."
+        },
+        {
+            "name": "return_timestamps",
+            "type": "optional, str,bool",
+            "optional": true,
+            "default": "",
+            "description": "Only available for pure CTC models (Wav2Vec2, HuBERT, etc) and the Whisper model. Not available forother sequence-to-sequence models.For CTC models, timestamps can take one of two formats:char: the pipeline will return timestamps along the text for every character in the text. Forinstance, if you get [{text: h, timestamp: (0.5, 0.6)}, {text: i, timestamp: (0.7, 0.9)}], then it means the model predicts that the letter h was spoken after 0.5 and before0.6 seconds.word: the pipeline will return timestamps along the text for every word in the text. Forinstance, if you get [{text: hi , timestamp: (0.5, 0.9)}, {text: there, timestamp: (1.0, 1.5)}], then it means the model predicts that the word hi was spoken after 0.5 andbefore 0.9 seconds.For the Whisper model, timestamps can take one of two formats:word: same as above for word-level CTC timestamps. Word-level timestamps are predictedthrough the dynamic-time warping (DTW) algorithm, an approximation to word-level timestampsby inspecting the cross-attention weights.True: the pipeline will return timestamps along the text for segments of words in the text.For instance, if you get [{text:  Hi there!, timestamp: (0.5, 1.5)}], then it means themodel predicts that the segment Hi there! was spoken after 0.5 and before 1.5 seconds.Note that a segment of text refers to a sequence of one or more words, rather than individualwords as with word-level timestamps."
+        },
+        {
+            "name": "generate_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "The dictionary of ad-hoc parametrization of generate_config to be used for the generation call. For acomplete overview of generate, check the followingguide."
+        }
+    ],
+    "return": "Dict"
+}

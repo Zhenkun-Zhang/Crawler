@@ -1,0 +1,12 @@
+{
+    "api": "transformers.BeitFeatureExtractor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images",
+        "segmentation_maps",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

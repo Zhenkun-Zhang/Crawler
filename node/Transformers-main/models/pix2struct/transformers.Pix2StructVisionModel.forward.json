@@ -1,0 +1,59 @@
+{
+    "api": "transformers.Pix2StructVisionModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "flattened_patches:",
+        "attention_mask",
+        "head_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "flattened_patches",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, num_channels x patch_height x patch_width)",
+            "optional": false,
+            "default": "",
+            "description": "Flattened and padded pixel values. These values can be obtained using AutoImageProcessor. SeePix2StructVisionImageProcessor.__call__ for details. Check the originalpaper (figure 5) for more details."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding pixel values. Mask values selected in [0, 1]:"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_outputs.BaseModelOutputWithPooling or tuple(torch.FloatTensor)"
+}

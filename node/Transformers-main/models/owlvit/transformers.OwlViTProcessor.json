@@ -1,0 +1,27 @@
+{
+    "api": "transformers.OwlViTProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "OwlViTImageProcessor",
+            "optional": true,
+            "default": "None",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "[CLIPTokenizer, CLIPTokenizerFast]",
+            "optional": true,
+            "default": "None",
+            "description": "The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

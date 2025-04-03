@@ -1,0 +1,11 @@
+{
+    "api": "transformers.WhisperTokenizerFast.basic_normalize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text",
+        "remove_diacritics"
+    ],
+    "params": [],
+    "return": ""
+}

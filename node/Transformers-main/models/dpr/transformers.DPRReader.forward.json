@@ -1,0 +1,59 @@
+{
+    "api": "transformers.DPRReader.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "inputs_embeds",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "Tuple[torch.LongTensor] of shapes (n_passages, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. It has to be a sequence triplet with 1) the questionand 2) the passages titles and 3) the passages texts To match pretraining, DPR input_ids sequence shouldbe formatted with [CLS] and [SEP] with the format:[CLS] <question token ids> [SEP] <titles ids> [SEP] <texts ids>DPR is a model with absolute position embeddings so its usually advised to pad the inputs on the rightrather than the left.Indices can be obtained using DPRReaderTokenizer. See this class documentation for more details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (n_passages, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (n_passages, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.dpr.modeling_dpr.DPRReaderOutput or tuple(torch.FloatTensor)"
+}

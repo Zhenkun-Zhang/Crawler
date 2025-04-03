@@ -1,0 +1,140 @@
+{
+    "api": "transformers.LayoutXLMTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "bos_token",
+        "eos_token",
+        "sep_token",
+        "cls_token",
+        "unk_token",
+        "pad_token",
+        "mask_token",
+        "cls_token_box",
+        "0,",
+        "0,",
+        "0]",
+        "sep_token_box",
+        "1000,",
+        "1000,",
+        "1000]",
+        "pad_token_box",
+        "0,",
+        "0,",
+        "0]",
+        "pad_token_label",
+        "only_label_first_subword",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token.When building a sequence using special tokens, this is not the token that is used for the beginning ofsequence. The token used is the cls_token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token.When building a sequence using special tokens, this is not the token that is used for the end of sequence.The token used is the sep_token."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "<mask>",
+            "description": "The token used for masking values. This is the token used when training this model with masked languagemodeling. This is the token which the model will try to predict."
+        },
+        {
+            "name": "cls_token_box",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[0,",
+            "description": "The bounding box to use for the special [CLS] token."
+        },
+        {
+            "name": "sep_token_box",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1000,",
+            "description": "The bounding box to use for the special [SEP] token."
+        },
+        {
+            "name": "pad_token_box",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[0,",
+            "description": "The bounding box to use for the special [PAD] token."
+        },
+        {
+            "name": "pad_token_label",
+            "type": "int",
+            "optional": true,
+            "default": "-100",
+            "description": "The label to use for padding tokens. Defaults to -100, which is the ignore_index of PyTorchsCrossEntropyLoss."
+        },
+        {
+            "name": "only_label_first_subword",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to only label the first subword, in case word labels are provided."
+        },
+        {
+            "name": "sp_model_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the SentencePieceProcessor.__init__() method. The Python wrapper forSentencePiece can be used, among other things,to set:enable_sampling: Enable subword regularization.nbest_size: Sampling parameters for unigram. Invalid for BPE-Dropout.nbest_size = {0,1}: No sampling is performed.nbest_size > 1: samples from the nbest_size results.nbest_size < 0: assuming that nbest_size is infinite and samples from the all hypothesis (lattice)using forward-filtering-and-backward-sampling algorithm.alpha: Smoothing parameter for unigram sampling, and dropout probability of merge operations forBPE-dropout."
+        },
+        {
+            "name": "sp_model",
+            "type": "SentencePieceProcessor",
+            "optional": false,
+            "default": "",
+            "description": "The SentencePiece processor that is used for every conversion (string, tokens and IDs)."
+        }
+    ],
+    "return": ""
+}

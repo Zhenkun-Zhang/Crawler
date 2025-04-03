@@ -1,0 +1,11 @@
+{
+    "api": "transformers.XCLIPTextModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "XCLIPTextConfig"
+    ],
+    "params": [],
+    "return": ""
+}

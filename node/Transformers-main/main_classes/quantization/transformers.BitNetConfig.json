@@ -1,0 +1,12 @@
+{
+    "api": "transformers.BitNetConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "modules_to_not_convert:",
+        "typing.Optional[typing.List]",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

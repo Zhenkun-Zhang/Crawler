@@ -1,0 +1,36 @@
+{
+    "api": "transformers.LogitsProcessorList.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "scores",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. What are input IDs?"
+        },
+        {
+            "name": "scores",
+            "type": "torch.FloatTensor of shape (batch_size, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of a language modeling head. These can be logits for each vocabulary when not usingbeam search or log softmax for each vocabulary token when using beam search"
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional kwargs that are specific to a logits processor."
+        }
+    ],
+    "return": "torch.FloatTensor of shape (batch_size, config.vocab_size)"
+}

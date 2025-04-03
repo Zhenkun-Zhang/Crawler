@@ -1,0 +1,18 @@
+{
+    "api": "transformers.SamProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "SamImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of SamImageProcessor. The image processor is a required input."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,52 @@
+{
+    "api": "transformers.PipelineDataFormat.from_str",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "format:",
+        "str",
+        "output_path",
+        "input_path",
+        "column",
+        "overwrite",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "format",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The format of the desired pipeline. Acceptable values are json, csv or pipe."
+        },
+        {
+            "name": "output_path",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Where to save the outgoing data."
+        },
+        {
+            "name": "input_path",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Where to look for the input data."
+        },
+        {
+            "name": "column",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The column to read."
+        },
+        {
+            "name": "overwrite",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to overwrite the output_path."
+        }
+    ],
+    "return": "PipelineDataFormat"
+}

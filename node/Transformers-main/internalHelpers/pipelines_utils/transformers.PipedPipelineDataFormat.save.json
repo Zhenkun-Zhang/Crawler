@@ -1,0 +1,19 @@
+{
+    "api": "transformers.PipedPipelineDataFormat.save",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "data:",
+        "dict"
+    ],
+    "params": [
+        {
+            "name": "data",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "The data to store."
+        }
+    ],
+    "return": ""
+}

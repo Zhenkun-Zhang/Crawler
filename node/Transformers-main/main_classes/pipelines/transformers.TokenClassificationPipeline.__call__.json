@@ -1,0 +1,22 @@
+{
+    "api": "transformers.TokenClassificationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "typing.Union[str,",
+        "typing.List[str]]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "One or several texts (or one list of texts) for token classification."
+        }
+    ],
+    "return": "A list or a list of list of dict"
+}

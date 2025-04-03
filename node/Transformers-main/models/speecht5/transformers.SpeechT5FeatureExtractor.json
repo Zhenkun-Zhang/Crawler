@@ -1,0 +1,123 @@
+{
+    "api": "transformers.SpeechT5FeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size:",
+        "sampling_rate",
+        "padding_value",
+        "do_normalize",
+        "num_mel_bins",
+        "hop_length",
+        "win_length",
+        "win_function",
+        "frame_signal_scale",
+        "fmin",
+        "fmax",
+        "mel_floor",
+        "reduction_factor",
+        "return_attention_mask",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The feature dimension of the extracted features."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The value that is used to fill the padding values."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to zero-mean unit-variance normalize the input. Normalizing can help to significantlyimprove the performance for some models."
+        },
+        {
+            "name": "num_mel_bins",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of mel-frequency bins in the extracted spectrogram features."
+        },
+        {
+            "name": "hop_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of ms between windows. Otherwise referred to as shift in many papers."
+        },
+        {
+            "name": "win_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of ms per window."
+        },
+        {
+            "name": "win_function",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Name for the window function used for windowing, must be accessible via torch.{win_function}"
+        },
+        {
+            "name": "frame_signal_scale",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Constant multiplied in creating the frames before applying DFT. This argument is deprecated."
+        },
+        {
+            "name": "fmin",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Minimum mel frequency in Hz."
+        },
+        {
+            "name": "fmax",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Maximum mel frequency in Hz."
+        },
+        {
+            "name": "mel_floor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Minimum value of mel frequency banks."
+        },
+        {
+            "name": "reduction_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Spectrogram length reduction factor. This argument is deprecated."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not call() should return attention_mask."
+        }
+    ],
+    "return": ""
+}

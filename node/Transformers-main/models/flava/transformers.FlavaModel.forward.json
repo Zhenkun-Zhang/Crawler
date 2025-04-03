@@ -1,0 +1,99 @@
+{
+    "api": "transformers.FlavaModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "pixel_values",
+        "attention_mask",
+        "token_type_ids",
+        "bool_masked_pos",
+        "position_ids",
+        "image_attention_mask",
+        "skip_multimodal_encoder",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeFlavaImageProcessor.call() for details."
+        },
+        {
+            "name": "bool_masked_pos",
+            "type": "torch.BoolTensor of shape (batch_size, image_num_patches)",
+            "optional": false,
+            "default": "",
+            "description": "Boolean masked positions. Indicates which patches are masked (1) and which arent (0)."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained position encodings."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, image_num_patches + text_seq_len)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Indices can be obtained using AutoTokenizer. SeePreTrainedTokenizer.encode() and PreTrainedTokenizer.call() for details. What are inputIDs?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.LongTensor of shape (batch_size, image_num_patches + text_seq_len",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token.What are token type IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, image_num_patches + text_seq_len",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "skip_multimodal_encoder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Skip any calculations for multimodal encoder. Useful if multimodal encoding is not going to be used."
+        }
+    ],
+    "return": "transformers.models.flava.modeling_flava.FlavaModelOutput or tuple(torch.FloatTensor)"
+}

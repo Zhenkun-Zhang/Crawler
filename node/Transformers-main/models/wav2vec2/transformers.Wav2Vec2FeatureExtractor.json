@@ -1,0 +1,51 @@
+{
+    "api": "transformers.Wav2Vec2FeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size",
+        "sampling_rate",
+        "padding_value",
+        "return_attention_mask",
+        "do_normalize",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The feature dimension of the extracted features."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "16000",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The value that is used to fill the padding values."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to zero-mean unit-variance normalize the input. Normalizing can help to significantlyimprove the performance for some models, e.g.,wav2vec2-lv60."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not call() should return attention_mask.Wav2Vec2 models that have set config.feat_extract_norm == group, such aswav2vec2-base, have not been trained usingattention_mask. For such models, input_values should simply be padded with 0 and no attention_maskshould be passed.For Wav2Vec2 models that have set config.feat_extract_norm == layer, such aswav2vec2-lv60, attention_mask should bepassed for batched inference."
+        }
+    ],
+    "return": ""
+}

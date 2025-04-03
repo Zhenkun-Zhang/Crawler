@@ -1,0 +1,74 @@
+{
+    "api": "transformers.FlaxVisionEncoderDecoderModel.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "Array",
+        "decoder_input_ids",
+        "decoder_attention_mask",
+        "decoder_position_ids",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "train",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7fd23718d090>",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "jnp.ndarray of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using the vision models image processor. For example, usingAutoImageProcessor. See ViTImageProcessor.call() for details."
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "jnp.ndarray of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary.Indices can be obtained using PreTrainedTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are decoder input IDs?"
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "jnp.ndarray of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default."
+        },
+        {
+            "name": "decoder_position_ids",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each decoder input sequence tokens in the position embeddings. Selected in therange [0, config.decoder.max_position_embeddings - 1]."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, the model will return a ~utils.FlaxSeq2SeqLMOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_flax_outputs.FlaxSeq2SeqLMOutput or tuple(torch.FloatTensor)"
+}

@@ -1,0 +1,58 @@
+{
+    "api": "transformers.LlavaNextVideoImageProcessor.resize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BICUBIC",
+        "data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "Image to resize."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": false,
+            "default": "",
+            "description": "Size of the output image."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use when resiizing the image."
+        },
+        {
+            "name": "data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the image. If not provided, it will be the same as the input image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If not provided, it will be inferred."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,116 @@
+{
+    "api": "transformers.DistilBertConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "max_position_embeddings",
+        "sinusoidal_pos_embds",
+        "n_layers",
+        "n_heads",
+        "dim",
+        "hidden_dim",
+        "dropout",
+        "attention_dropout",
+        "activation",
+        "initializer_range",
+        "qa_dropout",
+        "seq_classif_dropout",
+        "pad_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30522",
+            "description": "Vocabulary size of the DistilBERT model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling DistilBertModel or TFDistilBertModel."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "sinusoidal_pos_embds",
+            "type": "boolean",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use sinusoidal positional embeddings."
+        },
+        {
+            "name": "n_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "dim",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "hidden_dim",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "The size of the intermediate (often named feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation",
+            "type": "str,Callable",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "qa_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probabilities used in the question answering model DistilBertForQuestionAnswering."
+        },
+        {
+            "name": "seq_classif_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.2",
+            "description": "The dropout probabilities used in the sequence classification and the multiple choice modelDistilBertForSequenceClassification."
+        }
+    ],
+    "return": ""
+}

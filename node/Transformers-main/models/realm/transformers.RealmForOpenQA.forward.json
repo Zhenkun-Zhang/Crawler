@@ -1,0 +1,51 @@
+{
+    "api": "transformers.RealmForOpenQA.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "token_type_ids",
+        "answer_ids",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (1, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (1, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.LongTensor of shape (1, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token (should not be used in this model by design).What are token type IDs?"
+        },
+        {
+            "name": "answer_ids",
+            "type": "list of shape (num_answers, answer_length",
+            "optional": true,
+            "default": "",
+            "description": "Answer ids for computing the marginal log-likelihood loss. Indices should be in [-1, 0, ..., config.vocab_size] (see input_ids docstring) Tokens with indices set to -1 are ignored (masked), theloss is only computed for the tokens with labels in [0, ..., config.vocab_size]"
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.deprecated.realm.modeling_realm.RealmForOpenQAOutput or tuple(torch.FloatTensor)"
+}

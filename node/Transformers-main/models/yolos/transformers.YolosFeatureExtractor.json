@@ -1,0 +1,11 @@
+{
+    "api": "transformers.YolosFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

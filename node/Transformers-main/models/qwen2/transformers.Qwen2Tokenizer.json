@@ -1,0 +1,83 @@
+{
+    "api": "transformers.Qwen2Tokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "errors",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "clean_up_tokenization_spaces",
+        "split_special_tokens",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the merges file."
+        },
+        {
+            "name": "errors",
+            "type": "str",
+            "optional": true,
+            "default": "replace",
+            "description": "Paradigm to follow when decoding bytes to UTF-8. Seebytes.decode for more information."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The beginning of sequence token. Not applicable for this tokenizer."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<|endoftext|>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the model should cleanup the spaces that were added when splitting the input text during thetokenization process. Not applicable to this tokenizer, since tokenization does not add spaces."
+        },
+        {
+            "name": "split_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the special tokens should be split during the tokenization process. The default behavior isto not split special tokens. This means that if <|endoftext|> is the eos_token, then tokenizer.tokenize(<|endoftext|>) = [<|endoftext|>]. Otherwise, if split_special_tokens=True, then tokenizer.tokenize(<|endoftext|>) will be give [<, |, endo, ft, ext, |, >]. This argument is only supported for slow tokenizers for the moment."
+        }
+    ],
+    "return": ""
+}

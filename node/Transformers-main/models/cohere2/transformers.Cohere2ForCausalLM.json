@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Cohere2ForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Cohere2Config"
+    ],
+    "params": [],
+    "return": ""
+}

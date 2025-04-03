@@ -1,0 +1,11 @@
+{
+    "api": "transformers.MaskFormerForInstanceSegmentation",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "MaskFormerConfig"
+    ],
+    "params": [],
+    "return": ""
+}

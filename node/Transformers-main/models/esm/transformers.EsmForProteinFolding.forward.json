@@ -1,0 +1,52 @@
+{
+    "api": "transformers.EsmForProteinFolding.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "Tensor",
+        "attention_mask",
+        "position_ids",
+        "masking_pattern",
+        "num_recycles",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "masking_pattern",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Locations of tokens to mask during training as a form of regularization. Mask values selected in [0, 1]."
+        },
+        {
+            "name": "num_recycles",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of times to recycle the input sequence. If None, defaults to config.num_recycles. Recyclingconsists of passing the output of the folding trunk back in as input to the trunk. During training, thenumber of recycles should vary with each batch, to ensure that the model learns to output valid predictionsafter each recycle. During inference, num_recycles should be set to the highest value that the model wastrained with for maximum accuracy. Accordingly, when this value is set to None, config.max_recycles isused."
+        }
+    ],
+    "return": "transformers.models.esm.modeling_esmfold.EsmForProteinFoldingOutput or tuple(torch.FloatTensor)"
+}

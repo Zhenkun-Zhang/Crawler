@@ -1,0 +1,129 @@
+{
+    "api": "transformers.BitConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "embedding_size",
+        "hidden_sizes",
+        "512,",
+        "1024,",
+        "2048]",
+        "depths",
+        "4,",
+        "6,",
+        "3]",
+        "layer_type",
+        "hidden_act",
+        "global_padding",
+        "num_groups",
+        "drop_path_rate",
+        "embedding_dynamic_padding",
+        "output_stride",
+        "width_factor",
+        "out_features",
+        "out_indices",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "embedding_size",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Dimensionality (hidden size) for the embedding layer."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[256,",
+            "description": "Dimensionality (hidden size) at each stage."
+        },
+        {
+            "name": "depths",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "Depth (number of layers) for each stage."
+        },
+        {
+            "name": "layer_type",
+            "type": "str",
+            "optional": true,
+            "default": "preactivation",
+            "description": "The layer to use, it can be either preactivation or bottleneck."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function in each block. If string, gelu, relu, selu and gelu_neware supported."
+        },
+        {
+            "name": "global_padding",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Padding strategy to use for the convolutional layers. Can be either valid, same, or None."
+        },
+        {
+            "name": "num_groups",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of groups used for the BitGroupNormActivation layers."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The drop path rate for the stochastic depth."
+        },
+        {
+            "name": "embedding_dynamic_padding",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to make use of dynamic padding for the embedding layer."
+        },
+        {
+            "name": "output_stride",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "The output stride of the model."
+        },
+        {
+            "name": "width_factor",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The width factor for the model."
+        },
+        {
+            "name": "out_features",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of features to output. Can be any of stem, stage1, stage2, etc.(depending on how many stages the model has). If unset and out_indices is set, will default to thecorresponding stages. If unset and out_indices is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        },
+        {
+            "name": "out_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of indices of features to output. Can be any of 0, 1, 2, etc. (depending on howmany stages the model has). If unset and out_features is set, will default to the corresponding stages.If unset and out_features is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        }
+    ],
+    "return": ""
+}

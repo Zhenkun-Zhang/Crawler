@@ -1,0 +1,91 @@
+{
+    "api": "transformers.SegGptModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "prompt_pixel_values",
+        "prompt_masks",
+        "bool_masked_pos",
+        "feature_ensemble",
+        "embedding_type",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. See SegGptImageProcessor.call()for details."
+        },
+        {
+            "name": "prompt_pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Prompt pixel values. Prompt pixel values can be obtained using AutoImageProcessor. SeeSegGptImageProcessor.call() for details."
+        },
+        {
+            "name": "prompt_masks",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Prompt mask. Prompt mask can be obtained using AutoImageProcessor. See SegGptImageProcessor.call() fordetails."
+        },
+        {
+            "name": "bool_masked_pos",
+            "type": "torch.BoolTensor of shape (batch_size, num_patches",
+            "optional": true,
+            "default": "",
+            "description": "Boolean masked positions. Indicates which patches are masked (1) and which arent (0)."
+        },
+        {
+            "name": "feature_ensemble",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Boolean indicating whether to use feature ensemble or not. If True, the model will use feature ensembleif we have at least two prompts. If False, the model will not use feature ensemble. This argument shouldbe considered when doing few-shot inference on an input image i.e. more than one prompt for the same image."
+        },
+        {
+            "name": "embedding_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Embedding type. Indicates whether the prompt is a semantic or instance embedding. Can be eitherinstance or semantic."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width",
+            "optional": true,
+            "default": "",
+            "description": "Ground truth mask for input images."
+        }
+    ],
+    "return": "transformers.models.seggpt.modeling_seggpt.SegGptEncoderOutput or tuple(torch.FloatTensor)"
+}

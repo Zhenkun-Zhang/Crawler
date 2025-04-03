@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TrainerState.init_training_references",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "trainer",
+        "max_steps",
+        "num_train_epochs",
+        "trial"
+    ],
+    "params": [],
+    "return": ""
+}

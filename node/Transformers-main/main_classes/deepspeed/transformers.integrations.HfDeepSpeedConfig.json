@@ -1,0 +1,18 @@
+{
+    "api": "transformers.integrations.HfDeepSpeedConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config_file_or_dict"
+    ],
+    "params": [
+        {
+            "name": "config_file_or_dict",
+            "type": "Union[str, Dict]",
+            "optional": false,
+            "default": "",
+            "description": "path to DeepSpeed config file or dict."
+        }
+    ],
+    "return": ""
+}

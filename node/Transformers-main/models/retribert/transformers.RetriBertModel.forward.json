@@ -1,0 +1,51 @@
+{
+    "api": "transformers.RetriBertModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids_query:",
+        "attention_mask_query",
+        "input_ids_doc",
+        "attention_mask_doc",
+        "checkpoint_batch_size",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids_query",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary for the queries in a batch.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask_query",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "input_ids_doc",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary for the documents in a batch."
+        },
+        {
+            "name": "attention_mask_doc",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on documents padding token indices."
+        },
+        {
+            "name": "checkpoint_batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If greater than 0, uses gradient checkpointing to only compute sequence representation oncheckpoint_batch_size examples at a time on the GPU. All query representations are still compared toall document representations in the batch."
+        }
+    ],
+    "return": "`torch.FloatTensor“"
+}

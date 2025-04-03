@@ -1,0 +1,10 @@
+{
+    "api": "transformers.DataProcessor.get_train_examples",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "data_dir"
+    ],
+    "params": [],
+    "return": ""
+}

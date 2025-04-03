@@ -1,0 +1,42 @@
+{
+    "api": "transformers.JsonPipelineDataFormat",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "output_path:",
+        "input_path",
+        "column",
+        "overwrite"
+    ],
+    "params": [
+        {
+            "name": "output_path",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Where to save the outgoing data."
+        },
+        {
+            "name": "input_path",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Where to look for the input data."
+        },
+        {
+            "name": "column",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The column to read."
+        },
+        {
+            "name": "overwrite",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to overwrite the output_path."
+        }
+    ],
+    "return": ""
+}

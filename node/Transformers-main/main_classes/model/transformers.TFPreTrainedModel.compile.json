@@ -1,0 +1,17 @@
+{
+    "api": "transformers.TFPreTrainedModel.compile",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "optimizer",
+        "loss",
+        "metrics",
+        "loss_weights",
+        "weighted_metrics",
+        "run_eagerly",
+        "steps_per_execution",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

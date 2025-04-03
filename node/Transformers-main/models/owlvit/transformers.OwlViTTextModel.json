@@ -1,0 +1,11 @@
+{
+    "api": "transformers.OwlViTTextModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "OwlViTTextConfig"
+    ],
+    "params": [],
+    "return": ""
+}

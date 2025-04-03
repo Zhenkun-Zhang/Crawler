@@ -1,0 +1,235 @@
+{
+    "api": "transformers.IdeficsConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "additional_vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "dropout",
+        "hidden_act",
+        "initializer_range",
+        "alpha_initializer",
+        "alphas_initializer_range",
+        "alpha_type",
+        "rms_norm_eps",
+        "use_cache",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "tie_word_embeddings",
+        "cross_layer_interval",
+        "qk_layer_norms",
+        "freeze_text_layers",
+        "freeze_text_module_exceptions",
+        "freeze_lm_head",
+        "freeze_vision_layers",
+        "freeze_vision_module_exceptions",
+        "use_resampler",
+        "vision_config",
+        "perceiver_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "additional_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Additional vocabulary size of the model, typically for the special  token. Additional vocab tokensare always trainable whereas regular vocab tokens can be frozen or not."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "32000",
+            "description": "Vocabulary size of the Idefics model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling ~IdeficsModel"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "11008",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "silu",
+            "description": "The non-linear activation function (function or string) in the decoder."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "alpha_initializer",
+            "type": "str",
+            "optional": true,
+            "default": "zeros",
+            "description": "Initialization type for the alphas."
+        },
+        {
+            "name": "alphas_initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing the alphas in the Gated CrossAttention."
+        },
+        {
+            "name": "alpha_type",
+            "type": "str",
+            "optional": true,
+            "default": "float",
+            "description": "Whether the gating alphas should be vectors or single floats."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Padding token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Beginning of stream token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "tie_word_embeddings(bool,",
+            "type": "optional, defaults to False",
+            "optional": true,
+            "default": "",
+            "description": "Whether to tie weight embeddings"
+        },
+        {
+            "name": "cross_layer_interval",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Interval for cross attention (from text to image) layers."
+        },
+        {
+            "name": "qk_layer_norms",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to add layer norm after q and k"
+        },
+        {
+            "name": "freeze_text_layers",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to freeze text layers"
+        },
+        {
+            "name": "freeze_text_module_exceptions",
+            "type": "bool",
+            "optional": true,
+            "default": "[]",
+            "description": "Exceptions to freezing text layers when freeze_text_layers is True"
+        },
+        {
+            "name": "freeze_lm_head",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to freeze lm head"
+        },
+        {
+            "name": "freeze_vision_layers",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to freeze vision layers"
+        },
+        {
+            "name": "freeze_vision_module_exceptions",
+            "type": "bool",
+            "optional": true,
+            "default": "[]",
+            "description": "Exceptions to freezing vision layers when freeze_vision_layers is True"
+        },
+        {
+            "name": "use_resampler",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use the Resampler"
+        },
+        {
+            "name": "vision_config",
+            "type": "IdeficsVisionConfig,  optional",
+            "optional": true,
+            "default": "None",
+            "description": "Custom vision config or dict"
+        },
+        {
+            "name": "perceiver_config",
+            "type": "IdeficsPerceiverConfig,  optional",
+            "optional": true,
+            "default": "None",
+            "description": "Custom perceiver config or dict"
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,16 @@
+{
+    "api": "transformers.FlaxCLIPVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "CLIPVisionConfig",
+        "input_shape",
+        "seed",
+        "'jax.numpy.float32'>",
+        "_do_init",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,22 @@
+{
+    "api": "transformers.PoolFormerModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "typing.Optional[torch.FloatTensor]",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeePoolFormerImageProcessor.call() for details."
+        }
+    ],
+    "return": "transformers.modeling_outputs.BaseModelOutputWithNoAttention or tuple(torch.FloatTensor)"
+}

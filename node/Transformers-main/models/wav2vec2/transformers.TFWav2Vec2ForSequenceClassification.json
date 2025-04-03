@@ -1,0 +1,10 @@
+{
+    "api": "transformers.TFWav2Vec2ForSequenceClassification",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,115 @@
+{
+    "api": "transformers.LlavaNextVideoImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "image_grid_pinpoints",
+        "resample",
+        "<Resampling.BICUBIC",
+        "do_center_crop",
+        "crop_size",
+        "int]",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "do_convert_rgb",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to the specified size. Can be overridden bydo_resize in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"shortest_edge\" -- 224}):Size of the image after resizing. The shortest edge of the image is resized to size[“shortest_edge”], withthe longest edge resized to keep the input aspect ratio. Can be overridden by size in the preprocessmethod.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "image_grid_pinpoints",
+            "type": "List optional, defaults to [[672, 336], [336, 672], [672, 672], [336, 1008], [1008, 336]]",
+            "optional": true,
+            "default": "",
+            "description": "A list of possible resolutions to use for processing high resolution images. The best resolution is selectedbased on the original size of the image. Can be overridden by image_grid_pinpoints in the preprocessmethod. Not used for processinf videos."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by resample in the preprocess method."
+        },
+        {
+            "name": "do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to center crop the image to the specified crop_size. Can be overridden by do_center_crop in thepreprocess method."
+        },
+        {
+            "name": "crop_size",
+            "type": "Dict[str, int] optional, defaults to 224",
+            "optional": true,
+            "default": "",
+            "description": "Size of the output image after applying center_crop. Can be overridden by crop_size in the preprocessmethod."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by do_rescale inthe preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by rescale_factor in the preprocessmethod."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by do_normalize in the preprocess method."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method.Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB."
+        }
+    ],
+    "return": ""
+}

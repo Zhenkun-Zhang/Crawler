@@ -1,0 +1,28 @@
+{
+    "api": "transformers.BayesianDetectorConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "watermarking_depth:",
+        "typing.Optional[int]",
+        "base_rate",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "watermarking_depth",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of tournament layers."
+        },
+        {
+            "name": "base_rate",
+            "type": "float1",
+            "optional": true,
+            "default": "",
+            "description": "Prior probability P(w) that a text is watermarked."
+        }
+    ],
+    "return": ""
+}

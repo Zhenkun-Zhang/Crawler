@@ -1,0 +1,87 @@
+{
+    "api": "transformers.SuperPointConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "encoder_hidden_sizes:",
+        "typing.List[int]",
+        "64,",
+        "128,",
+        "128]",
+        "decoder_hidden_size",
+        "keypoint_decoder_dim",
+        "descriptor_decoder_dim",
+        "keypoint_threshold",
+        "max_keypoints",
+        "nms_radius",
+        "border_removal_distance",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "encoder_hidden_sizes",
+            "type": "List",
+            "optional": true,
+            "default": "",
+            "description": "The number of channels in each convolutional layer in the encoder."
+        },
+        {
+            "name": "decoder_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The hidden size of the decoder."
+        },
+        {
+            "name": "keypoint_decoder_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The output dimension of the keypoint decoder."
+        },
+        {
+            "name": "descriptor_decoder_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The output dimension of the descriptor decoder."
+        },
+        {
+            "name": "keypoint_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The threshold to use for extracting keypoints."
+        },
+        {
+            "name": "max_keypoints",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum number of keypoints to extract. If -1, will extract all keypoints."
+        },
+        {
+            "name": "nms_radius",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The radius for non-maximum suppression."
+        },
+        {
+            "name": "border_removal_distance",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The distance from the border to remove keypoints."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        }
+    ],
+    "return": ""
+}

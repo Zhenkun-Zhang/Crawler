@@ -1,0 +1,19 @@
+{
+    "api": "transformers.onnx.OnnxConfig.use_external_data_format",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "num_parameters:",
+        "int"
+    ],
+    "params": [
+        {
+            "name": "num_parameters",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Number of parameter on the model"
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,11 @@
+{
+    "api": "transformers.InstructBlipVideoQFormerModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "InstructBlipVideoQFormerConfig"
+    ],
+    "params": [],
+    "return": ""
+}

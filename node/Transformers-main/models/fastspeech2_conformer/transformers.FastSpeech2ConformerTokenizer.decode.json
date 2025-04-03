@@ -1,0 +1,11 @@
+{
+    "api": "transformers.FastSpeech2ConformerTokenizer.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

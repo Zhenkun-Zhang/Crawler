@@ -1,0 +1,10 @@
+{
+    "api": "transformers.DistilBertTokenizer.convert_tokens_to_string",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tokens"
+    ],
+    "params": [],
+    "return": ""
+}

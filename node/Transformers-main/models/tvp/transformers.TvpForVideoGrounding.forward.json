@@ -1,0 +1,83 @@
+{
+    "api": "transformers.TvpForVideoGrounding.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "pixel_values",
+        "attention_mask",
+        "labels",
+        "head_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "interpolate_pos_encoding",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Indices can be obtained using AutoTokenizer. SeePreTrainedTokenizer.encode() and PreTrainedTokenizer.call() for details. What are inputIDs?"
+        },
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_frames, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using TvpImageProcessor. See TvpImageProcessor.call()for details."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained image pad prompter encodings and positional encodings."
+        },
+        {
+            "name": "labels",
+            "type": "torch.FloatTensor of shape (batch_size, 3",
+            "optional": true,
+            "default": "",
+            "description": "The labels contains duration, start time, and end time of the video corresponding to the text."
+        }
+    ],
+    "return": "transformers.models.tvp.modeling_tvp.TvpVideoGroundingOutput or tuple(torch.FloatTensor)"
+}

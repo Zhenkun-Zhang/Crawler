@@ -1,0 +1,36 @@
+{
+    "api": "transformers.TextToAudioPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text_inputs:",
+        "typing.Union[str,",
+        "typing.List[str]]",
+        "**forward_params",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text_inputs",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The text(s) to generate."
+        },
+        {
+            "name": "forward_params",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Parameters passed to the model generation/forward method. forward_params are always passed to theunderlying model."
+        },
+        {
+            "name": "generate_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "The dictionary of ad-hoc parametrization of generate_config to be used for the generation call. For acomplete overview of generate, check the followingguide. generate_kwargs areonly passed to the underlying model if the latter is a generative model."
+        }
+    ],
+    "return": "A dict or a list of dict"
+}

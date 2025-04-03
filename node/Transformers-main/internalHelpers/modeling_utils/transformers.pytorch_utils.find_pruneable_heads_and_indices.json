@@ -1,0 +1,44 @@
+{
+    "api": "transformers.pytorch_utils.find_pruneable_heads_and_indices",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "heads:",
+        "list[int]",
+        "n_heads",
+        "head_size",
+        "already_pruned_heads",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "heads",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "List of the indices of heads to prune."
+        },
+        {
+            "name": "n_heads",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of heads in the model."
+        },
+        {
+            "name": "head_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The size of each head."
+        },
+        {
+            "name": "already_pruned_heads",
+            "type": "Set[int]",
+            "optional": false,
+            "default": "",
+            "description": "A set of already pruned heads."
+        }
+    ],
+    "return": "Tuple[Set[int], torch.LongTensor]"
+}

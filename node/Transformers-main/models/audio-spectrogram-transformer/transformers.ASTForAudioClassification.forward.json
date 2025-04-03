@@ -1,0 +1,59 @@
+{
+    "api": "transformers.ASTForAudioClassification.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "head_mask",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "torch.FloatTensor of shape (batch_size, max_length, num_mel_bins)",
+            "optional": false,
+            "default": "",
+            "description": "Float values mel features extracted from the raw audio waveform. Raw audio waveform can be obtained byloading a .flac or .wav audio file into an array of type List[float] or a numpy.ndarray, e.g. viathe soundfile library (pip install soundfile). To prepare the array into input_features, theAutoFeatureExtractor should be used for extracting the mel features, padding and conversion into atensor of type torch.FloatTensor. See call()"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the audio classification/regression loss. Indices should be in [0, ..., config.num_labels - 1]. If config.num_labels == 1 a regression loss is computed (Mean-Square loss), Ifconfig.num_labels > 1 a classification loss is computed (Cross-Entropy)."
+        }
+    ],
+    "return": "transformers.modeling_outputs.SequenceClassifierOutput or tuple(torch.FloatTensor)"
+}

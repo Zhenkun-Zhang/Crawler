@@ -1,0 +1,27 @@
+{
+    "api": "transformers.get_constant_schedule",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "optimizer:",
+        "Optimizer",
+        "last_epoch"
+    ],
+    "params": [
+        {
+            "name": "optimizer",
+            "type": "~torch.optim.Optimizer",
+            "optional": false,
+            "default": "",
+            "description": "The optimizer for which to schedule the learning rate."
+        },
+        {
+            "name": "last_epoch",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The index of the last epoch when resuming training."
+        }
+    ],
+    "return": ""
+}

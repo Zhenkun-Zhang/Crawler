@@ -1,0 +1,27 @@
+{
+    "api": "transformers.LayoutLMv2Processor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "LayoutLMv2ImageProcessor",
+            "optional": true,
+            "default": "None",
+            "description": "An instance of LayoutLMv2ImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "LayoutLMv2Tokenizer,LayoutLMv2TokenizerFast",
+            "optional": true,
+            "default": "None",
+            "description": "An instance of LayoutLMv2Tokenizer or LayoutLMv2TokenizerFast. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

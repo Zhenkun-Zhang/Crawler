@@ -1,0 +1,12 @@
+{
+    "api": "transformers.TFSegformerDecodeHead.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "encoder_hidden_states:",
+        "tf.Tensor",
+        "training"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,110 @@
+{
+    "api": "transformers.onnx.OnnxConfig.generate_dummy_inputs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "preprocessor:",
+        "typing.Union[ForwardRef('PreTrainedTokenizerBase'),",
+        "ForwardRef('FeatureExtractionMixin'),",
+        "ForwardRef('ImageProcessingMixin')]",
+        "batch_size",
+        "seq_length",
+        "num_choices",
+        "is_pair",
+        "framework",
+        "num_channels",
+        "image_width",
+        "image_height",
+        "sampling_rate",
+        "time_duration",
+        "frequency",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "preprocessor",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "(PreTrainedTokenizerBase, FeatureExtractionMixin, or ImageProcessingMixin):The preprocessor associated with this model configuration."
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The batch size to export the model for (-1 means dynamic axis)."
+        },
+        {
+            "name": "num_choices",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of candidate answers provided for multiple choice task (-1 means dynamic axis)."
+        },
+        {
+            "name": "seq_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sequence length to export the model for (-1 means dynamic axis)."
+        },
+        {
+            "name": "is_pair",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Indicate if the input is a pair (sentence 1, sentence 2)"
+        },
+        {
+            "name": "framework",
+            "type": "TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The framework (PyTorch or TensorFlow) that the tokenizer will generate tensors for."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of channels of the generated images."
+        },
+        {
+            "name": "image_width",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The width of the generated images."
+        },
+        {
+            "name": "image_height",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The height of the generated images."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate for audio data generation."
+        },
+        {
+            "name": "time_duration",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Total seconds of sampling for audio data generation."
+        },
+        {
+            "name": "frequency",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The desired natural frequency of generated audio."
+        }
+    ],
+    "return": ""
+}

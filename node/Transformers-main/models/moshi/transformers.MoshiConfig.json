@@ -1,0 +1,162 @@
+{
+    "api": "transformers.MoshiConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "num_key_value_heads",
+        "audio_vocab_size",
+        "max_position_embeddings",
+        "rope_theta",
+        "hidden_act",
+        "head_dim",
+        "initializer_range",
+        "use_cache",
+        "sliding_window",
+        "attention_dropout",
+        "ffn_dim",
+        "rms_norm_eps",
+        "num_codebooks",
+        "tie_word_embeddings",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "32000",
+            "description": "Vocabulary size of the MoshiDecoder model. Defines the number of different tokens that can berepresented by the inputs_ids passed when calling MoshiDecoder."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimensionality of the layers and the pooler layer of the main decoder."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of attention heads for each attention layer in the main decoder block."
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "This is the number of key_value heads that should be used to implement Grouped Query Attention. Ifnum_key_value_heads=num_attention_heads, the model will use Multi Head Attention (MHA), ifnum_key_value_heads=1 the model will use Multi Query Attention (MQA) otherwise GQA is used. Whenconverting a multi-head checkpoint to a GQA checkpoint, each group key and value head should be constructedby meanpooling all the original heads within that group. For more details checkout thispaper. If it is not specified, will default to num_attention_heads."
+        },
+        {
+            "name": "audio_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Vocabulary size of the audio part of model. Defines the number of different tokens that can berepresented by the audio_codes passed when calling the Moshi models."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "3000",
+            "description": "The maximum sequence length that this model might ever be used with. Typically, set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "silu",
+            "description": "The non-linear activation function (function or string) in the decoder."
+        },
+        {
+            "name": "head_dim",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The attention head dimension."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "sliding_window",
+            "type": "int",
+            "optional": true,
+            "default": "3000",
+            "description": "Sliding window attention window size. If not specified, will default to 3000."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "22528",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in the main decoder block. Must be even."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-08",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "num_codebooks",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "The number of audio codebooks for each audio channels."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to tie weight embeddings"
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments. Notably:audio_encoder_config (PretrainedConfig, optional) — An instance of a configuration object thatdefines the audio encoder config.depth__config (PretrainedConfig, optional) — An instance of a configuration object thatdefines the depth decoder config."
+        }
+    ],
+    "return": ""
+}

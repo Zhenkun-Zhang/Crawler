@@ -1,0 +1,191 @@
+{
+    "api": "transformers.GPTQConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "bits:",
+        "tokenizer",
+        "dataset",
+        "typing.List[str],",
+        "NoneType]",
+        "group_size",
+        "damp_percent",
+        "desc_act",
+        "sym",
+        "true_sequential",
+        "checkpoint_format",
+        "meta",
+        "typing.Any]]",
+        "backend",
+        "use_cuda_fp16",
+        "model_seqlen",
+        "block_name_to_quantize",
+        "module_name_preceding_first_block",
+        "batch_size",
+        "pad_token_id",
+        "use_exllama",
+        "max_input_length",
+        "exllama_config",
+        "typing.Any]]",
+        "cache_block_outputs",
+        "modules_in_block_to_quantize",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "bits",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of bits to quantize to, supported numbers are (2, 3, 4, 8)."
+        },
+        {
+            "name": "tokenizer",
+            "type": "str,PreTrainedTokenizerBase",
+            "optional": true,
+            "default": "",
+            "description": "The tokenizer used to process the dataset. You can pass either:A custom tokenizer object.A string, the model id of a predefined tokenizer hosted inside a model repo on huggingface.co.A path to a directory containing vocabulary files required by the tokenizer, for instance savedusing the save_pretrained() method, e.g., ./my_model_directory/."
+        },
+        {
+            "name": "dataset",
+            "type": "Union[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "The dataset used for quantization. You can provide your own dataset in a list of string or just use theoriginal datasets used in GPTQ paper [wikitext2,c4,c4-new]"
+        },
+        {
+            "name": "group_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The group size to use for quantization. Recommended value is 128 and -1 uses per-column quantization."
+        },
+        {
+            "name": "damp_percent",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The percent of the average Hessian diagonal to use for dampening. Recommended value is 0.1."
+        },
+        {
+            "name": "desc_act",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to quantize columns in order of decreasing activation size. Setting it to False can significantlyspeed up inference but the perplexity may become slightly worse. Also known as act-order."
+        },
+        {
+            "name": "sym",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use symetric quantization."
+        },
+        {
+            "name": "true_sequential",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to perform sequential quantization even within a single Transformer block. Instead of quantizingthe entire block at once, we perform layer-wise quantization. As a result, each layer undergoesquantization using inputs that have passed through the previously quantized layers."
+        },
+        {
+            "name": "checkpoint_format",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "GPTQ weight format. gptq(v1) is supported by both gptqmodel and auto-gptq. gptq_v2 is gptqmodel only."
+        },
+        {
+            "name": "meta",
+            "type": "Dict[str, any]",
+            "optional": true,
+            "default": "",
+            "description": "Properties, such as tooling:version, that do not directly contributes to quantization or quant inference are stored in meta.i.e. meta.quantizer: [optimum:version, gptqmodel:version]"
+        },
+        {
+            "name": "backend",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Controls which gptq kernel to be used. Valid values for gptqmodel are auto, auto_trainable and more. For auto-gptq, onlyvalid value is None and auto_trainable. Ref gptqmodel backends: https://github.com/ModelCloud/GPTQModel/blob/main/gptqmodel/utils/backend.py"
+        },
+        {
+            "name": "use_cuda_fp16",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use optimized cuda kernel for fp16 model. Need to have model in fp16. Auto-gptq only."
+        },
+        {
+            "name": "model_seqlen",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum sequence length that the model can take."
+        },
+        {
+            "name": "block_name_to_quantize",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The transformers block name to quantize. If None, we will infer the block name using common patterns (e.g. model.layers)"
+        },
+        {
+            "name": "module_name_preceding_first_block",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "The layers that are preceding the first Transformer block."
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The batch size used when processing the dataset"
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The pad token id. Needed to prepare the dataset when batch_size > 1."
+        },
+        {
+            "name": "use_exllama",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use exllama backend. Defaults to True if unset. Only works with bits = 4."
+        },
+        {
+            "name": "max_input_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum input length. This is needed to initialize a buffer that depends on the maximum expected inputlength. It is specific to the exllama backend with act-order."
+        },
+        {
+            "name": "exllama_config",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "The exllama config. You can specify the version of the exllama kernel through the version key. Defaultsto {version: 1} if unset."
+        },
+        {
+            "name": "cache_block_outputs",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to cache block outputs to reuse as inputs for the succeeding block."
+        },
+        {
+            "name": "modules_in_block_to_quantize",
+            "type": "List[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "List of list of module names to quantize in the specified block. This argument is useful to exclude certain linear modules from being quantized.The block to quantize can be specified by setting block_name_to_quantize. We will quantize each list sequentially. If not set, we will quantize all linear layers.Example: modules_in_block_to_quantize =[[self_attn.k_proj, self_attn.v_proj, self_attn.q_proj], [self_attn.o_proj]].In this example, we will first quantize the q,k,v layers simultaneously since they are independent.Then, we will quantize self_attn.o_proj layer with the q,k,v layers quantized. This way, we will getbetter results since it reflects the real input self_attn.o_proj will get when the model is quantized."
+        }
+    ],
+    "return": ""
+}

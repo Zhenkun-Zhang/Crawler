@@ -1,0 +1,61 @@
+{
+    "api": "transformers.InstructBlipForConditionalGeneration.generate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor",
+        "qformer_input_ids",
+        "qformer_attention_mask",
+        "input_ids",
+        "attention_mask",
+        "interpolate_pos_encoding",
+        "**generate_kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Input images to be processed."
+        },
+        {
+            "name": "qformer_input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The sequence used as a prompt to be fed to the Q-Former module."
+        },
+        {
+            "name": "qformer_attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The sequence used as a prompt for the generation."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the positional encoding of the image embeddings."
+        }
+    ],
+    "return": "captions (list)"
+}

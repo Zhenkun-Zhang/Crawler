@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFGroupViTTextModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "GroupViTTextConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

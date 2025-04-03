@@ -1,0 +1,30 @@
+{
+    "api": "transformers.ImageToImagePipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[str,",
+        "typing.List[str],",
+        "ForwardRef('Image.Image'),",
+        "typing.List[ForwardRef('Image.Image')]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "str, List[str], PIL.Image,List[PIL.Image]",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing a http link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyThe pipeline accepts either a single image or a batch of images, which must then be passed as a string.Images in a batch must all be in the same format: all as http links, all as local paths, or all as PILimages."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The maximum time in seconds to wait for fetching images from the web. If None, no timeout is used andthe call may block forever."
+        }
+    ],
+    "return": ""
+}

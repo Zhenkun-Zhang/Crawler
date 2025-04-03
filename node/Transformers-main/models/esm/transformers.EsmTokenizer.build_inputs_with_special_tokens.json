@@ -1,0 +1,12 @@
+{
+    "api": "transformers.EsmTokenizer.build_inputs_with_special_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0:",
+        "typing.List[int]",
+        "token_ids_1"
+    ],
+    "params": [],
+    "return": ""
+}

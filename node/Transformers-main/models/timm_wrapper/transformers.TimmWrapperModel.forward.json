@@ -1,0 +1,62 @@
+{
+    "api": "transformers.TimmWrapperModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor",
+        "output_attentions",
+        "output_hidden_states",
+        "typing.List[int],",
+        "NoneType]",
+        "return_dict",
+        "do_pooling",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. See TimmWrapperImageProcessor.preprocess()for details."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. Not compatible with timm wrapped models."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. Not compatible with timm wrapped models."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments passed along to the timm model forward."
+        },
+        {
+            "name": "do_pooling",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to do pooling for the last_hidden_state in TimmWrapperModel or not. If None is passed, thedo_pooling value from the config is used."
+        }
+    ],
+    "return": "transformers.models.timm_wrapper.modeling_timm_wrapper.TimmWrapperModelOutput or tuple(torch.FloatTensor)"
+}

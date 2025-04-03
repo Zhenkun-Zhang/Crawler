@@ -1,0 +1,12 @@
+{
+    "api": "transformers.CamembertTokenizer.save_vocabulary",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory:",
+        "str",
+        "filename_prefix"
+    ],
+    "params": [],
+    "return": ""
+}

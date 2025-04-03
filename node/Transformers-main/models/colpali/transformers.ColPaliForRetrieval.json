@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ColPaliForRetrieval",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "ColPaliConfig"
+    ],
+    "params": [],
+    "return": ""
+}

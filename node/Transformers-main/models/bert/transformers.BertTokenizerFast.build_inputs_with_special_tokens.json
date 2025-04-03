@@ -1,0 +1,27 @@
+{
+    "api": "transformers.BertTokenizerFast.build_inputs_with_special_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0",
+        "token_ids_1",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids_0",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "List of IDs to which the special tokens will be added."
+        },
+        {
+            "name": "token_ids_1",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "Optional second list of IDs for sequence pairs."
+        }
+    ],
+    "return": "List[int]"
+}

@@ -1,0 +1,10 @@
+{
+    "api": "transformers.Pipeline.transform",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "X"
+    ],
+    "params": [],
+    "return": ""
+}

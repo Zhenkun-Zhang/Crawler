@@ -1,0 +1,26 @@
+{
+    "api": "transformers.SeamlessM4Tv2Model",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "current_modality"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "~SeamlessM4Tv2Config",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        },
+        {
+            "name": "current_modality",
+            "type": "str",
+            "optional": true,
+            "default": "text",
+            "description": "Default modality. Used only to initialize the model. It can be set to text or speech.This will be updated automatically according to the modality passed to the forward and generate passes (input_ids for text and input_features for audio)."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,14 @@
+{
+    "api": "transformers.DataCollatorForLanguageModeling.tf_mask_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "typing.Any",
+        "vocab_size",
+        "mask_token_id",
+        "special_tokens_mask"
+    ],
+    "params": [],
+    "return": ""
+}

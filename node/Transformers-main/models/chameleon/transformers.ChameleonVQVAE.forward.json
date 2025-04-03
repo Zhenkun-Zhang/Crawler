@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ChameleonVQVAE.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*input:",
+        "typing.Any"
+    ],
+    "params": [],
+    "return": ""
+}

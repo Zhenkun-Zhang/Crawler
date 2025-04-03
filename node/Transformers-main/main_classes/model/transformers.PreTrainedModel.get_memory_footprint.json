@@ -1,0 +1,18 @@
+{
+    "api": "transformers.PreTrainedModel.get_memory_footprint",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "return_buffers"
+    ],
+    "params": [
+        {
+            "name": "return_buffers",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to return the size of the buffer tensors in the computation of the memory footprint. Buffersare tensors that do not require gradients and not registered as parameters. E.g. mean and std in batchnorm layers. Please see: https://discuss.pytorch.org/t/what-pytorch-means-by-buffers/120266/2"
+        }
+    ],
+    "return": ""
+}

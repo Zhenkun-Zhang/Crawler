@@ -1,0 +1,19 @@
+{
+    "api": "transformers.BarkModel.enable_cpu_offload",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "gpu_id:",
+        "typing.Optional[int]"
+    ],
+    "params": [
+        {
+            "name": "gpu_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "GPU id on which the sub-models will be loaded and offloaded."
+        }
+    ],
+    "return": ""
+}

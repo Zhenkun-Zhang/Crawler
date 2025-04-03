@@ -1,0 +1,42 @@
+{
+    "api": "transformers.JukeboxVQVAE.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "music_tokens",
+        "start_level",
+        "end_level",
+        "bs_chunks"
+    ],
+    "params": [
+        {
+            "name": "music_tokens",
+            "type": "torch.LongTensor",
+            "optional": false,
+            "default": "",
+            "description": "Tensor of music tokens which will be decoded to raw audio by using the codebook. Each music tokenshould be an index to a corresponding code vector in the codebook."
+        },
+        {
+            "name": "start_level",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Level at which the decoding process will start. Default to 0."
+        },
+        {
+            "name": "end_level",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Level at which the decoding process will start. Default to None."
+        },
+        {
+            "name": "bs_chunks",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of chunks to process at the same time."
+        }
+    ],
+    "return": ""
+}

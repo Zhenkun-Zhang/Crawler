@@ -1,0 +1,18 @@
+{
+    "api": "transformers.modeling_utils.PoolerAnswerClass",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The config used by the model, will be used to grab the hidden_size of the model."
+        }
+    ],
+    "return": ""
+}

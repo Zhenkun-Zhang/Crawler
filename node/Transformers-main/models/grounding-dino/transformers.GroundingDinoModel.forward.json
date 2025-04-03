@@ -1,0 +1,83 @@
+{
+    "api": "transformers.GroundingDinoModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "input_ids",
+        "token_type_ids",
+        "attention_mask",
+        "pixel_mask",
+        "encoder_outputs",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Padding will be ignored by default should you provide it.Pixel values can be obtained using AutoImageProcessor. See GroundingDinoImageProcessor.call() fordetails."
+        },
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, text_sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See BertTokenizer.call() for details."
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.LongTensor of shape (batch_size, text_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]: 0 corresponds to a sentence A token, 1 corresponds to a sentence B tokenWhat are token type IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, text_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are real (i.e. not masked),0 for tokens that are padding (i.e. masked).What are attention masks?"
+        },
+        {
+            "name": "pixel_mask",
+            "type": "torch.LongTensor of shape (batch_size, height, width",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding pixel values. Mask values selected in [0, 1]:1 for pixels that are real (i.e. not masked),0 for pixels that are padding (i.e. masked).What are attention masks?"
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "None",
+            "description": "Tuple consists of (last_hidden_state_vision, optional: last_hidden_state_text, optional:vision_hidden_states, optional: text_hidden_states, optional: attentions)last_hidden_state_vision of shape (batch_size, sequence_length, hidden_size), optional) is a sequenceof hidden-states at the output of the last layer of the encoder. Used in the cross-attention of thedecoder."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.grounding_dino.modeling_grounding_dino.GroundingDinoModelOutput or tuple(torch.FloatTensor)"
+}

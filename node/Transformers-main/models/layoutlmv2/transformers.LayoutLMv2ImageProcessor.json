@@ -1,0 +1,61 @@
+{
+    "api": "transformers.LayoutLMv2ImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BILINEAR",
+        "apply_ocr",
+        "ocr_lang",
+        "tesseract_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to (size[height], size[width]). Can beoverridden by do_resize in preprocess."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 224, \"width\": 224}):Size of the image after resizing. Can be overridden by size in preprocess.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by the resample parameter in thepreprocess method."
+        },
+        {
+            "name": "apply_ocr",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to apply the Tesseract OCR engine to get words + normalized bounding boxes. Can be overridden byapply_ocr in preprocess."
+        },
+        {
+            "name": "ocr_lang",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The language, specified by its ISO code, to be used by the Tesseract OCR engine. By default, English isused. Can be overridden by ocr_lang in preprocess."
+        },
+        {
+            "name": "tesseract_config",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Any additional custom configuration flags that are forwarded to the config parameter when callingTesseract. For example: —psm 6. Can be overridden by tesseract_config in preprocess."
+        }
+    ],
+    "return": ""
+}

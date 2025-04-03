@@ -1,0 +1,26 @@
+{
+    "api": "transformers.FlaxSuppressTokensAtBeginLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "begin_suppress_tokens",
+        "begin_index"
+    ],
+    "params": [
+        {
+            "name": "begin_suppress_tokens",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "Tokens to not sample."
+        },
+        {
+            "name": "begin_index",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index where the tokens are suppressed."
+        }
+    ],
+    "return": ""
+}

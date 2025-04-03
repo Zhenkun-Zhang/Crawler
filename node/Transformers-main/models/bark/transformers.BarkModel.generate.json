@@ -1,0 +1,45 @@
+{
+    "api": "transformers.BarkModel.generate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "typing.Optional[torch.Tensor]",
+        "history_prompt",
+        "torch.Tensor]]",
+        "return_output_lengths",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "Optional[torch.Tensor] of shape (batch_size, seq_len",
+            "optional": true,
+            "default": "",
+            "description": "Input ids. Will be truncated up to 256 tokens. Note that the output audios will be as long as thelongest generation among the batch."
+        },
+        {
+            "name": "history_prompt",
+            "type": "Optional[Dict[str,torch.Tensor]]",
+            "optional": true,
+            "default": "",
+            "description": "Optional Bark speaker prompt. Note that for now, this model takes only one speaker prompt per batch."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Remaining dictionary of keyword arguments. Keyword arguments are of two types:Without a prefix, they will be entered as **kwargs for the generate method of each sub-model.With a semantic_, coarse_, fine_ prefix, they will be input for the generate method of thesemantic, coarse and fine respectively. It has the priority over the keywords without a prefix.This means you can, for example, specify a generation strategy for all sub-models except one."
+        },
+        {
+            "name": "return_output_lengths",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the waveform lengths. Useful when batching."
+        }
+    ],
+    "return": "By default"
+}

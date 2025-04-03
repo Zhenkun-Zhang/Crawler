@@ -1,0 +1,58 @@
+{
+    "api": "transformers.AlignConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "vision_config",
+        "projection_dim",
+        "temperature_init_value",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize AlignTextConfig."
+        },
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize AlignVisionConfig."
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "640",
+            "description": "Dimensionality of text and vision projection layers."
+        },
+        {
+            "name": "temperature_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "The initial value of the temperature parameter. Default is used as per the original ALIGN implementation."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

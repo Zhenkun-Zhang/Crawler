@@ -1,0 +1,11 @@
+{
+    "api": "transformers.GraniteMoeSharedForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "GraniteMoeSharedConfig"
+    ],
+    "params": [],
+    "return": ""
+}

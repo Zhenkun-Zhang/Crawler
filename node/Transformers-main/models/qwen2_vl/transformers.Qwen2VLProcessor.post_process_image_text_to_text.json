@@ -1,0 +1,43 @@
+{
+    "api": "transformers.Qwen2VLProcessor.post_process_image_text_to_text",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "generated_outputs",
+        "skip_special_tokens",
+        "clean_up_tokenization_spaces",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "generated_outputs",
+            "type": "torch.Tensor,np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The output of the model generate function. The output is expected to be a tensor of shape (batch_size, sequence_length)or (sequence_length,)."
+        },
+        {
+            "name": "skip_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to remove special tokens in the output. Argument passed to the tokenizers batch_decode method."
+        },
+        {
+            "name": "Clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean up the tokenization spaces. Argument passed to the tokenizers batch_decode method."
+        },
+        {
+            "name": "*kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional arguments to be passed to the tokenizers batch_decode method."
+        }
+    ],
+    "return": "List[str]"
+}

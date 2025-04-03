@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Pipeline.ensure_tensor_on_device",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "**inputs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "keyword arguments that should be torch.Tensor, the rest is ignored",
+            "optional": false,
+            "default": "",
+            "description": "The tensors to place on self.device."
+        },
+        {
+            "name": "Recursive",
+            "type": "on lists only.",
+            "optional": false,
+            "default": "",
+            "description": ""
+        }
+    ],
+    "return": "Dict[str, torch.Tensor]"
+}

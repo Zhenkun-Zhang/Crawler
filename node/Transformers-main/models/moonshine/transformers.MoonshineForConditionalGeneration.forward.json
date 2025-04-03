@@ -1,0 +1,125 @@
+{
+    "api": "transformers.MoonshineForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "typing.Optional[torch.FloatTensor]",
+        "attention_mask",
+        "decoder_input_ids",
+        "decoder_attention_mask",
+        "encoder_outputs",
+        "past_key_values",
+        "typing.Tuple[torch.FloatTensor],",
+        "NoneType]",
+        "decoder_inputs_embeds",
+        "decoder_position_ids",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "cache_position",
+        "labels",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "torch.FloatTensor of shape (batch_size, audio_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of the raw speech waveform. Raw speech waveform can beobtained by loading a .flac or .wav audio file into an array of type List[float] or anumpy.ndarray, e.g. via the soundfile library (pip install soundfile). To prepare the array intoinput_values, the AutoFeatureExtractor should be used for paddingand conversion into a tensor of type torch.FloatTensor."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding indices in input_values. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.If past_key_values is used, optionally only the last decoder_input_ids have to be input (seepast_key_values).If you want to change padding behavior, you should read modeling_opt._prepare_decoder_attention_maskand modify to your needs. See diagram 1 in the paper for moreinformation on the default strategy.1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple consists of (last_hidden_state, optional: hidden_states, optional: attentions)last_hidden_state of shape (batch_size, sequence_length, hidden_size), optional) is a sequence ofhidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder."
+        },
+        {
+            "name": "past_key_values",
+            "type": "Cache,tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used to speed up sequential decoding. This typically consists in the past_key_valuesreturned by the model at a previous stage of decoding, when use_cache=True or config.use_cache=True.Two formats are allowed:a Cache instance, see ourkv cache guide,Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors ofshape (batch_size, num_heads, sequence_length, embed_size_per_head)). This is also known as the legacycache format.The model will output the same cache format that is fed as input. If no past_key_values are passed, thelegacy cache format will be returned.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those that donthave their past key value states given to this model) of shape (batch_size, 1) instead of all decoder_input_idsof shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "decoder_inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing decoder_input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert decoder_input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "decoder_position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.n_positions - 1].What are position IDs?"
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "cache_position",
+            "type": "torch.LongTensor of shape (sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices depicting the position of the input sequence tokens in the sequence. Contrarily to decoder_position_ids,this tensor is not affected by padding. It is used to update the cache in the correct position and to inferthe complete sequence length."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the language modeling loss. Indices should either be in [0, ..., config.vocab_size]or -100 (see input_ids docstring). Tokens with indices set to -100 are ignored (masked), the loss isonly computed for the tokens with labels in [0, ..., config.vocab_size]."
+        }
+    ],
+    "return": "transformers.modeling_outputs.Seq2SeqLMOutput or tuple(torch.FloatTensor)"
+}

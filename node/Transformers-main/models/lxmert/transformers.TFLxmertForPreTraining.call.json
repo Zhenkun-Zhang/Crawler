@@ -1,0 +1,148 @@
+{
+    "api": "transformers.TFLxmertForPreTraining.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "TFModelInputType",
+        "|",
+        "visual_feats",
+        "|",
+        "visual_pos",
+        "|",
+        "attention_mask",
+        "|",
+        "visual_attention_mask",
+        "|",
+        "token_type_ids",
+        "|",
+        "inputs_embeds",
+        "|",
+        "masked_lm_labels",
+        "|",
+        "obj_labels",
+        "Tuple[tf.Tensor,",
+        "tf.Tensor]]",
+        "|",
+        "matched_label",
+        "|",
+        "ans",
+        "|",
+        "output_attentions",
+        "|",
+        "output_hidden_states",
+        "|",
+        "return_dict",
+        "|",
+        "training",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.call() andPreTrainedTokenizer.encode() for details.What are input IDs?"
+        },
+        {
+            "name": "visual_feats",
+            "type": "tf.Tensor of shape (batch_size, num_visual_features, visual_feat_dim)",
+            "optional": false,
+            "default": "",
+            "description": "This input represents visual features. They ROI pooled object features from bounding boxes using afaster-RCNN model)These are currently not provided by the transformers library."
+        },
+        {
+            "name": "visual_pos",
+            "type": "tf.Tensor of shape (batch_size, num_visual_features, visual_feat_dim)",
+            "optional": false,
+            "default": "",
+            "description": "This input represents spacial features corresponding to their relative (via index) visual features. Thepre-trained LXMERT model expects these spacial features to be normalized bounding boxes on a scale of 0 toThese are currently not provided by the transformers library."
+        },
+        {
+            "name": "attention_mask",
+            "type": "tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "visual_attention_mask",
+            "type": "tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "MMask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token.What are token type IDs?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "tf.Tensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail. This argument can be used only in eager mode, in graph mode the value in theconfig will be used instead."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail. This argument can be used only in eager mode, in graph mode the value in the config will beused instead."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple. This argument can be used ineager mode, in graph mode the value will always be set to True."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        },
+        {
+            "name": "masked_lm_labels",
+            "type": "tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the masked language modeling loss. Indices should be in [-100, 0, ..., config.vocab_size] (see input_ids docstring) Tokens with indices set to -100 are ignored (masked), theloss is only computed for the tokens with labels in [0, ..., config.vocab_size]"
+        },
+        {
+            "name": "obj_labels",
+            "type": "Dict[Str -- Tuple[tf.Tensor, tf.Tensor]]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "matched_label",
+            "type": "tf.Tensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the whether or not the text input matches the image (classification) loss. Inputshould be a sequence pair (see input_ids docstring) Indices should be in [0, 1]:0 indicates that the sentence does not match the image,1 indicates that the sentence does match the image."
+        },
+        {
+            "name": "ans",
+            "type": "tf.Tensor of shape (batch_size",
+            "optional": true,
+            "default": "",
+            "description": "a one hot representation hof the correct answer optional"
+        }
+    ],
+    "return": "transformers.models.lxmert.modeling_tf_lxmert.TFLxmertForPreTrainingOutput or tuple(tf.Tensor)"
+}

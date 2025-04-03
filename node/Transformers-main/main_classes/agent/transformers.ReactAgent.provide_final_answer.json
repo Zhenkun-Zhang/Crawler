@@ -1,0 +1,10 @@
+{
+    "api": "transformers.ReactAgent.provide_final_answer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "task"
+    ],
+    "params": [],
+    "return": ""
+}

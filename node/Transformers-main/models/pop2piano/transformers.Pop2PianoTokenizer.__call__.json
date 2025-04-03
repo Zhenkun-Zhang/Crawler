@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Pop2PianoTokenizer.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,276 @@
+{
+    "api": "transformers.TableTransformerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "use_timm_backbone",
+        "backbone_config",
+        "num_channels",
+        "num_queries",
+        "encoder_layers",
+        "encoder_ffn_dim",
+        "encoder_attention_heads",
+        "decoder_layers",
+        "decoder_ffn_dim",
+        "decoder_attention_heads",
+        "encoder_layerdrop",
+        "decoder_layerdrop",
+        "is_encoder_decoder",
+        "activation_function",
+        "d_model",
+        "dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "init_std",
+        "init_xavier_std",
+        "auxiliary_loss",
+        "position_embedding_type",
+        "backbone",
+        "use_pretrained_backbone",
+        "backbone_kwargs",
+        "dilation",
+        "class_cost",
+        "bbox_cost",
+        "giou_cost",
+        "mask_loss_coefficient",
+        "dice_loss_coefficient",
+        "bbox_loss_coefficient",
+        "giou_loss_coefficient",
+        "eos_coefficient",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use the timm library for the backbone. If set to False, will use the AutoBackboneAPI."
+        },
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the backbone model. Only used in case use_timm_backbone is set to False in whichcase it will default to ResNetConfig()."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "num_queries",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "Number of object queries, i.e. detection slots. This is the maximal number of objectsTableTransformerModel can detect in a single image. For COCO, we recommend 100 queries."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Dimension of the layers."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of encoder layers."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "relu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for activations inside the fully connected layer."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "init_xavier_std",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "The scaling factor used for the Xavier initialization gain in the HM Attention map module."
+        },
+        {
+            "name": "encoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability for the encoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "decoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The LayerDrop probability for the decoder. See the [LayerDrop paper](see https://arxiv.org/abs/1909.11556)for more details."
+        },
+        {
+            "name": "auxiliary_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether auxiliary decoding losses (loss at each decoder layer) are to be used."
+        },
+        {
+            "name": "position_embedding_type",
+            "type": "str",
+            "optional": true,
+            "default": "sine",
+            "description": "Type of position embeddings to be used on top of the image features. One of sine or learned."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "resnet50",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "dilation",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to replace stride with dilation in the last convolutional block (DC5). Only supported whenuse_timm_backbone = True."
+        },
+        {
+            "name": "class_cost",
+            "type": "float",
+            "optional": true,
+            "default": "1",
+            "description": "Relative weight of the classification error in the Hungarian matching cost."
+        },
+        {
+            "name": "bbox_cost",
+            "type": "float",
+            "optional": true,
+            "default": "5",
+            "description": "Relative weight of the L1 error of the bounding box coordinates in the Hungarian matching cost."
+        },
+        {
+            "name": "giou_cost",
+            "type": "float",
+            "optional": true,
+            "default": "2",
+            "description": "Relative weight of the generalized IoU loss of the bounding box in the Hungarian matching cost."
+        },
+        {
+            "name": "mask_loss_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "1",
+            "description": "Relative weight of the Focal loss in the panoptic segmentation loss."
+        },
+        {
+            "name": "dice_loss_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "1",
+            "description": "Relative weight of the DICE/F-1 loss in the panoptic segmentation loss."
+        },
+        {
+            "name": "bbox_loss_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "5",
+            "description": "Relative weight of the L1 bounding box loss in the object detection loss."
+        },
+        {
+            "name": "giou_loss_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "2",
+            "description": "Relative weight of the generalized IoU loss in the object detection loss."
+        },
+        {
+            "name": "eos_coefficient",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Relative classification weight of the no-object class in the object detection loss."
+        }
+    ],
+    "return": ""
+}

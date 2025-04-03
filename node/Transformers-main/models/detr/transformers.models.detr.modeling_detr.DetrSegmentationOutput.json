@@ -1,0 +1,114 @@
+{
+    "api": "transformers.models.detr.modeling_detr.DetrSegmentationOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "loss_dict",
+        "logits",
+        "pred_boxes",
+        "pred_masks",
+        "auxiliary_outputs",
+        "last_hidden_state",
+        "decoder_hidden_states",
+        "decoder_attentions",
+        "cross_attentions",
+        "encoder_last_hidden_state",
+        "encoder_hidden_states",
+        "encoder_attentions"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Total loss as a linear combination of a negative log-likehood (cross-entropy) for class prediction and abounding box loss. The latter is defined as a linear combination of the L1 loss and the generalizedscale-invariant IoU loss."
+        },
+        {
+            "name": "loss_dict",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary containing the individual losses. Useful for logging."
+        },
+        {
+            "name": "logits",
+            "type": "torch.FloatTensor of shape (batch_size, num_queries, num_classes + 1)",
+            "optional": false,
+            "default": "",
+            "description": "Classification logits (including no-object) for all queries."
+        },
+        {
+            "name": "pred_boxes",
+            "type": "torch.FloatTensor of shape (batch_size, num_queries, 4)",
+            "optional": false,
+            "default": "",
+            "description": "Normalized boxes coordinates for all queries, represented as (center_x, center_y, width, height). Thesevalues are normalized in [0, 1], relative to the size of each individual image in the batch (disregardingpossible padding). You can use post_process_object_detection() to retrieve theunnormalized bounding boxes."
+        },
+        {
+            "name": "pred_masks",
+            "type": "torch.FloatTensor of shape (batch_size, num_queries, height/4, width/4)",
+            "optional": false,
+            "default": "",
+            "description": "Segmentation masks logits for all queries. See alsopost_process_semantic_segmentation() orpost_process_instance_segmentation()post_process_panoptic_segmentation() to evaluate semantic, instance and panopticsegmentation masks respectively."
+        },
+        {
+            "name": "auxiliary_outputs",
+            "type": "list[Dict]",
+            "optional": true,
+            "default": "",
+            "description": "Optional, only returned when auxiliary losses are activated (i.e. config.auxiliary_loss is set to True)and labels are provided. It is a list of dictionaries containing the two above keys (logits andpred_boxes) for each decoder layer."
+        },
+        {
+            "name": "last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the decoder of the model."
+        },
+        {
+            "name": "decoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size). Hidden-states of the decoder at the output of eachlayer plus the initial embedding outputs."
+        },
+        {
+            "name": "decoder_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights of the decoder, after the attention softmax, used to compute theweighted average in the self-attention heads."
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights of the decoders cross-attention layer, after the attention softmax,used to compute the weighted average in the cross-attention heads."
+        },
+        {
+            "name": "encoder_last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the encoder of the model."
+        },
+        {
+            "name": "encoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size). Hidden-states of the encoder at the output of eachlayer plus the initial embedding outputs."
+        },
+        {
+            "name": "encoder_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights of the encoder, after the attention softmax, used to compute theweighted average in the self-attention heads."
+        }
+    ],
+    "return": ""
+}

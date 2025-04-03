@@ -1,0 +1,36 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverBasicVideoAutoencodingDecoder",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PerceiverConfig",
+        "output_shape",
+        "position_encoding_type",
+        "**decoder_kwargs"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "[PerceiverConfig]",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        },
+        {
+            "name": "output_shape",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "Shape of the output as (batch_size, num_frames, height, width), excluding the channel dimension."
+        },
+        {
+            "name": "position_encoding_type",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The type of position encoding to use. Can be either trainable, fourier, or none."
+        }
+    ],
+    "return": ""
+}

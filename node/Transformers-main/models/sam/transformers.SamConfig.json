@@ -1,0 +1,43 @@
+{
+    "api": "transformers.SamConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vision_config",
+        "prompt_encoder_config",
+        "mask_decoder_config",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vision_config",
+            "type": "Union[dict, SamVisionConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize SamVisionConfig."
+        },
+        {
+            "name": "prompt_encoder_config",
+            "type": "Union[dict, SamPromptEncoderConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize SamPromptEncoderConfig."
+        },
+        {
+            "name": "mask_decoder_config",
+            "type": "Union[dict, SamMaskDecoderConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize SamMaskDecoderConfig."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

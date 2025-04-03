@@ -1,0 +1,44 @@
+{
+    "api": "transformers.ConditionalDetrImageProcessor.post_process_object_detection",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs",
+        "threshold",
+        "target_sizes",
+        "typing.List[typing.Tuple]]",
+        "top_k",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "DetrObjectDetectionOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Score threshold to keep object detection predictions."
+        },
+        {
+            "name": "target_sizes",
+            "type": "torch.Tensor,List[Tuple[int, int]]",
+            "optional": true,
+            "default": "",
+            "description": "Tensor of shape (batch_size, 2) or list of tuples (Tuple[int, int]) containing the target size(height, width) of each image in the batch. If left to None, predictions will not be resized."
+        },
+        {
+            "name": "top_k",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Keep only top k bounding boxes before filtering by thresholding."
+        }
+    ],
+    "return": "List[Dict]"
+}

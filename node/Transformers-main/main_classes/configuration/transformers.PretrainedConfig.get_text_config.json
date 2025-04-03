@@ -1,0 +1,18 @@
+{
+    "api": "transformers.PretrainedConfig.get_text_config",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "decoder"
+    ],
+    "params": [
+        {
+            "name": "decoder",
+            "type": "Optional[bool]",
+            "optional": true,
+            "default": "False",
+            "description": "If set to True, then only search for decoder config names."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,20 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.update_device_map",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "device_map:",
+        "typing.Optional[typing.Dict[str,",
+        "typing.Any]]"
+    ],
+    "params": [
+        {
+            "name": "device_map",
+            "type": "Union[dict, str]",
+            "optional": true,
+            "default": "",
+            "description": "The device_map that is passed through the from_pretrained method."
+        }
+    ],
+    "return": ""
+}

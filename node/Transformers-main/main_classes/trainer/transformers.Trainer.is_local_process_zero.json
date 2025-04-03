@@ -1,0 +1,8 @@
+{
+    "api": "transformers.Trainer.is_local_process_zero",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

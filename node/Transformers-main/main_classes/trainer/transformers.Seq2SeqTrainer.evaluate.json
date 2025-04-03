@@ -1,0 +1,57 @@
+{
+    "api": "transformers.Seq2SeqTrainer.evaluate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "eval_dataset:",
+        "typing.Optional[torch.utils.data.dataset.Dataset]",
+        "ignore_keys",
+        "metric_key_prefix",
+        "**gen_kwargs"
+    ],
+    "params": [
+        {
+            "name": "eval_dataset",
+            "type": "Dataset",
+            "optional": true,
+            "default": "",
+            "description": "Pass a dataset if you wish to override self.eval_dataset. If it is an Dataset, columnsnot accepted by the model.forward() method are automatically removed. It must implement the __len__method."
+        },
+        {
+            "name": "ignore_keys",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "A list of keys in the output of your model (if it is a dictionary) that should be ignored whengathering predictions."
+        },
+        {
+            "name": "metric_key_prefix",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "An optional prefix to be used as the metrics key prefix. For example the metrics bleu will be namedeval_bleu if the prefix is eval (default)"
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum target length to use when predicting with the generate method."
+        },
+        {
+            "name": "num_beams",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of beams for beam search that will be used when predicting with the generate method. 1 means nobeam search."
+        },
+        {
+            "name": "gen_kwargs",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Additional generate specific kwargs."
+        }
+    ],
+    "return": ""
+}

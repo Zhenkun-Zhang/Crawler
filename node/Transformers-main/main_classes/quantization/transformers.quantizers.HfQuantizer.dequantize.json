@@ -1,0 +1,10 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.dequantize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model"
+    ],
+    "params": [],
+    "return": ""
+}

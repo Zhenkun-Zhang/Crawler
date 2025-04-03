@@ -1,0 +1,14 @@
+{
+    "api": "transformers.trainer_callback.CallbackHandler",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "callbacks",
+        "model",
+        "processing_class",
+        "optimizer",
+        "lr_scheduler"
+    ],
+    "params": [],
+    "return": ""
+}

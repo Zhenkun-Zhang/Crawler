@@ -1,0 +1,92 @@
+{
+    "api": "transformers.TFPreTrainedModel.save_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory",
+        "saved_model",
+        "version",
+        "push_to_hub",
+        "signatures",
+        "max_shard_size",
+        "str]",
+        "create_pr",
+        "safe_serialization",
+        "token",
+        "bool]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Directory to which to save. Will be created if it doesnt exist."
+        },
+        {
+            "name": "saved_model",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "If the model has to be saved in saved model format as well or not."
+        },
+        {
+            "name": "version",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The version of the saved model. A saved model needs to be versioned in order to be properly loaded byTensorFlow Serving as detailed in the official documentationhttps://www.tensorflow.org/tfx/serving/serving_basic"
+        },
+        {
+            "name": "push_to_hub",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to push your model to the Hugging Face model hub after saving it. You can specify therepository you want to push to with repo_id (will default to the name of save_directory in yournamespace)."
+        },
+        {
+            "name": "signatures",
+            "type": "dict,tf.function",
+            "optional": true,
+            "default": "None",
+            "description": "Models signature used for serving. This will be passed to the signatures argument of model.save()."
+        },
+        {
+            "name": "max_shard_size",
+            "type": "int,str",
+            "optional": true,
+            "default": "",
+            "description": "The maximum size for a checkpoint before being sharded. Checkpoints shard will then be each of sizelower than this size. If expressed as a string, needs to be digits followed by a unit (like 5MB).If a single weight of the model is bigger than max_shard_size, it will be in its own checkpoint shardwhich will be bigger than max_shard_size."
+        },
+        {
+            "name": "create_pr",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to create a PR with the uploaded files or directly commit."
+        },
+        {
+            "name": "safe_serialization",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to save the model using safetensors or the traditional TensorFlow way (that uses h5)."
+        },
+        {
+            "name": "token",
+            "type": "str,bool",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If True, or not specified, will usethe token generated when running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional key word arguments passed along to the push_to_hub() method."
+        }
+    ],
+    "return": ""
+}

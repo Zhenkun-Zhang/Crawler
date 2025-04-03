@@ -1,0 +1,20 @@
+{
+    "api": "transformers.SwitchTransformersTop1Router._compute_router_probabilities",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "hidden_states:",
+        "Tensor",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "hidden_states",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "(batch_size, sequence_length, hidden_dim) from which router probabilities are computed."
+        }
+    ],
+    "return": "router_probabilities (torch.Tensor)"
+}

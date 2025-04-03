@@ -1,0 +1,20 @@
+{
+    "api": "transformers.FeatureExtractionPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "args",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "One or several texts (or one list of texts) to get the features of."
+        }
+    ],
+    "return": "A nested list of float"
+}

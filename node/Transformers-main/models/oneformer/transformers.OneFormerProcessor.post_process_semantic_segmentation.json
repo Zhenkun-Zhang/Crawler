@@ -1,0 +1,11 @@
+{
+    "api": "transformers.OneFormerProcessor.post_process_semantic_segmentation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

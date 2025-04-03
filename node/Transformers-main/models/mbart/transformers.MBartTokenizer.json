@@ -1,0 +1,24 @@
+{
+    "api": "transformers.MBartTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "bos_token",
+        "eos_token",
+        "sep_token",
+        "cls_token",
+        "unk_token",
+        "pad_token",
+        "mask_token",
+        "tokenizer_file",
+        "src_lang",
+        "tgt_lang",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "additional_special_tokens",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

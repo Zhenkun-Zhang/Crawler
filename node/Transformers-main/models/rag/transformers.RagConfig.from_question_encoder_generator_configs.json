@@ -1,0 +1,13 @@
+{
+    "api": "transformers.RagConfig.from_question_encoder_generator_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "question_encoder_config:",
+        "generator_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "EncoderDecoderConfig"
+}

@@ -1,0 +1,131 @@
+{
+    "api": "transformers.ASTConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "patch_size",
+        "qkv_bias",
+        "frequency_stride",
+        "time_stride",
+        "max_length",
+        "num_mel_bins",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to add a bias to the queries, keys and values."
+        },
+        {
+            "name": "frequency_stride",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Frequency stride to use when patchifying the spectrograms."
+        },
+        {
+            "name": "time_stride",
+            "type": "int",
+            "optional": true,
+            "default": "10",
+            "description": "Temporal stride to use when patchifying the spectrograms."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Temporal dimension of the spectrograms."
+        },
+        {
+            "name": "num_mel_bins",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "Frequency dimension of the spectrograms (number of Mel-frequency bins)."
+        }
+    ],
+    "return": ""
+}

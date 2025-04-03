@@ -1,0 +1,116 @@
+{
+    "api": "transformers.CLIPSegConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "vision_config",
+        "projection_dim",
+        "logit_scale_init_value",
+        "extract_layers",
+        "6,",
+        "9]",
+        "reduce_dim",
+        "decoder_num_attention_heads",
+        "decoder_attention_dropout",
+        "decoder_hidden_act",
+        "decoder_intermediate_size",
+        "conditional_layer",
+        "use_complex_transposed_convolution",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize CLIPSegTextConfig."
+        },
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize CLIPSegVisionConfig."
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Dimensionality of text and vision projection layers."
+        },
+        {
+            "name": "logit_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "2.6592",
+            "description": "The initial value of the logit_scale parameter. Default is used as per the original CLIPSeg implementation."
+        },
+        {
+            "name": "extract_layers",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "Layers to extract when forwarding the query image through the frozen visual backbone of CLIP."
+        },
+        {
+            "name": "reduce_dim",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Dimensionality to reduce the CLIP vision embedding."
+        },
+        {
+            "name": "decoder_num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of attention heads in the decoder of CLIPSeg."
+        },
+        {
+            "name": "decoder_attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "decoder_hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "quick_gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new quick_gelu are supported."
+        },
+        {
+            "name": "decoder_intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layers in the Transformer decoder."
+        },
+        {
+            "name": "conditional_layer",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The layer to use of the Transformer encoder whose activations will be combined with the conditionembeddings using FiLM (Feature-wise Linear Modulation). If 0, the last layer is used."
+        },
+        {
+            "name": "use_complex_transposed_convolution",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a more complex transposed convolution in the decoder, enabling more fine-grainedsegmentation."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

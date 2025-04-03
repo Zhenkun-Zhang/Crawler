@@ -1,0 +1,10 @@
+{
+    "api": "transformers.PhobertTokenizer.add_from_file",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "f"
+    ],
+    "params": [],
+    "return": ""
+}

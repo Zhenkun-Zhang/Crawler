@@ -1,0 +1,133 @@
+{
+    "api": "transformers.Qwen2VLForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "LongTensor",
+        "attention_mask",
+        "position_ids",
+        "past_key_values",
+        "inputs_embeds",
+        "labels",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "pixel_values",
+        "pixel_values_videos",
+        "image_grid_thw",
+        "video_grid_thw",
+        "rope_deltas",
+        "cache_position",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.If past_key_values is used, optionally only the last decoder_input_ids have to be input (seepast_key_values).If you want to change padding behavior, you should read modeling_opt._prepare_decoder_attention_maskand modify to your needs. See diagram 1 in the paper for moreinformation on the default strategy.1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.n_positions - 1]. What are position IDs?"
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors of shape(batch_size, num_heads, sequence_length, embed_size_per_head)) and 2 additional tensors of shape(batch_size, num_heads, encoder_sequence_length, embed_size_per_head).Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used (see past_key_values input) to speed up sequential decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape `(seq_length, num_channels  image_size  image_size)",
+            "optional": false,
+            "default": "",
+            "description": "The tensors corresponding to the input images. Pixel values can be obtained usingAutoImageProcessor. See Qwen2VLImageProcessor.call() for details. Qwen2VLProcessor usesQwen2VLImageProcessor for processing images."
+        },
+        {
+            "name": "pixel_values_videos",
+            "type": "torch.FloatTensor of shape `(seq_length, num_channels  temporal_size  image_size * image_size)",
+            "optional": false,
+            "default": "",
+            "description": "The tensors corresponding to the input videos. Pixel values can be obtained usingAutoImageProcessor. See Qwen2VLImageProcessor.call() for details. Qwen2VLProcessor usesQwen2VLImageProcessor for processing videos."
+        },
+        {
+            "name": "image_grid_thw",
+            "type": "torch.LongTensor of shape (num_images, 3",
+            "optional": true,
+            "default": "",
+            "description": "The temporal, height and width of feature shape of each image in LLM."
+        },
+        {
+            "name": "video_grid_thw",
+            "type": "torch.LongTensor of shape (num_videos, 3",
+            "optional": true,
+            "default": "",
+            "description": "The temporal, height and width of feature shape of each video in LLM."
+        },
+        {
+            "name": "rope_deltas",
+            "type": "torch.LongTensor of shape (batch_size, ",
+            "optional": true,
+            "default": "",
+            "description": "The rope index difference between sequence length and multimodal rope."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the masked language modeling loss. Indices should either be in [0, ..., config.vocab_size] or -100 (see input_ids docstring). Tokens with indices set to -100 are ignored(masked), the loss is only computed for the tokens with labels in [0, ..., config.vocab_size]."
+        }
+    ],
+    "return": "transformers.models.qwen2_vl.modeling_qwen2_vl.Qwen2VLCausalLMOutputWithPast or tuple(torch.FloatTensor)"
+}

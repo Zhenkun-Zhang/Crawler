@@ -1,0 +1,11 @@
+{
+    "api": "transformers.PretrainedConfig.dict_torch_dtype_to_str",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "d:",
+        "dict"
+    ],
+    "params": [],
+    "return": ""
+}

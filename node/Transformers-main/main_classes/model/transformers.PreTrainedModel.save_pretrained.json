@@ -1,0 +1,106 @@
+{
+    "api": "transformers.PreTrainedModel.save_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory:",
+        "typing.Union[str,",
+        "os.PathLike]",
+        "is_main_process",
+        "state_dict",
+        "save_function",
+        "save",
+        "at",
+        "0x7fcd1ebaab90>",
+        "push_to_hub",
+        "max_shard_size",
+        "str]",
+        "safe_serialization",
+        "variant",
+        "token",
+        "str,",
+        "NoneType]",
+        "save_peft_format",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "Directory to which to save. Will be created if it doesnt exist."
+        },
+        {
+            "name": "is_main_process",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether the process calling this is the main process or not. Useful when in distributed training likeTPUs and need to call this function on all processes. In this case, set is_main_process=True only onthe main process to avoid race conditions."
+        },
+        {
+            "name": "state_dict",
+            "type": "nested dictionary of torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The state dictionary of the model to save. Will default to self.state_dict(), but can be used to onlysave parts of the model or if special precautions need to be taken when recovering the state dictionaryof a model (like when using model parallelism)."
+        },
+        {
+            "name": "save_function",
+            "type": "Callable",
+            "optional": false,
+            "default": "",
+            "description": "The function to use to save the state dictionary. Useful on distributed training like TPUs when oneneed to replace torch.save by another method."
+        },
+        {
+            "name": "push_to_hub",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to push your model to the Hugging Face model hub after saving it. You can specify therepository you want to push to with repo_id (will default to the name of save_directory in yournamespace)."
+        },
+        {
+            "name": "max_shard_size",
+            "type": "int,str",
+            "optional": true,
+            "default": "",
+            "description": "The maximum size for a checkpoint before being sharded. Checkpoints shard will then be each of sizelower than this size. If expressed as a string, needs to be digits followed by a unit (like 5MB).We default it to 5GB in order for models to be able to run easily on free-tier google colab instanceswithout CPU OOM issues.If a single weight of the model is bigger than max_shard_size, it will be in its own checkpoint shardwhich will be bigger than max_shard_size."
+        },
+        {
+            "name": "safe_serialization",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to save the model using safetensors or the traditional PyTorch way (that uses pickle)."
+        },
+        {
+            "name": "variant",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "If specified, weights are saved in the format pytorch_model..bin."
+        },
+        {
+            "name": "token",
+            "type": "str,bool",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If True, or not specified, will usethe token generated when running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "save_peft_format",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "For backward compatibility with PEFT library, in case adapter weights are attached to the model, allkeys of the state dict of adapters needs to be pre-pended with base_model.model. Advanced users candisable this behaviours by setting save_peft_format to False."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional key word arguments passed along to the push_to_hub() method."
+        }
+    ],
+    "return": ""
+}

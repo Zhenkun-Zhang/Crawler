@@ -1,0 +1,18 @@
+{
+    "api": "transformers.Tool.save",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "output_dir"
+    ],
+    "params": [
+        {
+            "name": "output_dir",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The folder in which you want to save your tool."
+        }
+    ],
+    "return": ""
+}

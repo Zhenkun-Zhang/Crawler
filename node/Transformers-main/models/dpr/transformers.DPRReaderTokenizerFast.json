@@ -1,0 +1,78 @@
+{
+    "api": "transformers.DPRReaderTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "do_lower_case",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "tokenize_chinese_chars",
+        "strip_accents",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "questions",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The questions to be encoded. You can specify one question for many passages. In this case, the questionwill be duplicated like [questions] * n_passages. Otherwise you have to specify as many questions as intitles or texts."
+        },
+        {
+            "name": "titles",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The passages titles to be encoded. This can be a string or a list of strings if there are several passages."
+        },
+        {
+            "name": "texts",
+            "type": "str,List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The passages texts to be encoded. This can be a string or a list of strings if there are several passages."
+        },
+        {
+            "name": "padding",
+            "type": "bool, str,PaddingStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Activates and controls padding. Accepts the following values:True or longest: Pad to the longest sequence in the batch (or no padding if only a single sequenceif provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths)."
+        },
+        {
+            "name": "truncation",
+            "type": "bool, str,TruncationStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Activates and controls truncation. Accepts the following values:True or longest_first: Truncate to a maximum length specified with the argument max_length or tothe maximum acceptable input length for the model if that argument is not provided. This will truncatetoken by token, removing a token from the longest sequence in the pair if a pair of sequences (or a batchof pairs) is provided.only_first: Truncate to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided. This will only truncate the firstsequence of a pair if a pair of sequences (or a batch of pairs) is provided.only_second: Truncate to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided. This will only truncate thesecond sequence of a pair if a pair of sequences (or a batch of pairs) is provided.False or do_not_truncate (default): No truncation (i.e., can output batch with sequence lengthsgreater than the model maximum admissible input size)."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Controls the maximum length to use by one of the truncation/padding parameters.If left unset or set to None, this will use the predefined model maximum length if a maximum lengthis required by one of the truncation/padding parameters. If the model has no specific maximum inputlength (like XLNet) truncation/padding to a maximum length will be deactivated."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attention mask. If not set, will return the attention mask according to thespecific tokenizers default, defined by the return_outputs attribute.What are attention masks?"
+        }
+    ],
+    "return": "Dict[str, List[List[int]]]"
+}

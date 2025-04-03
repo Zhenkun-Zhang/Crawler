@@ -1,0 +1,83 @@
+{
+    "api": "transformers.JukeboxConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vqvae_config",
+        "prior_config_list",
+        "nb_priors",
+        "sampling_rate",
+        "timing_dims",
+        "min_duration",
+        "max_duration",
+        "max_nb_genres",
+        "metadata_conditioning",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vqvae_config",
+            "type": "JukeboxVQVAEConfig",
+            "optional": true,
+            "default": "None",
+            "description": "Configuration for the JukeboxVQVAE model."
+        },
+        {
+            "name": "prior_config_list",
+            "type": "List[JukeboxPriorConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "List of the configs for each of the JukeboxPrior of the model. The original architecture uses 3 priors."
+        },
+        {
+            "name": "nb_priors",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of prior models that will sequentially sample tokens. Each prior is conditional auto regressive(decoder) model, apart from the top prior, which can include a lyric encoder. The available models weretrained using a top prior and 2 upsampler priors."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "44100",
+            "description": "Sampling rate of the raw audio."
+        },
+        {
+            "name": "timing_dims",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Dimensions of the JukeboxRangeEmbedding layer which is equivalent to traditional positional embeddinglayer. The timing embedding layer converts the absolute and relative position in the currently sampledaudio to a tensor of length timing_dims that will be added to the music tokens."
+        },
+        {
+            "name": "min_duration",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Minimum duration of the audios to generate"
+        },
+        {
+            "name": "max_duration",
+            "type": "float",
+            "optional": true,
+            "default": "600.0",
+            "description": "Maximum duration of the audios to generate"
+        },
+        {
+            "name": "max_nb_genres",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Maximum number of genres that can be used to condition a single sample."
+        },
+        {
+            "name": "metadata_conditioning",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to use metadata conditioning, corresponding to the artist, the genre and the min/maximumduration."
+        }
+    ],
+    "return": ""
+}

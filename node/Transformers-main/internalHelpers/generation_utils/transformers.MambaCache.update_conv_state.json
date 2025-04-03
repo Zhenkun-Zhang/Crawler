@@ -1,0 +1,13 @@
+{
+    "api": "transformers.MambaCache.update_conv_state",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "layer_idx:",
+        "int",
+        "new_conv_state",
+        "cache_position"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,50 @@
+{
+    "api": "transformers.Kosmos2Processor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "text",
+        "typing.List[str]]",
+        "audio",
+        "videos",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "bboxes",
+            "type": "Union[List[Tuple[int]], List[Tuple[float]], List[List[Tuple[int]]], List[List[Tuple[float]]]]",
+            "optional": true,
+            "default": "",
+            "description": "The bounding bboxes associated to texts."
+        },
+        {
+            "name": "num_image_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of (consecutive) places that are used to mark the placeholders to store image information.This should be the same as latent_query_num in the instance of Kosmos2Config you are using."
+        },
+        {
+            "name": "first_image_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The token id that will be used for the first place of the subsequence that is reserved to store imageinformation. If unset, will default to self.tokenizer.unk_token_id + 1."
+        },
+        {
+            "name": "add_eos_token",
+            "type": "bool, defaults to False",
+            "optional": false,
+            "default": "",
+            "description": "Whether or not to include EOS token id in the encoding when add_special_tokens=True."
+        }
+    ],
+    "return": ""
+}

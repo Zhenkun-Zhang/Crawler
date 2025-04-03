@@ -1,0 +1,18 @@
+{
+    "api": "transformers.MT5Model.parallelize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "device_map"
+    ],
+    "params": [
+        {
+            "name": "device_map",
+            "type": "Dict[int, list]",
+            "optional": true,
+            "default": "None",
+            "description": "A dictionary that maps attention modules to devices. Note that the embedding module and LMHead are alwaysautomatically mapped to the first device (for esoteric reasons). That means that the first device shouldhave fewer attention modules mapped to it than other devices. For reference, the mt5 models have thefollowing number of attention modules:mt5-small: 6mt5-base: 12mt5-large: 24mt5-xl: 24mt5-xxl: 24"
+        }
+    ],
+    "return": ""
+}

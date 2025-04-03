@@ -1,0 +1,52 @@
+{
+    "api": "transformers.Trainer.push_to_hub",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "commit_message:",
+        "of",
+        "training'",
+        "blocking",
+        "token",
+        "revision",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "commit_message",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Message to commit while pushing."
+        },
+        {
+            "name": "blocking",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether the function should return only when the git push has finished."
+        },
+        {
+            "name": "token",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Token with write permission to overwrite Trainers original args."
+        },
+        {
+            "name": "revision",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The git revision to commit from. Defaults to the head of the main branch."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments passed along to create_model_card()."
+        }
+    ],
+    "return": ""
+}

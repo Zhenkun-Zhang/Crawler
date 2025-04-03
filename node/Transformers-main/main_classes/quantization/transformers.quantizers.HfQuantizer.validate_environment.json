@@ -1,0 +1,11 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.validate_environment",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

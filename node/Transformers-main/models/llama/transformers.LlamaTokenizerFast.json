@@ -1,0 +1,92 @@
+{
+    "api": "transformers.LlamaTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "clean_up_tokenization_spaces",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "add_bos_token",
+        "add_eos_token",
+        "use_default_system_prompt",
+        "legacy",
+        "add_prefix_space",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "SentencePiece file (generally has a .model extension) thatcontains the vocabulary necessary to instantiate a tokenizer."
+        },
+        {
+            "name": "tokenizer_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "tokenizers file (generally has a .json extension) thatcontains everything needed to load the tokenizer."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to cleanup spaces after decoding, cleanup consists in removing potential artifacts likeextra spaces."
+        },
+        {
+            "name": "unk_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "add_bos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to add an bos_token at the start of sequences."
+        },
+        {
+            "name": "add_eos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to add an eos_token at the end of sequences."
+        },
+        {
+            "name": "use_default_system_prompt",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the default system prompt for Llama should be used"
+        },
+        {
+            "name": "legacy",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not the legacy behavior of the tokenizer should be used. Legacy is before the merge of #24622and #25224 which includes fixes to properly handle tokens that appear after special tokens.Make sure to also set from_slow to True.A simple example:legacy=True:"
+        }
+    ],
+    "return": ""
+}

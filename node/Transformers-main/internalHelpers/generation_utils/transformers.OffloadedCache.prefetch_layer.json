@@ -1,0 +1,11 @@
+{
+    "api": "transformers.OffloadedCache.prefetch_layer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "layer_idx:",
+        "int"
+    ],
+    "params": [],
+    "return": ""
+}

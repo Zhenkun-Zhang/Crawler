@@ -1,0 +1,13 @@
+{
+    "api": "transformers.stream_to_gradio",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "agent",
+        "task",
+        "test_mode",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

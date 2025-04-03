@@ -1,0 +1,26 @@
+{
+    "api": "transformers.TokenSpan",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "start:",
+        "end"
+    ],
+    "params": [
+        {
+            "name": "start",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index of the first token in the span."
+        },
+        {
+            "name": "end",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index of the token following the last token in the span."
+        }
+    ],
+    "return": ""
+}

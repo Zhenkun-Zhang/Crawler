@@ -1,0 +1,19 @@
+{
+    "api": "transformers.PretrainedConfig.update",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "config_dict:",
+        "dict"
+    ],
+    "params": [
+        {
+            "name": "config_dict",
+            "type": "Dict[str, Any]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary of attributes that should be updated for this class."
+        }
+    ],
+    "return": ""
+}

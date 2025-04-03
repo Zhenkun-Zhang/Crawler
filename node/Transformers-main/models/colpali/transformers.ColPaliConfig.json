@@ -1,0 +1,35 @@
+{
+    "api": "transformers.ColPaliConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vlm_config",
+        "text_config",
+        "embedding_dim",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vlm_config",
+            "type": "PretrainedConfig",
+            "optional": true,
+            "default": "None",
+            "description": "Configuration of the VLM backbone model."
+        },
+        {
+            "name": "text_config",
+            "type": "PretrainedConfig",
+            "optional": true,
+            "default": "None",
+            "description": "Configuration of the text backbone model. Overrides the text_config attribute of the vlm_config if provided."
+        },
+        {
+            "name": "embedding_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of the multi-vector embeddings produced by the model."
+        }
+    ],
+    "return": ""
+}

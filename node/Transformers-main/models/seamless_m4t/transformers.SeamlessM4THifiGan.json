@@ -1,0 +1,11 @@
+{
+    "api": "transformers.SeamlessM4THifiGan",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "SeamlessM4TConfig"
+    ],
+    "params": [],
+    "return": ""
+}

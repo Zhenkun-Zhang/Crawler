@@ -1,0 +1,29 @@
+{
+    "api": "transformers.BatchEncoding.to",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "device:",
+        "typing.Union[str,",
+        "ForwardRef('torch.device')]",
+        "non_blocking",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "device",
+            "type": "str,torch.device",
+            "optional": false,
+            "default": "",
+            "description": "The device to put the tensors on."
+        },
+        {
+            "name": "non_blocking",
+            "type": "bool",
+            "optional": false,
+            "default": "",
+            "description": "Whether to perform the copy asynchronously."
+        }
+    ],
+    "return": "BatchEncoding"
+}

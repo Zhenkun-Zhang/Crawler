@@ -1,0 +1,11 @@
+{
+    "api": "transformers.TrainerState.save_to_json",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "json_path:",
+        "str"
+    ],
+    "params": [],
+    "return": ""
+}

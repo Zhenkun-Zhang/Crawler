@@ -1,0 +1,28 @@
+{
+    "api": "transformers.Agent.execute_tool_call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tool_name:",
+        "str",
+        "arguments",
+        "str]"
+    ],
+    "params": [
+        {
+            "name": "tool_name",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Name of the Tool to execute (should be one from self.toolbox)."
+        },
+        {
+            "name": "arguments",
+            "type": "Dict[str, str]",
+            "optional": false,
+            "default": "",
+            "description": "Arguments passed to the Tool."
+        }
+    ],
+    "return": ""
+}

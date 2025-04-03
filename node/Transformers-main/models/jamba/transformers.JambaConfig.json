@@ -1,0 +1,275 @@
+{
+    "api": "transformers.JambaConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "tie_word_embeddings",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "num_key_value_heads",
+        "hidden_act",
+        "initializer_range",
+        "rms_norm_eps",
+        "use_cache",
+        "num_logits_to_keep",
+        "output_router_logits",
+        "router_aux_loss_coef",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "sliding_window",
+        "max_position_embeddings",
+        "attention_dropout",
+        "num_experts_per_tok",
+        "num_experts",
+        "expert_layer_period",
+        "expert_layer_offset",
+        "attn_layer_period",
+        "attn_layer_offset",
+        "use_mamba_kernels",
+        "mamba_d_state",
+        "mamba_d_conv",
+        "mamba_expand",
+        "mamba_dt_rank",
+        "mamba_conv_bias",
+        "mamba_proj_bias",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "65536",
+            "description": "Vocabulary size of the Jamba model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling JambaModel"
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether the models input and output word embeddings should be tied. Note that this is only relevant if themodel has a output word embedding layer."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "14336",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "This is the number of key_value heads that should be used to implement Grouped Query Attention. Ifnum_key_value_heads=num_attention_heads, the model will use Multi Head Attention (MHA), ifnum_key_value_heads=1 the model will use Multi Query Attention (MQA) otherwise GQA is used. Whenconverting a multi-head checkpoint to a GQA checkpoint, each group key and value head should be constructedby meanpooling all the original heads within that group. For more details checkout thispaper. If it is not specified, will default to 8."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "silu",
+            "description": "The non-linear activation function (function or string) in the decoder."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "num_logits_to_keep",
+            "type": "int,None",
+            "optional": true,
+            "default": "1",
+            "description": "Number of prompt logits to calculate during generation. If None, all logits will be calculated. If aninteger value, only last num_logits_to_keep logits will be calculated. Default is 1 because only thelogits of the last prompt token are needed for generation. For long sequences, the logits for the entiresequence may use a lot of memory so, setting num_logits_to_keep=1 will reduce memory footprintsignificantly."
+        },
+        {
+            "name": "output_router_logits",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the router logits should be returned by the model. Enabling this will alsoallow the model to output the auxiliary loss. See here for more details"
+        },
+        {
+            "name": "router_aux_loss_coef",
+            "type": "float",
+            "optional": true,
+            "default": "0.001",
+            "description": "The aux loss factor for the total loss."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The id of the padding token."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The id of the beginning-of-sequence token."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The id of the end-of-sequence token."
+        },
+        {
+            "name": "sliding_window",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Sliding window attention window size. If not specified, will default to None."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "262144",
+            "description": "This value doesnt have any real effect. The maximum sequence length that this model is intended to beused with. It can be used with longer sequences, but performance may degrade."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "num_experts_per_tok",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The number of experts to root per-token, can be also interpreted as the top-p routingparameter"
+        },
+        {
+            "name": "num_experts",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of experts per Sparse MLP layer."
+        },
+        {
+            "name": "expert_layer_period",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Once in this many layers, we will have an expert layer"
+        },
+        {
+            "name": "expert_layer_offset",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The first layer index that contains an expert mlp layer"
+        },
+        {
+            "name": "attn_layer_period",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Once in this many layers, we will have a vanilla attention layer"
+        },
+        {
+            "name": "attn_layer_offset",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The first layer index that contains a vanilla attention mlp layer"
+        },
+        {
+            "name": "use_mamba_kernels",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Flag indicating whether or not to use the fast mamba kernels. These are available only if mamba-ssm andcausal-conv1d are installed, and the mamba modules are running on a CUDA device. Raises ValueError ifTrue and kernels are not available"
+        },
+        {
+            "name": "mamba_d_state",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The dimension the mamba state space latents"
+        },
+        {
+            "name": "mamba_d_conv",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The size of the mamba convolution kernel"
+        },
+        {
+            "name": "mamba_expand",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Expanding factor (relative to hidden_size) used to determine the mamba intermediate size"
+        },
+        {
+            "name": "mamba_dt_rank",
+            "type": "Union[int,str]",
+            "optional": true,
+            "default": "auto",
+            "description": "Rank of the mamba discretization projection matrix. auto means that it will default to math.ceil(self.hidden_size / 16)"
+        },
+        {
+            "name": "mamba_conv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Flag indicating whether or not to use bias in the convolution layer of the mamba mixer block."
+        },
+        {
+            "name": "mamba_proj_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Flag indicating whether or not to use bias in the input and output projections ([in_proj, out_proj]) of the mamba mixer block"
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,177 @@
+{
+    "api": "transformers.MobileViTV2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "image_size",
+        "patch_size",
+        "expand_ratio",
+        "hidden_act",
+        "conv_kernel_size",
+        "output_stride",
+        "classifier_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "aspp_out_channels",
+        "atrous_rates",
+        "12,",
+        "18]",
+        "aspp_dropout_prob",
+        "semantic_loss_ignore_index",
+        "n_attn_blocks",
+        "4,",
+        "3]",
+        "base_attn_unit_dims",
+        "192,",
+        "256]",
+        "width_multiplier",
+        "ffn_multiplier",
+        "attn_dropout",
+        "ffn_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "expand_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "Expansion factor for the MobileNetv2 layers."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "swish",
+            "description": "The non-linear activation function (function or string) in the Transformer encoder and convolution layers."
+        },
+        {
+            "name": "conv_kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The size of the convolutional kernel in the MobileViTV2 layer."
+        },
+        {
+            "name": "output_stride",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "The ratio of the spatial resolution of the output to the resolution of the input image."
+        },
+        {
+            "name": "classifier_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for attached classifiers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "aspp_out_channels",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "Number of output channels used in the ASPP layer for semantic segmentation."
+        },
+        {
+            "name": "atrous_rates",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[6,",
+            "description": "Dilation (atrous) factors used in the ASPP layer for semantic segmentation."
+        },
+        {
+            "name": "aspp_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the ASPP layer for semantic segmentation."
+        },
+        {
+            "name": "semantic_loss_ignore_index",
+            "type": "int",
+            "optional": true,
+            "default": "255",
+            "description": "The index that is ignored by the loss function of the semantic segmentation model."
+        },
+        {
+            "name": "n_attn_blocks",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "The number of attention blocks in each MobileViTV2Layer"
+        },
+        {
+            "name": "base_attn_unit_dims",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[128,",
+            "description": "The base multiplier for dimensions of attention blocks in each MobileViTV2Layer"
+        },
+        {
+            "name": "width_multiplier",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "The width multiplier for MobileViTV2."
+        },
+        {
+            "name": "ffn_multiplier",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The FFN multiplier for MobileViTV2."
+        },
+        {
+            "name": "attn_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout in the attention layer."
+        },
+        {
+            "name": "ffn_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout between FFN layers."
+        }
+    ],
+    "return": ""
+}

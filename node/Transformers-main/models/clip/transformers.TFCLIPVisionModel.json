@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFCLIPVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "CLIPVisionConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

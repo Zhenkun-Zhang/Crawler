@@ -1,0 +1,113 @@
+{
+    "api": "transformers.Emu3ImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "resample",
+        "<Resampling.BICUBIC",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "do_convert_rgb",
+        "do_pad",
+        "min_pixels",
+        "max_pixels",
+        "spatial_factor",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use when resizing the image."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats for each channel in the image."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats for each channel in the image."
+        },
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB."
+        },
+        {
+            "name": "do_pad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to pad the image. If True, will pad the patch dimension of the images in the batch to the largestnumber of patches in the batch. Padding will be applied to the bottom and right with zeros."
+        },
+        {
+            "name": "min_pixels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The min pixels of the image to resize the image."
+        },
+        {
+            "name": "max_pixels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The max pixels of the image to resize the image."
+        },
+        {
+            "name": "spatial_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The spatial downsample factor the image will be downsampled in feature extracting phase"
+        }
+    ],
+    "return": ""
+}

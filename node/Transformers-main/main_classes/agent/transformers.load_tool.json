@@ -1,0 +1,42 @@
+{
+    "api": "transformers.load_tool",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "task_or_repo_id",
+        "model_repo_id",
+        "token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "task_or_repo_id",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The task for which to load the tool or a repo ID of a tool on the Hub. Tasks implemented in Transformersare:document_question_answeringimage_question_answeringspeech_to_texttext_to_speechtranslation"
+        },
+        {
+            "name": "model_repo_id",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Use this argument to use a different model than the default one for the tool you selected."
+        },
+        {
+            "name": "token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The token to identify you on hf.co. If unset, will use the token generated when running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "kwargs",
+            "type": "additional keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments that will be split in two: all arguments relevant to the Hub (such ascache_dir, revision, subfolder) will be used when downloading the files for your tool, and the otherswill be passed along to its init."
+        }
+    ],
+    "return": ""
+}

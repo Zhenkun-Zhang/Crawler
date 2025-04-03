@@ -1,0 +1,27 @@
+{
+    "api": "transformers.JukeboxTokenizer.save_vocabulary",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory:",
+        "str",
+        "filename_prefix"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "A path to the directory where to saved. It will be created if it doesnt exist."
+        },
+        {
+            "name": "filename_prefix",
+            "type": "Optional[str]",
+            "optional": true,
+            "default": "",
+            "description": "A prefix to add to the names of the files saved by the tokenizer."
+        }
+    ],
+    "return": ""
+}

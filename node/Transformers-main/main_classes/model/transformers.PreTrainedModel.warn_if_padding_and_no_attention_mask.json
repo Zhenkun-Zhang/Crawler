@@ -1,0 +1,11 @@
+{
+    "api": "transformers.PreTrainedModel.warn_if_padding_and_no_attention_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids",
+        "attention_mask"
+    ],
+    "params": [],
+    "return": ""
+}

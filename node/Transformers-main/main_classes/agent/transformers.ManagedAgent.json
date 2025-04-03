@@ -1,0 +1,14 @@
+{
+    "api": "transformers.ManagedAgent",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "agent",
+        "name",
+        "description",
+        "additional_prompting",
+        "provide_run_summary"
+    ],
+    "params": [],
+    "return": ""
+}

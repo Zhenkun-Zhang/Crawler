@@ -1,0 +1,42 @@
+{
+    "api": "transformers.Kosmos2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "vision_config",
+        "latent_query_num",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize Kosmos2TextConfig."
+        },
+        {
+            "name": "vision_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize Kosmos2VisionConfig."
+        },
+        {
+            "name": "latent_query_num",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "The number of latent query tokens that represent the image features used in the text decoder component."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

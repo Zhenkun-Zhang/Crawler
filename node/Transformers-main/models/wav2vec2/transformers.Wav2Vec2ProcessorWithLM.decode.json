@@ -1,0 +1,107 @@
+{
+    "api": "transformers.Wav2Vec2ProcessorWithLM.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "logits:",
+        "ndarray",
+        "beam_width",
+        "beam_prune_logp",
+        "token_min_logp",
+        "hotwords",
+        "hotword_weight",
+        "alpha",
+        "beta",
+        "unk_score_offset",
+        "lm_score_boundary",
+        "output_word_offsets",
+        "n_best"
+    ],
+    "params": [
+        {
+            "name": "logits",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The logits output vector of the model representing the log probabilities for each token."
+        },
+        {
+            "name": "beam_width",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum number of beams at each step in decoding. Defaults to pyctcdecodes DEFAULT_BEAM_WIDTH."
+        },
+        {
+            "name": "beam_prune_logp",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "A threshold to prune beams with log-probs less than best_beam_logp + beam_prune_logp. The value shouldbe <= 0. Defaults to pyctcdecodes DEFAULT_PRUNE_LOGP."
+        },
+        {
+            "name": "token_min_logp",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Tokens with log-probs below token_min_logp are skipped unless they are have the maximum log-prob for anutterance. Defaults to pyctcdecodes DEFAULT_MIN_TOKEN_LOGP."
+        },
+        {
+            "name": "hotwords",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "List of words with extra importance which can be missing from the LMs vocabulary, e.g. [huggingface]"
+        },
+        {
+            "name": "hotword_weight",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Weight multiplier that boosts hotword scores. Defaults to pyctcdecodes DEFAULT_HOTWORD_WEIGHT."
+        },
+        {
+            "name": "alpha",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight for language model during shallow fusion"
+        },
+        {
+            "name": "beta",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight for length score adjustment of during scoring"
+        },
+        {
+            "name": "unk_score_offset",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Amount of log score offset for unknown tokens"
+        },
+        {
+            "name": "lm_score_boundary",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to have kenlm respect boundaries when scoring"
+        },
+        {
+            "name": "output_word_offsets",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to output word offsets. Word offsets can be used in combination with the sampling rateand model downsampling rate to compute the time-stamps of transcribed words."
+        },
+        {
+            "name": "n_best",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of best hypotheses to return. If n_best is greater than 1, the returned text will be a listof strings, logit_score will be a list of floats, and lm_score will be a list of floats, where thelength of these lists will correspond to the number of returned hypotheses. The value should be >= 1.Please take a look at the example below to better understand how to make use of output_word_offsets."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,28 @@
+{
+    "api": "transformers.TimmWrapperConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "initializer_range:",
+        "float",
+        "do_pooling",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "do_pooling",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to do pooling for the last_hidden_state in TimmWrapperModel or not."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,27 @@
+{
+    "api": "transformers.MaxTimeCriteria",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "max_time:",
+        "float",
+        "initial_timestamp"
+    ],
+    "params": [
+        {
+            "name": "max_time",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The maximum allowed time in seconds for the generation."
+        },
+        {
+            "name": "initial_time",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The start of the generation allowed time."
+        }
+    ],
+    "return": ""
+}

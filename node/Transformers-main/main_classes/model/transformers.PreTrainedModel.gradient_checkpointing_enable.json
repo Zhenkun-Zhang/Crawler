@@ -1,0 +1,18 @@
+{
+    "api": "transformers.PreTrainedModel.gradient_checkpointing_enable",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "gradient_checkpointing_kwargs"
+    ],
+    "params": [
+        {
+            "name": "gradient_checkpointing_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Additional keyword arguments passed along to the torch.utils.checkpoint.checkpoint function."
+        }
+    ],
+    "return": ""
+}

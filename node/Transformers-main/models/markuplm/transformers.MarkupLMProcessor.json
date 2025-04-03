@@ -1,0 +1,33 @@
+{
+    "api": "transformers.MarkupLMProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "MarkupLMFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of MarkupLMFeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "MarkupLMTokenizer,MarkupLMTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "An instance of MarkupLMTokenizer or MarkupLMTokenizerFast. The tokenizer is a required input."
+        },
+        {
+            "name": "parse_html",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use MarkupLMFeatureExtractor to parse HTML strings into nodes and corresponding xpaths."
+        }
+    ],
+    "return": ""
+}

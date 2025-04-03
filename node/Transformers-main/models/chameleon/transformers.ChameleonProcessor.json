@@ -1,0 +1,42 @@
+{
+    "api": "transformers.ChameleonProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "image_seq_length",
+        "image_token"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "ChameleonImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "LlamaTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer is a required input."
+        },
+        {
+            "name": "image_seq_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Sequence length of one image embedding."
+        },
+        {
+            "name": "image_token",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The special token used to indicate image in the text."
+        }
+    ],
+    "return": ""
+}

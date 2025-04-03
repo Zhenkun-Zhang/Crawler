@@ -1,0 +1,13 @@
+{
+    "api": "transformers.NllbMoeTop2Router.route_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "router_logits:",
+        "Tensor",
+        "input_dtype",
+        "padding_mask"
+    ],
+    "params": [],
+    "return": ""
+}

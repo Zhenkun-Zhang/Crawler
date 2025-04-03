@@ -1,0 +1,34 @@
+{
+    "api": "transformers.TFTopPLogitsWarper",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "top_p:",
+        "filter_value",
+        "min_tokens_to_keep"
+    ],
+    "params": [
+        {
+            "name": "top_p",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "If set to < 1, only the smallest set of most probable tokens with probabilities that add up to top_p orhigher are kept for generation."
+        },
+        {
+            "name": "filter_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "All filtered values will be set to this float value."
+        },
+        {
+            "name": "min_tokens_to_keep",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Minimum number of tokens that cannot be filtered."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,105 @@
+{
+    "api": "transformers.SeamlessM4TFeatureExtractor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "raw_speech:",
+        "typing.Union[numpy.ndarray,",
+        "typing.List[float],",
+        "typing.List[numpy.ndarray],",
+        "typing.List[typing.List[float]]]",
+        "padding",
+        "str,",
+        "transformers.utils.generic.PaddingStrategy]",
+        "pad_to_multiple_of",
+        "max_length",
+        "truncation",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "sampling_rate",
+        "return_attention_mask",
+        "do_normalize_per_mel_bins",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "raw_speech",
+            "type": "np.ndarray, torch.Tensor, List[float], List[np.ndarray], List[torch.Tensor],",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "List[List[float]],",
+            "type": "List[List[List[float]]]",
+            "optional": false,
+            "default": "",
+            "description": "The sequence or batch of sequences to be padded. Each sequence can be a numpy array,a torch tensor, a list of float values, a list of numpy arrays, a list of torch tensors,a list of list of float values or a list of a list of list of float values.If raw_speech is a one-dimensional np.ndarray, torch.Tensor or a List[float], raw_speech isconsidered a single-channel, single-sample sound. In all other cases, the first dimension ofraw_speech, whether from an np.ndarray, a torch.Tensor or a List[...],corresponds to the number of samples in the batch, and the number of channels(i.e. mono or stereo character) is derived from the other dimensions(1D -> single-channel waveform batches, 2D-> stereo-channel waveform batches)."
+        },
+        {
+            "name": "padding",
+            "type": "bool, str,PaddingStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Select a strategy to pad the returned sequences (according to the models padding side and paddingindex) among:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths)."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set will pad the sequence to a multiple of the provided value.This is especially useful to enable the use of Tensor Cores on NVIDIA hardware with compute capability>= 7.5 (Volta), or on TPUs which benefit from having sequence lengths be a multiple of 128."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum length of the returned list and optionally padding length (see above)."
+        },
+        {
+            "name": "truncation",
+            "type": "bool",
+            "optional": false,
+            "default": "",
+            "description": "Activates truncation to cut input sequences longer than max_length to max_length."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the attention mask. If left to the default, will return the attention mask accordingto the specific feature_extractors default.What are attention masks?For SeamlessM4T models, attention_mask should always be passed for batched inference, to avoid subtlebugs."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the raw_speech input was sampled. It is strongly recommended to passsampling_rate at the forward call to prevent silent errors."
+        },
+        {
+            "name": "do_normalize_per_mel_bins",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to zero-mean unit-variance normalize the input per mel-channel."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Remaining dictionary of keyword arguments that will be passed to the tokenizer or the featureextractor."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,94 @@
+{
+    "api": "transformers.SeamlessM4TTokenizer.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "typing.List[str],",
+        "typing.List[typing.List[str]]]",
+        "text_pair",
+        "typing.List[str],",
+        "typing.List[typing.List[str]],",
+        "NoneType]",
+        "text_target",
+        "typing.List[str],",
+        "typing.List[typing.List[str]]]",
+        "text_pair_target",
+        "typing.List[str],",
+        "typing.List[typing.List[str]],",
+        "NoneType]",
+        "padding",
+        "str,",
+        "transformers.utils.generic.PaddingStrategy]",
+        "pad_to_multiple_of",
+        "src_lang",
+        "tgt_lang",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str, List[str], List[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence or batch of sequences to be encoded. Each sequence can be a string or a list of strings(pretokenized string). If the sequences are provided as list of strings (pretokenized), you must setis_split_into_words=True (to lift the ambiguity with a batch of sequences)."
+        },
+        {
+            "name": "text_pair",
+            "type": "str, List[str], List[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence or batch of sequences to be encoded. Each sequence can be a string or a list of strings(pretokenized string). If the sequences are provided as list of strings (pretokenized), you must setis_split_into_words=True (to lift the ambiguity with a batch of sequences)."
+        },
+        {
+            "name": "text_target",
+            "type": "str, List[str], List[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence or batch of sequences to be encoded as target texts. Each sequence can be a string or alist of strings (pretokenized string). If the sequences are provided as list of strings (pretokenized),you must set is_split_into_words=True (to lift the ambiguity with a batch of sequences)."
+        },
+        {
+            "name": "text_pair_target",
+            "type": "str, List[str], List[List[str]]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence or batch of sequences to be encoded as target texts. Each sequence can be a string or alist of strings (pretokenized string). If the sequences are provided as list of strings (pretokenized),you must set is_split_into_words=True (to lift the ambiguity with a batch of sequences)."
+        },
+        {
+            "name": "padding",
+            "type": "bool, str,PaddingStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Select a strategy to pad the returned sequences (according to the models padding side and paddingindex) among:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths)."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set will pad the sequence to a multiple of the provided value.This is especially useful to enable the use of Tensor Cores on NVIDIA hardware with compute capability>= 7.5 (Volta)."
+        },
+        {
+            "name": "src_lang",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A string representing the source language. If not specified, the last src_lang specified (eitherduring initialization or when calling this tokenizer) will be used."
+        },
+        {
+            "name": "tgt_lang",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "A string representing the target language. If not specified, the last tgt_lang specified (eitherduring initialization or when calling this tokenizer) will be used."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Remaining dictionary of keyword arguments that will be passed to PreTrainedTokenizer.call()."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,131 @@
+{
+    "api": "transformers.CodeLlamaTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "clean_up_tokenization_spaces",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "prefix_token",
+        "middle_token",
+        "suffix_token",
+        "eot_token",
+        "fill_token",
+        "additional_special_tokens",
+        "add_bos_token",
+        "add_eos_token",
+        "use_default_system_prompt",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "SentencePiece file (generally has a .model extension) thatcontains the vocabulary necessary to instantiate a tokenizer."
+        },
+        {
+            "name": "tokenizer_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "tokenizers file (generally has a .json extension) thatcontains everything needed to load the tokenizer."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "str",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to cleanup spaces after decoding, cleanup consists in removing potential artifacts like extraspaces."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "prefix_token",
+            "type": "str",
+            "optional": true,
+            "default": "▁<PRE>",
+            "description": "Prefix token used for infilling."
+        },
+        {
+            "name": "middle_token",
+            "type": "str",
+            "optional": true,
+            "default": "▁<MID>",
+            "description": "Middle token used for infilling."
+        },
+        {
+            "name": "suffix_token",
+            "type": "str",
+            "optional": true,
+            "default": "▁<SUF>",
+            "description": "Suffix token used for infilling."
+        },
+        {
+            "name": "eot_token",
+            "type": "str",
+            "optional": true,
+            "default": "▁<EOT>",
+            "description": "End of text token used for infilling."
+        },
+        {
+            "name": "fill_token",
+            "type": "str",
+            "optional": true,
+            "default": "<FILL_ME>",
+            "description": "The token used to split the input between the prefix and suffix."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "Additional special tokens used by the tokenizer."
+        },
+        {
+            "name": "add_bos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to add a beginning of sequence token at the start of sequences."
+        },
+        {
+            "name": "add_eos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to add an end of sequence token at the end of sequences."
+        },
+        {
+            "name": "use_default_system_prompt",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the default system prompt for Llama should be used."
+        }
+    ],
+    "return": ""
+}

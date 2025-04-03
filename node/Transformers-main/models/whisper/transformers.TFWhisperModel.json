@@ -1,0 +1,20 @@
+{
+    "api": "transformers.TFWhisperModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "WhisperConfig",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "WhisperConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model. Initializing with a config file does notload the weights associated with the model, only the configuration. Check out thefrom_pretrained() method to load the model weights."
+        }
+    ],
+    "return": ""
+}

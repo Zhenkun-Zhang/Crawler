@@ -1,0 +1,11 @@
+{
+    "api": "transformers.DynamicCache.from_legacy_cache",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "past_key_values:",
+        "typing.Optional[typing.Tuple[typing.Tuple[torch.FloatTensor]]]"
+    ],
+    "params": [],
+    "return": ""
+}

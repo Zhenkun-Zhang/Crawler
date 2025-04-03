@@ -1,0 +1,21 @@
+{
+    "api": "transformers.TvpConfig.from_backbone_config",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "backbone_config:",
+        "PretrainedConfig",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The backbone configuration."
+        }
+    ],
+    "return": "TvpConfig"
+}

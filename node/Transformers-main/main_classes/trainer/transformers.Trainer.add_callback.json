@@ -1,0 +1,18 @@
+{
+    "api": "transformers.Trainer.add_callback",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "callback"
+    ],
+    "params": [
+        {
+            "name": "callback",
+            "type": "type,[`~transformers.TrainerCallback]`",
+            "optional": false,
+            "default": "",
+            "description": "A TrainerCallback class or an instance of a TrainerCallback. In thefirst case, will instantiate a member of that class."
+        }
+    ],
+    "return": ""
+}

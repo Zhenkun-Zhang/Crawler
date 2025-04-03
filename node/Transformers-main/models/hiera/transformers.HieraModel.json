@@ -1,0 +1,35 @@
+{
+    "api": "transformers.HieraModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "HieraConfig",
+        "add_pooling_layer",
+        "is_mae"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "HieraConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        },
+        {
+            "name": "add_pooling_layer",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to apply pooling layer."
+        },
+        {
+            "name": "is_mae",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to run the model on MAE mode."
+        }
+    ],
+    "return": ""
+}

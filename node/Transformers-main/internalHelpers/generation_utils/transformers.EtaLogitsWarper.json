@@ -1,0 +1,42 @@
+{
+    "api": "transformers.EtaLogitsWarper",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "epsilon:",
+        "filter_value",
+        "min_tokens_to_keep",
+        "device"
+    ],
+    "params": [
+        {
+            "name": "epsilon",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "A float value in the range (0, 1). Hyperparameter used to calculate the dynamic cutoff value, eta. Thesuggested values from the paper ranges from 3e-4 to 4e-3 depending on the size of the model."
+        },
+        {
+            "name": "filter_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "All values that are found to be below the dynamic cutoff value, eta, are set to this float value. Thisparameter is useful when logits need to be modified for very low probability tokens that should be excludedfrom generation entirely."
+        },
+        {
+            "name": "min_tokens_to_keep",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Specifies the minimum number of tokens that must be kept for generation, regardless of their probabilities.For example, if min_tokens_to_keep is set to 1, at least one token will always be kept for generation,even if all tokens have probabilities below the cutoff eta."
+        },
+        {
+            "name": "device",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The device to allocate the tensors."
+        }
+    ],
+    "return": ""
+}

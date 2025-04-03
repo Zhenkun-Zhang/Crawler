@@ -1,0 +1,11 @@
+{
+    "api": "transformers.NllbMoeTop2Router",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "NllbMoeConfig"
+    ],
+    "params": [],
+    "return": ""
+}

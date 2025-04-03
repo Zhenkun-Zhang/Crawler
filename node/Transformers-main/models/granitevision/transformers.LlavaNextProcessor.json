@@ -1,0 +1,67 @@
+{
+    "api": "transformers.LlavaNextProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "patch_size",
+        "vision_feature_select_strategy",
+        "chat_template",
+        "image_token",
+        "num_additional_image_tokens",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "LlavaNextImageProcessor",
+            "optional": true,
+            "default": "None",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "LlamaTokenizerFast",
+            "optional": true,
+            "default": "None",
+            "description": "The tokenizer is a required input."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Patch size from the vision tower."
+        },
+        {
+            "name": "vision_feature_select_strategy",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The feature selection strategy used to select the vision feature from the vision backbone.Shoudl be same as in models config"
+        },
+        {
+            "name": "chat_template",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A Jinja template which will be used to convert lists of messagesin a chat into a tokenizable string."
+        },
+        {
+            "name": "image_token",
+            "type": "str",
+            "optional": true,
+            "default": "<image>",
+            "description": "Special token used to denote image location."
+        },
+        {
+            "name": "num_additional_image_tokens",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Number of additional tokens added to the image embeddings, such as CLS (+1). If the backbone has no CLS or otherextra tokens appended, no need to set this arg."
+        }
+    ],
+    "return": ""
+}

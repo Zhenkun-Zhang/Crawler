@@ -1,0 +1,14 @@
+{
+    "api": "transformers.TrainerCallback.on_epoch_begin",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args:",
+        "TrainingArguments",
+        "state",
+        "control",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

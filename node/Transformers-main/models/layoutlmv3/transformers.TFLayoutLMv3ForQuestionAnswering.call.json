@@ -1,0 +1,126 @@
+{
+    "api": "transformers.TFLayoutLMv3ForQuestionAnswering.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "|",
+        "attention_mask",
+        "|",
+        "token_type_ids",
+        "|",
+        "position_ids",
+        "|",
+        "head_mask",
+        "|",
+        "inputs_embeds",
+        "|",
+        "start_positions",
+        "|",
+        "end_positions",
+        "|",
+        "output_attentions",
+        "output_hidden_states",
+        "bbox",
+        "|",
+        "pixel_values",
+        "|",
+        "return_dict",
+        "training",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "Numpy array,tf.Tensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Note that sequence_length = token_sequence_length + patch_sequence_length + 1 where 1 is for [CLS]token. See pixel_values for patch_sequence_length.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "bbox",
+            "type": "Numpy array,tf.Tensor of shape (batch_size, sequence_length, 4",
+            "optional": true,
+            "default": "",
+            "description": "Bounding boxes of each input sequence tokens. Selected in the range [0, config.max_2d_position_embeddings-1]. Each bounding box should be a normalized version in (x0, y0, x1, y1)format, where (x0, y0) corresponds to the position of the upper left corner in the bounding box, and (x1,y1) represents the position of the lower right corner.Note that sequence_length = token_sequence_length + patch_sequence_length + 1 where 1 is for [CLS]token. See pixel_values for patch_sequence_length."
+        },
+        {
+            "name": "pixel_values",
+            "type": "tf.Tensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Batch of document images. Each image is divided into patches of shape (num_channels, config.patch_size, config.patch_size) and the total number of patches (=patch_sequence_length) equals to ((height / config.patch_size) * (width / config.patch_size))."
+        },
+        {
+            "name": "attention_mask",
+            "type": "tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.Note that sequence_length = token_sequence_length + patch_sequence_length + 1 where 1 is for [CLS]token. See pixel_values for patch_sequence_length.What are attention masks?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "Numpy array,tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Segment token indices to indicate first and second portions of the inputs. Indices are selected in [0, 1]:0 corresponds to a sentence A token,1 corresponds to a sentence B token.Note that sequence_length = token_sequence_length + patch_sequence_length + 1 where 1 is for [CLS]token. See pixel_values for patch_sequence_length.What are token type IDs?"
+        },
+        {
+            "name": "position_ids",
+            "type": "Numpy array,tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].Note that sequence_length = token_sequence_length + patch_sequence_length + 1 where 1 is for [CLS]token. See pixel_values for patch_sequence_length.What are position IDs?"
+        },
+        {
+            "name": "head_mask",
+            "type": "tf.Tensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "tf.Tensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "start_positions",
+            "type": "tf.Tensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for position (index) of the start of the labelled span for computing the token classification loss.Positions are clamped to the length of the sequence (sequence_length). Position outside of the sequenceare not taken into account for computing the loss."
+        },
+        {
+            "name": "end_positions",
+            "type": "tf.Tensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for position (index) of the end of the labelled span for computing the token classification loss.Positions are clamped to the length of the sequence (sequence_length). Position outside of the sequenceare not taken into account for computing the loss."
+        }
+    ],
+    "return": "transformers.modeling_tf_outputs.TFQuestionAnsweringModelOutput or tuple(tf.Tensor)"
+}

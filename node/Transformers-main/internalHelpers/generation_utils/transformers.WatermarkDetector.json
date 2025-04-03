@@ -1,0 +1,52 @@
+{
+    "api": "transformers.WatermarkDetector",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "model_config:",
+        "PretrainedConfig",
+        "device",
+        "watermarking_config",
+        "typing.Dict]",
+        "ignore_repeated_ngrams",
+        "max_cache_size"
+    ],
+    "params": [
+        {
+            "name": "model_config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The model config that will be used to get model specific arguments used when generating."
+        },
+        {
+            "name": "device",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The device which was used during watermarked text generation."
+        },
+        {
+            "name": "watermarking_config",
+            "type": "Union[WatermarkingConfig, Dict]",
+            "optional": false,
+            "default": "",
+            "description": "The exact same watermarking config and arguments used when generating text."
+        },
+        {
+            "name": "ignore_repeated_ngrams",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to count every unique ngram only once or not."
+        },
+        {
+            "name": "max_cache_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The max size to be used for LRU caching of seeding/sampling algorithms called for every token."
+        }
+    ],
+    "return": ""
+}

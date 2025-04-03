@@ -1,0 +1,71 @@
+{
+    "api": "transformers.FlaxWav2Vec2ForPreTraining.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values",
+        "attention_mask",
+        "mask_time_indices",
+        "gumbel_temperature",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7fd23718d090>",
+        "gumbel_rng",
+        "PRNGKey",
+        "at",
+        "0x7fd23718d090>",
+        "train",
+        "output_attentions",
+        "output_hidden_states",
+        "freeze_feature_encoder",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of input raw speech waveform. Values can be obtained by loading a .flac or .wav audio fileinto an array of type List[float] or a numpy.ndarray, e.g. via the soundfile library (pip install soundfile). To prepare the array into input_values, the AutoProcessor should be used for padding andconversion into a tensor of type jnp.ndarray. See Wav2Vec2Processor.call() for details."
+        },
+        {
+            "name": "attention_mask",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "None",
+            "description": "Mask to avoid performing convolution and attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks? .. warning:: attention_mask should only be passedif the corresponding processor has config.return_attention_mask == True. For all models whose processorhas config.return_attention_mask == False, such aswav2vec2-base, attention_mask should not bepassed to avoid degraded performance when doing batched inference. For such models input_values shouldsimply be padded with 0 and passed without attention_mask. Be aware that these models also yield slightlydifferent results depending on whether input_values is padded or not."
+        },
+        {
+            "name": "mask_time_indices",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "None",
+            "description": "Indices to mask extracted features for contrastive loss. When in training mode, model learns to predictmasked extracted features in config.proj_codevector_dim space."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.wav2vec2.modeling_flax_wav2vec2.FlaxWav2Vec2ForPreTrainingOutput or tuple(torch.FloatTensor)"
+}

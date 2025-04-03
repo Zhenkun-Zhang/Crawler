@@ -1,0 +1,103 @@
+{
+    "api": "transformers.LayoutLMv3ImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_rescale",
+        "rescale_value",
+        "do_normalize",
+        "image_mean",
+        "typing.Iterable[float]]",
+        "image_std",
+        "typing.Iterable[float]]",
+        "apply_ocr",
+        "ocr_lang",
+        "tesseract_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to (size[height], size[width]). Can beoverridden by do_resize in preprocess."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"height\" -- 224, \"width\": 224}):Size of the image after resizing. Can be overridden by size in preprocess.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by resample in preprocess."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the images pixel values by the specified rescale_value. Can be overridden bydo_rescale in preprocess."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Value by which the images pixel values are rescaled. Can be overridden by rescale_factor inpreprocess."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in the preprocessmethod."
+        },
+        {
+            "name": "image_mean",
+            "type": "Iterable[float],float",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "Iterable[float],float",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "apply_ocr",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to apply the Tesseract OCR engine to get words + normalized bounding boxes. Can be overridden bythe apply_ocr parameter in the preprocess method."
+        },
+        {
+            "name": "ocr_lang",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The language, specified by its ISO code, to be used by the Tesseract OCR engine. By default, English isused. Can be overridden by the ocr_lang parameter in the preprocess method."
+        },
+        {
+            "name": "tesseract_config",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Any additional custom configuration flags that are forwarded to the config parameter when callingTesseract. For example: —psm 6. Can be overridden by the tesseract_config parameter in thepreprocess method."
+        }
+    ],
+    "return": ""
+}

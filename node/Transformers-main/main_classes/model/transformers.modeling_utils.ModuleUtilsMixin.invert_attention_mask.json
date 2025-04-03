@@ -1,0 +1,20 @@
+{
+    "api": "transformers.modeling_utils.ModuleUtilsMixin.invert_attention_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "encoder_attention_mask:",
+        "Tensor",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "encoder_attention_mask",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "An attention mask."
+        }
+    ],
+    "return": "torch.Tensor"
+}

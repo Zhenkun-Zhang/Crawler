@@ -1,0 +1,48 @@
+{
+    "api": "transformers.image_transforms.center_crop",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "size",
+        "data_format",
+        "str,",
+        "NoneType]",
+        "input_data_format",
+        "str,",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The image to crop."
+        },
+        {
+            "name": "size",
+            "type": "Tuple[int, int]",
+            "optional": false,
+            "default": "",
+            "description": "The target size for the cropped image."
+        },
+        {
+            "name": "data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.If unset, will use the inferred format of the input image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.If unset, will use the inferred format of the input image."
+        }
+    ],
+    "return": "np.ndarray"
+}

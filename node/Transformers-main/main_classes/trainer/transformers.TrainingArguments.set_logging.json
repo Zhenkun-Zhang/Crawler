@@ -1,0 +1,76 @@
+{
+    "api": "transformers.TrainingArguments.set_logging",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "strategy:",
+        "transformers.trainer_utils.IntervalStrategy]",
+        "steps",
+        "report_to",
+        "list[str]]",
+        "level",
+        "first_step",
+        "nan_inf_filter",
+        "on_each_node",
+        "replica_level"
+    ],
+    "params": [
+        {
+            "name": "strategy",
+            "type": "str,IntervalStrategy",
+            "optional": true,
+            "default": "",
+            "description": "The logging strategy to adopt during training. Possible values are:no: No logging is done during training.epoch: Logging is done at the end of each epoch.steps: Logging is done every logging_steps."
+        },
+        {
+            "name": "steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of update steps between two logs if strategy=steps."
+        },
+        {
+            "name": "level",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Logger log level to use on the main process. Possible choices are the log levels as strings: debug,info, warning, error and critical, plus a passive level which doesnt set anythingand lets the application set the level."
+        },
+        {
+            "name": "report_to",
+            "type": "str,List[str]",
+            "optional": true,
+            "default": "",
+            "description": "The list of integrations to report the results and logs to. Supported platforms are azure_ml,clearml, codecarbon, comet_ml, dagshub, dvclive, flyte, mlflow,neptune, swanlab, tensorboard, and wandb. Use all to report to all integrationsinstalled, none for no integrations."
+        },
+        {
+            "name": "first_step",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to log and evaluate the first global_step or not."
+        },
+        {
+            "name": "nan_inf_filter",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to filter nan and inf losses for logging. If set to True the loss of every step that isnan or inf is filtered and the average loss of the current logging window is taken instead.nan_inf_filter only influences the logging of loss values, it does not change the behavior thegradient is computed or applied to the model."
+        },
+        {
+            "name": "on_each_node",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "In multinode distributed training, whether to log using log_level once per node, or only on the mainnode."
+        },
+        {
+            "name": "replica_level",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Logger log level to use on replicas. Same choices as log_level"
+        }
+    ],
+    "return": ""
+}

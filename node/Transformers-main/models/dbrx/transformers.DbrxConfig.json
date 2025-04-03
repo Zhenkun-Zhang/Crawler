@@ -1,0 +1,107 @@
+{
+    "api": "transformers.DbrxConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "d_model:",
+        "n_heads",
+        "n_layers",
+        "max_seq_len",
+        "vocab_size",
+        "resid_pdrop",
+        "emb_pdrop",
+        "attn_config",
+        "ffn_config",
+        "use_cache",
+        "initializer_range",
+        "output_router_logits",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "n_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "n_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "max_seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum sequence length of the model."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Vocabulary size of the Dbrx model. Defines the maximum number of different tokens that can be represented bythe inputs_ids passed when calling DbrxModel."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability applied to the attention output before combining with residual."
+        },
+        {
+            "name": "emb_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for the embedding layer."
+        },
+        {
+            "name": "attn_config",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary used to configure the models attention module."
+        },
+        {
+            "name": "ffn_config",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary used to configure the models FFN module."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "output_router_logits",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the router logits should be returned by the model. Enabling this will alsoallow the model to output the auxiliary loss. See here for more details."
+        }
+    ],
+    "return": ""
+}

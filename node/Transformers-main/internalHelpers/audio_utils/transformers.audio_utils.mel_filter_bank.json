@@ -1,0 +1,75 @@
+{
+    "api": "transformers.audio_utils.mel_filter_bank",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "num_frequency_bins:",
+        "num_mel_filters",
+        "min_frequency",
+        "max_frequency",
+        "sampling_rate",
+        "norm",
+        "mel_scale",
+        "triangularize_in_mel_space",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "num_frequency_bins",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of frequency bins (should be the same as n_fft // 2 + 1 where n_fft is the size of the Fourier Transform used to compute the spectrogram)."
+        },
+        {
+            "name": "num_mel_filters",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of mel filters to generate."
+        },
+        {
+            "name": "min_frequency",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "Lowest frequency of interest in Hz."
+        },
+        {
+            "name": "max_frequency",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "Highest frequency of interest in Hz. This should not exceed sampling_rate / 2."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Sample rate of the audio waveform."
+        },
+        {
+            "name": "norm",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "If slaney, divide the triangular mel weights by the width of the mel band (area normalization)."
+        },
+        {
+            "name": "mel_scale",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The mel frequency scale to use, htk, kaldi or slaney."
+        },
+        {
+            "name": "triangularize_in_mel_space",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If this option is enabled, the triangular filter is applied in mel space rather than frequency space. Thisshould be set to true in order to get the same results as torchaudio when computing mel filters."
+        }
+    ],
+    "return": "np.ndarray of shape (num_frequency_bins, num_mel_filters)"
+}

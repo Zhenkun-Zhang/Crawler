@@ -1,0 +1,26 @@
+{
+    "api": "transformers.SeamlessM4TProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "SeamlessM4TFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "The audio processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "SeamlessM4TTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

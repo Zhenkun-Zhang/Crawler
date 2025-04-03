@@ -1,0 +1,13 @@
+{
+    "api": "transformers.DataCollatorWithFlattening",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "return_position_ids",
+        "separator_id",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

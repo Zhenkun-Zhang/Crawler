@@ -1,0 +1,10 @@
+{
+    "api": "transformers.OlmoeForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [],
+    "return": ""
+}

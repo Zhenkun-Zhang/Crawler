@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Wav2Vec2CTCTokenizer.set_target_lang",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "target_lang:",
+        "str"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,29 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverMultimodalPostprocessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "modalities:",
+        "typing.Mapping[str,",
+        "typing.Callable[...,",
+        "typing.Any]]",
+        "input_is_dict"
+    ],
+    "params": [
+        {
+            "name": "modalities",
+            "type": "Mapping[str, PostprocessorType]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary mapping modality name to postprocessor class for that modality."
+        },
+        {
+            "name": "input_is_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, input is assumed to be dictionary structured, and outputs keep the same dictionary shape. IfFalse, input is a tensor which is sliced up during postprocessing by modality_sizes."
+        }
+    ],
+    "return": ""
+}

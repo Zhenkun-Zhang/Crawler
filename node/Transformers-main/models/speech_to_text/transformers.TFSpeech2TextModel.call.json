@@ -1,0 +1,159 @@
+{
+    "api": "transformers.TFSpeech2TextModel.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_features:",
+        "TFModelInputType",
+        "|",
+        "attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "decoder_input_ids",
+        "|",
+        "tf.Tensor",
+        "|",
+        "decoder_attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "head_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "decoder_head_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "cross_attn_head_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "encoder_outputs",
+        "|",
+        "tf.Tensor",
+        "|",
+        "past_key_values",
+        "tf.Tensor]]]]",
+        "decoder_inputs_embeds",
+        "|",
+        "tf.Tensor",
+        "|",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "training",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_features",
+            "type": "tf.Tensor of shape (batch_size, sequence_length, feature_size)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of fbank features extracted from the raw speech waveform. Raw speech waveform can be obtainedby loading a .flac or .wav audio file into an array of type List[float] or a numpy.ndarray, e.g.via the soundfile library (pip install soundfile). To prepare the array into input_features, theAutoFeatureExtractor should be used for extracting the fbank features, padding and conversion into atensor of floats. See call()"
+        },
+        {
+            "name": "attention_mask",
+            "type": "tf.Tensor of shape ({0}",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "tf.Tensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary.Indices can be obtained using Speech2TextTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are decoder input IDs?SpeechToText uses the eos_token_id as the starting token for decoder_input_ids generation. Ifpast_key_values is used, optionally only the last decoder_input_ids have to be input (seepast_key_values).For translation and summarization training, decoder_input_ids should be provided. If nodecoder_input_ids is provided, the model will create this tensor by shifting the input_ids to the rightfor denoising pre-training following the paper."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "tf.Tensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "will be made by default and ignore pad tokens. It is not recommended to set this for most use cases."
+        },
+        {
+            "name": "head_mask",
+            "type": "tf.Tensor of shape (encoder_layers, encoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "decoder_head_mask",
+            "type": "tf.Tensor of shape (decoder_layers, decoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the attention modules in the decoder. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "cross_attn_head_mask",
+            "type": "tf.Tensor of shape (decoder_layers, decoder_attention_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the cross-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tf.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "hidden states at the output of the last layer of the encoder. Used in the cross-attention of the decoder.of shape (batch_size, sequence_length, hidden_size) is a sequence of"
+        },
+        {
+            "name": "past_key_values",
+            "type": "Tuple[Tuple[tf.Tensor]] of length config.n_layers",
+            "optional": false,
+            "default": "",
+            "description": "contains precomputed key and value hidden states of the attention blocks. Can be used to speed up decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "decoder_inputs_embeds",
+            "type": "tf.FloatTensor of shape (batch_size, target_sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing decoder_input_ids you can choose to directly pass an embeddedrepresentation. If past_key_values is used, optionally only the last decoder_inputs_embeds have to beinput (see past_key_values). This is useful if you want more control over how to convertdecoder_input_ids indices into associated vectors than the models internal embedding lookup matrix."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail. This argument can be used only in eager mode, in graph mode the value in theconfig will be used instead."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail. This argument can be used only in eager mode, in graph mode the value in the config will beused instead."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple. This argument can be used ineager mode, in graph mode the value will always be set to True."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        }
+    ],
+    "return": "transformers.modeling_tf_outputs.TFSeq2SeqModelOutput or tuple(tf.Tensor)"
+}

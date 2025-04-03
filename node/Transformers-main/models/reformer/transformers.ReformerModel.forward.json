@@ -1,0 +1,99 @@
+{
+    "api": "transformers.ReformerModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "position_ids",
+        "head_mask",
+        "inputs_embeds",
+        "num_hashes",
+        "past_buckets_states",
+        "use_cache",
+        "output_hidden_states",
+        "output_attentions",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. During training the input_ids sequence_length has to bea multiple of the relevant models chunk lengths (lshs, locals or both). During evaluation, the indicesare automatically padded to be a multiple of the chunk length.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "num_hashes",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of hashing rounds that should be performed during bucketing. Setting this argument overwritesthe default defined in config.num_hashes.For more information, see num_hashes in ReformerConfig."
+        },
+        {
+            "name": "past_buckets_states",
+            "type": "List[Tuple(torch.LongTensor, torch.FloatTensor)]",
+            "optional": true,
+            "default": "",
+            "description": "List of Tuple(torch.LongTensor, torch.FloatTensor of length config.n_layers, with the first elementbeing the previous buckets of shape (batch_size, num_heads, num_hashes, sequence_length)) and thesecond being the previous hidden_states of shape (batch_size, sequence_length, hidden_size)).Contains precomputed hidden-states and buckets (only relevant for LSH Self-Attention). Can be used to speedup sequential decoding."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.reformer.modeling_reformer.ReformerModelOutput or tuple(torch.FloatTensor)"
+}

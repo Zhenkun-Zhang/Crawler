@@ -1,0 +1,11 @@
+{
+    "api": "transformers.CpmAntForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "CpmAntConfig"
+    ],
+    "params": [],
+    "return": ""
+}

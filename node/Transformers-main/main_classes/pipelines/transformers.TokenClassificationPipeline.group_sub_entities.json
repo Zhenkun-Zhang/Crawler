@@ -1,0 +1,19 @@
+{
+    "api": "transformers.TokenClassificationPipeline.group_sub_entities",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "entities:",
+        "typing.List[dict]"
+    ],
+    "params": [
+        {
+            "name": "entities",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "The entities predicted by the pipeline."
+        }
+    ],
+    "return": ""
+}

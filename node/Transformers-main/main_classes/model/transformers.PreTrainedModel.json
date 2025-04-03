@@ -1,0 +1,13 @@
+{
+    "api": "transformers.PreTrainedModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PretrainedConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,117 @@
+{
+    "api": "transformers.ModernBertForQuestionAnswering.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "sliding_window_mask",
+        "position_ids",
+        "start_positions",
+        "end_positions",
+        "indices",
+        "cu_seqlens",
+        "max_seqlen",
+        "batch_size",
+        "seq_len",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. With Flash Attention 2.0, padding will be ignoredby default should you provide it.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.If you want to change padding behavior, you should read modeling_opt._prepare_decoder_attention_maskand modify to your needs. See diagram 1 in the paper for moreinformation on the default strategy.1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "sliding_window_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding or far-away tokens. In ModernBert, only every few layersperform global attention, while the rest perform local attention. This mask is used to avoid attending tofar-away tokens in the local attention layers when not using Flash Attention."
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.n_positions - 1].What are position IDs?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "indices",
+            "type": "torch.Tensor of shape (total_unpadded_tokens,",
+            "optional": true,
+            "default": "",
+            "description": "Indices of the non-padding tokens in the input sequence. Used for unpadding the output."
+        },
+        {
+            "name": "cu_seqlens",
+            "type": "torch.Tensor of shape (batch + 1,",
+            "optional": true,
+            "default": "",
+            "description": "Cumulative sequence lengths of the input sequences. Used to index the unpadded tensors."
+        },
+        {
+            "name": "max_seqlen",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum sequence length in the batch excluding padding tokens. Used to unpad input_ids and pad output tensors."
+        },
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Batch size of the input sequences. Used to pad the output tensors."
+        },
+        {
+            "name": "seq_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Sequence length of the input sequences including padding tokens. Used to pad the output tensors."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_outputs.QuestionAnsweringModelOutput or tuple(torch.FloatTensor)"
+}

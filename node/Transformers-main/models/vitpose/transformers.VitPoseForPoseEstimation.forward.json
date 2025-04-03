@@ -1,0 +1,61 @@
+{
+    "api": "transformers.VitPoseForPoseEstimation.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "Tensor",
+        "dataset_index",
+        "flip_pairs",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using VitPoseImageProcessor. SeeVitPoseImageProcessor.call() for details."
+        },
+        {
+            "name": "dataset_index",
+            "type": "torch.Tensor of shape (batch_size,)",
+            "optional": false,
+            "default": "",
+            "description": "Index to use in the Mixture-of-Experts (MoE) blocks of the backbone.This corresponds to the dataset index used during training, e.g. For the single dataset index 0 refers to the corresponding dataset. For the multiple datasets index 0 refers to dataset A (e.g. MPII) and index 1 refers to dataset B (e.g. CrowdPose)."
+        },
+        {
+            "name": "flip_pairs",
+            "type": "torch.tensor",
+            "optional": true,
+            "default": "",
+            "description": "Whether to mirror pairs of keypoints (for example, left ear — right ear)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.vitpose.modeling_vitpose.VitPoseEstimatorOutput or tuple(torch.FloatTensor)"
+}

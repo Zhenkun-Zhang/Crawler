@@ -1,0 +1,51 @@
+{
+    "api": "transformers.Tool.from_space",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "space_id:",
+        "name",
+        "description",
+        "api_name",
+        "token",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "space_id",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The id of the Space on the Hub."
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The name of the tool."
+        },
+        {
+            "name": "description",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The description of the tool."
+        },
+        {
+            "name": "api_name",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The specific api_name to use, if the space has several tabs. If not precised, will default to the first available api."
+        },
+        {
+            "name": "token",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Add your token to access private spaces or increase your GPU quotas."
+        }
+    ],
+    "return": "Tool"
+}

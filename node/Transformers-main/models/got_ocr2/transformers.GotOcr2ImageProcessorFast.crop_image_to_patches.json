@@ -1,0 +1,55 @@
+{
+    "api": "transformers.GotOcr2ImageProcessorFast.crop_image_to_patches",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "torch.Tensor",
+        "min_patches",
+        "max_patches",
+        "use_thumbnail",
+        "patch_size",
+        "int,",
+        "dict]",
+        "interpolation",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The images to be cropped."
+        },
+        {
+            "name": "min_patches",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The minimum number of patches to be extracted from the image."
+        },
+        {
+            "name": "max_patches",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The maximum number of patches to be extracted from the image."
+        },
+        {
+            "name": "use_thumbnail",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to add a thumbnail image to the list of cropped patches."
+        },
+        {
+            "name": "patch_size",
+            "type": "int, Tuple[int, int], dict",
+            "optional": true,
+            "default": "",
+            "description": "The size of the output patches.The format of the image data. If None, the format is inferred from the input image."
+        }
+    ],
+    "return": "ListPIL.Image.Image or List[np.ndarray]"
+}

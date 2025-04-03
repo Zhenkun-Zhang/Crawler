@@ -1,0 +1,20 @@
+{
+    "api": "transformers.BatchEncoding.word_ids",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "batch_index:",
+        "int",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "batch_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The index to access in the batch."
+        }
+    ],
+    "return": "List[Optional[int]]"
+}

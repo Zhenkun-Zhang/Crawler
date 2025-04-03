@@ -1,0 +1,174 @@
+{
+    "api": "transformers.TFTapasForQuestionAnswering.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "TFModelInputType",
+        "|",
+        "attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "token_type_ids",
+        "|",
+        "tf.Tensor",
+        "|",
+        "position_ids",
+        "|",
+        "tf.Tensor",
+        "|",
+        "head_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "inputs_embeds",
+        "|",
+        "tf.Tensor",
+        "|",
+        "table_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "aggregation_labels",
+        "|",
+        "tf.Tensor",
+        "|",
+        "float_answer",
+        "|",
+        "tf.Tensor",
+        "|",
+        "numeric_values",
+        "|",
+        "tf.Tensor",
+        "|",
+        "numeric_values_scale",
+        "|",
+        "tf.Tensor",
+        "|",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "labels",
+        "|",
+        "tf.Tensor",
+        "|",
+        "training",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "np.ndarray, tf.Tensor, List[tf.Tensor] `Dict[str, tf.Tensor],Dict[str, np.ndarray] and each example must have the shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.call() andPreTrainedTokenizer.encode() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length, 7",
+            "optional": true,
+            "default": "",
+            "description": "Token indices that encode tabular structure. Indices can be obtained using AutoTokenizer. See thisclass for more info.What are token type IDs?"
+        },
+        {
+            "name": "position_ids",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Ifreset_position_index_per_cell of TapasConfig is set to True, relative position embeddings will beused. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "head_mask",
+            "type": "np.ndarray,tf.Tensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail. This argument can be used only in eager mode, in graph mode the value in theconfig will be used instead."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail. This argument can be used only in eager mode, in graph mode the value in the config will beused instead."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple. This argument can be used ineager mode, in graph mode the value will always be set to True."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        },
+        {
+            "name": "table_mask",
+            "type": "tf.Tensor of shape (batch_size, seq_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask for the table. Indicates which tokens belong to the table (1). Question tokens, table headers andpadding are 0."
+        },
+        {
+            "name": "labels",
+            "type": "tf.Tensor of shape (batch_size, seq_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels per token for computing the hierarchical cell selection loss. This encodes the positions of theanswer appearing in the table. Can be obtained using AutoTokenizer.1 for tokens that are part of the answer,0 for tokens that are not part of the answer."
+        },
+        {
+            "name": "aggregation_labels",
+            "type": "tf.Tensor of shape (batch_size, ",
+            "optional": true,
+            "default": "",
+            "description": "Aggregation function index for every example in the batch for computing the aggregation loss. Indicesshould be in [0, ..., config.num_aggregation_labels - 1]. Only required in case of strong supervision foraggregation (WikiSQL-supervised)."
+        },
+        {
+            "name": "float_answer",
+            "type": "tf.Tensor of shape (batch_size, ",
+            "optional": true,
+            "default": "",
+            "description": "Float answer for every example in the batch. Set to float(nan) for cell selection questions. Onlyrequired in case of weak supervision (WTQ) to calculate the aggregate mask and regression loss."
+        },
+        {
+            "name": "numeric_values",
+            "type": "tf.Tensor of shape (batch_size, seq_length",
+            "optional": true,
+            "default": "",
+            "description": "Numeric values of every token, NaN for tokens which are not numeric values. Can be obtained usingAutoTokenizer. Only required in case of weak supervision for aggregation (WTQ) to calculate theregression loss."
+        },
+        {
+            "name": "numeric_values_scale",
+            "type": "tf.Tensor of shape (batch_size, seq_length",
+            "optional": true,
+            "default": "",
+            "description": "Scale of the numeric values of every token. Can be obtained using AutoTokenizer. Only required in caseof weak supervision for aggregation (WTQ) to calculate the regression loss."
+        }
+    ],
+    "return": "transformers.models.tapas.modeling_tf_tapas.TFTableQuestionAnsweringOutput or tuple(tf.Tensor)"
+}

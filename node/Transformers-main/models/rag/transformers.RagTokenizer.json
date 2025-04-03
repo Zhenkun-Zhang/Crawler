@@ -1,0 +1,11 @@
+{
+    "api": "transformers.RagTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "question_encoder",
+        "generator"
+    ],
+    "params": [],
+    "return": ""
+}

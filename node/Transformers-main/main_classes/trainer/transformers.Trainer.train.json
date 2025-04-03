@@ -1,0 +1,48 @@
+{
+    "api": "transformers.Trainer.train",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "resume_from_checkpoint:",
+        "typing.Union[bool,",
+        "str,",
+        "NoneType]",
+        "trial",
+        "dict[str,",
+        "typing.Any],",
+        "NoneType]",
+        "ignore_keys_for_eval",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "resume_from_checkpoint",
+            "type": "str,bool",
+            "optional": true,
+            "default": "",
+            "description": "If a str, local path to a saved checkpoint as saved by a previous instance of Trainer. If abool and equals True, load the last checkpoint in args.output_dir as saved by a previous instanceof Trainer. If present, training will resume from the model/optimizer/scheduler states loaded here."
+        },
+        {
+            "name": "trial",
+            "type": "optuna.Trial,Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "The trial run or the hyperparameter dictionary for hyperparameter search."
+        },
+        {
+            "name": "ignore_keys_for_eval",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "A list of keys in the output of your model (if it is a dictionary) that should be ignored whengathering predictions for evaluation during the training."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments used to hide deprecated arguments"
+        }
+    ],
+    "return": ""
+}

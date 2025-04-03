@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Pop2PianoFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

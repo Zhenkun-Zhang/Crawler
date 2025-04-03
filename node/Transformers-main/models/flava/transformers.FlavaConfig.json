@@ -1,0 +1,168 @@
+{
+    "api": "transformers.FlavaConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_config:",
+        "typing.Any]",
+        "text_config",
+        "typing.Any]",
+        "multimodal_config",
+        "typing.Any]",
+        "image_codebook_config",
+        "typing.Any]",
+        "hidden_size",
+        "layer_norm_eps",
+        "projection_dim",
+        "init_codebook",
+        "logit_scale_init_value",
+        "initializer_range",
+        "ce_ignore_index",
+        "mim_weight",
+        "mlm_weight",
+        "global_contrastive_weight",
+        "itm_weight",
+        "mmm_image_weight",
+        "mmm_text_weight",
+        "global_backprop_contrastive",
+        "skip_unmasked_multimodal_encoder",
+        "return_loss",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of configuration options used to initialize FlavaTextConfig."
+        },
+        {
+            "name": "image_config",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of configuration options used to initialize FlavaImageConfig."
+        },
+        {
+            "name": "multimodal_config",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of configuration options used to initialize FlavaMultimodalConfig."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of text and image projection layers."
+        },
+        {
+            "name": "logit_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The initial value of the logit_scale parameter. Default is used as per the original FLAVA/CLIPimplementation."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "ce_ignore_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Cross entropy index to ignore."
+        },
+        {
+            "name": "mim_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight to be assigned to MIM (Masked Image Modeling) unimodal loss"
+        },
+        {
+            "name": "mlm_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight to be assigned to MLM (Masked Language Modeling) unimodal loss"
+        },
+        {
+            "name": "global_contrastive_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight to be assigned to global contrastive cross-alignment loss."
+        },
+        {
+            "name": "itm_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight to be assigned to image-text matching multimodal loss."
+        },
+        {
+            "name": "mmm_image_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight to be assigned to MMM losss image part."
+        },
+        {
+            "name": "mmm_text_weight",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Weight to be assigned to MMM losss text part."
+        },
+        {
+            "name": "global_backprop_contrastive",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use global backpropgation through all workers in contrastive loss."
+        },
+        {
+            "name": "skip_unmasked_multimodal_encoder",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to skip running unmasked multimodal encoder whose outputs are not used by FLAVA losses."
+        },
+        {
+            "name": "return_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return loss or not"
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

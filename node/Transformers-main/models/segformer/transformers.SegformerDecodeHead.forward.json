@@ -1,0 +1,11 @@
+{
+    "api": "transformers.SegformerDecodeHead.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "encoder_hidden_states:",
+        "FloatTensor"
+    ],
+    "params": [],
+    "return": ""
+}

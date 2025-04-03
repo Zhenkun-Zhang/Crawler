@@ -1,0 +1,27 @@
+{
+    "api": "transformers.EncoderNoRepeatNGramLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "encoder_ngram_size:",
+        "int",
+        "encoder_input_ids"
+    ],
+    "params": [
+        {
+            "name": "encoder_ngram_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "All ngrams of size ngram_size can only occur within the encoder input ids."
+        },
+        {
+            "name": "encoder_input_ids",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The encoder_input_ids that should not be repeated within the decoder ids."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,34 @@
+{
+    "api": "transformers.TypicalLogitsWarper",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "mass:",
+        "filter_value",
+        "min_tokens_to_keep"
+    ],
+    "params": [
+        {
+            "name": "mass",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Value of typical_p between 0 and 1 inclusive, defaults to 0.9."
+        },
+        {
+            "name": "filter_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "All filtered values will be set to this float value."
+        },
+        {
+            "name": "min_tokens_to_keep",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Minimum number of tokens that cannot be filtered."
+        }
+    ],
+    "return": ""
+}

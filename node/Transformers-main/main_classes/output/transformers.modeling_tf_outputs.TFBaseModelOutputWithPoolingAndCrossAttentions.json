@@ -1,0 +1,62 @@
+{
+    "api": "transformers.modeling_tf_outputs.TFBaseModelOutputWithPoolingAndCrossAttentions",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "last_hidden_state:",
+        "pooler_output",
+        "past_key_values",
+        "|",
+        "hidden_states",
+        "|",
+        "attentions",
+        "|",
+        "cross_attentions",
+        "|"
+    ],
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "tf.Tensor of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the model."
+        },
+        {
+            "name": "pooler_output",
+            "type": "tf.Tensor of shape (batch_size, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Last layer hidden-state of the first token of the sequence (classification token) further processed by aLinear layer and a Tanh activation function. The Linear layer weights are trained from the next sentenceprediction (classification) objective during pretraining.This output is usually not a good summary of the semantic content of the input, youre often better withaveraging or pooling the sequence of hidden-states for the whole input sequence."
+        },
+        {
+            "name": "past_key_values",
+            "type": "List[tf.Tensor]",
+            "optional": true,
+            "default": "",
+            "description": "List of tf.Tensor of length config.n_layers, with each tensor of shape (2, batch_size, num_heads, sequence_length, embed_size_per_head)).Contains pre-computed hidden-states (key and values in the attention blocks) that can be used (seepast_key_values input) to speed up sequential decoding."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights after the attention softmax, used to compute the weighted average in the self-attentionheads."
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).Attentions weights of the decoders cross-attention layer, after the attention softmax, used to compute theweighted average in the cross-attention heads."
+        }
+    ],
+    "return": ""
+}

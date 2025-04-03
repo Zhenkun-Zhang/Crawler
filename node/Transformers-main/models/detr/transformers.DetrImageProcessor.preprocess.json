@@ -1,0 +1,193 @@
+{
+    "api": "transformers.DetrImageProcessor.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "annotations",
+        "str,",
+        "list[dict]]],",
+        "typing.List[dict[str,",
+        "str,",
+        "list[dict]]]],",
+        "NoneType]",
+        "return_segmentation_masks",
+        "masks_path",
+        "pathlib.Path,",
+        "NoneType]",
+        "do_resize",
+        "size",
+        "int]]",
+        "resample",
+        "do_rescale",
+        "rescale_factor",
+        "float,",
+        "NoneType]",
+        "do_normalize",
+        "do_convert_annotations",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "do_pad",
+        "format",
+        "transformers.image_utils.AnnotationFormat,",
+        "NoneType]",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "data_format",
+        "transformers.image_utils.ChannelDimension]",
+        "<ChannelDimension.FIRST",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "pad_size",
+        "int]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "Image or batch of images to preprocess. Expects a single or batch of images with pixel values rangingfrom 0 to 255. If passing in images with pixel values between 0 and 1, set do_rescale=False."
+        },
+        {
+            "name": "annotations",
+            "type": "AnnotationType,List[AnnotationType]",
+            "optional": true,
+            "default": "",
+            "description": "List of annotations associated with the image or batch of images. If annotation is for objectdetection, the annotations should be a dictionary with the following keys:image_id (int): The image id.annotations (List[Dict]): List of annotations for an image. Each annotation should be adictionary. An image can have no annotations, in which case the list should be empty.If annotation is for segmentation, the annotations should be a dictionary with the following keys:image_id (int): The image id.segments_info (List[Dict]): List of segments for an image. Each segment should be a dictionary.An image can have no segments, in which case the list should be empty.file_name (str): The file name of the image."
+        },
+        {
+            "name": "return_segmentation_masks",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return segmentation masks."
+        },
+        {
+            "name": "masks_path",
+            "type": "str,pathlib.Path",
+            "optional": true,
+            "default": "",
+            "description": "Path to the directory containing the segmentation masks."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the image."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "Size of the images (height, width) dimensions after resizing. Available options are:{height: int, width: int}: The image will be resized to the exact size (height, width).Do NOT keep the aspect ratio.{shortest_edge: int, longest_edge: int}: The image will be resized to a maximum size respectingthe aspect ratio and keeping the shortest edge less or equal to shortest_edge and the longest edgeless or equal to longest_edge.{max_height: int, max_width: int}: The image will be resized to the maximum size respecting theaspect ratio and keeping the height less or equal to max_height and the width less or equal tomax_width."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "None",
+            "description": "Resampling filter to use when resizing the image."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Rescale factor to use when rescaling the image."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image."
+        },
+        {
+            "name": "do_convert_annotations",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the annotations to the format expected by the model. Converts the boundingboxes from the format (top_left_x, top_left_y, width, height) to (center_x, center_y, width, height)and in relative coordinates."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use when normalizing the image."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use when normalizing the image."
+        },
+        {
+            "name": "do_pad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to pad the image. If True, padding will be applied to the bottom and right ofthe image with zeros. If pad_size is provided, the image will be padded to the specifieddimensions. Otherwise, the image will be padded to the maximum height and width of the batch."
+        },
+        {
+            "name": "format",
+            "type": "str,AnnotationFormat",
+            "optional": true,
+            "default": "",
+            "description": "Format of the annotations."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "Type of tensors to return. If None, will return the list of images."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.Unset: Use the channel dimension format of the input image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. If unset, the channel dimension format is inferredfrom the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.none or ChannelDimension.NONE: image in (height, width) format."
+        },
+        {
+            "name": "pad_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "The size {height: int, width int} to pad the images to. Must be larger than any image sizeprovided for preprocessing. If pad_size is not provided, images will be padded to the largestheight and width in the batch."
+        }
+    ],
+    "return": ""
+}

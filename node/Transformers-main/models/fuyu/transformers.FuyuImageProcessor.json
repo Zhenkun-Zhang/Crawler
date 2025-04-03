@@ -1,0 +1,112 @@
+{
+    "api": "transformers.FuyuImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]]",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_pad",
+        "padding_value",
+        "padding_mode",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float]]",
+        "image_std",
+        "typing.List[float]]",
+        "do_rescale",
+        "rescale_factor",
+        "patch_size",
+        "int]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the image to size."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "PILImageResampling filter to use when resizing the image e.g. PILImageResampling.BILINEAR."
+        },
+        {
+            "name": "do_pad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to pad the image to size."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The value to pad the image with."
+        },
+        {
+            "name": "padding_mode",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The padding mode to use when padding the image."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image."
+        },
+        {
+            "name": "image_mean",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The mean to use when normalizing the image."
+        },
+        {
+            "name": "image_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation to use when normalizing the image."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The factor to use when rescaling the image."
+        },
+        {
+            "name": "patch_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        }
+    ],
+    "return": ""
+}

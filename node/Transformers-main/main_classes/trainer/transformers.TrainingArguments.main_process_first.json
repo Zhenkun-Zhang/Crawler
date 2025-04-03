@@ -1,0 +1,26 @@
+{
+    "api": "transformers.TrainingArguments.main_process_first",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "local",
+        "desc"
+    ],
+    "params": [
+        {
+            "name": "local",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "if True first means process of rank 0 of each node if False first means process of rank 0 of noderank 0 In multi-node environment with a shared filesystem you most likely will want to uselocal=False so that only the main process of the first node will do the processing. If however, thefilesystem is not shared, then the main process of each node will need to do the processing, which isthe default behavior."
+        },
+        {
+            "name": "desc",
+            "type": "str",
+            "optional": true,
+            "default": "work",
+            "description": "a work description to be used in debug logs"
+        }
+    ],
+    "return": ""
+}

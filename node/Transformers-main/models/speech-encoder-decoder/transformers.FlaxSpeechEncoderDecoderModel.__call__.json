@@ -1,0 +1,76 @@
+{
+    "api": "transformers.FlaxSpeechEncoderDecoderModel.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "Array",
+        "attention_mask",
+        "decoder_input_ids",
+        "decoder_attention_mask",
+        "decoder_position_ids",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "train",
+        "freeze_feature_encoder",
+        "params",
+        "dropout_rng",
+        "PRNGKey",
+        "at",
+        "0x7fd23718d090>",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length),(batch_size, sequence_length, feature_dim",
+            "optional": true,
+            "default": "",
+            "description": "Float values of input raw speech waveform or speech features. Values can be obtained by loading a .flacor .wav audio file into an array of type List[float] or a numpy.ndarray, e.g. via the soundfilelibrary (pip install soundfile). To prepare the array into inputs, either the Wav2Vec2Processor orSpeech2TextProcessor should be used for padding and conversion into a tensor of typetorch.FloatTensor."
+        },
+        {
+            "name": "attention_mask",
+            "type": "jnp.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "jnp.ndarray of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary.Indices can be obtained using PreTrainedTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?If past_key_values is used, optionally only the last decoder_input_ids have to be input (seepast_key_values).For sequence to sequence training, decoder_input_ids should be provided. decoder_input_ids should becreated outside of the model by shifting the labels to the right, replacing -100 by the pad_token_idand prepending them with the decoder_start_token_id."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "jnp.ndarray of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default."
+        },
+        {
+            "name": "decoder_position_ids",
+            "type": "numpy.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each decoder input sequence tokens in the position embeddings. Selected in therange [0, config.decoder.max_position_embeddings - 1]."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, the model will return a ~utils.FlaxSeq2SeqLMOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_flax_outputs.FlaxSeq2SeqLMOutput or tuple(torch.FloatTensor)"
+}

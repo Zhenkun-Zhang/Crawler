@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ClvpProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,61 @@
+{
+    "api": "transformers.OwlViTProcessor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor'],",
+        "NoneType]",
+        "text",
+        "typing.List[str],",
+        "typing.List[typing.List[str]]]",
+        "*args",
+        "audio",
+        "videos",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "PIL.Image.Image, np.ndarray, torch.Tensor, List[PIL.Image.Image], List[np.ndarray],",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "List[torch.Tensor])",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The image or batch of images to be prepared. Each image can be a PIL image, NumPy array or PyTorchtensor. Both channels-first and channels-last formats are supported."
+        },
+        {
+            "name": "text",
+            "type": "str, List[str], List[List[str]]",
+            "optional": false,
+            "default": "",
+            "description": "The sequence or batch of sequences to be encoded. Each sequence can be a string or a list of strings(pretokenized string). If the sequences are provided as list of strings (pretokenized), you must setis_split_into_words=True (to lift the ambiguity with a batch of sequences)."
+        },
+        {
+            "name": "query_images",
+            "type": "PIL.Image.Image, np.ndarray, torch.Tensor, List[PIL.Image.Image], List[np.ndarray], List[torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "The query image to be prepared, one query image is expected per target image to be queried. Each imagecan be a PIL image, NumPy array or PyTorch tensor. In case of a NumPy array/PyTorch tensor, each imageshould be of shape (C, H, W), where C is a number of channels, H and W are image height and width."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors of a particular framework. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return NumPy np.ndarray objects.jax: Return JAX jnp.ndarray objects."
+        }
+    ],
+    "return": "BatchFeature"
+}

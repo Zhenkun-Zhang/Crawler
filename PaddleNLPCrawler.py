@@ -272,7 +272,7 @@ def jsonDumps(api, apiType, args_list, bases, desc, params, Returns, path, versi
 def main():
     version = 'stable'
     root = "https://paddlenlp.readthedocs.io/en/" + version + "/source/"
-    save_path = "node/" + version + "/"
+    save_path = "node/PaddleNLP-" + version + "/"
     solve(root, save_path, version)
     
 

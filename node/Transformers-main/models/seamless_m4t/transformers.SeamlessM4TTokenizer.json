@@ -1,0 +1,116 @@
+{
+    "api": "transformers.SeamlessM4TTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "bos_token",
+        "eos_token",
+        "sep_token",
+        "cls_token",
+        "unk_token",
+        "pad_token",
+        "tokenizer_file",
+        "src_lang",
+        "tgt_lang",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "additional_special_tokens",
+        "add_prefix_space",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token.When building a sequence using special tokens, this is not the token that is used for the beginning ofsequence. The token used is the cls_token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token.When building a sequence using special tokens, this is not the token that is used for the end of sequence.The token used is the sep_token."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "<s>",
+            "description": "The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "tokenizer_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The path to a tokenizer file to use instead of the vocab file."
+        },
+        {
+            "name": "src_lang",
+            "type": "str",
+            "optional": true,
+            "default": "eng",
+            "description": "The language to use as source language for translation."
+        },
+        {
+            "name": "tgt_lang",
+            "type": "str",
+            "optional": true,
+            "default": "fra",
+            "description": "The language to use as target language for translation."
+        },
+        {
+            "name": "sp_model_kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments to pass to the model initialization."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "tuple,list of str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "None",
+            "description": "A tuple or a list of additional special tokens. Can be used to specify the list of languages that will besupported by the tokenizer."
+        },
+        {
+            "name": "add_prefix_space",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to add an initial space to the input. This allows to treat the leading word just as anyother word."
+        }
+    ],
+    "return": ""
+}

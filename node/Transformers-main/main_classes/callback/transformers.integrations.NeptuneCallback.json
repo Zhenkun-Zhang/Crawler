@@ -1,0 +1,74 @@
+{
+    "api": "transformers.integrations.NeptuneCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "api_token:",
+        "project",
+        "name",
+        "base_namespace",
+        "run",
+        "log_parameters",
+        "log_checkpoints",
+        "**neptune_run_kwargs"
+    ],
+    "params": [
+        {
+            "name": "api_token",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Neptune API token obtained upon registration.You can leave this argument out if you have saved your token to the NEPTUNE_API_TOKEN environmentvariable (strongly recommended). See full setup instructions in thedocs."
+        },
+        {
+            "name": "project",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Name of an existing Neptune project, in the form workspace-name/project-name.You can find and copy the name in Neptune from the project settings -> Properties. If None (default), thevalue of the NEPTUNE_PROJECT environment variable is used."
+        },
+        {
+            "name": "name",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Custom name for the run."
+        },
+        {
+            "name": "base_namespace",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "In the Neptune run, the root namespacethat will contain all of the metadata logged by the callback."
+        },
+        {
+            "name": "log_parameters",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, logs all Trainer arguments and model parameters provided by the Trainer."
+        },
+        {
+            "name": "log_checkpoints",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "If same, uploads checkpoints whenever they are saved by the Trainer.If last, uploads only the most recently saved checkpoint. If best, uploads the best checkpoint (amongthe ones saved by the Trainer). If None, does not upload checkpoints."
+        },
+        {
+            "name": "run",
+            "type": "Run",
+            "optional": true,
+            "default": "None",
+            "description": "Pass a Neptune run object if you want to continue logging to an existing run.Read more about resuming runs in the docs."
+        },
+        {
+            "name": "*neptune_run_kwargs",
+            "type": "s (optional",
+            "optional": true,
+            "default": "",
+            "description": "Additional keyword arguments to be passed directly to theneptune.init_run() function when a new run is created."
+        }
+    ],
+    "return": ""
+}

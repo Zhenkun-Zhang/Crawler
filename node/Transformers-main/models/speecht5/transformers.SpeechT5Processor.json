@@ -1,0 +1,26 @@
+{
+    "api": "transformers.SpeechT5Processor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "SpeechT5FeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of SpeechT5FeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "SpeechT5Tokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of SpeechT5Tokenizer. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,44 @@
+{
+    "api": "transformers.MambaCache",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PretrainedConfig",
+        "max_batch_size",
+        "device",
+        "str,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "`PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The configuration file defining the shape-related attributes required to initialize the static cache."
+        },
+        {
+            "name": "max_batch_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The maximum batch size with which the model will be used. Note that a new instance must be instantiated if a smaller batch size is used."
+        },
+        {
+            "name": "dtype",
+            "type": "torch.dtype",
+            "optional": true,
+            "default": "torch.float16",
+            "description": "The default dtype to use when initializing the layer."
+        },
+        {
+            "name": "device",
+            "type": "torch.device,str",
+            "optional": true,
+            "default": "",
+            "description": "The device on which the cache should be initialized. Should be the same as the layer."
+        }
+    ],
+    "return": ""
+}

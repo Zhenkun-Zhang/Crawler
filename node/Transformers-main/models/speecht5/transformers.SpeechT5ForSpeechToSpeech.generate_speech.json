@@ -1,0 +1,84 @@
+{
+    "api": "transformers.SpeechT5ForSpeechToSpeech.generate_speech",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "FloatTensor",
+        "speaker_embeddings",
+        "attention_mask",
+        "threshold",
+        "minlenratio",
+        "maxlenratio",
+        "vocoder",
+        "output_cross_attentions",
+        "return_output_lengths",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Float values of input raw speech waveform.Values can be obtained by loading a .flac or .wav audio file into an array of type List[float] ora numpy.ndarray, e.g. via the soundfile library (pip install soundfile). To prepare the arrayinto input_values, the SpeechT5Processor should be used for padding and conversion into a tensorof type torch.FloatTensor. See SpeechT5Processor.call() for details."
+        },
+        {
+            "name": "speaker_embeddings",
+            "type": "torch.FloatTensor of shape (batch_size, config.speaker_embedding_dim",
+            "optional": true,
+            "default": "",
+            "description": "Tensor containing the speaker embeddings."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing convolution and attention on padding token indices. Mask values selected in[0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The generated sequence ends when the predicted stop token probability exceeds this value."
+        },
+        {
+            "name": "minlenratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Used to calculate the minimum required length for the output sequence."
+        },
+        {
+            "name": "maxlenratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Used to calculate the maximum allowed length for the output sequence."
+        },
+        {
+            "name": "vocoder",
+            "type": "nn.Module",
+            "optional": true,
+            "default": "",
+            "description": "The vocoder that converts the mel spectrogram into a speech waveform. If None, the output is the melspectrogram."
+        },
+        {
+            "name": "output_cross_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of the decoders cross-attention layers."
+        },
+        {
+            "name": "return_output_lengths",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the concrete spectrogram/waveform lengths."
+        }
+    ],
+    "return": "tuple(torch.FloatTensor) comprising various elements depending on the inputs"
+}

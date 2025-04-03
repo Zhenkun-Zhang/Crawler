@@ -1,0 +1,168 @@
+{
+    "api": "transformers.SegGptImageProcessor.preprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor'],",
+        "NoneType]",
+        "prompt_images",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor'],",
+        "NoneType]",
+        "prompt_masks",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor'],",
+        "NoneType]",
+        "do_resize",
+        "size",
+        "int]",
+        "resample",
+        "do_rescale",
+        "rescale_factor",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "do_convert_rgb",
+        "num_labels",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "data_format",
+        "transformers.image_utils.ChannelDimension]",
+        "<ChannelDimension.FIRST",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "Image to _preprocess. Expects a single or batch of images with pixel values ranging from 0 to 255. Ifpassing in images with pixel values between 0 and 1, set do_rescale=False."
+        },
+        {
+            "name": "prompt_images",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "Prompt image to _preprocess. Expects a single or batch of images with pixel values ranging from 0 to 255. Ifpassing in images with pixel values between 0 and 1, set do_rescale=False."
+        },
+        {
+            "name": "prompt_masks",
+            "type": "ImageInput",
+            "optional": false,
+            "default": "",
+            "description": "Prompt mask from prompt image to _preprocess that specify prompt_masks value in the preprocessed output.Can either be in the format of segmentation maps (no channels) or RGB images. If in the format ofRGB images, do_convert_rgb should be set to False. If in the format of segmentation maps, num_labelsspecifying num_labels is recommended to build a palette to map the prompt mask from a single channel toa 3 channel RGB. If num_labels is not specified, the prompt mask will be duplicated across the channeldimension."
+        },
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the image."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary in the format {height: h, width: w} specifying the size of the output image afterresizing."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling filter",
+            "optional": true,
+            "default": "",
+            "description": "PILImageResampling filter to use if resizing the image e.g. PILImageResampling.BICUBIC. Only hasan effect if do_resize is set to True. Doesnt apply to prompt mask as it is resized using nearest."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image values between [0 - 1]."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Rescale factor to rescale the image by if do_rescale is set to True."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image mean to use if do_normalize is set to True."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Image standard deviation to use if do_normalize is set to True."
+        },
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the prompt mask to RGB format. If num_labels is specified, a palette will be builtto map the prompt mask from a single channel to a 3 channel RGB. If unset, the prompt mask is duplicatedacross the channel dimension. Must be set to False if the prompt mask is already in RGB format."
+        },
+        {
+            "name": "num_labels",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "(int, optional):Number of classes in the segmentation task (excluding the background). If specified, a palette will bebuilt, assuming that class_idx 0 is the background, to map the prompt mask from a plain segmentation mapwith no channels to a 3 channel RGB. Not specifying this will result in the prompt mask either being passedthrough as is if it is already in RGB format (if do_convert_rgb is false) or being duplicatedacross the channel dimension."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to return. Can be one of:Unset: Return a list of np.ndarray.TensorType.TENSORFLOW or tf: Return a batch of type tf.Tensor.TensorType.PYTORCH or pt: Return a batch of type torch.Tensor.TensorType.NUMPY or np: Return a batch of type np.ndarray.TensorType.JAX or jax: Return a batch of type jax.numpy.ndarray."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.Unset: Use the channel dimension format of the input image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. If unset, the channel dimension format is inferredfrom the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.none or ChannelDimension.NONE: image in (height, width) format."
+        }
+    ],
+    "return": ""
+}

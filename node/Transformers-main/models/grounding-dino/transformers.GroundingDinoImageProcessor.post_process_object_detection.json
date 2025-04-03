@@ -1,0 +1,38 @@
+{
+    "api": "transformers.GroundingDinoImageProcessor.post_process_object_detection",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs:",
+        "GroundingDinoObjectDetectionOutput",
+        "threshold",
+        "target_sizes",
+        "typing.List[typing.Tuple],",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "GroundingDinoObjectDetectionOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Score threshold to keep object detection predictions."
+        },
+        {
+            "name": "target_sizes",
+            "type": "torch.Tensor,List[Tuple[int, int]]",
+            "optional": true,
+            "default": "",
+            "description": "Tensor of shape (batch_size, 2) or list of tuples (Tuple[int, int]) containing the target size(height, width) of each image in the batch. If unset, predictions will not be resized."
+        }
+    ],
+    "return": "List[Dict]"
+}

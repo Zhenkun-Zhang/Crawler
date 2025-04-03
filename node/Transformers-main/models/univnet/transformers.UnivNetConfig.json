@@ -1,0 +1,122 @@
+{
+    "api": "transformers.UnivNetConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "model_in_channels",
+        "model_hidden_channels",
+        "num_mel_bins",
+        "resblock_kernel_sizes",
+        "3,",
+        "3]",
+        "resblock_stride_sizes",
+        "8,",
+        "4]",
+        "resblock_dilation_sizes",
+        "3,",
+        "9,",
+        "27],",
+        "[1,",
+        "3,",
+        "9,",
+        "27],",
+        "[1,",
+        "3,",
+        "9,",
+        "27]]",
+        "kernel_predictor_num_blocks",
+        "kernel_predictor_hidden_channels",
+        "kernel_predictor_conv_size",
+        "kernel_predictor_dropout",
+        "initializer_range",
+        "leaky_relu_slope",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "model_in_channels",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "The number of input channels for the UnivNet residual network. This should correspond tonoise_sequence.shape[1] and the value used in the UnivNetFeatureExtractor class."
+        },
+        {
+            "name": "model_hidden_channels",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "The number of hidden channels of each residual block in the UnivNet residual network."
+        },
+        {
+            "name": "num_mel_bins",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "The number of frequency bins in the conditioning log-mel spectrogram. This should correspond to the valueused in the UnivNetFeatureExtractor class."
+        },
+        {
+            "name": "resblock_kernel_sizes",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "A tuple of integers defining the kernel sizes of the 1D convolutional layers in the UnivNet residualnetwork. The length of resblock_kernel_sizes defines the number of resnet blocks and should match that ofresblock_stride_sizes and resblock_dilation_sizes."
+        },
+        {
+            "name": "resblock_stride_sizes",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[8,",
+            "description": "A tuple of integers defining the stride sizes of the 1D convolutional layers in the UnivNet residualnetwork. The length of resblock_stride_sizes should match that of resblock_kernel_sizes andresblock_dilation_sizes."
+        },
+        {
+            "name": "resblock_dilation_sizes",
+            "type": "Tuple[Tuple[int]],List[List[int]]",
+            "optional": true,
+            "default": "[[1,",
+            "description": "A nested tuple of integers defining the dilation rates of the dilated 1D convolutional layers in theUnivNet residual network. The length of resblock_dilation_sizes should match that ofresblock_kernel_sizes and resblock_stride_sizes. The length of each nested list inresblock_dilation_sizes defines the number of convolutional layers per resnet block."
+        },
+        {
+            "name": "kernel_predictor_num_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of residual blocks in the kernel predictor network, which calculates the kernel and bias foreach location variable convolution layer in the UnivNet residual network."
+        },
+        {
+            "name": "kernel_predictor_hidden_channels",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "The number of hidden channels for each residual block in the kernel predictor network."
+        },
+        {
+            "name": "kernel_predictor_conv_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The kernel size of each 1D convolutional layer in the kernel predictor network."
+        },
+        {
+            "name": "kernel_predictor_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for each residual block in the kernel predictor network."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "leaky_relu_slope",
+            "type": "float",
+            "optional": true,
+            "default": "0.2",
+            "description": "The angle of the negative slope used by the leaky ReLU activation."
+        }
+    ],
+    "return": ""
+}

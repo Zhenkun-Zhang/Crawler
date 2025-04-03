@@ -1,0 +1,10 @@
+{
+    "api": "transformers.BertweetTokenizer.normalizeTweet",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tweet"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,27 @@
+{
+    "api": "transformers.TrOCRProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "[ViTImageProcessor/DeiTImageProcessor]",
+            "optional": true,
+            "default": "None",
+            "description": "An instance of [ViTImageProcessor/DeiTImageProcessor]. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "[RobertaTokenizer/XLMRobertaTokenizer]",
+            "optional": true,
+            "default": "None",
+            "description": "An instance of [RobertaTokenizer/XLMRobertaTokenizer]. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,26 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverProjectionPostprocessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "in_channels:",
+        "out_channels"
+    ],
+    "params": [
+        {
+            "name": "in_channels",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of channels in the input."
+        },
+        {
+            "name": "out_channels",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of channels in the output."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,8 @@
+{
+    "api": "transformers.utils.ModelOutput.to_tuple",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

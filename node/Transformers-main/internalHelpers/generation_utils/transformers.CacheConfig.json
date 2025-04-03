@@ -1,0 +1,11 @@
+{
+    "api": "transformers.CacheConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "cache_implementation:",
+        "None"
+    ],
+    "params": [],
+    "return": ""
+}

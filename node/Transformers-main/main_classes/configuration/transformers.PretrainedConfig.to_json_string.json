@@ -1,0 +1,20 @@
+{
+    "api": "transformers.PretrainedConfig.to_json_string",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "use_diff:",
+        "bool",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "use_diff",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, only the difference between the config instance and the default PretrainedConfig()is serialized to JSON string."
+        }
+    ],
+    "return": "str"
+}

@@ -1,0 +1,35 @@
+{
+    "api": "transformers.Emu3Processor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "chat_template",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "Emu3ImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "Emu3TokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer is a required input."
+        },
+        {
+            "name": "chat_template",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "A Jinja template which will be used to convert lists of messagesin a chat into a tokenizable string."
+        }
+    ],
+    "return": ""
+}

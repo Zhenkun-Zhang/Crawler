@@ -1,0 +1,18 @@
+{
+    "api": "transformers.Adafactor.step",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "closure"
+    ],
+    "params": [
+        {
+            "name": "closure",
+            "type": "callable",
+            "optional": true,
+            "default": "None",
+            "description": "A closure that reevaluates the modeland returns the loss."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,62 @@
+{
+    "api": "transformers.DecisionTransformerModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "states:",
+        "actions",
+        "rewards",
+        "returns_to_go",
+        "timesteps",
+        "attention_mask",
+        "output_hidden_states",
+        "output_attentions",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "states",
+            "type": "torch.FloatTensor of shape (batch_size, episode_length, state_dim)",
+            "optional": false,
+            "default": "",
+            "description": "The states for each step in the trajectory"
+        },
+        {
+            "name": "actions",
+            "type": "torch.FloatTensor of shape (batch_size, episode_length, act_dim)",
+            "optional": false,
+            "default": "",
+            "description": "The actions taken by the expert policy for the current state, these are masked for auto regressiveprediction"
+        },
+        {
+            "name": "rewards",
+            "type": "torch.FloatTensor of shape (batch_size, episode_length, 1)",
+            "optional": false,
+            "default": "",
+            "description": "The rewards for each state, action"
+        },
+        {
+            "name": "returns_to_go",
+            "type": "torch.FloatTensor of shape (batch_size, episode_length, 1)",
+            "optional": false,
+            "default": "",
+            "description": "The returns for each state in the trajectory"
+        },
+        {
+            "name": "timesteps",
+            "type": "torch.LongTensor of shape (batch_size, episode_length)",
+            "optional": false,
+            "default": "",
+            "description": "The timestep for each step in the trajectory"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, episode_length)",
+            "optional": false,
+            "default": "",
+            "description": "Masking, used to mask the actions when performing autoregressive prediction"
+        }
+    ],
+    "return": "transformers.models.decision_transformer.modeling_decision_transformer.DecisionTransformerOutput or tuple(torch.FloatTensor)"
+}

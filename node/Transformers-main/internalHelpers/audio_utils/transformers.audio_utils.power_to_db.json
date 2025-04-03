@@ -1,0 +1,44 @@
+{
+    "api": "transformers.audio_utils.power_to_db",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "spectrogram:",
+        "ndarray",
+        "reference",
+        "min_value",
+        "db_range",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "spectrogram",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The input power (mel) spectrogram. Note that a power spectrogram has the amplitudes squared!"
+        },
+        {
+            "name": "reference",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Sets the input spectrogram value that corresponds to 0 dB. For example, use np.max(spectrogram) to setthe loudest part to 0 dB. Must be greater than zero."
+        },
+        {
+            "name": "min_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The spectrogram will be clipped to this minimum value before conversion to decibels, to avoid takinglog(0). The default of 1e-10 corresponds to a minimum of -100 dB. Must be greater than zero."
+        },
+        {
+            "name": "db_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Sets the maximum dynamic range in decibels. For example, if db_range = 80, the difference between thepeak value and the smallest value will never be more than 80 dB. Must be greater than zero."
+        }
+    ],
+    "return": "np.ndarray"
+}

@@ -1,0 +1,167 @@
+{
+    "api": "transformers.SegGptConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "image_size",
+        "448]",
+        "patch_size",
+        "num_channels",
+        "qkv_bias",
+        "mlp_dim",
+        "drop_path_rate",
+        "pretrain_image_size",
+        "decoder_hidden_size",
+        "use_relative_position_embeddings",
+        "merge_index",
+        "intermediate_hidden_state_indices",
+        "11,",
+        "17,",
+        "23]",
+        "beta",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "image_size",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[896,",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to add a bias to the queries, keys and values."
+        },
+        {
+            "name": "mlp_dim",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The dimensionality of the MLP layer in the Transformer encoder. If unset, defaults tohidden_size * 4."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The drop path rate for the dropout layers."
+        },
+        {
+            "name": "pretrain_image_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "The pretrained size of the absolute position embeddings."
+        },
+        {
+            "name": "decoder_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Hidden size for decoder."
+        },
+        {
+            "name": "use_relative_position_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use relative position embeddings in the attention layers."
+        },
+        {
+            "name": "merge_index",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The index of the encoder layer to merge the embeddings."
+        },
+        {
+            "name": "intermediate_hidden_state_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[5,",
+            "description": "The indices of the encoder layers which we store as features for the decoder."
+        },
+        {
+            "name": "beta",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "Regularization factor for SegGptLoss (smooth-l1 loss)."
+        }
+    ],
+    "return": ""
+}

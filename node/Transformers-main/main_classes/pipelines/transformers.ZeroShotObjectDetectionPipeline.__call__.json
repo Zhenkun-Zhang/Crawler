@@ -1,0 +1,24 @@
+{
+    "api": "transformers.ZeroShotObjectDetectionPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ForwardRef('Image.Image'),",
+        "typing.List[typing.Dict[str,",
+        "typing.Any]]]",
+        "candidate_labels",
+        "typing.List[str]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "str, PIL.Image,List[Dict[str, Any]]",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing an http url pointing to an imageA string containing a local path to an imageAn image loaded in PIL directlyYou can use this parameter to send directly a list of images, or a dataset or a generator like so:"
+        }
+    ],
+    "return": ""
+}

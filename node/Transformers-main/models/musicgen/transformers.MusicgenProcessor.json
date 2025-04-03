@@ -1,0 +1,26 @@
+{
+    "api": "transformers.MusicgenProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_extractor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "feature_extractor",
+            "type": "EncodecFeatureExtractor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of EncodecFeatureExtractor. The feature extractor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "T5Tokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of T5Tokenizer. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

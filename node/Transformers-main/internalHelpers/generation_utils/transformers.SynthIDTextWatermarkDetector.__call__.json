@@ -1,0 +1,11 @@
+{
+    "api": "transformers.SynthIDTextWatermarkDetector.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tokenized_outputs:",
+        "Tensor"
+    ],
+    "params": [],
+    "return": ""
+}

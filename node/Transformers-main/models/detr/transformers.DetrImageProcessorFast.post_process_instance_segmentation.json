@@ -1,0 +1,60 @@
+{
+    "api": "transformers.DetrImageProcessorFast.post_process_instance_segmentation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs",
+        "threshold",
+        "mask_threshold",
+        "overlap_mask_area_threshold",
+        "target_sizes",
+        "int]]]",
+        "return_coco_annotation",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "DetrForSegmentation",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The probability score threshold to keep predicted instance masks."
+        },
+        {
+            "name": "mask_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Threshold to use when turning the predicted masks into binary values."
+        },
+        {
+            "name": "overlap_mask_area_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The overlap mask area threshold to merge or discard small disconnected parts within each binaryinstance mask."
+        },
+        {
+            "name": "target_sizes",
+            "type": "List[Tuple]",
+            "optional": true,
+            "default": "",
+            "description": "List of length (batch_size), where each list item (Tuple[int, int]]) corresponds to the requestedfinal size (height, width) of each prediction. If unset, predictions will not be resized."
+        },
+        {
+            "name": "return_coco_annotation",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Defaults to False. If set to True, segmentation maps are returned in COCO run-length encoding (RLE)format."
+        }
+    ],
+    "return": "List[Dict]"
+}

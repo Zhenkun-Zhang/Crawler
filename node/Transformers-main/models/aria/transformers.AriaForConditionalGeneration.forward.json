@@ -1,0 +1,138 @@
+{
+    "api": "transformers.AriaForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "pixel_values",
+        "pixel_mask",
+        "attention_mask",
+        "position_ids",
+        "past_key_values",
+        "inputs_embeds",
+        "labels",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "logits_to_keep",
+        "torch.Tensor]",
+        "cache_position",
+        "**loss_kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor",
+            "optional": true,
+            "default": "",
+            "description": "Input token IDs."
+        },
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Pixel values of the images."
+        },
+        {
+            "name": "pixel_mask",
+            "type": "torch.LongTensor",
+            "optional": true,
+            "default": "",
+            "description": "Mask for the pixel values."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Attention mask."
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor",
+            "optional": true,
+            "default": "",
+            "description": "Position IDs."
+        },
+        {
+            "name": "past_key_values",
+            "type": "List[torch.FloatTensor]",
+            "optional": true,
+            "default": "",
+            "description": "Past key values for efficient processing."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Input embeddings."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the language modeling loss."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use the models cache mechanism."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to output attention weights."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to output hidden states."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return a ModelOutput object."
+        },
+        {
+            "name": "logits_to_keep",
+            "type": "int,torch.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "If an int, calculate logits for the last logits_to_keep tokens, or all input_ids if 0.Otherwise, slice according to the 1D tensor in the sequence length dimension"
+        },
+        {
+            "name": "cache_position",
+            "type": "torch.LongTensor",
+            "optional": true,
+            "default": "",
+            "description": "Cache positions."
+        },
+        {
+            "name": "*loss_kwargs",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional keyword arguments for loss calculation."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the masked language modeling loss. Indices should either be in [0, ..., config.vocab_size] or model.image_token_id (where model is your instance of Idefics3ForConditionalGeneration).Tokens with indices set to model.image_token_id are ignored (masked), the loss is onlycomputed for the tokens with labels in [0, ..., config.vocab_size]."
+        }
+    ],
+    "return": "transformers.models.aria.modeling_aria.AriaCausalLMOutputWithPast or tuple(torch.FloatTensor)"
+}

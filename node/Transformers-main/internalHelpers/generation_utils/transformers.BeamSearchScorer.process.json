@@ -1,0 +1,23 @@
+{
+    "api": "transformers.BeamSearchScorer.process",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "next_scores",
+        "next_tokens",
+        "next_indices",
+        "pad_token_id",
+        "torch.Tensor,",
+        "NoneType]",
+        "eos_token_id",
+        "typing.List[int],",
+        "torch.Tensor,",
+        "NoneType]",
+        "beam_indices",
+        "group_index",
+        "decoder_prompt_len"
+    ],
+    "params": [],
+    "return": ""
+}

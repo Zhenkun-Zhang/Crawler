@@ -1,0 +1,39 @@
+{
+    "api": "transformers.prune_layer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "layer:",
+        "nn.Linear",
+        "|",
+        "Conv1D",
+        "index",
+        "dim",
+        "|",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "layer",
+            "type": "Union[torch.nn.Linear, Conv1D]",
+            "optional": false,
+            "default": "",
+            "description": "The layer to prune."
+        },
+        {
+            "name": "index",
+            "type": "torch.LongTensor",
+            "optional": false,
+            "default": "",
+            "description": "The indices to keep in the layer."
+        },
+        {
+            "name": "dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The dimension on which to keep the indices."
+        }
+    ],
+    "return": "torch.nn.Linear or Conv1D"
+}

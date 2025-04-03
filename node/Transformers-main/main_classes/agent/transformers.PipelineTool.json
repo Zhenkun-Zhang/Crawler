@@ -1,0 +1,74 @@
+{
+    "api": "transformers.PipelineTool",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "model",
+        "pre_processor",
+        "post_processor",
+        "device",
+        "device_map",
+        "model_kwargs",
+        "token",
+        "**hub_kwargs"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "str,PreTrainedModel",
+            "optional": true,
+            "default": "None",
+            "description": "The name of the checkpoint to use for the model, or the instantiated model. If unset, will default to thevalue of the class attribute default_checkpoint."
+        },
+        {
+            "name": "pre_processor",
+            "type": "str,Any",
+            "optional": true,
+            "default": "None",
+            "description": "The name of the checkpoint to use for the pre-processor, or the instantiated pre-processor (can be atokenizer, an image processor, a feature extractor or a processor). Will default to the value of model ifunset."
+        },
+        {
+            "name": "post_processor",
+            "type": "str,Any",
+            "optional": true,
+            "default": "None",
+            "description": "The name of the checkpoint to use for the post-processor, or the instantiated pre-processor (can be atokenizer, an image processor, a feature extractor or a processor). Will default to the pre_processor ifunset."
+        },
+        {
+            "name": "device",
+            "type": "int, str,torch.device",
+            "optional": true,
+            "default": "None",
+            "description": "The device on which to execute the model. Will default to any accelerator available (GPU, MPS etc…), theCPU otherwise."
+        },
+        {
+            "name": "device_map",
+            "type": "str,dict",
+            "optional": true,
+            "default": "None",
+            "description": "If passed along, will be used to instantiate the model."
+        },
+        {
+            "name": "model_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Any keyword argument to send to the model instantiation."
+        },
+        {
+            "name": "token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The token to use as HTTP bearer authorization for remote files. If unset, will use the token generated whenrunning huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "hub_kwargs",
+            "type": "additional keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Any additional keyword argument to send to the methods that will load the data from the Hub."
+        }
+    ],
+    "return": ""
+}

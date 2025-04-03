@@ -1,0 +1,95 @@
+{
+    "api": "transformers.SpeechT5FeatureExtractor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "audio:",
+        "typing.List[float],",
+        "typing.List[numpy.ndarray],",
+        "typing.List[typing.List[float]],",
+        "NoneType]",
+        "audio_target",
+        "typing.List[float],",
+        "typing.List[numpy.ndarray],",
+        "typing.List[typing.List[float]],",
+        "NoneType]",
+        "padding",
+        "str,",
+        "transformers.utils.generic.PaddingStrategy]",
+        "max_length",
+        "truncation",
+        "pad_to_multiple_of",
+        "return_attention_mask",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "sampling_rate",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "audio",
+            "type": "np.ndarray, List[float], List[np.ndarray], List[List[float]]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence or batch of sequences to be processed. Each sequence can be a numpy array, a list of floatvalues, a list of numpy arrays or a list of list of float values. This outputs waveform features. Mustbe mono channel audio, not stereo, i.e. single float per timestep."
+        },
+        {
+            "name": "audio_target",
+            "type": "np.ndarray, List[float], List[np.ndarray], List[List[float]]",
+            "optional": true,
+            "default": "",
+            "description": "The sequence or batch of sequences to be processed as targets. Each sequence can be a numpy array, alist of float values, a list of numpy arrays or a list of list of float values. This outputs log-melspectrogram features."
+        },
+        {
+            "name": "padding",
+            "type": "bool, str,PaddingStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Select a strategy to pad the returned sequences (according to the models padding side and paddingindex) among:True or longest: Pad to the longest sequence in the batch (or no padding if only a singlesequence if provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad (default): No padding (i.e., can output a batch with sequences of differentlengths)."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum length of the returned list and optionally padding length (see above)."
+        },
+        {
+            "name": "truncation",
+            "type": "bool",
+            "optional": false,
+            "default": "",
+            "description": "Activates truncation to cut input sequences longer than max_length to max_length."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set will pad the sequence to a multiple of the provided value.This is especially useful to enable the use of Tensor Cores on NVIDIA hardware with compute capability>= 7.5 (Volta), or on TPUs which benefit from having sequence lengths be a multiple of 128."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the attention mask. If left to the default, will return the attention mask accordingto the specific feature_extractors default.What are attention masks?"
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the audio or audio_target input was sampled. It is strongly recommendedto pass sampling_rate at the forward call to prevent silent errors."
+        }
+    ],
+    "return": ""
+}

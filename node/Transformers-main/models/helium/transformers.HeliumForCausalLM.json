@@ -1,0 +1,11 @@
+{
+    "api": "transformers.HeliumForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "HeliumConfig"
+    ],
+    "params": [],
+    "return": ""
+}

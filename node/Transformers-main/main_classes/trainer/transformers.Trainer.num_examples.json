@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Trainer.num_examples",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "dataloader:",
+        "DataLoader"
+    ],
+    "params": [],
+    "return": ""
+}

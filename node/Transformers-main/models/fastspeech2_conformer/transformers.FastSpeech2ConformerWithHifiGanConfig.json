@@ -1,0 +1,27 @@
+{
+    "api": "transformers.FastSpeech2ConformerWithHifiGanConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "model_config:",
+        "vocoder_config",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "model_config",
+            "type": "typing.Dict",
+            "optional": true,
+            "default": "",
+            "description": "Configuration of the text-to-speech model."
+        },
+        {
+            "name": "vocoder_config",
+            "type": "typing.Dict",
+            "optional": true,
+            "default": "",
+            "description": "Configuration of the vocoder model."
+        }
+    ],
+    "return": ""
+}

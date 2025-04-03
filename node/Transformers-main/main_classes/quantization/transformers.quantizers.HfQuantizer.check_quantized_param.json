@@ -1,0 +1,16 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.check_quantized_param",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "PreTrainedModel",
+        "param_value",
+        "param_name",
+        "state_dict",
+        "typing.Any]",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

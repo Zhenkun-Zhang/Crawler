@@ -1,0 +1,43 @@
+{
+    "api": "transformers.IdeficsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "image_size",
+        "add_end_of_utterance_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "IdeficsImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of IdeficsImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "LlamaTokenizerFast",
+            "optional": false,
+            "default": "None",
+            "description": "An instance of LlamaTokenizerFast. The tokenizer is a required input."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "Image size (assuming a square image)"
+        },
+        {
+            "name": "add_end_of_utterance_token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The string representation of token representing end of utterance"
+        }
+    ],
+    "return": ""
+}

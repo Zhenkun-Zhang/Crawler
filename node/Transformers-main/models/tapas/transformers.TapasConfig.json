@@ -1,0 +1,306 @@
+{
+    "api": "transformers.TapasConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "max_position_embeddings",
+        "type_vocab_sizes",
+        "256,",
+        "256,",
+        "2,",
+        "256,",
+        "256,",
+        "10]",
+        "initializer_range",
+        "layer_norm_eps",
+        "pad_token_id",
+        "positive_label_weight",
+        "num_aggregation_labels",
+        "aggregation_loss_weight",
+        "use_answer_as_supervision",
+        "answer_loss_importance",
+        "use_normalized_answer_loss",
+        "huber_loss_delta",
+        "temperature",
+        "aggregation_temperature",
+        "use_gumbel_for_cells",
+        "use_gumbel_for_aggregation",
+        "average_approximation_function",
+        "cell_selection_preference",
+        "answer_loss_cutoff",
+        "max_num_rows",
+        "max_num_columns",
+        "average_logits_per_cell",
+        "select_one_column",
+        "allow_empty_column_selection",
+        "init_cell_selection_weights_to_zero",
+        "reset_position_index_per_cell",
+        "disable_per_token_loss",
+        "aggregation_labels",
+        "no_aggregation_label_index",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30522",
+            "description": "Vocabulary size of the TAPAS model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling TapasModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,Callable",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, swish and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "type_vocab_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "The vocabulary sizes of the token_type_ids passed when calling TapasModel."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "positive_label_weight",
+            "type": "float",
+            "optional": true,
+            "default": "10.0",
+            "description": "Weight for positive labels."
+        },
+        {
+            "name": "num_aggregation_labels",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The number of aggregation operators to predict."
+        },
+        {
+            "name": "aggregation_loss_weight",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Importance weight for the aggregation loss."
+        },
+        {
+            "name": "use_answer_as_supervision",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether to use the answer as the only supervision for aggregation examples."
+        },
+        {
+            "name": "answer_loss_importance",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Importance weight for the regression loss."
+        },
+        {
+            "name": "use_normalized_answer_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to normalize the answer loss by the maximum of the predicted and expected value."
+        },
+        {
+            "name": "huber_loss_delta",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "Delta parameter used to calculate the regression loss."
+        },
+        {
+            "name": "temperature",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Value used to control (OR change) the skewness of cell logits probabilities."
+        },
+        {
+            "name": "aggregation_temperature",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "Scales aggregation logits to control the skewness of probabilities."
+        },
+        {
+            "name": "use_gumbel_for_cells",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to apply Gumbel-Softmax to cell selection."
+        },
+        {
+            "name": "use_gumbel_for_aggregation",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to apply Gumbel-Softmax to aggregation selection."
+        },
+        {
+            "name": "average_approximation_function",
+            "type": "string",
+            "optional": true,
+            "default": "ratio",
+            "description": "Method to calculate the expected average of cells in the weak supervision case. One of ratio,first_order or second_order."
+        },
+        {
+            "name": "cell_selection_preference",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "Preference for cell selection in ambiguous cases. Only applicable in case of weak supervision foraggregation (WTQ, WikiSQL). If the total mass of the aggregation probabilities (excluding the NONEoperator) is higher than this hyperparameter, then aggregation is predicted for an example."
+        },
+        {
+            "name": "answer_loss_cutoff",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "Ignore examples with answer loss larger than cutoff."
+        },
+        {
+            "name": "max_num_rows",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Maximum number of rows."
+        },
+        {
+            "name": "max_num_columns",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "Maximum number of columns."
+        },
+        {
+            "name": "average_logits_per_cell",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to average logits per cell."
+        },
+        {
+            "name": "select_one_column",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to constrain the model to only select cells from a single column."
+        },
+        {
+            "name": "allow_empty_column_selection",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to allow not to select any column."
+        },
+        {
+            "name": "init_cell_selection_weights_to_zero",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to initialize cell selection weights to 0 so that the initial probabilities are 50%."
+        },
+        {
+            "name": "reset_position_index_per_cell",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to restart position indexes at every cell (i.e. use relative position embeddings)."
+        },
+        {
+            "name": "disable_per_token_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to disable any (strong or weak) supervision on cells."
+        },
+        {
+            "name": "aggregation_labels",
+            "type": "Dict[int, label]",
+            "optional": true,
+            "default": "None",
+            "description": "The aggregation labels used to aggregate the results. For example, the WTQ models have the followingaggregation labels: {0: NONE, 1: SUM, 2: AVERAGE, 3: COUNT}"
+        },
+        {
+            "name": "no_aggregation_label_index",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "If the aggregation labels are defined and one of these labels represents No aggregation, this should beset to its index. For example, the WTQ models have the NONE aggregation label at index 0, so that valueshould be set to 0 for these models."
+        }
+    ],
+    "return": ""
+}

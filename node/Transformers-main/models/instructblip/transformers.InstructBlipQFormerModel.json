@@ -1,0 +1,11 @@
+{
+    "api": "transformers.InstructBlipQFormerModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "InstructBlipQFormerConfig"
+    ],
+    "params": [],
+    "return": ""
+}

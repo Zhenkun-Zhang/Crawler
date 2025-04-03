@@ -1,0 +1,19 @@
+{
+    "api": "transformers.utils.logging.set_verbosity",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "verbosity:",
+        "int"
+    ],
+    "params": [
+        {
+            "name": "verbosity",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Logging level, e.g., one of:transformers.logging.CRITICAL or transformers.logging.FATALtransformers.logging.ERRORtransformers.logging.WARNING or transformers.logging.WARNtransformers.logging.INFOtransformers.logging.DEBUG"
+        }
+    ],
+    "return": ""
+}

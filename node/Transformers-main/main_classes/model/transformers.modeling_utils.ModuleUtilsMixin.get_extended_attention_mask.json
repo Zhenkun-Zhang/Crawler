@@ -1,0 +1,28 @@
+{
+    "api": "transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "attention_mask:",
+        "Tensor",
+        "input_shape",
+        "dtype"
+    ],
+    "params": [
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Mask with ones indicating tokens to attend to, zeros for tokens to ignore."
+        },
+        {
+            "name": "input_shape",
+            "type": "Tuple[int]",
+            "optional": false,
+            "default": "",
+            "description": "The shape of the input to the model."
+        }
+    ],
+    "return": ""
+}

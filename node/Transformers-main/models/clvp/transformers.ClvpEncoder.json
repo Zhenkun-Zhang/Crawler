@@ -1,0 +1,19 @@
+{
+    "api": "transformers.ClvpEncoder",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "ClvpConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "ClvpConfig"
+        }
+    ],
+    "return": ""
+}

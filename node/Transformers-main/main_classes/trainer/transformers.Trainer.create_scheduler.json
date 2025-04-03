@@ -1,0 +1,20 @@
+{
+    "api": "transformers.Trainer.create_scheduler",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "num_training_steps:",
+        "int",
+        "optimizer"
+    ],
+    "params": [
+        {
+            "name": "num_training_steps",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of training steps to do."
+        }
+    ],
+    "return": ""
+}

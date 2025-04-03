@@ -1,0 +1,107 @@
+{
+    "api": "transformers.ConvNextV2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "patch_size",
+        "num_stages",
+        "hidden_sizes",
+        "depths",
+        "hidden_act",
+        "initializer_range",
+        "layer_norm_eps",
+        "drop_path_rate",
+        "image_size",
+        "out_features",
+        "out_indices",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Patch size to use in the patch embedding layer."
+        },
+        {
+            "name": "num_stages",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The number of stages in the model."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality (hidden size) at each stage."
+        },
+        {
+            "name": "depths",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "Depth (number of blocks) for each stage."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in each block. If string, gelu, relu,selu and gelu_new are supported."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The drop rate for stochastic depth."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "out_features",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of features to output. Can be any of stem, stage1, stage2, etc.(depending on how many stages the model has). If unset and out_indices is set, will default to thecorresponding stages. If unset and out_indices is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        },
+        {
+            "name": "out_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of indices of features to output. Can be any of 0, 1, 2, etc. (depending on howmany stages the model has). If unset and out_features is set, will default to the corresponding stages.If unset and out_features is unset, will default to the last stage. Must be in thesame order as defined in the stage_names attribute."
+        }
+    ],
+    "return": ""
+}

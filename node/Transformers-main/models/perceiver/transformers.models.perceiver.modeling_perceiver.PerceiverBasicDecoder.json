@@ -1,0 +1,117 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverBasicDecoder",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PerceiverConfig",
+        "output_num_channels",
+        "position_encoding_type",
+        "output_index_dims",
+        "num_channels",
+        "subsampled_index_dims",
+        "qk_channels",
+        "v_channels",
+        "num_heads",
+        "widening_factor",
+        "use_query_residual",
+        "concat_preprocessed_input",
+        "final_project",
+        "position_encoding_only",
+        "**position_encoding_kwargs"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "[PerceiverConfig]",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration."
+        },
+        {
+            "name": "output_num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of channels in the output. Will only be used in case final_project is set to True."
+        },
+        {
+            "name": "position_encoding_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The type of position encoding to use. Can be either trainable, fourier, or none."
+        },
+        {
+            "name": "output_index_dims",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of dimensions of the output queries. Ignored if position_encoding_type == none."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of channels of the decoder queries. Ignored if position_encoding_type == none."
+        },
+        {
+            "name": "qk_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of channels of the queries and keys in the cross-attention layer."
+        },
+        {
+            "name": "v_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of channels of the values in the cross-attention layer."
+        },
+        {
+            "name": "num_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of attention heads in the cross-attention layer."
+        },
+        {
+            "name": "widening_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The widening factor of the cross-attention layer."
+        },
+        {
+            "name": "use_query_residual",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use a residual connection between the query and the output of the cross-attention layer."
+        },
+        {
+            "name": "concat_preprocessed_input",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to concatenate the preprocessed input to the query."
+        },
+        {
+            "name": "final_project",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to project the output of the cross-attention layer to a target dimension."
+        },
+        {
+            "name": "position_encoding_only",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to only use this class to define output queries."
+        }
+    ],
+    "return": ""
+}

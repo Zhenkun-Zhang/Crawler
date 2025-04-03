@@ -1,0 +1,56 @@
+{
+    "api": "transformers.BatchEncoding",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "data:",
+        "typing.Optional[typing.Dict[str,",
+        "typing.Any]]",
+        "encoding",
+        "typing.Sequence[tokenizers.Encoding],",
+        "NoneType]",
+        "tensor_type",
+        "str,",
+        "transformers.utils.generic.TensorType]",
+        "prepend_batch_axis",
+        "n_sequences"
+    ],
+    "params": [
+        {
+            "name": "data",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of lists/arrays/tensors returned by the __call__/encode_plus/batch_encode_plus methods(input_ids, attention_mask, etc.)."
+        },
+        {
+            "name": "encoding",
+            "type": "tokenizers.Encoding,Sequence[tokenizers.Encoding]",
+            "optional": true,
+            "default": "",
+            "description": "If the tokenizer is a fast tokenizer which outputs additional information like mapping from word/characterspace to token space the tokenizers.Encoding instance or list of instance (for batches) hold thisinformation."
+        },
+        {
+            "name": "tensor_type",
+            "type": "Union[None, str, TensorType]",
+            "optional": true,
+            "default": "",
+            "description": "You can give a tensor_type here to convert the lists of integers in PyTorch/TensorFlow/Numpy Tensors atinitialization."
+        },
+        {
+            "name": "prepend_batch_axis",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to add a batch axis when converting to tensors (see tensor_type above). Note that thisparameter has an effect if the parameter tensor_type is set, otherwise has no effect."
+        },
+        {
+            "name": "n_sequences",
+            "type": "Optional[int]",
+            "optional": true,
+            "default": "",
+            "description": "You can give a tensor_type here to convert the lists of integers in PyTorch/TensorFlow/Numpy Tensors atinitialization."
+        }
+    ],
+    "return": ""
+}

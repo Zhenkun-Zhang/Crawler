@@ -1,0 +1,83 @@
+{
+    "api": "transformers.GemmaTokenizerFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "tokenizer_file",
+        "clean_up_tokenization_spaces",
+        "unk_token",
+        "bos_token",
+        "eos_token",
+        "pad_token",
+        "add_bos_token",
+        "add_eos_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "SentencePiece file (generally has a .model extension) thatcontains the vocabulary necessary to instantiate a tokenizer."
+        },
+        {
+            "name": "tokenizer_file",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "tokenizers file (generally has a .json extension) thatcontains everything needed to load the tokenizer."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to cleanup spaces after decoding, cleanup consists in removing potential artifacts likeextra spaces."
+        },
+        {
+            "name": "unk_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "bos_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "<bos>",
+            "description": "The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str,tokenizers.AddedToken",
+            "optional": true,
+            "default": "<eos>",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The padding token"
+        },
+        {
+            "name": "add_bos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to add an bos_token at the start of sequences."
+        },
+        {
+            "name": "add_eos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to add an eos_token at the end of sequences."
+        }
+    ],
+    "return": ""
+}

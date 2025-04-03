@@ -1,0 +1,135 @@
+{
+    "api": "transformers.Trainer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "typing.Union[transformers.modeling_utils.PreTrainedModel,",
+        "torch.nn.modules.module.Module,",
+        "NoneType]",
+        "args",
+        "data_collator",
+        "train_dataset",
+        "torch.utils.data.dataset.IterableDataset,",
+        "ForwardRef('datasets.Dataset'),",
+        "NoneType]",
+        "eval_dataset",
+        "dict[str,",
+        "torch.utils.data.dataset.Dataset],",
+        "ForwardRef('datasets.Dataset'),",
+        "NoneType]",
+        "processing_class",
+        "transformers.image_processing_utils.BaseImageProcessor,",
+        "transformers.feature_extraction_utils.FeatureExtractionMixin,",
+        "transformers.processing_utils.ProcessorMixin,",
+        "NoneType]",
+        "model_init",
+        "transformers.modeling_utils.PreTrainedModel]]",
+        "compute_loss_func",
+        "compute_metrics",
+        "dict]]",
+        "callbacks",
+        "optimizers",
+        "None)",
+        "optimizer_cls_and_kwargs",
+        "dict[str,",
+        "typing.Any]]]",
+        "preprocess_logits_for_metrics",
+        "torch.Tensor],",
+        "torch.Tensor]]"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "PreTrainedModel,torch.nn.Module",
+            "optional": true,
+            "default": "",
+            "description": "The model to train, evaluate or use for predictions. If not provided, a model_init must be passed.Trainer is optimized to work with the PreTrainedModel provided by the library. You can still useyour own models defined as torch.nn.Module as long as they work the same way as the 🤗 Transformersmodels."
+        },
+        {
+            "name": "args",
+            "type": "TrainingArguments",
+            "optional": true,
+            "default": "",
+            "description": "The arguments to tweak for training. Will default to a basic instance of TrainingArguments with theoutput_dir set to a directory named tmp_trainer in the current directory if not provided."
+        },
+        {
+            "name": "data_collator",
+            "type": "DataCollator",
+            "optional": true,
+            "default": "",
+            "description": "The function to use to form a batch from a list of elements of train_dataset or eval_dataset. Willdefault to default_data_collator() if no processing_class is provided, an instance ofDataCollatorWithPadding otherwise if the processing_class is a feature extractor or tokenizer."
+        },
+        {
+            "name": "train_dataset",
+            "type": "Union[torch.utils.data.Dataset, torch.utils.data.IterableDataset, datasets.Dataset]",
+            "optional": true,
+            "default": "",
+            "description": "The dataset to use for training. If it is a Dataset, columns not accepted by themodel.forward() method are automatically removed.Note that if its a torch.utils.data.IterableDataset with some randomization and you are training in adistributed fashion, your iterable dataset should either use a internal attribute generator that is atorch.Generator for the randomization that must be identical on all processes (and the Trainer willmanually set the seed of this generator at each epoch) or have a set_epoch() method that internallysets the seed of the RNGs used."
+        },
+        {
+            "name": "eval_dataset",
+            "type": "Union[torch.utils.data.Dataset, Dict[str, torch.utils.data.Dataset, datasets.Dataset]",
+            "optional": true,
+            "default": "",
+            "description": "The dataset to use for evaluation. If it is a Dataset, columns not accepted by themodel.forward() method are automatically removed. If it is a dictionary, it will evaluate on eachdataset prepending the dictionary key to the metric name."
+        },
+        {
+            "name": "processing_class",
+            "type": "PreTrainedTokenizerBase,BaseImageProcessor,FeatureExtractionMixin,ProcessorMixin",
+            "optional": true,
+            "default": "",
+            "description": "Processing class used to process the data. If provided, will be used to automatically process the inputsfor the model, and it will be saved along the model to make it easier to rerun an interrupted training orreuse the fine-tuned model.This supercedes the tokenizer argument, which is now deprecated."
+        },
+        {
+            "name": "model_init",
+            "type": "Callable[[], PreTrainedModel]",
+            "optional": true,
+            "default": "",
+            "description": "A function that instantiates the model to be used. If provided, each call to train() will startfrom a new instance of the model as given by this function.The function may have zero argument, or a single one containing the optuna/Ray Tune/SigOpt trial object, tobe able to choose different architectures according to hyper parameters (such as layer count, sizes ofinner layers, dropout probabilities etc)."
+        },
+        {
+            "name": "compute_loss_func",
+            "type": "Callable",
+            "optional": true,
+            "default": "",
+            "description": "A function that accepts the raw model outputs, labels, and the number of items in the entire accumulatedbatch (batch_size * gradient_accumulation_steps) and returns the loss. For example, see the default loss function used by Trainer."
+        },
+        {
+            "name": "compute_metrics",
+            "type": "Callable[[EvalPrediction], Dict]",
+            "optional": true,
+            "default": "",
+            "description": "The function that will be used to compute metrics at evaluation. Must take a EvalPrediction and returna dictionary string to metric values. Note When passing TrainingArgs with batch_eval_metrics set toTrue, your compute_metrics function must take a boolean compute_result argument. This will be triggeredafter the last eval batch to signal that the function needs to calculate and return the global summarystatistics rather than accumulating the batch-level statistics"
+        },
+        {
+            "name": "callbacks",
+            "type": "List of TrainerCallback",
+            "optional": true,
+            "default": "",
+            "description": "A list of callbacks to customize the training loop. Will add those to the list of default callbacksdetailed in here.If you want to remove one of the default callbacks used, use the Trainer.remove_callback() method."
+        },
+        {
+            "name": "optimizers",
+            "type": "Tuple[torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR]",
+            "optional": true,
+            "default": "",
+            "description": "A tuple containing the optimizer and the scheduler to use. Will default to an instance of AdamW on yourmodel and a scheduler given by get_linear_schedule_with_warmup() controlled by args."
+        },
+        {
+            "name": "optimizer_cls_and_kwargs",
+            "type": "Tuple[Type[torch.optim.Optimizer], Dict[str, Any]]",
+            "optional": true,
+            "default": "",
+            "description": "A tuple containing the optimizer class and keyword arguments to use.Overrides optim and optim_args in args. Incompatible with the optimizers argument.Unlike optimizers, this argument avoids the need to place model parameters on the correct devices before initializing the Trainer."
+        },
+        {
+            "name": "preprocess_logits_for_metrics",
+            "type": "Callable[[torch.Tensor, torch.Tensor], torch.Tensor]",
+            "optional": true,
+            "default": "",
+            "description": "A function that preprocess the logits right before caching them at each evaluation step. Must take twotensors, the logits and the labels, and return the logits once processed as desired. The modifications madeby this function will be reflected in the predictions received by compute_metrics.Note that the labels (second parameter) will be None if the dataset does not have them."
+        }
+    ],
+    "return": ""
+}

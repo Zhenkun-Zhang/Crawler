@@ -1,0 +1,108 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase.from_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pretrained_model_name_or_path:",
+        "os.PathLike]",
+        "*init_inputs",
+        "cache_dir",
+        "os.PathLike,",
+        "NoneType]",
+        "force_download",
+        "local_files_only",
+        "token",
+        "str,",
+        "NoneType]",
+        "revision",
+        "trust_remote_code",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "pretrained_model_name_or_path",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "Can be either:A string, the model id of a predefined tokenizer hosted inside a model repo on huggingface.co.A path to a directory containing vocabulary files required by the tokenizer, for instance savedusing the save_pretrained() method, e.g.,./my_model_directory/.(Deprecated, not applicable to all derived classes) A path or url to a single saved vocabularyfile (if and only if the tokenizer only requires a single vocabulary file like Bert or XLNet), e.g.,./my_model_directory/vocab.txt."
+        },
+        {
+            "name": "cache_dir",
+            "type": "str,os.PathLike",
+            "optional": true,
+            "default": "",
+            "description": "Path to a directory in which a downloaded predefined tokenizer vocabulary files should be cached if thestandard cache should not be used."
+        },
+        {
+            "name": "force_download",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to force the (re-)download the vocabulary files and override the cached versions if theyexist."
+        },
+        {
+            "name": "resume_download",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Deprecated and ignored. All downloads are now resumed by default when possible.Will be removed in v5 of Transformers."
+        },
+        {
+            "name": "proxies",
+            "type": "Dict[str, str]",
+            "optional": true,
+            "default": "",
+            "description": "A dictionary of proxy servers to use by protocol or endpoint, e.g., {http: foo.bar:3128, http://hostname: foo.bar:4012}. The proxies are used on each request."
+        },
+        {
+            "name": "token",
+            "type": "str,bool",
+            "optional": true,
+            "default": "",
+            "description": "The token to use as HTTP bearer authorization for remote files. If True, will use the token generatedwhen running huggingface-cli login (stored in ~/.huggingface)."
+        },
+        {
+            "name": "local_files_only",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to only rely on local files and not to attempt to download any files."
+        },
+        {
+            "name": "revision",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use agit-based system for storing models and other artifacts on huggingface.co, so revision can be anyidentifier allowed by git."
+        },
+        {
+            "name": "subfolder",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "In case the relevant files are located inside a subfolder of the model repo on huggingface.co (e.g. forfacebook/rag-token-base), specify it here."
+        },
+        {
+            "name": "inputs",
+            "type": "additional positional arguments",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed along to the Tokenizer __init__ method."
+        },
+        {
+            "name": "trust_remote_code",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to allow for custom models defined on the Hub in their own modeling files. This optionshould only be set to True for repositories you trust and in which you have read the code, as it willexecute code present on the Hub on your local machine."
+        },
+        {
+            "name": "kwargs",
+            "type": "additional keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the Tokenizer __init__ method. Can be used to set special tokens like bos_token,eos_token, unk_token, sep_token, pad_token, cls_token, mask_token,additional_special_tokens. See parameters in the __init__ for more details."
+        }
+    ],
+    "return": ""
+}

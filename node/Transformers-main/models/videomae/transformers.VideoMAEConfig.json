@@ -1,0 +1,179 @@
+{
+    "api": "transformers.VideoMAEConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_size",
+        "patch_size",
+        "num_channels",
+        "num_frames",
+        "tubelet_size",
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "qkv_bias",
+        "use_mean_pooling",
+        "decoder_num_attention_heads",
+        "decoder_hidden_size",
+        "decoder_num_hidden_layers",
+        "decoder_intermediate_size",
+        "norm_pix_loss",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "num_frames",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The number of frames in each video."
+        },
+        {
+            "name": "tubelet_size",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The number of tubelets."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to add a bias to the queries, keys and values."
+        },
+        {
+            "name": "use_mean_pooling",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to mean pool the final hidden states instead of using the final hidden state of the [CLS] token."
+        },
+        {
+            "name": "decoder_num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "Number of attention heads for each attention layer in the decoder."
+        },
+        {
+            "name": "decoder_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "384",
+            "description": "Dimensionality of the decoder."
+        },
+        {
+            "name": "decoder_num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "Number of hidden layers in the decoder."
+        },
+        {
+            "name": "decoder_intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "1536",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the decoder."
+        },
+        {
+            "name": "norm_pix_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to normalize the target patch pixels."
+        }
+    ],
+    "return": ""
+}

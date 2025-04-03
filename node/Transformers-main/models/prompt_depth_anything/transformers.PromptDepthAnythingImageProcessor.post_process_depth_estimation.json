@@ -1,0 +1,31 @@
+{
+    "api": "transformers.PromptDepthAnythingImageProcessor.post_process_depth_estimation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs:",
+        "DepthEstimatorOutput",
+        "target_sizes",
+        "typing.List[typing.Tuple[int,",
+        "int]],",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "DepthEstimatorOutput",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "target_sizes",
+            "type": "TensorType,List[Tuple[int, int]]",
+            "optional": true,
+            "default": "",
+            "description": "Tensor of shape (batch_size, 2) or list of tuples (Tuple[int, int]) containing the target size(height, width) of each image in the batch. If left to None, predictions will not be resized."
+        }
+    ],
+    "return": "List[Dict[str, TensorType]]"
+}

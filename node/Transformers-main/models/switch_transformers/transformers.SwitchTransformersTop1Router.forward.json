@@ -1,0 +1,19 @@
+{
+    "api": "transformers.SwitchTransformersTop1Router.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "hidden_states:",
+        "Tensor"
+    ],
+    "params": [
+        {
+            "name": "hidden_states",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "[num_groups, tokens_per_group, hidden_dim] inputs to send to experts."
+        }
+    ],
+    "return": ""
+}

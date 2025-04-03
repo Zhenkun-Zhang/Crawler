@@ -1,0 +1,11 @@
+{
+    "api": "transformers.ZambaForCausalLM",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "ZambaConfig"
+    ],
+    "params": [],
+    "return": ""
+}

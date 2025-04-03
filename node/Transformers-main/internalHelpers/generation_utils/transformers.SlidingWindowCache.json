@@ -1,0 +1,63 @@
+{
+    "api": "transformers.SlidingWindowCache",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PretrainedConfig",
+        "max_batch_size",
+        "max_cache_len",
+        "device",
+        "str,",
+        "NoneType]",
+        "layer_device_map",
+        "typing.Union[str,",
+        "torch.device,",
+        "int]]]"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "PretrainedConfig",
+            "optional": false,
+            "default": "",
+            "description": "The configuration file defining the shape-related attributes required to initialize the static cache."
+        },
+        {
+            "name": "max_batch_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The maximum batch size with which the model will be used. Note that a new instance must be instantiated if asmaller batch size is used."
+        },
+        {
+            "name": "max_cache_len",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum sequence length with which the model will be used."
+        },
+        {
+            "name": "device",
+            "type": "torch.device,str",
+            "optional": true,
+            "default": "",
+            "description": "The device on which the cache should be initialized. If youre using more than 1 computation device, youshould pass the layer_device_map argument instead."
+        },
+        {
+            "name": "dtype",
+            "type": "torch.dtype",
+            "optional": true,
+            "default": "torch.float32",
+            "description": "The default dtype to use when initializing the layer."
+        },
+        {
+            "name": "layer_device_map",
+            "type": "Optional[Dict[int, Union[str, torch.device, int]]]]",
+            "optional": true,
+            "default": "",
+            "description": "Mapping between the layers and its device. This is required when you are manually initializing the cacheand the model is split between different gpus. You can know which layers mapped to which device bychecking the associated device_map: model.hf_device_map."
+        }
+    ],
+    "return": ""
+}

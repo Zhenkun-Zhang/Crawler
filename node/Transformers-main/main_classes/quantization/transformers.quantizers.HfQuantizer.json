@@ -1,0 +1,12 @@
+{
+    "api": "transformers.quantizers.HfQuantizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "quantization_config:",
+        "QuantizationConfigMixin",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

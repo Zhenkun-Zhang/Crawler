@@ -1,0 +1,10 @@
+{
+    "api": "transformers.PreTrainedTokenizerFast.get_added_vocab",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        ")"
+    ],
+    "params": [],
+    "return": "Dict[str, int]"
+}

@@ -1,0 +1,28 @@
+{
+    "api": "transformers.NllbMoeSparseMLP.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "hidden_states:",
+        "Tensor",
+        "padding_mask",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "hidden_states",
+            "type": "torch.Tensor of shape (batch_size, sequence_length, hidden_dim)",
+            "optional": false,
+            "default": "",
+            "description": "The hidden states"
+        },
+        {
+            "name": "padding_mask",
+            "type": "torch.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Attention mask. Can be in the causal form or not."
+        }
+    ],
+    "return": "hidden_states (torch.Tensor of shape (batch_size, sequence_length, hidden_dim))"
+}

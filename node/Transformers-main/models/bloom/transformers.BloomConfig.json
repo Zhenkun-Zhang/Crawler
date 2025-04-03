@@ -1,0 +1,109 @@
+{
+    "api": "transformers.BloomConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "n_layer",
+        "n_head",
+        "layer_norm_epsilon",
+        "initializer_range",
+        "use_cache",
+        "bos_token_id",
+        "eos_token_id",
+        "apply_residual_connection_post_layernorm",
+        "hidden_dropout",
+        "attention_dropout",
+        "pretraining_tp",
+        "slow_but_exact",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "250880",
+            "description": "Vocabulary size of the Bloom model. Defines the maximum number of different tokens that can be representedby the inputs_ids passed when calling BloomModel. Check thisdiscussion on how thevocab_size has been defined."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon to use in the layer normalization layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "apply_residual_connection_post_layernorm",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "If enabled, use the layer norm of the hidden states as the residual in the transformer blocks"
+        },
+        {
+            "name": "hidden_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Dropout rate of the dropout function on the bias dropout."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Dropout rate applied to the attention probs"
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "pretraining_tp",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Experimental feature. Tensor parallelism rank used during pretraining with Megatron. Please refer to thisdocument to understand more about it. This value isnecessary to ensure exact reproducibility of the pretraining results. Please refer to thisissue. Note also that this is enabled only whenslow_but_exact=True."
+        },
+        {
+            "name": "slow_but_exact",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Experimental feature. Whether to use slow but exact implementation of the attention mechanism. Whilemerging the TP rank tensors, due to slicing operations the results may be slightly different between themodel trained on Megatron and our model. Please refer to thisissue. A solution to obtain more accurate results is toenable this feature. Enabling this will hurt the computational time of the inference. Will be probablyresolved in the future once the main model has been fine-tuned with TP_rank=1."
+        }
+    ],
+    "return": ""
+}

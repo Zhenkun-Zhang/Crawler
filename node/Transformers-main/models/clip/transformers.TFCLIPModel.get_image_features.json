@@ -1,0 +1,46 @@
+{
+    "api": "transformers.TFCLIPModel.get_image_features",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "TFModelInputType",
+        "|",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "training",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "np.ndarray, tf.Tensor, List[tf.Tensor] `Dict[str, tf.Tensor],Dict[str, np.ndarray] and each example must have the shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeCLIPImageProcessor.call() for details. output_attentions (bool, optional): Whether or not toreturn the attentions tensors of all attention layers. See attentions under returned tensors for moredetail. This argument can be used only in eager mode, in graph mode the value in the config will be usedinstead."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail. This argument can be used only in eager mode, in graph mode the value in the config will beused instead."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple. This argument can be used ineager mode, in graph mode the value will always be set to True."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        }
+    ],
+    "return": "image_features (tf.Tensor of shape (batch_size, output_dim)"
+}

@@ -1,0 +1,151 @@
+{
+    "api": "transformers.MllamaForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "pixel_values",
+        "aspect_ratio_mask",
+        "aspect_ratio_ids",
+        "attention_mask",
+        "cross_attention_mask",
+        "cross_attention_states",
+        "position_ids",
+        "past_key_values",
+        "typing.List[torch.FloatTensor],",
+        "NoneType]",
+        "inputs_embeds",
+        "labels",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "cache_position",
+        "logits_to_keep",
+        "torch.Tensor]",
+        "**loss_kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, max_num_images, max_num_tiles, channels, image_size, image_size)) -- The tensors corresponding to the input images. Pixel values can be obtained using [AutoImageProcessor](/docs/transformers/main/en/model_doc/auto#transformers.AutoImageProcessor). See [MllamaImageProcessor.__call__()](/docs/transformers/main/en/model_doc/poolformer#transformers.PoolFormerFeatureExtractor.__call__) for details ([]MllamaProcessor`] usesMllamaImageProcessor for processing images).",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "aspect_ratio_mask",
+            "type": "torch.Tensor of shape (batch_size, max_num_images, max_num_tiles",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding tiles. Mask values selected in [0, 1]:1 for tiles that are not masked,0 for tiles that are masked."
+        },
+        {
+            "name": "aspect_ratio_ids",
+            "type": "torch.Tensor of shape (batch_size, max_num_images",
+            "optional": true,
+            "default": "",
+            "description": "Aspect ratio ids used to select the appropriate precomputed tile embeddings based on the aspect ratio of each input image.These ids correspond to indices in the models list of supported aspect ratios, offset by 1.For example, if the model supports aspect ratios [[1, 1], [1, 2], [2, 1]]:An image with aspect ratio [1, 1] would have ID 1An image with aspect ratio [1, 2] would have ID 2An image with aspect ratio [2, 1] would have ID 3The id 0 is reserved for padding (i.e., no image).If an image has aspect ratio [1, 2], that means it was split into 2 tiles horizontally, and its aspect_ratio_id would be 2."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.If past_key_values is used, optionally only the last input_ids have to be input (seepast_key_values).If you want to change padding behavior, you should read modeling_opt._prepare_decoder_attention_maskand modify to your needs. See diagram 1 in the paper for moreinformation on the default strategy.1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "cross_attention_mask",
+            "type": "torch.Tensor of shape (batch_size, seq_length, max_num_images, max_num_tiles",
+            "optional": true,
+            "default": "",
+            "description": "Cross-attention mask to control the interaction between text tokens and image tiles.This 4D tensor defines which image tiles each text token should attend to.For each text token (in seq_length):1 indicates the token should attend to the corresponding image tile0 indicates the token should not attend to the corresponding image tile"
+        },
+        {
+            "name": "cross_attention_states",
+            "type": "torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Output of the vision model, used for cross-attention. This tensor contains the processed image features thatthe language model will attend to."
+        },
+        {
+            "name": "position_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.n_positions - 1].What are position IDs?"
+        },
+        {
+            "name": "past_key_values",
+            "type": "Cache,tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used to speed up sequential decoding. This typically consists in the past_key_valuesreturned by the model at a previous stage of decoding, when use_cache=True or config.use_cache=True.Two formats are allowed:a Cache instance, see ourkv cache guide,Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors ofshape (batch_size, num_heads, sequence_length, embed_size_per_head)). This is also known as the legacycache format.The model will output the same cache format that is fed as input. If no past_key_values are passed, thelegacy cache format will be returned.If past_key_values are used, the user can optionally input only the last input_ids (those that donthave their past key value states given to this model) of shape (batch_size, 1) instead of all input_idsof shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "cache_position",
+            "type": "torch.LongTensor of shape (sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices depicting the position of the input sequence tokens in the sequence. Contrarily to position_ids,this tensor is not affected by padding. It is used to update the cache in the correct position and to inferthe complete sequence length."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the masked language modeling loss. Indices should either be in [0, ..., config.vocab_size] or -100 (see input_ids docstring). Tokens with indices set to -100 are ignored(masked), the loss is only computed for the tokens with labels in [0, ..., config.vocab_size]."
+        },
+        {
+            "name": "logits_to_keep",
+            "type": "int,torch.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "If an int, compute logits for the last logits_to_keep tokens. If 0, calculate logits for allinput_ids (special case). Only last token logits are needed for generation, and calculating them only for thattoken can save memory, which becomes pretty significant for long sequences or large vocabulary size.If a torch.Tensor, must be 1D corresponding to the indices to keep in the sequence length dimension.This is useful when using packed tensor format (single dimension for batch and sequence length)."
+        }
+    ],
+    "return": "transformers.modeling_outputs.CausalLMOutputWithPast or tuple(torch.FloatTensor)"
+}

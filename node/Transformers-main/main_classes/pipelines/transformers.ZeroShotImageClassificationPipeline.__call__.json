@@ -1,0 +1,44 @@
+{
+    "api": "transformers.ZeroShotImageClassificationPipeline.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "typing.Union[str,",
+        "typing.List[str],",
+        "ForwardRef('Image'),",
+        "typing.List[ForwardRef('Image')]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "str, List[str], PIL.Image,List[PIL.Image]",
+            "optional": false,
+            "default": "",
+            "description": "The pipeline handles three types of images:A string containing a http link pointing to an imageA string containing a local path to an imageAn image loaded in PIL directly"
+        },
+        {
+            "name": "candidate_labels",
+            "type": "List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The candidate labels for this image. They will be formatted using hypothesis_template."
+        },
+        {
+            "name": "hypothesis_template",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The format used in conjunction with candidate_labels to attempt the image classification byreplacing the placeholder with the candidate_labels. Pass {} if candidate_labels arealready formatted."
+        },
+        {
+            "name": "timeout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The maximum time in seconds to wait for fetching images from the web. If None, no timeout is set andthe call may block forever."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,17 @@
+{
+    "api": "transformers.FlavaImageCodebookConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_groups:",
+        "input_channels",
+        "num_blocks_per_group",
+        "hidden_size",
+        "vocab_size",
+        "freeze",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

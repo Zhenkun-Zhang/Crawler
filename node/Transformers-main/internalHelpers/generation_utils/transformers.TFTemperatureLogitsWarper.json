@@ -1,0 +1,19 @@
+{
+    "api": "transformers.TFTemperatureLogitsWarper",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "temperature:",
+        "float"
+    ],
+    "params": [
+        {
+            "name": "temperature",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The value used to module the logits distribution."
+        }
+    ],
+    "return": ""
+}

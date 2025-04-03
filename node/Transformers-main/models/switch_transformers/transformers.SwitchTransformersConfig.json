@@ -1,0 +1,214 @@
+{
+    "api": "transformers.SwitchTransformersConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "d_model",
+        "d_kv",
+        "d_ff",
+        "expert_capacity",
+        "num_layers",
+        "num_sparse_encoder_layers",
+        "num_decoder_layers",
+        "num_sparse_decoder_layers",
+        "num_heads",
+        "num_experts",
+        "router_bias",
+        "router_jitter_noise",
+        "router_dtype",
+        "router_ignore_padding_tokens",
+        "relative_attention_num_buckets",
+        "relative_attention_max_distance",
+        "dropout_rate",
+        "layer_norm_epsilon",
+        "router_z_loss_coef",
+        "router_aux_loss_coef",
+        "initializer_factor",
+        "dense_act_fn",
+        "is_encoder_decoder",
+        "add_router_probs",
+        "use_cache",
+        "pad_token_id",
+        "eos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "32128",
+            "description": "Vocabulary size of the SwitchTransformers model. Defines the number of different tokens that can berepresented by the inputs_ids passed when calling SwitchTransformersModel."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Size of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "d_kv",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Size of the key, query, value projections per attention head. d_kv has to be equal to d_model // num_heads."
+        },
+        {
+            "name": "d_ff",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "Size of the intermediate feed forward layer in each SwitchTransformersBlock."
+        },
+        {
+            "name": "expert_capacity",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Number of tokens that can be stored in each expert. If set to 1, the model will behave like a regularTransformer."
+        },
+        {
+            "name": "num_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of dense hidden layers in the Transformer encoder layer."
+        },
+        {
+            "name": "num_sparse_encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of sparse (MoE) dense hidden layers in the Transformer encoder layer."
+        },
+        {
+            "name": "num_decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer decoder. Will use the same value as num_layers if not set."
+        },
+        {
+            "name": "num_sparse_decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of sparse (MoE) dense hidden layers in the Transformer decoder layer."
+        },
+        {
+            "name": "num_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "num_experts",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Number of experts for each SwitchTransformer layer."
+        },
+        {
+            "name": "router_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to add a bias to the router."
+        },
+        {
+            "name": "router_jitter_noise",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "Amount of noise to add to the router."
+        },
+        {
+            "name": "router_dtype",
+            "type": "str",
+            "optional": true,
+            "default": "float32",
+            "description": "The dtype used for the routers. It is preferable to keep the dtype to float32 as specified in theselective precision discussion in the paper."
+        },
+        {
+            "name": "router_ignore_padding_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to ignore padding tokens when routing."
+        },
+        {
+            "name": "relative_attention_num_buckets",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "The number of buckets to use for each attention layer."
+        },
+        {
+            "name": "relative_attention_max_distance",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "The maximum distance of the longer sequences for the bucket separation."
+        },
+        {
+            "name": "dropout_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The ratio for all dropout layers."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "router_z_loss_coef",
+            "type": "float",
+            "optional": true,
+            "default": "0.001",
+            "description": "The z loss factor for the total loss."
+        },
+        {
+            "name": "router_aux_loss_coef",
+            "type": "float",
+            "optional": true,
+            "default": "0.001",
+            "description": "The aux loss factor for the total loss."
+        },
+        {
+            "name": "initializer_factor",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "A factor for initializing all weight matrices (should be kept to 1, used internally for initializationtesting)."
+        },
+        {
+            "name": "dense_act_fn",
+            "type": "string",
+            "optional": true,
+            "default": "relu",
+            "description": "Type of feed forward layer to be used. Should be one of relu or gated-gelu. SwitchTransformersv1.1uses the gated-gelu feed forward projection. Original SwitchTransformers uses relu."
+        },
+        {
+            "name": "add_router_probs",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to output router probabilities to compute router auxiliary loss."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,35 @@
+{
+    "api": "transformers.TrainingArguments.set_testing",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "batch_size:",
+        "int",
+        "loss_only",
+        "jit_mode"
+    ],
+    "params": [
+        {
+            "name": "batch_size",
+            "type": "int optional, defaults to 8",
+            "optional": true,
+            "default": "",
+            "description": "The batch size per device (GPU/TPU core/CPU…) used for testing."
+        },
+        {
+            "name": "loss_only",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Ignores all outputs except the loss."
+        },
+        {
+            "name": "jit_mode",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use PyTorch jit trace for inference."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,52 @@
+{
+    "api": "transformers.TrainingArguments.set_push_to_hub",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model_id:",
+        "str",
+        "strategy",
+        "transformers.trainer_utils.HubStrategy]",
+        "token",
+        "private_repo",
+        "always_push"
+    ],
+    "params": [
+        {
+            "name": "model_id",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The name of the repository to keep in sync with the local output_dir. It can be a simple model ID inwhich case the model will be pushed in your namespace. Otherwise it should be the whole repositoryname, for instance user_name/model, which allows you to push to an organization you are a member ofwith organization_name/model."
+        },
+        {
+            "name": "strategy",
+            "type": "str,HubStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Defines the scope of what is pushed to the Hub and when. Possible values are:end: push the model, its configuration, the processing_class e.g. tokenizer (if passed along to the Trainer) and adraft of a model card when the save_model() method is called.every_save: push the model, its configuration, the processing_class e.g. tokenizer (if passed along to the Trainer)anda draft of a model card each time there is a model save. The pushes are asynchronous to not blocktraining, and in case the save are very frequent, a new push is only attempted if the previous one isfinished. A last push is made with the final model at the end of training.checkpoint: like every_save but the latest checkpoint is also pushed in a subfolder namedlast-checkpoint, allowing you to resume training easily withtrainer.train(resume_from_checkpoint=last-checkpoint).all_checkpoints: like checkpoint but all checkpoints are pushed like they appear in theoutputfolder (so you will get one checkpoint folder per folder in your final repository)"
+        },
+        {
+            "name": "token",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The token to use to push the model to the Hub. Will default to the token in the cache folder obtainedwith huggingface-cli login."
+        },
+        {
+            "name": "private_repo",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to make the repo private. If None (default), the repo will be public unless the organizations default is private. This value is ignored if the repo already exists."
+        },
+        {
+            "name": "always_push",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Unless this is True, the Trainer will skip pushing a checkpoint when the previous push is notfinished."
+        }
+    ],
+    "return": ""
+}

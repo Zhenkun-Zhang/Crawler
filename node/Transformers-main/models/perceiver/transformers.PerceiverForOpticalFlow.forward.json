@@ -1,0 +1,74 @@
+{
+    "api": "transformers.PerceiverForOpticalFlow.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs:",
+        "attention_mask",
+        "head_mask",
+        "output_attentions",
+        "output_hidden_states",
+        "labels",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "torch.FloatTensor",
+            "optional": false,
+            "default": "",
+            "description": "Inputs to the perceiver. Can be anything: images, text, audio, video, etc."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "interpolate_pos_encoding",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to interpolate the pre-trained position encodings."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size,",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the optical flow loss. Indices should be in [0, ..., config.num_labels - 1]."
+        }
+    ],
+    "return": "transformers.models.perceiver.modeling_perceiver.PerceiverClassifierOutput or tuple(torch.FloatTensor)"
+}

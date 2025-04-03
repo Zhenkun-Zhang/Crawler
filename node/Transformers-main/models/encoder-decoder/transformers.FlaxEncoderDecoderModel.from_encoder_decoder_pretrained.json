@@ -1,0 +1,46 @@
+{
+    "api": "transformers.FlaxEncoderDecoderModel.from_encoder_decoder_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "encoder_pretrained_model_name_or_path:",
+        "os.PathLike,",
+        "NoneType]",
+        "decoder_pretrained_model_name_or_path",
+        "os.PathLike,",
+        "NoneType]",
+        "*model_args",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "encoder_pretrained_model_name_or_path",
+            "type": "Union[str, os.PathLike]",
+            "optional": true,
+            "default": "",
+            "description": "Information necessary to initiate the encoder. Can be either:A string, the model id of a pretrained model hosted inside a model repo on huggingface.co.A path to a directory containing model weights saved usingsave_pretrained(), e.g., ./my_model_directory/."
+        },
+        {
+            "name": "decoder_pretrained_model_name_or_path",
+            "type": "Union[str, os.PathLike]",
+            "optional": true,
+            "default": "",
+            "description": "Information necessary to initiate the decoder. Can be either:A string, the model id of a pretrained model hosted inside a model repo on huggingface.co.A path to a directory containing model weights saved usingsave_pretrained(), e.g., ./my_model_directory/."
+        },
+        {
+            "name": "model_args",
+            "type": "remaining positional arguments",
+            "optional": true,
+            "default": "",
+            "description": "All remaning positional arguments will be passed to the underlying models __init__ method."
+        },
+        {
+            "name": "kwargs",
+            "type": "remaining dictionary of keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Can be used to update the configuration object (after it being loaded) and initiate the model (e.g.,output_attentions=True).To update the encoder configuration, use the prefix encoder_ for each configuration parameter.To update the decoder configuration, use the prefix decoder_ for each configuration parameter.To update the parent model configuration, do not use a prefix for each configuration parameter.Behaves differently depending on whether a config is provided or automatically loaded."
+        }
+    ],
+    "return": ""
+}

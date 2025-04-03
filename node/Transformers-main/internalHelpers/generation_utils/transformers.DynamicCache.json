@@ -1,0 +1,11 @@
+{
+    "api": "transformers.DynamicCache",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "_distributed_cache_data:",
+        "typing.Iterable"
+    ],
+    "params": [],
+    "return": ""
+}

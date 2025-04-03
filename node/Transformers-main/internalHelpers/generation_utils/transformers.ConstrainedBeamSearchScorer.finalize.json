@@ -1,0 +1,23 @@
+{
+    "api": "transformers.ConstrainedBeamSearchScorer.finalize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "final_beam_scores",
+        "final_beam_tokens",
+        "final_beam_indices",
+        "max_length",
+        "pad_token_id",
+        "torch.Tensor,",
+        "NoneType]",
+        "eos_token_id",
+        "typing.List[int],",
+        "torch.Tensor,",
+        "NoneType]",
+        "beam_indices",
+        "decoder_prompt_len"
+    ],
+    "params": [],
+    "return": ""
+}

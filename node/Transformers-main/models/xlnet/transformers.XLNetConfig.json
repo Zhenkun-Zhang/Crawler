@@ -1,0 +1,213 @@
+{
+    "api": "transformers.XLNetConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "d_model",
+        "n_layer",
+        "n_head",
+        "d_inner",
+        "ff_activation",
+        "untie_r",
+        "attn_type",
+        "initializer_range",
+        "layer_norm_eps",
+        "dropout",
+        "mem_len",
+        "reuse_len",
+        "use_mems_eval",
+        "use_mems_train",
+        "bi_data",
+        "clamp_len",
+        "same_length",
+        "summary_type",
+        "summary_use_proj",
+        "summary_activation",
+        "summary_last_dropout",
+        "start_n_top",
+        "end_n_top",
+        "pad_token_id",
+        "bos_token_id",
+        "eos_token_id",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "32000",
+            "description": "Vocabulary size of the XLNet model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling XLNetModel or TFXLNetModel."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "d_inner",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "ff_activation",
+            "type": "str,Callable",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the If string, gelu, relu, silu andgelu_new are supported."
+        },
+        {
+            "name": "untie_r",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to untie relative position biases"
+        },
+        {
+            "name": "attn_type",
+            "type": "str",
+            "optional": true,
+            "default": "bi",
+            "description": "The attention type used by the model. Set bi for XLNet, uni for Transformer-XL."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "mem_len",
+            "type": "int,None",
+            "optional": true,
+            "default": "512",
+            "description": "The number of tokens to cache. The key/value pairs that have already been pre-computed in a previousforward pass wont be re-computed. See thequickstart for more information."
+        },
+        {
+            "name": "reuse_len",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The number of tokens in the current batch to be cached and reused in the future."
+        },
+        {
+            "name": "bi_data",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to use bidirectional input pipeline. Usually set to True during pretraining and Falseduring finetuning."
+        },
+        {
+            "name": "clamp_len",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "Clamp all relative distances larger than clamp_len. Setting this attribute to -1 means no clamping."
+        },
+        {
+            "name": "same_length",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to use the same attention length for each token."
+        },
+        {
+            "name": "summary_type",
+            "type": "str",
+            "optional": true,
+            "default": "last",
+            "description": "Argument used when doing sequence summary. Used in the sequence classification and multiple choice models.Has to be one of the following options:last: Take the last token hidden state (like XLNet).first: Take the first token hidden state (like BERT).mean: Take the mean of all tokens hidden states.cls_index: Supply a Tensor of classification token position (like GPT/GPT-2).attn: Not implemented now, use multi-head attention."
+        },
+        {
+            "name": "summary_use_proj",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Argument used when doing sequence summary. Used in the sequence classification and multiple choice models.Whether or not to add a projection after the vector extraction."
+        },
+        {
+            "name": "summary_activation",
+            "type": "str",
+            "optional": true,
+            "default": "tanh",
+            "description": "Argument used when doing sequence summary. Used in the sequence classification and multiple choice models.Pass tanh for a tanh activation to the output, any other value will result in no activation."
+        },
+        {
+            "name": "summary_proj_to_labels",
+            "type": "boo",
+            "optional": true,
+            "default": "",
+            "description": "Used in the sequence classification and multiple choice models.Whether the projection outputs should have config.num_labels or config.hidden_size classes."
+        },
+        {
+            "name": "summary_last_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Used in the sequence classification and multiple choice models.The dropout ratio to be used after the projection and activation."
+        },
+        {
+            "name": "start_n_top",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Used in the SQuAD evaluation script."
+        },
+        {
+            "name": "end_n_top",
+            "type": "int",
+            "optional": true,
+            "default": "5",
+            "description": "Used in the SQuAD evaluation script."
+        },
+        {
+            "name": "use_mems_eval",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should make use of the recurrent memory mechanism in evaluation mode."
+        },
+        {
+            "name": "use_mems_train",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not the model should make use of the recurrent memory mechanism in train mode.For pretraining, it is recommended to set use_mems_train to True. For fine-tuning, it is recommended toset use_mems_train to False as discussedhere. If use_mems_train is set toTrue, one has to make sure that the train batches are correctly pre-processed, e.g. batch_1 = [[This line is], [This is the]] and batch_2 = [[ the first line], [ second line]] and that all batches are ofequal size."
+        }
+    ],
+    "return": ""
+}

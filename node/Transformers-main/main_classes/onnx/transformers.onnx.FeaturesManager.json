@@ -1,0 +1,8 @@
+{
+    "api": "transformers.onnx.FeaturesManager",
+    "type": "class",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

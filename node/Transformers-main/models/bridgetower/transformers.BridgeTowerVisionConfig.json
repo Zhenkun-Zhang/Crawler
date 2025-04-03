@@ -1,0 +1,84 @@
+{
+    "api": "transformers.BridgeTowerVisionConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size",
+        "num_hidden_layers",
+        "num_channels",
+        "patch_size",
+        "image_size",
+        "initializer_factor",
+        "layer_norm_eps",
+        "stop_gradient",
+        "share_layernorm",
+        "remove_last_layer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in visual encoder model."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "288",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "initializer_factor",
+            "type": "float",
+            "optional": true,
+            "default": "1",
+            "description": "A factor for initializing all weight matrices (should be kept to 1, used internally for initializationtesting)."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "stop_gradient",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to stop gradient for training."
+        },
+        {
+            "name": "share_layernorm",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether LayerNorm layers are shared."
+        },
+        {
+            "name": "remove_last_layer",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to remove the last layer from the vision encoder."
+        }
+    ],
+    "return": ""
+}

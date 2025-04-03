@@ -1,0 +1,36 @@
+{
+    "api": "transformers.Pipeline.save_pretrained",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "save_directory:",
+        "typing.Union[str,",
+        "os.PathLike]",
+        "safe_serialization",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "save_directory",
+            "type": "str,os.PathLike",
+            "optional": false,
+            "default": "",
+            "description": "A path to the directory where to saved. It will be created if it doesnt exist."
+        },
+        {
+            "name": "safe_serialization",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Whether to save the model using safetensors or the traditional way for PyTorch or Tensorflow."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, Any]",
+            "optional": true,
+            "default": "",
+            "description": "Additional key word arguments passed along to the push_to_hub() method."
+        }
+    ],
+    "return": ""
+}

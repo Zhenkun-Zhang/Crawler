@@ -1,0 +1,20 @@
+{
+    "api": "transformers.Wav2Vec2Processor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "audio:",
+        "typing.Union[ForwardRef('np.ndarray'),",
+        "ForwardRef('torch.Tensor'),",
+        "typing.List[ForwardRef('np.ndarray')],",
+        "typing.List[ForwardRef('torch.Tensor')]]",
+        "text",
+        "typing.List[str],",
+        "NoneType]",
+        "images",
+        "videos",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

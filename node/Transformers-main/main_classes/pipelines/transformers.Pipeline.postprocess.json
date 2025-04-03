@@ -1,0 +1,12 @@
+{
+    "api": "transformers.Pipeline.postprocess",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model_outputs:",
+        "ModelOutput",
+        "**postprocess_parameters"
+    ],
+    "params": [],
+    "return": ""
+}

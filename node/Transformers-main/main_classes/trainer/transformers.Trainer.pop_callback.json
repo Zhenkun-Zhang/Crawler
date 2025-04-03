@@ -1,0 +1,19 @@
+{
+    "api": "transformers.Trainer.pop_callback",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "callback",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "callback",
+            "type": "type,[`~transformers.TrainerCallback]`",
+            "optional": false,
+            "default": "",
+            "description": "A TrainerCallback class or an instance of a TrainerCallback. In thefirst case, will pop the first member of that class found in the list of callbacks."
+        }
+    ],
+    "return": "TrainerCallback"
+}

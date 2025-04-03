@@ -1,0 +1,99 @@
+{
+    "api": "transformers.FastSpeech2ConformerHifiGanConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "model_in_dim",
+        "upsample_initial_channel",
+        "upsample_rates",
+        "8,",
+        "2,",
+        "2]",
+        "upsample_kernel_sizes",
+        "16,",
+        "4,",
+        "4]",
+        "resblock_kernel_sizes",
+        "7,",
+        "11]",
+        "resblock_dilation_sizes",
+        "3,",
+        "5],",
+        "[1,",
+        "3,",
+        "5],",
+        "[1,",
+        "3,",
+        "5]]",
+        "initializer_range",
+        "leaky_relu_slope",
+        "normalize_before",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "model_in_dim",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "The number of frequency bins in the input log-mel spectrogram."
+        },
+        {
+            "name": "upsample_initial_channel",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The number of input channels into the upsampling network."
+        },
+        {
+            "name": "upsample_rates",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[8,",
+            "description": "A tuple of integers defining the stride of each 1D convolutional layer in the upsampling network. Thelength of upsample_rates defines the number of convolutional layers and has to match the length ofupsample_kernel_sizes."
+        },
+        {
+            "name": "upsample_kernel_sizes",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[16,",
+            "description": "A tuple of integers defining the kernel size of each 1D convolutional layer in the upsampling network. Thelength of upsample_kernel_sizes defines the number of convolutional layers and has to match the length ofupsample_rates."
+        },
+        {
+            "name": "resblock_kernel_sizes",
+            "type": "Tuple[int],List[int]",
+            "optional": true,
+            "default": "[3,",
+            "description": "A tuple of integers defining the kernel sizes of the 1D convolutional layers in the multi-receptive fieldfusion (MRF) module."
+        },
+        {
+            "name": "resblock_dilation_sizes",
+            "type": "Tuple[Tuple[int]],List[List[int]]",
+            "optional": true,
+            "default": "[[1,",
+            "description": "A nested tuple of integers defining the dilation rates of the dilated 1D convolutional layers in themulti-receptive field fusion (MRF) module."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.01",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "leaky_relu_slope",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The angle of the negative slope used by the leaky ReLU activation."
+        },
+        {
+            "name": "normalize_before",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to normalize the spectrogram before vocoding using the vocoders learned mean and variance."
+        }
+    ],
+    "return": ""
+}

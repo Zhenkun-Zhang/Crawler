@@ -1,0 +1,19 @@
+{
+    "api": "transformers.MusicgenMelodyProcessor.get_unconditional_inputs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "num_samples",
+        "return_tensors"
+    ],
+    "params": [
+        {
+            "name": "num_samples",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of audio samples to unconditionally generate."
+        }
+    ],
+    "return": ""
+}

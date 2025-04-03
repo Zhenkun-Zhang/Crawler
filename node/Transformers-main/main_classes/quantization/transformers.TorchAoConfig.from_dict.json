@@ -1,0 +1,12 @@
+{
+    "api": "transformers.TorchAoConfig.from_dict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "config_dict",
+        "return_unused_kwargs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

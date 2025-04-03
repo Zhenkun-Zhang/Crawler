@@ -1,0 +1,34 @@
+{
+    "api": "transformers.TFDebertaPreTrainedModel.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs",
+        "training",
+        "mask"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Input tensor, or dict/list/tuple of input tensors."
+        },
+        {
+            "name": "training",
+            "type": "",
+            "optional": false,
+            "default": "None",
+            "description": "Boolean or boolean scalar tensor, indicating whether torun the Network in training mode or inference mode."
+        },
+        {
+            "name": "mask",
+            "type": "",
+            "optional": false,
+            "default": "None",
+            "description": "A mask or list of masks. A mask can be either a boolean tensoror None (no mask). For more details, check the guidehere."
+        }
+    ],
+    "return": ""
+}

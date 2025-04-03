@@ -1,0 +1,10 @@
+{
+    "api": "transformers.ProcessorMixin.prepare_and_validate_optional_call_args",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*args"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,33 @@
+{
+    "api": "transformers.ColPaliProcessor.process_images",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "images",
+            "type": "PIL.Image.Image, np.ndarray, torch.Tensor, List[PIL.Image.Image], List[np.ndarray], List[torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "The image or batch of images to be prepared. Each image can be a PIL image, NumPy array or PyTorchtensor. In case of a NumPy array/PyTorch tensor, each image should be of shape (C, H, W), where C is anumber of channels, H and W are image height and width."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors of a particular framework. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return NumPy np.ndarray objects.jax: Return JAX jnp.ndarray objects."
+        }
+    ],
+    "return": "BatchFeature"
+}

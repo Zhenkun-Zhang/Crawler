@@ -1,0 +1,162 @@
+{
+    "api": "transformers.audio_utils.spectrogram",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "waveform:",
+        "window",
+        "frame_length",
+        "hop_length",
+        "fft_length",
+        "power",
+        "center",
+        "pad_mode",
+        "onesided",
+        "dither",
+        "preemphasis",
+        "mel_filters",
+        "mel_floor",
+        "log_mel",
+        "reference",
+        "min_value",
+        "db_range",
+        "remove_dc_offset",
+        "'numpy.float32'>"
+    ],
+    "params": [
+        {
+            "name": "waveform",
+            "type": "np.ndarray of shape (length,)",
+            "optional": false,
+            "default": "",
+            "description": "The input waveform. This must be a single real-valued, mono waveform."
+        },
+        {
+            "name": "window",
+            "type": "np.ndarray of shape (frame_length,)",
+            "optional": false,
+            "default": "",
+            "description": "The windowing function to apply, including zero-padding if necessary. The actual window length may beshorter than frame_length, but were assuming the array has already been zero-padded."
+        },
+        {
+            "name": "frame_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The length of the analysis frames in samples. With librosa this is always equal to fft_length but we alsoallow smaller sizes."
+        },
+        {
+            "name": "hop_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The stride between successive analysis frames in samples."
+        },
+        {
+            "name": "fft_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size of the FFT buffer in samples. This determines how many frequency bins the spectrogram will have.For optimal speed, this should be a power of two. If None, uses frame_length."
+        },
+        {
+            "name": "power",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "If 1.0, returns the amplitude spectrogram. If 2.0, returns the power spectrogram. If None, returnscomplex numbers."
+        },
+        {
+            "name": "center",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to pad the waveform so that frame t is centered around time t * hop_length. If False, framet will start at time t * hop_length."
+        },
+        {
+            "name": "pad_mode",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Padding mode used when center is True. Possible values are: constant (pad with zeros), edge(pad with edge values), reflect (pads with mirrored values)."
+        },
+        {
+            "name": "onesided",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, only computes the positive frequencies and returns a spectrogram containing fft_length // 2 + 1frequency bins. If False, also computes the negative frequencies and returns fft_length frequency bins."
+        },
+        {
+            "name": "dither",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Adds dithering. In other words, adds a small Gaussian noise to each frame.E.g. use 4.0 to add dithering with a normal distribution centeredaround 0.0 with standard deviation 4.0, 0.0 means no dithering.Dithering has similar effect as mel_floor. It reduces the high log_mel_fbankvalues for signals with hard-zero sections, when VAD cutoff is present in the signal."
+        },
+        {
+            "name": "preemphasis",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Coefficient for a low-pass filter that applies pre-emphasis before the DFT."
+        },
+        {
+            "name": "mel_filters",
+            "type": "np.ndarray of shape (num_freq_bins, num_mel_filters",
+            "optional": true,
+            "default": "",
+            "description": "The mel filter bank. If supplied, applies a this filter bank to create a mel spectrogram."
+        },
+        {
+            "name": "mel_floor",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Minimum value of mel frequency banks."
+        },
+        {
+            "name": "log_mel",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "How to convert the spectrogram to log scale. Possible options are: None (dont convert), log (takethe natural logarithm) log10 (take the base-10 logarithm), dB (convert to decibels). Can only beused when power is not None."
+        },
+        {
+            "name": "reference",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Sets the input spectrogram value that corresponds to 0 dB. For example, use np.max(spectrogram) to setthe loudest part to 0 dB. Must be greater than zero."
+        },
+        {
+            "name": "min_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The spectrogram will be clipped to this minimum value before conversion to decibels, to avoid takinglog(0). For a power spectrogram, the default of 1e-10 corresponds to a minimum of -100 dB. For anamplitude spectrogram, the value 1e-5 corresponds to -100 dB. Must be greater than zero."
+        },
+        {
+            "name": "db_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Sets the maximum dynamic range in decibels. For example, if db_range = 80, the difference between thepeak value and the smallest value will never be more than 80 dB. Must be greater than zero."
+        },
+        {
+            "name": "remove_dc_offset",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Subtract mean from waveform on each frame, applied before pre-emphasis. This should be set to true inorder to get the same results as torchaudio.compliance.kaldi.fbank when computing mel filters."
+        },
+        {
+            "name": "dtype",
+            "type": "np.dtype",
+            "optional": true,
+            "default": "<class",
+            "description": "Data type of the spectrogram tensor. If power is None, this argument is ignored and the dtype will benp.complex64."
+        }
+    ],
+    "return": ""
+}

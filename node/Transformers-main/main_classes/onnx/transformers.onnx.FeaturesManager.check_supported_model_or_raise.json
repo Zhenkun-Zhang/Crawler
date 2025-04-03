@@ -1,0 +1,28 @@
+{
+    "api": "transformers.onnx.FeaturesManager.check_supported_model_or_raise",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model:",
+        "typing.Union[ForwardRef('PreTrainedModel'),",
+        "ForwardRef('TFPreTrainedModel')]",
+        "feature"
+    ],
+    "params": [
+        {
+            "name": "model",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The model to export."
+        },
+        {
+            "name": "feature",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The name of the feature to check if it is available."
+        }
+    ],
+    "return": ""
+}

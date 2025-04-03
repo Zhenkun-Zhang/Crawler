@@ -1,0 +1,30 @@
+{
+    "api": "transformers.PreTrainedTokenizer.add_special_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "special_tokens_dict:",
+        "typing.Dict[str,",
+        "typing.Union[str,",
+        "tokenizers.AddedToken]]",
+        "replace_additional_special_tokens",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "special_tokens_dict",
+            "type": "dictionary str to str,tokenizers.AddedToken",
+            "optional": false,
+            "default": "",
+            "description": "Keys should be in the list of predefined special attributes: [bos_token, eos_token, unk_token,sep_token, pad_token, cls_token, mask_token, additional_special_tokens].Tokens are only added if they are not already in the vocabulary (tested by checking if the tokenizerassign the index of the unk_token to them)."
+        },
+        {
+            "name": "replace_additional_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "If True, the existing list of additional special tokens will be replaced by the list provided inspecial_tokens_dict. Otherwise, self._special_tokens_map[additional_special_tokens] is just extended. In the formercase, the tokens will NOT be removed from the tokenizers full vocabulary - they are only being flaggedas non-special tokens. Remember, this only affects which tokens are skipped during decoding, not theadded_tokens_encoder and added_tokens_decoder. This means that the previousadditional_special_tokens are still added tokens, and will not be split by the model."
+        }
+    ],
+    "return": "int"
+}

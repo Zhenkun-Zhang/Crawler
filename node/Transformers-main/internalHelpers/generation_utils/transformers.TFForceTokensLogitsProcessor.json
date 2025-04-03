@@ -1,0 +1,11 @@
+{
+    "api": "transformers.TFForceTokensLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "force_token_map:",
+        "typing.List[typing.List[int]]"
+    ],
+    "params": [],
+    "return": ""
+}

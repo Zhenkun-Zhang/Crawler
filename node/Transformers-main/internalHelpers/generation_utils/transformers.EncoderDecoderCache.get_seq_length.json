@@ -1,0 +1,11 @@
+{
+    "api": "transformers.EncoderDecoderCache.get_seq_length",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "layer_idx:",
+        "typing.Optional[int]"
+    ],
+    "params": [],
+    "return": ""
+}

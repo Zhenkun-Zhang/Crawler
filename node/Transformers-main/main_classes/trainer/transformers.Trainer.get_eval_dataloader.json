@@ -1,0 +1,21 @@
+{
+    "api": "transformers.Trainer.get_eval_dataloader",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "eval_dataset:",
+        "typing.Union[str,",
+        "torch.utils.data.dataset.Dataset,",
+        "NoneType]"
+    ],
+    "params": [
+        {
+            "name": "eval_dataset",
+            "type": "str,torch.utils.data.Dataset",
+            "optional": true,
+            "default": "",
+            "description": "If a str, will use self.eval_dataset[eval_dataset] as the evaluation dataset. If a Dataset, will override self.eval_dataset and must implement __len__. If it is a Dataset, columns not accepted by the model.forward() method are automatically removed."
+        }
+    ],
+    "return": ""
+}

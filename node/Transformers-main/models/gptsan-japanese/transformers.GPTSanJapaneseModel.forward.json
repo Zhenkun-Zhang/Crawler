@@ -1,0 +1,122 @@
+{
+    "api": "transformers.GPTSanJapaneseModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "token_type_ids",
+        "spout",
+        "past_key_values",
+        "head_mask",
+        "use_cache",
+        "inputs_embeds",
+        "decoder_inputs_embeds",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "output_router_logits",
+        "num_precontext"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. GPTSAN-japanese is a model that generates sentencecontinuations or predicts tokens at mask positions. Special tokens required for inputs to the model areautomatically appended."
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "token_type_ids",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "An input that masks the Prefix part in the Prefix-LM input. Mask values selected in [0, 1]:1 for tokens that are prefix input,0 for tokens that are not-prefix input."
+        },
+        {
+            "name": "spout",
+            "type": "torch.Tensor of shape (batch_size, config.d_spout)",
+            "optional": false,
+            "default": "",
+            "description": "This vector is transformed through an 8-layer FFN and can be used instead of past_key_values."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)) of length config.n_layers with each tuple having 4 tensors of shape (batch_size, num_heads, sequence_length - 1, embed_size_per_head)",
+            "optional": false,
+            "default": "",
+            "description": "Contains precomputed key and value hidden states of the attention blocks. Can be used to speed up decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "head_mask",
+            "type": "torch.FloatTensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:"
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "decoder_inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, target_sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing decoder_input_ids you can choose to directly pass an embeddedrepresentation. If past_key_values is used, optionally only the last decoder_inputs_embeds have to beinput (see past_key_values). This is useful if you want more control over how to convertdecoder_input_ids indices into associated vectors than the models internal embedding lookup matrix."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "router_logits",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, sequence_length, num_experts).Router logits of the decoder model, useful to compute the auxiliary loss for Mixture of Experts models."
+        },
+        {
+            "name": "num_precontext",
+            "type": "torch.LongTensor of shape (batch_size,1)",
+            "optional": false,
+            "default": "",
+            "description": "length of hybrid input tokens in the input. Tokens up to this length refer to both front and back likeBERT, tokens after that refer only to front like GPT. see also:https://github.com/tanreinama/GPTSAN/blob/main/report/model.md"
+        }
+    ],
+    "return": ""
+}

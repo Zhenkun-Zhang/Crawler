@@ -1,0 +1,25 @@
+{
+    "api": "transformers.ImageFeatureExtractionMixin.rotate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image",
+        "angle",
+        "resample",
+        "expand",
+        "center",
+        "translate",
+        "fillcolor",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "PIL.Image.Image,np.ndarray,torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The image to rotate. If np.ndarray or torch.Tensor, will be converted to PIL.Image.Image beforerotating."
+        }
+    ],
+    "return": "image"
+}

@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Blip2QFormerModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Blip2QFormerConfig"
+    ],
+    "params": [],
+    "return": ""
+}

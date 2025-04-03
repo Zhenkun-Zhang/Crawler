@@ -1,0 +1,66 @@
+{
+    "api": "transformers.models.gpt2.modeling_gpt2.GPT2DoubleHeadsModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "mc_loss",
+        "logits",
+        "mc_logits",
+        "past_key_values",
+        "hidden_states",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Language modeling loss."
+        },
+        {
+            "name": "mc_loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Multiple choice classification loss."
+        },
+        {
+            "name": "logits",
+            "type": "torch.FloatTensor of shape (batch_size, num_choices, sequence_length, config.vocab_size)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)."
+        },
+        {
+            "name": "mc_logits",
+            "type": "torch.FloatTensor of shape (batch_size, num_choices)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the multiple choice classification head (scores for each choice before SoftMax)."
+        },
+        {
+            "name": "past_key_values",
+            "type": "Tuple[Tuple[torch.Tensor]]",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of length config.n_layers, containing tuples of tensors of shape (batch_size, num_heads, sequence_length, embed_size_per_head)).Contains pre-computed hidden-states (key and values in the attention blocks) that can be used (seepast_key_values input) to speed up sequential decoding."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size).Hidden-states of the model at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length).GPT2Attentions weights after the attention softmax, used to compute the weighted average in theself-attention heads."
+        }
+    ],
+    "return": ""
+}

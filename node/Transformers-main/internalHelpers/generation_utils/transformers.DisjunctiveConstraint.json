@@ -1,0 +1,19 @@
+{
+    "api": "transformers.DisjunctiveConstraint",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "nested_token_ids:",
+        "typing.List[typing.List[int]]"
+    ],
+    "params": [
+        {
+            "name": "nested_token_ids",
+            "type": "List[List[int]]",
+            "optional": false,
+            "default": "",
+            "description": "A list of words, where each word is a list of ids. This constraint is fulfilled by generating just one fromthe list of words."
+        }
+    ],
+    "return": ""
+}

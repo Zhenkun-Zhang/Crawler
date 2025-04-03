@@ -1,0 +1,66 @@
+{
+    "api": "transformers.TvltFeatureExtractor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "raw_speech:",
+        "typing.Union[numpy.ndarray,",
+        "typing.List[float],",
+        "typing.List[numpy.ndarray],",
+        "typing.List[typing.List[float]]]",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "return_attention_mask",
+        "sampling_rate",
+        "resample",
+        "mask_audio",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "raw_speech",
+            "type": "np.ndarray, List[float], List[np.ndarray], List[List[float]]",
+            "optional": false,
+            "default": "",
+            "description": "The sequence or batch of sequences to be padded. Each sequence can be a numpy array, a list of floatvalues, a list of numpy arrays or a list of list of float values. Must be mono channel audio, notstereo, i.e. single float per timestep."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the attention mask. If left to the default, will return the attention mask accordingto the specific feature_extractors default. What are attention masks?For TvltTransformer models, attention_mask should alwys be passed for batched inference, to avoidsubtle bugs."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the raw_speech input was sampled. It is strongly recommended to passsampling_rate at the forward call to prevent silent errors and allow automatic speech recognitionpipeline. Current model supports sampling rate 16000 and 44100."
+        },
+        {
+            "name": "resample",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If the sampling rate is not matched, resample the input audio to match."
+        },
+        {
+            "name": "mask_audio",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to mask input audio for MAE task."
+        }
+    ],
+    "return": "BatchFeature"
+}

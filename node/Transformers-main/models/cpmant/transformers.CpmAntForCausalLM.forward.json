@@ -1,0 +1,91 @@
+{
+    "api": "transformers.CpmAntForCausalLM.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "past_key_values",
+        "torch.Tensor]]]",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "labels",
+        "return_dict",
+        "attention_mask",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.Tensor of shape (batch_size, seq_len)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using CPMAntTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attentionblocks) that can be used (see past_key_values input) to speed up sequential decoding."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "Args",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "input_ids (torch.Tensor of shape (batch_size, seq_len)):Indices of input sequence tokens in the vocabulary.Indices can be obtained using CPMAntTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?past_key_values (tuple(tuple(torch.FloatTensor)), optional, returned when use_cache=True is passed or when config.use_cache=True):Contains pre-computed hidden-states (key and values in the self-attention blocks and in thecross-attention blocks) that can be used (see past_key_values input) to speed up sequential decoding.use_cache (bool, optional):If set to True, past_key_values key value states are returned and can be used to speed up decoding(see past_key_values).output_attentions (bool, optional):Whether or not to return the attentions tensors of all attention layers.output_hidden_states (bool, optional):Whether or not to return the hidden states of all layers.labels (torch.Tensor of shape (batch_size, sequence_length), optional):Labels for computing the masked language modeling loss.return_dict (bool, optional):Whether or not to return a ModelOutput instead of a plain tuple.attention_mask (torch.Tensor of shape (batch_size, sequence_length), optional):CPMAnt will process attention mask automatically, this parameter is a dummy parameter fortext-generation pipeline."
+        },
+        {
+            "name": "Example",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "Text",
+            "type": "Generation with CpmAntForCausalLM.",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "```python",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "from transformers import CPMAntTokenizer, CpmAntForCausalLM"
+        }
+    ],
+    "return": "transformers.modeling_outputs.CausalLMOutputWithPast or tuple(torch.FloatTensor)"
+}

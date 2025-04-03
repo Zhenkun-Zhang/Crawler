@@ -1,0 +1,10 @@
+{
+    "api": "transformers.image_transforms.id_to_rgb",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "id_map"
+    ],
+    "params": [],
+    "return": ""
+}

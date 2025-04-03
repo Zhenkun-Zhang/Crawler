@@ -1,0 +1,292 @@
+{
+    "api": "transformers.ModernBertConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "hidden_activation",
+        "max_position_embeddings",
+        "initializer_range",
+        "initializer_cutoff_factor",
+        "norm_eps",
+        "norm_bias",
+        "pad_token_id",
+        "eos_token_id",
+        "bos_token_id",
+        "cls_token_id",
+        "sep_token_id",
+        "global_rope_theta",
+        "attention_bias",
+        "attention_dropout",
+        "global_attn_every_n_layers",
+        "local_attention",
+        "local_rope_theta",
+        "embedding_dropout",
+        "mlp_bias",
+        "mlp_dropout",
+        "decoder_bias",
+        "classifier_pooling",
+        "'mean']",
+        "classifier_dropout",
+        "classifier_bias",
+        "classifier_activation",
+        "deterministic_flash_attn",
+        "sparse_prediction",
+        "sparse_pred_ignore_index",
+        "reference_compile",
+        "repad_logits_with_grad",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "50368",
+            "description": "Vocabulary size of the ModernBert model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling ModernBertModel"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "1152",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "22",
+            "description": "Number of hidden layers in the Transformer decoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "hidden_activation",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the decoder. Will default to geluif not specified."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "8192",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "initializer_cutoff_factor",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "The cutoff factor for the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "norm_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use bias in the normalization layers."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50283",
+            "description": "Padding token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50282",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50281",
+            "description": "Beginning of stream token id."
+        },
+        {
+            "name": "cls_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50281",
+            "description": "Classification token id."
+        },
+        {
+            "name": "sep_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "50282",
+            "description": "Separation token id."
+        },
+        {
+            "name": "global_rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "160000.0",
+            "description": "The base period of the global RoPE embeddings."
+        },
+        {
+            "name": "attention_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a bias in the query, key, value and output projection layers during self-attention."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "global_attn_every_n_layers",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of layers between global attention layers."
+        },
+        {
+            "name": "local_attention",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "The window size for local attention."
+        },
+        {
+            "name": "local_rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "10000.0",
+            "description": "The base period of the local RoPE embeddings."
+        },
+        {
+            "name": "embedding_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the embeddings."
+        },
+        {
+            "name": "mlp_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use bias in the MLP layers."
+        },
+        {
+            "name": "mlp_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the MLP layers."
+        },
+        {
+            "name": "decoder_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use bias in the decoder layers."
+        },
+        {
+            "name": "classifier_pooling",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The pooling method for the classifier. Should be either cls or mean. In local attention layers, theCLS token doesnt attend to all tokens on long sequences."
+        },
+        {
+            "name": "classifier_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the classifier."
+        },
+        {
+            "name": "classifier_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use bias in the classifier."
+        },
+        {
+            "name": "classifier_activation",
+            "type": "str",
+            "optional": true,
+            "default": "gelu",
+            "description": "The activation function for the classifier."
+        },
+        {
+            "name": "deterministic_flash_attn",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use deterministic flash attention. If False, inference will be faster but not deterministic."
+        },
+        {
+            "name": "sparse_prediction",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use sparse prediction for the masked language model instead of returning the full dense logits."
+        },
+        {
+            "name": "sparse_pred_ignore_index",
+            "type": "int",
+            "optional": true,
+            "default": "-100",
+            "description": "The index to ignore for the sparse prediction."
+        },
+        {
+            "name": "reference_compile",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether to compile the layers of the model which were compiled during pretraining. If None, then parts ofthe model will be compiled if 1) triton is installed, 2) the model is not on MPS, 3) the model is notshared between devices, and 4) the model is not resized after initialization. If True, then the model maybe faster in some scenarios."
+        },
+        {
+            "name": "repad_logits_with_grad",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "When True, ModernBertForMaskedLM keeps track of the logits gradient when repadding for output. This onlyapplies when using Flash Attention 2 with passed labels. Otherwise output logits always have a gradient."
+        }
+    ],
+    "return": ""
+}

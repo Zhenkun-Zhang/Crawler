@@ -1,0 +1,35 @@
+{
+    "api": "transformers.BatchEncoding.char_to_token",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "batch_or_char_index:",
+        "char_index",
+        "sequence_index",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "batch_or_char_index",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Index of the sequence in the batch. If the batch only comprise one sequence, this can be the index ofthe word in the sequence"
+        },
+        {
+            "name": "char_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If a batch index is provided in batch_or_token_index, this can be the index of the word in thesequence."
+        },
+        {
+            "name": "sequence_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If pair of sequences are encoded in the batch this can be used to specify which sequence in the pair (0or 1) the provided character index belongs to."
+        }
+    ],
+    "return": "int"
+}

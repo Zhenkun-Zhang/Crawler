@@ -1,0 +1,28 @@
+{
+    "api": "transformers.StopStringCriteria",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tokenizer:",
+        "PreTrainedTokenizerBase",
+        "stop_strings",
+        "typing.List[str]]"
+    ],
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "The models associated tokenizer (necessary to extract vocab and tokenize the termination sequences)"
+        },
+        {
+            "name": "stop_strings",
+            "type": "Union[str, List[str]]",
+            "optional": false,
+            "default": "",
+            "description": "A list of strings that should end generation. If a string is passed, it will be treated like alist with a single element."
+        }
+    ],
+    "return": ""
+}

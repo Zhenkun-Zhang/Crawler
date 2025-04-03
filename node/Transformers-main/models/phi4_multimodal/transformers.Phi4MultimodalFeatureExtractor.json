@@ -1,0 +1,22 @@
+{
+    "api": "transformers.Phi4MultimodalFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size:",
+        "sampling_rate",
+        "hop_length",
+        "n_fft",
+        "win_length",
+        "preemphasis",
+        "padding_value",
+        "audio_compression_rate",
+        "audio_downsample_rate",
+        "audio_feat_stride",
+        "mel_min_frequency",
+        "mel_max_frequency",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

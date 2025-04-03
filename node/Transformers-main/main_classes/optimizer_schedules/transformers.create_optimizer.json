@@ -1,0 +1,106 @@
+{
+    "api": "transformers.create_optimizer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "init_lr:",
+        "num_train_steps",
+        "num_warmup_steps",
+        "min_lr_ratio",
+        "adam_beta1",
+        "adam_beta2",
+        "adam_epsilon",
+        "adam_clipnorm",
+        "adam_global_clipnorm",
+        "weight_decay_rate",
+        "power",
+        "include_in_weight_decay"
+    ],
+    "params": [
+        {
+            "name": "init_lr",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The desired learning rate at the end of the warmup phase."
+        },
+        {
+            "name": "num_train_steps",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The total number of training steps."
+        },
+        {
+            "name": "num_warmup_steps",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of warmup steps."
+        },
+        {
+            "name": "min_lr_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The final learning rate at the end of the linear decay will be init_lr * min_lr_ratio."
+        },
+        {
+            "name": "adam_beta1",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The beta1 to use in Adam."
+        },
+        {
+            "name": "adam_beta2",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The beta2 to use in Adam."
+        },
+        {
+            "name": "adam_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon to use in Adam."
+        },
+        {
+            "name": "adam_clipnorm",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "If not None, clip the gradient norm for each weight tensor to this value."
+        },
+        {
+            "name": "adam_global_clipnorm",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "If not None, clip gradient norm to this value. When using this argument, the norm is computed over allweight tensors, as if they were concatenated into a single vector."
+        },
+        {
+            "name": "weight_decay_rate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The weight decay to use."
+        },
+        {
+            "name": "power",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The power to use for PolynomialDecay."
+        },
+        {
+            "name": "include_in_weight_decay",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "List of the parameter names (or re patterns) to apply weight decay to. If none is passed, weight decay isapplied to all parameters except bias and layer norm parameters."
+        }
+    ],
+    "return": ""
+}

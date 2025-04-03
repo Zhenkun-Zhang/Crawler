@@ -1,0 +1,49 @@
+{
+    "api": "transformers.SamImageProcessor.pad_image",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "pad_size",
+        "int]",
+        "data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "Image to pad."
+        },
+        {
+            "name": "pad_size",
+            "type": "Dict[str, int]",
+            "optional": false,
+            "default": "",
+            "description": "Size of the output image after padding."
+        },
+        {
+            "name": "data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The data format of the image. Can be either channels_first or channels_last. If None, thedata_format of the image will be used."
+        },
+        {
+            "name": "input_data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If not provided, it will be inferred."
+        }
+    ],
+    "return": ""
+}

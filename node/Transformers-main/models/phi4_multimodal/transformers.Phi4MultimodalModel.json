@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Phi4MultimodalModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Phi4MultimodalConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "Phi4MultimodalConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model. Initializing with a config file does notload the weights associated with the model, only the configuration. Check out thefrom_pretrained() method to load the model weights."
+        },
+        {
+            "name": "config",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Phi4MultimodalMMConfig"
+        }
+    ],
+    "return": ""
+}

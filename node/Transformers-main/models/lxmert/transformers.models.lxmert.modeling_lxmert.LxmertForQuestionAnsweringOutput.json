@@ -1,0 +1,66 @@
+{
+    "api": "transformers.models.lxmert.modeling_lxmert.LxmertForQuestionAnsweringOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "question_answering_score",
+        "language_hidden_states",
+        "vision_hidden_states",
+        "language_attentions",
+        "vision_attentions",
+        "cross_encoder_attentions"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "optional, returned when labels is provided, torch.FloatTensor of shape (1,)",
+            "optional": true,
+            "default": "",
+            "description": "Total loss as the sum of the masked language modeling loss and the next sequence prediction(classification) loss.k."
+        },
+        {
+            "name": "question_answering_score",
+            "type": "torch.FloatTensor of shape (batch_size, n_qa_answers",
+            "optional": true,
+            "default": "",
+            "description": "Prediction scores of question answering objective (classification)."
+        },
+        {
+            "name": "language_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for input features + one for the output of each cross-modality layer) ofshape (batch_size, sequence_length, hidden_size)."
+        },
+        {
+            "name": "vision_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for input features + one for the output of each cross-modality layer) ofshape (batch_size, sequence_length, hidden_size)."
+        },
+        {
+            "name": "language_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights after the attention softmax, used to compute the weighted average inthe self-attention heads."
+        },
+        {
+            "name": "vision_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights after the attention softmax, used to compute the weighted average inthe self-attention heads."
+        },
+        {
+            "name": "cross_encoder_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights after the attention softmax, used to compute the weighted average inthe self-attention heads."
+        }
+    ],
+    "return": ""
+}

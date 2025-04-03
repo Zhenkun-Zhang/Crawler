@@ -1,0 +1,11 @@
+{
+    "api": "transformers.utils.logging.get_logger",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "name:",
+        "typing.Optional[str]"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,91 @@
+{
+    "api": "transformers.WhisperTokenizer.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids",
+        "skip_special_tokens",
+        "clean_up_tokenization_spaces",
+        "output_offsets",
+        "time_precision",
+        "decode_with_timestamps",
+        "normalize",
+        "basic_normalize",
+        "remove_diacritics",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids",
+            "type": "Union[int, List[int], np.ndarray, torch.Tensor, tf.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "List of tokenized input ids. Can be obtained using the __call__ method."
+        },
+        {
+            "name": "skip_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to remove special tokens in the decoding. Will remove the previous tokens (pre-prompt)if present."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean up the tokenization spaces. If None, will default toself.clean_up_tokenization_spaces (available in the tokenizer_config)."
+        },
+        {
+            "name": "output_offsets",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to output the offsets of the tokens. This should only be set if the model predictedtimestamps. If there are previous tokens (pre-prompt) to decode, they will only appear in the decodedtext if they contain timestamp tokens."
+        },
+        {
+            "name": "time_precision",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The time ratio to convert from token to time."
+        },
+        {
+            "name": "decode_with_timestamps",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to decode with timestamps included in the raw text."
+        },
+        {
+            "name": "normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to apply the English text normalizer to the decoded text. Only applicable when thetarget text is in English. Otherwise, the basic text normalizer should be applied."
+        },
+        {
+            "name": "basic_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to apply the Basic text normalizer to the decoded text. Applicable to multilingualtarget text."
+        },
+        {
+            "name": "remove_diacritics",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to remove diacritics when applying the Basic text normalizer. Removing diacritics maydestroy information in the decoded text, hence it should be used with caution."
+        },
+        {
+            "name": "kwargs",
+            "type": "additional keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the underlying model specific decode method."
+        }
+    ],
+    "return": "str"
+}

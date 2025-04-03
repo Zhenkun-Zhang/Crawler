@@ -1,0 +1,37 @@
+{
+    "api": "transformers.modeling_utils.ModuleUtilsMixin.floating_point_ops",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_dict:",
+        "typing.Dict[str,",
+        "typing.Union[torch.Tensor,",
+        "typing.Any]]",
+        "exclude_embeddings",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The batch size for the forward pass."
+        },
+        {
+            "name": "sequence_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of tokens in each line of the batch."
+        },
+        {
+            "name": "exclude_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to count embedding and softmax operations."
+        }
+    ],
+    "return": "int"
+}

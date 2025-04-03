@@ -1,0 +1,107 @@
+{
+    "api": "transformers.DebertaTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "merges_file",
+        "errors",
+        "bos_token",
+        "eos_token",
+        "sep_token",
+        "cls_token",
+        "unk_token",
+        "pad_token",
+        "mask_token",
+        "add_prefix_space",
+        "add_bos_token",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "merges_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the merges file."
+        },
+        {
+            "name": "errors",
+            "type": "str",
+            "optional": true,
+            "default": "replace",
+            "description": "Paradigm to follow when decoding bytes to UTF-8. Seebytes.decode for more information."
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "[CLS]",
+            "description": "The beginning of sequence token."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "[SEP]",
+            "description": "The end of sequence token."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "[SEP]",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "[CLS]",
+            "description": "The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "[UNK]",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "[PAD]",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "[MASK]",
+            "description": "The token used for masking values. This is the token used when training this model with masked languagemodeling. This is the token which the model will try to predict."
+        },
+        {
+            "name": "add_prefix_space",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to add an initial space to the input. This allows to treat the leading word just as anyother word. (Deberta tokenizer detect beginning of words by the preceding space)."
+        },
+        {
+            "name": "add_bos_token",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to add an initial <|endoftext|> to the input. This allows to treat the leading word just asany other word."
+        }
+    ],
+    "return": ""
+}

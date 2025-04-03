@@ -1,0 +1,103 @@
+{
+    "api": "transformers.LevitImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BICUBIC",
+        "do_center_crop",
+        "crop_size",
+        "int]",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.Iterable[float],",
+        "NoneType]",
+        "0.456,",
+        "0.406]",
+        "image_std",
+        "typing.Iterable[float],",
+        "NoneType]",
+        "0.224,",
+        "0.225]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Wwhether to resize the shortest edge of the input to int(256/224 *size). Can be overridden by thedo_resize parameter in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overridden by the resample parameter in thepreprocess method."
+        },
+        {
+            "name": "do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to center crop the input to (crop_size[height], crop_size[width]). Can be overriddenby the do_center_crop parameter in the preprocess method."
+        },
+        {
+            "name": "crop_size",
+            "type": "Dict",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to rescale the image by the specified scale rescale_factor. Can be overridden by thedo_rescale parameter in the preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overridden by the rescale_factor parameter in thepreprocess method."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to normalize the image. Can be overridden by the do_normalize parameter in thepreprocess method."
+        },
+        {
+            "name": "image_mean",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method."
+        }
+    ],
+    "return": ""
+}

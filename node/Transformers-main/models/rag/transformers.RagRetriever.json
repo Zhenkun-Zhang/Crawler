@@ -1,0 +1,43 @@
+{
+    "api": "transformers.RagRetriever",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "question_encoder_tokenizer",
+        "generator_tokenizer",
+        "index",
+        "init_retrieval"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "RagConfig",
+            "optional": false,
+            "default": "",
+            "description": "The configuration of the RAG model this Retriever is used with. Contains parameters indicating whichIndex to build. You can load your own custom dataset with config.index_name=custom or use a canonicalone (default) from the datasets library with config.index_name=wiki_dpr for example."
+        },
+        {
+            "name": "question_encoder_tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer that was used to tokenize the question. It is used to decode the question and then use thegenerator_tokenizer."
+        },
+        {
+            "name": "generator_tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer used for the generator part of the RagModel."
+        },
+        {
+            "name": "index",
+            "type": "Index",
+            "optional": true,
+            "default": "None",
+            "description": "If specified, use this index instead of the one built using the configuration"
+        }
+    ],
+    "return": ""
+}

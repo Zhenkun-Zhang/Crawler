@@ -1,0 +1,60 @@
+{
+    "api": "transformers.PromptDepthAnythingForDepthEstimation.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "FloatTensor",
+        "prompt_depth",
+        "labels",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. See DPTImageProcessor.call()for details."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "prompt_depth",
+            "type": "torch.FloatTensor of shape (batch_size, 1, height, width",
+            "optional": true,
+            "default": "",
+            "description": "Prompt depth is the sparse or low-resolution depth obtained from multi-view geometry or alow-resolution depth sensor. It generally has shape (height, width), where heightand width can be smaller than those of the images. It is optional and can be None, which means no prompt depthwill be used. If it is None, the output will be a monocular relative depth.The values are recommended to be in meters, but this is not necessary."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "labels",
+            "type": "torch.LongTensor of shape (batch_size, height, width",
+            "optional": true,
+            "default": "",
+            "description": "Ground truth depth estimation maps for computing the loss."
+        }
+    ],
+    "return": "transformers.modeling_outputs.DepthEstimatorOutput or tuple(torch.FloatTensor)"
+}

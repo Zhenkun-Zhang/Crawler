@@ -1,0 +1,20 @@
+{
+    "api": "transformers.PreTrainedModel.prune_heads",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "heads_to_prune:",
+        "typing.Dict[int,",
+        "typing.List[int]]"
+    ],
+    "params": [
+        {
+            "name": "heads_to_prune",
+            "type": "Dict[int, List[int]]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary with keys being selected layer indices (int) and associated values being the list of headsto prune in said layer (list of int). For instance {1: [0, 2], 2: [2, 3]} will prune heads 0 and 2 onlayer 1 and heads 2 and 3 on layer 2."
+        }
+    ],
+    "return": ""
+}

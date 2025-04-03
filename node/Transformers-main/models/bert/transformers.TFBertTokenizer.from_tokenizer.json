@@ -1,0 +1,20 @@
+{
+    "api": "transformers.TFBertTokenizer.from_tokenizer",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tokenizer:",
+        "PreTrainedTokenizerBase",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizerBase",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer to use to initialize the TFBertTokenizer."
+        }
+    ],
+    "return": ""
+}

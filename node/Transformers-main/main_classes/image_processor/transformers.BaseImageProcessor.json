@@ -1,0 +1,10 @@
+{
+    "api": "transformers.BaseImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

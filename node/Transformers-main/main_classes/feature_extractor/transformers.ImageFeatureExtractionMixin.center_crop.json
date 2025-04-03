@@ -1,0 +1,27 @@
+{
+    "api": "transformers.ImageFeatureExtractionMixin.center_crop",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image",
+        "size",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "PIL.Image.Image,np.ndarray,torch.Tensor of shape (n_channels, height, width),(height, width, n_channels)",
+            "optional": false,
+            "default": "",
+            "description": "The image to resize."
+        },
+        {
+            "name": "size",
+            "type": "int,Tuple[int, int]",
+            "optional": false,
+            "default": "",
+            "description": "The size to which crop the image."
+        }
+    ],
+    "return": "new_image"
+}

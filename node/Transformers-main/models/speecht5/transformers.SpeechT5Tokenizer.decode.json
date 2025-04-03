@@ -1,0 +1,48 @@
+{
+    "api": "transformers.SpeechT5Tokenizer.decode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids:",
+        "typing.Union[int,",
+        "typing.List[int],",
+        "ForwardRef('np.ndarray'),",
+        "ForwardRef('torch.Tensor'),",
+        "ForwardRef('tf.Tensor')]",
+        "skip_special_tokens",
+        "clean_up_tokenization_spaces",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids",
+            "type": "Union[int, List[int], np.ndarray, torch.Tensor, tf.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "List of tokenized input ids. Can be obtained using the __call__ method."
+        },
+        {
+            "name": "skip_special_tokens",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to remove special tokens in the decoding."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to clean up the tokenization spaces. If None, will default toself.clean_up_tokenization_spaces."
+        },
+        {
+            "name": "kwargs",
+            "type": "additional keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the underlying model specific decode method."
+        }
+    ],
+    "return": "str"
+}

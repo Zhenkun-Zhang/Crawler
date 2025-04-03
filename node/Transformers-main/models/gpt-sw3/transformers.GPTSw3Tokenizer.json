@@ -1,0 +1,105 @@
+{
+    "api": "transformers.GPTSw3Tokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "do_lower_case",
+        "remove_space",
+        "keep_accents",
+        "pad_token",
+        "unk_token",
+        "eos_token",
+        "bos_token",
+        "sp_model_kwargs",
+        "typing.Any]]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "SentencePiece file (generally has a .spm extension) thatcontains the vocabulary necessary to instantiate a tokenizer."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "remove_space",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to strip the text when tokenizing (removing excess spaces before and after the string)."
+        },
+        {
+            "name": "keep_accents",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to keep accents when tokenizing."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The token used for padding, for example when batching sequences of different lengths. If not provided, willdefault to  or  depending on model size."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead. If not provided, will default to ."
+        },
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The end of sequence token seen during pretraining. If not provided, will default to <|endoftext|>"
+        },
+        {
+            "name": "bos_token",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The beginning of sequence token that can be used for downstream task, was not seen during pretraining. Ifnot provided, will default to  or <|endoftext|>, depending on model size."
+        },
+        {
+            "name": "sp_model_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Will be passed to the SentencePieceProcessor.__init__() method. The Python wrapper forSentencePiece can be used, among other things,to set:enable_sampling: Enable subword regularization.nbest_size: Sampling parameters for unigram. Invalid for BPE-Dropout.nbest_size = {0,1}: No sampling is performed.nbest_size > 1: samples from the nbest_size results.nbest_size < 0: assuming that nbest_size is infinite and samples from the all hypothesis (lattice)using forward-filtering-and-backward-sampling algorithm.alpha: Smoothing parameter for unigram sampling, and dropout probability of merge operations forBPE-dropout."
+        },
+        {
+            "name": "sp_model",
+            "type": "SentencePieceProcessor",
+            "optional": false,
+            "default": "",
+            "description": "The SentencePiece processor that is used for every conversion (string, tokens and IDs)."
+        },
+        {
+            "name": "whitespaces",
+            "type": "set",
+            "optional": false,
+            "default": "",
+            "description": "The whitespaces that are replaced in the whitespace normalization in preprocessing."
+        },
+        {
+            "name": "non_printing_characters_re",
+            "type": "Pattern",
+            "optional": false,
+            "default": "",
+            "description": "The compiled regular expression to remove non-printing characters in preprocessing."
+        }
+    ],
+    "return": ""
+}

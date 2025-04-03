@@ -1,0 +1,35 @@
+{
+    "api": "transformers.modeling_utils.ModuleUtilsMixin.get_head_mask",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "head_mask:",
+        "typing.Optional[torch.Tensor]",
+        "num_hidden_layers",
+        "is_attention_chunked"
+    ],
+    "params": [
+        {
+            "name": "head_mask",
+            "type": "torch.Tensor with shape [num_heads],[num_hidden_layers x num_heads]",
+            "optional": true,
+            "default": "",
+            "description": "The mask indicating if we should keep the heads or not (1.0 for keep, 0.0 for discard)."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The number of hidden layers in the model."
+        },
+        {
+            "name": "is_attention_chunked",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the attentions scores are computed by chunks or not."
+        }
+    ],
+    "return": ""
+}

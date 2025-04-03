@@ -1,0 +1,27 @@
+{
+    "api": "transformers.FlavaForPreTraining",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "FlavaConfig",
+        "image_codebook"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "FlavaConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        },
+        {
+            "name": "image_codebook",
+            "type": "nn.Module",
+            "optional": false,
+            "default": "",
+            "description": "If passed, the image codebook will be set to this. Otherwise. it willbe initialized using the image_codebook_config defined in the config first as the first parameter."
+        }
+    ],
+    "return": ""
+}

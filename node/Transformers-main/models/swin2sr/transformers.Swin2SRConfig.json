@@ -1,0 +1,189 @@
+{
+    "api": "transformers.Swin2SRConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_size",
+        "patch_size",
+        "num_channels",
+        "num_channels_out",
+        "embed_dim",
+        "depths",
+        "6,",
+        "6,",
+        "6,",
+        "6,",
+        "6]",
+        "num_heads",
+        "6,",
+        "6,",
+        "6,",
+        "6,",
+        "6]",
+        "window_size",
+        "mlp_ratio",
+        "qkv_bias",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "drop_path_rate",
+        "hidden_act",
+        "use_absolute_embeddings",
+        "initializer_range",
+        "layer_norm_eps",
+        "upscale",
+        "img_range",
+        "resi_connection",
+        "upsampler",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "num_channels_out",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "The number of output channels. If not set, it will be set to num_channels."
+        },
+        {
+            "name": "embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "180",
+            "description": "Dimensionality of patch embedding."
+        },
+        {
+            "name": "depths",
+            "type": "list(int",
+            "optional": true,
+            "default": "[6,",
+            "description": "Depth of each layer in the Transformer encoder."
+        },
+        {
+            "name": "num_heads",
+            "type": "list(int",
+            "optional": true,
+            "default": "[6,",
+            "description": "Number of attention heads in each layer of the Transformer encoder."
+        },
+        {
+            "name": "window_size",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "Size of windows."
+        },
+        {
+            "name": "mlp_ratio",
+            "type": "float",
+            "optional": true,
+            "default": "2.0",
+            "description": "Ratio of MLP hidden dimensionality to embedding dimensionality."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not a learnable bias should be added to the queries, keys and values."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings and encoder."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "Stochastic depth rate."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder. If string, gelu, relu,selu and gelu_new are supported."
+        },
+        {
+            "name": "use_absolute_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to add absolute position embeddings to the patch embeddings."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "upscale",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The upscale factor for the image. 2/3/4/8 for image super resolution, 1 for denoising and compress artifactreduction"
+        },
+        {
+            "name": "img_range",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "The range of the values of the input image."
+        },
+        {
+            "name": "resi_connection",
+            "type": "str",
+            "optional": true,
+            "default": "1conv",
+            "description": "The convolutional block to use before the residual connection in each stage."
+        },
+        {
+            "name": "upsampler",
+            "type": "str",
+            "optional": true,
+            "default": "pixelshuffle",
+            "description": "The reconstruction reconstruction module. Can be pixelshuffle/pixelshuffledirect/nearest+conv/None."
+        }
+    ],
+    "return": ""
+}

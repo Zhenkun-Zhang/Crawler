@@ -1,0 +1,8 @@
+{
+    "api": "transformers.agents.agent_types.AgentImage.to_string",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,193 @@
+{
+    "api": "transformers.TFRagTokenForGeneration.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "TFModelInputType",
+        "|",
+        "attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "decoder_input_ids",
+        "|",
+        "tf.Tensor",
+        "|",
+        "decoder_attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "encoder_outputs",
+        "|",
+        "tf.Tensor",
+        "|",
+        "past_key_values",
+        "tf.Tensor]]]",
+        "|",
+        "doc_scores",
+        "|",
+        "tf.Tensor",
+        "|",
+        "context_input_ids",
+        "|",
+        "tf.Tensor",
+        "|",
+        "context_attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "use_cache",
+        "|",
+        "output_attentions",
+        "|",
+        "output_hidden_states",
+        "|",
+        "output_retrieved",
+        "|",
+        "n_docs",
+        "|",
+        "do_marginalize",
+        "|",
+        "labels",
+        "|",
+        "tf.Tensor",
+        "|",
+        "reduce_loss",
+        "|",
+        "return_dict",
+        "|",
+        "training",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "tf.Tensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. RagConfig, used to initialize the model, specifieswhich generator to use, it also specifies a compatible generator tokenizer. Use that tokenizer class toobtain the indices."
+        },
+        {
+            "name": "attention_mask",
+            "type": "tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple consists of (generator_enc_last_hidden_state, optional: generator_enc_hidden_states,optional: generator_enc_attentions). generator_enc_last_hidden_state of shape (batch_size, n_docs * sequence_length, hidden_size) is a sequence of hidden-states at the output of the last layer of thegenerators encoder.Used by the (TFRagModel) model during decoding."
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "tf.Tensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Provide for generation tasks. None by default, construct as per instructions for the generator modelyoure using with your RAG instance."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "torch.BoolTensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(tf.Tensor))",
+            "optional": false,
+            "default": "",
+            "description": "Tuple consists of two elements: encoder_outputs of the RAG model (see encoder_outputs) andpast_key_values of the underlying generator. Can be used to speed up decoding. past_key_values are usedin the (RagTokenForGeneration) model during decoding."
+        },
+        {
+            "name": "doc_scores",
+            "type": "tf.Tensor of shape (batch_size, config.n_docs)",
+            "optional": false,
+            "default": "",
+            "description": "Score between each retrieved document embeddings (see retrieved_doc_embeds) andquestion_encoder_last_hidden_state. If the model has is not initialized with a retriever doc_scoreshas to be provided to the forward pass. doc_scores can be computed viaquestion_encoder_last_hidden_state and retrieved_doc_embeds, see examples for more information."
+        },
+        {
+            "name": "context_input_ids",
+            "type": "tf.Tensor of shape (batch_size * config.n_docs, config.max_combined_length",
+            "optional": true,
+            "default": "",
+            "description": "Input IDs post-processed from the retrieved documents and the question encoder input_ids by theretriever.If the model has is not initialized with a retriever `context_input_ids has to be provided to theforward pass. context_input_ids are returned by __call__(). context_attention_mask(tf.Tensor of shape (batch_size * config.n_docs, config.max_combined_length), optional, returned whenoutput_retrieved=True): Attention mask post-processed from the retrieved documents and the questionencoder input_ids by the retriever.If the model has is not initialized with a retriever context_attention_mask has to be provided to theforward pass. context_attention_mask are returned by __call__()."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "output_retrieved(bool,",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the retrieved_doc_embeds, retrieved_doc_ids, context_input_ids andcontext_attention_mask. See returned tensors for more detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a TFRetrievAugLMOutput instead of a plain tuple."
+        },
+        {
+            "name": "n_docs",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of documents to retrieve and/or number of documents for which to generate an answer."
+        },
+        {
+            "name": "do_marginalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If True, the logits are marginalized over all documents by making use oftorch.nn.functional.log_softmax."
+        },
+        {
+            "name": "labels",
+            "type": "tf.Tensor,np.ndarray of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the cross entropy classification loss according to Rag-Token model formulation Seehttps://arxiv.org/pdf/2005.11401.pdf Section 2.1 for details about Rag-Token formulation. Indices should bein [0, ..., config.vocab_size - 1]."
+        },
+        {
+            "name": "reduce_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Only relevant if labels is passed. If True, the NLL loss is reduced using the tf.Tensor.sumoperation."
+        },
+        {
+            "name": "kwargs",
+            "type": "Dict[str, any]",
+            "optional": true,
+            "default": "",
+            "description": "Legacy dictionary, which is required so that model can use generate() function."
+        }
+    ],
+    "return": "transformers.models.rag.modeling_tf_rag.TFRetrievAugLMMarginOutput or tuple(tf.Tensor)"
+}

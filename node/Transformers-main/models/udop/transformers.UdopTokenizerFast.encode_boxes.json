@@ -1,0 +1,46 @@
+{
+    "api": "transformers.UdopTokenizerFast.encode_boxes",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "typing.List[str],",
+        "typing.List[int]]",
+        "text_pair",
+        "typing.List[str],",
+        "typing.List[int],",
+        "NoneType]",
+        "boxes",
+        "word_labels",
+        "add_special_tokens",
+        "padding",
+        "str,",
+        "transformers.utils.generic.PaddingStrategy]",
+        "truncation",
+        "str,",
+        "transformers.tokenization_utils_base.TruncationStrategy]",
+        "max_length",
+        "stride",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "Converts",
+            "type": "a string to a sequence of ids (integer), using the tokenizer and vocabulary. Same as doing",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "self.convert_tokens_to_ids(self.tokenize(text)).",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "text (str, List[str] or List[int]):The first sequence to be encoded. This can be a string, a list of strings (tokenized string using thetokenize method) or a list of integers (tokenized string ids using the convert_tokens_to_idsmethod).text_pair (str, List[str] or List[int], optional):Optional second sequence to be encoded. This can be a string, a list of strings (tokenized string usingthe tokenize method) or a list of integers (tokenized string ids using the convert_tokens_to_idsmethod)."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,126 @@
+{
+    "api": "transformers.Emu3VQVAEConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "codebook_size:",
+        "embed_dim",
+        "latent_channels",
+        "double_latent",
+        "in_channels",
+        "out_channels",
+        "temporal_downsample_factor",
+        "base_channels",
+        "channel_multiplier",
+        "2,",
+        "2,",
+        "4]",
+        "num_res_blocks",
+        "attn_resolutions",
+        "hidden_size",
+        "num_attention_heads",
+        "attention_dropout",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "codebook_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Codebook size of the VQ model."
+        },
+        {
+            "name": "embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of the quantized vector in codebook."
+        },
+        {
+            "name": "latent_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of the output channel of encoder and the input channel of decoder"
+        },
+        {
+            "name": "double_latent",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether double the output dim of the encoder."
+        },
+        {
+            "name": "in_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Input channel of encoder."
+        },
+        {
+            "name": "out_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Output channel of decoder."
+        },
+        {
+            "name": "temporal_downsample_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Temporal downsample factor."
+        },
+        {
+            "name": "base_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Basic channel number of the intermediate blocks."
+        },
+        {
+            "name": "channel_multiplier",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Channel scaling factor of the intermediate blocks."
+        },
+        {
+            "name": "num_res_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Residual block number in each stage."
+        },
+        {
+            "name": "attn_resolutions",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Stage indices to apply attention."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of the hidden representations in the attention layer."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout ratio for the attention probabilities."
+        }
+    ],
+    "return": ""
+}

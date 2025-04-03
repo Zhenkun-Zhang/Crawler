@@ -1,0 +1,312 @@
+{
+    "api": "transformers.DPTConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "intermediate_size",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "initializer_range",
+        "layer_norm_eps",
+        "image_size",
+        "patch_size",
+        "num_channels",
+        "is_hybrid",
+        "qkv_bias",
+        "backbone_out_indices",
+        "5,",
+        "8,",
+        "11]",
+        "readout_type",
+        "reassemble_factors",
+        "2,",
+        "1,",
+        "0.5]",
+        "neck_hidden_sizes",
+        "192,",
+        "384,",
+        "768]",
+        "fusion_hidden_size",
+        "head_in_index",
+        "use_batch_norm_in_fusion_residual",
+        "use_bias_in_fusion_residual",
+        "add_projection",
+        "use_auxiliary_head",
+        "auxiliary_loss_weight",
+        "semantic_loss_ignore_index",
+        "semantic_classifier_dropout",
+        "backbone_featmap_shape",
+        "1024,",
+        "24,",
+        "24]",
+        "neck_ignore_stages",
+        "1]",
+        "backbone_config",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "backbone_kwargs",
+        "pooler_output_size",
+        "pooler_act",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers and the pooler layer."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "384",
+            "description": "The size (resolution) of each image."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "is_hybrid",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a hybrid backbone. Useful in the context of loading DPT-Hybrid models."
+        },
+        {
+            "name": "qkv_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to add a bias to the queries, keys and values."
+        },
+        {
+            "name": "backbone_out_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "Indices of the intermediate hidden states to use from backbone."
+        },
+        {
+            "name": "readout_type",
+            "type": "str",
+            "optional": true,
+            "default": "project",
+            "description": "The readout type to use when processing the readout token (CLS token) of the intermediate hidden states ofthe ViT backbone. Can be one of [ignore, add, project].ignore simply ignores the CLS token.add passes the information from the CLS token to all other tokens by adding the representations.project passes information to the other tokens by concatenating the readout to all other tokens beforeprojecting therepresentation to the original feature dimension D using a linear layer followed by a GELU non-linearity."
+        },
+        {
+            "name": "reassemble_factors",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "The up/downsampling factors of the reassemble layers."
+        },
+        {
+            "name": "neck_hidden_sizes",
+            "type": "List[str]",
+            "optional": true,
+            "default": "[96,",
+            "description": "The hidden sizes to project to for the feature maps of the backbone."
+        },
+        {
+            "name": "fusion_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The number of channels before fusion."
+        },
+        {
+            "name": "head_in_index",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "The index of the features to use in the heads."
+        },
+        {
+            "name": "use_batch_norm_in_fusion_residual",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use batch normalization in the pre-activate residual units of the fusion blocks."
+        },
+        {
+            "name": "use_bias_in_fusion_residual",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether to use bias in the pre-activate residual units of the fusion blocks."
+        },
+        {
+            "name": "add_projection",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to add a projection layer before the depth estimation head."
+        },
+        {
+            "name": "use_auxiliary_head",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use an auxiliary head during training."
+        },
+        {
+            "name": "auxiliary_loss_weight",
+            "type": "float",
+            "optional": true,
+            "default": "0.4",
+            "description": "Weight of the cross-entropy loss of the auxiliary head."
+        },
+        {
+            "name": "semantic_loss_ignore_index",
+            "type": "int",
+            "optional": true,
+            "default": "255",
+            "description": "The index that is ignored by the loss function of the semantic segmentation model."
+        },
+        {
+            "name": "semantic_classifier_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout ratio for the semantic classification head."
+        },
+        {
+            "name": "backbone_featmap_shape",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "Used only for the hybrid embedding type. The shape of the feature maps of the backbone."
+        },
+        {
+            "name": "neck_ignore_stages",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[0,",
+            "description": "Used only for the hybrid embedding type. The stages of the readout layers to ignore."
+        },
+        {
+            "name": "backbone_config",
+            "type": "Union[Dict[str, Any], PretrainedConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the backbone model. Only used in case is_hybrid is True or in case you want toleverage the AutoBackbone API."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to load backbone from the timm library. If False, the backbone is loaded from the transformerslibrary."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "pooler_output_size",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the pooler layer. If None, defaults to hidden_size."
+        },
+        {
+            "name": "pooler_act",
+            "type": "str",
+            "optional": true,
+            "default": "tanh",
+            "description": "The activation function to be used by the pooler. Keys of ACT2FN are supported for Flax andPytorch, and elements of https://www.tensorflow.org/api_docs/python/tf/keras/activations aresupported for Tensorflow."
+        }
+    ],
+    "return": ""
+}

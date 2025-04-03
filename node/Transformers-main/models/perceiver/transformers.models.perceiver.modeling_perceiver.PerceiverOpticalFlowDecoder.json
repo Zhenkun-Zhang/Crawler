@@ -1,0 +1,14 @@
+{
+    "api": "transformers.models.perceiver.modeling_perceiver.PerceiverOpticalFlowDecoder",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config",
+        "output_image_shape",
+        "output_num_channels",
+        "rescale_factor",
+        "**decoder_kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,107 @@
+{
+    "api": "transformers.BarkConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "semantic_config:",
+        "coarse_acoustics_config",
+        "fine_acoustics_config",
+        "codec_config",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "semantic_config",
+            "type": "BarkSemanticConfig",
+            "optional": true,
+            "default": "",
+            "description": "Configuration of the underlying semantic sub-model."
+        },
+        {
+            "name": "coarse_acoustics_config",
+            "type": "BarkCoarseConfig",
+            "optional": true,
+            "default": "",
+            "description": "Configuration of the underlying coarse acoustics sub-model."
+        },
+        {
+            "name": "fine_acoustics_config",
+            "type": "BarkFineConfig",
+            "optional": true,
+            "default": "",
+            "description": "Configuration of the underlying fine acoustics sub-model."
+        },
+        {
+            "name": "codec_config",
+            "type": "AutoConfig",
+            "optional": true,
+            "default": "",
+            "description": "Configuration of the underlying codec sub-model."
+        },
+        {
+            "name": "Example",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "```python",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "from transformers import ("
+        },
+        {
+            "name": "…",
+            "type": "BarkSemanticConfig,",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "…",
+            "type": "BarkCoarseConfig,",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "…",
+            "type": "BarkFineConfig,",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "…",
+            "type": "BarkModel,",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "…",
+            "type": "BarkConfig,",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "…",
+            "type": "AutoConfig,",
+            "optional": false,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "…",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": ""
+        }
+    ],
+    "return": ""
+}

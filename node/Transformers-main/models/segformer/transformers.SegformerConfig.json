@@ -1,0 +1,176 @@
+{
+    "api": "transformers.SegformerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "num_channels",
+        "num_encoder_blocks",
+        "depths",
+        "2,",
+        "2,",
+        "2]",
+        "sr_ratios",
+        "4,",
+        "2,",
+        "1]",
+        "hidden_sizes",
+        "64,",
+        "160,",
+        "256]",
+        "patch_sizes",
+        "3,",
+        "3,",
+        "3]",
+        "strides",
+        "2,",
+        "2,",
+        "2]",
+        "num_attention_heads",
+        "2,",
+        "5,",
+        "8]",
+        "mlp_ratios",
+        "4,",
+        "4,",
+        "4]",
+        "hidden_act",
+        "hidden_dropout_prob",
+        "attention_probs_dropout_prob",
+        "classifier_dropout_prob",
+        "initializer_range",
+        "drop_path_rate",
+        "layer_norm_eps",
+        "decoder_hidden_size",
+        "semantic_loss_ignore_index",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "num_encoder_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "4",
+            "description": "The number of encoder blocks (i.e. stages in the Mix Transformer encoder)."
+        },
+        {
+            "name": "depths",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[2,",
+            "description": "The number of layers in each encoder block."
+        },
+        {
+            "name": "sr_ratios",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[8,",
+            "description": "Sequence reduction ratios in each encoder block."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[32,",
+            "description": "Dimension of each of the encoder blocks."
+        },
+        {
+            "name": "patch_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[7,",
+            "description": "Patch size before each encoder block."
+        },
+        {
+            "name": "strides",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "Stride before each encoder block."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[1,",
+            "description": "Number of attention heads for each attention layer in each block of the Transformer encoder."
+        },
+        {
+            "name": "mlp_ratios",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "Ratio of the size of the hidden layer compared to the size of the input layer of the Mix FFNs in theencoder blocks."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "classifier_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability before the classification head."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for stochastic depth, used in the blocks of the Transformer encoder."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-06",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "decoder_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "The dimension of the all-MLP decode head."
+        },
+        {
+            "name": "semantic_loss_ignore_index",
+            "type": "int",
+            "optional": true,
+            "default": "255",
+            "description": "The index that is ignored by the loss function of the semantic segmentation model."
+        }
+    ],
+    "return": ""
+}

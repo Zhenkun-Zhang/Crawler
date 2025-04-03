@@ -1,0 +1,18 @@
+{
+    "api": "transformers.ClassifierFreeGuidanceLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "guidance_scale"
+    ],
+    "params": [
+        {
+            "name": "guidance_scale",
+            "type": "float",
+            "optional": false,
+            "default": "",
+            "description": "The guidance scale for classifier free guidance (CFG). CFG is enabled by setting guidance_scale > 1.Higher guidance scale encourages the model to generate samples that are more closely linked to the inputprompt, usually at the expense of poorer quality."
+        }
+    ],
+    "return": ""
+}

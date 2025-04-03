@@ -1,0 +1,67 @@
+{
+    "api": "transformers.ShieldGemma2Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "vision_config",
+        "mm_tokens_per_image",
+        "boi_token_index",
+        "eoi_token_index",
+        "image_token_index",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "Union[ShieldGemma2TextConfig, dict]",
+            "optional": true,
+            "default": "None",
+            "description": "The config object of the text backbone."
+        },
+        {
+            "name": "vision_config",
+            "type": "Union[AutoConfig, dict],  optional",
+            "optional": true,
+            "default": "None",
+            "description": "Custom vision config or dict."
+        },
+        {
+            "name": "mm_tokens_per_image",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of tokens per image embedding."
+        },
+        {
+            "name": "boi_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The begin-of-image token index to wrap the image prompt."
+        },
+        {
+            "name": "eoi_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The end-of-image token index to wrap the image prompt."
+        },
+        {
+            "name": "image_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The image token index to encode the image prompt."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,20 @@
+{
+    "api": "transformers.SequenceBiasLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "sequence_bias:",
+        "typing.List[typing.List[typing.Union[typing.List[int],",
+        "float]]]"
+    ],
+    "params": [
+        {
+            "name": "sequence_bias",
+            "type": "List[List[Union[List[int], float]]]",
+            "optional": false,
+            "default": "",
+            "description": "List of lists that maps a sequence of tokens to its bias term (e.g. [[[10, 45], -2.0], [[64], -7.5]]). Positive biases increase the odds of thesequence being selected, while negative biases do the opposite. If a sequence has a length of 1, its biaswill always be applied. Otherwise, the bias will only be applied if the sequence in question is about to becompleted (in the token selection step after this processor is applied)."
+        }
+    ],
+    "return": ""
+}

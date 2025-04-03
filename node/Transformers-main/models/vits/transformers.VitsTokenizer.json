@@ -1,0 +1,61 @@
+{
+    "api": "transformers.VitsTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "pad_token",
+        "unk_token",
+        "language",
+        "add_blank",
+        "normalize",
+        "phonemize",
+        "is_uroman",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "Path to the vocabulary file."
+        },
+        {
+            "name": "language",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Language identifier."
+        },
+        {
+            "name": "add_blank",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to insert token id 0 in between the other tokens."
+        },
+        {
+            "name": "normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to normalize the input text by removing all casing and punctuation."
+        },
+        {
+            "name": "phonemize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to convert the input text into phonemes."
+        },
+        {
+            "name": "is_uroman",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether the uroman Romanizer needs to be applied to the input text prior to tokenizing."
+        }
+    ],
+    "return": ""
+}

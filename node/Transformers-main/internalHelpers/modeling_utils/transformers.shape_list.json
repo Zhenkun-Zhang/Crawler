@@ -1,0 +1,21 @@
+{
+    "api": "transformers.shape_list",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tensor:",
+        "typing.Union[tensorflow.python.framework.tensor.Tensor,",
+        "numpy.ndarray]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "tensor",
+            "type": "tf.Tensor,np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "The tensor we want the shape of."
+        }
+    ],
+    "return": "List[int]"
+}

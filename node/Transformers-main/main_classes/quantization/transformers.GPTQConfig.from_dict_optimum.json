@@ -1,0 +1,10 @@
+{
+    "api": "transformers.GPTQConfig.from_dict_optimum",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "config_dict"
+    ],
+    "params": [],
+    "return": ""
+}

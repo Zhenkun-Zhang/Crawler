@@ -1,0 +1,69 @@
+{
+    "api": "transformers.DataCollatorForSeq2Seq",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tokenizer:",
+        "PreTrainedTokenizerBase",
+        "model",
+        "padding",
+        "str,",
+        "transformers.utils.generic.PaddingStrategy]",
+        "max_length",
+        "pad_to_multiple_of",
+        "label_pad_token_id",
+        "return_tensors"
+    ],
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer,PreTrainedTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "The tokenizer used for encoding the data."
+        },
+        {
+            "name": "model",
+            "type": "PreTrainedModel",
+            "optional": true,
+            "default": "",
+            "description": "The model that is being trained. If set and has the prepare_decoder_input_ids_from_labels, use it toprepare the decoder_input_idsThis is useful when using label_smoothing to avoid calculating loss twice."
+        },
+        {
+            "name": "padding",
+            "type": "bool, str,PaddingStrategy",
+            "optional": true,
+            "default": "",
+            "description": "Select a strategy to pad the returned sequences (according to the models padding side and padding index)among:True or longest (default): Pad to the longest sequence in the batch (or no padding if only a singlesequence is provided).max_length: Pad to a maximum length specified with the argument max_length or to the maximumacceptable input length for the model if that argument is not provided.False or do_not_pad: No padding (i.e., can output a batch with sequences of different lengths)."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Maximum length of the returned list and optionally padding length (see above)."
+        },
+        {
+            "name": "pad_to_multiple_of",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set will pad the sequence to a multiple of the provided value.This is especially useful to enable the use of Tensor Cores on NVIDIA hardware with compute capability >=7.0 (Volta)."
+        },
+        {
+            "name": "label_pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The id to use when padding the labels (-100 will be automatically ignored by PyTorch loss functions)."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The type of Tensor to return. Allowable values are np, pt and tf."
+        }
+    ],
+    "return": ""
+}

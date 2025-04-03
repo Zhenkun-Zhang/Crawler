@@ -1,0 +1,67 @@
+{
+    "api": "transformers.generation.TFContrastiveSearchEncoderDecoderOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "sequences:",
+        "Tensor",
+        "scores",
+        "encoder_attentions",
+        "encoder_hidden_states",
+        "decoder_attentions",
+        "cross_attentions",
+        "decoder_hidden_states"
+    ],
+    "params": [
+        {
+            "name": "sequences",
+            "type": "tf.Tensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "The generated sequences. The second dimension (sequence_length) is either equal to max_length or shorterif all batches finished early due to the eos_token_id."
+        },
+        {
+            "name": "scores",
+            "type": "tuple(tf.Tensor) optional, returned when output_scores=True is passed,when config.output_scores=True",
+            "optional": true,
+            "default": "",
+            "description": "Processed prediction scores of the language modeling head (scores for each vocabulary token before SoftMax)at each generation step. Tuple of tf.Tensor with up to max_new_tokens elements (one element for eachgenerated token), with each tensor of shape (batch_size, config.vocab_size)."
+        },
+        {
+            "name": "encoder_attentions",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for each layer of the decoder) of shape (batch_size, num_heads, sequence_length, sequence_length)."
+        },
+        {
+            "name": "encoder_hidden_states",
+            "type": "tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of tf.Tensor (one for the output of the embeddings + one for the output of each layer) of shape(batch_size, sequence_length, hidden_size)."
+        },
+        {
+            "name": "decoder_attentions",
+            "type": "tuple(tuple(tf.Tensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple (one element for each generated token) of tuples (one element for each layer of the decoder) oftf.Tensor of shape (batch_size, num_heads, generated_length, sequence_length)."
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuple(tuple(tf.Tensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple (one element for each generated token) of tuples (one element for each layer of the decoder) oftf.Tensor of shape (batch_size, num_heads, generated_length, sequence_length)."
+        },
+        {
+            "name": "decoder_hidden_states",
+            "type": "tuple(tuple(tf.Tensor)",
+            "optional": true,
+            "default": "",
+            "description": "Tuple (one element for each generated token) of tuples (one element for each layer of the decoder) oftf.Tensor of shape (batch_size, generated_length, hidden_size)."
+        }
+    ],
+    "return": ""
+}

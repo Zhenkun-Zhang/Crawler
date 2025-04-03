@@ -1,0 +1,27 @@
+{
+    "api": "transformers.TFNoBadWordsLogitsProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "bad_words_ids:",
+        "typing.List[typing.List[int]]",
+        "eos_token_id"
+    ],
+    "params": [
+        {
+            "name": "bad_words_ids",
+            "type": "List[List[int]]",
+            "optional": false,
+            "default": "",
+            "description": "List of list of token ids that are not allowed to be generated. In order to get the tokens of the wordsthat should not appear in the generated text, make sure to set add_prefix_space=True when initializingthe tokenizer, and use tokenizer(bad_words, add_special_tokens=False).input_ids. The add_prefix_spaceargument is only supported for some slow tokenizers, as fast tokenizers prefixing behaviours come frompre tokenizers. Read more here."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The id of the end-of-sequence token."
+        }
+    ],
+    "return": ""
+}

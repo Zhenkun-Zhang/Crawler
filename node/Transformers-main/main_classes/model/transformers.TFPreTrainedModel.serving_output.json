@@ -1,0 +1,10 @@
+{
+    "api": "transformers.TFPreTrainedModel.serving_output",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "output"
+    ],
+    "params": [],
+    "return": ""
+}

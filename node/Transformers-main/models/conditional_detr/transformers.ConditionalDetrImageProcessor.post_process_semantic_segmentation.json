@@ -1,0 +1,28 @@
+{
+    "api": "transformers.ConditionalDetrImageProcessor.post_process_semantic_segmentation",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "outputs",
+        "target_sizes",
+        "int]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "outputs",
+            "type": "ConditionalDetrForSegmentation",
+            "optional": false,
+            "default": "",
+            "description": "Raw outputs of the model."
+        },
+        {
+            "name": "target_sizes",
+            "type": "List[Tuple[int, int]]",
+            "optional": true,
+            "default": "",
+            "description": "A list of tuples (Tuple[int, int]) containing the target size (height, width) of each image in thebatch. If unset, predictions will not be resized."
+        }
+    ],
+    "return": "List[torch.Tensor]"
+}

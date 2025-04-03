@@ -1,0 +1,45 @@
+{
+    "api": "transformers.apply_chunking_to_forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "forward_fn:",
+        "Callable[...,",
+        "torch.Tensor]",
+        "chunk_size",
+        "chunk_dim",
+        "*input_tensors",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "forward_fn",
+            "type": "Callable[..., torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "The forward function of the model."
+        },
+        {
+            "name": "chunk_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The chunk size of a chunked tensor: num_chunks = len(input_tensors[0]) / chunk_size."
+        },
+        {
+            "name": "chunk_dim",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The dimension over which the input_tensors should be chunked."
+        },
+        {
+            "name": "input_tensors",
+            "type": "Tuple[torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "The input tensors of forward_fn which will be chunked"
+        }
+    ],
+    "return": "torch.Tensor"
+}

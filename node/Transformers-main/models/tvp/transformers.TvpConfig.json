@@ -1,0 +1,211 @@
+{
+    "api": "transformers.TvpConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "backbone_config",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "backbone_kwargs",
+        "distance_loss_weight",
+        "duration_loss_weight",
+        "visual_prompter_type",
+        "visual_prompter_apply",
+        "visual_prompt_size",
+        "max_img_size",
+        "num_frames",
+        "vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "max_position_embeddings",
+        "max_grid_col_position_embeddings",
+        "max_grid_row_position_embeddings",
+        "hidden_dropout_prob",
+        "hidden_act",
+        "layer_norm_eps",
+        "initializer_range",
+        "attention_probs_dropout_prob",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "backbone_config",
+            "type": "PretrainedConfig,dict",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the backbone model."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to load backbone from the timm library. If False, the backbone is loaded from the transformerslibrary."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "distance_loss_weight",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "The weight of distance loss."
+        },
+        {
+            "name": "duration_loss_weight",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The weight of duration loss."
+        },
+        {
+            "name": "visual_prompter_type",
+            "type": "str",
+            "optional": true,
+            "default": "framepad",
+            "description": "Visual prompt type. The type of padding. Framepad means padding on each frame. Should be one of framepador framedownpad"
+        },
+        {
+            "name": "visual_prompter_apply",
+            "type": "str",
+            "optional": true,
+            "default": "replace",
+            "description": "The way of applying visual prompt. Replace means use the value of prompt to change the original value invisual inputs. Should be one of replace, or add, or remove."
+        },
+        {
+            "name": "visual_prompt_size",
+            "type": "int",
+            "optional": true,
+            "default": "96",
+            "description": "The size of visual prompt."
+        },
+        {
+            "name": "max_img_size",
+            "type": "int",
+            "optional": true,
+            "default": "448",
+            "description": "The maximum size of frame."
+        },
+        {
+            "name": "num_frames",
+            "type": "int",
+            "optional": true,
+            "default": "48",
+            "description": "The number of frames extracted from a video."
+        },
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30522",
+            "description": "Vocabulary size of the Tvp text model. Defines the number of different tokens that can be represented bythe inputs_ids passed when calling TvpModel."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the encoder layers."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "512",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "max_grid_col_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "The largest number of horizontal patches from a video frame."
+        },
+        {
+            "name": "max_grid_row_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "100",
+            "description": "The largest number of vertical patches from a video frame."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability of hidden layers."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "gelu",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new quick_gelu are supported."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-12",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "attention_probs_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability of attention layers."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,34 @@
+{
+    "api": "transformers.ImageFeatureExtractionMixin.to_numpy_array",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image",
+        "rescale",
+        "channel_first"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "PIL.Image.Image,np.ndarray,torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "The image to convert to a NumPy array."
+        },
+        {
+            "name": "rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to apply the scaling factor (to make pixel values floats between 0. and 1.). Willdefault to True if the image is a PIL Image or an array/tensor of integers, False otherwise."
+        },
+        {
+            "name": "channel_first",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to permute the dimensions of the image to put the channel dimension first."
+        }
+    ],
+    "return": ""
+}

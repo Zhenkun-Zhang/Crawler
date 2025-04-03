@@ -1,0 +1,13 @@
+{
+    "api": "transformers.EncoderDecoderConfig.from_encoder_decoder_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "encoder_config:",
+        "decoder_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "EncoderDecoderConfig"
+}

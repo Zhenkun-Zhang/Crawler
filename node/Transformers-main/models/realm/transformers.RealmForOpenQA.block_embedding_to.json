@@ -1,0 +1,18 @@
+{
+    "api": "transformers.RealmForOpenQA.block_embedding_to",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "device"
+    ],
+    "params": [
+        {
+            "name": "device",
+            "type": "str,torch.device",
+            "optional": false,
+            "default": "",
+            "description": "The device to which self.block_emb will be sent."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,126 @@
+{
+    "api": "transformers.GPTJConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "n_positions",
+        "n_embd",
+        "n_layer",
+        "n_head",
+        "rotary_dim",
+        "n_inner",
+        "activation_function",
+        "resid_pdrop",
+        "embd_pdrop",
+        "attn_pdrop",
+        "layer_norm_epsilon",
+        "initializer_range",
+        "use_cache",
+        "bos_token_id",
+        "eos_token_id",
+        "tie_word_embeddings",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "50400",
+            "description": "Vocabulary size of the GPT-J model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling GPTJModel."
+        },
+        {
+            "name": "n_positions",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "n_embd",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "Dimensionality of the embeddings and hidden states."
+        },
+        {
+            "name": "n_layer",
+            "type": "int",
+            "optional": true,
+            "default": "28",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "rotary_dim",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Number of dimensions in the embedding that Rotary Position Embedding is applied to."
+        },
+        {
+            "name": "n_inner",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Dimensionality of the inner feed-forward layers. None will set it to 4 times n_embd"
+        },
+        {
+            "name": "activation_function",
+            "type": "str",
+            "optional": true,
+            "default": "gelu_new",
+            "description": "Activation function, to be selected in the list [relu, silu, gelu, tanh, gelu_new]."
+        },
+        {
+            "name": "resid_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "embd_pdrop",
+            "type": "int",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the embeddings."
+        },
+        {
+            "name": "attn_pdrop",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention."
+        },
+        {
+            "name": "layer_norm_epsilon",
+            "type": "float",
+            "optional": true,
+            "default": "1e-05",
+            "description": "The epsilon to use in the layer normalization layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        }
+    ],
+    "return": ""
+}

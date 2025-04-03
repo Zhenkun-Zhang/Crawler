@@ -1,0 +1,34 @@
+{
+    "api": "transformers.JukeboxModel.primed_sample",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "raw_audio",
+        "labels",
+        "**sampling_kwargs"
+    ],
+    "params": [
+        {
+            "name": "raw_audio",
+            "type": "List[torch.Tensor] of length n_samples ",
+            "optional": false,
+            "default": "",
+            "description": "A list of raw audio that will be used as conditioning information for each samples that will begenerated."
+        },
+        {
+            "name": "labels",
+            "type": "List[torch.LongTensor] of length n_sample, and shape (self.levels, self.config.max_nb_genre + lyric_sequence_length",
+            "optional": false,
+            "default": "",
+            "description": "List of metadata such as artist_id, genre_id and the full list of lyric tokens which are used tocondition the generation."
+        },
+        {
+            "name": "sampling_kwargs",
+            "type": "Dict[Any]",
+            "optional": false,
+            "default": "",
+            "description": "Various additional sampling arguments that are used by the _sample function. A detail list of thearguments can bee seen in the _sample function documentation."
+        }
+    ],
+    "return": ""
+}

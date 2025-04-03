@@ -1,0 +1,59 @@
+{
+    "api": "transformers.TimmBackboneConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "backbone",
+        "num_channels",
+        "features_only",
+        "use_pretrained_backbone",
+        "out_indices",
+        "freeze_batch_norm_2d",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "The timm checkpoint to load."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "features_only",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to output only the features or also the logits."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether to use a pretrained backbone."
+        },
+        {
+            "name": "out_indices",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "If used as backbone, list of indices of features to output. Can be any of 0, 1, 2, etc. (depending on howmany stages the model has). Will default to the last stage if unset."
+        },
+        {
+            "name": "freeze_batch_norm_2d",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Converts all BatchNorm2d and SyncBatchNorm layers of provided module into FrozenBatchNorm2d."
+        }
+    ],
+    "return": ""
+}

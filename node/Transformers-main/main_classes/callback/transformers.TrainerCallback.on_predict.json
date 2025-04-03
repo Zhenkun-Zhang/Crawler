@@ -1,0 +1,15 @@
+{
+    "api": "transformers.TrainerCallback.on_predict",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "args:",
+        "TrainingArguments",
+        "state",
+        "control",
+        "metrics",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

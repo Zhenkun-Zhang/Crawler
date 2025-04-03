@@ -1,0 +1,10 @@
+{
+    "api": "transformers.TFPreTrainedModel.get_prefix_bias_name",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        ")"
+    ],
+    "params": [],
+    "return": "str"
+}

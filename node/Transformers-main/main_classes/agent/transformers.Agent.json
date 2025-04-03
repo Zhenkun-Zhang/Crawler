@@ -1,0 +1,25 @@
+{
+    "api": "transformers.Agent",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tools:",
+        "typing.Union[typing.List[transformers.agents.tools.Tool],",
+        "transformers.agents.agents.Toolbox]",
+        "llm_engine",
+        "system_prompt",
+        "tool_description_template",
+        "additional_args",
+        "max_iterations",
+        "tool_parser",
+        "add_base_tools",
+        "verbose",
+        "grammar",
+        "str]]",
+        "managed_agents",
+        "step_callbacks",
+        "monitor_metrics"
+    ],
+    "params": [],
+    "return": ""
+}

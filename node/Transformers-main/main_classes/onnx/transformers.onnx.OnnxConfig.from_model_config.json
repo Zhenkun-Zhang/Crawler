@@ -1,0 +1,20 @@
+{
+    "api": "transformers.onnx.OnnxConfig.from_model_config",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "PretrainedConfig",
+        "task"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The models configuration to use when exporting to ONNX"
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,20 @@
+{
+    "api": "transformers.NougatTokenizerFast.correct_tables",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "generation:",
+        "str",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "generation",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The generated text to be postprocessed."
+        }
+    ],
+    "return": "str"
+}

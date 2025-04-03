@@ -1,0 +1,10 @@
+{
+    "api": "transformers.integrations.AzureMLCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "azureml_run"
+    ],
+    "params": [],
+    "return": ""
+}

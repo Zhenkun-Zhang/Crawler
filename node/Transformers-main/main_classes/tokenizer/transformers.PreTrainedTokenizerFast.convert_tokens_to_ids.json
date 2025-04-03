@@ -1,0 +1,21 @@
+{
+    "api": "transformers.PreTrainedTokenizerFast.convert_tokens_to_ids",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "tokens:",
+        "typing.Union[str,",
+        "collections.abc.Iterable[str]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "tokens",
+            "type": "str,Iterable[str]",
+            "optional": false,
+            "default": "",
+            "description": "One or several token(s) to convert to token id(s)."
+        }
+    ],
+    "return": "int or List[int]"
+}

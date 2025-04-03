@@ -1,0 +1,44 @@
+{
+    "api": "transformers.FocalNetModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "typing.Optional[torch.FloatTensor]",
+        "bool_masked_pos",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeAutoImageProcessor.__call__() for details."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        },
+        {
+            "name": "bool_masked_pos",
+            "type": "torch.BoolTensor of shape (batch_size, num_patches)",
+            "optional": false,
+            "default": "",
+            "description": "Boolean masked positions. Indicates which patches are masked (1) and which arent (0)."
+        }
+    ],
+    "return": "transformers.models.focalnet.modeling_focalnet.FocalNetModelOutput or tuple(torch.FloatTensor)"
+}

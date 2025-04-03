@@ -1,0 +1,107 @@
+{
+    "api": "transformers.LxmertTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_file",
+        "do_lower_case",
+        "do_basic_tokenize",
+        "never_split",
+        "unk_token",
+        "sep_token",
+        "pad_token",
+        "cls_token",
+        "mask_token",
+        "tokenize_chinese_chars",
+        "strip_accents",
+        "clean_up_tokenization_spaces",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_file",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "File containing the vocabulary."
+        },
+        {
+            "name": "do_lower_case",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to lowercase the input when tokenizing."
+        },
+        {
+            "name": "do_basic_tokenize",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to do basic tokenization before WordPiece."
+        },
+        {
+            "name": "never_split",
+            "type": "Iterable",
+            "optional": true,
+            "default": "None",
+            "description": "Collection of tokens which will never be split during tokenization. Only has an effect whendo_basic_tokenize=True"
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "[UNK]",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "sep_token",
+            "type": "str",
+            "optional": true,
+            "default": "[SEP]",
+            "description": "The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences forsequence classification or for a text and a question for question answering. It is also used as the lasttoken of a sequence built with special tokens."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "[PAD]",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "cls_token",
+            "type": "str",
+            "optional": true,
+            "default": "[CLS]",
+            "description": "The classifier token which is used when doing sequence classification (classification of the whole sequenceinstead of per-token classification). It is the first token of the sequence when built with special tokens."
+        },
+        {
+            "name": "mask_token",
+            "type": "str",
+            "optional": true,
+            "default": "[MASK]",
+            "description": "The token used for masking values. This is the token used when training this model with masked languagemodeling. This is the token which the model will try to predict."
+        },
+        {
+            "name": "tokenize_chinese_chars",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to tokenize Chinese characters.This should likely be deactivated for Japanese (see thisissue)."
+        },
+        {
+            "name": "strip_accents",
+            "type": "bool",
+            "optional": true,
+            "default": "None",
+            "description": "Whether or not to strip all accents. If this option is not specified, then it will be determined by thevalue for lowercase (as in the original Lxmert)."
+        },
+        {
+            "name": "clean_up_tokenization_spaces",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to cleanup spaces after decoding, cleanup consists in removing potential artifacts likeextra spaces."
+        }
+    ],
+    "return": ""
+}

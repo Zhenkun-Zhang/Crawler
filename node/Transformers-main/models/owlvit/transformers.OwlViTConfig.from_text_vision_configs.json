@@ -1,0 +1,13 @@
+{
+    "api": "transformers.OwlViTConfig.from_text_vision_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text_config:",
+        "vision_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "OwlViTConfig"
+}

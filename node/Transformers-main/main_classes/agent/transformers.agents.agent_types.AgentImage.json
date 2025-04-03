@@ -1,0 +1,10 @@
+{
+    "api": "transformers.agents.agent_types.AgentImage",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "value"
+    ],
+    "params": [],
+    "return": ""
+}

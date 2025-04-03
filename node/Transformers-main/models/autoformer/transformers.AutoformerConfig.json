@@ -1,0 +1,274 @@
+{
+    "api": "transformers.AutoformerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "prediction_length:",
+        "context_length",
+        "distribution_output",
+        "loss",
+        "input_size",
+        "lags_sequence",
+        "2,",
+        "3,",
+        "4,",
+        "5,",
+        "6,",
+        "7]",
+        "scaling",
+        "num_time_features",
+        "num_dynamic_real_features",
+        "num_static_categorical_features",
+        "num_static_real_features",
+        "cardinality",
+        "embedding_dimension",
+        "d_model",
+        "encoder_attention_heads",
+        "decoder_attention_heads",
+        "encoder_layers",
+        "decoder_layers",
+        "encoder_ffn_dim",
+        "decoder_ffn_dim",
+        "activation_function",
+        "dropout",
+        "encoder_layerdrop",
+        "decoder_layerdrop",
+        "attention_dropout",
+        "activation_dropout",
+        "num_parallel_samples",
+        "init_std",
+        "use_cache",
+        "is_encoder_decoder",
+        "label_length",
+        "moving_average",
+        "autocorrelation_factor",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "prediction_length",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "The prediction length for the decoder. In other words, the prediction horizon of the model."
+        },
+        {
+            "name": "context_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The context length for the encoder. If unset, the context length will be the same as theprediction_length."
+        },
+        {
+            "name": "distribution_output",
+            "type": "string",
+            "optional": true,
+            "default": "",
+            "description": "The distribution emission head for the model. Could be either student_t, normal or negative_binomial."
+        },
+        {
+            "name": "loss",
+            "type": "string",
+            "optional": true,
+            "default": "",
+            "description": "The loss function for the model corresponding to the distribution_output head. For parametricdistributions it is the negative log likelihood (nll) - which currently is the only supported one."
+        },
+        {
+            "name": "input_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size of the target variable which by default is 1 for univariate targets. Would be > 1 in case ofmultivariate targets."
+        },
+        {
+            "name": "lags_sequence",
+            "type": "list[int]",
+            "optional": true,
+            "default": "",
+            "description": "The lags of the input time series as covariates often dictated by the frequency. Default is [1, 2, 3, 4, 5, 6, 7]."
+        },
+        {
+            "name": "scaling",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to scale the input targets."
+        },
+        {
+            "name": "num_time_features",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of time features in the input time series."
+        },
+        {
+            "name": "num_dynamic_real_features",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of dynamic real valued features."
+        },
+        {
+            "name": "num_static_categorical_features",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of static categorical features."
+        },
+        {
+            "name": "num_static_real_features",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of static real valued features."
+        },
+        {
+            "name": "cardinality",
+            "type": "list[int]",
+            "optional": true,
+            "default": "",
+            "description": "The cardinality (number of different values) for each of the static categorical features. Should be a listof integers, having the same length as num_static_categorical_features. Cannot be None ifnum_static_categorical_features is > 0."
+        },
+        {
+            "name": "embedding_dimension",
+            "type": "list[int]",
+            "optional": true,
+            "default": "",
+            "description": "The dimension of the embedding for each of the static categorical features. Should be a list of integers,having the same length as num_static_categorical_features. Cannot be None ifnum_static_categorical_features is > 0."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the transformer layers."
+        },
+        {
+            "name": "encoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of encoder layers."
+        },
+        {
+            "name": "decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of decoder layers."
+        },
+        {
+            "name": "encoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "decoder_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "encoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in encoder."
+        },
+        {
+            "name": "decoder_ffn_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimension of the intermediate (often named feed-forward) layer in decoder."
+        },
+        {
+            "name": "activation_function",
+            "type": "str,function",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function (function or string) in the encoder and decoder. If string, gelu andrelu are supported."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for all fully connected layers in the encoder, and decoder."
+        },
+        {
+            "name": "encoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for the attention and fully connected layers for each encoder layer."
+        },
+        {
+            "name": "decoder_layerdrop",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for the attention and fully connected layers for each decoder layer."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability used between the two layers of the feed-forward networks."
+        },
+        {
+            "name": "num_parallel_samples",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of samples to generate in parallel for each time step of inference."
+        },
+        {
+            "name": "init_std",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated normal weight initialization distribution."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use the past key/values attentions (if applicable to the model) to speed up decoding."
+        },
+        {
+            "name": "label_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Start token length of the Autoformer decoder, which is used for direct multi-step prediction (i.e.non-autoregressive generation)."
+        },
+        {
+            "name": "moving_average",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The window size of the moving average. In practice, its the kernel size in AvgPool1d of the DecompositionLayer."
+        },
+        {
+            "name": "autocorrelation_factor",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Attention (i.e. AutoCorrelation mechanism) factor which is used to find top k autocorrelations delays.Its recommended in the paper to set it to a number between 1 and 5."
+        }
+    ],
+    "return": ""
+}

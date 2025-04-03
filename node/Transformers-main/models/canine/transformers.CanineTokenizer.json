@@ -1,0 +1,26 @@
+{
+    "api": "transformers.CanineTokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "bos_token",
+        "eos_token",
+        "sep_token",
+        "cls_token",
+        "pad_token",
+        "mask_token",
+        "add_prefix_space",
+        "model_max_length",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "model_max_length",
+            "type": "int",
+            "optional": true,
+            "default": "2048",
+            "description": "The maximum sentence length the model accepts."
+        }
+    ],
+    "return": ""
+}

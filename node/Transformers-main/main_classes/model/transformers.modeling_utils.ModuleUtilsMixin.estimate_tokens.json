@@ -1,0 +1,22 @@
+{
+    "api": "transformers.modeling_utils.ModuleUtilsMixin.estimate_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_dict:",
+        "typing.Dict[str,",
+        "typing.Union[torch.Tensor,",
+        "typing.Any]]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "inputs",
+            "type": "dict",
+            "optional": false,
+            "default": "",
+            "description": "The model inputs."
+        }
+    ],
+    "return": "int"
+}

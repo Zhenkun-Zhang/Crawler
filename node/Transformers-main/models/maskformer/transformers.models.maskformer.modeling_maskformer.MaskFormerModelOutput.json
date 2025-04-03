@@ -1,0 +1,74 @@
+{
+    "api": "transformers.models.maskformer.modeling_maskformer.MaskFormerModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "encoder_last_hidden_state:",
+        "pixel_decoder_last_hidden_state",
+        "transformer_decoder_last_hidden_state",
+        "encoder_hidden_states",
+        "pixel_decoder_hidden_states",
+        "transformer_decoder_hidden_states",
+        "hidden_states",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "encoder_last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Last hidden states (final feature map) of the last stage of the encoder model (backbone)."
+        },
+        {
+            "name": "pixel_decoder_last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Last hidden states (final feature map) of the last stage of the pixel decoder model (FPN)."
+        },
+        {
+            "name": "transformer_decoder_last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Last hidden states (final feature map) of the last stage of the transformer decoder model."
+        },
+        {
+            "name": "encoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each stage) ofshape (batch_size, num_channels, height, width). Hidden-states (also called feature maps) of the encodermodel at the output of each stage."
+        },
+        {
+            "name": "pixel_decoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each stage) ofshape (batch_size, num_channels, height, width). Hidden-states (also called feature maps) of the pixeldecoder model at the output of each stage."
+        },
+        {
+            "name": "transformer_decoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each stage) ofshape (batch_size, sequence_length, hidden_size). Hidden-states (also called feature maps) of thetransformer decoder at the output of each stage."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor containing encoder_hidden_states, pixel_decoder_hidden_states anddecoder_hidden_states"
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights from Detrs decoder after the attention softmax, used to compute theweighted average in the self-attention heads."
+        }
+    ],
+    "return": ""
+}

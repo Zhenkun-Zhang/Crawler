@@ -1,0 +1,53 @@
+{
+    "api": "transformers.PreTrainedTokenizerBase.truncate_sequences",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "ids:",
+        "typing.List[int]",
+        "pair_ids",
+        "num_tokens_to_remove",
+        "truncation_strategy",
+        "transformers.tokenization_utils_base.TruncationStrategy]",
+        "stride",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "ids",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "Tokenized input ids of the first sequence. Can be obtained from a string by chaining the tokenize andconvert_tokens_to_ids methods."
+        },
+        {
+            "name": "pair_ids",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Tokenized input ids of the second sequence. Can be obtained from a string by chaining the tokenizeand convert_tokens_to_ids methods."
+        },
+        {
+            "name": "num_tokens_to_remove",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of tokens to remove using the truncation strategy."
+        },
+        {
+            "name": "truncation_strategy",
+            "type": "str,TruncationStrategy",
+            "optional": true,
+            "default": "",
+            "description": "The strategy to follow for truncation. Can be:longest_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will truncatetoken by token, removing a token from the longest sequence in the pair if a pair of sequences (or abatch of pairs) is provided.only_first: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the first sequence of a pair if a pair of sequences (or a batch of pairs) is provided.only_second: Truncate to a maximum length specified with the argument max_length or to themaximum acceptable input length for the model if that argument is not provided. This will onlytruncate the second sequence of a pair if a pair of sequences (or a batch of pairs) is provided.do_not_truncate (default): No truncation (i.e., can output batch with sequence lengths greaterthan the model maximum admissible input size)."
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If set to a positive number, the overflowing tokens returned will contain some tokens from the mainsequence returned. The value of this argument defines the number of additional tokens."
+        }
+    ],
+    "return": "Tuple[List[int], List[int], List[int]]"
+}

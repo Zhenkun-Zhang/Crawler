@@ -1,0 +1,19 @@
+{
+    "api": "transformers.FlaxPreTrainedModel.load_flax_sharded_weights",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "shard_files",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "shard_files",
+            "type": "List[str]",
+            "optional": false,
+            "default": "",
+            "description": "The list of shard files to load."
+        }
+    ],
+    "return": "Dict"
+}

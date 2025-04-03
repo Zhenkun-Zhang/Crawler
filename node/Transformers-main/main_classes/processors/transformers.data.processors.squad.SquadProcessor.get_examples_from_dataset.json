@@ -1,0 +1,26 @@
+{
+    "api": "transformers.data.processors.squad.SquadProcessor.get_examples_from_dataset",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "dataset",
+        "evaluate"
+    ],
+    "params": [
+        {
+            "name": "dataset",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The tfds dataset loaded from tensorflow_datasets.load(squad)"
+        },
+        {
+            "name": "evaluate",
+            "type": "",
+            "optional": false,
+            "default": "False",
+            "description": "Boolean specifying if in evaluation mode or in training mode"
+        }
+    ],
+    "return": ""
+}

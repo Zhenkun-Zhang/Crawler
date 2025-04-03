@@ -1,0 +1,12 @@
+{
+    "api": "transformers.TFSegformerDecodeHead",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "SegformerConfig",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

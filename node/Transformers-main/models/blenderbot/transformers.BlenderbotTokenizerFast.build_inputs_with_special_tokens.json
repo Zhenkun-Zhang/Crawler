@@ -1,0 +1,28 @@
+{
+    "api": "transformers.BlenderbotTokenizerFast.build_inputs_with_special_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "token_ids_0:",
+        "typing.List[int]",
+        "token_ids_1",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "token_ids_0",
+            "type": "List[int]",
+            "optional": false,
+            "default": "",
+            "description": "List of IDs to which the special tokens will be added"
+        },
+        {
+            "name": "token_ids_1",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Will be ignored"
+        }
+    ],
+    "return": "List[int]"
+}

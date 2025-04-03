@@ -1,0 +1,10 @@
+{
+    "api": "transformers.Tool.from_langchain",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "langchain_tool"
+    ],
+    "params": [],
+    "return": ""
+}

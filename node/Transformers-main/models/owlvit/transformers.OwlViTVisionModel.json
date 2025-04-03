@@ -1,0 +1,11 @@
+{
+    "api": "transformers.OwlViTVisionModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "OwlViTVisionConfig"
+    ],
+    "params": [],
+    "return": ""
+}

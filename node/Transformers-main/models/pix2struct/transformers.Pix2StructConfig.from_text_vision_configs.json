@@ -1,0 +1,14 @@
+{
+    "api": "transformers.Pix2StructConfig.from_text_vision_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text_config:",
+        "Pix2StructTextConfig",
+        "vision_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "Pix2StructConfig"
+}

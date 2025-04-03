@@ -1,0 +1,100 @@
+{
+    "api": "transformers.MCTCTFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size",
+        "sampling_rate",
+        "padding_value",
+        "hop_length",
+        "win_length",
+        "win_function",
+        "frame_signal_scale",
+        "preemphasis_coeff",
+        "mel_floor",
+        "normalize_means",
+        "normalize_vars",
+        "return_attention_mask",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int, defaults to 80",
+            "optional": false,
+            "default": "80",
+            "description": "The feature dimension of the extracted features. This is the number of mel_frequency"
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int, defaults to 16000",
+            "optional": false,
+            "default": "16000",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "padding_value",
+            "type": "float, defaults to 0.0",
+            "optional": false,
+            "default": "0.0",
+            "description": "The value that is used to fill the padding values."
+        },
+        {
+            "name": "hop_length",
+            "type": "int, defaults to 10",
+            "optional": false,
+            "default": "10",
+            "description": "Number of audio samples between windows. Otherwise referred to as shift in many papers."
+        },
+        {
+            "name": "win_length",
+            "type": "int, defaults to 25",
+            "optional": false,
+            "default": "25",
+            "description": "Number of ms per window"
+        },
+        {
+            "name": "win_function",
+            "type": "str, defaults to \"hamming_window\"",
+            "optional": false,
+            "default": "hamming_window",
+            "description": "Name for the window function used for windowing, must be accessible via torch.{win_function}"
+        },
+        {
+            "name": "frame_signal_scale",
+            "type": "float, defaults to 32768.0",
+            "optional": false,
+            "default": "32768.0",
+            "description": "Constant multiplied in creating the frames before applying DFT."
+        },
+        {
+            "name": "preemphasis_coeff",
+            "type": "float, defaults to 0.97",
+            "optional": false,
+            "default": "0.97",
+            "description": "Constant multiplied in applying Pre-emphasis before DFT."
+        },
+        {
+            "name": "mel_floor",
+            "type": "float defaults to 1.0",
+            "optional": false,
+            "default": "1.0",
+            "description": "Minimum value of mel frequency banks."
+        },
+        {
+            "name": "normalize_means",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to zero-mean normalize the extracted features."
+        },
+        {
+            "name": "normalize_vars",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to unit-variance normalize the extracted features."
+        }
+    ],
+    "return": ""
+}

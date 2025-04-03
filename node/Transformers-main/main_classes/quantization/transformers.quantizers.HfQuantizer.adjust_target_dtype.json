@@ -1,0 +1,19 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.adjust_target_dtype",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "torch_dtype:",
+        "torch.dtype"
+    ],
+    "params": [
+        {
+            "name": "torch_dtype",
+            "type": "torch.dtype",
+            "optional": true,
+            "default": "",
+            "description": "The torch_dtype that is used to compute the device_map."
+        }
+    ],
+    "return": ""
+}

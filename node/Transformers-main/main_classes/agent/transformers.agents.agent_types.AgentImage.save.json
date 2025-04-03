@@ -1,0 +1,34 @@
+{
+    "api": "transformers.agents.agent_types.AgentImage.save",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "output_bytes",
+        "format",
+        "**params"
+    ],
+    "params": [
+        {
+            "name": "output_bytes",
+            "type": "bytes",
+            "optional": false,
+            "default": "",
+            "description": "The output bytes to save the image to."
+        },
+        {
+            "name": "format",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The format to use for the output image. The format is the same as in PIL.Image.save."
+        },
+        {
+            "name": "*params",
+            "type": "s",
+            "optional": false,
+            "default": "",
+            "description": "Additional parameters to pass to PIL.Image.save."
+        }
+    ],
+    "return": ""
+}

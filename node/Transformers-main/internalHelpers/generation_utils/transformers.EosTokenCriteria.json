@@ -1,0 +1,21 @@
+{
+    "api": "transformers.EosTokenCriteria",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "eos_token_id:",
+        "typing.Union[int,",
+        "typing.List[int],",
+        "torch.Tensor]"
+    ],
+    "params": [
+        {
+            "name": "eos_token_id",
+            "type": "Union[int, List[int], torch.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "The id(s) of the end-of-sequence token."
+        }
+    ],
+    "return": ""
+}

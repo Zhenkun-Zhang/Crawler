@@ -1,0 +1,171 @@
+{
+    "api": "transformers.HeliumConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "hidden_size",
+        "intermediate_size",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "num_key_value_heads",
+        "head_dim",
+        "hidden_act",
+        "attention_dropout",
+        "max_position_embeddings",
+        "initializer_range",
+        "rms_norm_eps",
+        "use_cache",
+        "tie_word_embeddings",
+        "rope_theta",
+        "pad_token_id",
+        "eos_token_id",
+        "bos_token_id",
+        "attention_bias",
+        "mlp_bias",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "48000",
+            "description": "Vocabulary size of the Helium model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling HeliumModel"
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "2560",
+            "description": "Dimension of the hidden representations."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "7040",
+            "description": "Dimension of the MLP representations."
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "24",
+            "description": "Number of hidden layers in the Transformer decoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "20",
+            "description": "Number of attention heads for each attention layer in the Transformer decoder."
+        },
+        {
+            "name": "num_key_value_heads",
+            "type": "int",
+            "optional": true,
+            "default": "20",
+            "description": "This is the number of key_value heads that should be used to implement Grouped Query Attention. Ifnum_key_value_heads=num_attention_heads, the model will use Multi Head Attention (MHA), ifnum_key_value_heads=1 the model will use Multi Query Attention (MQA) otherwise GQA is used. Whenconverting a multi-head checkpoint to a GQA checkpoint, each group key and value head should be constructedby meanpooling all the original heads within that group. For more details checkout thispaper. If it is not specified, will default tonum_attention_heads."
+        },
+        {
+            "name": "head_dim",
+            "type": "int",
+            "optional": true,
+            "default": "128",
+            "description": "The attention head dimension."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "silu",
+            "description": "The legacy activation function. It is overwritten by the hidden_activation."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout ratio for the attention probabilities."
+        },
+        {
+            "name": "max_position_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "4096",
+            "description": "The maximum sequence length that this model might ever be used with."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "rms_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-08",
+            "description": "The epsilon used by the rms normalization layers."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models). Onlyrelevant if config.is_decoder=True."
+        },
+        {
+            "name": "tie_word_embeddings",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to tie weight embeddings"
+        },
+        {
+            "name": "rope_theta",
+            "type": "float",
+            "optional": true,
+            "default": "100000.0",
+            "description": "The base period of the RoPE embeddings."
+        },
+        {
+            "name": "pad_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Padding token id."
+        },
+        {
+            "name": "eos_token_id",
+            "type": "int | list",
+            "optional": true,
+            "default": "2",
+            "description": "End of stream token id."
+        },
+        {
+            "name": "bos_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Beginning of stream token id."
+        },
+        {
+            "name": "attention_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a bias in the query, key, value and output projection layers during self-attention."
+        },
+        {
+            "name": "mlp_bias",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use a bias in up_proj, down_proj and gate_proj layers in the MLP layers."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,155 @@
+{
+    "api": "transformers.TFEncoderDecoderModel.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "TFModelInputType",
+        "|",
+        "attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "decoder_input_ids",
+        "|",
+        "tf.Tensor",
+        "|",
+        "decoder_attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "encoder_outputs",
+        "|",
+        "tf.Tensor",
+        "|",
+        "past_key_values",
+        "|",
+        "inputs_embeds",
+        "|",
+        "tf.Tensor",
+        "|",
+        "decoder_inputs_embeds",
+        "|",
+        "tf.Tensor",
+        "|",
+        "labels",
+        "|",
+        "tf.Tensor",
+        "|",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "training",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "np.ndarray, tf.Tensor, List[tf.Tensor] `Dict[str, tf.Tensor],Dict[str, np.ndarray] and each example must have the shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using PreTrainedTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "decoder_input_ids",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of decoder input sequence tokens in the vocabulary.Indices can be obtained using PreTrainedTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?If past_key_values is used, optionally only the last decoder_input_ids have to be input (seepast_key_values).Provide for sequence to sequence training to the decoder. Indices can be obtained usingPreTrainedTokenizer. See PreTrainedTokenizer.encode() and PreTrainedTokenizer.call() fordetails."
+        },
+        {
+            "name": "decoder_attention_mask",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, target_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Default behavior: generate a tensor that ignores pad tokens in decoder_input_ids. Causal mask will alsobe used by default."
+        },
+        {
+            "name": "encoder_outputs",
+            "type": "tuple(tuple(tf.Tensor",
+            "optional": true,
+            "default": "",
+            "description": "This tuple must consist of (last_hidden_state, optional: hidden_states, optional: attentions)last_hidden_state (tf.Tensor of shape (batch_size, sequence_length, hidden_size)) is a tensor of hidden-states at the outputof the last layer of the encoder. Used in the cross-attention of the decoder."
+        },
+        {
+            "name": "past_key_values",
+            "type": "tuple(tuple(tf.Tensor)) of length config.n_layers with each tuple having 4 tensors of shape (batch_size, num_heads, sequence_length - 1, embed_size_per_head)",
+            "optional": false,
+            "default": "",
+            "description": "Contains precomputed key and value hidden states of the attention blocks. Can be used to speed up decoding.If past_key_values are used, the user can optionally input only the last decoder_input_ids (those thatdont have their past key value states given to this model) of shape (batch_size, 1) instead of alldecoder_input_ids of shape (batch_size, sequence_length)."
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "decoder_inputs_embeds",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, target_sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing decoder_input_ids you can choose to directly pass an embeddedrepresentation. This is useful if you want more control over how to convert decoder_input_ids indicesinto associated vectors than the models internal embedding lookup matrix."
+        },
+        {
+            "name": "labels",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for computing the masked language modeling loss for the decoder. Indices should be in [-100, 0, ..., config.vocab_size] (see input_ids docstring) Tokens with indices set to -100 are ignored(masked), the loss is only computed for the tokens with labels in [0, ..., config.vocab_size]"
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, the model will return a ~utils.Seq2SeqLMOutput instead of a plain tuple."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Remaining dictionary of keyword arguments. Keyword arguments come in two flavors:Without a prefix which will be input as **encoder_kwargs for the encoder forward function.With a decoder_ prefix which will be input as `**decoder_kwargs for the decoder forward function."
+        }
+    ],
+    "return": "transformers.modeling_tf_outputs.TFSeq2SeqLMOutput or tuple(tf.Tensor)"
+}

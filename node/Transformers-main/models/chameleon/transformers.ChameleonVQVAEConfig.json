@@ -1,0 +1,119 @@
+{
+    "api": "transformers.ChameleonVQVAEConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "embed_dim:",
+        "num_embeddings",
+        "double_latent",
+        "latent_channels",
+        "resolution",
+        "in_channels",
+        "base_channels",
+        "channel_multiplier",
+        "1,",
+        "2,",
+        "2,",
+        "4]",
+        "num_res_blocks",
+        "attn_resolutions",
+        "dropout",
+        "attn_type",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "embed_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of each embedding vector."
+        },
+        {
+            "name": "num_embeddings",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of codebook embeddings."
+        },
+        {
+            "name": "double_latent",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use double z channels."
+        },
+        {
+            "name": "latent_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of channels for the latent space."
+        },
+        {
+            "name": "resolution",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Resolution of the input images."
+        },
+        {
+            "name": "in_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of input channels."
+        },
+        {
+            "name": "base_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Base channel count."
+        },
+        {
+            "name": "channel_multiplier",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Channel multipliers for each resolution."
+        },
+        {
+            "name": "num_res_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of residual blocks."
+        },
+        {
+            "name": "attn_resolutions",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Resolutions to apply attention."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Dropout rate."
+        },
+        {
+            "name": "attn_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Attention type used in VQ-GAN encoder. Can be vanilla or None."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        }
+    ],
+    "return": ""
+}

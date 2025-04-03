@@ -1,0 +1,29 @@
+{
+    "api": "transformers.BayesianDetectorModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "g_values:",
+        "mask",
+        "labels",
+        "loss_batch_weight",
+        "return_dict"
+    ],
+    "params": [
+        {
+            "name": "g_values",
+            "type": "torch.Tensor of shape (batch_size, seq_len, watermarking_depth, ...)",
+            "optional": false,
+            "default": "",
+            "description": "g-values (with values 0 or 1)"
+        },
+        {
+            "name": "mask",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "A binary array shape [batch_size, seq_len] indicating which g-values should be used. g-values with maskvalue 0 are discarded."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,83 @@
+{
+    "api": "transformers.ClvpFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size",
+        "sampling_rate",
+        "default_audio_length",
+        "hop_length",
+        "chunk_length",
+        "n_fft",
+        "padding_value",
+        "mel_norms",
+        "return_attention_mask",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "80",
+            "description": "The feature dimension of the extracted features."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "22050",
+            "description": "The sampling rate at which the audio files should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "default_audio_length",
+            "type": "int",
+            "optional": true,
+            "default": "6",
+            "description": "The default length of raw audio in seconds. If max_length is not set during __call__ then it willautomatically be set to default_audio_length * self.sampling_rate."
+        },
+        {
+            "name": "hop_length",
+            "type": "int",
+            "optional": true,
+            "default": "256",
+            "description": "Length of the overlaping windows for the STFT used to obtain the Mel Frequency coefficients."
+        },
+        {
+            "name": "chunk_length",
+            "type": "int",
+            "optional": true,
+            "default": "30",
+            "description": "The maximum number of chuncks of sampling_rate samples used to trim and pad longer or shorter audiosequences."
+        },
+        {
+            "name": "n_fft",
+            "type": "int",
+            "optional": true,
+            "default": "1024",
+            "description": "Size of the Fourier transform."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "Padding value used to pad the audio. Should correspond to silences."
+        },
+        {
+            "name": "mel_norms",
+            "type": "list of length feature_size",
+            "optional": true,
+            "default": "None",
+            "description": "If mel_norms is provided then it will be used to normalize the log-mel spectrograms along eachmel-filter."
+        },
+        {
+            "name": "return_attention_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to return the attention mask. If left to the default, it will return the attention mask.What are attention masks?"
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,135 @@
+{
+    "api": "transformers.LevitConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_size",
+        "num_channels",
+        "kernel_size",
+        "stride",
+        "padding",
+        "patch_size",
+        "hidden_sizes",
+        "256,",
+        "384]",
+        "num_attention_heads",
+        "8,",
+        "12]",
+        "depths",
+        "4,",
+        "4]",
+        "key_dim",
+        "16,",
+        "16]",
+        "drop_path_rate",
+        "mlp_ratio",
+        "2,",
+        "2]",
+        "attention_ratio",
+        "2,",
+        "2]",
+        "initializer_range",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "224",
+            "description": "The size of the input image."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "Number of channels in the input image."
+        },
+        {
+            "name": "kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "3",
+            "description": "The kernel size for the initial convolution layers of patch embedding."
+        },
+        {
+            "name": "stride",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The stride size for the initial convolution layers of patch embedding."
+        },
+        {
+            "name": "padding",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The padding size for the initial convolution layers of patch embedding."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "16",
+            "description": "The patch size for embeddings."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[128,",
+            "description": "Dimension of each of the encoder blocks."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "Number of attention heads for each attention layer in each block of the Transformer encoder."
+        },
+        {
+            "name": "depths",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "The number of layers in each encoder block."
+        },
+        {
+            "name": "key_dim",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[16,",
+            "description": "The size of key in each of the encoder blocks."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "The dropout probability for stochastic depths, used in the blocks of the Transformer encoder."
+        },
+        {
+            "name": "mlp_ratios",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Ratio of the size of the hidden layer compared to the size of the input layer of the Mix FFNs in theencoder blocks."
+        },
+        {
+            "name": "attention_ratios",
+            "type": "List[int]",
+            "optional": true,
+            "default": "",
+            "description": "Ratio of the size of the output dimension compared to input dimension of attention layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        }
+    ],
+    "return": ""
+}

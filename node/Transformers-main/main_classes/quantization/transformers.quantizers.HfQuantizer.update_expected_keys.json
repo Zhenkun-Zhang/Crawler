@@ -1,0 +1,27 @@
+{
+    "api": "transformers.quantizers.HfQuantizer.update_expected_keys",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model",
+        "expected_keys",
+        "loaded_keys"
+    ],
+    "params": [
+        {
+            "name": "expected_keys",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "The list of the expected keys in the initialized model."
+        },
+        {
+            "name": "loaded_keys",
+            "type": "List[str]",
+            "optional": true,
+            "default": "",
+            "description": "The list of the loaded keys in the checkpoint."
+        }
+    ],
+    "return": ""
+}

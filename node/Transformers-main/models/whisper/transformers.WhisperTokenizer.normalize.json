@@ -1,0 +1,10 @@
+{
+    "api": "transformers.WhisperTokenizer.normalize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text"
+    ],
+    "params": [],
+    "return": ""
+}

@@ -1,0 +1,37 @@
+{
+    "api": "transformers.onnx.OnnxConfigWithPast.fill_with_past_key_values_",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "inputs_or_outputs:",
+        "typing.Mapping[str,",
+        "typing.Mapping[int,",
+        "str]]",
+        "direction",
+        "inverted_values_shape"
+    ],
+    "params": [
+        {
+            "name": "inputs_or_outputs",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "The mapping to fill."
+        },
+        {
+            "name": "direction",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "either inputs or outputs, it specifies whether input_or_outputs is the input mapping or theoutput mapping, this is important for axes naming."
+        },
+        {
+            "name": "inverted_values_shape",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "If True, store values on dynamic axis 1, else on axis 2."
+        }
+    ],
+    "return": ""
+}

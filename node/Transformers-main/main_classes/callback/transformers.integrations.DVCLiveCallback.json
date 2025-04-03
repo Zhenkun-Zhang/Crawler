@@ -1,0 +1,30 @@
+{
+    "api": "transformers.integrations.DVCLiveCallback",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "live:",
+        "typing.Optional[typing.Any]",
+        "log_model",
+        "bool,",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "live",
+            "type": "dvclive.Live",
+            "optional": true,
+            "default": "",
+            "description": "Optional Live instance. If None, a new instance will be created using **kwargs."
+        },
+        {
+            "name": "log_model",
+            "type": "Union[Literal[“all”], bool]",
+            "optional": true,
+            "default": "",
+            "description": "Whether to use dvclive.Live.log_artifact() to log checkpoints created by Trainer. If set to True,the final checkpoint is logged at the end of training. If set to all, the entireTrainingArgumentss output_dir is logged at each checkpoint."
+        }
+    ],
+    "return": ""
+}

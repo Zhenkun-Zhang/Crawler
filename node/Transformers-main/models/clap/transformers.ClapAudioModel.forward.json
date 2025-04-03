@@ -1,0 +1,52 @@
+{
+    "api": "transformers.ClapAudioModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_features:",
+        "typing.Optional[torch.FloatTensor]",
+        "is_longer",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_features",
+            "type": "torch.FloatTensor of shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Input audio features. This should be returnes by the ClapFeatureExtractor class that you can alsoretrieve from AutoFeatureExtractor. See ClapFeatureExtractor.__call__() for details."
+        },
+        {
+            "name": "is_longer",
+            "type": "torch.FloatTensor, of shape (batch_size, 1",
+            "optional": true,
+            "default": "",
+            "description": "Whether the audio clip is longer than max_length. If True, a feature fusion will be enabled to enhancethe features."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_outputs.BaseModelOutputWithPooling or tuple(torch.FloatTensor)"
+}

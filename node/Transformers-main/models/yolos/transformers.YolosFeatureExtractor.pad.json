@@ -1,0 +1,90 @@
+{
+    "api": "transformers.YolosFeatureExtractor.pad",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images:",
+        "typing.List[numpy.ndarray]",
+        "annotations",
+        "typing.Any]]]",
+        "constant_values",
+        "typing.Iterable[float]]",
+        "return_pixel_mask",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "data_format",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "update_bboxes",
+        "pad_size",
+        "int]]"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "Image to pad."
+        },
+        {
+            "name": "annotations",
+            "type": "List[Dict[str, any]]",
+            "optional": true,
+            "default": "",
+            "description": "Annotations to pad along with the images. If provided, the bounding boxes will be updated to match thepadded images."
+        },
+        {
+            "name": "constant_values",
+            "type": "float,Iterable[float]",
+            "optional": true,
+            "default": "",
+            "description": "The value to use for the padding if mode is constant."
+        },
+        {
+            "name": "return_pixel_mask",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return a pixel mask."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "The type of tensors to return. Can be one of:Unset: Return a list of np.ndarray.TensorType.TENSORFLOW or tf: Return a batch of type tf.Tensor.TensorType.PYTORCH or pt: Return a batch of type torch.Tensor.TensorType.NUMPY or np: Return a batch of type np.ndarray.TensorType.JAX or jax: Return a batch of type jax.numpy.ndarray."
+        },
+        {
+            "name": "data_format",
+            "type": "str,ChannelDimension",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the image. If not provided, it will be the same as the input image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format of the input image. If not provided, it will be inferred."
+        },
+        {
+            "name": "update_bboxes",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to update the bounding boxes in the annotations to match the padded images. If thebounding boxes have not been converted to relative coordinates and (centre_x, centre_y, width, height)format, the bounding boxes will not be updated."
+        },
+        {
+            "name": "pad_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "The size {height: int, width int} to pad the images to. Must be larger than any image sizeprovided for preprocessing. If pad_size is not provided, images will be padded to the largestheight and width in the batch."
+        }
+    ],
+    "return": ""
+}

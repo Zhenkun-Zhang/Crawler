@@ -1,0 +1,173 @@
+{
+    "api": "transformers.FunnelConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "vocab_size",
+        "block_sizes",
+        "4,",
+        "4]",
+        "block_repeats",
+        "num_decoder_layers",
+        "d_model",
+        "n_head",
+        "d_head",
+        "d_inner",
+        "hidden_act",
+        "hidden_dropout",
+        "attention_dropout",
+        "activation_dropout",
+        "initializer_range",
+        "initializer_std",
+        "layer_norm_eps",
+        "pooling_type",
+        "attention_type",
+        "separate_cls",
+        "truncate_seq",
+        "pool_q_only",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "30522",
+            "description": "Vocabulary size of the Funnel transformer. Defines the number of different tokens that can be representedby the inputs_ids passed when calling FunnelModel or TFFunnelModel."
+        },
+        {
+            "name": "block_sizes",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "The sizes of the blocks used in the model."
+        },
+        {
+            "name": "block_repeats",
+            "type": "List[int]",
+            "optional": true,
+            "default": "None",
+            "description": "If passed along, each layer of each block is repeated the number of times indicated."
+        },
+        {
+            "name": "num_decoder_layers",
+            "type": "int",
+            "optional": true,
+            "default": "2",
+            "description": "The number of layers in the decoder (when not using the base model)."
+        },
+        {
+            "name": "d_model",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of the models hidden states."
+        },
+        {
+            "name": "n_head",
+            "type": "int",
+            "optional": true,
+            "default": "12",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "d_head",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "Dimensionality of the models heads."
+        },
+        {
+            "name": "d_inner",
+            "type": "int",
+            "optional": true,
+            "default": "3072",
+            "description": "Inner dimension in the feed-forward blocks."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,callable",
+            "optional": true,
+            "default": "gelu_new",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, silu and gelu_new are supported."
+        },
+        {
+            "name": "hidden_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "attention_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The dropout probability for the attention probabilities."
+        },
+        {
+            "name": "activation_dropout",
+            "type": "float",
+            "optional": true,
+            "default": "0.0",
+            "description": "The dropout probability used between the two layers of the feed-forward blocks."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.1",
+            "description": "The upper bound of the uniform initializer for initializing all weight matrices in attention layers."
+        },
+        {
+            "name": "initializer_std",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The standard deviation of the normal initializer for initializing the embedding matrix and the weight oflinear layers. Will default to 1 for the embedding matrix and the value given by Xavier initialization forlinear layers."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "1e-09",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "pooling_type",
+            "type": "str",
+            "optional": true,
+            "default": "mean",
+            "description": "Possible values are mean or max. The way pooling is performed at the beginning of each block."
+        },
+        {
+            "name": "attention_type",
+            "type": "str",
+            "optional": true,
+            "default": "relative_shift",
+            "description": "Possible values are relative_shift or factorized. The former is faster on CPU/GPU while the latteris faster on TPU."
+        },
+        {
+            "name": "separate_cls",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to separate the cls token when applying pooling."
+        },
+        {
+            "name": "truncate_seq",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "When using separate_cls, whether or not to truncate the last token when pooling, to avoid getting asequence length that is not a multiple of 2."
+        },
+        {
+            "name": "pool_q_only",
+            "type": "bool",
+            "optional": true,
+            "default": "True",
+            "description": "Whether or not to apply the pooling only to the query or to query, key and values for the attention layers."
+        }
+    ],
+    "return": ""
+}

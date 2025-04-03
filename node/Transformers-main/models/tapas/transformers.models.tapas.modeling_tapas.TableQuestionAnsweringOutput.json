@@ -1,0 +1,51 @@
+{
+    "api": "transformers.models.tapas.modeling_tapas.TableQuestionAnsweringOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "loss:",
+        "typing.Optional[torch.FloatTensor]",
+        "logits",
+        "logits_aggregation",
+        "hidden_states",
+        "attentions"
+    ],
+    "params": [
+        {
+            "name": "loss",
+            "type": "torch.FloatTensor of shape (1,",
+            "optional": true,
+            "default": "",
+            "description": "Total loss as the sum of the hierarchical cell selection log-likelihood loss and (optionally) thesemi-supervised regression loss and (optionally) supervised loss for aggregations."
+        },
+        {
+            "name": "logits",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Prediction scores of the cell selection head, for every token."
+        },
+        {
+            "name": "logits_aggregation",
+            "type": "torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Prediction scores of the aggregation head, for every aggregation operator."
+        },
+        {
+            "name": "hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, sequence_length, hidden_size). Hidden-states of the model at the output of each layerplus the initial embedding outputs."
+        },
+        {
+            "name": "attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_heads, sequence_length, sequence_length). Attentions weights after the attention softmax, used to compute the weighted average inthe self-attention heads."
+        }
+    ],
+    "return": ""
+}

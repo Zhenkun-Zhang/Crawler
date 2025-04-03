@@ -1,0 +1,124 @@
+{
+    "api": "transformers.MoshiForConditionalGeneration.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "attention_mask",
+        "user_input_values",
+        "user_audio_codes",
+        "moshi_input_values",
+        "moshi_audio_codes",
+        "past_key_values",
+        "inputs_embeds",
+        "text_labels",
+        "audio_labels",
+        "use_cache",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence text tokens in the vocabulary. Padding will be ignored by default should you provideit.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.encode() andPreTrainedTokenizer.call() for details.What are input IDs?"
+        },
+        {
+            "name": "attention_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "user_input_values",
+            "type": "torch.Tensor of shape `(batch_size, 1, audio_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The audio waveforms used as audio user prompt for the generation."
+        },
+        {
+            "name": "user_audio_codes",
+            "type": "torch.Tensor of shape (batch_size, num_codebooks, sequence_length), *optional*) -- The audio codes used as audio user prompt for the generation. Has priority over user_input_valuesand represents the audio \"tokens\" ofuser_input_values` once passed through the audio encoder.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "moshi_input_values",
+            "type": "torch.Tensor of shape `(batch_size, 1, audio_sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "The audio waveforms used as audio Moshi prompt for the generation."
+        },
+        {
+            "name": "moshi_audio_codes",
+            "type": "torch.Tensor of shape (batch_size, num_codebooks, sequence_length), *optional*) -- The audio codes used as audio Moshi prompt for the generation. Has priority over moshi_input_valuesand represents the audio \"tokens\" ofmoshi_input_values` once passed through the audio encoder.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "torch.FloatTensor of shape (batch_size, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embeddedrepresentation. If past_key_values is used, optionally only the last inputs_embeds have to beinput (see past_key_values). This is useful if you want more control over how to convertinput_ids indices into associated vectors than the models internal embedding lookup matrix.If input_ids and inputs_embeds are both unset, inputs_embeds takes the valueof inputs_embeds."
+        },
+        {
+            "name": "past_key_values",
+            "type": "Cache,tuple(tuple(torch.FloatTensor)",
+            "optional": true,
+            "default": "",
+            "description": "Pre-computed hidden-states (key and values in the self-attention blocks) that can be used to speed up sequential decoding. This typically consists in the past_key_valuesreturned by the model at a previous stage of decoding, when use_cache=True or config.use_cache=True.Two formats are allowed:a Cache instance,Tuple of tuple(torch.FloatTensor) of length config.n_layers, with each tuple having 2 tensors ofshape (batch_size, num_heads, sequence_length, embed_size_per_head)). This is also known as the legacycache format.The model will output the same cache format that is fed as input. If no past_key_values are passed, thelegacy cache format will be returned."
+        },
+        {
+            "name": "text_labels",
+            "type": "torch.LongTensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for text language modeling. Note that the labels are shifted inside the model, i.e. you can setlabels = input_ids Indices are selected in [-100, 0, ..., config.vocab_size] All labels set to -100are ignored (masked), the loss is only computed for labels in [0, ..., config.vocab_size]"
+        },
+        {
+            "name": "audio_labels",
+            "type": "torch.LongTensor of shape (batch_size, num_codebooks, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Labels for language modeling. Note that the labels are shifted inside the model, i.e. you can setlabels = input_ids Indices are selected in [-100, 0, ..., config.vocab_size] All labels set to -100are ignored (masked), the loss is only computed for labels in [0, ..., config.audio_vocab_size]"
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "If set to True, past_key_values key value states are returned and can be used to speed up decoding (seepast_key_values)."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.modeling_outputs.Seq2SeqLMOutput or tuple(torch.FloatTensor)"
+}

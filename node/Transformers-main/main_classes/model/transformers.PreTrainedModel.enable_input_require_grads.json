@@ -1,0 +1,8 @@
+{
+    "api": "transformers.PreTrainedModel.enable_input_require_grads",
+    "type": "function",
+    "version": "main",
+    "args_list": [],
+    "params": [],
+    "return": ""
+}

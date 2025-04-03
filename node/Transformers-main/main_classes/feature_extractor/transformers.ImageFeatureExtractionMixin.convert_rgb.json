@@ -1,0 +1,18 @@
+{
+    "api": "transformers.ImageFeatureExtractionMixin.convert_rgb",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "PIL.Image.Image",
+            "optional": false,
+            "default": "",
+            "description": "The image to convert."
+        }
+    ],
+    "return": ""
+}

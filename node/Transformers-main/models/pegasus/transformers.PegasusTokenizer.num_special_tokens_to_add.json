@@ -1,0 +1,10 @@
+{
+    "api": "transformers.PegasusTokenizer.num_special_tokens_to_add",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pair"
+    ],
+    "params": [],
+    "return": ""
+}

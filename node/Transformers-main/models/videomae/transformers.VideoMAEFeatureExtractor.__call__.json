@@ -1,0 +1,11 @@
+{
+    "api": "transformers.VideoMAEFeatureExtractor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "images",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

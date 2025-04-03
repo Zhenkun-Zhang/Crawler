@@ -1,0 +1,51 @@
+{
+    "api": "transformers.EncodecFeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "feature_size:",
+        "sampling_rate",
+        "padding_value",
+        "chunk_length_s",
+        "overlap",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "feature_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The feature dimension of the extracted features. Use 1 for mono, 2 for stereo."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the audio waveform should be digitalized expressed in hertz (Hz)."
+        },
+        {
+            "name": "padding_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The value that is used to fill the padding values."
+        },
+        {
+            "name": "chunk_length_s",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "If defined the audio is pre-processed into chunks of lengths chunk_length_s and then encoded."
+        },
+        {
+            "name": "overlap",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Defines the overlap between each chunk. It is used to compute the chunk_stride using the followingformulae : int((1.0 - self.overlap) * self.chunk_length)."
+        }
+    ],
+    "return": ""
+}

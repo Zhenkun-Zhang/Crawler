@@ -1,0 +1,59 @@
+{
+    "api": "transformers.SamImageProcessor.resize",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "size",
+        "int]",
+        "resample",
+        "<Resampling.BICUBIC",
+        "data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        "**kwargs",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.ndarray",
+            "optional": false,
+            "default": "",
+            "description": "Image to resize."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int]",
+            "optional": false,
+            "default": "",
+            "description": "Dictionary in the format {longest_edge: int} specifying the size of the output image. The longestedge of the image will be resized to the specified size, while the other edge will be resized tomaintain the aspect ratio."
+        },
+        {
+            "name": "resample",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "PILImageResampling filter to use when resizing the image e.g. PILImageResampling.BILINEAR."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the output image. If unset, the channel dimension format of the inputimage is used. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. If unset, the channel dimension format is inferredfrom the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format."
+        }
+    ],
+    "return": "np.ndarray"
+}

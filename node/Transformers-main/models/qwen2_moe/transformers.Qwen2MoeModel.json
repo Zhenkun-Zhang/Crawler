@@ -1,0 +1,26 @@
+{
+    "api": "transformers.Qwen2MoeModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Qwen2MoeConfig"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "Qwen2MoeConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model. Initializing with a config file does notload the weights associated with the model, only the configuration. Check out thefrom_pretrained() method to load the model weights."
+        },
+        {
+            "name": "config",
+            "type": "",
+            "optional": false,
+            "default": "",
+            "description": "Qwen2MoeConfig"
+        }
+    ],
+    "return": ""
+}

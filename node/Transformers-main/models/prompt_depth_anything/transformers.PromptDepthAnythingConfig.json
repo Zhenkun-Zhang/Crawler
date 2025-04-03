@@ -1,0 +1,137 @@
+{
+    "api": "transformers.PromptDepthAnythingConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "backbone_config",
+        "backbone",
+        "use_pretrained_backbone",
+        "use_timm_backbone",
+        "backbone_kwargs",
+        "patch_size",
+        "initializer_range",
+        "reassemble_hidden_size",
+        "reassemble_factors",
+        "2,",
+        "1,",
+        "0.5]",
+        "neck_hidden_sizes",
+        "96,",
+        "192,",
+        "384]",
+        "fusion_hidden_size",
+        "head_in_index",
+        "head_hidden_size",
+        "depth_estimation_type",
+        "max_depth",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "backbone_config",
+            "type": "Union[Dict[str, Any], PretrainedConfig]",
+            "optional": true,
+            "default": "None",
+            "description": "The configuration of the backbone model. Only used in case is_hybrid is True or in case you want toleverage the AutoBackbone API."
+        },
+        {
+            "name": "backbone",
+            "type": "str",
+            "optional": true,
+            "default": "None",
+            "description": "Name of backbone to use when backbone_config is None. If use_pretrained_backbone is True, thiswill load the corresponding pretrained weights from the timm or transformers library. If use_pretrained_backboneis False, this loads the backbones config and uses that to initialize the backbone with random weights."
+        },
+        {
+            "name": "use_pretrained_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether to use pretrained weights for the backbone."
+        },
+        {
+            "name": "use_timm_backbone",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether or not to use the timm library for the backbone. If set to False, will use the AutoBackboneAPI."
+        },
+        {
+            "name": "backbone_kwargs",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Keyword arguments to be passed to AutoBackbone when loading from a checkpointe.g. {out_indices: (0, 1, 2, 3)}. Cannot be specified if backbone_config is set."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "14",
+            "description": "The size of the patches to extract from the backbone features."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "0.02",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "reassemble_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "384",
+            "description": "The number of input channels of the reassemble layers."
+        },
+        {
+            "name": "reassemble_factors",
+            "type": "List[int]",
+            "optional": true,
+            "default": "[4,",
+            "description": "The up/downsampling factors of the reassemble layers."
+        },
+        {
+            "name": "neck_hidden_sizes",
+            "type": "List[str]",
+            "optional": true,
+            "default": "[48,",
+            "description": "The hidden sizes to project to for the feature maps of the backbone."
+        },
+        {
+            "name": "fusion_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "64",
+            "description": "The number of channels before fusion."
+        },
+        {
+            "name": "head_in_index",
+            "type": "int",
+            "optional": true,
+            "default": "-1",
+            "description": "The index of the features to use in the depth estimation head."
+        },
+        {
+            "name": "head_hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "32",
+            "description": "The number of output channels in the second convolution of the depth estimation head."
+        },
+        {
+            "name": "depth_estimation_type",
+            "type": "str",
+            "optional": true,
+            "default": "relative",
+            "description": "The type of depth estimation to use. Can be one of [relative, metric]."
+        },
+        {
+            "name": "max_depth",
+            "type": "float",
+            "optional": true,
+            "default": "None",
+            "description": "The maximum depth to use for the metric depth estimation head. 20 should be used for indoor modelsand 80 for outdoor models. For relative depth estimation, this value is ignored."
+        }
+    ],
+    "return": ""
+}

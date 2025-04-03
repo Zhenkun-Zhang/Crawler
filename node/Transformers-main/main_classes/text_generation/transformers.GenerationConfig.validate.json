@@ -1,0 +1,18 @@
+{
+    "api": "transformers.GenerationConfig.validate",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "is_init"
+    ],
+    "params": [
+        {
+            "name": "is_init",
+            "type": "bool",
+            "optional": true,
+            "default": "False",
+            "description": "Whether the validation is performed during the initialization of the instance."
+        }
+    ],
+    "return": ""
+}

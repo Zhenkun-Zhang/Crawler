@@ -1,0 +1,14 @@
+{
+    "api": "transformers.JukeboxConfig.from_configs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "prior_configs:",
+        "typing.List[transformers.models.deprecated.jukebox.configuration_jukebox.JukeboxPriorConfig]",
+        "vqvae_config",
+        "**kwargs",
+        ")"
+    ],
+    "params": [],
+    "return": "JukeboxConfig"
+}

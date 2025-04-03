@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Trainer.create_optimizer_and_scheduler",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "num_training_steps:",
+        "int"
+    ],
+    "params": [],
+    "return": ""
+}

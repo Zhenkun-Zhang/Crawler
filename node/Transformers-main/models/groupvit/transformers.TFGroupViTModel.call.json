@@ -1,0 +1,92 @@
+{
+    "api": "transformers.TFGroupViTModel.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "|",
+        "pixel_values",
+        "|",
+        "attention_mask",
+        "|",
+        "tf.Tensor",
+        "|",
+        "position_ids",
+        "|",
+        "tf.Tensor",
+        "|",
+        "return_loss",
+        "output_attentions",
+        "output_hidden_states",
+        "output_segmentation",
+        "return_dict",
+        "training",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "np.ndarray, tf.Tensor, List[tf.Tensor] `Dict[str, tf.Tensor],Dict[str, np.ndarray] and each example must have the shape (batch_size, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary.Indices can be obtained using AutoTokenizer. See PreTrainedTokenizer.call() andPreTrainedTokenizer.encode() for details.What are input IDs?"
+        },
+        {
+            "name": "pixel_values",
+            "type": "np.ndarray, tf.Tensor, List[tf.Tensor] Dict[str, tf.Tensor],Dict[str, np.ndarray] and each example must have the shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeCLIPImageProcessor.call() for details."
+        },
+        {
+            "name": "attention_mask",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "position_ids",
+            "type": "np.ndarray,tf.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indices of positions of each input sequence tokens in the position embeddings. Selected in the range [0, config.max_position_embeddings - 1].What are position IDs?"
+        },
+        {
+            "name": "return_loss",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the contrastive loss."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail. This argument can be used only in eager mode, in graph mode the value in theconfig will be used instead."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail. This argument can be used only in eager mode, in graph mode the value in the config will beused instead."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple. This argument can be used ineager mode, in graph mode the value will always be set to True."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        }
+    ],
+    "return": "transformers.models.groupvit.modeling_tf_groupvit.TFGroupViTModelOutput or tuple(tf.Tensor)"
+}

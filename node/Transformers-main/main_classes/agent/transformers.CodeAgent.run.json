@@ -1,0 +1,35 @@
+{
+    "api": "transformers.CodeAgent.run",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "task:",
+        "str",
+        "return_generated_code",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "task",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The task to perform"
+        },
+        {
+            "name": "return_generated_code",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return the generated code instead of running it"
+        },
+        {
+            "name": "kwargs",
+            "type": "additional keyword arguments",
+            "optional": true,
+            "default": "",
+            "description": "Any keyword argument to send to the agent when evaluating the code."
+        }
+    ],
+    "return": ""
+}

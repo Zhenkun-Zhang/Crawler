@@ -1,0 +1,42 @@
+{
+    "api": "transformers.JukeboxVQVAE.encode",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_audio",
+        "start_level",
+        "end_level",
+        "bs_chunks"
+    ],
+    "params": [
+        {
+            "name": "input_audio",
+            "type": "torch.Tensor",
+            "optional": false,
+            "default": "",
+            "description": "Raw audio which will be encoded to its discrete representation using the codebook. The closest codeform the codebook will be computed for each sequence of samples."
+        },
+        {
+            "name": "start_level",
+            "type": "int",
+            "optional": true,
+            "default": "0",
+            "description": "Level at which the encoding process will start. Default to 0."
+        },
+        {
+            "name": "end_level",
+            "type": "int",
+            "optional": true,
+            "default": "None",
+            "description": "Level at which the encoding process will start. Default to None."
+        },
+        {
+            "name": "bs_chunks",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "Number of chunks of raw audio to process at the same time."
+        }
+    ],
+    "return": ""
+}

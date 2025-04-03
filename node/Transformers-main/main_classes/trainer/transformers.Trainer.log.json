@@ -1,0 +1,27 @@
+{
+    "api": "transformers.Trainer.log",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "logs:",
+        "dict",
+        "start_time"
+    ],
+    "params": [
+        {
+            "name": "logs",
+            "type": "Dict[str, float]",
+            "optional": false,
+            "default": "",
+            "description": "The values to log."
+        },
+        {
+            "name": "start_time",
+            "type": "Optional[float]",
+            "optional": false,
+            "default": "",
+            "description": "The start of training."
+        }
+    ],
+    "return": ""
+}

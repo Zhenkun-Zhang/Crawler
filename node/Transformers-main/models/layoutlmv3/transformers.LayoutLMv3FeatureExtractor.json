@@ -1,0 +1,11 @@
+{
+    "api": "transformers.LayoutLMv3FeatureExtractor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "*args",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

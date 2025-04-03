@@ -1,0 +1,20 @@
+{
+    "api": "transformers.NougatTokenizerFast.remove_hallucinated_references",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "text:",
+        "str",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "text",
+            "type": "str",
+            "optional": false,
+            "default": "",
+            "description": "The input text containing references."
+        }
+    ],
+    "return": "str"
+}

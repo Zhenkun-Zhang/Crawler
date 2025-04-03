@@ -1,0 +1,11 @@
+{
+    "api": "transformers.Owlv2TextModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "Owlv2TextConfig"
+    ],
+    "params": [],
+    "return": ""
+}

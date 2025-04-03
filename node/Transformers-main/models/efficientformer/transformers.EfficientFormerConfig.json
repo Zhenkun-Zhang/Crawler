@@ -1,0 +1,229 @@
+{
+    "api": "transformers.EfficientFormerConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "depths:",
+        "2,",
+        "6,",
+        "4]",
+        "hidden_sizes",
+        "96,",
+        "224,",
+        "448]",
+        "downsamples",
+        "True,",
+        "True,",
+        "True]",
+        "dim",
+        "key_dim",
+        "attention_ratio",
+        "resolution",
+        "num_hidden_layers",
+        "num_attention_heads",
+        "mlp_expansion_ratio",
+        "hidden_dropout_prob",
+        "patch_size",
+        "num_channels",
+        "pool_size",
+        "downsample_patch_size",
+        "downsample_stride",
+        "downsample_pad",
+        "drop_path_rate",
+        "num_meta3d_blocks",
+        "distillation",
+        "use_layer_scale",
+        "layer_scale_init_value",
+        "hidden_act",
+        "initializer_range",
+        "layer_norm_eps",
+        "image_size",
+        "batch_norm_eps",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "depths",
+            "type": "List(int",
+            "optional": true,
+            "default": "",
+            "description": "Depth of each stage."
+        },
+        {
+            "name": "hidden_sizes",
+            "type": "List(int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of each stage."
+        },
+        {
+            "name": "downsamples",
+            "type": "List(bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to downsample inputs between two stages."
+        },
+        {
+            "name": "dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of channels in Meta3D layers"
+        },
+        {
+            "name": "key_dim",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size of the key in meta3D block."
+        },
+        {
+            "name": "attention_ratio",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Ratio of the dimension of the query and value to the dimension of the key in MSHA block"
+        },
+        {
+            "name": "resolution",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Size of each patch"
+        },
+        {
+            "name": "num_hidden_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the 3D MetaBlock."
+        },
+        {
+            "name": "mlp_expansion_ratio",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Ratio of size of the hidden dimensionality of an MLP to the dimensionality of its input."
+        },
+        {
+            "name": "hidden_dropout_prob",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for all fully connected layers in the embeddings and encoder."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size (resolution) of each patch."
+        },
+        {
+            "name": "num_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of input channels."
+        },
+        {
+            "name": "pool_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Kernel size of pooling layers."
+        },
+        {
+            "name": "downsample_patch_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size of patches in downsampling layers."
+        },
+        {
+            "name": "downsample_stride",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The stride of convolution kernels in downsampling layers."
+        },
+        {
+            "name": "downsample_pad",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Padding in downsampling layers."
+        },
+        {
+            "name": "drop_path_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Rate at which to increase dropout probability in DropPath."
+        },
+        {
+            "name": "num_meta3d_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of 3D MetaBlocks in the last stage."
+        },
+        {
+            "name": "distillation",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to add a distillation head."
+        },
+        {
+            "name": "use_layer_scale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to scale outputs from token mixers."
+        },
+        {
+            "name": "layer_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Factor by which outputs from token mixers are scaled."
+        },
+        {
+            "name": "hidden_act",
+            "type": "str,function",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function (function or string) in the encoder and pooler. If string, gelu,relu, selu and gelu_new are supported."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "layer_norm_eps",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The epsilon used by the layer normalization layers."
+        },
+        {
+            "name": "image_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The size (resolution) of each image."
+        }
+    ],
+    "return": ""
+}

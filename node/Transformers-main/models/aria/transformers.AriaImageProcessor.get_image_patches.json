@@ -1,0 +1,63 @@
+{
+    "api": "transformers.AriaImageProcessor.get_image_patches",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "<built-in",
+        "function",
+        "array>",
+        "grid_pinpoints",
+        "int]]",
+        "patch_size",
+        "resample",
+        "data_format",
+        "input_data_format",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "image",
+            "type": "np.array",
+            "optional": false,
+            "default": "",
+            "description": "The input image to be processed."
+        },
+        {
+            "name": "grid_pinpoints",
+            "type": "List[Tuple[int, int]]",
+            "optional": false,
+            "default": "",
+            "description": "A list of possible resolutions as tuples."
+        },
+        {
+            "name": "patch_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Size of the patches to divide the image into."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": false,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": false,
+            "default": "",
+            "description": "The channel dimension format for the output image."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": false,
+            "default": "",
+            "description": "The channel dimension format of the input image."
+        }
+    ],
+    "return": "List[np.array]"
+}

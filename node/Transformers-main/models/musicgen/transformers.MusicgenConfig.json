@@ -1,0 +1,18 @@
+{
+    "api": "transformers.MusicgenConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments. Notably:text_encoder (PretrainedConfig, optional) — An instance of a configuration object thatdefines the text encoder config.audio_encoder (PretrainedConfig, optional) — An instance of a configuration object thatdefines the audio encoder config.decoder (PretrainedConfig, optional) — An instance of a configuration object that definesthe decoder config."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,13 @@
+{
+    "api": "transformers.ImageFeatureExtractionMixin.rescale",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "image:",
+        "ndarray",
+        "scale",
+        "int]"
+    ],
+    "params": [],
+    "return": ""
+}

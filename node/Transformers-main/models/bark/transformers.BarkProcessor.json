@@ -1,0 +1,26 @@
+{
+    "api": "transformers.BarkProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tokenizer",
+        "speaker_embeddings"
+    ],
+    "params": [
+        {
+            "name": "tokenizer",
+            "type": "PreTrainedTokenizer",
+            "optional": false,
+            "default": "",
+            "description": "An instance of PreTrainedTokenizer."
+        },
+        {
+            "name": "speaker_embeddings",
+            "type": "Dict[Dict[str]]",
+            "optional": true,
+            "default": "None",
+            "description": "Optional nested speaker embeddings dictionary. The first level contains voice preset names (e.gen_speaker_4). The second level contains semantic_prompt, coarse_prompt and fine_promptembeddings. The values correspond to the path of the corresponding np.ndarray. Seehere fora list of voice_preset_names."
+        }
+    ],
+    "return": ""
+}

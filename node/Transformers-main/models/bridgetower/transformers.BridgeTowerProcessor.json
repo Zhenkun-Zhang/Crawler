@@ -1,0 +1,26 @@
+{
+    "api": "transformers.BridgeTowerProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "BridgeTowerImageProcessor",
+            "optional": false,
+            "default": "",
+            "description": "An instance of BridgeTowerImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "RobertaTokenizerFast",
+            "optional": false,
+            "default": "",
+            "description": "An instance of [RobertaTokenizerFast`]. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

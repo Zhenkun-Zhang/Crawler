@@ -1,0 +1,44 @@
+{
+    "api": "transformers.TrainingArguments.set_save",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "strategy:",
+        "typing.Union[str,",
+        "transformers.trainer_utils.IntervalStrategy]",
+        "steps",
+        "total_limit",
+        "on_each_node"
+    ],
+    "params": [
+        {
+            "name": "strategy",
+            "type": "str,IntervalStrategy",
+            "optional": true,
+            "default": "",
+            "description": "The checkpoint save strategy to adopt during training. Possible values are:no: No save is done during training.epoch: Save is done at the end of each epoch.steps: Save is done every save_steps."
+        },
+        {
+            "name": "steps",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of updates steps before two checkpoint saves if strategy=steps."
+        },
+        {
+            "name": "total_limit",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "If a value is passed, will limit the total amount of checkpoints. Deletes the older checkpoints inoutput_dir."
+        },
+        {
+            "name": "on_each_node",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "When doing multi-node distributed training, whether to save models and checkpoints on each node, oronly on the main one.This should not be activated when the different nodes use the same storage as the files will be savedwith the same names for each node."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,72 @@
+{
+    "api": "transformers.TFData2VecVisionModel.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values:",
+        "TFModelInputType",
+        "|",
+        "bool_masked_pos",
+        "|",
+        "head_mask",
+        "|",
+        "|",
+        "output_attentions",
+        "output_hidden_states",
+        "return_dict",
+        "training",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values",
+            "type": "np.ndarray, tf.Tensor, List[tf.Tensor] Dict[str, tf.Tensor],Dict[str, np.ndarray] and each example must have the shape (batch_size, num_channels, height, width)",
+            "optional": false,
+            "default": "",
+            "description": "Pixel values. Pixel values can be obtained using AutoImageProcessor. SeeBeitImageProcessor.call() for details."
+        },
+        {
+            "name": "head_mask",
+            "type": "np.ndarray,tf.Tensor of shape (num_heads,),(num_layers, num_heads",
+            "optional": true,
+            "default": "",
+            "description": "Mask to nullify selected heads of the self-attention modules. Mask values selected in [0, 1]:1 indicates the head is not masked,0 indicates the head is masked."
+        },
+        {
+            "name": "output_attentions",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the attentions tensors of all attention layers. See attentions under returnedtensors for more detail."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple. This argument can be usedin eager mode, in graph mode the value will always be set to True."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        },
+        {
+            "name": "bool_masked_pos",
+            "type": "tf.Tensor of shape (batch_size, num_patches",
+            "optional": true,
+            "default": "",
+            "description": "Boolean masked positions. Indicates which patches are masked (1) and which arent (0)."
+        }
+    ],
+    "return": "transformers.models.data2vec.modeling_tf_data2vec_vision.TFData2VecVisionModelOutputWithPooling or tuple(tf.Tensor)"
+}

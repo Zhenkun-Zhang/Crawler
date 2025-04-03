@@ -1,0 +1,38 @@
+{
+    "api": "transformers.FineGrainedFP8Config",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "activation_scheme:",
+        "str",
+        "weight_block_size",
+        "int]",
+        "128)",
+        "modules_to_not_convert",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "activation_scheme",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The scheme used for activation, the defaults and only support scheme for now is dynamic."
+        },
+        {
+            "name": "weight_block_size",
+            "type": "typing.Tuple[int, int]",
+            "optional": true,
+            "default": "",
+            "description": "The size of the weight blocks for quantization, default is (128, 128)."
+        },
+        {
+            "name": "modules_to_not_convert",
+            "type": "list",
+            "optional": true,
+            "default": "",
+            "description": "A list of module names that should not be converted during quantization."
+        }
+    ],
+    "return": ""
+}

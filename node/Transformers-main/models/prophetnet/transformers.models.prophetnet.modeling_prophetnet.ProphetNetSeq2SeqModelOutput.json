@@ -1,0 +1,99 @@
+{
+    "api": "transformers.models.prophetnet.modeling_prophetnet.ProphetNetSeq2SeqModelOutput",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "last_hidden_state:",
+        "FloatTensor",
+        "last_hidden_state_ngram",
+        "past_key_values",
+        "decoder_hidden_states",
+        "decoder_ngram_hidden_states",
+        "decoder_attentions",
+        "decoder_ngram_attentions",
+        "cross_attentions",
+        "encoder_last_hidden_state",
+        "encoder_hidden_states",
+        "encoder_attentions"
+    ],
+    "params": [
+        {
+            "name": "last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, decoder_sequence_length, hidden_size)",
+            "optional": false,
+            "default": "",
+            "description": "Sequence of main stream hidden-states at the output of the last layer of the decoder of the model.If past_key_values is used only the last hidden-state of the sequences of shape (batch_size, 1, hidden_size) is output."
+        },
+        {
+            "name": "last_hidden_state_ngram",
+            "type": "torch.FloatTensor of shape (batch_size,ngram * decoder_sequence_length, config.vocab_size",
+            "optional": true,
+            "default": "",
+            "description": "Sequence of predict stream hidden-states at the output of the last layer of the decoder of the model."
+        },
+        {
+            "name": "past_key_values",
+            "type": "List[torch.FloatTensor]",
+            "optional": true,
+            "default": "",
+            "description": "List of torch.FloatTensor of length config.n_layers, with each tensor of shape (2, batch_size, num_attn_heads, decoder_sequence_length, embed_size_per_head)).Contains pre-computed hidden-states (key and values in the attention blocks) of the decoder that can beused (see past_key_values input) to speed up sequential decoding."
+        },
+        {
+            "name": "decoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, decoder_sequence_length, hidden_size).Hidden-states of main stream of the decoder at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "decoder_ngram_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, ngram * decoder_sequence_length, hidden_size).Hidden-states of the predict stream of the decoder at the output of each layer plus the initial embeddingoutputs."
+        },
+        {
+            "name": "decoder_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_attn_heads, decoder_sequence_length, decoder_sequence_length).Attentions weights of the decoder, after the attention softmax, used to compute the weighted average in theself-attention heads."
+        },
+        {
+            "name": "decoder_ngram_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_attn_heads, decoder_sequence_length, decoder_sequence_length).Attentions weights of the predict stream of the decoder, after the attention softmax, used to compute theweighted average in the"
+        },
+        {
+            "name": "cross_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_attn_heads, encoder_sequence_length, decoder_sequence_length).Attentions weights of the cross-attention layer of the decoder, after the attention softmax, used tocompute the weighted average in the"
+        },
+        {
+            "name": "encoder_last_hidden_state",
+            "type": "torch.FloatTensor of shape (batch_size, encoder_sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Sequence of hidden-states at the output of the last layer of the encoder of the model."
+        },
+        {
+            "name": "encoder_hidden_states",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for the output of the embeddings + one for the output of each layer) ofshape (batch_size, encoder_sequence_length, hidden_size).Hidden-states of the encoder at the output of each layer plus the initial embedding outputs."
+        },
+        {
+            "name": "encoder_attentions",
+            "type": "tuple(torch.FloatTensor",
+            "optional": true,
+            "default": "",
+            "description": "Tuple of torch.FloatTensor (one for each layer) of shape (batch_size, num_attn_heads, encoder_sequence_length, encoder_sequence_length).Attentions weights of the encoder, after the attention softmax, used to compute the weighted average in theself-attention heads."
+        }
+    ],
+    "return": ""
+}

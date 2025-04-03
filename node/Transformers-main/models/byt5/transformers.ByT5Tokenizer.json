@@ -1,0 +1,51 @@
+{
+    "api": "transformers.ByT5Tokenizer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "eos_token",
+        "unk_token",
+        "pad_token",
+        "extra_ids",
+        "additional_special_tokens",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "eos_token",
+            "type": "str",
+            "optional": true,
+            "default": "</s>",
+            "description": "The end of sequence token.When building a sequence using special tokens, this is not the token that is used for the end of sequence.The token used is the sep_token."
+        },
+        {
+            "name": "unk_token",
+            "type": "str",
+            "optional": true,
+            "default": "<unk>",
+            "description": "The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be thistoken instead."
+        },
+        {
+            "name": "pad_token",
+            "type": "str",
+            "optional": true,
+            "default": "<pad>",
+            "description": "The token used for padding, for example when batching sequences of different lengths."
+        },
+        {
+            "name": "extra_ids",
+            "type": "int",
+            "optional": true,
+            "default": "125",
+            "description": "Add a number of extra ids added to the end of the vocabulary for use as sentinels. These tokens areaccessible as id{%d}> where {%d} is a number between 0 and extra_ids-1. Extra tokens areindexed from the end of the vocabulary up to beginning ( is the last token in the vocabularylike in ByT5 preprocessing seehere)."
+        },
+        {
+            "name": "additional_special_tokens",
+            "type": "List[str]",
+            "optional": true,
+            "default": "None",
+            "description": "Additional special tokens used by the tokenizer."
+        }
+    ],
+    "return": ""
+}

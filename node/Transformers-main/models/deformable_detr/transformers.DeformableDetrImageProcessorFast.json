@@ -1,0 +1,159 @@
+{
+    "api": "transformers.DeformableDetrImageProcessorFast",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "**kwargs:",
+        "typing_extensions.Unpack[transformers.models.deformable_detr.image_processing_deformable_detr_fast.DeformableDetrFastImageProcessorKwargs]"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to resize the images (height, width) dimensions to the specified size. Can be overridden by thedo_resize parameter in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "dict",
+            "optional": true,
+            "default": "",
+            "description": "Size of the output image after resizing. Can be overridden by the size parameter in the preprocessmethod."
+        },
+        {
+            "name": "default_to_square",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to default to a square image when resizing, if size is an int."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Only has an effect if do_resize is set to True. Can beoverridden by the resample parameter in the preprocess method."
+        },
+        {
+            "name": "do_center_crop",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to center crop the image to the specified crop_size. Can be overridden by do_center_crop in thepreprocess method."
+        },
+        {
+            "name": "crop_size",
+            "type": "Dict[str, int] optional, defaults to self.crop_size",
+            "optional": true,
+            "default": "",
+            "description": "Size of the output image after applying center_crop. Can be overridden by crop_size in the preprocessmethod."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overridden by thedo_rescale parameter in the preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Only has an effect if do_rescale is set to True. Can beoverridden by the rescale_factor parameter in the preprocess method."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in the preprocessmethod. Can be overridden by the do_normalize parameter in the preprocess method."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method. Can beoverridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method.Can be overridden by the image_std parameter in the preprocess method."
+        },
+        {
+            "name": "do_convert_rgb",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to convert the image to RGB."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "Returns stacked tensors if set to `pt, otherwise returns a list of tensors."
+        },
+        {
+            "name": "data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "Only ChannelDimension.FIRST is supported. Added for compatibility with slow processors."
+        },
+        {
+            "name": "input_data_format",
+            "type": "ChannelDimension,str",
+            "optional": true,
+            "default": "",
+            "description": "The channel dimension format for the input image. If unset, the channel dimension format is inferredfrom the input image. Can be one of:channels_first or ChannelDimension.FIRST: image in (num_channels, height, width) format.channels_last or ChannelDimension.LAST: image in (height, width, num_channels) format.none or ChannelDimension.NONE: image in (height, width) format."
+        },
+        {
+            "name": "device",
+            "type": "torch.device",
+            "optional": true,
+            "default": "",
+            "description": "The device to process the images on. If unset, the device is inferred from the input images."
+        },
+        {
+            "name": "format",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "Data format of the annotations. One of coco_detection or coco_panoptic."
+        },
+        {
+            "name": "do_convert_annotations",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to convert the annotations to the format expected by the DEFORMABLE_DETR model. Converts thebounding boxes to the format (center_x, center_y, width, height) and in the range [0, 1].Can be overridden by the do_convert_annotations parameter in the preprocess method."
+        },
+        {
+            "name": "do_pad",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to pad the image. Can be overridden by the do_pad parameter in the preprocessmethod. If True, padding will be applied to the bottom and right of the image with zeros.If pad_size is provided, the image will be padded to the specified dimensions.Otherwise, the image will be padded to the maximum height and width of the batch."
+        },
+        {
+            "name": "pad_size",
+            "type": "Dict[str, int]",
+            "optional": true,
+            "default": "",
+            "description": "The size {height: int, width int} to pad the images to. Must be larger than any image sizeprovided for preprocessing. If pad_size is not provided, images will be padded to the largestheight and width in the batch."
+        },
+        {
+            "name": "return_segmentation_masks",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to return segmentation masks."
+        }
+    ],
+    "return": ""
+}

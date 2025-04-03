@@ -1,0 +1,90 @@
+{
+    "api": "transformers.ConvNextImageProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "do_resize:",
+        "size",
+        "int]",
+        "crop_pct",
+        "resample",
+        "<Resampling.BILINEAR",
+        "do_rescale",
+        "rescale_factor",
+        "float]",
+        "do_normalize",
+        "image_mean",
+        "typing.List[float],",
+        "NoneType]",
+        "image_std",
+        "typing.List[float],",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "do_resize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Controls whether to resize the images (height, width) dimensions to the specified size. Can be overridenby do_resize in the preprocess method."
+        },
+        {
+            "name": "size",
+            "type": "Dict[str, int] optional, defaults to {\"shortest_edge\" -- 384}):Resolution of the output image after resize is applied. If size[\"shortest_edge\"] >= 384, the image isresized to (size[\"shortest_edge\"], size[\"shortest_edge\"]). Otherwise, the smaller edge of the image willbe matched to int(size[\"shortest_edge\"]/crop_pct), after which the image is cropped to(size[\"shortest_edge\"], size[\"shortest_edge\"]). Only has an effect if do_resize is set to True. Canbe overriden by size in the preprocess method.",
+            "optional": true,
+            "default": "",
+            "description": ""
+        },
+        {
+            "name": "crop_pct",
+            "type": "float optional, defaults to 224 / 256",
+            "optional": true,
+            "default": "",
+            "description": "Percentage of the image to crop. Only has an effect if do_resize is True and size < 384. Can beoverriden by crop_pct in the preprocess method."
+        },
+        {
+            "name": "resample",
+            "type": "PILImageResampling",
+            "optional": true,
+            "default": "",
+            "description": "Resampling filter to use if resizing the image. Can be overriden by resample in the preprocess method."
+        },
+        {
+            "name": "do_rescale",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to rescale the image by the specified scale rescale_factor. Can be overriden by do_rescale inthe preprocess method."
+        },
+        {
+            "name": "rescale_factor",
+            "type": "int,float",
+            "optional": true,
+            "default": "",
+            "description": "Scale factor to use if rescaling the image. Can be overriden by rescale_factor in the preprocessmethod."
+        },
+        {
+            "name": "do_normalize",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether to normalize the image. Can be overridden by the do_normalize parameter in the preprocessmethod."
+        },
+        {
+            "name": "image_mean",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Mean to use if normalizing the image. This is a float or list of floats the length of the number ofchannels in the image. Can be overridden by the image_mean parameter in the preprocess method."
+        },
+        {
+            "name": "image_std",
+            "type": "float,List[float]",
+            "optional": true,
+            "default": "",
+            "description": "Standard deviation to use if normalizing the image. This is a float or list of floats the length of thenumber of channels in the image. Can be overridden by the image_std parameter in the preprocess method."
+        }
+    ],
+    "return": ""
+}

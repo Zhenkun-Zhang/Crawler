@@ -1,0 +1,83 @@
+{
+    "api": "transformers.ConstrainedBeamSearchScorer",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "batch_size:",
+        "num_beams",
+        "constraints",
+        "length_penalty",
+        "do_early_stopping",
+        "str,",
+        "NoneType]",
+        "num_beam_hyps_to_keep",
+        "num_beam_groups",
+        "max_length"
+    ],
+    "params": [
+        {
+            "name": "batch_size",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Batch Size of input_ids for which standard beam search decoding is run in parallel."
+        },
+        {
+            "name": "num_beams",
+            "type": "int",
+            "optional": false,
+            "default": "",
+            "description": "Number of beams for beam search."
+        },
+        {
+            "name": "constraints",
+            "type": "List[Constraint]",
+            "optional": false,
+            "default": "",
+            "description": "A list of positive constraints represented as Constraint objects that must be fulfilled in the generationoutput. For more information, the documentation of Constraint should be read."
+        },
+        {
+            "name": "device",
+            "type": "torch.device",
+            "optional": false,
+            "default": "",
+            "description": "Defines the device type (e.g., cpu or cuda) on which this instance of BeamSearchScorer will beallocated."
+        },
+        {
+            "name": "length_penalty",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "Exponential penalty to the length that is used with beam-based generation. It is applied as an exponent tothe sequence length, which in turn is used to divide the score of the sequence. Since the score is the loglikelihood of the sequence (i.e. negative), length_penalty > 0.0 promotes longer sequences, whilelength_penalty < 0.0 encourages shorter sequences."
+        },
+        {
+            "name": "do_early_stopping",
+            "type": "bool,str",
+            "optional": true,
+            "default": "",
+            "description": "Controls the stopping condition for beam-based methods, like beam-search. It accepts the following values:True, where the generation stops as soon as there are num_beams complete candidates, False, where anheuristic is applied and the generation stops when is it very unlikely to find better candidates,never, where the beam search procedure only stops when there cannot be better candidates (canonicalbeam search algorithm)."
+        },
+        {
+            "name": "num_beam_hyps_to_keep",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The number of beam hypotheses that shall be returned upon callingfinalize()."
+        },
+        {
+            "name": "num_beam_groups",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of groups to divide num_beams into in order to ensure diversity among different groups of beams.See this paper for more details."
+        },
+        {
+            "name": "max_length",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum length of the sequence to be generated."
+        }
+    ],
+    "return": ""
+}

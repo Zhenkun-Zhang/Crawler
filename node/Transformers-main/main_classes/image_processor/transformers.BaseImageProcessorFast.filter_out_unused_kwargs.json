@@ -1,0 +1,11 @@
+{
+    "api": "transformers.BaseImageProcessorFast.filter_out_unused_kwargs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "kwargs:",
+        "dict"
+    ],
+    "params": [],
+    "return": ""
+}

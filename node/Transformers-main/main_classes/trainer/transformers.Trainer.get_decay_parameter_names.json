@@ -1,0 +1,10 @@
+{
+    "api": "transformers.Trainer.get_decay_parameter_names",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "model"
+    ],
+    "params": [],
+    "return": ""
+}

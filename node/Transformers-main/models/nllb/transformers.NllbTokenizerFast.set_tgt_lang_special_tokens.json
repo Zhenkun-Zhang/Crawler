@@ -1,0 +1,11 @@
+{
+    "api": "transformers.NllbTokenizerFast.set_tgt_lang_special_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "lang:",
+        "str"
+    ],
+    "params": [],
+    "return": ""
+}

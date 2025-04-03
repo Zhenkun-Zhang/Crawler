@@ -1,0 +1,72 @@
+{
+    "api": "transformers.MimiModel.forward",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_values:",
+        "Tensor",
+        "padding_mask",
+        "num_quantizers",
+        "audio_codes",
+        "encoder_past_key_values",
+        "typing.List[torch.FloatTensor],",
+        "NoneType]",
+        "decoder_past_key_values",
+        "typing.List[torch.FloatTensor],",
+        "NoneType]",
+        "return_dict",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_values",
+            "type": "torch.FloatTensor of shape (batch_size, channels, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Raw audio input converted to Float."
+        },
+        {
+            "name": "padding_mask",
+            "type": "torch.Tensor of shape (batch_size, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Indicates which inputs are to be ignored due to padding, where elements are either 1 for not masked or 0for masked."
+        },
+        {
+            "name": "num_quantizers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of quantizers (i.e codebooks) to use. By default, all quantizers are used."
+        },
+        {
+            "name": "audio_codes",
+            "type": "torch.LongTensor  of shape (batch_size, num_quantizers, codes_length",
+            "optional": true,
+            "default": "",
+            "description": "Discret code embeddings computed using model.encode."
+        },
+        {
+            "name": "encoder_past_key_values",
+            "type": "Cache",
+            "optional": true,
+            "default": "",
+            "description": "Pre-computed hidden-states (key and values in the self-attention blocks) that can be used to speed up sequential decoding of the encoder transformer.This typically consists in the past_key_values returned by the model at a previous stage of decoding, when use_cache=True or config.use_cache=True.The model will output the same cache format that is fed as input.If past_key_values are used, the user can optionally input only the last audio_values or `audio_codes (those that donthave their past key value states given to this model)."
+        },
+        {
+            "name": "decoder_past_key_values",
+            "type": "Cache",
+            "optional": true,
+            "default": "",
+            "description": "Pre-computed hidden-states (key and values in the self-attention blocks) that can be used to speed up sequential decoding of the decoder transformer.This typically consists in the past_key_values returned by the model at a previous stage of decoding, when use_cache=True or config.use_cache=True.The model will output the same cache format that is fed as input.If past_key_values are used, the user can optionally input only the last audio_values or `audio_codes (those that donthave their past key value states given to this model)."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple."
+        }
+    ],
+    "return": "transformers.models.mimi.modeling_mimi.MimiOutput or tuple(torch.FloatTensor)"
+}

@@ -1,0 +1,66 @@
+{
+    "api": "transformers.ClvpConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "text_config",
+        "speech_config",
+        "decoder_config",
+        "projection_dim",
+        "logit_scale_init_value",
+        "initializer_factor",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "text_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize the CLVP text encoder."
+        },
+        {
+            "name": "speech_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize CLVP speech encoder."
+        },
+        {
+            "name": "decoder_config",
+            "type": "dict",
+            "optional": true,
+            "default": "None",
+            "description": "Dictionary of configuration options used to initialize ClvpDecoderConfig."
+        },
+        {
+            "name": "projection_dim",
+            "type": "int",
+            "optional": true,
+            "default": "768",
+            "description": "Dimensionality of text and speech projection layers."
+        },
+        {
+            "name": "logit_scale_init_value",
+            "type": "float",
+            "optional": true,
+            "default": "2.6592",
+            "description": "The initial value of the logit_scale parameter. Default is used as per the original CLVP implementation."
+        },
+        {
+            "name": "initializer_factor",
+            "type": "float",
+            "optional": true,
+            "default": "1.0",
+            "description": "A factor for initializing all weight matrices (should be kept to 1.0, used internally for initializationtesting)."
+        },
+        {
+            "name": "kwargs",
+            "type": "optional",
+            "optional": true,
+            "default": "",
+            "description": "Dictionary of keyword arguments."
+        }
+    ],
+    "return": ""
+}

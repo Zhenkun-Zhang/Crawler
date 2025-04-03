@@ -1,0 +1,27 @@
+{
+    "api": "transformers.SeamlessM4TTextToUnitForConditionalGeneration",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "SeamlessM4TConfig",
+        "embed_tokens_decoder"
+    ],
+    "params": [
+        {
+            "name": "config",
+            "type": "~SeamlessM4TConfig",
+            "optional": false,
+            "default": "",
+            "description": "Model configuration class with all the parameters of the model.Initializing with a config file does not load the weights associated with the model, only theconfiguration. Check out the from_pretrained() method to load the model weights."
+        },
+        {
+            "name": "embed_tokens_decoder",
+            "type": "nn.Embedding",
+            "optional": true,
+            "default": "",
+            "description": "input embedding of the decoder."
+        }
+    ],
+    "return": ""
+}

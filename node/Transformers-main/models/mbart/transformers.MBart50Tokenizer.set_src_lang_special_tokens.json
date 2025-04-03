@@ -1,0 +1,11 @@
+{
+    "api": "transformers.MBart50Tokenizer.set_src_lang_special_tokens",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "src_lang:",
+        "str"
+    ],
+    "params": [],
+    "return": ""
+}

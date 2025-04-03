@@ -1,0 +1,203 @@
+{
+    "api": "transformers.Phi4MultimodalAudioConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "hidden_size:",
+        "intermediate_size",
+        "num_blocks",
+        "num_attention_heads",
+        "activation",
+        "chunk_size",
+        "left_chunk",
+        "dropout_rate",
+        "ext_pw_out_channel",
+        "depthwise_seperable_out_channel",
+        "depthwise_multiplier",
+        "kernel_size",
+        "conv_activation",
+        "input_size",
+        "conv_glu_type",
+        "time_reduction",
+        "bias_max_distance",
+        "bias_symmetric",
+        "nemo_activation",
+        "nemo_conv_channels",
+        "downsample_rate",
+        "initializer_range",
+        "audio_token_id",
+        "feature_layer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the encoder layers."
+        },
+        {
+            "name": "intermediate_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the intermediate (i.e., feed-forward) layer in the Transformer encoder."
+        },
+        {
+            "name": "num_blocks",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers in the Transformer encoder."
+        },
+        {
+            "name": "num_attention_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer encoder."
+        },
+        {
+            "name": "activation",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function in the MLPs."
+        },
+        {
+            "name": "chunk_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The chunk size to create the masks."
+        },
+        {
+            "name": "left_chunk",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The left chunk to create the masks."
+        },
+        {
+            "name": "dropout_rate",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout ratio."
+        },
+        {
+            "name": "ext_pw_out_channel",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of out channels in the point-wise conv modules."
+        },
+        {
+            "name": "depthwise_seperable_out_channel",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of out channels in the depth-wise separable conv modules."
+        },
+        {
+            "name": "depthwise_multiplier",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Input size multiplier for the depth-wise separable conv modules."
+        },
+        {
+            "name": "kernel_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Kernel size for the depth-wise separable conv modules."
+        },
+        {
+            "name": "conv_activation",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function in the conv modules."
+        },
+        {
+            "name": "input_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Input size for the audio model."
+        },
+        {
+            "name": "conv_glu_type",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function in the point-wise conv modules."
+        },
+        {
+            "name": "time_reduction",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Time reduction (subsampling factor)."
+        },
+        {
+            "name": "bias_max_distance",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Max distance for the relative attention bias module."
+        },
+        {
+            "name": "bias_symmetric",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether the relative attention bias should be symmetric or not."
+        },
+        {
+            "name": "nemo_activation",
+            "type": "str",
+            "optional": true,
+            "default": "",
+            "description": "The non-linear activation function in the nemo conv modules."
+        },
+        {
+            "name": "nemo_conv_channels",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of channels in the nemo conv modules."
+        },
+        {
+            "name": "downsample_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Downsample rate for the audio feature extractor."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "audio_token_id",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The audio token id."
+        },
+        {
+            "name": "feature_layer",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The index of the layer of the encoder from which to extract audio features."
+        }
+    ],
+    "return": ""
+}

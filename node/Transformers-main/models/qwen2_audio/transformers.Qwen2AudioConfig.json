@@ -1,0 +1,35 @@
+{
+    "api": "transformers.Qwen2AudioConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "audio_config",
+        "text_config",
+        "audio_token_index",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "audio_config",
+            "type": "Union[AutoConfig, dict],  optional, defaults to CLIPVisionConfig",
+            "optional": true,
+            "default": "None",
+            "description": "The config object or dictionary of the audio backbone."
+        },
+        {
+            "name": "text_config",
+            "type": "Union[AutoConfig, dict]",
+            "optional": true,
+            "default": "None",
+            "description": "The config object or dictionary of the text backbone."
+        },
+        {
+            "name": "audio_token_index",
+            "type": "int",
+            "optional": true,
+            "default": "151646",
+            "description": "The image token index to encode the image prompt."
+        }
+    ],
+    "return": ""
+}

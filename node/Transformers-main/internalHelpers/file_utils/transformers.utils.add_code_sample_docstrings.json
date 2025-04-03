@@ -1,0 +1,23 @@
+{
+    "api": "transformers.utils.add_code_sample_docstrings",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "*docstr",
+        "processor_class",
+        "checkpoint",
+        "output_type",
+        "config_class",
+        "mask",
+        "qa_target_start_index",
+        "qa_target_end_index",
+        "model_cls",
+        "modality",
+        "expected_output",
+        "expected_loss",
+        "real_checkpoint",
+        "revision"
+    ],
+    "params": [],
+    "return": ""
+}

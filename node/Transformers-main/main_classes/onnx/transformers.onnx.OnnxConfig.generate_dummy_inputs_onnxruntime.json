@@ -1,0 +1,21 @@
+{
+    "api": "transformers.onnx.OnnxConfig.generate_dummy_inputs_onnxruntime",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "reference_model_inputs:",
+        "typing.Mapping[str,",
+        "typing.Any]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "reference_model_inputs",
+            "type": "[Mapping[str, Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "Reference inputs for the model."
+        }
+    ],
+    "return": "Mapping[str, Tensor]"
+}

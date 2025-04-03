@@ -1,0 +1,98 @@
+{
+    "api": "transformers.BarkFineConfig",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "tie_word_embeddings",
+        "n_codes_total",
+        "n_codes_given",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "block_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The maximum sequence length that this model might ever be used with. Typically set this to something largejust in case (e.g., 512 or 1024 or 2048)."
+        },
+        {
+            "name": "input_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Vocabulary size of a Bark sub-model. Defines the number of different tokens that can be represented by theinputs_ids passed when calling BarkFineModel. Defaults to 10_048 but should be carefully thought withregards to the chosen sub-model."
+        },
+        {
+            "name": "output_vocab_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Output vocabulary size of a Bark sub-model. Defines the number of different tokens that can be representedby the: output_ids when passing forward a BarkFineModel. Defaults to 10_048 but should be carefully thoughtwith regards to the chosen sub-model."
+        },
+        {
+            "name": "num_layers",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of hidden layers in the given sub-model."
+        },
+        {
+            "name": "num_heads",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Number of attention heads for each attention layer in the Transformer architecture."
+        },
+        {
+            "name": "hidden_size",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "Dimensionality of the intermediate (often named feed-forward) layer in the architecture."
+        },
+        {
+            "name": "dropout",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The dropout probability for all fully connected layers in the embeddings, encoder, and pooler."
+        },
+        {
+            "name": "bias",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use bias in the linear layers and layer norm layers."
+        },
+        {
+            "name": "initializer_range",
+            "type": "float",
+            "optional": true,
+            "default": "",
+            "description": "The standard deviation of the truncated_normal_initializer for initializing all weight matrices."
+        },
+        {
+            "name": "use_cache",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not the model should return the last key/values attentions (not used by all models)."
+        },
+        {
+            "name": "n_codes_total",
+            "type": "int",
+            "optional": true,
+            "default": "8",
+            "description": "The total number of audio codebooks predicted. Used in the fine acoustics sub-model."
+        },
+        {
+            "name": "n_codes_given",
+            "type": "int",
+            "optional": true,
+            "default": "1",
+            "description": "The number of audio codebooks predicted in the coarse acoustics sub-model. Used in the acousticssub-models."
+        }
+    ],
+    "return": ""
+}

@@ -1,0 +1,10 @@
+{
+    "api": "transformers.AdamWeightDecay.from_config",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "config"
+    ],
+    "params": [],
+    "return": ""
+}

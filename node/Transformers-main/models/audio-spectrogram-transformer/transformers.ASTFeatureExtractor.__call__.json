@@ -1,0 +1,41 @@
+{
+    "api": "transformers.ASTFeatureExtractor.__call__",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "raw_speech:",
+        "typing.Union[numpy.ndarray,",
+        "typing.List[float],",
+        "typing.List[numpy.ndarray],",
+        "typing.List[typing.List[float]]]",
+        "sampling_rate",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "raw_speech",
+            "type": "np.ndarray, List[float], List[np.ndarray], List[List[float]]",
+            "optional": false,
+            "default": "",
+            "description": "The sequence or batch of sequences to be padded. Each sequence can be a numpy array, a list of floatvalues, a list of numpy arrays or a list of list of float values. Must be mono channel audio, notstereo, i.e. single float per timestep."
+        },
+        {
+            "name": "sampling_rate",
+            "type": "int",
+            "optional": true,
+            "default": "",
+            "description": "The sampling rate at which the raw_speech input was sampled. It is strongly recommended to passsampling_rate at the forward call to prevent silent errors."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of list of python integers. Acceptable values are:tf: Return TensorFlow tf.constant objects.pt: Return PyTorch torch.Tensor objects.np: Return Numpy np.ndarray objects."
+        }
+    ],
+    "return": ""
+}

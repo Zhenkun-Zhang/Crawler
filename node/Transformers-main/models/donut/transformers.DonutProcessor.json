@@ -1,0 +1,27 @@
+{
+    "api": "transformers.DonutProcessor",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "image_processor",
+        "tokenizer",
+        "**kwargs"
+    ],
+    "params": [
+        {
+            "name": "image_processor",
+            "type": "DonutImageProcessor",
+            "optional": true,
+            "default": "None",
+            "description": "An instance of DonutImageProcessor. The image processor is a required input."
+        },
+        {
+            "name": "tokenizer",
+            "type": "[XLMRobertaTokenizer/XLMRobertaTokenizerFast]",
+            "optional": true,
+            "default": "None",
+            "description": "An instance of [XLMRobertaTokenizer/XLMRobertaTokenizerFast]. The tokenizer is a required input."
+        }
+    ],
+    "return": ""
+}

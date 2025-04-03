@@ -1,0 +1,65 @@
+{
+    "api": "transformers.MaskFormerImageProcessor.encode_inputs",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "pixel_values_list:",
+        "typing.List[typing.Union[ForwardRef('PIL.Image.Image'),",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]]",
+        "segmentation_maps",
+        "numpy.ndarray,",
+        "ForwardRef('torch.Tensor'),",
+        "list['PIL.Image.Image'],",
+        "list[numpy.ndarray],",
+        "list['torch.Tensor']]",
+        "instance_id_to_semantic_id",
+        "int]],",
+        "typing.Dict[int,",
+        "int],",
+        "NoneType]",
+        "ignore_index",
+        "do_reduce_labels",
+        "return_tensors",
+        "transformers.utils.generic.TensorType,",
+        "NoneType]",
+        "input_data_format",
+        "transformers.image_utils.ChannelDimension,",
+        "NoneType]",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "pixel_values_list",
+            "type": "List[ImageInput]",
+            "optional": false,
+            "default": "",
+            "description": "List of images (pixel values) to be padded. Each image should be a tensor of shape (channels, height, width)."
+        },
+        {
+            "name": "segmentation_maps",
+            "type": "ImageInput",
+            "optional": true,
+            "default": "",
+            "description": "The corresponding semantic segmentation maps with the pixel-wise annotations.(bool, optional, defaults to True):Whether or not to pad images up to the largest image in a batch and create a pixel mask.If left to the default, will return a pixel mask that is:1 for pixels that are real (i.e. not masked),0 for pixels that are padding (i.e. masked)."
+        },
+        {
+            "name": "instance_id_to_semantic_id",
+            "type": "List[Dict[int, int]],Dict[int, int]",
+            "optional": true,
+            "default": "",
+            "description": "A mapping between object instance ids and class ids. If passed, segmentation_maps is treated as aninstance segmentation map where each pixel represents an instance id. Can be provided as a singledictionary with a global/dataset-level mapping or as a list of dictionaries (one per image), to mapinstance ids in each image separately."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str,TensorType",
+            "optional": true,
+            "default": "",
+            "description": "If set, will return tensors instead of NumPy arrays. If set to pt, return PyTorch torch.Tensorobjects."
+        }
+    ],
+    "return": "BatchFeature"
+}

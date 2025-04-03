@@ -1,0 +1,67 @@
+{
+    "api": "transformers.TFDPRReader.call",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "input_ids:",
+        "TFModelInputType",
+        "|",
+        "attention_mask",
+        "|",
+        "inputs_embeds",
+        "|",
+        "output_attentions",
+        "|",
+        "output_hidden_states",
+        "|",
+        "return_dict",
+        "|",
+        "training",
+        ")"
+    ],
+    "params": [
+        {
+            "name": "input_ids",
+            "type": "Numpy array,tf.Tensor of shapes (n_passages, sequence_length)",
+            "optional": false,
+            "default": "",
+            "description": "Indices of input sequence tokens in the vocabulary. It has to be a sequence triplet with 1) the questionand 2) the passages titles and 3) the passages texts To match pretraining, DPR input_ids sequence shouldbe formatted with [CLS] and [SEP] with the format:[CLS] <question token ids> [SEP] <titles ids> [SEP] <texts ids>DPR is a model with absolute position embeddings so its usually advised to pad the inputs on the rightrather than the left.Indices can be obtained using DPRReaderTokenizer. See this class documentation for more details."
+        },
+        {
+            "name": "attention_mask",
+            "type": "Numpy array,tf.Tensor of shape (n_passages, sequence_length",
+            "optional": true,
+            "default": "",
+            "description": "Mask to avoid performing attention on padding token indices. Mask values selected in [0, 1]:1 for tokens that are not masked,0 for tokens that are masked.What are attention masks?"
+        },
+        {
+            "name": "inputs_embeds",
+            "type": "Numpy array,tf.Tensor of shape (n_passages, sequence_length, hidden_size",
+            "optional": true,
+            "default": "",
+            "description": "Optionally, instead of passing input_ids you can choose to directly pass an embedded representation. Thisis useful if you want more control over how to convert input_ids indices into associated vectors than themodels internal embedding lookup matrix."
+        },
+        {
+            "name": "output_hidden_states",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return the hidden states of all layers. See hidden_states under returned tensors formore detail. This argument can be used only in eager mode, in graph mode the value in the config will beused instead."
+        },
+        {
+            "name": "return_dict",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to return a ModelOutput instead of a plain tuple. This argument can be used ineager mode, in graph mode the value will always be set to True."
+        },
+        {
+            "name": "training",
+            "type": "bool",
+            "optional": true,
+            "default": "",
+            "description": "Whether or not to use the model in training mode (some modules like dropout modules have differentbehaviors between training and evaluation)."
+        }
+    ],
+    "return": "transformers.models.dpr.modeling_tf_dpr.TFDPRReaderOutput or tuple(tf.Tensor)"
+}

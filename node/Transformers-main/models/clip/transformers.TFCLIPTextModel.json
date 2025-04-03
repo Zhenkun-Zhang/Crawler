@@ -1,0 +1,13 @@
+{
+    "api": "transformers.TFCLIPTextModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "CLIPTextConfig",
+        "*inputs",
+        "**kwargs"
+    ],
+    "params": [],
+    "return": ""
+}

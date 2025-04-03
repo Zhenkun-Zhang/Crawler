@@ -1,0 +1,11 @@
+{
+    "api": "transformers.TimmWrapperModel",
+    "type": "class",
+    "version": "main",
+    "args_list": [
+        "config:",
+        "TimmWrapperConfig"
+    ],
+    "params": [],
+    "return": ""
+}

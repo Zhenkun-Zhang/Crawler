@@ -1,0 +1,82 @@
+{
+    "api": "transformers.SamImageProcessor.filter_masks",
+    "type": "function",
+    "version": "main",
+    "args_list": [
+        "masks",
+        "iou_scores",
+        "original_size",
+        "cropped_box_image",
+        "pred_iou_thresh",
+        "stability_score_thresh",
+        "mask_threshold",
+        "stability_score_offset",
+        "return_tensors"
+    ],
+    "params": [
+        {
+            "name": "masks",
+            "type": "Union[torch.Tensor, tf.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "Input masks."
+        },
+        {
+            "name": "iou_scores",
+            "type": "Union[torch.Tensor, tf.Tensor]",
+            "optional": false,
+            "default": "",
+            "description": "List of IoU scores."
+        },
+        {
+            "name": "original_size",
+            "type": "Tuple[int,int]",
+            "optional": false,
+            "default": "",
+            "description": "Size of the orginal image."
+        },
+        {
+            "name": "cropped_box_image",
+            "type": "np.array",
+            "optional": false,
+            "default": "",
+            "description": "The cropped image."
+        },
+        {
+            "name": "pred_iou_thresh",
+            "type": "float",
+            "optional": true,
+            "default": "0.88",
+            "description": "The threshold for the iou scores."
+        },
+        {
+            "name": "stability_score_thresh",
+            "type": "float",
+            "optional": true,
+            "default": "0.95",
+            "description": "The threshold for the stability score."
+        },
+        {
+            "name": "mask_threshold",
+            "type": "float",
+            "optional": true,
+            "default": "0",
+            "description": "The threshold for the predicted masks."
+        },
+        {
+            "name": "stability_score_offset",
+            "type": "float",
+            "optional": true,
+            "default": "1",
+            "description": "The offset for the stability score used in the _compute_stability_score method."
+        },
+        {
+            "name": "return_tensors",
+            "type": "str",
+            "optional": true,
+            "default": "pt",
+            "description": "If pt, returns torch.Tensor. If tf, returns tf.Tensor."
+        }
+    ],
+    "return": ""
+}

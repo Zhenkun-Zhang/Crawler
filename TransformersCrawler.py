@@ -165,7 +165,5 @@ def main():
     solve(root, save_path, version)
     
 
-# if __name__ == '__main__':
-#     main()
-# '''
-# python Crawler.py
+if __name__ == '__main__':
+    main()
